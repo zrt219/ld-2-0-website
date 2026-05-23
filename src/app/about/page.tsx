@@ -12,7 +12,33 @@ export const metadata = createMetadata(
   "/about",
 );
 
-const timeline = ["Early Start", "Elite Athlete", "Coach & Mentor", "Expanding Impact", "Global Transformation"];
+const timeline = [
+  {
+    title: "Early Start",
+    description:
+      "After moving from Jamaica to Canada at ten, Lornette explored every sport she could. Track and Field became the passion that shaped her discipline and confidence.",
+  },
+  {
+    title: "Elite Athlete",
+    description:
+      "That passion became performance. Through discipline and focus, Lornette earned provincial and national titles, turning natural speed into a career shaped by resilience and purpose.",
+  },
+  {
+    title: "Coach & Mentor",
+    description:
+      "Even while competing, Lornette made time to encourage others. As a coach, she spent more than two decades helping athletes grow in sport, school, confidence, and wellness.",
+  },
+  {
+    title: "Expanding Impact",
+    description:
+      "After athletics, Lornette brought the same drive into corporate, nonprofit, and community work, helping organizations, families, and young athletes move forward with practical support.",
+  },
+  {
+    title: "Global Transformation",
+    description:
+      "Today, as a certified speaker, Lornette uses her story to reach the whole person, helping audiences leave with greater clarity, courage, and belief.",
+  },
+];
 
 export default function AboutPage() {
   return (
@@ -51,14 +77,14 @@ export default function AboutPage() {
         <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionHeader eyebrow="Timeline" title="A journey of discipline. A life of impact." />
-            <div className="mt-10 grid gap-4 md:grid-cols-5">
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {timeline.map((item) => (
-                <article key={item} className="border border-[var(--line)] bg-white p-5">
+                <article key={item.title} className="border border-[var(--line)] bg-white p-5">
                   <p className="mx-auto max-w-full break-words text-center font-serif text-2xl leading-tight text-balance text-[var(--ink)] md:text-[1.35rem] xl:text-2xl">
-                    {item}
+                    {item.title}
                   </p>
                   <p className="mt-3 text-sm leading-7 text-[#675d50]">
-                    A chapter in Lornette&apos;s progression from sport and coaching to transformational public speaking.
+                    {item.description}
                   </p>
                 </article>
               ))}

@@ -24,7 +24,7 @@ export function Header() {
         >
           <Image
             src="/monogramlogo.png"
-            alt="Lornette Daye monogram"
+            alt="Lornette Daye LD monogram logo"
             width={122}
             height={71}
             unoptimized

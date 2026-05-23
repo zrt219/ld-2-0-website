@@ -10,7 +10,7 @@ export const aboutGallerySlides: AboutGallerySlide[] = [
   {
     image: {
       src: "/about-gallery/canada-summer-games-1985.webp",
-      alt: "Newspaper photo of Lornette Daye receiving a medal at the 1985 Canada Summer Games.",
+      alt: "Black-and-white newspaper clipping of Lornette Daye on the medal podium after winning the 200 metre sprint at the 1985 Canada Summer Games.",
       crop: "object-center",
     },
     title: "Lornette at the 1985 Canada Summer Games, winning the 200 metre sprint.",
@@ -20,7 +20,7 @@ export const aboutGallerySlides: AboutGallerySlide[] = [
   {
     image: {
       src: "/about-gallery/flight-attendant-1993.webp",
-      alt: "Lornette Daye as a flight attendant in 1993.",
+      alt: "Lornette Daye in her 1993 flight attendant uniform holding a certificate at a reception.",
       crop: "object-center",
     },
     title: "Lornette as a flight attendant in 1993.",
