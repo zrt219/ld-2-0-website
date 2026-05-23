@@ -636,7 +636,7 @@ export const speakerSubmissionProfile = {
     description:
       "Everybody wants to achieve great things, but few are equipped to overcome the obstacles that inevitably appear along the way. In this keynote, audiences gain tools and strategies drawn directly from championship-level competition, learning how to rise above adversity while maintaining perspective, discipline, and self-esteem.",
     fit:
-      "Tailored for corporate, faith-based, youth, women's, athletic, community, and leadership audiences.",
+      "A powerful elite-athlete story on rising above adversity without losing yourself.",
     attendeeResults: [
       "Understand how foundational experiences shape elite outcomes.",
       "Develop a disciplined strategy for sustaining confidence and motivation.",

@@ -376,7 +376,7 @@ export default function SpeakingPage() {
                 <p className="mt-4 font-serif text-2xl leading-tight text-white">
                   {profile.primaryKeynote.title}
                 </p>
-                <p className="mt-3 text-sm leading-6 text-[#d8cdbb]">
+                <p className="mt-3 text-base leading-7 text-[#d8cdbb]">
                   {profile.primaryKeynote.fit}
                 </p>
               </div>
