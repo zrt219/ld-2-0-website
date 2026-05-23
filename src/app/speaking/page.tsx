@@ -4,14 +4,11 @@ import {
   ArrowRight,
   BadgeCheck,
   BookOpenCheck,
-  Brain,
   CalendarCheck,
   CheckCircle2,
   ChevronRight,
   Clock3,
-  Cross,
   Download,
-  Flame,
   HandHeart,
   Mic2,
   Play,
@@ -28,8 +25,8 @@ import { VideoCard } from "@/components/VideoCard";
 import { createMetadata, images, mediaItems, speakerSubmissionProfile } from "@/content/site";
 
 export const metadata = createMetadata(
-  "Lornette Daye Speaking | Transformational Keynote Speaker",
-  "Book Lornette Daye for transformational keynote speaking on resilience, leadership, inclusion, purpose, faith, AI for beginners, and athlete mindset.",
+  "Lornette Daye Speaking | Resilience, Change & Elite Athlete Mindset",
+  "Book Lornette Daye for keynote sessions on resilience, navigating disappointment, regaining perspective after adversity, and lessons from her journey as an elite athlete.",
   "/speaking",
 );
 
@@ -52,141 +49,92 @@ const speakingPillars = [
   {
     number: "01",
     icon: Target,
-    title: "The Champion Mindset",
+    title: "Road to the Olympics",
     keynoteName: "Road to the Olympics: Lessons Learned as an Elite Athlete",
     promise:
-      "For audiences who need to overcome pressure, setbacks, rejection, and self-doubt while staying focused on purpose.",
+      "For audiences who want to achieve meaningful goals while learning how to navigate obstacles, adversity, perspective, and self-esteem along the way.",
     description:
-      "This keynote uses Lornette's journey as an elite athlete to help audiences understand what it takes to rise under pressure, recover from disappointment, and keep moving toward purpose. It is more than a sports story. It is a message about resilience, discipline, identity, courage, and the strength to keep going when life does not unfold as expected.",
-    bestFor:
-      "Corporate teams, schools, youth events, athletic organizations, leadership conferences, women's events, and faith-based gatherings.",
+      "Everybody wants to achieve great things, but many people are not equipped with the tools to overcome the obstacles that come with pursuing a goal. In this session, Lornette draws from her personal journey to help audiences rise above adversity, maintain perspective, protect their self-worth, and stay connected to what matters as they move toward the life and goals they are called to pursue.",
+    bestFor: ["Corporate teams", "Youth programs", "Faith-based gatherings"],
     outcomes: [
-      "Build resilience after setbacks",
-      "Strengthen confidence under pressure",
-      "Develop discipline and mental toughness",
-      "Reconnect with purpose",
-      "Learn how to rise after disappointment",
+      "Understand how childhood and professional foundations can shape personal pursuits",
+      "Develop strategies for maintaining a positive self-view and staying motivated",
+      "See how the journey toward achievement can build character and transformation",
+      "Learn how adversity can strengthen perspective, discipline, and resilience",
+      "Discover the role of giving in maintaining clarity and focus",
     ],
-    video: "Video Clip: The Champion Mindset",
+    video: "Video Clip: Road to the Olympics",
     cta: "Book This Keynote",
   },
   {
     number: "02",
     icon: Sparkles,
-    title: "Purpose in Motion",
-    keynoteName: "Know Who You Are: Confidence, Identity & the Power of Your Words",
+    title: "What Happens When It Doesn't Work?",
+    keynoteName: "What Happens When It Doesn't Work?: Navigating Change and Disappointment",
     promise:
-      "For audiences who need to break free from fear, comparison, insecurity, and limiting beliefs.",
+      "For audiences facing unexpected change, failure, transition, or disappointment who need practical tools to regain confidence and move forward.",
     description:
-      "This powerful talk helps audiences understand the connection between identity, confidence, words, and purpose. Lornette encourages people to stop living from fear or past pain and begin speaking, moving, and leading from a stronger sense of who they are.",
-    bestFor:
-      "Women's conferences, youth events, empowerment events, faith-based gatherings, leadership retreats, and personal development programs.",
+      "When the unexpected hits, it can be devastating. A market shift, layoff, personal issue, or major disappointment can leave people off balance and questioning themselves, their direction, and their future. This session helps audiences understand that change does not have to be the end of the story. Lornette shares emotional and professional principles that equip people to grow through the unexpected and make the most of what comes next.",
+    bestFor: ["Corporate teams", "Leadership groups", "Career events"],
     outcomes: [
-      "Build stronger self-worth",
-      "Replace fear with courage",
-      "Understand the power of words and self-talk",
-      "Break agreement with limiting beliefs",
-      "Move forward with confidence and clarity",
+      "Develop resilience and mental flexibility during failure or unexpected change",
+      "Reframe challenges as opportunities for growth",
+      "Strengthen self-awareness around personal triggers and responses to change",
+      "Build supportive networks for difficult transitions",
+      "Communicate with greater transparency and trust during uncertainty",
+      "Create a proactive mindset that embraces change rather than fearing it",
     ],
-    video: "Video Clip: Identity & Confidence",
+    video: "Video Clip: What Happens When It Doesn't Work?",
     cta: "Bring This Message to Your Audience",
   },
   {
     number: "03",
-    icon: Brain,
-    title: "Future-Ready Confidence",
-    keynoteName: "AI for Beginners: Understanding and Using the Future with Confidence",
+    icon: HandHeart,
+    title: "Staying Grounded",
+    keynoteName: "Staying Grounded: Regaining Perspective After Adversity",
     promise:
-      "For audiences who want to understand artificial intelligence without fear, confusion, or technical overwhelm.",
+      "For audiences who feel worn down by obstacles, setbacks, or disappointment and need to pause, process, and reconnect with purpose.",
     description:
-      "AI is changing how people work, create, communicate, and build opportunities. This beginner-friendly talk explains artificial intelligence in simple language and shows everyday people how to use AI as a practical tool for business, creativity, learning, productivity, and future growth.",
-    note:
-      "This topic is positioned as a modern, practical extension of Lornette's empowerment brand: helping people stop feeling left behind and start moving forward with confidence.",
-    bestFor:
-      "Entrepreneurs, small business owners, women in business, schools, community groups, nonprofit teams, career events, and beginner audiences.",
+      "In the face of obstacles and adversity, it is easy to lose sight of purpose and forget why we were striving in the first place. Many people either get stuck in a rut or force themselves to keep going without truly processing what happened. This session explores the importance of pausing to assess our experiences instead of simply pushing through pain. By acknowledging emotions with honesty and care, audiences can begin to regain clarity, reconnect with identity, and move forward with renewed strength.",
+    bestFor: ["Women's events", "Faith-based gatherings", "Retreats"],
     outcomes: [
-      "Understand AI in simple terms",
-      "Reduce fear around new technology",
-      "Learn practical ways to use AI",
-      "Discover how AI can support business, creativity, and learning",
-      "Gain confidence in a changing world",
+      "Learn techniques for assessing and processing emotional pain",
+      "Reconnect with identity and strengthen self-worth",
+      "Understand the role of gratitude in resilience and healing",
+      "Recognize the positive aspects of life that remain during difficulty",
+      "Regain perspective after setbacks, obstacles, and disappointment",
     ],
-    video: "Video Clip: AI Made Simple",
-    cta: "Book the AI for Beginners Talk",
-  },
-  {
-    number: "04",
-    icon: Cross,
-    title: "Faith That Rises",
-    keynoteName: "Faith, Courage & Breakthrough: Rising Strong in Difficult Seasons",
-    promise:
-      "For audiences who need hope, courage, spiritual strength, and encouragement during seasons of waiting, transition, or adversity.",
-    description:
-      "This faith-filled keynote speaks to people who are carrying fear, discouragement, exhaustion, or disappointment. Lornette brings a message of hope, courage, faith, and breakthrough, helping audiences believe again, stand again, and move forward with renewed strength.",
-    bestFor:
-      "Churches, women's ministries, faith conferences, retreats, prayer gatherings, Christian leadership events, and healing events.",
-    outcomes: [
-      "Strengthen faith during difficult seasons",
-      "Rebuild hope after disappointment",
-      "Replace fear with trust",
-      "Find courage in waiting",
-      "Leave spiritually encouraged and empowered",
-    ],
-    video: "Video Clip: Faith & Breakthrough",
-    cta: "Invite Lornette to Speak",
-  },
-  {
-    number: "05",
-    icon: Flame,
-    title: "Rise Above Adversity",
-    keynoteName: "From Setback to Strength: Turning Pain Into Power",
-    promise:
-      "For audiences who need healing, resilience, emotional strength, and the courage to rise again.",
-    description:
-      "This motivational keynote helps audiences understand that pain does not have to be the end of their story. Lornette speaks with compassion and strength about healing, rebuilding confidence, and turning difficult seasons into wisdom, growth, and renewed purpose.",
-    bestFor:
-      "Women's events, mental wellness events, community organizations, youth empowerment programs, leadership retreats, and faith-based events.",
-    outcomes: [
-      "Turn adversity into growth",
-      "Rebuild confidence after hardship",
-      "Develop emotional strength",
-      "Release shame, fear, and self-doubt",
-      "Move forward with renewed hope",
-    ],
-    video: "Video Clip: Turning Pain Into Power",
+    video: "Video Clip: Staying Grounded",
     cta: "Book This Transformational Talk",
   },
 ];
 
 const videoProof = [
   "Speaker Reel",
-  "The Champion Mindset",
-  "Confidence & Identity",
-  "AI for Beginners",
-  "Faith & Breakthrough",
+  "Road to the Olympics",
+  "Navigating Change and Disappointment",
+  "Staying Grounded After Adversity",
 ];
 
 const outcomes = [
-  "Confidence to rise after setbacks",
-  "Clarity around identity and purpose",
-  "Courage to move through fear",
-  "Practical tools for personal growth",
-  "Renewed faith, hope, and resilience",
-  "Future-ready thinking for a changing world",
+  "Stronger resilience through setbacks",
+  "Healthier perspective under pressure",
+  "Practical tools for change and disappointment",
+  "Renewed self-worth and motivation",
+  "Clearer communication during uncertainty",
+  "Grounded confidence to keep moving forward",
 ];
 
 const eventFits = [
   "Keynote conferences",
-  "Women's empowerment events",
-  "Corporate leadership sessions",
-  "Athletic banquets",
-  "Youth conferences",
-  "Schools and universities",
-  "Faith-based conferences",
+  "Corporate teams and leadership groups",
+  "Professional development events",
+  "Youth programs and schools",
+  "Women's events and retreats",
+  "Athletic teams and coaching environments",
+  "Community organizations",
+  "Faith-based gatherings",
   "Church events",
-  "Entrepreneur workshops",
-  "Community events",
-  "Retreats",
   "Panels and workshops",
 ];
 
@@ -207,19 +155,19 @@ const bookingOptions = [
   },
   {
     icon: HandHeart,
-    title: "Faith-Based Experience",
+    title: "Tailored Audience Experience",
     description:
-      "A spiritually encouraging message with biblical inspiration, prayer, declarations, and breakthrough-focused encouragement.",
-    formats: "Church service, retreat, conference, or women's gathering",
+      "A message adapted for faith-based gatherings, schools, women's events, community rooms, or professional audiences.",
+    formats: "Church service, retreat, school session, or women's gathering",
   },
 ];
 
 const credibility = [
   "Elite athlete experience",
   "Powerful personal story",
-  "Faith-based and professional speaking options",
-  "Topics for youth, women, leaders, athletes, entrepreneurs, churches, and organizations",
-  "Beginner-friendly ability to explain complex topics clearly",
+  "Faith-based, youth, women's, athletic, and professional audience options",
+  "Topics for achievement, adversity, change, disappointment, and perspective",
+  "Personal experience turning pressure and setbacks into growth",
   "Customizable keynotes and workshops",
   "Strong focus on audience outcomes",
 ];
@@ -302,7 +250,7 @@ export default function SpeakingPage() {
                 Speaking That Moves People From Inspiration to Action
               </h1>
               <p className="mt-6 max-w-2xl text-xl leading-8 text-[var(--gold-dark)]">
-                Lornette Daye delivers powerful keynote experiences that help audiences rise with confidence, resilience, purpose, faith, and future-ready courage.
+                Lornette Daye delivers powerful keynote experiences that help audiences rise through adversity, navigate change, and regain perspective when life or leadership does not go as planned.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <CTAButton href="/book">Book Lornette to Speak</CTAButton>
@@ -325,7 +273,7 @@ export default function SpeakingPage() {
                 ))}
               </div>
               <p className="mt-5 max-w-2xl text-sm leading-7 text-[#675d50]">
-                Event planners can shape Lornette&apos;s message for women&apos;s empowerment speaker events, faith-based speaker gatherings, AI for beginners speaker sessions, youth speaker programs, inspirational speaker stages, confidence speaker workshops, and purpose speaker conferences.
+                Event planners can shape Lornette&apos;s message for faith-based gatherings, corporate events, youth programs, women&apos;s events, athletic organizations, schools, retreats, and community rooms.
               </p>
             </div>
 
@@ -382,7 +330,7 @@ export default function SpeakingPage() {
             <div>
               <SectionLabel>Speaker Bureau Snapshot</SectionLabel>
               <h2 className="mt-4 font-serif text-4xl leading-tight text-[var(--ink)] sm:text-5xl">
-                Clear credibility for planners, hosts, and decision-makers.
+                Summary for planners, hosts, and decision-makers.
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-8 text-[#675d50]">
                 {profile.role}. Traveling from {profile.travelingFrom}. Lornette&apos;s speaking platform connects elite athletic achievement, national coaching leadership, lived resilience, authorship, faith, and community impact.
@@ -445,11 +393,11 @@ export default function SpeakingPage() {
               <div>
                 <SectionLabel>Signature Speaking Pillars</SectionLabel>
                 <h2 className="mt-4 font-serif text-5xl leading-tight text-balance text-[var(--ink)]">
-                  Messages Designed for Real Transformation
+                  Three Signature Sessions for Real Transformation
                 </h2>
               </div>
               <p className="text-lg leading-8 text-[#675d50]">
-                Each keynote can be customized for the audience, event theme, time format, and desired outcome. Whether Lornette is speaking to leaders, women, youth, athletes, entrepreneurs, churches, or community organizations, her message is shaped to meet people where they are and help them rise.
+                Each session is rooted in Lornette&apos;s personal journey, athletic discipline, coaching experience, and commitment to helping people leave with clarity, courage, and practical next steps.
               </p>
             </div>
 
@@ -503,19 +451,19 @@ export default function SpeakingPage() {
                         <p className="mt-5 text-base leading-8 text-[#675d50]">
                           {pillar.description}
                         </p>
-                        {"note" in pillar ? (
-                          <p className="mt-4 border-l-2 border-[var(--champagne)] pl-4 text-sm font-semibold leading-7 text-[var(--charcoal)]">
-                            {pillar.note}
-                          </p>
-                        ) : null}
                         <div className="mt-7 grid gap-4 sm:grid-cols-[1fr_auto] sm:items-center">
                           <div className="border border-[var(--line)] bg-[var(--ivory)] p-4">
                             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--gold-dark)]">
                               Best For
                             </p>
-                            <p className="mt-2 text-sm leading-6 text-[#675d50]">
-                              {pillar.bestFor}
-                            </p>
+                            <ul className="mt-2 grid gap-1.5 text-[0.96rem] leading-7 text-[#675d50]">
+                              {pillar.bestFor.map((fit) => (
+                                <li key={fit} className="flex gap-2">
+                                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--gold-dark)]" />
+                                  <span>{fit}</span>
+                                </li>
+                              ))}
+                            </ul>
                           </div>
                           <CTAButton href="/book" className="sm:self-stretch">
                             {pillar.cta}
@@ -525,7 +473,7 @@ export default function SpeakingPage() {
 
                       <div className="border-t border-[var(--line)] bg-[rgba(250,247,240,0.82)] p-7 lg:border-l lg:border-t-0">
                         <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
-                          Audience Outcomes
+                          Attendee Results
                         </p>
                         <ul className="mt-5 grid gap-3">
                           {pillar.outcomes.map((outcome) => (
@@ -669,7 +617,7 @@ export default function SpeakingPage() {
             <SectionHeader
               eyebrow="Booking Options"
               title="Choose the Experience That Fits Your Event"
-              body="From a main-stage inspirational speaker experience to a deeper workshop or faith-based gathering, each format is shaped around the people in the room."
+              body="From a main-stage inspirational speaker experience to a deeper workshop or tailored gathering, each format is shaped around the people in the room."
               align="center"
             />
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -771,7 +719,7 @@ export default function SpeakingPage() {
                 Ready to Bring Lornette&apos;s Message to Your Audience?
               </h2>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-[#d8cdbb]">
-                Whether your audience needs resilience, confidence, faith, leadership, healing, or future-ready tools, Lornette delivers keynote experiences that inspire people to rise, believe again, and take action.
+                Whether your audience needs resilience, perspective, motivation, or practical tools for change and disappointment, Lornette delivers keynote experiences that inspire people to rise, regroup, and take action.
               </p>
               <p className="mt-5 text-sm font-bold uppercase tracking-[0.16em] text-[var(--champagne)]">
                 Available for keynotes, workshops, conferences, retreats, schools, churches, corporate events, and community gatherings.
@@ -802,7 +750,7 @@ export default function SpeakingPage() {
               <ol className="mt-6 grid gap-4 text-sm leading-7 text-[#d8cdbb]">
                 {[
                   "Share the event date, location, format, audience, and goals.",
-                  "Choose the keynote, workshop, or faith-based experience that fits.",
+                  "Choose the keynote, workshop, or tailored audience experience that fits.",
                   "Receive next-step guidance for speaker kit, prep, and event fit.",
                 ].map((item, index) => (
                   <li key={item} className="flex gap-3">

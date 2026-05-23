@@ -20,7 +20,7 @@ const workshops = [
   "Training & Workshops",
   "Resilience & Mindset Coaching",
   "Athlete Performance Lab",
-  "Purpose in Motion Retreat",
+  "Staying Grounded Retreat",
 ];
 
 export default function EventsPage() {

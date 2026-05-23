@@ -27,7 +27,7 @@ The page should help an event planner quickly answer:
 
 3. Speakers Reels: `https://www.speakersreels.ca/`
    - Notes: Selection committees make fast decisions from reel content. A reel should show stage presence, story, and human connection, and it should be concise.
-   - Lornette application: Treat the reel as a primary homepage proof asset. Include short clip slots for Champion Mindset, identity/confidence, faith, and AI for beginners as the media library grows.
+   - Lornette application: Treat the reel as a primary homepage proof asset. Include short clip slots for Road to the Olympics, navigating change and disappointment, and staying grounded after adversity as the media library grows.
 
 4. Solhaus Media speaker reel guidance: `https://www.solhausmedia.com/speaker-reel-production`
    - Notes: A reel should answer what the speaker will deliver for the audience. Event organizers book based on impact, clarity, and trust, not only production value.

@@ -205,7 +205,7 @@ export const images = {
   },
   speakingChampionMindset: {
     src: "/generated/speaking-champion-abstract-gold-flow.png",
-    alt: "Abstract elegant gold and white flowing artwork for the Champion Mindset speaking pillar.",
+    alt: "Abstract elegant gold and white flowing artwork for the speaking topics section.",
     crop: "object-[72%_50%]",
   },
   podcastCard: {
@@ -299,18 +299,16 @@ export const servicePages: Record<string, ServicePage> = {
     title: "Powerful Messages. Lasting Impact.",
     eyebrow: "Speaking / Keynotes",
     description:
-      "Signature keynotes and facilitated sessions that connect resilience, leadership, purpose, and action.",
+      "Signature keynotes and facilitated sessions on achievement, adversity, change, disappointment, resilience, and perspective.",
     heroImage: {
       src: speakingPoster,
       alt: "Transformational public speaking artwork, cropped to keep the focus on the stage visual.",
       crop: "object-center scale-[1.58]",
     },
     pillars: [
-      "The Champion Mindset",
-      "Purpose in Motion",
-      "Leadership That Lasts",
-      "Inclusion in Action",
-      "Rise Above Adversity",
+      "Road to the Olympics",
+      "Navigating Change and Disappointment",
+      "Staying Grounded After Adversity",
     ],
     sections: [
       {
