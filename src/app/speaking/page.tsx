@@ -386,7 +386,7 @@ export default function SpeakingPage() {
 
         <section
           id="topics"
-          className="scroll-mt-32 px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+          className="scroll-mt-32 px-4 pb-16 pt-8 sm:px-6 lg:px-8 lg:pb-24 lg:pt-12"
         >
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-10 lg:grid-cols-[0.42fr_0.58fr] lg:items-end">
