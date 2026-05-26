@@ -207,39 +207,51 @@ export default function Home() {
         </section>
 
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
-            <VideoCard
-              {...mediaItems[0]}
-              title="Watch Lornette in Action"
-              summary="A video-first preview for event planners, schools, teams, and community leaders reviewing presence, message, and audience fit."
-              featured
-              featuredColumns="lg:grid lg:grid-cols-[0.95fr_1fr]"
-              featuredMediaSize="min-h-[300px] lg:min-h-[360px]"
-            />
-            <div className="border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-7 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-9 lg:p-10">
-              <p className="text-sm font-bold uppercase text-[var(--gold-dark)]">
-                Planner Review Path
-              </p>
-              <h2 className="mt-4 font-serif text-4xl leading-tight text-balance text-[var(--ink)] sm:text-5xl">
-                {siteCopy.homepageHeadline}
-              </h2>
-              <p className="mt-5 text-base leading-8 text-[#675d50]">
-                {siteCopy.homepageIntro}
-              </p>
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
+              <VideoCard
+                {...mediaItems[0]}
+                title="Watch Lornette in Action"
+                summary="A video-first preview for event planners, schools, teams, and community leaders reviewing presence, message, and audience fit."
+                featured
+                className="h-full"
+                featuredColumns="lg:grid lg:grid-cols-[0.95fr_1fr]"
+                spaciousFeaturedContent
+                featuredMediaSize="min-h-[300px] lg:min-h-[360px]"
+              />
+              <div>
+                <div className="border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-7 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-9 lg:p-10">
+                  <p className="text-sm font-bold uppercase text-[var(--gold-dark)]">
+                    Planner Review Path
+                  </p>
+                  <h2 className="mt-4 font-serif text-4xl leading-tight text-balance text-[var(--ink)] sm:text-5xl">
+                    {siteCopy.homepageHeadline}
+                  </h2>
+                  <p className="mt-5 text-lg leading-9 text-[#675d50]">
+                    {siteCopy.homepageIntro}
+                  </p>
+                </div>
+              </div>
+            </div>
 
-              <div className="mt-8 border-y border-[var(--line)] py-6">
+            <div className="mt-8 border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-6 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-8 lg:grid lg:grid-cols-[0.26fr_1fr] lg:items-start lg:gap-8">
+              <div className="border-b border-[var(--line)] pb-5 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
                   Primary Keynote
                 </p>
-                <h3 className="mt-3 font-serif text-3xl leading-tight text-[var(--ink)]">
+              </div>
+              <div className="mt-5 lg:mt-0">
+                <h3 className="font-serif text-4xl leading-tight text-balance text-[var(--ink)] sm:text-5xl">
                   {speakerSubmissionProfile.primaryKeynote.title}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-[#675d50]">
+                <p className="mt-4 max-w-4xl text-lg leading-9 text-[#675d50]">
                   {speakerSubmissionProfile.primaryKeynote.description}
                 </p>
               </div>
+            </div>
 
-              <div className="mt-7 grid gap-3 sm:grid-cols-2">
+            <div className="mt-8 border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-6 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-8">
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {metrics.slice(0, 4).map((metric) => (
                   <div key={metric.label} className="border-l-2 border-[var(--champagne)] bg-white px-4 py-3">
                     <p className="font-serif text-3xl leading-none text-[var(--ink)]">
@@ -252,7 +264,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
                 <CTAButton href="/book">Inquire About Availability</CTAButton>
                 <CTAButton href="/speaker-kit" variant="secondary">
                   Speaker Kit

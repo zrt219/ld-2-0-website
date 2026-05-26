@@ -17,6 +17,7 @@ type VideoCardProps = {
   compact?: boolean;
   className?: string;
   featuredColumns?: string;
+  spaciousFeaturedContent?: boolean;
   featuredMediaSize?: string;
 };
 
@@ -31,6 +32,7 @@ export function VideoCard({
   compact = false,
   className = "",
   featuredColumns,
+  spaciousFeaturedContent = false,
   featuredMediaSize,
 }: VideoCardProps) {
   const [open, setOpen] = useState(false);
@@ -132,7 +134,13 @@ export function VideoCard({
         {!compact ? (
           <div
             className={`p-6 ${
-              featured ? "bg-[var(--ink)] text-[var(--ivory)] lg:p-8" : ""
+              featured
+                ? `bg-[var(--ink)] text-[var(--ivory)] ${
+                    spaciousFeaturedContent
+                      ? "flex h-full flex-col justify-center lg:p-10 xl:p-12"
+                      : "lg:p-8"
+                  }`
+                : ""
             }`}
           >
             <p
@@ -150,8 +158,11 @@ export function VideoCard({
               {title}
             </h3>
             <p
-              className={`mt-4 text-sm leading-7 ${
-                featured ? "text-[#d8cdbb]" : "text-[#675d50]"
+              className={`mt-4 ${
+                featured && spaciousFeaturedContent
+                  ? "text-base leading-8 lg:text-lg lg:leading-9"
+                  : "text-sm leading-7"
+              } ${featured ? "text-[#d8cdbb]" : "text-[#675d50]"
               }`}
             >
               {summary}
@@ -160,28 +171,44 @@ export function VideoCard({
               <button
                 type="button"
                 onClick={() => setOpen(true)}
-                className={`mt-7 inline-flex min-h-11 items-center gap-2 border px-4 text-xs font-bold uppercase tracking-[0.16em] transition hover:bg-[rgba(198,165,92,0.1)] focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] ${
+                className={`inline-flex items-center justify-center gap-2 border text-center font-bold uppercase transition hover:bg-[rgba(198,165,92,0.1)] focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] ${
+                  featured && spaciousFeaturedContent
+                    ? "mt-10 min-h-16 w-full px-7 py-4 text-base tracking-[0.16em]"
+                    : "mt-7 min-h-11 px-4 text-xs tracking-[0.16em]"
+                } ${
                   featured
                     ? "border-white/20 text-[var(--champagne)]"
                     : "border-[rgba(155,118,46,0.34)] text-[var(--gold-dark)]"
                 }`}
               >
                 Play video
-                <Play fill="currentColor" size={13} aria-hidden="true" />
+                <Play
+                  fill="currentColor"
+                  size={featured && spaciousFeaturedContent ? 16 : 13}
+                  aria-hidden="true"
+                />
               </button>
             ) : isExternalVideo && videoSrc ? (
               <a
                 href={videoSrc}
                 target="_blank"
                 rel="noreferrer"
-                className={`mt-7 inline-flex min-h-11 items-center gap-2 border px-4 text-xs font-bold uppercase tracking-[0.16em] transition hover:bg-[rgba(198,165,92,0.1)] focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] ${
+                className={`inline-flex items-center justify-center gap-2 border text-center font-bold uppercase transition hover:bg-[rgba(198,165,92,0.1)] focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] ${
+                  featured && spaciousFeaturedContent
+                    ? "mt-10 min-h-16 w-full px-7 py-4 text-base tracking-[0.16em]"
+                    : "mt-7 min-h-11 px-4 text-xs tracking-[0.16em]"
+                } ${
                   featured
                     ? "border-white/20 text-[var(--champagne)]"
                     : "border-[rgba(155,118,46,0.34)] text-[var(--gold-dark)]"
                 }`}
               >
                 Open video
-                <Play fill="currentColor" size={13} aria-hidden="true" />
+                <Play
+                  fill="currentColor"
+                  size={featured && spaciousFeaturedContent ? 16 : 13}
+                  aria-hidden="true"
+                />
               </a>
             ) : (
               <span
