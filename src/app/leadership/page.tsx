@@ -3,8 +3,8 @@ import { ServicePage } from "@/components/ServicePage";
 import { createMetadata, servicePages } from "@/content/site";
 
 export const metadata = createMetadata(
-  "Leadership Development",
-  "Leadership development workshops and outcomes with Lornette Daye.",
+  "Resilient Leadership",
+  "Workshops that help leaders communicate clearly, build trust, and stay steady under pressure.",
   "/leadership",
 );
 

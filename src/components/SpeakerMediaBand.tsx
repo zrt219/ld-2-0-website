@@ -26,37 +26,37 @@ const plannerLinks: NonNullable<MediaBandContent["cards"]> = [
   {
     icon: "film",
     title: "Speaker Reel",
-    body: "Review presence, delivery style, pacing, and audience fit from the primary reel.",
+    body: "Hear Lornette's voice, story, and presence before you invite her into the room.",
   },
   {
     icon: "mic",
     title: "Clip Library",
-    body: "Hold space for keynote clips, interviews, podcasts, and short insight videos as assets are approved.",
+    body: "Explore keynote clips, interviews, podcasts, and short insight videos that show the message in motion.",
   },
   {
     icon: "download",
-    title: "Planner Files",
-    body: "Keep bios, topic sheets, AV needs, intro copy, and headshot resources one click away.",
+    title: "Host Resources",
+    body: "Find bios, topic sheets, AV details, intro copy, and headshots for a smoother event.",
   },
   {
     icon: "calendar",
-    title: "Booking Path",
-    body: "Move from media review to availability, format, audience goals, and custom proposal details.",
+    title: "Booking Next Step",
+    body: "Share the date, format, audience goals, and details that help shape the right experience.",
   },
 ];
 
 export function SpeakerMediaBand({
-  eyebrow = "Planner Media Room",
-  title = "Give decision-makers the reel, proof path, and booking next step in one place.",
-  body = "A premium speaker site should make media review feel effortless. This section keeps video, planner resources, and inquiry routes together so organizers can evaluate Lornette without losing momentum.",
+  eyebrow = "Watch & Listen",
+  title = "Experience Lornette's message before you book.",
+  body = "Start with the speaker reel, then explore the resources and next steps that help you plan a meaningful event for your audience.",
   primaryLabel = "Watch The Reel",
   primaryHref = "/media",
   secondaryLabel = "Speaker Kit",
   secondaryHref = "/speaker-kit",
-  videoTitle = "Speaker Reel for Event Planners",
+  videoTitle = "Speaker Reel",
   videoSummary = "Start here for a fast read on tone, story, audience connection, and transformational speaking style.",
   cards = plannerLinks,
-  footerLabel = "Media-first review flow",
+  footerLabel = "Ready when your audience needs hope, resilience, and purpose",
 }: MediaBandContent) {
   const cardGridClass =
     cards.length === 3

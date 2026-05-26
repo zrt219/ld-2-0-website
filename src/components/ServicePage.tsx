@@ -21,9 +21,9 @@ export function ServicePage({ page }: { page: ServicePageData }) {
       <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <SectionHeader
-            eyebrow="Signature Pillars"
-            title="Built for clear outcomes, not generic inspiration."
-            body="Each experience can be shaped for the audience, time, room format, and the result the organizer wants people to carry out."
+            eyebrow="How Lornette Helps"
+            title="Practical sessions shaped around the people in the room."
+            body="Each keynote, workshop, or coaching experience connects Lornette's story with tools your audience can use under pressure, through change, and beyond the event."
           />
           <div className="mt-10 grid gap-4 md:grid-cols-5">
             {page.pillars.map((pillar) => (
@@ -73,8 +73,8 @@ export function ServicePage({ page }: { page: ServicePageData }) {
         </div>
       </section>
       <SpeakerMediaBand
-        title={`Review Lornette's media before booking ${page.navLabel.toLowerCase()}.`}
-        body="Event planners, school leaders, teams, and community organizers can move from the reel to the speaker kit to the booking form without hunting across the site."
+        title="See Lornette's voice, presence, and message."
+        body="Watch the reel, explore speaker materials, and start an inquiry when you are ready to talk through the right fit."
         {...mediaBandProps}
       />
     </main>

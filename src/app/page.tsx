@@ -51,11 +51,11 @@ const audiencePathways: AudiencePathway[] = [
     audience: audienceTypes[0],
     title: "Universities planning leadership, resilience, or purpose-driven programming.",
     description:
-      "Use the speaker reel, keynote platform, and student-ready mentorship topics to review fit before moving to availability.",
+      "Start with the speaker reel and student-focused topics, then ask about availability when the message fits your program.",
     primaryHref: "/speaking",
     topics: [
-      topic("Public Speaking"),
-      topic("Leadership Development"),
+      topic("Keynotes & Speaking"),
+      topic("Resilient Leadership"),
       topic("Mentorship and Youth Development"),
     ],
     proofPoints: [
@@ -72,7 +72,7 @@ const audiencePathways: AudiencePathway[] = [
     primaryHref: "/mentorship",
     topics: [
       topic("Mentorship and Youth Development"),
-      topic("Public Speaking"),
+      topic("Keynotes & Speaking"),
       topic("Athlete & Performance Coaching"),
     ],
     proofPoints: [
@@ -83,14 +83,14 @@ const audiencePathways: AudiencePathway[] = [
   },
   {
     audience: audienceTypes[2],
-    title: "Athletic associations reviewing mindset, discipline, and performance coaching.",
+    title: "Athletic associations building mindset, discipline, and performance habits.",
     description:
       "Pair Lornette's elite-athlete story with practical coaching themes for athletes, coaches, and performance-focused teams.",
     primaryHref: "/athlete-coaching",
     topics: [
       topic("Athlete & Performance Coaching"),
       topic("Resilience & Mindset Coaching"),
-      topic("Public Speaking"),
+      topic("Keynotes & Speaking"),
     ],
     proofPoints: [
       claim("Olympic-level Athlete & Coach"),
@@ -105,7 +105,7 @@ const audiencePathways: AudiencePathway[] = [
       "Lead with a keynote or inclusion conversation, then deepen the work with mentorship and youth-development pathways.",
     primaryHref: "/programs",
     topics: [
-      topic("Public Speaking"),
+      topic("Keynotes & Speaking"),
       topic("Diversity & Inclusion"),
       topic("Mentorship and Youth Development"),
     ],
@@ -119,12 +119,12 @@ const audiencePathways: AudiencePathway[] = [
     audience: audienceTypes[4],
     title: "Government agencies planning inclusion, leadership, or public-sector team sessions.",
     description:
-      "Review the inclusion and leadership pathways alongside Lornette's speaker materials before starting an inquiry.",
+      "Explore inclusion and leadership themes alongside Lornette's speaker materials before starting an inquiry.",
     primaryHref: "/inclusion",
     topics: [
       topic("Diversity & Inclusion"),
-      topic("Leadership Development"),
-      topic("Public Speaking"),
+      topic("Resilient Leadership"),
+      topic("Keynotes & Speaking"),
     ],
     proofPoints: [
       claim("Diversity Award Winner"),
@@ -136,12 +136,12 @@ const audiencePathways: AudiencePathway[] = [
     audience: audienceTypes[5],
     title: "Corporate teams building resilient leadership and stronger performance habits.",
     description:
-      "Use the reel for presence, then review leadership, inclusion, and keynote options for the event brief.",
+      "Start with the reel, then explore leadership, inclusion, and keynote options for your team.",
     primaryHref: "/leadership",
     topics: [
-      topic("Leadership Development"),
+      topic("Resilient Leadership"),
       topic("Diversity & Inclusion"),
-      topic("Public Speaking"),
+      topic("Keynotes & Speaking"),
     ],
     proofPoints: [
       claim("Professional Keynote Speaker"),
@@ -154,19 +154,23 @@ const audiencePathways: AudiencePathway[] = [
 const signatureTopicCards = [
   {
     ...services[0],
-    title: "Mental Resilience",
-    body: "Practical tools to steady the mind, recover from setbacks, and keep moving through pressure.",
+    title: "Resilience Under Pressure",
+    body: "A practical reset for audiences learning to steady themselves, recover from setbacks, and take the next brave step.",
   },
   {
     ...services[1],
-    title: "Women's Wellness",
-    body: "Encouraging conversations that support balance, confidence, self-care, and purpose in every season.",
+    title: "Women's Wellness & Purpose",
+    body: "Encouragement for women navigating change, responsibility, identity, and the need to make room for rest and renewal.",
   },
-  services[2],
+  {
+    ...services[2],
+    title: "Belonging in Real Life",
+    body: "Grounded conversations that help teams listen across difference, build trust, and make inclusion visible in everyday behavior.",
+  },
   {
     ...services[3],
-    title: "Burnout",
-    body: "Real-world guidance for recognizing exhaustion, restoring capacity, and rebuilding sustainable rhythms.",
+    title: "Burnout, Balance & Renewal",
+    body: "A compassionate session for people running on empty who need healthier rhythms, clearer boundaries, and hope for what comes next.",
   },
 ];
 
@@ -175,7 +179,7 @@ export default function Home() {
     <PageShell>
       <main>
         <HeroSplit
-          eyebrow="Transformational speaker message"
+          eyebrow="Keynotes that build resilience and purpose"
           title={siteCopy.homepageHeadline}
           body={`${siteCopy.mainMessage} ${siteCopy.homepageSubheadline}. ${siteCopy.homepageIntro}`}
           image={images.heroPortrait}
@@ -188,13 +192,13 @@ export default function Home() {
         <section className="bg-[var(--ink)] px-4 py-10 text-[var(--ivory)] sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.28fr_1fr_0.32fr] lg:items-center">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--champagne)]">
-              Main Message
+              A Message Audiences Carry Home
             </p>
             <p className="font-serif text-3xl leading-tight text-balance sm:text-4xl lg:text-5xl">
               {siteCopy.mainMessage}
             </p>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <CTAButton href="/speaking">Explore The Message</CTAButton>
+              <CTAButton href="/speaking">Explore Speaking Topics</CTAButton>
               <CTAButton
                 href="/media"
                 variant="secondary"
@@ -212,7 +216,7 @@ export default function Home() {
               <VideoCard
                 {...mediaItems[0]}
                 title="Watch Lornette in Action"
-                summary="A video-first preview for event planners, schools, teams, and community leaders reviewing presence, message, and audience fit."
+                summary="See Lornette's warmth, conviction, and practical encouragement come through as she speaks about resilience, identity, and purpose."
                 featured
                 className="h-full"
                 featuredColumns="lg:grid lg:grid-cols-[0.95fr_1fr]"
@@ -222,7 +226,7 @@ export default function Home() {
               <div>
                 <div className="border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-7 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-9 lg:p-10">
                   <p className="text-sm font-bold uppercase text-[var(--gold-dark)]">
-                    Planner Review Path
+                    For the Audience You Care About
                   </p>
                   <h2 className="mt-4 font-serif text-4xl leading-tight text-balance text-[var(--ink)] sm:text-5xl">
                     {siteCopy.homepageHeadline}
@@ -237,7 +241,7 @@ export default function Home() {
             <div className="mt-8 border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-6 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-8 lg:grid lg:grid-cols-[0.26fr_1fr] lg:items-start lg:gap-8">
               <div className="border-b border-[var(--line)] pb-5 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
-                  Primary Keynote
+                  Signature Keynote
                 </p>
               </div>
               <div className="mt-5 lg:mt-0">
@@ -281,7 +285,8 @@ export default function Home() {
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <SectionHeader
                 eyebrow="Signature Topics"
-                title="Discover Lornette's Most Popular Topics"
+                title="Topics that help people rise, reset, and lead with purpose."
+                body="Lornette brings championship discipline, lived resilience, and a coach's care to conversations audiences can carry into real life."
               />
               <CTAButton href="/speaking" variant="secondary">
                 Explore Speaking
@@ -301,9 +306,9 @@ export default function Home() {
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
               <SectionHeader
-                eyebrow="Recognition & Authority"
-                title="Elite athletic credibility, national coaching leadership, and award-recognized community impact."
-                body="For speaker bureaus and event planners, Lornette's platform is grounded in lived achievement: national sprint titles, decades of coaching, authorship, diversity recognition, and selected engagements across schools, community organizations, podcasts, and leadership rooms."
+                eyebrow="Credibility & Recognition"
+                title="A champion's discipline, a coach's heart, and a message people can use."
+                body="Lornette's work is rooted in national sprint titles, decades of coaching, authored resources, diversity recognition, and community service. She brings lived proof to every room, helping audiences see resilience as something they can practice."
               />
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {speakerSubmissionProfile.recognitionHighlights.slice(0, 4).map((item) => (
@@ -326,8 +331,9 @@ export default function Home() {
         <section className="bg-[var(--sand)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionHeader
-              eyebrow="Impact"
-              title="What people are saying."
+              eyebrow="Audience Impact"
+              title="People leave feeling seen, strengthened, and ready to move."
+              body="From keynote audiences to coached athletes and wellness communities, these reflections point to the same thing: Lornette meets people with honesty, hope, and practical next steps."
             />
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {testimonials.map((testimonial) => (
@@ -342,12 +348,12 @@ export default function Home() {
             <div>
               <SectionHeader
                 eyebrow="Media & Community References"
-                title="A brand-provided reference collage for planner review."
-                body="The collage is presented as a single brand asset while final media permissions and individual logo usage are confirmed."
+                title="Trusted in rooms built for growth, leadership, and community."
+                body="Lornette's work has reached audiences through speaking engagements, media conversations, and community-centered partnerships across schools, sports, nonprofits, and public-sector spaces."
               />
-              <div className="mt-8 flex gap-3">
-                <CTAButton href="/impact">View Impact</CTAButton>
-                <CTAButton href="/speaker-kit" variant="secondary">Speaker Kit</CTAButton>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <CTAButton href="/impact" size="large">See Community Impact</CTAButton>
+                <CTAButton href="/speaker-kit" variant="secondary" size="large">Open Speaker Kit</CTAButton>
               </div>
             </div>
             <div className="border border-[var(--line)] bg-white p-4">
@@ -362,14 +368,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <section className="px-4 pb-16 pt-8 sm:px-6 lg:px-8 lg:pb-24 lg:pt-10">
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <SectionHeader
                 eyebrow="Speak Life Blog"
-                title="Short reflections for courage, faith, and purpose."
+                title="Reflections for the moments that ask you to keep going."
+                body="Read short, practical notes from Lornette on resilience, faith, purpose, vulnerability, and the courage to begin again."
               />
-              <CTAButton href="/blog" variant="secondary">Explore the Speak Life Blog</CTAButton>
+              <CTAButton href="/blog" variant="secondary">Read the Speak Life Blog</CTAButton>
             </div>
             <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
               <div className="grid gap-6">
@@ -399,10 +406,10 @@ export default function Home() {
         <section className="px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto flex max-w-7xl flex-col gap-6 border-y border-[rgba(198,165,92,0.5)] py-10 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="font-serif text-4xl text-[var(--ink)]">Ready to create real impact?</p>
-              <p className="mt-2 text-[#675d50]">Bring Lornette to your next event or organization.</p>
+              <p className="font-serif text-4xl text-[var(--ink)]">Ready to help your audience remember what they&apos;re capable of?</p>
+              <p className="mt-2 text-[#675d50]">Bring Lornette Daye to your school, team, conference, or community gathering.</p>
             </div>
-            <CTAButton href="/book">Inquire About Availability</CTAButton>
+            <CTAButton href="/book">Start a Booking Inquiry</CTAButton>
           </div>
         </section>
       </main>

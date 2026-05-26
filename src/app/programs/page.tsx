@@ -26,8 +26,8 @@ export default function ProgramsPage() {
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
             <SectionHeader
               eyebrow="Programs & Services"
-              title="Programs Designed for Every Stage of Growth."
-              body="Choose a focused experience or combine speaking, leadership, inclusion, mentorship, and performance coaching into a custom proposal."
+              title="Speaking, coaching, and development experiences for the people you serve."
+              body="Choose a focused keynote, workshop, mentorship session, or coaching experience, or combine formats around the needs of your audience."
             />
             <ImageFrame image={additionalImages.programOverview} ratio="aspect-[16/10]" priority />
           </div>
@@ -47,8 +47,8 @@ export default function ProgramsPage() {
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
             <SectionHeader
               eyebrow="Process"
-              title="Built around your room, not a generic script."
-              body="Packages are scoped as a custom proposal because every audience, event, and outcome deserves the right fit."
+              title="Start with the people in the room."
+              body="Lornette shapes each experience around your audience's pressure points, goals, format, and the next steps you want them to carry forward."
             />
             <div className="grid gap-4 md:grid-cols-2">
               {processSteps.map((step, index) => (

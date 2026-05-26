@@ -216,7 +216,7 @@ function PlaceholderVideo({
             {title}
           </p>
           <p className="mt-2 text-sm leading-6 text-[#d8cdbb]">
-            Reserved for approved speaker footage, clips, interviews, or event media.
+            More speaking moments, interviews, and event highlights can be added here as Lornette&apos;s media library grows.
           </p>
         </div>
       </div>
@@ -262,7 +262,7 @@ export default function SpeakingPage() {
                 Through her journey as an elite athlete, transformational coach, and purpose-driven communicator, Lornette brings messages that are both deeply personal and practically empowering. Her talks are designed to help audiences leave stronger, clearer, and ready to take action.
               </p>
               <p className="mt-5 max-w-2xl border-l-2 border-[var(--champagne)] pl-4 font-serif text-2xl leading-snug text-[var(--ink)]">
-                Built for clear outcomes, unforgettable presence, and lasting transformation.
+                Clear, heartfelt messages for people who need courage, perspective, and a practical way forward.
               </p>
               <div className="mt-9 grid gap-3 border-y border-[rgba(198,165,92,0.34)] py-5 sm:grid-cols-2 lg:grid-cols-4">
                 {heroStats.map((stat) => (
@@ -273,7 +273,7 @@ export default function SpeakingPage() {
                 ))}
               </div>
               <p className="mt-5 max-w-2xl text-sm leading-7 text-[#675d50]">
-                Event planners can shape Lornette&apos;s message for faith-based gatherings, corporate events, youth programs, women&apos;s events, athletic organizations, schools, retreats, and community rooms.
+                Lornette speaks to faith-based gatherings, corporate events, youth programs, women&apos;s events, athletic organizations, schools, retreats, and community rooms.
               </p>
             </div>
 
@@ -283,7 +283,7 @@ export default function SpeakingPage() {
                 <VideoCard
                   {...mediaItems[0]}
                   title="Watch Lornette in Action"
-                  summary="Speaker reel space for event planners to review delivery style, tone, presence, and audience connection."
+                  summary="See Lornette&apos;s delivery style, tone, presence, and audience connection in action."
                   featured
                   className="shadow-none"
                 />
@@ -330,7 +330,7 @@ export default function SpeakingPage() {
             <div>
               <SectionLabel>Speaker Bureau Snapshot</SectionLabel>
               <h2 className="mt-4 font-serif text-4xl leading-tight text-[var(--ink)] sm:text-5xl">
-                Summary for planners, hosts, and decision-makers.
+                A quick look at Lornette&apos;s voice, story, and credibility.
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-8 text-[#675d50]">
                 {profile.role}. Traveling from {profile.travelingFrom}. Lornette&apos;s speaking platform connects elite athletic achievement, national coaching leadership, lived resilience, authorship, faith, and community impact.
@@ -523,7 +523,7 @@ export default function SpeakingPage() {
                 </h2>
               </div>
               <p className="text-base leading-8 text-[#d8cdbb]">
-                A powerful speaker page needs more than topic descriptions. This section gives event planners a place to experience Lornette&apos;s voice, energy, story, and connection with an audience.
+                Watch Lornette&apos;s voice, energy, story, and connection with an audience come through in these speaking moments.
               </p>
             </div>
 
@@ -531,7 +531,7 @@ export default function SpeakingPage() {
               <VideoCard
                 {...mediaItems[0]}
                 title="Speaker Reel"
-                summary="Use the supplied speaker reel to review delivery style, tone, pacing, message, and audience fit."
+                summary="Start here for Lornette&apos;s tone, pacing, message, and connection with the room."
                 featured
                 className="border-white/15 bg-white/[0.04]"
               />
@@ -683,7 +683,7 @@ export default function SpeakingPage() {
                   Words From the Room
                 </h2>
                 <p className="mt-5 text-base leading-8 text-[#675d50]">
-                  This proof area is ready for approved testimonials, organizer feedback, and video responses as final permissions are confirmed.
+                  These reflections show how Lornette&apos;s message lands with people who need encouragement, clarity, and a renewed sense of possibility.
                 </p>
               </div>
               <div className="grid gap-5 md:grid-cols-3">
@@ -745,7 +745,7 @@ export default function SpeakingPage() {
             <div className="border border-white/15 bg-white/[0.045] p-6 shadow-[0_30px_120px_rgba(0,0,0,0.28)]">
               <CalendarCheck size={36} aria-hidden="true" className="text-[var(--champagne)]" />
               <h3 className="mt-5 font-serif text-3xl text-white">
-                Fast Planner Path
+                Simple Booking Path
               </h3>
               <ol className="mt-6 grid gap-4 text-sm leading-7 text-[#d8cdbb]">
                 {[

@@ -4,7 +4,7 @@ import { createMetadata, servicePages } from "@/content/site";
 
 export const metadata = createMetadata(
   "Athlete & Performance Coaching",
-  "Athlete mindset, performance psychology, preparation, resilience, teamwork, and goal-setting.",
+  "Athlete coaching sessions on mindset, preparation, pressure, team standards, and confidence.",
   "/athlete-coaching",
 );
 

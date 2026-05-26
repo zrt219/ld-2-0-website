@@ -6,7 +6,7 @@ import { createMetadata, servicePages, speakerKitDownloads, siteCopy } from "@/c
 
 export const metadata = createMetadata(
   "Speaker Kit",
-  "Planner-ready speaker kit materials for Lornette Daye, prepared for final approved files before launch.",
+  "Speaker kit materials for introducing Lornette Daye and planning a meaningful event.",
   "/speaker-kit",
 );
 
@@ -39,12 +39,12 @@ export default function SpeakerKitPage() {
               </ul>
             </section>
             <section className="border border-[var(--line)] bg-white p-7">
-              <h2 className="font-serif text-3xl text-[var(--ink)]">Event Planner Checklist</h2>
+              <h2 className="font-serif text-3xl text-[var(--ink)]">Host Checklist</h2>
               <div className="mt-5 grid gap-3 text-sm leading-7 text-[#675d50] sm:grid-cols-2">
                 <p>Confirm event date, audience size, room format, and desired outcome.</p>
                 <p>Share AV needs, intro script preference, timing, and onsite contact details.</p>
-                <p>Use the planning files until final approved assets are available for distribution.</p>
-                <p>Submit the booking form for a custom proposal and availability review.</p>
+                <p>Use the speaker kit to introduce Lornette with clarity and confidence.</p>
+                <p>Submit the booking form so the right keynote, workshop, or coaching format can be shaped around your audience.</p>
               </div>
             </section>
           </div>

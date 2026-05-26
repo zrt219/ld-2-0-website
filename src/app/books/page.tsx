@@ -164,9 +164,9 @@ export default function BooksPage() {
                 Digital resources designed to help readers rise.
               </h2>
               <p className="mt-5 text-base leading-8 text-[#675d50]">
-                Each listing opens a Stripe-hosted checkout page in a new tab.
-                The page is structured for paid PDF downloads, with concise
-                descriptions, reader fit, and outcome-focused highlights.
+                Each PDF offers practical encouragement for resilience, faith,
+                purpose, leadership, and personal growth. Choose the resource
+                that speaks to your season or the people you serve.
               </p>
             </div>
 

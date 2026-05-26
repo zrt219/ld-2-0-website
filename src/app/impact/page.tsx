@@ -21,8 +21,8 @@ export default function ImpactPage() {
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <SectionHeader
               eyebrow="Impact / Testimonials"
-              title="Real stories. Clear context."
-              body="Testimonials and brand materials are presented with direct attribution where available and without unsupported proof or invented outcomes."
+              title="Stories from people and communities Lornette has encouraged."
+              body="From speaking rooms to coaching spaces, these reflections show the warmth, practical care, and lasting encouragement people experience with Lornette."
             />
             <ImageFrame image={images.heroPortrait} priority ratio="aspect-[16/10]" />
           </div>
@@ -40,10 +40,10 @@ export default function ImpactPage() {
             </div>
             <div className="mt-12 border border-[var(--line)] bg-white p-6">
               <p className="text-sm font-bold uppercase text-[var(--gold-dark)]">
-                Media & Organization Reference Collage
+                Media & Community Connections
               </p>
               <p className="mt-2 text-sm text-[#675d50]">
-                Presented as one brand-provided collage while individual feature claims and logo permissions are confirmed.
+                A look at the organizations, media spaces, and community settings connected to Lornette&apos;s work.
               </p>
               <Image
                 src={images.featuredOn.src}

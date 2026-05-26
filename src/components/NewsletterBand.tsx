@@ -13,10 +13,10 @@ export function NewsletterBand() {
       <div className="mx-auto grid max-w-7xl gap-6 border-y border-[rgba(198,165,92,0.5)] py-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
         <div>
           <p className="text-sm font-bold uppercase text-[var(--gold-dark)]">
-            Stay Inspired
+            Resilience for the Journey
           </p>
           <h2 className="mt-3 font-serif text-4xl text-[var(--ink)]">
-            Insights. Resilience. Purpose.
+            Encouragement for your next step.
           </h2>
         </div>
         <form
@@ -27,12 +27,12 @@ export function NewsletterBand() {
             const email = String(new FormData(form).get("newsletter-email") ?? "");
             setMailtoHref(
               `mailto:${siteCopy.contactEmail}?subject=${encodeURIComponent(
-                "Stay Inspired newsletter request",
+                "Speak Life newsletter request",
               )}&body=${encodeURIComponent(
-                `Please add me to Lornette Daye updates.\n\nEmail: ${email}`,
+                `Please add me to Lornette Daye's Speak Life updates.\n\nEmail: ${email}`,
               )}`,
             );
-            setMessage("Your request is ready to send through your email client.");
+            setMessage("Almost there. Open the prepared email to finish joining the list.");
           }}
         >
           <label htmlFor="newsletter-email" className="sr-only">
@@ -43,14 +43,14 @@ export function NewsletterBand() {
             name="newsletter-email"
             type="email"
             required
-            placeholder="Email address"
+            placeholder="Your email address"
             className="min-h-12 border border-[var(--line)] bg-white px-4 text-base"
           />
           <button
             type="submit"
             className="min-h-12 bg-[var(--ink)] px-5 text-sm font-bold uppercase text-[var(--ivory)]"
           >
-            Subscribe
+            Join the List
           </button>
           {message ? (
             <div className="text-sm text-[#675d50] sm:col-span-2" aria-live="polite">

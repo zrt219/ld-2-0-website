@@ -9,7 +9,7 @@ import { createMetadata, mediaItems, speakerKitDownloads } from "@/content/site"
 
 export const metadata = createMetadata(
   "Media / Speaker Reel",
-  "Watch, listen, and experience the impact of Lornette Daye through the supplied speaker reel and media library.",
+  "Watch, listen, and experience the impact of Lornette Daye through speaker reels, interviews, and media clips.",
   "/media",
 );
 
@@ -24,13 +24,13 @@ export default function MediaPage() {
               <SectionHeader
                 eyebrow="Media / Speaker Reel"
                 title="Watch. Listen. Experience the Impact."
-                body="A premium video library for event planners to review Lornette's energy, message, and fit before starting a booking conversation."
+                body="Explore Lornette's warmth, conviction, and message through video clips, speaking moments, and media features."
               />
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {[
                   ["Speaker Reel", "Watch first"],
-                  ["Media Kit", "Planner files"],
-                  ["Booking", "Availability path"],
+                  ["Speaker Kit", "Host resources"],
+                  ["Booking", "Start the conversation"],
                 ].map(([title, body]) => (
                   <div key={title} className="border border-[var(--line)] bg-white/80 p-4">
                     <p className="font-serif text-2xl text-[var(--ink)]">{title}</p>
@@ -49,10 +49,10 @@ export default function MediaPage() {
           <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.8fr_1.2fr_auto] lg:items-center">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-[var(--champagne)]">
-                Planner Review Room
+                Media Hub
               </p>
               <h2 className="mt-2 font-serif text-3xl leading-tight">
-                Start with video, then move straight into booking assets.
+                Start with video, then keep exploring the message.
               </h2>
             </div>
             <div className="grid gap-3 text-sm text-[#d8cdbb] sm:grid-cols-3">
@@ -93,7 +93,7 @@ export default function MediaPage() {
                     <span>
                       {download.title}
                       <span className="mt-1 block text-xs font-normal text-[#7d7164]">
-                        Planner file
+                        Host resource
                       </span>
                     </span>
                     <Download

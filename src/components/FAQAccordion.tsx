@@ -6,7 +6,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "How far in advance should we book?",
-    a: "Share your timing as early as possible. The form captures preferred and alternate dates so availability can be reviewed clearly.",
+    a: "Share your timing as early as possible. Preferred and alternate dates help Lornette's team respond with a clear next step.",
   },
   {
     q: "What formats are available?",

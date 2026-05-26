@@ -218,7 +218,7 @@ export function VideoCard({
                     : "border-[rgba(155,118,46,0.34)] text-[var(--gold-dark)]"
                 }`}
               >
-                {status ?? "Media pending"}
+                {status ?? "Coming soon"}
               </span>
             )}
           </div>

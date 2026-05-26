@@ -67,8 +67,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-[#b9ad9a]">
-        Brand materials are used as supplied. Final logo, media, and testimonial
-        permissions should be verified before launch.
+        &copy; 2026 Lornette Daye. All rights reserved.
       </div>
     </footer>
   );

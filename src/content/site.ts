@@ -139,18 +139,18 @@ export const siteCopy = {
   descriptor:
     "Professional Keynote Speaker | Olympic-level Athlete & Coach | Canadian National Sprint Champion | Certified Transformational Speaker | Author | Youth Leader & Mentor | Project Manager",
   mainMessage:
-    "Transforming the lives of others that they can overcome anything because they matter.",
+    "Helping people rise through challenge, remember their worth, and move forward with purpose.",
   homepageHeadline: "Transforming Lives. Reminding People They Matter.",
   homepageSubheadline:
-    "Professional Keynote Speaker | Olympic-level Athlete & Coach | Canadian National Sprint Champion | Certified Transformational Speaker | Author | Youth Leader & Mentor | Project Manager",
+    "Lornette brings four decades of elite sport, coaching, mentorship, and lived resilience to every room she enters",
   homepageIntro:
-    "For over four decades, Lornette Daye has inspired individuals, teams, and organizations to achieve excellence, resilience, and purpose-driven success through public speaking, leadership development, diversity and inclusion, mentorship, and athlete performance coaching.",
+    "Her talks help audiences strengthen confidence, navigate adversity, lead with compassion, and believe again in what is possible.",
   biography:
     "Certified Toastmasters Speaker, Olympic-level Athlete & Coach, Canadian National Sprint Champion, Author, and Transformational Speaker with over 40 years of experience inspiring individuals, teams, and organizations to achieve excellence, resilience, and purpose-driven success.",
   biographyExtended:
     "Through decades of elite competition and coaching over 500 athletes, including 150+ international competitors, she has developed a profound understanding of performance psychology, mindset mastery, goal-setting, and discipline.",
   mission:
-    "Her mission is transforming the lives of others that they can overcome anything because they matter. True success is measured not only by personal accomplishments but by the lives we touch, the communities we strengthen, and the leaders we develop.",
+    "Her mission is to help people rise through challenge, remember their worth, and move forward with purpose. True success is measured not only by personal accomplishments but by the lives we touch, the communities we strengthen, and the leaders we develop.",
   verifiedClaims: [
     "Professional Keynote Speaker",
     "Olympic-level Athlete & Coach",
@@ -214,11 +214,11 @@ export const images = {
   },
   monogram: {
     src: monogram,
-    alt: "Lornette Daye monogram supplied in brand assets.",
+    alt: "Lornette Daye monogram.",
   },
   featuredOn: {
     src: featuredOnCollage,
-    alt: "Brand-provided collage of organizations and media references for review.",
+    alt: "Collage of organizations, media appearances, and community references connected to Lornette Daye.",
     crop: "object-bottom scale-[1.04]",
   },
   brandStatement: {
@@ -248,19 +248,19 @@ export const images = {
   },
   toastmastersLogo: {
     src: toastmastersLogo,
-    alt: "Toastmasters International logo supplied in project assets.",
+    alt: "Toastmasters International logo.",
   },
   rotaryLogo: {
     src: rotaryLogo,
-    alt: "Rotary Club of St. Albert logo supplied in project assets.",
+    alt: "Rotary Club of St. Albert logo.",
   },
 };
 
 export const metrics = [
-  { value: "40+", label: "Years of Inspiring Impact" },
-  { value: "500+", label: "Athletes Coached" },
-  { value: "150+", label: "International Competitors" },
-  { value: "Global", label: "Impact" },
+  { value: "40+", label: "Years Speaking, Coaching & Mentoring" },
+  { value: "500+", label: "Athletes Mentored and Coached" },
+  { value: "150+", label: "International-Level Competitors Guided" },
+  { value: "Global", label: "Perspective From Canada to the World" },
 ];
 
 export const audienceTypes = [
@@ -274,18 +274,18 @@ export const audienceTypes = [
 
 export const services = [
   {
-    title: "Public Speaking",
-    body: "Dynamic keynotes that motivate, educate, and leave a lasting impact.",
+    title: "Keynotes & Speaking",
+    body: "Messages that help audiences remember their worth, rise through adversity, and leave with practical next steps.",
     href: "/speaking",
   },
   {
-    title: "Leadership Development",
-    body: "Build confident leaders who inspire, influence, and drive results.",
+    title: "Resilient Leadership",
+    body: "Help leaders carry pressure with perspective, communicate with courage, and move people toward shared purpose.",
     href: "/leadership",
   },
   {
     title: "Diversity & Inclusion",
-    body: "Create inclusive cultures where everyone belongs and thrives.",
+    body: "Create spaces where people feel seen, respected, and responsible for building real belonging.",
     href: "/inclusion",
   },
   {
@@ -304,13 +304,13 @@ export const services = [
     href: "/programs",
   },
   {
-    title: "Training",
-    body: "Actionable workshops for practical skills and measurable momentum.",
+    title: "Workshops & Training",
+    body: "Interactive sessions that turn inspiration into practice, reflection, and usable next steps.",
     href: "/events",
   },
   {
-    title: "Life Coaching",
-    body: "Purpose-centered support for clarity, confidence, and next steps.",
+    title: "Purpose & Resilience Coaching",
+    body: "Purpose-centered support for people seeking clarity, confidence, and steady forward movement.",
     href: "/programs",
   },
 ];
@@ -364,7 +364,7 @@ export const servicePages: Record<string, ServicePage> = {
     slug: "/leadership",
     navLabel: "Leadership",
     title: "Leadership That Builds Resilience, Confidence, and Results.",
-    eyebrow: "Leadership Development",
+    eyebrow: "Resilient Leadership",
     description:
       "Practical leadership development for people who need to communicate, execute, and lead with composure under pressure.",
     heroImage: {
@@ -381,7 +381,7 @@ export const servicePages: Record<string, ServicePage> = {
     ],
     sections: [
       {
-        title: "Program overview",
+        title: "What leaders practice",
         items: [
           "Decision-making clarity",
           "High-trust communication",
@@ -390,7 +390,7 @@ export const servicePages: Record<string, ServicePage> = {
         ],
       },
       {
-        title: "Outcomes",
+        title: "Team outcomes",
         items: [
           "Clearer standards",
           "Stronger teams",
@@ -399,7 +399,7 @@ export const servicePages: Record<string, ServicePage> = {
         ],
       },
       {
-        title: "Workshop cards",
+        title: "Leadership sessions",
         items: [
           "Leading Through Pressure",
           "Communication That Builds Trust",
@@ -409,9 +409,9 @@ export const servicePages: Record<string, ServicePage> = {
     ],
     cta: "Schedule a Leadership Consultation",
     mediaBand: {
-      eyebrow: "Leadership Preview",
-      title: "See Lornette's leadership message before you book.",
-      body: "Watch her speaking style, review planning materials, and decide whether her practical approach to resilience, communication, and confident leadership is the right fit for your team.",
+      eyebrow: "A Preview of Lornette in the Room",
+      title: "Hear the warmth, clarity, and challenge she brings to leaders.",
+      body: "Watch how Lornette connects personal resilience with communication, accountability, and confident leadership under pressure.",
       primaryLabel: "Watch Speaker Reel",
       secondaryLabel: "View Speaker Kit",
       videoTitle: "Leadership Speaking Preview",
@@ -425,7 +425,7 @@ export const servicePages: Record<string, ServicePage> = {
         },
         {
           icon: "target",
-          title: "Review The Fit",
+          title: "Match the Message",
           body: "See how her message connects to resilience, communication, accountability, and leading under pressure.",
         },
         {
@@ -434,7 +434,7 @@ export const servicePages: Record<string, ServicePage> = {
           body: "Use the speaker kit to shape the right leadership experience around your audience, goals, format, and date.",
         },
       ],
-      footerLabel: "Ready to review fit and next steps",
+      footerLabel: "Ready to plan a leadership session",
     },
   },
   inclusion: {
@@ -497,8 +497,13 @@ export const servicePages: Record<string, ServicePage> = {
     ],
     sections: [
       {
-        title: "Mentorship process",
-        items: ["Discover", "Develop", "Empower", "Elevate"],
+        title: "How young people are supported",
+        items: [
+          "Name strengths and pressures",
+          "Build discipline and confidence",
+          "Practice healthy accountability",
+          "Leave with clear next steps",
+        ],
       },
       {
         title: "Youth outcomes",
@@ -555,11 +560,11 @@ export const servicePages: Record<string, ServicePage> = {
         ],
       },
       {
-        title: "Visual resources",
+        title: "Team sessions and takeaways",
         items: [
-          "Elite performance begins at the mental level",
-          "Strategy. Leadership. Elite Execution",
-          "Champion mindset development",
+          "Mindset before performance",
+          "Preparation under pressure",
+          "Confidence through repetition",
         ],
       },
     ],
@@ -573,28 +578,28 @@ export const testimonials = [
     quote:
       "As a Life coach and Transformational Speaker, she indeed changes lives by drawing on vast life experiences and actionable insights.",
     name: "Ayo",
-    context: "Professional",
+    context: "Professional peer",
   },
   {
     category: "Keynote Speaking",
     quote:
       "Lornette, you are flat-out top of the charts for your ability to connect and interact with your audience to deliver a powerful message.",
     name: "Harriet Tinka",
-    context: "Founder/CEO, bestselling author, turning point expert, Empowered Me Inc",
+    context: "Founder/CEO, Empowered Me Inc.",
   },
   {
     category: "Faith & Wellness",
     quote:
       "Lornette encouraged me to increase the intensity and speed slowly, and now I have been consistent with very brisk walking daily.",
     name: "Carol",
-    context: "Audience testimonial",
+    context: "Wellness audience member",
   },
   {
     category: "Youth Coaching",
     quote:
-      "Lornette is truly an inspiration to today's youth. She is an exceptional track coach, truly dedicated, and cares deeply for her athletes futures.",
+      "Lornette is truly an inspiration to today's youth. She is an exceptional track coach, truly dedicated, and cares deeply about her athletes' futures.",
     name: "Shawna Randolph",
-    context: "Youth coaching testimonial",
+    context: "Youth coaching community",
   },
 ];
 
@@ -602,7 +607,7 @@ export const mediaItems: MediaItem[] = [
   {
     title: "Speaker Reel",
     category: "Keynotes",
-    summary: "Primary speaker reel for event planners reviewing Lornette's message, presence, and audience fit.",
+    summary: "Watch Lornette speak with heart, clarity, and hard-earned wisdom about resilience, confidence, and the courage to keep going.",
     image: {
       src: "/generated/speaker-reel-bronze-nature-thumbnail.png",
       alt: "Bronze-gold abstract nature artwork for the speaker reel thumbnail.",
@@ -612,35 +617,35 @@ export const mediaItems: MediaItem[] = [
     duration: "1:51",
   },
   {
-    title: "Recent Speaking Short",
+    title: "One-Minute Speaking Moment",
     category: "Interviews",
-    summary: "Approved public YouTube short for reviewing Lornette's recent speaking presence and audience-facing message.",
+    summary: "A quick glimpse of Lornette's warmth, presence, and message in action.",
     image: images.podcastCard,
     videoSrc: "https://youtube.com/shorts/kkQw4iC2QgU?feature=share",
     duration: "Short",
   },
   {
-    title: "Speaker Message Clip",
+    title: "Speaking Clip: Resilience & Purpose",
     category: "Short Insights",
-    summary: "Approved public YouTube clip that supports speaker-bureau review and booking conversations.",
+    summary: "A concise message clip for teams exploring resilience, identity, and next steps.",
     image: {
       src: "/media/frames/speaker-reel-20.jpg",
-      alt: "Still frame from the supplied speaker reel video.",
+      alt: "Still frame from Lornette Daye's speaker reel video.",
       crop: "object-[50%_28%]",
     },
     videoSrc: "https://youtu.be/n8bzPA16hjw?si=fH7C44WRPIQ7B0Ww",
     duration: "YouTube",
   },
   {
-    title: "Performance Coaching Preview",
+    title: "Athlete Mindset Coaching",
     category: "Keynotes",
-    summary: "A future clip area for athletic mindset, discipline, and performance coaching.",
+    summary: "Elite-athlete lessons on mindset, discipline, preparation, and confidence under pressure.",
     image: {
       src: athletePoster,
       alt: "Athlete and performance coaching artwork, cropped to remove footer social icons.",
       crop: "object-top scale-[1.12]",
     },
-    status: "Clip pending",
+    status: "Coaching Focus",
   },
   {
     title: "Diversity Award Recognition",
@@ -650,15 +655,15 @@ export const mediaItems: MediaItem[] = [
     status: "Recognition",
   },
   {
-    title: "Podcast Holding Card",
+    title: "Podcast & Interview Features",
     category: "Podcasts",
-    summary: "Podcast and interview area ready for approved audio or video links.",
+    summary: "Conversations on resilience, purpose, leadership, and the experiences that shape Lornette's work.",
     image: {
       src: mediaThumbnail,
-      alt: "Speaker reel and media thumbnail artwork cropped as a podcast holding card.",
+      alt: "Speaker reel and media thumbnail artwork for podcast and interview features.",
       crop: "object-top",
     },
-    status: "Audio pending",
+    status: "Interviews",
   },
 ];
 
@@ -685,7 +690,7 @@ export const speakerSubmissionProfile = {
   primaryKeynote: {
     title: "Road to the Olympics: Lessons Learned as an Elite Athlete",
     description:
-      "Everybody wants to achieve great things, but few are equipped to overcome the obstacles that inevitably appear along the way. In this keynote, audiences gain tools and strategies drawn directly from championship-level competition, learning how to rise above adversity while maintaining perspective, discipline, and self-esteem.",
+      "Drawing from her journey as an elite sprinter, Lornette shows audiences how discipline, faith, confidence, and perspective can carry them through setbacks without losing sight of who they are.",
     fit:
       "A powerful elite-athlete story on rising above adversity without losing yourself.",
     attendeeResults: [
@@ -725,10 +730,10 @@ export const speakerSubmissionProfile = {
     "Spruce Grove Rotary Club",
   ],
   recognitionHighlights: [
-    "Diversity Award Winner",
-    "Decades-long community outreach volunteer",
-    "Former National Track Champion in 100m and 200m sprint events",
-    "National Coach with decades of athlete mentorship",
+    "Diversity Award winner for inclusion and community impact",
+    "Community volunteer committed to youth, belonging, and service",
+    "Former national 100m and 200m sprint champion",
+    "National coach who has mentored athletes across decades",
     "Author of resilience, performance, purpose, and personal-growth resources",
   ],
 };
@@ -746,9 +751,9 @@ export const categories = [
 export const posts: Post[] = [
   {
     slug: "embrace-new-beginnings",
-    title: "Embrace New Beginnings and Transform Your Life Through Reinvention",
+    title: "When It's Time to Begin Again",
     excerpt:
-      "Starting over can feel like standing at the edge of a vast unknown, but it can also open the door to growth, courage, and renewed purpose.",
+      "Fresh starts can feel uncertain. This reflection offers courage, practical steps, and a reminder that change can become a place of growth.",
     category: "Purpose-Driven Success",
     date: "2026-03-16",
     author: "Lornette Daye",
@@ -832,9 +837,9 @@ export const posts: Post[] = [
   },
   {
     slug: "power-of-vulnerability",
-    title: "The Power of Vulnerability: Embracing Help as a Path to Strength and Growth",
+    title: "The Courage to Ask for Help",
     excerpt:
-      "Asking for help can feel like admitting weakness, but support often becomes the doorway to strength, courage, and deeper growth.",
+      "Vulnerability is not weakness. It can be the honest first step toward support, healing, and renewed strength.",
     category: "Purpose-Driven Success",
     date: "2026-01-28",
     author: "Lornette Daye",
@@ -885,9 +890,9 @@ export const posts: Post[] = [
   },
   {
     slug: "power-of-nature",
-    title: "The Power of Nature: What It Teaches Us About God",
+    title: "What Nature Teaches Us About Faith",
     excerpt:
-      "Nature invites us to slow down, listen, and notice lessons of patience, provision, beauty, and faith all around us.",
+      "The natural world has a quiet way of teaching patience, provision, renewal, and trust when we slow down enough to notice.",
     category: "Purpose-Driven Success",
     date: "2025-11-08",
     author: "Lornette Daye",
@@ -934,7 +939,7 @@ export const posts: Post[] = [
     slug: "stay-close-to-your-source",
     title: "Stay Close to Your Source",
     excerpt:
-      "Many times in life, we drift from what grounds and encourages us. Staying close to your source helps you remember who you are.",
+      "When life gets noisy, return to the people, practices, and faith that steady you and remind you who you are.",
     category: "Purpose-Driven Success",
     date: "2025-10-03",
     author: "Lornette Daye",
@@ -1114,32 +1119,32 @@ export const suppliedLogos = [
 export const additionalImages = {
   athleteInfo: {
     src: athleteInfoPoster,
-    alt: "Athletic achievement artwork supplied in brand materials.",
+    alt: "Athletic achievement artwork.",
     crop: "object-top scale-[1.04]",
   },
   athleteStrategy: {
     src: athleteStrategyPoster,
-    alt: "Strategy leadership elite execution artwork supplied in brand materials.",
+    alt: "Strategy, leadership, and elite execution artwork.",
     crop: "object-top scale-[1.03]",
   },
   aboutTimeline: {
     src: aboutTimelinePoster,
-    alt: "Graduation and champion athlete story artwork supplied in brand materials.",
+    alt: "Graduation and champion athlete story artwork.",
     crop: "object-top scale-[1.05]",
   },
   testimonialComposite: {
     src: testimonialComposite,
-    alt: "Audience testimonial artwork supplied in brand materials.",
+    alt: "Audience testimonial artwork.",
     crop: "object-top",
   },
   testimonialYouth: {
     src: testimonialYouth,
-    alt: "Youth coaching testimonial artwork supplied in brand materials.",
+    alt: "Youth coaching testimonial artwork.",
     crop: "object-top",
   },
   eventWorkshop: {
     src: eventWorkshop,
-    alt: "Workshop and event artwork supplied in brand materials.",
+    alt: "Workshop and event artwork.",
     crop: "object-top",
   },
   trainingPoster: {
@@ -1154,12 +1159,12 @@ export const additionalImages = {
   },
   flightPoster: {
     src: flightPoster,
-    alt: "Flight attendant graduate artwork supplied in brand materials.",
+    alt: "Flight attendant graduate artwork.",
     crop: "object-top scale-[1.02]",
   },
   programOverview: {
     src: programOverview,
-    alt: "Speaking and services overview artwork supplied in brand materials.",
+    alt: "Speaking and services overview artwork.",
     crop: "object-top scale-[1.06]",
   },
 };

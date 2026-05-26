@@ -15,10 +15,10 @@ export const metadata = createMetadata(
 
 const hiddenBookingTopics = new Set([
   "Athlete & Performance Coaching",
-  "Leadership Development",
+  "Resilient Leadership",
   "Diversity & Inclusion",
   "Resilience & Mindset Coaching",
-  "Training",
+  "Workshops & Training",
 ]);
 
 export default function BookPage() {
@@ -42,7 +42,7 @@ export default function BookPage() {
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {[
-                  ["Prompt response", "Inquiry details reviewed clearly"],
+                  ["Prompt response", "Inquiry details handled with care"],
                   ["Custom fit", "Topic and format matched to audience"],
                   ["Reliable next step", "Prepared email fallback if delivery is unavailable"],
                 ].map(([title, body]) => (
@@ -136,8 +136,8 @@ export default function BookPage() {
                   Need materials first?
                 </h2>
                 <p className="mt-3 text-sm leading-7 text-[#d8cdbb]">
-                  Review bio, topic, and event-planner files before submitting
-                  final details.
+                  Explore Lornette&apos;s bio, topics, and host resources before
+                  sharing final event details.
                 </p>
                 <div className="mt-5">
                   <CTAButton

@@ -68,7 +68,7 @@ export default function RecognitionPage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <CTAButton href="/book">Request Availability</CTAButton>
                 <CTAButton href="/media" variant="secondary">
-                  Review Media
+                  Watch Media
                 </CTAButton>
               </div>
               <div className="mt-8 flex flex-wrap gap-3 text-sm font-semibold text-[#62594d]">
@@ -111,7 +111,7 @@ export default function RecognitionPage() {
             <SectionHeader
               eyebrow="Speaker Biography"
               title="A story with weight, warmth, and real-world authority."
-              body="This page is built from the supplied speaker-submission material so event planners can quickly understand why Lornette's voice carries credibility."
+              body="Lornette's credibility comes from lived experience: elite competition, decades of coaching, authorship, community service, faith, and resilience."
             />
             <div className="grid gap-5">
               {profile.biography.map((paragraph) => (
@@ -164,11 +164,11 @@ export default function RecognitionPage() {
 
         <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-3">
-            <div className="lg:col-span-1">
-              <SectionHeader
-                eyebrow="Bureau-Ready Proof"
-                title="What to place in front of decision-makers."
-                body="A concise view of the advertising priorities: achievements, engagements, media, books, and booking requirements."
+              <div className="lg:col-span-1">
+                <SectionHeader
+                eyebrow="Recognition Highlights"
+                title="Achievements that give her message depth."
+                body="These highlights trace the experiences behind Lornette's voice, from athletic excellence to community impact and authored resources."
               />
             </div>
             <div className="grid gap-6 lg:col-span-2">
@@ -198,7 +198,7 @@ export default function RecognitionPage() {
               </div>
 
               <article className="border border-[var(--line)] bg-white p-7">
-                <h3 className="font-serif text-3xl text-[var(--ink)]">Video Footage for Review</h3>
+                <h3 className="font-serif text-3xl text-[var(--ink)]">Video Highlights</h3>
                 <div className="mt-6 grid gap-4 sm:grid-cols-2">
                   {profile.videoLinks.map((link) => (
                     <a

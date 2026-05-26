@@ -1,9 +1,9 @@
 import { z } from "zod";
 
 export const topicOptions = [
-  "Public Speaking",
+  "Keynotes & Speaking",
   "Mentorship & Youth Development",
-  "Life Coaching",
+  "Purpose & Resilience Coaching",
 ] as const;
 
 export const inquirySchema = z.object({
