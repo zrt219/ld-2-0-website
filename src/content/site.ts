@@ -578,7 +578,7 @@ export const testimonials = [
     quote:
       "As a Life coach and Transformational Speaker, she indeed changes lives by drawing on vast life experiences and actionable insights.",
     name: "Ayo",
-    context: "Professional peer",
+    context: "Accounting, Technology Leadership & Healthcare Professional",
   },
   {
     category: "Keynote Speaking",
@@ -599,7 +599,8 @@ export const testimonials = [
     quote:
       "Lornette is truly an inspiration to today's youth. She is an exceptional track coach, truly dedicated, and cares deeply about her athletes' futures.",
     name: "Shawna Randolph",
-    context: "Youth coaching community",
+    context:
+      "Sole Proprietor, Shawna Randolph Communications | Media Relations & Public Speaking Coach",
   },
 ];
 
