@@ -7,7 +7,6 @@ import featuredOnCollage from "../../images/chrome_pclmdSgQoj.png";
 import brandStatement from "../../images/c298ebb1-01e5-497d-a41e-33c2dba1b74c.png";
 import podcastCard from "../../images/588657892_17845278915616562_7038671232751376482_n.jpg";
 import speakingPoster from "../../images/unnamed (6).jpg";
-import leadershipPoster from "../../images/Gemini_Generated_Image_ekc5q1ekc5q1ekc5.png";
 import inclusionPoster from "../../images/unnamed (3).jpg";
 import mentorshipPoster from "../../images/Gemini_Generated_Image_tpd8xftpd8xftpd8.png";
 import athletePoster from "../../images/unnamed (5).jpg";
@@ -368,9 +367,9 @@ export const servicePages: Record<string, ServicePage> = {
     description:
       "Practical leadership development for people who need to communicate, execute, and lead with composure under pressure.",
     heroImage: {
-      src: leadershipPoster,
-      alt: "Leadership development artwork with gold staircase, cropped to focus on the main visual.",
-      crop: "object-[50%_60%] scale-[1.65]",
+      src: "/generated/leadership-soft-cream-gold-hero.png",
+      alt: "Soft cream and gold abstract pathway suggesting resilient leadership and purposeful movement.",
+      crop: "object-[50%_48%]",
     },
     pillars: [
       "Strategic Thinking",

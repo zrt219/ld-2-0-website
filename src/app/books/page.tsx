@@ -44,14 +44,26 @@ const heroTrustMarkers = [
   { label: "Purpose-Led Tools", icon: Sparkles },
 ];
 
-const coverCropBySlug: Record<string, { objectPosition: string; transform: string }> = {
-  "survival-skills-for-men": { objectPosition: "50% 24%", transform: "scale(1.38)" },
+const coverCropBySlug: Record<string, { objectFit?: "cover" | "contain"; objectPosition: string; transform: string }> = {
+  "survival-skills-for-men": {
+    objectFit: "contain",
+    objectPosition: "50% 50%",
+    transform: "scale(1)",
+  },
   "road-to-the-olympics": { objectPosition: "50% 22%", transform: "scale(1.48)" },
-  "surviving-life": { objectPosition: "50% 22%", transform: "scale(1.48)" },
+  "surviving-life": {
+    objectFit: "contain",
+    objectPosition: "50% 50%",
+    transform: "scale(1)",
+  },
 };
 
 function getCoverCrop(slug: string) {
-  return coverCropBySlug[slug] ?? { objectPosition: "50% 50%", transform: "scale(1)" };
+  return coverCropBySlug[slug] ?? {
+    objectFit: "cover",
+    objectPosition: "50% 50%",
+    transform: "scale(1)",
+  };
 }
 
 const productJsonLd = {
