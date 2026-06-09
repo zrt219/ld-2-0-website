@@ -8,7 +8,6 @@ import brandStatement from "../../images/c298ebb1-01e5-497d-a41e-33c2dba1b74c.pn
 import podcastCard from "../../images/588657892_17845278915616562_7038671232751376482_n.jpg";
 import speakingPoster from "../../images/unnamed (6).jpg";
 import inclusionPoster from "../../images/unnamed (3).jpg";
-import mentorshipPoster from "../../images/Gemini_Generated_Image_tpd8xftpd8xftpd8.png";
 import athletePoster from "../../images/unnamed (5).jpg";
 import athleteInfoPoster from "../../images/Gemini_Generated_Image_6dpu516dpu516dpu.png";
 import athleteStrategyPoster from "../../images/Gemini_Generated_Image_imi2b2imi2b2imi2.png";
@@ -201,6 +200,11 @@ export const requiredRoutes = [
 ];
 
 export const images = {
+  homeHeroPortrait: {
+    src: "/generated/lornette-home-hero-portrait.jpg",
+    alt: "Portrait of Lornette Daye standing with arms crossed.",
+    crop: "object-center",
+  },
   heroPortrait: {
     src: "/generated/lornette-hero-reference.png",
     alt: "Portrait-style speaker image of Lornette Daye in an ivory blazer.",
@@ -483,9 +487,9 @@ export const servicePages: Record<string, ServicePage> = {
     description:
       "Youth-focused mentorship and development experiences that help young people build discipline, confidence, and self-belief.",
     heroImage: {
-      src: mentorshipPoster,
-      alt: "Mentorship and youth development artwork, cropped to focus on the gold pathway visual.",
-      crop: "object-[50%_72%] scale-[2.05]",
+      src: "/generated/mentorship-podium-soft-background.png",
+      alt: "Gold podium artwork with a simplified cream and gold background for mentorship and youth development.",
+      crop: "object-center",
     },
     pillars: [
       "One-on-One Mentoring",
