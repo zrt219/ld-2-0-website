@@ -35,6 +35,8 @@ export type SiteImage = {
   alt: string;
   crop?: string;
   caption?: string;
+  frameTone?: "warm-ivory";
+  showBottomFade?: boolean;
 };
 
 export type MediaItem = {
@@ -201,9 +203,11 @@ export const requiredRoutes = [
 
 export const images = {
   homeHeroPortrait: {
-    src: "/generated/lornette-home-hero-portrait.jpg",
-    alt: "Portrait of Lornette Daye standing with arms crossed.",
-    crop: "object-center",
+    src: "/generated/lornette-home-hero-original-cutout.png",
+    alt: "Seated portrait of Lornette Daye in an ivory blazer.",
+    crop: "object-center scale-[1.06]",
+    frameTone: "warm-ivory" as const,
+    showBottomFade: false,
   },
   heroPortrait: {
     src: "/generated/lornette-hero-reference.png",

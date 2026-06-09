@@ -86,7 +86,11 @@ export function SpeakerMediaBand({
             <CTAButton href={primaryHref} className="w-full sm:w-auto">
               {primaryLabel}
             </CTAButton>
-            <CTAButton href={secondaryHref} variant="secondary" className="w-full sm:w-auto">
+            <CTAButton
+              href={secondaryHref}
+              variant="secondary"
+              className="w-full !border-[var(--champagne)] !bg-[var(--ivory)] !text-[var(--ink)] hover:!bg-white sm:w-auto"
+            >
               {secondaryLabel}
             </CTAButton>
           </div>

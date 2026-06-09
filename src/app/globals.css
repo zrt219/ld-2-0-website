@@ -4,7 +4,7 @@
   --ivory: #faf7f0;
   --white: #ffffff;
   --champagne: #c6a55c;
-  --gold-dark: #9b762e;
+  --gold-dark: #7f5b1d;
   --ink: #171412;
   --charcoal: #2a2520;
   --taupe: #b7a891;
@@ -59,7 +59,23 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 summary:focus-visible {
-  outline: 2px solid var(--gold-dark);
+  box-shadow: 0 0 0 4px #f0cf7a !important;
+  outline: 2px solid var(--ink) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 ::selection {

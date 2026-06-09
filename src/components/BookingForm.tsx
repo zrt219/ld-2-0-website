@@ -67,7 +67,7 @@ export function BookingForm() {
 
   const fieldClass = useMemo(
     () =>
-      "mt-2 min-h-12 w-full border border-[var(--line)] bg-white px-4 text-base text-[var(--ink)] transition focus:border-[var(--champagne)]",
+      "mt-2 min-h-12 w-full border border-[var(--line)] bg-white px-4 text-base text-[var(--ink)] transition focus:border-[var(--champagne)] focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-[var(--gold-dark)]",
     [],
   );
 
@@ -146,12 +146,26 @@ export function BookingForm() {
 
   function errorFor(field: keyof InquiryPayload) {
     return errors[field] ? (
-      <p className="mt-2 text-sm text-[#8f231f]">{errors[field]}</p>
+      <p id={`${field}-error`} role="alert" className="mt-2 text-sm text-[#8f231f]">
+        {errors[field]}
+      </p>
     ) : null;
   }
 
+  function fieldA11y(field: keyof InquiryPayload) {
+    return {
+      "aria-describedby": errors[field] ? `${field}-error` : undefined,
+      "aria-invalid": errors[field] ? true : undefined,
+    };
+  }
+
   return (
-    <form onSubmit={onSubmit} className="grid gap-5" noValidate>
+    <form
+      onSubmit={onSubmit}
+      className="grid gap-5"
+      aria-busy={status === "loading"}
+      noValidate
+    >
       <div className="grid gap-5 md:grid-cols-2">
         <div className="sr-only" aria-hidden="true">
           <label htmlFor="website">Website</label>
@@ -161,14 +175,29 @@ export function BookingForm() {
           <label htmlFor="fullName" className="text-sm font-semibold">
             Full name
           </label>
-          <input id="fullName" name="fullName" autoComplete="name" className={fieldClass} />
+          <input
+            id="fullName"
+            name="fullName"
+            autoComplete="name"
+            required
+            className={fieldClass}
+            {...fieldA11y("fullName")}
+          />
           {errorFor("fullName")}
         </div>
         <div>
           <label htmlFor="email" className="text-sm font-semibold">
             Email
           </label>
-          <input id="email" name="email" type="email" autoComplete="email" className={fieldClass} />
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autoComplete="email"
+            required
+            className={fieldClass}
+            {...fieldA11y("email")}
+          />
           {errorFor("email")}
         </div>
       </div>
@@ -184,7 +213,14 @@ export function BookingForm() {
           <label htmlFor="organization" className="text-sm font-semibold">
             Organization
           </label>
-          <input id="organization" name="organization" autoComplete="organization" className={fieldClass} />
+          <input
+            id="organization"
+            name="organization"
+            autoComplete="organization"
+            required
+            className={fieldClass}
+            {...fieldA11y("organization")}
+          />
           {errorFor("organization")}
         </div>
       </div>
@@ -200,7 +236,14 @@ export function BookingForm() {
           <label htmlFor="eventType" className="text-sm font-semibold">
             Event type
           </label>
-          <select id="eventType" name="eventType" defaultValue="" className={fieldClass}>
+          <select
+            id="eventType"
+            name="eventType"
+            defaultValue=""
+            required
+            className={fieldClass}
+            {...fieldA11y("eventType")}
+          >
             <option value="" disabled>
               Select one
             </option>
@@ -232,7 +275,14 @@ export function BookingForm() {
           <label htmlFor="locationType" className="text-sm font-semibold">
             Event location
           </label>
-          <select id="locationType" name="locationType" defaultValue="" className={fieldClass}>
+          <select
+            id="locationType"
+            name="locationType"
+            defaultValue=""
+            required
+            className={fieldClass}
+            {...fieldA11y("locationType")}
+          >
             <option value="" disabled>
               Select one
             </option>
@@ -255,7 +305,14 @@ export function BookingForm() {
           <label htmlFor="expectedAudienceSize" className="text-sm font-semibold">
             Audience size
           </label>
-          <input id="expectedAudienceSize" name="expectedAudienceSize" inputMode="numeric" className={fieldClass} />
+          <input
+            id="expectedAudienceSize"
+            name="expectedAudienceSize"
+            inputMode="numeric"
+            required
+            className={fieldClass}
+            {...fieldA11y("expectedAudienceSize")}
+          />
           {errorFor("expectedAudienceSize")}
         </div>
         <div>
@@ -271,7 +328,10 @@ export function BookingForm() {
         </div>
       </div>
 
-      <fieldset>
+      <fieldset
+        aria-describedby={errors.topicsOfInterest ? "topicsOfInterest-error" : undefined}
+        aria-invalid={errors.topicsOfInterest ? true : undefined}
+      >
         <legend className="text-sm font-semibold">Topic interest</legend>
         <div className="mt-3 grid gap-3 sm:grid-cols-2">
           {topicOptions.map((topic) => (
@@ -291,24 +351,40 @@ export function BookingForm() {
         <label htmlFor="eventGoals" className="text-sm font-semibold">
           Event goals
         </label>
-        <textarea id="eventGoals" name="eventGoals" rows={6} className={`${fieldClass} py-3`} />
+        <textarea
+          id="eventGoals"
+          name="eventGoals"
+          rows={6}
+          required
+          className={`${fieldClass} py-3`}
+          {...fieldA11y("eventGoals")}
+        />
         {errorFor("eventGoals")}
       </div>
 
       <label className="flex items-start gap-3 text-sm leading-6">
-        <input type="checkbox" name="consent" className="mt-1 h-4 w-4" />
+        <input
+          type="checkbox"
+          name="consent"
+          required
+          className="mt-1 h-4 w-4"
+          {...fieldA11y("consent")}
+        />
         I consent to be contacted about this inquiry.
       </label>
       {errorFor("consent")}
 
       {message ? (
         <div
+          id="booking-form-status"
+          role={status === "error" ? "alert" : "status"}
           className={`border px-4 py-3 text-sm ${
             status === "error"
               ? "border-[#e1b0aa] bg-[#fff7f4] text-[#7c211b]"
               : "border-[rgba(198,165,92,0.5)] bg-[#fffaf0] text-[#5d4414]"
           }`}
           aria-live="polite"
+          aria-atomic="true"
         >
           <p>{message}</p>
           {mailtoHref ? (

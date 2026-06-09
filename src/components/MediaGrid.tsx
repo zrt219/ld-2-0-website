@@ -39,6 +39,7 @@ export function MediaGrid() {
             <button
               key={item}
               type="button"
+              aria-pressed={category === item}
               onClick={() => setCategory(item)}
               className={`min-h-11 shrink-0 border px-4 text-xs font-bold uppercase tracking-[0.14em] transition ${
                 category === item
@@ -85,7 +86,7 @@ export function MediaGrid() {
         </div>
       </div>
 
-      <div className="mt-8 grid gap-7 md:grid-cols-2">
+      <div className="mt-8 grid gap-7 md:grid-cols-2" aria-live="polite" aria-atomic="false">
         {filtered.map((item) => (
           <VideoCard
             key={item.title}

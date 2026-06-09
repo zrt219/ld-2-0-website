@@ -53,7 +53,7 @@ export default function ProgramsPage() {
             <div className="grid gap-4 md:grid-cols-2">
               {processSteps.map((step, index) => (
                 <article key={step} className="border border-[var(--line)] bg-white p-6">
-                  <p className="font-serif text-4xl text-[var(--champagne)]">0{index + 1}</p>
+                  <p className="font-serif text-4xl text-[var(--gold-dark)]">0{index + 1}</p>
                   <p className="mt-4 text-sm font-semibold leading-7 text-[var(--charcoal)]">{step}</p>
                 </article>
               ))}

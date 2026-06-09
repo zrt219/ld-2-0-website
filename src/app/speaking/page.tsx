@@ -351,6 +351,7 @@ export default function SpeakingPage() {
                       className="inline-flex items-center justify-between gap-3 text-sm font-bold text-[var(--ink)] underline-offset-4 hover:underline"
                     >
                       {video.label}
+                      <span className="sr-only"> opens in a new tab</span>
                       <ArrowRight size={15} aria-hidden="true" className="text-[var(--gold-dark)]" />
                     </a>
                   ))}
@@ -572,7 +573,7 @@ export default function SpeakingPage() {
                   key={outcome}
                   className="border border-[var(--line)] bg-white p-6 shadow-[0_16px_65px_rgba(23,20,18,0.06)]"
                 >
-                  <span className="font-serif text-4xl text-[var(--champagne)]">
+                  <span className="font-serif text-4xl text-[var(--gold-dark)]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <p className="mt-5 font-serif text-2xl leading-tight text-[var(--ink)]">

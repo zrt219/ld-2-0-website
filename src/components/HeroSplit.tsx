@@ -53,6 +53,11 @@ export function HeroSplit({
   secondaryLabel = "Watch Speaker Reel",
   video,
 }: HeroSplitProps) {
+  const imageFrameTone =
+    image.frameTone === "warm-ivory"
+      ? "bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)]"
+      : "bg-white";
+
   return (
     <section className="relative overflow-hidden border-b border-[rgba(198,165,92,0.35)] bg-[var(--ivory)]">
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.92)_0%,rgba(250,247,240,0.84)_46%,rgba(232,221,203,0.58)_100%)]" />
@@ -81,7 +86,7 @@ export function HeroSplit({
         </div>
 
         <div className="relative min-w-0 w-full max-w-[560px] lg:justify-self-end">
-          <div className="relative mx-auto aspect-[4/5] max-h-[590px] w-full max-w-[500px] overflow-hidden border border-[rgba(198,165,92,0.42)] bg-white shadow-[0_28px_110px_rgba(23,20,18,0.14)]">
+          <div className={`relative mx-auto aspect-[4/5] max-h-[590px] w-full max-w-[500px] overflow-hidden border border-[rgba(198,165,92,0.42)] shadow-[0_28px_110px_rgba(23,20,18,0.14)] ${imageFrameTone}`}>
             <Image
               src={image.src}
               alt={image.alt}
@@ -92,7 +97,9 @@ export function HeroSplit({
               className={`object-cover ${image.crop ?? "object-center"}`}
             />
             <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/40" />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[rgba(23,20,18,0.42)] to-transparent" />
+            {image.showBottomFade === false ? null : (
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[rgba(23,20,18,0.42)] to-transparent" />
+            )}
           </div>
 
           {video ? (

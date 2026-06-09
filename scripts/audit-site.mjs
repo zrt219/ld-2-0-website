@@ -435,7 +435,7 @@ async function checkBooking(page) {
   await form.getByLabel(/event type/i).selectOption({ label: "Keynote" });
   await form.getByLabel(/event location/i).selectOption({ label: "Virtual" });
   await form.getByLabel(/audience size/i).fill("150");
-  await form.getByLabel(/public speaking/i).check();
+  await form.getByLabel(/keynotes & speaking/i).check();
   await form.getByLabel(/event goals/i).fill(
     "Audit submission checks that the booking form falls back to a prepared email.",
   );

@@ -40,16 +40,59 @@ export function VideoCard({
   const canPlay = Boolean(videoSrc) && !isExternalVideo;
   const canWatch = canPlay || isExternalVideo;
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const previouslyFocusedRef = useRef<HTMLElement | null>(null);
+
+  function openVideo() {
+    previouslyFocusedRef.current =
+      document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    setOpen(true);
+  }
+
+  function closeVideo() {
+    setOpen(false);
+  }
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
+      if (!open) {
+        return;
+      }
+
       if (event.key === "Escape") {
+        event.preventDefault();
         setOpen(false);
+        return;
+      }
+
+      if (event.key !== "Tab") {
+        return;
+      }
+
+      const focusable = Array.from(
+        dialogRef.current?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), video[controls], [tabindex]:not([tabindex="-1"])',
+        ) ?? [],
+      ).filter((element) => !element.hasAttribute("disabled"));
+
+      if (focusable.length === 0) {
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
       }
     }
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, []);
+  }, [open]);
 
   useEffect(() => {
     if (!open) {
@@ -62,6 +105,7 @@ export function VideoCard({
 
     return () => {
       document.body.style.overflow = previousOverflow;
+      previouslyFocusedRef.current?.focus();
     };
   }, [open]);
 
@@ -90,7 +134,7 @@ export function VideoCard({
           {canPlay ? (
             <button
               type="button"
-              onClick={() => setOpen(true)}
+              onClick={openVideo}
               className="absolute left-1/2 top-1/2 inline-flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/35 bg-[var(--champagne)] text-[var(--ink)] shadow-2xl ring-8 ring-black/20 transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.45)]"
               aria-label={`Play ${title}`}
             >
@@ -102,7 +146,7 @@ export function VideoCard({
               target="_blank"
               rel="noreferrer"
               className="absolute left-1/2 top-1/2 inline-flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/35 bg-[var(--champagne)] text-[var(--ink)] shadow-2xl ring-8 ring-black/20 transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.45)]"
-              aria-label={`Open ${title}`}
+              aria-label={`Open ${title} in a new tab`}
             >
               <Play fill="currentColor" size={24} aria-hidden="true" />
             </a>
@@ -170,7 +214,7 @@ export function VideoCard({
             {canPlay ? (
               <button
                 type="button"
-                onClick={() => setOpen(true)}
+                onClick={openVideo}
                 className={`inline-flex items-center justify-center gap-2 border text-center font-bold uppercase transition hover:bg-[rgba(198,165,92,0.1)] focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] ${
                   featured && spaciousFeaturedContent
                     ? "mt-10 min-h-16 w-full px-7 py-4 text-base tracking-[0.16em]"
@@ -204,6 +248,7 @@ export function VideoCard({
                 }`}
               >
                 Open video
+                <span className="sr-only"> in a new tab</span>
                 <Play
                   fill="currentColor"
                   size={featured && spaciousFeaturedContent ? 16 : 13}
@@ -229,21 +274,24 @@ export function VideoCard({
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={`${title} video`}
+          aria-labelledby={`${title.replace(/\W+/g, "-").toLowerCase()}-video-dialog-title`}
+          ref={dialogRef}
           className="fixed inset-0 z-[80] flex items-center justify-center bg-black/78 p-4"
           onClick={(event) => {
             if (event.target === event.currentTarget) {
-              setOpen(false);
+              closeVideo();
             }
           }}
         >
           <div className="w-full max-w-5xl border border-white/15 bg-[var(--ink)] p-3 shadow-2xl">
             <div className="mb-3 flex items-center justify-between gap-4 text-white">
-              <p className="font-semibold">{title}</p>
+              <p id={`${title.replace(/\W+/g, "-").toLowerCase()}-video-dialog-title`} className="font-semibold">
+                {title}
+              </p>
               <button
                 ref={closeButtonRef}
                 type="button"
-                onClick={() => setOpen(false)}
+                onClick={closeVideo}
                 className="inline-flex min-h-10 min-w-10 items-center justify-center border border-white/20 transition hover:border-[var(--champagne)] hover:text-[var(--champagne)] focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.32)]"
                 aria-label="Close video"
               >

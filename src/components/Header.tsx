@@ -11,6 +11,8 @@ import { mainNav, siteCopy } from "@/content/site";
 export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const isActive = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(href));
 
   return (
     <header className="sticky top-0 z-50 border-y border-[#dfd1b4] bg-[#fbf8f0]">
@@ -46,9 +48,10 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`border-b-2 px-0 pb-4 pt-5 text-sm font-semibold leading-none transition hover:border-[#b28a39] hover:text-[#9b762e] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--gold-dark)] ${
-                pathname === item.href
-                  ? "border-[#b28a39] text-[#9b762e]"
+              aria-current={isActive(item.href) ? "page" : undefined}
+              className={`border-b-2 px-0 pb-4 pt-5 text-sm font-semibold leading-none transition hover:border-[var(--gold-dark)] hover:text-[var(--gold-dark)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--gold-dark)] ${
+                isActive(item.href)
+                  ? "border-[var(--gold-dark)] text-[var(--gold-dark)]"
                   : "border-transparent text-[#2f2a25]"
               }`}
             >
@@ -81,8 +84,9 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={isActive(item.href) ? "page" : undefined}
                 onClick={() => setOpen(false)}
-                className="min-h-11 border-b border-[var(--line)] px-2 py-3 text-base font-semibold text-[var(--ink)]"
+                className="min-h-11 border-b border-[var(--line)] px-2 py-3 text-base font-semibold text-[var(--ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--gold-dark)]"
               >
                 {item.label}
               </Link>

@@ -27,6 +27,32 @@ export function AudiencePathways({ pathways }: AudiencePathwaysProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activePathway = pathways[activeIndex] ?? pathways[0];
 
+  function focusTab(index: number) {
+    const tab = document.getElementById(`audience-pathway-tab-${index}`);
+    tab?.focus();
+  }
+
+  function onTabKeyDown(event: React.KeyboardEvent<HTMLButtonElement>, index: number) {
+    const lastIndex = pathways.length - 1;
+    let nextIndex = index;
+
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      nextIndex = index === lastIndex ? 0 : index + 1;
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      nextIndex = index === 0 ? lastIndex : index - 1;
+    } else if (event.key === "Home") {
+      nextIndex = 0;
+    } else if (event.key === "End") {
+      nextIndex = lastIndex;
+    } else {
+      return;
+    }
+
+    event.preventDefault();
+    setActiveIndex(nextIndex);
+    focusTab(nextIndex);
+  }
+
   if (!activePathway) {
     return null;
   }
@@ -54,12 +80,15 @@ export function AudiencePathways({ pathways }: AudiencePathwaysProps) {
 
               return (
                 <button
+                  id={`audience-pathway-tab-${index}`}
                   key={pathway.audience}
                   type="button"
                   role="tab"
                   aria-selected={selected}
                   aria-controls="audience-pathway-panel"
+                  tabIndex={selected ? 0 : -1}
                   onClick={() => setActiveIndex(index)}
+                  onKeyDown={(event) => onTabKeyDown(event, index)}
                   className={`min-h-24 border px-4 py-4 text-left transition focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] ${
                     selected
                       ? "border-[var(--champagne)] bg-[var(--ink)] text-[var(--ivory)] shadow-[0_22px_70px_rgba(23,20,18,0.16)]"
@@ -85,6 +114,8 @@ export function AudiencePathways({ pathways }: AudiencePathwaysProps) {
         <div
           id="audience-pathway-panel"
           role="tabpanel"
+          aria-labelledby={`audience-pathway-tab-${activeIndex}`}
+          tabIndex={0}
           className="mt-10 grid overflow-hidden border border-[rgba(198,165,92,0.42)] bg-white shadow-[0_24px_90px_rgba(23,20,18,0.08)] lg:grid-cols-[0.9fr_1.1fr]"
         >
           <div className="bg-[var(--ink)] p-7 text-[var(--ivory)] sm:p-9 lg:p-10">
