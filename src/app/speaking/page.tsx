@@ -550,22 +550,12 @@ export default function SpeakingPage() {
           className="scroll-mt-32 px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
         >
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
+            <div className="lg:pt-16">
               <SectionHeader
                 eyebrow="Audience Experience"
                 title="What Audiences Walk Away With"
                 body="Lornette's talks are designed to do more than inspire for a moment. They give audiences language, courage, practical next steps, and a renewed belief in what is possible."
               />
-              <div className="mt-8 overflow-hidden border border-[rgba(198,165,92,0.45)] bg-white shadow-[0_20px_90px_rgba(23,20,18,0.08)]">
-                <Image
-                  src={images.heroPortrait.src}
-                  alt={images.heroPortrait.alt}
-                  width={900}
-                  height={680}
-                  unoptimized
-                  className="h-[360px] w-full object-cover object-top"
-                />
-              </div>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {outcomes.map((outcome, index) => (
