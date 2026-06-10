@@ -25,6 +25,7 @@ export default function MediaPage() {
                 eyebrow="Media / Speaker Reel"
                 title="Watch. Listen. Experience the Impact."
                 body="Explore Lornette's warmth, conviction, and message through video clips, speaking moments, and media features."
+                headingLevel="h1"
               />
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {[

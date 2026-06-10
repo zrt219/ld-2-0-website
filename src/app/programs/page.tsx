@@ -28,6 +28,7 @@ export default function ProgramsPage() {
               eyebrow="Programs & Services"
               title="Speaking, coaching, and development experiences for the people you serve."
               body="Choose a focused keynote, workshop, mentorship session, or coaching experience, or combine formats around the needs of your audience."
+              headingLevel="h1"
             />
             <ImageFrame image={additionalImages.programOverview} ratio="aspect-[16/10]" priority />
           </div>

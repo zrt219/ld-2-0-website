@@ -140,7 +140,8 @@ export const siteCopy = {
     "Professional Keynote Speaker | Olympic-level Athlete & Coach | Canadian National Sprint Champion | Certified Transformational Speaker | Author | Youth Leader & Mentor | Project Manager",
   mainMessage:
     "Helping people rise through challenge, remember their worth, and move forward with purpose.",
-  homepageHeadline: "Transforming Lives. Reminding People They Matter.",
+  homepageHeadline: "Keynotes That Move People Forward.",
+  homepageEventHeadline: "Make Your Event Unforgettable.",
   homepageSubheadline:
     "Lornette brings four decades of elite sport, coaching, mentorship, and lived resilience to every room she enters",
   homepageIntro:

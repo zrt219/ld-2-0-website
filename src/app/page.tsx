@@ -223,15 +223,15 @@ export default function Home() {
                 spaciousFeaturedContent
                 featuredMediaSize="min-h-[300px] lg:min-h-[360px]"
               />
-              <div>
+              <div className="lg:pt-10">
                 <div className="border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-7 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-9 lg:p-10">
                   <p className="text-sm font-bold uppercase text-[var(--gold-dark)]">
                     For the Audience You Care About
                   </p>
                   <h2 className="mt-4 font-serif text-4xl leading-tight text-balance text-[var(--ink)] sm:text-5xl">
-                    {siteCopy.homepageHeadline}
+                    {siteCopy.homepageEventHeadline}
                   </h2>
-                  <p className="mt-5 text-lg leading-9 text-[#675d50]">
+                  <p className="mt-5 text-xl leading-10 text-[#675d50]">
                     {siteCopy.homepageIntro}
                   </p>
                 </div>

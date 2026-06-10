@@ -23,6 +23,7 @@ export default function ImpactPage() {
               eyebrow="Impact / Testimonials"
               title="Stories from people and communities Lornette has encouraged."
               body="From speaking rooms to coaching spaces, these reflections show the warmth, practical care, and lasting encouragement people experience with Lornette."
+              headingLevel="h1"
             />
             <ImageFrame image={images.heroPortrait} priority ratio="aspect-[16/10]" />
           </div>
