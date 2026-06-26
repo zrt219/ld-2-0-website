@@ -38,15 +38,14 @@ export default function SpeakerKitPage() {
                 ))}
               </ul>
             </section>
-            <section className="border border-[var(--line)] bg-white p-7">
-              <h2 className="font-serif text-3xl text-[var(--ink)]">Host Checklist</h2>
-              <div className="mt-5 grid gap-3 text-sm leading-7 text-[#675d50] sm:grid-cols-2">
-                <p>Confirm event date, audience size, room format, and desired outcome.</p>
-                <p>Share AV needs, intro script preference, timing, and onsite contact details.</p>
-                <p>Use the speaker kit to introduce Lornette with clarity and confidence.</p>
-                <p>Submit the booking form so the right keynote, workshop, or coaching format can be shaped around your audience.</p>
-              </div>
-            </section>
+            <div className="flex h-full items-start lg:pt-[8px]">
+              <a
+                href="https://ld-speaker-onesheet.vercel.app"
+                className="inline-flex min-h-16 w-full max-w-[26rem] items-center justify-center border border-transparent bg-[var(--champagne)] px-8 py-5 text-base font-bold uppercase tracking-[0.12em] text-[var(--ink)] shadow-[0_18px_36px_rgba(155,118,46,0.18)] transition hover:bg-[#d8b96e] focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)]"
+              >
+                One Sheet Site
+              </a>
+            </div>
           </div>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <CTAButton href="/book">Inquire About Availability</CTAButton>
