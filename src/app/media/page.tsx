@@ -27,20 +27,6 @@ export default function MediaPage() {
                 body="Explore Lornette's warmth, conviction, and message through video clips, speaking moments, and media features."
                 headingLevel="h1"
               />
-              <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                {[
-                  ["Speaker Reel", "Watch first"],
-                  ["Speaker Kit", "Host resources"],
-                  ["Booking", "Start the conversation"],
-                ].map(([title, body]) => (
-                  <div key={title} className="border border-[var(--line)] bg-white/80 p-4">
-                    <p className="font-serif text-2xl text-[var(--ink)]">{title}</p>
-                    <p className="mt-1 text-xs font-bold uppercase tracking-[0.14em] text-[var(--gold-dark)]">
-                      {body}
-                    </p>
-                  </div>
-                ))}
-              </div>
             </div>
             <VideoCard {...mediaItems[0]} featured className="shadow-[0_30px_120px_rgba(23,20,18,0.16)]" />
           </div>

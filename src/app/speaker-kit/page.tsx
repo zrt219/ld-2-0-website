@@ -23,7 +23,7 @@ export default function SpeakerKitPage() {
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {speakerKitDownloads.map((item) => (
               <div id={item.id} key={item.title}>
-                <SpeakerKitDownload title={item.title} href={item.href} />
+                <SpeakerKitDownload title={item.cardTitle ?? item.title} href={item.href} />
               </div>
             ))}
           </div>

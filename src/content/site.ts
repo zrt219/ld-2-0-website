@@ -1000,14 +1000,15 @@ export const posts: Post[] = [
 ];
 
 export const speakerKitDownloads = [
-  { id: "short-bio", title: "Short Bio", href: "/speaker-kit/short-bio-sample.html" },
-  { id: "long-bio", title: "Long Bio", href: "/speaker-kit/long-bio-sample.html" },
-  { id: "speaker-one-sheet", title: "Speaker One-Sheet", href: "/speaker-kit/speaker-one-sheet-sample.html" },
-  { id: "headshots", title: "Headshots", href: "/speaker-kit/headshots-sample.html" },
-  { id: "topic-sheet", title: "Topic Sheet", href: "/speaker-kit/topic-sheet-sample.html" },
-  { id: "intro-script", title: "Intro Script", href: "/speaker-kit/intro-script-sample.html" },
+  { id: "short-bio", title: "Short Bio", href: "/speaker-kit/lornette-short-bio.pdf" },
+  { id: "long-bio", title: "Long Bio", href: "/speaker-kit/lornette-long-bio.pdf" },
+  {
+    id: "speaker-one-sheet",
+    title: "Speaker One-Sheet",
+    cardTitle: "Speaker One-Sheet Site",
+    href: "https://ld-speaker-onesheet.vercel.app",
+  },
   { id: "av-requirements", title: "AV Requirements", href: "/speaker-kit/av-requirements-sample.html" },
-  { id: "logo-pack", title: "Logo Pack", href: "/speaker-kit/logo-pack-sample.html" },
 ];
 
 const stripeBookLinks = {
