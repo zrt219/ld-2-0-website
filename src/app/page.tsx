@@ -6,6 +6,7 @@ import {
 import { BlogCard } from "@/components/BlogCard";
 import { CTAButton } from "@/components/CTAButton";
 import { HeroSplit } from "@/components/HeroSplit";
+import { HomeProofSection } from "@/components/HomeProofSection";
 import { ImageFrame } from "@/components/ImageFrame";
 import { MetricStrip } from "@/components/MetricStrip";
 import { NewsletterBand } from "@/components/NewsletterBand";
@@ -299,6 +300,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <HomeProofSection />
 
         <MetricStrip />
 
