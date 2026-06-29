@@ -12,7 +12,6 @@ const categories = [
   "Interviews",
   "Short Insights",
   "Podcasts",
-  "Featured Appearances",
 ];
 
 export function MediaGrid() {

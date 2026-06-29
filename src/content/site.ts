@@ -657,13 +657,6 @@ export const mediaItems: MediaItem[] = [
     status: "Coaching Focus",
   },
   {
-    title: "Diversity Award Recognition",
-    category: "Featured Appearances",
-    summary: "Recognition artwork for Friends of Diversity, supporting Lornette's inclusion and community-impact platform.",
-    image: images.recognitionDiversityAward,
-    status: "Recognition",
-  },
-  {
     title: "Podcast & Interview Features",
     category: "Podcasts",
     summary: "Conversations on resilience, purpose, leadership, and the experiences that shape Lornette's work.",
