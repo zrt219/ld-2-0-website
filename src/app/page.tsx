@@ -155,22 +155,22 @@ const audiencePathways: AudiencePathway[] = [
 const signatureTopicCards = [
   {
     ...services[0],
-    title: "Resilience Under Pressure",
+    title: "Mental Resilience",
     body: "A practical reset for audiences learning to steady themselves, recover from setbacks, and take the next brave step.",
   },
   {
     ...services[1],
-    title: "Women's Wellness & Purpose",
+    title: "Women's Health and Wellness",
     body: "Encouragement for women navigating change, responsibility, identity, and the need to make room for rest and renewal.",
   },
   {
     ...services[2],
-    title: "Belonging in Real Life",
+    title: "Diversity, Equity, and Inclusion",
     body: "Grounded conversations that help teams listen across difference, build trust, and make inclusion visible in everyday behavior.",
   },
   {
     ...services[3],
-    title: "Burnout, Balance & Renewal",
+    title: "Burnout Prevention",
     body: "A compassionate session for people running on empty who need healthier rhythms, clearer boundaries, and hope for what comes next.",
   },
 ];
