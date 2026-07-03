@@ -276,14 +276,15 @@ export function VideoCard({
           aria-modal="true"
           aria-labelledby={`${title.replace(/\W+/g, "-").toLowerCase()}-video-dialog-title`}
           ref={dialogRef}
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-black/78 p-4"
+          className="fixed inset-0 z-[80] flex items-center justify-center overflow-hidden bg-black/78 p-4"
           onClick={(event) => {
             if (event.target === event.currentTarget) {
               closeVideo();
             }
           }}
         >
-          <div className="w-full max-w-5xl border border-white/15 bg-[var(--ink)] p-3 shadow-2xl">
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-2/3 bg-[radial-gradient(circle_at_70%_20%,rgba(198,165,92,0.24),transparent_34rem)]" />
+          <div className="relative w-full max-w-5xl border border-white/15 bg-[var(--ink)] p-3 shadow-2xl">
             <div className="mb-3 flex items-center justify-between gap-4 text-white">
               <p id={`${title.replace(/\W+/g, "-").toLowerCase()}-video-dialog-title`} className="font-semibold">
                 {title}

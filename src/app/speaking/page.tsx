@@ -242,7 +242,6 @@ export default function SpeakingPage() {
           id="speaking-hero"
           className="relative scroll-mt-28 overflow-hidden border-b border-[var(--line)] bg-[var(--ivory)] px-4 py-14 sm:px-6 lg:px-8 lg:py-16"
         >
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_70%_20%,rgba(198,165,92,0.22),transparent_34rem)]" />
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.96fr)_minmax(420px,0.84fr)] lg:items-start">
             <div className="relative z-10">
               <SectionLabel>Speaking / Keynotes</SectionLabel>
