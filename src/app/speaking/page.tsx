@@ -42,7 +42,7 @@ const heroStats = [
   "Former National Track Champion",
   "National Coach",
   "Diversity Award Winner",
-  "Motivational Speaker",
+  "Transformational Speaker",
 ];
 
 const speakingPillars = [
