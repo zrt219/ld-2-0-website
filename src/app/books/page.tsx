@@ -50,7 +50,11 @@ const coverCropBySlug: Record<string, { objectFit?: "cover" | "contain"; objectP
     objectPosition: "50% 50%",
     transform: "scale(1)",
   },
-  "road-to-the-olympics": { objectPosition: "50% 22%", transform: "scale(1.48)" },
+  "road-to-the-olympics": {
+    objectFit: "contain",
+    objectPosition: "50% 50%",
+    transform: "scale(1)",
+  },
   "surviving-life": {
     objectFit: "contain",
     objectPosition: "50% 50%",
@@ -111,7 +115,7 @@ export default function BooksPage() {
                 Practical Wisdom for Resilience, Purpose, and Renewal.
               </h1>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--charcoal)]">
-                Explore Lornette Daye&apos;s PDF resources for readers who want
+                Explore Lornette Daye&apos;s books for readers who want
                 encouragement they can return to, reflect on, and apply in real
                 life.
               </p>
@@ -169,14 +173,11 @@ export default function BooksPage() {
         <section id="book-listings" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
             <div className="max-w-3xl">
-              <p className="text-xs font-bold uppercase tracking-[0.32em] text-[var(--gold-dark)]">
-                PDF Books for Sale
-              </p>
-              <h2 className="mt-4 font-serif text-4xl leading-tight text-[var(--ink)] sm:text-5xl">
+              <h2 className="font-serif text-4xl leading-tight text-[var(--ink)] sm:text-5xl">
                 Digital resources designed to help readers rise.
               </h2>
               <p className="mt-5 text-base leading-8 text-[#675d50]">
-                Each PDF offers practical encouragement for resilience, faith,
+                Each book offers practical encouragement for resilience, faith,
                 purpose, leadership, and personal growth. Choose the resource
                 that speaks to your season or the people you serve.
               </p>
@@ -250,10 +251,10 @@ export default function BooksPage() {
                         href={book.purchaseUrl}
                         target="_blank"
                         rel="noreferrer"
-                        aria-label={`Buy ${book.title} PDF download through Stripe`}
+                        aria-label={`Buy ${book.title} through Stripe`}
                         className="inline-flex min-h-12 w-full items-center justify-center gap-2 border border-transparent bg-[var(--ink)] px-5 py-3 text-center text-sm font-bold uppercase leading-5 text-[var(--ivory)] shadow-[0_14px_34px_rgba(23,20,18,0.18)] transition hover:bg-[var(--charcoal)] focus:outline-none focus:ring-2 focus:ring-[var(--gold-dark)] focus:ring-offset-2"
                       >
-                        Buy PDF Download
+                        Buy
                         <ArrowRight size={17} aria-hidden="true" />
                       </a>
                     </div>

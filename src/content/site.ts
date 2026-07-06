@@ -22,7 +22,7 @@ import trainingPoster from "../../images/unnamed (8).jpg";
 import resiliencePoster from "../../images/unnamed (4).jpg";
 import survivalSkillsMen from "../../images/unnamed (45).jpg";
 import survivingLife from "../../images/SURVIVING LIFE.jpg";
-import roadBook from "../../images/road.jpg";
+import finishStrongBook from "../../images/finish-strong-main-cover.png";
 import womensBook from "../../images/womensbook.jpg";
 import toastmastersLogo from "../../images/Toastmasters_2011.png";
 import rotaryLogo from "../../images/Rotary-Club-of-St-Albert--1-.jpeg";
@@ -1010,7 +1010,7 @@ const stripeBookLinks = {
     "https://buy.stripe.com/9B6bJ1542gA262JfCG1VK00",
   roadToTheOlympics:
     process.env.NEXT_PUBLIC_STRIPE_ROAD_TO_THE_OLYMPICS_URL ??
-    "https://buy.stripe.com/bJe4gz686fvY1Mt9ei1VK01",
+    "https://buy.stripe.com/8x28wP9ki1F8ezf9ei1VK0A",
   survivingLife:
     process.env.NEXT_PUBLIC_STRIPE_SURVIVING_LIFE_URL ??
     "https://buy.stripe.com/7sY8wPcwuabE62Jcqu1VK02",
@@ -1042,7 +1042,7 @@ export const bookListings: BookListing[] = [
   },
   {
     slug: "road-to-the-olympics",
-    title: "Road to the Olympics",
+    title: "Finish Strong: Chasing the Olympic Dream",
     subtitle: "A journey of resilience, purpose, and legacy.",
     description:
       "A motivational PDF resource drawn from Lornette's elite-athlete lens, focused on perseverance, identity, discipline, and rising again after setbacks.",
@@ -1051,12 +1051,12 @@ export const bookListings: BookListing[] = [
     priceLabel: "$14.99 CAD",
     format: "PDF download",
     image: {
-      src: roadBook,
-      alt: "Road to the Olympics book cover artwork, cropped to focus on the book.",
+      src: finishStrongBook,
+      alt: "Finish Strong: Chasing the Olympic Dream book cover artwork.",
       crop: "object-[50%_35%] scale-[1.16]",
     },
     purchaseUrl: stripeBookLinks.roadToTheOlympics,
-    stripePaymentLinkId: "plink_1TYMKfH99Nljn2XPQs08iLxk",
+    stripePaymentLinkId: "plink_1TqLPUH99Nljn2XPX4TUpSQU",
     highlights: [
       "Elite athlete mindset",
       "Resilience after pressure",
@@ -1095,9 +1095,13 @@ export const bookFeatures = [
     image: { src: survivingLife, alt: "Surviving Life book cover artwork.", crop: "object-top" },
   },
   {
-    title: "Road to the Olympics",
+    title: "Finish Strong: Chasing the Olympic Dream",
     subtitle: "A journey of resilience, purpose, and legacy.",
-    image: { src: roadBook, alt: "Road to the Olympics book cover artwork.", crop: "object-top" },
+    image: {
+      src: finishStrongBook,
+      alt: "Finish Strong: Chasing the Olympic Dream book cover artwork.",
+      crop: "object-top",
+    },
   },
   {
     title: "Survival Skills for Women",
