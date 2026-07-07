@@ -451,7 +451,7 @@ export default function SpeakingPage() {
                         <p className="mt-5 text-base leading-8 text-[#675d50]">
                           {pillar.description}
                         </p>
-                        <div className="mt-7 grid gap-4 sm:grid-cols-[1fr_auto] sm:items-center">
+                        <div className="mt-7 grid gap-4 sm:grid-cols-[minmax(16rem,1fr)_minmax(12rem,20rem)] sm:items-center">
                           <div className="border border-[var(--line)] bg-[var(--ivory)] p-4">
                             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--gold-dark)]">
                               Best For
@@ -465,7 +465,12 @@ export default function SpeakingPage() {
                               ))}
                             </ul>
                           </div>
-                          <CTAButton href="/book" className="sm:self-stretch">
+                          <CTAButton
+                            href="/book"
+                            size="tall"
+                            showIcon={false}
+                            className="whitespace-normal text-balance sm:!w-full"
+                          >
                             {pillar.cta}
                           </CTAButton>
                         </div>

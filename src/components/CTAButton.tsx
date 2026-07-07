@@ -5,7 +5,8 @@ type CTAButtonProps = {
   href: string;
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "dark";
-  size?: "default" | "large";
+  size?: "default" | "large" | "tall";
+  showIcon?: boolean;
   className?: string;
 };
 
@@ -14,6 +15,7 @@ export function CTAButton({
   children,
   variant = "primary",
   size = "default",
+  showIcon = true,
   className = "",
 }: CTAButtonProps) {
   const styles = {
@@ -26,6 +28,7 @@ export function CTAButton({
   const sizes = {
     default: "min-h-12 px-5 py-3 text-sm leading-5",
     large: "min-h-14 px-7 py-4 text-base leading-6",
+    tall: "min-h-16 px-8 py-5 text-base leading-7",
   };
 
   return (
@@ -34,7 +37,7 @@ export function CTAButton({
       className={`inline-flex w-full items-center justify-center gap-2 border text-center font-bold uppercase transition sm:w-auto ${sizes[size]} ${styles[variant]} ${className}`}
     >
       {children}
-      <ArrowUpRight size={size === "large" ? 19 : 17} aria-hidden="true" />
+      {showIcon ? <ArrowUpRight size={size === "default" ? 17 : 19} aria-hidden="true" /> : null}
     </Link>
   );
 }
