@@ -1045,7 +1045,7 @@ export const bookListings: BookListing[] = [
     title: "Finish Strong: Chasing the Olympic Dream",
     subtitle: "A journey of resilience, purpose, and legacy.",
     description:
-      "A motivational PDF resource drawn from Lornette's elite-athlete lens, focused on perseverance, identity, discipline, and rising again after setbacks.",
+      "A motivational autobiography drawn from Lornette's elite-athlete lens, focused on perseverance, identity, discipline, and rising again after setbacks.",
     audience:
       "For athletes, coaches, youth leaders, schools, teams, and readers who need a champion-mindset reset.",
     priceLabel: "$14.99 CAD",
@@ -1068,7 +1068,7 @@ export const bookListings: BookListing[] = [
     title: "Surviving Life",
     subtitle: "A guide to resilience when life hits hard.",
     description:
-      "A warm, encouraging PDF guide for readers rebuilding hope, confidence, and perspective after difficult seasons.",
+      "A warm, encouraging guide for readers rebuilding hope, confidence, and perspective after difficult seasons.",
     audience:
       "For individuals, women's groups, mentoring circles, faith communities, and anyone seeking practical encouragement.",
     priceLabel: "$14.99 CAD",
