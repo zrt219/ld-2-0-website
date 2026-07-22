@@ -17,7 +17,7 @@ type HeroSplitProps = {
   eyebrow?: string;
   title: string;
   body: string;
-  image: SiteImage;
+  image?: SiteImage;
   primaryHref?: string;
   primaryLabel?: string;
   secondaryHref?: string;
@@ -53,10 +53,11 @@ export function HeroSplit({
   secondaryLabel = "Watch Speaker Reel",
   video,
 }: HeroSplitProps) {
-  const imageFrameTone =
-    image.frameTone === "warm-ivory"
+  const imageFrameTone = image
+    ? image.frameTone === "warm-ivory"
       ? "bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)]"
-      : "bg-white";
+      : "bg-white"
+    : "";
 
   return (
     <section className="relative overflow-hidden border-b border-[rgba(198,165,92,0.35)] bg-[var(--ivory)]">
@@ -86,24 +87,26 @@ export function HeroSplit({
         </div>
 
         <div className="relative min-w-0 w-full max-w-[560px] lg:justify-self-end">
-          <div className={`relative mx-auto aspect-[4/5] max-h-[590px] w-full max-w-[500px] overflow-hidden border border-[rgba(198,165,92,0.42)] shadow-[0_28px_110px_rgba(23,20,18,0.14)] ${imageFrameTone}`}>
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              priority
-              sizes="(max-width: 768px) 92vw, 44vw"
-              unoptimized
-              className={`object-cover ${image.crop ?? "object-center"}`}
-            />
-            <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/40" />
-            {image.showBottomFade === false ? null : (
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[rgba(23,20,18,0.42)] to-transparent" />
-            )}
-          </div>
+          {image ? (
+            <div className={`relative mx-auto aspect-[4/5] max-h-[590px] w-full max-w-[500px] overflow-hidden border border-[rgba(198,165,92,0.42)] shadow-[0_28px_110px_rgba(23,20,18,0.14)] ${imageFrameTone}`}>
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                priority
+                sizes="(max-width: 768px) 92vw, 44vw"
+                unoptimized
+                className={`object-cover ${image.crop ?? "object-center"}`}
+              />
+              <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/40" />
+              {image.showBottomFade === false ? null : (
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[rgba(23,20,18,0.42)] to-transparent" />
+              )}
+            </div>
+          ) : null}
 
           {video ? (
-            <div className="relative z-10 mx-auto -mt-10 w-full max-w-[470px] lg:-ml-8 lg:-mt-16">
+            <div className={`relative z-10 mx-auto w-full max-w-[470px] ${image ? "-mt-10 lg:-ml-8 lg:-mt-16" : ""}`}>
               <VideoCard {...video} compact />
             </div>
           ) : null}

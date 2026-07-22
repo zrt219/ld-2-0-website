@@ -34,7 +34,7 @@ export function CTAButton({
   return (
     <Link
       href={href}
-      className={`inline-flex w-full items-center justify-center gap-2 border text-center font-bold uppercase transition sm:w-auto ${sizes[size]} ${styles[variant]} ${className}`}
+      className={`inline-flex w-full items-center justify-center gap-2 border text-center font-bold uppercase transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-xl active:scale-95 sm:w-auto ${sizes[size]} ${styles[variant]} ${className}`}
     >
       {children}
       {showIcon ? <ArrowUpRight size={size === "default" ? 17 : 19} aria-hidden="true" /> : null}

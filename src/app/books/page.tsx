@@ -46,19 +46,19 @@ const heroTrustMarkers = [
 
 const coverCropBySlug: Record<string, { objectFit?: "cover" | "contain"; objectPosition: string; transform: string }> = {
   "survival-skills-for-men": {
-    objectFit: "contain",
+    objectFit: "cover",
     objectPosition: "50% 50%",
-    transform: "scale(1)",
+    transform: "scale(1.85)",
   },
   "road-to-the-olympics": {
-    objectFit: "contain",
+    objectFit: "cover",
     objectPosition: "50% 50%",
     transform: "scale(1)",
   },
   "surviving-life": {
-    objectFit: "contain",
+    objectFit: "cover",
     objectPosition: "50% 50%",
-    transform: "scale(1)",
+    transform: "scale(1.85)",
   },
 };
 
