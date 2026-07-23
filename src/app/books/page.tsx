@@ -152,6 +152,7 @@ export default function BooksPage() {
                         src={book.image.src}
                         alt={book.image.alt}
                         fill
+                        unoptimized
                         sizes="(min-width: 1024px) 260px, 33vw"
                         className="object-cover transition duration-500 group-hover:brightness-105"
                         style={getCoverCrop(book.slug)}
@@ -194,6 +195,7 @@ export default function BooksPage() {
                       src={book.image.src}
                       alt={book.image.alt}
                       fill
+                      unoptimized
                       sizes="(min-width: 1024px) 33vw, 100vw"
                       className="object-cover transition duration-500 group-hover:brightness-105"
                       style={getCoverCrop(book.slug)}
