@@ -46,17 +46,17 @@ const heroTrustMarkers = [
 
 const coverCropBySlug: Record<string, { objectFit?: "cover" | "contain"; objectPosition: string; transform: string }> = {
   "survival-skills-for-men": {
-    objectFit: "contain",
+    objectFit: "cover",
     objectPosition: "50% 50%",
     transform: "scale(1)",
   },
   "road-to-the-olympics": {
-    objectFit: "contain",
+    objectFit: "cover",
     objectPosition: "50% 50%",
     transform: "scale(1)",
   },
   "surviving-life": {
-    objectFit: "contain",
+    objectFit: "cover",
     objectPosition: "50% 50%",
     transform: "scale(1)",
   },
@@ -147,7 +147,7 @@ export default function BooksPage() {
                       index === 1 ? "sm:-translate-y-8" : ""
                     }`}
                   >
-                    <div className="relative aspect-[4/5]">
+                    <div className="relative aspect-[3/4]">
                       <Image
                         src={book.image.src}
                         alt={book.image.alt}
@@ -189,7 +189,7 @@ export default function BooksPage() {
                   key={book.slug}
                   className="group flex h-full flex-col overflow-hidden border border-[rgba(198,165,92,0.34)] bg-white shadow-[0_20px_55px_rgba(23,20,18,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(23,20,18,0.13)]"
                 >
-                  <div className="relative aspect-[16/13] overflow-hidden bg-[#efe7d8]">
+                  <div className="relative aspect-[3/4] overflow-hidden bg-[#efe7d8]">
                     <Image
                       src={book.image.src}
                       alt={book.image.alt}
