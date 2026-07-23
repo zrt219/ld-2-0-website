@@ -20,9 +20,9 @@ import programOverview from "../../images/unnamed (7).jpg";
 import eventWorkshop from "../../images/unnamed (1).jpg";
 import trainingPoster from "../../images/unnamed (8).jpg";
 import resiliencePoster from "../../images/unnamed (4).jpg";
-import survivalSkillsMen from "../../images/unnamed (45).jpg";
-import survivingLife from "../../images/SURVIVING LIFE.jpg";
-import finishStrongBook from "../../images/finish-strong-main-cover.png";
+import survivalSkillsMen from "../../images/survival-skills-for-men-cover-new.png";
+import survivingLife from "../../images/surviving-life-cover-new.jpg";
+import finishStrongBook from "../../images/finish-strong-cover-new.jpg";
 import womensBook from "../../images/womensbook.jpg";
 import toastmastersLogo from "../../images/Toastmasters_2011.png";
 import rotaryLogo from "../../images/Rotary-Club-of-St-Albert--1-.jpeg";
@@ -1030,7 +1030,7 @@ export const bookListings: BookListing[] = [
     image: {
       src: survivalSkillsMen,
       alt: "Survival Skills for Men book cover artwork, cropped to focus on the book.",
-      crop: "object-[50%_35%] scale-[1.16]",
+      crop: "object-center",
     },
     purchaseUrl: stripeBookLinks.survivalSkillsForMen,
     stripePaymentLinkId: "plink_1TYMDiH99Nljn2XPaPvvbDhp",
@@ -1053,7 +1053,7 @@ export const bookListings: BookListing[] = [
     image: {
       src: finishStrongBook,
       alt: "Finish Strong: Chasing the Olympic Dream book cover artwork.",
-      crop: "object-[50%_35%] scale-[1.16]",
+      crop: "object-center",
     },
     purchaseUrl: stripeBookLinks.roadToTheOlympics,
     stripePaymentLinkId: "plink_1TqLPUH99Nljn2XPX4TUpSQU",
@@ -1076,7 +1076,7 @@ export const bookListings: BookListing[] = [
     image: {
       src: survivingLife,
       alt: "Surviving Life book cover artwork, cropped to focus on the book.",
-      crop: "object-[50%_34%] scale-[1.16]",
+      crop: "object-center",
     },
     purchaseUrl: stripeBookLinks.survivingLife,
     stripePaymentLinkId: "plink_1TYMVSH99Nljn2XPYvPsZSw0",

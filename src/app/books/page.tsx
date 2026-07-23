@@ -48,7 +48,7 @@ const coverCropBySlug: Record<string, { objectFit?: "cover" | "contain"; objectP
   "survival-skills-for-men": {
     objectFit: "cover",
     objectPosition: "50% 50%",
-    transform: "scale(1.85)",
+    transform: "scale(1)",
   },
   "road-to-the-olympics": {
     objectFit: "cover",
@@ -58,7 +58,7 @@ const coverCropBySlug: Record<string, { objectFit?: "cover" | "contain"; objectP
   "surviving-life": {
     objectFit: "cover",
     objectPosition: "50% 50%",
-    transform: "scale(1.85)",
+    transform: "scale(1)",
   },
 };
 
