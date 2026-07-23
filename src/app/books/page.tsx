@@ -147,13 +147,14 @@ export default function BooksPage() {
                       index === 1 ? "sm:-translate-y-8" : ""
                     }`}
                   >
-                    <div className="relative aspect-[3/4]">
+                    <div className="relative">
                       <Image
                         src={book.image.src}
                         alt={book.image.alt}
-                        fill
+                        width={typeof book.image.src === 'string' ? 600 : book.image.src.width}
+                        height={typeof book.image.src === 'string' ? 800 : book.image.src.height}
                         sizes="(min-width: 1024px) 260px, 33vw"
-                        className="object-cover transition duration-500 group-hover:brightness-105"
+                        className="w-full h-auto object-cover transition duration-500 group-hover:brightness-105"
                         style={getCoverCrop(book.slug)}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[rgba(23,20,18,0.24)] to-transparent" />
@@ -189,13 +190,14 @@ export default function BooksPage() {
                   key={book.slug}
                   className="group flex h-full flex-col overflow-hidden border border-[rgba(198,165,92,0.34)] bg-white shadow-[0_20px_55px_rgba(23,20,18,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(23,20,18,0.13)]"
                 >
-                  <div className="relative aspect-[3/4] overflow-hidden bg-[#efe7d8]">
+                  <div className="relative overflow-hidden bg-[#efe7d8]">
                     <Image
                       src={book.image.src}
                       alt={book.image.alt}
-                      fill
+                      width={typeof book.image.src === 'string' ? 600 : book.image.src.width}
+                      height={typeof book.image.src === 'string' ? 800 : book.image.src.height}
                       sizes="(min-width: 1024px) 33vw, 100vw"
-                      className="object-cover transition duration-500 group-hover:brightness-105"
+                      className="w-full h-auto object-cover transition duration-500 group-hover:brightness-105"
                       style={getCoverCrop(book.slug)}
                     />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(23,20,18,0.72)] to-transparent p-5">
