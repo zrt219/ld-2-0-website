@@ -35,6 +35,7 @@ export type SiteImage = {
   alt: string;
   crop?: string;
   caption?: string;
+  aspect?: string;
   frameTone?: "warm-ivory";
   showBottomFade?: boolean;
 };
@@ -764,6 +765,7 @@ export const posts: Post[] = [
       src: "/generated/blog-setback-finish-line.jpg",
       alt: "Your Setback Is Not Your Finish Line artwork featuring running shoes, a whistle, microphone, medal, and performance plan.",
       caption: "Turning pain into purpose on the path to finishing strong.",
+      aspect: "aspect-square",
       crop: "object-center",
     },
     body: {

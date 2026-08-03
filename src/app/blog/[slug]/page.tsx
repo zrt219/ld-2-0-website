@@ -47,7 +47,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           <figure className="mt-8">
-            <div className="relative aspect-[2.05/1] overflow-hidden bg-[#f5f2ec]">
+            <div
+              className={`relative overflow-hidden bg-[#f5f2ec] ${
+                post.image.aspect ?? "aspect-[2.05/1]"
+              }`}
+            >
               <Image
                 src={post.image.src}
                 alt={post.image.alt}
