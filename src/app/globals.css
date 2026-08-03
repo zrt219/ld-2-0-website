@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #faf7f0;
+  --white: #ffffff;
+  --champagne: #c6a55c;
+  --gold-dark: #7f5b1d;
+  --ink: #171412;
+  --charcoal: #2a2520;
+  --taupe: #b7a891;
+  --sand: #e8ddcb;
+  --line: #e7dccb;
+  --background: var(--ivory);
+  --foreground: var(--ink);
+  --font-inter: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-playfair: "Playfair Display", Georgia, Cambria, "Times New Roman", serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(250, 247, 240, 0) 24rem),
+    radial-gradient(circle at top left, rgba(198, 165, 92, 0.14), transparent 30rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  min-width: 320px;
+  overflow-x: clip;
+  text-rendering: geometricPrecision;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a,
+input,
+select,
+textarea,
+summary {
+  outline-offset: 4px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  box-shadow: 0 0 0 4px #f0cf7a !important;
+  outline: 2px solid var(--ink) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::selection {
+  background: #f0cf7a;
+  color: #15110c;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.gold-text {
+  color: var(--gold-dark);
+}
