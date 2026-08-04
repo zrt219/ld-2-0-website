@@ -101,41 +101,117 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           ) : null}
 
-          {/* Action CTAs */}
-          <div className="mt-12 border border-[rgba(198,165,92,0.4)] bg-[var(--ivory)] p-6 sm:p-8">
-            <h3 className="font-serif text-2xl text-[var(--ink)] sm:text-3xl">
-              Take the Next Step in Your Journey
-            </h3>
-            <p className="mt-2 text-sm leading-6 text-[#675d50]">
-              Elevate your performance, mindset, and legacy with Lornette Daye&apos;s published guides, keynotes, and elite coaching.
-            </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-              {post.amazonUrl ? (
+          {/* End-of-Blog Actions & CTA */}
+          <div className="mt-14 space-y-12">
+            {/* Purchase CTA if available */}
+            {post.amazonUrl || post.purchaseUrl ? (
+              <div className="border border-[rgba(198,165,92,0.5)] bg-[#faf6ee] p-6 sm:p-8">
+                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)]">
+                  Published Guide & Book
+                </p>
+                <h3 className="mt-2 font-serif text-2xl text-[var(--ink)] sm:text-3xl">
+                  Get Your Copy of {post.title.split(":")[0]}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-[#675d50]">
+                  Deepen your growth with actionable blueprints, daily reflection prompts, and enduring wisdom.
+                </p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  {post.amazonUrl ? (
+                    <a
+                      href={post.amazonUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[#ff9900] px-6 py-3 text-center text-sm font-bold uppercase tracking-wider text-black shadow-md transition hover:bg-[#e68a00] focus:outline-none focus:ring-2 focus:ring-[#ff9900]"
+                    >
+                      Order on Amazon
+                    </a>
+                  ) : null}
+                  {post.purchaseUrl ? (
+                    <a
+                      href={post.purchaseUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex min-h-12 items-center justify-center bg-[var(--ink)] px-6 py-3 text-center text-sm font-bold uppercase tracking-wider text-[var(--ivory)] shadow-md transition hover:bg-[var(--charcoal)]"
+                    >
+                      Buy Digital Edition
+                    </a>
+                  ) : null}
+                </div>
+              </div>
+            ) : null}
+
+            {/* Related Posts to Keep Reader Engaged */}
+            <div className="border-t border-[var(--line)] pt-10">
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)]">
+                Keep Reading & Exploring
+              </p>
+              <h3 className="mt-2 font-serif text-2xl text-[var(--ink)] sm:text-3xl">
+                More Reflections from Lornette
+              </h3>
+              <div className="mt-6 grid gap-6 sm:grid-cols-2">
+                {posts
+                  .filter((p) => p.slug !== post.slug)
+                  .slice(0, 2)
+                  .map((relatedPost) => (
+                    <a
+                      key={relatedPost.slug}
+                      href={`/blog/${relatedPost.slug}`}
+                      className="group flex flex-col overflow-hidden border border-[var(--line)] bg-[#faf7f2] p-5 transition hover:-translate-y-1 hover:border-[var(--champagne)] hover:shadow-md"
+                    >
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--gold-dark)]">
+                        {relatedPost.category}
+                      </span>
+                      <h4 className="mt-2 font-serif text-lg leading-snug text-[var(--ink)] group-hover:text-[var(--gold-dark)]">
+                        {relatedPost.title}
+                      </h4>
+                      <p className="mt-2 line-clamp-2 text-xs leading-5 text-[#675d50]">
+                        {relatedPost.excerpt}
+                      </p>
+                      <span className="mt-4 inline-flex items-center text-xs font-bold uppercase tracking-wider text-[var(--ink)] group-hover:underline">
+                        Read reflection →
+                      </span>
+                    </a>
+                  ))}
+              </div>
+            </div>
+
+            {/* Site Engagement Banner */}
+            <div className="border border-[rgba(198,165,92,0.42)] bg-[var(--ink)] p-8 text-[var(--ivory)] shadow-xl">
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-[var(--champagne)]">
+                Bring the Message to Your Room & Life
+              </p>
+              <h3 className="mt-3 font-serif text-3xl leading-tight text-white">
+                Transformational Keynotes, Elite Coaching & Workshops
+              </h3>
+              <p className="mt-4 max-w-xl text-sm leading-7 text-[#d8cdbb]">
+                Bring Lornette Daye to your next conference, athletic program, corporate retreat, or community event to empower your team with unshakeable resilience.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  href={post.amazonUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[#ff9900] px-6 py-3 text-center text-sm font-bold uppercase tracking-wider text-black shadow-md transition hover:bg-[#e68a00] focus:outline-none focus:ring-2 focus:ring-[#ff9900]"
+                  href="/book"
+                  className="inline-flex min-h-11 items-center justify-center bg-[var(--gold-dark)] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-[var(--ink)] shadow-md transition hover:bg-[var(--champagne)]"
                 >
-                  Order on Amazon
+                  Book Lornette Daye
                 </a>
-              ) : null}
-              {post.purchaseUrl ? (
                 <a
-                  href={post.purchaseUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex min-h-12 items-center justify-center bg-[var(--ink)] px-6 py-3 text-center text-sm font-bold uppercase tracking-wider text-[var(--ivory)] shadow-md transition hover:bg-[var(--charcoal)]"
+                  href="/athlete-coaching"
+                  className="inline-flex min-h-11 items-center justify-center border border-white/30 bg-white/10 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-white/20"
                 >
-                  Buy Digital Edition
+                  Athlete Coaching
                 </a>
-              ) : null}
-              <a
-                href="/book"
-                className="inline-flex min-h-12 items-center justify-center border border-[var(--ink)] bg-transparent px-6 py-3 text-center text-sm font-bold uppercase tracking-wider text-[var(--ink)] transition hover:bg-[var(--ink)] hover:text-[var(--ivory)]"
-              >
-                Book Lornette for Coaching & Speaking
-              </a>
+                <a
+                  href="/books"
+                  className="inline-flex min-h-11 items-center justify-center border border-white/30 bg-white/10 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-white/20"
+                >
+                  Explore All Books
+                </a>
+                <a
+                  href="/speaker-kit"
+                  className="inline-flex min-h-11 items-center justify-center border border-white/30 bg-white/10 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-white/20"
+                >
+                  Speaker Kit
+                </a>
+              </div>
             </div>
           </div>
         </article>

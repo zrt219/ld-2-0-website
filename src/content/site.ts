@@ -755,6 +755,60 @@ export const categories = [
 
 export const posts: Post[] = [
   {
+    slug: "finish-strong-chasing-the-olympic-dream",
+    title: "Finish Strong: Lessons from Chasing the Olympic Dream",
+    excerpt:
+      "A story of athletic grit, unwavering confidence, and overcoming setbacks. Lornette Daye shares the mindsets that transform fierce competition into a legacy of lasting impact.",
+    category: "Keynotes & Mindset",
+    date: "2026-08-04",
+    author: "Lornette Daye",
+    readTime: "5 min read",
+    image: {
+      src: "/books/finish-strong-main-cover.png",
+      alt: "Finish Strong: Chasing the Olympic Dream book cover artwork by Lornette Daye.",
+      caption: "A story of resilience. A message of confidence. A legacy of impact.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "Every dream worth pursuing will test your resolve. On the track, as a Canadian National Sprint Champion chasing the Olympic dream, I learned that victory isn't determined when you're feeling fresh—it is forged in the final 50 meters when your lungs burn and every impulse tells you to quit.",
+        "Finish Strong is my personal memoir and strategic framework. It details how to maintain focus when facing heartbreaks, injuries, and setbacks, transforming life's hardest trials into your greatest strength.",
+      ],
+      sections: [
+        {
+          heading: "Key Mindsets for Finishing Strong",
+          paragraphs: [
+            "Whether you are striving for business breakthroughs, recovery, or athletic excellence, these principles apply across every arena.",
+          ],
+          bullets: [
+            {
+              label: "The Final Push",
+              text: "How to summon deep internal power when you feel like giving up.",
+            },
+            {
+              label: "Overcoming Heartbreak",
+              text: "Rebuilding your game plan after missing a long-sought goal.",
+            },
+            {
+              label: "Unwavering Confidence",
+              text: "Believing in your preparation even when standing against elite odds.",
+            },
+          ],
+        },
+        {
+          heading: "Passing the Torch of Impact",
+          paragraphs: [
+            "Your story doesn't end when the race is over; it begins when you use your experience to coach, mentor, and inspire others to run their own race with conviction.",
+          ],
+        },
+      ],
+      conclusion: [
+        "It doesn't matter how you started your season or where you fell. What matters is how you finish. Finish strong!",
+      ],
+    },
+  },
+  {
     slug: "your-setback-is-not-your-finish-line",
     title: "Your Setback Is Not Your Finish Line",
     excerpt:
@@ -1321,60 +1375,6 @@ export const posts: Post[] = [
       ],
       conclusion: [
         "Stand tall, step into your responsibility, and lead with balance and purpose.",
-      ],
-    },
-  },
-  {
-    slug: "finish-strong-chasing-the-olympic-dream",
-    title: "Finish Strong: Lessons from Chasing the Olympic Dream",
-    excerpt:
-      "A story of athletic grit, unwavering confidence, and overcoming setbacks. Lornette Daye shares the mindsets that transform fierce competition into a legacy of lasting impact.",
-    category: "Keynotes & Mindset",
-    date: "2026-08-03",
-    author: "Lornette Daye",
-    readTime: "5 min read",
-    image: {
-      src: "/books/finish-strong-main-cover.png",
-      alt: "Finish Strong: Chasing the Olympic Dream book cover artwork by Lornette Daye.",
-      caption: "A story of resilience. A message of confidence. A legacy of impact.",
-      aspect: "aspect-[2/3]",
-      crop: "object-contain",
-    },
-    body: {
-      intro: [
-        "Every dream worth pursuing will test your resolve. On the track, as a Canadian National Sprint Champion chasing the Olympic dream, I learned that victory isn't determined when you're feeling fresh—it is forged in the final 50 meters when your lungs burn and every impulse tells you to quit.",
-        "Finish Strong is my personal memoir and strategic framework. It details how to maintain focus when facing heartbreaks, injuries, and setbacks, transforming life's hardest trials into your greatest strength.",
-      ],
-      sections: [
-        {
-          heading: "Key Mindsets for Finishing Strong",
-          paragraphs: [
-            "Whether you are striving for business breakthroughs, recovery, or athletic excellence, these principles apply across every arena.",
-          ],
-          bullets: [
-            {
-              label: "The Final Push",
-              text: "How to summon deep internal power when you feel like giving up.",
-            },
-            {
-              label: "Overcoming Heartbreak",
-              text: "Rebuilding your game plan after missing a long-sought goal.",
-            },
-            {
-              label: "Unwavering Confidence",
-              text: "Believing in your preparation even when standing against elite odds.",
-            },
-          ],
-        },
-        {
-          heading: "Passing the Torch of Impact",
-          paragraphs: [
-            "Your story doesn't end when the race is over; it begins when you use your experience to coach, mentor, and inspire others to run their own race with conviction.",
-          ],
-        },
-      ],
-      conclusion: [
-        "It doesn't matter how you started your season or where you fell. What matters is how you finish. Finish strong!",
       ],
     },
   },
