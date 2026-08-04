@@ -28,6 +28,7 @@ import toastmastersLogo from "../../images/Toastmasters_2011.png";
 import rotaryLogo from "../../images/Rotary-Club-of-St-Albert--1-.jpeg";
 import flightPoster from "../../images/image.png";
 import executivePortrait from "../../images/lornette-executive-portrait.jpg";
+import speakingDeskPortrait from "../../images/lornette-speaking-desk-portrait.jpg";
 
 export const siteUrl = "https://lornettedaye.com";
 
@@ -207,6 +208,13 @@ export const requiredRoutes = [
 ];
 
 export const images = {
+  speakingDeskPortrait: {
+    src: speakingDeskPortrait,
+    alt: "Lornette Daye seated at an executive desk in a white blazer with the UMattr crest behind her.",
+    crop: "object-top",
+    frameTone: "warm-ivory" as const,
+    showBottomFade: true,
+  },
   executivePortrait: {
     src: executivePortrait,
     alt: "Executive portrait of Lornette Daye in a white suit in a modern office with gold crest.",

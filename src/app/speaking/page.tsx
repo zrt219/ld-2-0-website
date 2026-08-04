@@ -277,16 +277,34 @@ export default function SpeakingPage() {
             </div>
 
             <div className="relative z-10">
-              <div className="absolute -right-8 -top-8 hidden h-36 w-36 border border-[rgba(198,165,92,0.34)] lg:block" />
-              <div className="relative border border-[rgba(198,165,92,0.55)] bg-white p-3 shadow-[0_36px_120px_rgba(23,20,18,0.14)]">
-                <VideoCard
-                  {...mediaItems[0]}
-                  title="Watch Lornette in Action"
-                  summary="See Lornette&apos;s delivery style, tone, presence, and audience connection in action."
-                  featured
-                  className="shadow-none"
+              {/* Portrait behind the reel */}
+              <div className="relative mx-auto aspect-[4/5] max-h-[520px] w-full max-w-[520px] overflow-hidden border border-[rgba(198,165,92,0.42)] bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)] shadow-[0_28px_110px_rgba(23,20,18,0.14)]">
+                <Image
+                  src={images.speakingDeskPortrait.src}
+                  alt={images.speakingDeskPortrait.alt}
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 92vw, 44vw"
+                  className="object-cover object-top"
                 />
+                <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/40" />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[rgba(23,20,18,0.42)] to-transparent" />
               </div>
+
+              {/* Reel card overlapping the portrait */}
+              <div className="relative z-10 mx-auto -mt-10 w-full max-w-[470px] lg:-ml-8 lg:-mt-16">
+                <div className="absolute -right-8 -top-8 hidden h-36 w-36 border border-[rgba(198,165,92,0.34)] lg:block" />
+                <div className="relative border border-[rgba(198,165,92,0.55)] bg-white p-3 shadow-[0_36px_120px_rgba(23,20,18,0.14)]">
+                  <VideoCard
+                    {...mediaItems[0]}
+                    title="Watch Lornette in Action"
+                    summary="See Lornette&apos;s delivery style, tone, presence, and audience connection in action."
+                    featured
+                    className="shadow-none"
+                  />
+                </div>
+              </div>
+
               <div className="mt-4 grid grid-cols-2 gap-3">
                 <Link
                   href="/speaker-kit"
