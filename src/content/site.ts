@@ -103,6 +103,8 @@ export type Post = {
   date: string;
   author: string;
   readTime: string;
+  amazonUrl?: string;
+  purchaseUrl?: string;
   body: {
     intro: string[];
     sections: {
@@ -1054,53 +1056,55 @@ export const posts: Post[] = [
     slug: "survival-skills-for-athletes",
     title: "Survival Skills for Athletes: Promoting Focus & Excellence in Every Stage of Life",
     excerpt:
-      "Whether on the track or in life after sport, elite performance demands more than physical strength. Discover how to cultivate mental focus, handle competitive pressure, and carry athletic excellence into every stage of life.",
+      "Are you ready to build a life that feels just as fulfilling off the field as it does on it? Discover how to elevate your game, your mindset, and your legacy.",
     category: "Athlete & Performance Coaching",
     date: "2026-08-03",
     author: "Lornette Daye",
     readTime: "4 min read",
+    amazonUrl: "https://a.co/d/0cuYaVO2",
     image: {
       src: "/books/survival-skills-for-athletes-cover.jpg",
       alt: "Survival Skills for Athletes book cover artwork by Lornette Daye.",
-      caption: "Cultivating focus, grit, and athletic excellence beyond the finish line.",
+      caption: "A guide to promote focus and excellence in every stage of life.",
       aspect: "aspect-[2/3]",
       crop: "object-contain",
     },
     body: {
       intro: [
-        "In sports, physical talent gets you to the starting line, but mental focus and emotional resilience are what carry you across the finish line. Every athlete encounters seasons of intense competition, unexpected injury, or performance plateaus where physical effort alone isn't enough.",
-        "Drawing from my career as a Canadian National Champion sprint athlete and performance coach, I wrote Survival Skills for Athletes to equip competitors, coaches, and leaders with the internal blueprints needed for long-term excellence.",
+        "Are you ready to build a life that feels just as fulfilling off the field as it does on it?",
+        "As a high-achieving, driven, and ambitious athlete, I know firsthand that you are no stranger to the pursuit of excellence. You understand that every victory comes with profound sacrifice, every challenge is a hidden opportunity to grow, and every agonizing setback is a masterclass in resilience.",
+        "But I want to ask you a crucial question: Who are you beyond the trophies, the scoreboards, and the accolades?",
+        "There is a deeper journey waiting for you—one that calls for radical balance, continuous personal growth, and an unwavering commitment to living a life of true purpose. True success isn’t just about the victories you secure today; it’s about the holistic, rewarding life you build beyond them.",
+        "In Survival Skills for Athletes, I invite you to step into a life that is both elite in achievement and deeply rewarding in spirit. This isn't just a playbook for your sport—it's a playbook for your life.",
       ],
       sections: [
         {
-          heading: "Core Pillars for High-Performance Focus",
-          paragraphs: [
-            "Athletic success is built on quiet habits, emotional control, and intentional recovery. When you master these core skills, you become unshakeable under pressure.",
-          ],
+          heading: "Inside these pages, you will learn how to:",
+          paragraphs: [],
           bullets: [
             {
-              label: "Identity Beyond Performance",
-              text: "Separate your self-worth from win-loss statistics so setbacks never destroy your confidence.",
+              label: "Strengthen Your Mindset:",
+              text: "Develop the unshakeable mental fortitude needed to handle extreme pressure and pivot gracefully during transitions.",
             },
             {
-              label: "Focus Under Pressure",
-              text: "Develop pre-performance routines that quiet anxiety and lock in sharp concentration.",
+              label: "Nurture Meaningful Relationships:",
+              text: "Build a bulletproof support system of family and friends that fuels your ambition rather than drains it.",
             },
             {
-              label: "Transition Mastery",
-              text: "Learn to translate athletic discipline into career, business, and personal leadership.",
+              label: "Build a Future of Value:",
+              text: "Master the core pillars of Faith, Finance, Fitness, and more to ensure you thrive in every single stage of life.",
             },
           ],
         },
         {
-          heading: "Carrying Excellence Beyond Sport",
+          heading: "Elevate Your Game, Your Mindset, and Your Legacy",
           paragraphs: [
-            "The discipline forged in athletic training is one of the most powerful assets you possess. When you direct that same focus toward personal growth, relationships, and leadership, you create a legacy that far outlasts your competitive career.",
+            "Here, you’ll find the exact guidance, encouragement, and practical insights you need to grow—not just as a competitor, but as a complete person. Your journey is about so much more than winning. It’s time to elevate your game, your mindset, and your legacy.",
           ],
         },
       ],
       conclusion: [
-        "Whether you are competing at the highest level or mentoring the next generation, remember: true champions build resilience from the inside out.",
+        "Ready to take the next step in your athletic and personal journey? Visit lornettedaye.com to book me for elite coaching, speaking engagements, and exclusive workshops, and grab your free Athlete's Daily Focus Checklist today!",
       ],
     },
   },

@@ -100,6 +100,44 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               ))}
             </div>
           ) : null}
+
+          {/* Action CTAs */}
+          <div className="mt-12 border border-[rgba(198,165,92,0.4)] bg-[var(--ivory)] p-6 sm:p-8">
+            <h3 className="font-serif text-2xl text-[var(--ink)] sm:text-3xl">
+              Take the Next Step in Your Journey
+            </h3>
+            <p className="mt-2 text-sm leading-6 text-[#675d50]">
+              Elevate your performance, mindset, and legacy with Lornette Daye&apos;s published guides, keynotes, and elite coaching.
+            </p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+              {post.amazonUrl ? (
+                <a
+                  href={post.amazonUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-12 items-center justify-center rounded-sm bg-[#ff9900] px-6 py-3 text-center text-sm font-bold uppercase tracking-wider text-black shadow-md transition hover:bg-[#e68a00] focus:outline-none focus:ring-2 focus:ring-[#ff9900]"
+                >
+                  Order on Amazon
+                </a>
+              ) : null}
+              {post.purchaseUrl ? (
+                <a
+                  href={post.purchaseUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-12 items-center justify-center bg-[var(--ink)] px-6 py-3 text-center text-sm font-bold uppercase tracking-wider text-[var(--ivory)] shadow-md transition hover:bg-[var(--charcoal)]"
+                >
+                  Buy Digital Edition
+                </a>
+              ) : null}
+              <a
+                href="/book"
+                className="inline-flex min-h-12 items-center justify-center border border-[var(--ink)] bg-transparent px-6 py-3 text-center text-sm font-bold uppercase tracking-wider text-[var(--ink)] transition hover:bg-[var(--ink)] hover:text-[var(--ivory)]"
+              >
+                Book Lornette for Coaching & Speaking
+              </a>
+            </div>
+          </div>
         </article>
       </main>
     </PageShell>
