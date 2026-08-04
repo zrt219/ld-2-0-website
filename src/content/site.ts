@@ -27,6 +27,7 @@ import womensBook from "../../images/womensbook.jpg";
 import toastmastersLogo from "../../images/Toastmasters_2011.png";
 import rotaryLogo from "../../images/Rotary-Club-of-St-Albert--1-.jpeg";
 import flightPoster from "../../images/image.png";
+import executivePortrait from "../../images/lornette-executive-portrait.jpg";
 
 export const siteUrl = "https://lornettedaye.com";
 
@@ -206,6 +207,13 @@ export const requiredRoutes = [
 ];
 
 export const images = {
+  executivePortrait: {
+    src: executivePortrait,
+    alt: "Executive portrait of Lornette Daye in a white suit in a modern office with gold crest.",
+    crop: "object-top",
+    frameTone: "warm-ivory" as const,
+    showBottomFade: true,
+  },
   homeHeroPortrait: {
     src: "/generated/lornette-home-hero-original-cutout.png",
     alt: "Seated portrait of Lornette Daye in an ivory blazer.",
