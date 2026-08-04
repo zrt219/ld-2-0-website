@@ -1600,6 +1600,415 @@ export const bookListings: BookListing[] = [
   },
 ];
 
+// ─── Student-Athlete Workbooks & Guides (from 10 F's library) ────────────────
+
+export const workbookListings: BookListing[] = [
+  {
+    slug: "01-athlete-devotional",
+    title: "Finish Strong Athlete Devotional",
+    subtitle: "A faith-centered daily reset for athletes.",
+    description:
+      "A 30-day devotional covering identity, pressure, discipline, setbacks, confidence, and resilience. Designed to help athletes anchor their worth and purpose outside of performance.",
+    audience: "Daily spiritual and mental grounding.",
+    priceLabel: "$25.99 USD",
+    format: "PDF · Word · Kindle",
+    image: {
+      src: "/images/products/01-athlete-devotional-cover.png",
+      alt: "Finish Strong Athlete Devotional cover",
+    },
+    purchaseUrl: "https://buy.stripe.com/14AcN53ZYcjM9eV3TY1VK0d",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Stronger identity beyond performance",
+      "Daily reflective routine",
+      "Faith-based resilience cues",
+    ],
+  },
+  {
+    slug: "02-motivational-reflections",
+    title: "Finish Strong Motivational Reflections for Athletes",
+    subtitle: "Short-form encouragement that still leads to action.",
+    description:
+      "30 motivational reflections featuring executive-level challenges, action steps, and Finish Strong statements. Quick-hit reflection for momentum language and sharper perspective.",
+    audience: "Quick daily motivation and mindset shifts.",
+    priceLabel: "$25.99 USD",
+    format: "PDF · Word · Kindle",
+    image: {
+      src: "/images/products/02-motivational-reflections-cover.png",
+      alt: "Finish Strong Motivational Reflections for Athletes cover",
+    },
+    purchaseUrl: "https://buy.stripe.com/6oUaEXfIGbfIfDj9ei1VK0e",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Short reflection cadence",
+      "Momentum recovery after setbacks",
+      "Action-led mindset prompts",
+    ],
+  },
+  {
+    slug: "03-speak-life-affirmations",
+    title: "Speak Life: Athlete Affirmations and Declarations",
+    subtitle: "A confidence-building language bank for athletes.",
+    description:
+      "100 athlete affirmations covering identity, confidence, game day pressure, and life beyond sport. Repeatable declarations for hard moments and pre-competition confidence resets.",
+    audience: "Building unshakeable confidence and focus.",
+    priceLabel: "$25.99 USD",
+    format: "PDF · Word · Kindle",
+    image: {
+      src: "/images/products/03-speak-life-affirmations-cover.png",
+      alt: "Speak Life: Athlete Affirmations and Declarations cover",
+    },
+    purchaseUrl: "https://buy.stripe.com/fZueVd8ge83w3UBfCG1VK0f",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Improved self-talk",
+      "Pre-competition confidence reset",
+      "Identity language you can repeat",
+    ],
+  },
+  {
+    slug: "04-mental-wellness-reset",
+    title: "Athlete Mental Wellness Reset Workbook",
+    subtitle: "Rebuild structure after your hardest weeks.",
+    description:
+      "A 7-day reset plan focusing on emotional check-ins, pressure management, and healthy routines. Slows the system down and rebuilds structure for overloaded athletes.",
+    audience: "Athletes feeling overwhelmed or burned out.",
+    priceLabel: "$25.99 USD",
+    format: "PDF · Word · Kindle",
+    image: {
+      src: "/images/products/04-mental-wellness-reset-cover.png",
+      alt: "Athlete Mental Wellness Reset Workbook cover",
+    },
+    purchaseUrl: "https://buy.stripe.com/9B628rgMKgA22Qx8ae1VK0g",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Pressure decompression plan",
+      "Better emotional awareness",
+      "Reset routine for hard weeks",
+    ],
+  },
+  {
+    slug: "05-gratitude-journal",
+    title: "Because You Matter Student-Athlete Gratitude Journal",
+    subtitle: "Keep perspective when expectations rise.",
+    description:
+      "A 90-day gratitude journal designed specifically for the unique challenges of student-athletes. Helps athletes slow down, notice what is still good, and stay grounded.",
+    audience: "Developing a positive, grounded perspective.",
+    priceLabel: "$25.99 USD",
+    format: "PDF · Word · Kindle",
+    image: {
+      src: "/images/products/05-gratitude-journal-cover.png",
+      alt: "Because You Matter Student-Athlete Gratitude Journal cover",
+    },
+    purchaseUrl: "https://buy.stripe.com/9B614n3ZYabEezf4Y21VK0h",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Daily gratitude rhythm",
+      "Perspective reset under pressure",
+      "More grounded emotional recovery",
+    ],
+  },
+  {
+    slug: "06-responsible-ai-guide",
+    title: "Responsible AI Prompt Guide for Student-Athletes",
+    subtitle: "Smarter workflows without crossing integrity lines.",
+    description:
+      "A practical guide on using AI safely for career prep, networking, and studying without violating integrity. A practical AI playbook for athletes who want smarter workflows.",
+    audience: "Modern student-athletes navigating AI tools.",
+    priceLabel: "$25.99 USD",
+    format: "PDF · Word · Kindle",
+    image: {
+      src: "/images/products/06-responsible-ai-guide-cover.png",
+      alt: "Responsible AI Prompt Guide for Student-Athletes cover",
+    },
+    purchaseUrl: "https://buy.stripe.com/4gMbJ1gMK97Abn33TY1VK0i",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Safer AI usage habits",
+      "Career-prep prompt systems",
+      "Clearer academic integrity judgment",
+    ],
+  },
+  {
+    slug: "07-career-readiness-workbook",
+    title: "Life After Sport Career Readiness Workbook",
+    subtitle: "Translate athletic discipline into career language.",
+    description:
+      "Translate your athletic discipline into career language. Includes resume examples and interview builders. Helps athletes name transferable skills and move to a visible next step.",
+    audience: "Athletes transitioning into the workforce.",
+    priceLabel: "$25.99 USD",
+    format: "PDF · Word · Kindle",
+    image: {
+      src: "/images/products/07-career-readiness-workbook-cover.png",
+      alt: "Life After Sport Career Readiness Workbook cover",
+    },
+    purchaseUrl: "https://buy.stripe.com/00w5kD9kibfI0Ipaim1VK0j",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Career story translation",
+      "Interview preparation",
+      "Visible next-step planning",
+    ],
+  },
+  {
+    slug: "08-personal-brand-workbook",
+    title: "Student-Athlete Personal Brand Workbook",
+    subtitle: "Build a strong, authentic public image.",
+    description:
+      "Audit your social media, define your values, and build a professional image for life and NIL deals. A personal brand system for better image control and clearer values.",
+    audience: "Building a strong, authentic public image.",
+    priceLabel: "$25.99 USD",
+    format: "PDF · Word · Kindle",
+    image: {
+      src: "/images/products/08-personal-brand-workbook-cover.png",
+      alt: "Student-Athlete Personal Brand Workbook cover",
+    },
+    purchaseUrl: "https://buy.stripe.com/dRm8wPcwudnQ3UBbmq1VK0k",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Brand clarity",
+      "Social audit workflow",
+      "Professional image decisions",
+    ],
+  },
+  {
+    slug: "09-nil-digital-reputation",
+    title: "NIL & Digital Reputation Decision Guide",
+    subtitle: "Better filters around risk, visibility, and consequences.",
+    description:
+      "Understand how online decisions affect future opportunities and learn to navigate NIL safely. A reputation and NIL judgment guide for athletes who need better decision filters.",
+    audience: "Navigating sponsorships and digital footprint.",
+    priceLabel: "$25.99 USD",
+    format: "PDF · Word · Kindle",
+    image: {
+      src: "/images/products/09-nil-digital-reputation-cover.png",
+      alt: "NIL & Digital Reputation Decision Guide cover",
+    },
+    purchaseUrl: "https://buy.stripe.com/00wfZheECcjMfDj1LQ1VK0l",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Reputation risk awareness",
+      "Safer NIL decisions",
+      "Long-term digital judgment",
+    ],
+  },
+  {
+    slug: "10-finish-strong-action-planner",
+    title: "30-Day Finish Strong Action Planner",
+    subtitle: "Better execution, sequencing, and follow-through.",
+    description:
+      "A structured planner balancing athletic, academic, wellness, and future-building habits every day. For athletes who need better execution, not more inspiration.",
+    audience: "Creating structure and achieving major goals.",
+    priceLabel: "$25.99 USD",
+    format: "PDF · Word · Kindle",
+    image: {
+      src: "/images/products/10-finish-strong-action-planner-cover.png",
+      alt: "30-Day Finish Strong Action Planner cover",
+    },
+    purchaseUrl: "https://buy.stripe.com/cNicN5aom0B49eVeyC1VK0m",
+    stripePaymentLinkId: "",
+    highlights: [
+      "30-day execution structure",
+      "Goal sequencing",
+      "Finish-strong accountability",
+    ],
+  },
+];
+
+// ─── 10 F's Masterclass Courses ──────────────────────────────────────────────
+
+export const masterclassListings: BookListing[] = [
+  {
+    slug: "course-faith",
+    title: "The Faith Blueprint Masterclass",
+    subtitle: "Ground your identity beyond the scoreboard.",
+    description:
+      "A deep-dive video course designed to help athletes anchor their worth and purpose outside of performance. Rebuilds inner steadiness when external results feel uncertain.",
+    audience: "Athletes struggling with identity and pressure.",
+    priceLabel: "$997/yr ($297 deposit)",
+    format: "Video Course · Community Access",
+    image: {
+      src: "/images/products/01-athlete-devotional-cover.png",
+      alt: "The Faith Blueprint Masterclass",
+    },
+    purchaseUrl: "https://buy.stripe.com/cNi5kDfIG2JcfDj0HM1VK0n",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Unshakeable identity",
+      "Mental resilience under pressure",
+      "Performance without fear",
+    ],
+  },
+  {
+    slug: "course-fitness",
+    title: "The Fitness & Recovery Masterclass",
+    subtitle: "Master your physical readiness and recovery rhythm.",
+    description:
+      "Learn the exact discipline, recovery protocols, and injury prevention strategies elite athletes use. Optimizes the physical foundation that supports every other F.",
+    audience: "Athletes needing better training consistency and recovery.",
+    priceLabel: "$997/yr ($297 deposit)",
+    format: "Video Course · Community Access",
+    image: {
+      src: "/images/products/04-mental-wellness-reset-cover.png",
+      alt: "The Fitness & Recovery Masterclass",
+    },
+    purchaseUrl: "https://buy.stripe.com/cNi8wPeECcjMaiZ76a1VK0o",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Optimized recovery",
+      "Injury prevention strategies",
+      "Peak physical readiness",
+    ],
+  },
+  {
+    slug: "course-food",
+    title: "The Athlete Fueling Masterclass",
+    subtitle: "Stabilize your daily fuel plan for sustained energy.",
+    description:
+      "A comprehensive nutrition strategy course covering hydration, game-day fueling, and healthy relationships with food.",
+    audience: "Athletes wanting to optimize their nutrition.",
+    priceLabel: "$997/yr ($297 deposit)",
+    format: "Video Course · Community Access",
+    image: {
+      src: "/images/products/05-gratitude-journal-cover.png",
+      alt: "The Athlete Fueling Masterclass",
+    },
+    purchaseUrl: "https://buy.stripe.com/dRmfZh9ki0B4cr72PU1VK0p",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Sustained energy and focus",
+      "Better recovery nutrition",
+      "Healthy body image",
+    ],
+  },
+  {
+    slug: "course-friends",
+    title: "The Inner Circle Masterclass",
+    subtitle: "Tighten your support circle and protect your standards.",
+    description:
+      "Learn how to build a network of peers and mentors who elevate you, and how to set healthy boundaries.",
+    audience: "Athletes needing to elevate their environment.",
+    priceLabel: "$997/yr ($297 deposit)",
+    format: "Video Course · Community Access",
+    image: {
+      src: "/images/products/03-speak-life-affirmations-cover.png",
+      alt: "The Inner Circle Masterclass",
+    },
+    purchaseUrl: "https://buy.stripe.com/28E5kD7cafvYbn34Y21VK0q",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Positive peer influence",
+      "Strong boundaries",
+      "Valuable mentorship",
+    ],
+  },
+  {
+    slug: "course-family",
+    title: "The Family Dynamics Masterclass",
+    subtitle: "Navigate family expectations without losing your pace.",
+    description:
+      "A guide to communicating boundaries, handling pressure, and building a legacy your family can be proud of.",
+    audience: "Athletes feeling overwhelmed by family expectations.",
+    priceLabel: "$997/yr ($297 deposit)",
+    format: "Video Course · Community Access",
+    image: {
+      src: "/images/products/02-motivational-reflections-cover.png",
+      alt: "The Family Dynamics Masterclass",
+    },
+    purchaseUrl: "https://buy.stripe.com/cNifZhaombfIfDjduy1VK0r",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Clear communication",
+      "Reduced family pressure",
+      "Healthy support systems",
+    ],
+  },
+  {
+    slug: "course-finance",
+    title: "The Financial Playbook Masterclass",
+    subtitle: "Build financial decision control and understand NIL safely.",
+    description:
+      "Master budgeting, credit, contracts, and NIL decision-making to secure your financial future.",
+    audience: "Athletes navigating NIL and basic finances.",
+    priceLabel: "$997/yr ($297 deposit)",
+    format: "Video Course · Community Access",
+    image: {
+      src: "/images/products/09-nil-digital-reputation-cover.png",
+      alt: "The Financial Playbook Masterclass",
+    },
+    purchaseUrl: "https://buy.stripe.com/eVq28r6861F8fDjduy1VK0s",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Financial literacy",
+      "Safe NIL decisions",
+      "Long-term wealth habits",
+    ],
+  },
+  {
+    slug: "course-fashion",
+    title: "The Personal Brand & Presentation Masterclass",
+    subtitle: "Strengthen your public presence and professional image.",
+    description:
+      "Learn how to manage your digital footprint, interview with confidence, and build an authentic brand.",
+    audience: "Athletes wanting to monetize their name and image.",
+    priceLabel: "$997/yr ($297 deposit)",
+    format: "Video Course · Community Access",
+    image: {
+      src: "/images/products/08-personal-brand-workbook-cover.png",
+      alt: "The Personal Brand & Presentation Masterclass",
+    },
+    purchaseUrl: "https://buy.stripe.com/bJe3cv9ki4Rkcr7aim1VK0t",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Polished public image",
+      "Media readiness",
+      "Strong personal brand",
+    ],
+  },
+  {
+    slug: "course-fun",
+    title: "The Athlete Joy & Recovery Masterclass",
+    subtitle: "Schedule recovery that feels human and protect your joy.",
+    description:
+      "Discover how to decompress, maintain hobbies outside of sport, and keep the passion for the game alive.",
+    audience: "Athletes experiencing burnout or loss of passion.",
+    priceLabel: "$997/yr ($297 deposit)",
+    format: "Video Course · Community Access",
+    image: {
+      src: "/images/products/02-motivational-reflections-cover.png",
+      alt: "The Athlete Joy & Recovery Masterclass",
+    },
+    purchaseUrl: "https://buy.stripe.com/bJe5kD8ge4Rk0Ipcqu1VK0u",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Burnout prevention",
+      "Work-life balance",
+      "Renewed passion for sport",
+    ],
+  },
+  {
+    slug: "course-future",
+    title: "The Career Transition Masterclass",
+    subtitle: "Make your next chapter visible and prepare for life after sport.",
+    description:
+      "Translate your athletic skills onto a resume, network effectively, and build confidence for the professional world.",
+    audience: "Athletes nearing the end of their athletic career.",
+    priceLabel: "$997/yr ($297 deposit)",
+    format: "Video Course · Community Access",
+    image: {
+      src: "/images/products/07-career-readiness-workbook-cover.png",
+      alt: "The Career Transition Masterclass",
+    },
+    purchaseUrl: "https://buy.stripe.com/9B6bJ1fIG1F84YFcqu1VK0v",
+    stripePaymentLinkId: "",
+    highlights: [
+      "Strong resume",
+      "Networking skills",
+      "Career confidence",
+    ],
+  },
+];
+
 export const bookFeatures = [
   {
     title: "Surviving Life",
