@@ -78,13 +78,13 @@ export function BlogCard({
         aria-labelledby={titleId}
         className="group grid bg-white transition focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.25)] md:grid-cols-[0.96fr_1fr]"
       >
-        <div className="relative aspect-[1.55/1] overflow-hidden bg-[#f5f2ec] md:aspect-auto md:min-h-[315px]">
+        <div className={`relative overflow-hidden bg-[#f5f2ec] md:min-h-[315px] ${post.image.aspect ?? "aspect-[1.55/1] md:aspect-auto"}`}>
           <Image
             src={post.image.src}
             alt={post.image.alt}
             fill
             sizes="(max-width: 768px) 94vw, 48vw"
-            className={`object-cover transition duration-500 group-hover:scale-[1.02] ${post.image.crop ?? "object-center"}`}
+            className={`transition duration-500 group-hover:scale-[1.02] ${post.image.crop ?? "object-cover object-center"}`}
           />
         </div>
         <div className="flex min-h-[315px] flex-col px-8 py-7 lg:px-10">

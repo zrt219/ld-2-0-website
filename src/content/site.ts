@@ -1050,6 +1050,438 @@ export const posts: Post[] = [
       ],
     },
   },
+  {
+    slug: "survival-skills-for-athletes",
+    title: "Survival Skills for Athletes: Promoting Focus & Excellence in Every Stage of Life",
+    excerpt:
+      "Whether on the track or in life after sport, elite performance demands more than physical strength. Discover how to cultivate mental focus, handle competitive pressure, and carry athletic excellence into every stage of life.",
+    category: "Athlete & Performance Coaching",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    image: {
+      src: "/books/survival-skills-for-athletes-cover.jpg",
+      alt: "Survival Skills for Athletes book cover artwork by Lornette Daye.",
+      caption: "Cultivating focus, grit, and athletic excellence beyond the finish line.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "In sports, physical talent gets you to the starting line, but mental focus and emotional resilience are what carry you across the finish line. Every athlete encounters seasons of intense competition, unexpected injury, or performance plateaus where physical effort alone isn't enough.",
+        "Drawing from my career as a Canadian National Champion sprint athlete and performance coach, I wrote Survival Skills for Athletes to equip competitors, coaches, and leaders with the internal blueprints needed for long-term excellence.",
+      ],
+      sections: [
+        {
+          heading: "Core Pillars for High-Performance Focus",
+          paragraphs: [
+            "Athletic success is built on quiet habits, emotional control, and intentional recovery. When you master these core skills, you become unshakeable under pressure.",
+          ],
+          bullets: [
+            {
+              label: "Identity Beyond Performance",
+              text: "Separate your self-worth from win-loss statistics so setbacks never destroy your confidence.",
+            },
+            {
+              label: "Focus Under Pressure",
+              text: "Develop pre-performance routines that quiet anxiety and lock in sharp concentration.",
+            },
+            {
+              label: "Transition Mastery",
+              text: "Learn to translate athletic discipline into career, business, and personal leadership.",
+            },
+          ],
+        },
+        {
+          heading: "Carrying Excellence Beyond Sport",
+          paragraphs: [
+            "The discipline forged in athletic training is one of the most powerful assets you possess. When you direct that same focus toward personal growth, relationships, and leadership, you create a legacy that far outlasts your competitive career.",
+          ],
+        },
+      ],
+      conclusion: [
+        "Whether you are competing at the highest level or mentoring the next generation, remember: true champions build resilience from the inside out.",
+      ],
+    },
+  },
+  {
+    slug: "survival-skills-for-women",
+    title: "Survival Skills for Women: Living with Hope, Resilience, and Meaning",
+    excerpt:
+      "A comprehensive guide for women navigating seasons of change, emotional demands, and leadership. Learn how to protect your peace, embrace your worth, and build an enduring legacy of purpose.",
+    category: "Resilience & Mindset",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    image: {
+      src: "/books/survival-skills-for-women-cover.png",
+      alt: "Survival Skills for Women book cover artwork by Lornette Daye.",
+      caption: "A comprehensive guide to living with hope, resilience, and meaning.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "Women are often called to balance countless roles—leading in careers, nurturing families, supporting communities, and holding together circles of strength. Yet in the midst of giving so much to others, it is easy to lose sight of your own renewal and purpose.",
+        "Survival Skills for Women was written as a warm, empowering roadmap to help you reclaim your space, honor your journey, and thrive with quiet confidence through every transition.",
+      ],
+      sections: [
+        {
+          heading: "Reclaiming Your Space & Inner Peace",
+          paragraphs: [
+            "True strength does not mean carrying every burden alone. It means knowing when to pause, establish healthy boundaries, and replenish your spirit.",
+          ],
+          bullets: [
+            {
+              label: "Self-Compassion & Healing",
+              text: "Replace perfectionism with self-grace, honoring the seasons where rest is your greatest victory.",
+            },
+            {
+              label: "Purpose Alignment",
+              text: "Clarify your core values so your daily choices reflect what truly matters to you.",
+            },
+            {
+              label: "Community & Support",
+              text: "Surround yourself with uplifting connections that encourage your personal and professional growth.",
+            },
+          ],
+        },
+        {
+          heading: "Thriving in Every Season",
+          paragraphs: [
+            "No matter what challenges you have faced in the past, your future is full of potential. When you step into your worth with intentionality, you inspire every woman around you to do the same.",
+          ],
+        },
+      ],
+      conclusion: [
+        "Take a deep breath and give yourself permission to grow. You possess everything you need to live with profound hope and purpose.",
+      ],
+    },
+  },
+  {
+    slug: "survival-skills-for-believers",
+    title: "Survival Skills for Believers: Living with Wisdom, Grace, and Peace",
+    excerpt:
+      "In times of uncertainty, standing firm in faith requires spiritual grounding and practical wisdom. Explore how grace, patience, and intentional living bring peace into everyday life.",
+    category: "Spiritual Growth",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    image: {
+      src: "/books/survival-skills-for-believers-cover.png",
+      alt: "Survival Skills for Believers book cover artwork by Lornette Daye.",
+      caption: "A Christian guide to living with wisdom, grace, and peace.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "Living out faith in a complex, fast-paced world demands both spiritual depth and daily practical wisdom. When life brings unexpected storms, our foundation must be rooted in unshakeable truth and grace.",
+        "Survival Skills for Believers offers scriptural encouragement and practical reflections designed to help you navigate hardship, anchor your heart in divine peace, and shine as a light in your home and workplace.",
+      ],
+      sections: [
+        {
+          heading: "Anchoring Your Heart in Unshakeable Truth",
+          paragraphs: [
+            "Spiritual resilience is cultivated day by day through prayer, scripture reflection, and choosing trust over fear.",
+          ],
+          bullets: [
+            {
+              label: "Wisdom in Decision-Making",
+              text: "Seek divine guidance before reacting to life's sudden challenges.",
+            },
+            {
+              label: "Grace Under Pressure",
+              text: "Respond to hostility and stress with patient grace and steady confidence.",
+            },
+            {
+              label: "Resting in Peace",
+              text: "Guard your heart against anxiety by entrusting your unknown future to a known God.",
+            },
+          ],
+        },
+        {
+          heading: "Walking Out Your Calling",
+          paragraphs: [
+            "Your faith is not just for quiet moments; it is meant to inspire your leadership, service, and community. When you walk with wisdom and peace, you become a sanctuary of hope for others.",
+          ],
+        },
+      ],
+      conclusion: [
+        "May you walk with quiet courage today, knowing that grace surrounds every step of your path.",
+      ],
+    },
+  },
+  {
+    slug: "umattr-devotional-reflections",
+    title: "UMATTR Devotional: Reflections for the Moments That Ask You to Keep Going",
+    excerpt:
+      "When fatigue sets in and the path forward feels steep, small daily reflections can reignite your purpose. Take time to pause, breathe, and remember that your journey deeply matters.",
+    category: "Personal Growth",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "3 min read",
+    image: {
+      src: "/books/umattr-devotional-cover.png",
+      alt: "UMATTR Devotional book cover artwork by Lornette Daye.",
+      caption: "Reflections for the moments that ask you to keep going.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "There are moments in every journey when the weight of responsibility feels heavy, and staying motivated seems difficult. In those quiet times, what we need isn't more pressure—it is gentle encouragement and a reminder of why we started.",
+        "The UMATTR Devotional was created as a peaceful space for daily reflection. Each entry offers a brief, powerful thought to help you ground your mind, renew your spirit, and keep moving forward.",
+      ],
+      sections: [
+        {
+          heading: "Daily Prompts for Renewal",
+          paragraphs: [
+            "Taking five minutes each day to write, reflect, and pray transforms how you handle daily stress.",
+          ],
+          bullets: [
+            {
+              label: "Pause & Reset",
+              text: "Create stillness amidst your busy schedule to listen to your inner voice.",
+            },
+            {
+              label: "Remember Your Value",
+              text: "Affirm your inherent worth—you matter, your story matters, and your contribution counts.",
+            },
+            {
+              label: "One Step at a Time",
+              text: "Focus on making progress today without worrying about tomorrow's mountain.",
+            },
+          ],
+        },
+        {
+          heading: "A Companion for the Road Ahead",
+          paragraphs: [
+            "Whether you keep this devotional on your nightstand or desk, let it serve as a gentle reminder that every small step of endurance leads toward a greater legacy.",
+          ],
+        },
+      ],
+      conclusion: [
+        "Never underestimate the power of showing up for yourself. You matter—keep going.",
+      ],
+    },
+  },
+  {
+    slug: "survival-skills-for-men-guide",
+    title: "Survival Skills for Men: Living with Balance, Meaning, and Impact",
+    excerpt:
+      "A practical blueprint for men balancing career, family, leadership, and emotional well-being. Learn to quiet the noise, lead with integrity, and build habits that sustain long-term strength.",
+    category: "Leadership & Men's Health",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    image: {
+      src: "/books/survival-skills-for-men-2026-cover.png",
+      alt: "2026 Survival Skills for Men book cover artwork by Lornette Daye.",
+      caption: "A comprehensive guide to living with balance, meaning, and impact.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "Men today face subtle yet intense pressure: to perform at work, provide for family, maintain strength, and remain emotionally grounded. Yet many men carry this weight silently without practical tools to manage stress or evaluate their true direction.",
+        "Survival Skills for Men provides honest, action-oriented strategies to help men break free from isolation, build emotional discipline, and lead their lives with authentic purpose.",
+      ],
+      sections: [
+        {
+          heading: "Building Steadier Habits & Emotional Strength",
+          paragraphs: [
+            "Real manhood isn't defined by invulnerability; it is demonstrated through self-awareness, discipline, and intentional brotherhood.",
+          ],
+          bullets: [
+            {
+              label: "Stress & Pressure Management",
+              text: "Recognize burnout early and establish healthy physical and mental outlets.",
+            },
+            {
+              label: "Purposeful Leadership",
+              text: "Lead your family, business, or team by modeling integrity and open communication.",
+            },
+            {
+              label: "Authentic Community",
+              text: "Build trusted friendships with men who hold you accountable to your highest standards.",
+            },
+          ],
+        },
+        {
+          heading: "Leaving a Lasting Impact",
+          paragraphs: [
+            "When a man gets clear on his principles and aligns his daily habits, everyone around him benefits. You have the power to shape a legacy of honor, resilience, and strength.",
+          ],
+        },
+      ],
+      conclusion: [
+        "Stand tall, step into your responsibility, and lead with balance and purpose.",
+      ],
+    },
+  },
+  {
+    slug: "finish-strong-chasing-the-olympic-dream",
+    title: "Finish Strong: Lessons from Chasing the Olympic Dream",
+    excerpt:
+      "A story of athletic grit, unwavering confidence, and overcoming setbacks. Lornette Daye shares the mindsets that transform fierce competition into a legacy of lasting impact.",
+    category: "Keynotes & Mindset",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "5 min read",
+    image: {
+      src: "/books/finish-strong-main-cover.png",
+      alt: "Finish Strong: Chasing the Olympic Dream book cover artwork by Lornette Daye.",
+      caption: "A story of resilience. A message of confidence. A legacy of impact.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "Every dream worth pursuing will test your resolve. On the track, as a Canadian National Sprint Champion chasing the Olympic dream, I learned that victory isn't determined when you're feeling fresh—it is forged in the final 50 meters when your lungs burn and every impulse tells you to quit.",
+        "Finish Strong is my personal memoir and strategic framework. It details how to maintain focus when facing heartbreaks, injuries, and setbacks, transforming life's hardest trials into your greatest strength.",
+      ],
+      sections: [
+        {
+          heading: "Key Mindsets for Finishing Strong",
+          paragraphs: [
+            "Whether you are striving for business breakthroughs, recovery, or athletic excellence, these principles apply across every arena.",
+          ],
+          bullets: [
+            {
+              label: "The Final Push",
+              text: "How to summon deep internal power when you feel like giving up.",
+            },
+            {
+              label: "Overcoming Heartbreak",
+              text: "Rebuilding your game plan after missing a long-sought goal.",
+            },
+            {
+              label: "Unwavering Confidence",
+              text: "Believing in your preparation even when standing against elite odds.",
+            },
+          ],
+        },
+        {
+          heading: "Passing the Torch of Impact",
+          paragraphs: [
+            "Your story doesn't end when the race is over; it begins when you use your experience to coach, mentor, and inspire others to run their own race with conviction.",
+          ],
+        },
+      ],
+      conclusion: [
+        "It doesn't matter how you started your season or where you fell. What matters is how you finish. Finish strong!",
+      ],
+    },
+  },
+  {
+    slug: "survival-skills-surviving-to-thriving",
+    title: "Survival Skills: From Surviving to Thriving",
+    excerpt:
+      "Surviving is the first step, but thriving is your ultimate destination. Discover actionable strategies to shift out of survival mode and into a vibrant, intentional life of fulfillment.",
+    category: "Transformational Growth",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    image: {
+      src: "/books/survival-skills-surviving-to-thriving-cover.png",
+      alt: "2026 Survival Skills: Surviving to Thriving book cover artwork by Lornette Daye.",
+      caption: "Surviving to Thriving—building a life of enduring joy and fulfillment.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "When life hits hard, staying afloat is our initial instinct. We go into survival mode—managing crisis, enduring stress, and getting through the day. But survival was never meant to be your permanent state.",
+        "Survival Skills: From Surviving to Thriving is designed to guide you past survival mode and into a season of vitality, clarity, and thriving purpose.",
+      ],
+      sections: [
+        {
+          heading: "Shifting Your Mindset for Growth",
+          paragraphs: [
+            "Moving from surviving to thriving requires intentional reframing and practical tools to rebuild momentum.",
+          ],
+          bullets: [
+            {
+              label: "Breaking the Crisis Cycle",
+              text: "Transition from reactive survival habits to proactive, peaceful planning.",
+            },
+            {
+              label: "Cultivating Vitality",
+              text: "Prioritize physical wellness, emotional rest, and joy.",
+            },
+            {
+              label: "Designing Your Thriving Plan",
+              text: "Set clear goals aligned with your highest vision for life.",
+            },
+          ],
+        },
+        {
+          heading: "Your Season of Fullness",
+          paragraphs: [
+            "You are meant for more than just getting by. When you adopt a thriving mindset, you unlock the energy and vision to achieve your dreams.",
+          ],
+        },
+      ],
+      conclusion: [
+        "Step out of survival mode today. Your season of thriving starts now.",
+      ],
+    },
+  },
+  {
+    slug: "survival-skills-for-students",
+    title: "Survival Skills for Students: Strength, Wisdom, and Intentionality",
+    excerpt:
+      "Equipping the next generation of leaders with academic focus, emotional balance, and confidence. How students can navigate academic pressure and build a foundation for lifelong success.",
+    category: "Youth & Leadership",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    image: {
+      src: "/books/survival-skills-for-students-cover.png",
+      alt: "2026 Survival Skills for Students book cover artwork by Lornette Daye.",
+      caption: "A comprehensive guide to living with strength, wisdom, and intentionality.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "Students today navigate unique challenges: academic demands, social media comparison, peer pressure, and decisions about future careers. Without strong guidance, it is easy to feel overwhelmed or unsure of one's path.",
+        "Survival Skills for Students was written to provide young adults and students with essential tools for building personal discipline, emotional resilience, and clear focus.",
+      ],
+      sections: [
+        {
+          heading: "Essential Tools for Student Success",
+          paragraphs: [
+            "Success in school and life is built on positive habits, strong character, and self-belief.",
+          ],
+          bullets: [
+            {
+              label: "Academic Focus & Discipline",
+              text: "Master time management and study habits to reduce stress and excel.",
+            },
+            {
+              label: "Confidence & Resilience",
+              text: "Learn to handle setbacks, peer pressure, and social anxieties with steady self-worth.",
+            },
+            {
+              label: "Vision & Purpose",
+              text: "Discover your unique gifts and set meaningful goals for higher education and career paths.",
+            },
+          ],
+        },
+        {
+          heading: "Empowering the Next Generation",
+          paragraphs: [
+            "When young people learn these survival skills early, they gain a lifelong advantage. They step into adulthood prepared to lead, create, and inspire.",
+          ],
+        },
+      ],
+      conclusion: [
+        "To every student reading this: your potential is limitless. Invest in your growth and live with intentionality!",
+      ],
+    },
+  },
 ];
 
 export const speakerKitDownloads = [

@@ -58,7 +58,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 fill
                 priority
                 sizes="(max-width: 820px) 92vw, 740px"
-                className={`object-cover ${post.image.crop ?? "object-center"}`}
+                className={post.image.crop ?? "object-cover object-center"}
               />
             </div>
             {post.image.caption ? (
