@@ -1596,7 +1596,7 @@ export const bookListings: BookListing[] = [
   {
     slug: "surviving-life",
     title: "Surviving Life",
-    subtitle: "A guide to resilience when life hits hard.",
+    subtitle: "A guide to finding strength, embracing purpose, and living with hope.",
     description:
       "A warm, encouraging guide for readers rebuilding hope, confidence, and perspective after difficult seasons.",
     audience:
@@ -1604,9 +1604,9 @@ export const bookListings: BookListing[] = [
     priceLabel: "$14.99 CAD",
     format: "Digital Edition",
     image: {
-      src: survivingLife,
-      alt: "Surviving Life book cover artwork, cropped to focus on the book.",
-      crop: "object-center",
+      src: "/books/surviving-life-2026-cover.png",
+      alt: "Surviving Life 2026 book cover — beach at sunrise with footprints in the sand.",
+      crop: "object-top",
     },
     purchaseUrl: stripeBookLinks.survivingLife,
     stripePaymentLinkId: "plink_1TYMVSH99Nljn2XPYvPsZSw0",
