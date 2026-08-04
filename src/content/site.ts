@@ -1526,6 +1526,24 @@ const stripeBookLinks = {
   survivingLife:
     process.env.NEXT_PUBLIC_STRIPE_SURVIVING_LIFE_URL ??
     "https://buy.stripe.com/7sY8wPcwuabE62Jcqu1VK02",
+  survivalSkillsForAthletes:
+    process.env.NEXT_PUBLIC_STRIPE_SURVIVAL_SKILLS_FOR_ATHLETES_URL ??
+    "https://buy.stripe.com/PLACEHOLDER_ATHLETES",
+  survivalSkillsForBelievers:
+    process.env.NEXT_PUBLIC_STRIPE_SURVIVAL_SKILLS_FOR_BELIEVERS_URL ??
+    "https://buy.stripe.com/PLACEHOLDER_BELIEVERS",
+  survivalSkillsForWomen:
+    process.env.NEXT_PUBLIC_STRIPE_SURVIVAL_SKILLS_FOR_WOMEN_URL ??
+    "https://buy.stripe.com/PLACEHOLDER_WOMEN",
+  umattrDevotional:
+    process.env.NEXT_PUBLIC_STRIPE_UMATTR_DEVOTIONAL_URL ??
+    "https://buy.stripe.com/PLACEHOLDER_UMATTR",
+  survivalSkillsForStudents:
+    process.env.NEXT_PUBLIC_STRIPE_SURVIVAL_SKILLS_FOR_STUDENTS_URL ??
+    "https://buy.stripe.com/PLACEHOLDER_STUDENTS",
+  survivalSkillsSurvivingToThriving:
+    process.env.NEXT_PUBLIC_STRIPE_SURVIVAL_SKILLS_SURVIVING_TO_THRIVING_URL ??
+    "https://buy.stripe.com/PLACEHOLDER_SURVIVING_TO_THRIVING",
 };
 
 export const bookListings: BookListing[] = [
@@ -1534,15 +1552,15 @@ export const bookListings: BookListing[] = [
     title: "Survival Skills for Men",
     subtitle: "Build resilience, balance, and purpose in every part of your life.",
     description:
-      "A practical digital guide for men who want to strengthen emotional resilience, clarify purpose, and build steadier daily habits through seasons of pressure and transition.",
+      "A comprehensive guide for men who want to strengthen emotional resilience, clarify purpose, and build steadier daily habits through seasons of pressure and transition.",
     audience:
       "For men seeking clarity and practical strategies to navigate pressure, stress, and leadership with confidence.",
     priceLabel: "$14.99 CAD",
     format: "Digital Edition",
     image: {
-      src: survivalSkillsMen,
-      alt: "Survival Skills for Men book cover artwork, cropped to focus on the book.",
-      crop: "object-center",
+      src: "/books/survival-skills-for-men-2026-cover.png",
+      alt: "Survival Skills for Men 2026 book cover.",
+      crop: "object-top",
     },
     purchaseUrl: stripeBookLinks.survivalSkillsForMen,
     stripePaymentLinkId: "plink_1TYMDiH99Nljn2XPaPvvbDhp",
@@ -1596,6 +1614,144 @@ export const bookListings: BookListing[] = [
       "Hope after hardship",
       "Resilience practices",
       "Confidence and renewal",
+    ],
+  },
+  {
+    slug: "survival-skills-for-athletes",
+    title: "Survival Skills for Athletes",
+    subtitle: "A guide to promote focus and excellence in every stage of life.",
+    description:
+      "A comprehensive resource for athletes at every level who want to build focus, resilience, discipline, and a champion mindset on and off the field.",
+    audience:
+      "For athletes, coaches, sports teams, youth leaders, and anyone competing in sport or in life.",
+    priceLabel: "$14.99 CAD",
+    format: "Digital Edition",
+    image: {
+      src: "/books/survival-skills-for-athletes-cover-new.png",
+      alt: "Survival Skills for Athletes book cover — a team of athletes in gold and white uniforms.",
+      crop: "object-top",
+    },
+    purchaseUrl: stripeBookLinks.survivalSkillsForAthletes,
+    stripePaymentLinkId: "",
+    highlights: [
+      "Champion mindset building",
+      "Focus and discipline on and off the field",
+      "Resilience through setbacks and pressure",
+    ],
+  },
+  {
+    slug: "survival-skills-for-believers",
+    title: "Survival Skills for Believers",
+    subtitle: "A Christian guide to living with wisdom, grace, and peace.",
+    description:
+      "A faith-based guide helping believers navigate life's hardest chapters with purpose, scripture-backed wisdom, and the confidence that comes from knowing your identity in Christ.",
+    audience:
+      "For Christians, faith communities, church groups, and anyone who wants to deepen their walk while navigating real-world challenges.",
+    priceLabel: "$14.99 CAD",
+    format: "Digital Edition",
+    image: {
+      src: "/books/survival-skills-for-believers-cover.png",
+      alt: "Survival Skills for Believers book cover — open Bible in a scenic landscape at sunrise.",
+      crop: "object-top",
+    },
+    purchaseUrl: stripeBookLinks.survivalSkillsForBelievers,
+    stripePaymentLinkId: "",
+    highlights: [
+      "Faith-centered resilience",
+      "Scripture-backed wisdom for hard seasons",
+      "Peace and purpose in every stage of life",
+    ],
+  },
+  {
+    slug: "survival-skills-for-women",
+    title: "Survival Skills for Women",
+    subtitle: "A comprehensive guide to living with hope, resilience, and meaning.",
+    description:
+      "A warm, practical guide for women who want to rebuild confidence, discover purpose, and thrive through every season — from pressure and loss to growth and renewal.",
+    audience:
+      "For women, women's groups, mentoring circles, faith communities, and anyone navigating personal growth and transformation.",
+    priceLabel: "$14.99 CAD",
+    format: "Digital Edition",
+    image: {
+      src: "/books/survival-skills-for-women-cover.png",
+      alt: "Survival Skills for Women book cover — a woman looking confidently toward the horizon.",
+      crop: "object-top",
+    },
+    purchaseUrl: stripeBookLinks.survivalSkillsForWomen,
+    stripePaymentLinkId: "",
+    highlights: [
+      "Confidence and identity restoration",
+      "Hope and healing after hard seasons",
+      "Practical tools for thriving with meaning",
+    ],
+  },
+  {
+    slug: "umattr-devotional",
+    title: "UMATTR Devotional",
+    subtitle: "Reflections for the moments that ask you to keep going.",
+    description:
+      "A devotional journal for anyone who needs a reminder that they matter — featuring reflective prompts, encouragement, and truth to hold onto when life gets heavy.",
+    audience:
+      "For students, athletes, individuals in transition, faith communities, and anyone who needs a daily anchor of hope and worth.",
+    priceLabel: "$14.99 CAD",
+    format: "Digital Edition",
+    image: {
+      src: "/books/umattr-devotional-cover.png",
+      alt: "UMATTR Devotional book cover — a journal by the ocean.",
+      crop: "object-top",
+    },
+    purchaseUrl: stripeBookLinks.umattrDevotional,
+    stripePaymentLinkId: "",
+    highlights: [
+      "Daily reflections to anchor your worth",
+      "Prompts for hope in hard moments",
+      "Faith-based encouragement to keep going",
+    ],
+  },
+  {
+    slug: "survival-skills-for-students",
+    title: "Survival Skills for Students",
+    subtitle: "Practical tools for focus, balance, and success at every stage.",
+    description:
+      "A student-centered guide packed with strategies for managing academic pressure, building healthy habits, and staying grounded in purpose through the demands of school and life.",
+    audience:
+      "For students, parents, educators, mentors, and youth leaders who want to support young people in building focus and resilience.",
+    priceLabel: "$14.99 CAD",
+    format: "Digital Edition",
+    image: {
+      src: "/books/survival-skills-for-students-cover.png",
+      alt: "Survival Skills for Students book cover.",
+      crop: "object-top",
+    },
+    purchaseUrl: stripeBookLinks.survivalSkillsForStudents,
+    stripePaymentLinkId: "",
+    highlights: [
+      "Academic pressure management",
+      "Balance and healthy habits for students",
+      "Purpose and resilience through school life",
+    ],
+  },
+  {
+    slug: "surviving-to-thriving",
+    title: "Survival Skills: Surviving to Thriving",
+    subtitle: "The journey from just getting by to truly living.",
+    description:
+      "A transformational guide that takes readers beyond survival mode — helping them identify what's holding them back, rebuild their foundation, and step into a life of genuine purpose and momentum.",
+    audience:
+      "For anyone feeling stuck, overwhelmed, or ready to move beyond surviving and into a life that truly thrives.",
+    priceLabel: "$14.99 CAD",
+    format: "Digital Edition",
+    image: {
+      src: "/books/survival-skills-surviving-to-thriving-cover.png",
+      alt: "Survival Skills: Surviving to Thriving book cover.",
+      crop: "object-top",
+    },
+    purchaseUrl: stripeBookLinks.survivalSkillsSurvivingToThriving,
+    stripePaymentLinkId: "",
+    highlights: [
+      "Moving beyond survival mode",
+      "Purpose-driven momentum",
+      "Rebuilding your foundation for real growth",
     ],
   },
 ];
