@@ -187,7 +187,6 @@ export default function Home() {
           primaryLabel="Book Lornette"
           secondaryLabel="Watch Speaker Reel"
           secondaryHref="/media"
-          video={mediaItems[0]}
         />
 
         <section className="bg-[var(--ink)] px-4 py-10 text-[var(--ivory)] sm:px-6 lg:px-8">
