@@ -611,8 +611,8 @@ export const testimonials = [
     category: "Keynote Speaking",
     quote:
       "Lornette, you are flat-out top of the charts for your ability to connect and interact with your audience to deliver a powerful message.",
-    name: "Harriet Tinka",
-    context: "Founder/CEO, Empowered Me Inc.",
+    name: "Dr. Harriet Tinka",
+    context: "CPA | CMA | Doctor of Philosophy | Financial Leader & Founder, EmpoweredMe Inc.",
   },
   {
     category: "Faith & Wellness",
