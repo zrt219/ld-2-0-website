@@ -11,6 +11,7 @@ import { ImageFrame } from "@/components/ImageFrame";
 import { MetricStrip } from "@/components/MetricStrip";
 import { NewsletterBand } from "@/components/NewsletterBand";
 import { PageShell } from "@/components/PageShell";
+import { PlaceOfPeaceGallery } from "@/components/PlaceOfPeaceGallery";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { TopicCard } from "@/components/TopicCard";
@@ -402,6 +403,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <PlaceOfPeaceGallery />
 
         <NewsletterBand />
 
