@@ -1,29 +1,34 @@
-import { BlogCard } from "@/components/BlogCard";
+import { BlogFilterableList } from "@/components/BlogFilterableList";
 import { PageShell } from "@/components/PageShell";
-import { SectionHeader } from "@/components/SectionHeader";
 import { createMetadata, posts } from "@/content/site";
 
 export const metadata = createMetadata(
-  "Blog",
+  "Blog & Reflections",
   "Insights from Lornette Daye on resilience, leadership, performance, and purpose.",
   "/blog",
 );
 
 export default function BlogPage() {
+  const sortedPosts = [...posts].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
+
   return (
     <PageShell>
-      <main className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeader
-            eyebrow="Blog"
-            title="Insights for resilience, leadership, and performance."
-            body="Short reflections and article concepts aligned with the supplied Lornette Daye brand materials."
-          />
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {posts.map((post) => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
+      <main className="bg-white px-3 py-8 sm:px-4 sm:py-10 lg:px-6">
+        <div className="mx-auto max-w-[1140px]">
+          <div className="border-b border-[var(--line)] pb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)]">
+              Reflections & Blueprints
+            </p>
+            <h1 className="mt-3 font-serif text-[34px] font-normal leading-none text-black sm:text-[44px]">
+              All Reflections & Articles
+            </h1>
+            <p className="mt-3 max-w-2xl text-base leading-7 text-[#675d50]">
+              Explore Lornette Daye&apos;s latest writings on athletic focus, resilience, spiritual growth, leadership, and personal transformation.
+            </p>
           </div>
+          <BlogFilterableList initialPosts={sortedPosts} />
         </div>
       </main>
     </PageShell>

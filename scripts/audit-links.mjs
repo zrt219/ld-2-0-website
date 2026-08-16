@@ -37,7 +37,6 @@ function normalizeInternalPath(href) {
     href.startsWith("#") ||
     href.startsWith("mailto:") ||
     href.startsWith("tel:") ||
-    href.startsWith("native://") ||
     href.startsWith("http://") ||
     href.startsWith("https://") ||
     href.startsWith("//")

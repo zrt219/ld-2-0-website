@@ -21,17 +21,18 @@ export default function ImpactPage() {
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <SectionHeader
               eyebrow="Impact / Testimonials"
-              title="Real stories. Clear context."
-              body="Testimonials and brand materials are presented with direct attribution where available and without unsupported proof or invented outcomes."
+              title="Stories from people and communities Lornette has encouraged."
+              body="From speaking rooms to coaching spaces, these reflections show the warmth, practical care, and lasting encouragement people experience with Lornette."
+              headingLevel="h1"
             />
             <ImageFrame image={images.heroPortrait} priority ratio="aspect-[16/10]" />
           </div>
         </section>
         <section className="px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
           <div className="mx-auto max-w-7xl">
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {testimonials.map((testimonial) => (
-                <TestimonialCard key={testimonial.name} {...testimonial} className="h-full" />
+                <TestimonialCard key={testimonial.name} {...testimonial} />
               ))}
             </div>
             <div className="mt-12 grid gap-8 lg:grid-cols-2">
@@ -40,10 +41,10 @@ export default function ImpactPage() {
             </div>
             <div className="mt-12 border border-[var(--line)] bg-white p-6">
               <p className="text-sm font-bold uppercase text-[var(--gold-dark)]">
-                Media & Organization Reference Collage
+                Media & Community Connections
               </p>
               <p className="mt-2 text-sm text-[#675d50]">
-                Presented as one brand-provided collage while individual feature claims and logo permissions are confirmed.
+                A look at the organizations, media spaces, and community settings connected to Lornette&apos;s work.
               </p>
               <Image
                 src={images.featuredOn.src}

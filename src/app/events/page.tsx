@@ -20,7 +20,7 @@ const workshops = [
   "Training & Workshops",
   "Resilience & Mindset Coaching",
   "Athlete Performance Lab",
-  "Purpose in Motion Retreat",
+  "Staying Grounded Retreat",
 ];
 
 export default function EventsPage() {
@@ -33,6 +33,7 @@ export default function EventsPage() {
               eyebrow="Events & Workshops"
               title="Be in the Room Where It Happens."
               body="Plan keynotes, trainings, workshops, panels, school sessions, and community events with a clear inquiry path."
+              headingLevel="h1"
             />
             <ImageFrame image={additionalImages.eventWorkshop} ratio="aspect-[16/10]" priority />
           </div>

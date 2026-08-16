@@ -1,0 +1,9 @@
+com.lornettedaye.speaker.app-publicBlank-0 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\build\generated\res\pngs\publicBlank\debug
+com.lornettedaye.speaker.app-publicBlank-1 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\build\generated\res\resValues\publicBlank\debug
+com.lornettedaye.speaker.app-packagePublicBlankDebugResources-2 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\build\intermediates\incremental\publicBlankDebug\packagePublicBlankDebugResources\merged.dir
+com.lornettedaye.speaker.app-packagePublicBlankDebugResources-3 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\build\intermediates\incremental\publicBlankDebug\packagePublicBlankDebugResources\stripped.dir
+com.lornettedaye.speaker.app-publicBlankDebug-4 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\build\intermediates\merged_res\publicBlankDebug\mergePublicBlankDebugResources
+com.lornettedaye.speaker.app-debug-5 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\src\debug\res
+com.lornettedaye.speaker.app-main-6 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\src\main\res
+com.lornettedaye.speaker.app-publicBlank-7 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\src\publicBlank\res
+com.lornettedaye.speaker.app-publicBlankDebug-8 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\src\publicBlankDebug\res

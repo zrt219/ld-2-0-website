@@ -1,0 +1,62 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.lornettedaye.speaker.app-mergePublicBlankDebugResources-2:/values/values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Zhane\\Documents\\New project\\LD 2.0 WEBSITE\\android\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "4,3,2,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "139,98,55,181",
+                        "endColumns": "41,40,42,41",
+                        "endOffsets": "176,134,93,218"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,97,138,181",
+                        "endColumns": "41,40,42,41",
+                        "endOffsets": "92,133,176,218"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Zhane\\Documents\\New project\\LD 2.0 WEBSITE\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "464"
+                    },
+                    "to": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "292",
+                        "endLines": "13",
+                        "endColumns": "12",
+                        "endOffsets": "701"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Zhane\\Documents\\New project\\LD 2.0 WEBSITE\\android\\app\\build\\generated\\res\\resValues\\publicBlank\\debug\\values\\gradleResValues.xml",
+                    "from": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "171",
+                        "endColumns": "68",
+                        "endOffsets": "235"
+                    },
+                    "to": {
+                        "startLines": "6",
+                        "startColumns": "4",
+                        "startOffsets": "223",
+                        "endColumns": "68",
+                        "endOffsets": "287"
+                    }
+                }
+            ]
+        }
+    ]
+}

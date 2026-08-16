@@ -27,6 +27,32 @@ export function AudiencePathways({ pathways }: AudiencePathwaysProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activePathway = pathways[activeIndex] ?? pathways[0];
 
+  function focusTab(index: number) {
+    const tab = document.getElementById(`audience-pathway-tab-${index}`);
+    tab?.focus();
+  }
+
+  function onTabKeyDown(event: React.KeyboardEvent<HTMLButtonElement>, index: number) {
+    const lastIndex = pathways.length - 1;
+    let nextIndex = index;
+
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      nextIndex = index === lastIndex ? 0 : index + 1;
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      nextIndex = index === 0 ? lastIndex : index - 1;
+    } else if (event.key === "Home") {
+      nextIndex = 0;
+    } else if (event.key === "End") {
+      nextIndex = lastIndex;
+    } else {
+      return;
+    }
+
+    event.preventDefault();
+    setActiveIndex(nextIndex);
+    focusTab(nextIndex);
+  }
+
   if (!activePathway) {
     return null;
   }
@@ -37,14 +63,14 @@ export function AudiencePathways({ pathways }: AudiencePathwaysProps) {
         <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <div className="max-w-2xl">
             <p className="text-sm font-bold uppercase text-[var(--gold-dark)]">
-              Audience Pathways
+              Find the Right Message
             </p>
             <h2 className="mt-4 font-serif text-4xl leading-tight text-balance text-[var(--ink)] sm:text-5xl">
-              Find the clearest route from audience fit to booking.
+              Choose talks that meet your audience where they are.
             </h2>
             <p className="mt-5 text-base leading-8 text-[#675d50] sm:text-lg">
-              Choose the room you are planning for, then review the most relevant
-              topics, proof points, and next booking step.
+              Select your audience to see the themes, credentials, and next steps
+              that match your event.
             </p>
           </div>
 
@@ -54,12 +80,15 @@ export function AudiencePathways({ pathways }: AudiencePathwaysProps) {
 
               return (
                 <button
+                  id={`audience-pathway-tab-${index}`}
                   key={pathway.audience}
                   type="button"
                   role="tab"
                   aria-selected={selected}
                   aria-controls="audience-pathway-panel"
+                  tabIndex={selected ? 0 : -1}
                   onClick={() => setActiveIndex(index)}
+                  onKeyDown={(event) => onTabKeyDown(event, index)}
                   className={`min-h-24 border px-4 py-4 text-left transition focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] ${
                     selected
                       ? "border-[var(--champagne)] bg-[var(--ink)] text-[var(--ivory)] shadow-[0_22px_70px_rgba(23,20,18,0.16)]"
@@ -71,7 +100,7 @@ export function AudiencePathways({ pathways }: AudiencePathwaysProps) {
                       selected ? "text-[var(--champagne)]" : "text-[var(--gold-dark)]"
                     }`}
                   >
-                    Path {String(index + 1).padStart(2, "0")}
+                    Audience {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="mt-3 block font-serif text-xl leading-tight">
                     {pathway.audience}
@@ -85,11 +114,13 @@ export function AudiencePathways({ pathways }: AudiencePathwaysProps) {
         <div
           id="audience-pathway-panel"
           role="tabpanel"
+          aria-labelledby={`audience-pathway-tab-${activeIndex}`}
+          tabIndex={0}
           className="mt-10 grid overflow-hidden border border-[rgba(198,165,92,0.42)] bg-white shadow-[0_24px_90px_rgba(23,20,18,0.08)] lg:grid-cols-[0.9fr_1.1fr]"
         >
           <div className="bg-[var(--ink)] p-7 text-[var(--ivory)] sm:p-9 lg:p-10">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--champagne)]">
-              Selected Audience
+              Audience Focus
             </p>
             <h3 className="mt-4 font-serif text-4xl leading-tight text-white">
               {activePathway.title}
@@ -129,17 +160,18 @@ export function AudiencePathways({ pathways }: AudiencePathwaysProps) {
             <div className="flex flex-col gap-4 border-b border-[var(--line)] pb-6 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
-                  Recommended Topics
+                  Talks That Fit
                 </p>
                 <p className="mt-2 text-sm leading-7 text-[#675d50]">
-                  Start here, then move directly to the inquiry form when the fit is clear.
+                  When a topic feels right, share your event details and Lornette&apos;s
+                  team can shape the next step.
                 </p>
               </div>
               <Link
                 href={activePathway.primaryHref}
                 className="inline-flex items-center gap-2 text-sm font-bold uppercase text-[var(--gold-dark)]"
               >
-                Review Pathway
+                Explore This Audience
                 <ArrowUpRight size={16} aria-hidden="true" />
               </Link>
             </div>

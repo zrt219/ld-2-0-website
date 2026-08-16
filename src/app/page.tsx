@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { CalendarCheck } from "lucide-react";
 import {
   AudiencePathways,
   type AudiencePathway,
@@ -7,7 +6,7 @@ import {
 import { BlogCard } from "@/components/BlogCard";
 import { CTAButton } from "@/components/CTAButton";
 import { HeroSplit } from "@/components/HeroSplit";
-import { HomepageReelTheater } from "@/components/HomepageReelTheater";
+import { HomeProofSection } from "@/components/HomeProofSection";
 import { ImageFrame } from "@/components/ImageFrame";
 import { MetricStrip } from "@/components/MetricStrip";
 import { NewsletterBand } from "@/components/NewsletterBand";
@@ -15,14 +14,14 @@ import { PageShell } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { TopicCard } from "@/components/TopicCard";
+import { VideoCard } from "@/components/VideoCard";
 import {
   audienceTypes,
   images,
-  bookListings,
   mediaItems,
+  metrics,
   posts,
   services,
-  speakerKitDownloads,
   speakerSubmissionProfile,
   siteCopy,
   testimonials,
@@ -53,11 +52,11 @@ const audiencePathways: AudiencePathway[] = [
     audience: audienceTypes[0],
     title: "Universities planning leadership, resilience, or purpose-driven programming.",
     description:
-      "Use the speaker reel, keynote platform, and student-ready mentorship topics to review fit before moving to availability.",
+      "Start with the speaker reel and student-focused topics, then ask about availability when the message fits your program.",
     primaryHref: "/speaking",
     topics: [
-      topic("Public Speaking"),
-      topic("Leadership Development"),
+      topic("Keynotes & Speaking"),
+      topic("Resilient Leadership"),
       topic("Mentorship and Youth Development"),
     ],
     proofPoints: [
@@ -74,7 +73,7 @@ const audiencePathways: AudiencePathway[] = [
     primaryHref: "/mentorship",
     topics: [
       topic("Mentorship and Youth Development"),
-      topic("Public Speaking"),
+      topic("Keynotes & Speaking"),
       topic("Athlete & Performance Coaching"),
     ],
     proofPoints: [
@@ -85,14 +84,14 @@ const audiencePathways: AudiencePathway[] = [
   },
   {
     audience: audienceTypes[2],
-    title: "Athletic associations reviewing mindset, discipline, and performance coaching.",
+    title: "Athletic associations building mindset, discipline, and performance habits.",
     description:
       "Pair Lornette's elite-athlete story with practical coaching themes for athletes, coaches, and performance-focused teams.",
     primaryHref: "/athlete-coaching",
     topics: [
       topic("Athlete & Performance Coaching"),
       topic("Resilience & Mindset Coaching"),
-      topic("Public Speaking"),
+      topic("Keynotes & Speaking"),
     ],
     proofPoints: [
       claim("Olympic-level Athlete & Coach"),
@@ -107,7 +106,7 @@ const audiencePathways: AudiencePathway[] = [
       "Lead with a keynote or inclusion conversation, then deepen the work with mentorship and youth-development pathways.",
     primaryHref: "/programs",
     topics: [
-      topic("Public Speaking"),
+      topic("Keynotes & Speaking"),
       topic("Diversity & Inclusion"),
       topic("Mentorship and Youth Development"),
     ],
@@ -121,12 +120,12 @@ const audiencePathways: AudiencePathway[] = [
     audience: audienceTypes[4],
     title: "Government agencies planning inclusion, leadership, or public-sector team sessions.",
     description:
-      "Review the inclusion and leadership pathways alongside Lornette's speaker materials before starting an inquiry.",
+      "Explore inclusion and leadership themes alongside Lornette's speaker materials before starting an inquiry.",
     primaryHref: "/inclusion",
     topics: [
       topic("Diversity & Inclusion"),
-      topic("Leadership Development"),
-      topic("Public Speaking"),
+      topic("Resilient Leadership"),
+      topic("Keynotes & Speaking"),
     ],
     proofPoints: [
       claim("Diversity Award Winner"),
@@ -138,12 +137,12 @@ const audiencePathways: AudiencePathway[] = [
     audience: audienceTypes[5],
     title: "Corporate teams building resilient leadership and stronger performance habits.",
     description:
-      "Use the reel for presence, then review leadership, inclusion, and keynote options for the event brief.",
+      "Start with the reel, then explore leadership, inclusion, and keynote options for your team.",
     primaryHref: "/leadership",
     topics: [
-      topic("Leadership Development"),
+      topic("Resilient Leadership"),
       topic("Diversity & Inclusion"),
-      topic("Public Speaking"),
+      topic("Keynotes & Speaking"),
     ],
     proofPoints: [
       claim("Professional Keynote Speaker"),
@@ -153,31 +152,53 @@ const audiencePathways: AudiencePathway[] = [
   },
 ];
 
+const signatureTopicCards = [
+  {
+    ...services[0],
+    title: "Mental Resilience",
+    body: "A practical reset for audiences learning to steady themselves, recover from setbacks, and take the next brave step.",
+  },
+  {
+    ...services[1],
+    title: "Women's Health and Wellness",
+    body: "Encouragement for women navigating change, responsibility, identity, and the need to make room for rest and renewal.",
+  },
+  {
+    ...services[2],
+    title: "Diversity, Equity, and Inclusion",
+    body: "Grounded conversations that help teams listen across difference, build trust, and make inclusion visible in everyday behavior.",
+  },
+  {
+    ...services[3],
+    title: "Burnout Prevention",
+    body: "A compassionate session for people running on empty who need healthier rhythms, clearer boundaries, and hope for what comes next.",
+  },
+];
+
 export default function Home() {
   return (
     <PageShell>
       <main>
         <HeroSplit
-          eyebrow="Transformational speaker message"
+          eyebrow="Keynotes that build resilience and purpose"
           title={siteCopy.homepageHeadline}
           body={`${siteCopy.mainMessage} ${siteCopy.homepageSubheadline}. ${siteCopy.homepageIntro}`}
-          image={images.heroPortrait}
+          image={images.executivePortrait}
           primaryLabel="Book Lornette"
           secondaryLabel="Watch Speaker Reel"
           secondaryHref="/media"
-          video={mediaItems[0]}
         />
 
         <section className="bg-[var(--ink)] px-4 py-10 text-[var(--ivory)] sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.28fr_1fr_0.32fr] lg:items-center">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--champagne)]">
-              Main Message
+              A Message Audiences Carry Home
             </p>
             <p className="font-serif text-3xl leading-tight text-balance sm:text-4xl lg:text-5xl">
               {siteCopy.mainMessage}
             </p>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <CTAButton href="/speaking">Explore The Message</CTAButton>
+              <CTAButton href="/speaking">Explore Speaking Topics</CTAButton>
               <CTAButton
                 href="/media"
                 variant="secondary"
@@ -189,7 +210,73 @@ export default function Home() {
           </div>
         </section>
 
-        <HomepageReelTheater video={mediaItems[0]} />
+        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
+              <VideoCard
+                {...mediaItems[0]}
+                title="Watch Lornette in Action"
+                summary="See Lornette's warmth, conviction, and practical encouragement come through as she speaks about resilience, identity, and purpose."
+                featured
+                className="h-full"
+                featuredColumns="lg:grid lg:grid-cols-[0.95fr_1fr]"
+                spaciousFeaturedContent
+                featuredMediaSize="min-h-[300px] lg:min-h-[360px]"
+              />
+              <div className="lg:pt-10">
+                <div className="border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-7 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-9 lg:p-10">
+                  <p className="text-sm font-bold uppercase text-[var(--gold-dark)]">
+                    For the Audience You Care About
+                  </p>
+                  <h2 className="mt-4 font-serif text-4xl leading-tight text-balance text-[var(--ink)] sm:text-5xl">
+                    {siteCopy.homepageEventHeadline}
+                  </h2>
+                  <p className="mt-5 text-xl leading-10 text-[#675d50]">
+                    {siteCopy.homepageIntro}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-6 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-8 lg:grid lg:grid-cols-[0.26fr_1fr] lg:items-start lg:gap-8">
+              <div className="border-b border-[var(--line)] pb-5 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
+                  Signature Keynote
+                </p>
+              </div>
+              <div className="mt-5 lg:mt-0">
+                <h3 className="font-serif text-4xl leading-tight text-balance text-[var(--ink)] sm:text-5xl">
+                  {speakerSubmissionProfile.primaryKeynote.title}
+                </h3>
+                <p className="mt-4 max-w-4xl text-lg leading-9 text-[#675d50]">
+                  {speakerSubmissionProfile.primaryKeynote.description}
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-6 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-8">
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {metrics.slice(0, 4).map((metric) => (
+                  <div key={metric.label} className="border-l-2 border-[var(--champagne)] bg-white px-4 py-3">
+                    <p className="font-serif text-3xl leading-none text-[var(--ink)]">
+                      {metric.value}
+                    </p>
+                    <p className="mt-2 text-xs font-bold uppercase leading-5 text-[#62594d]">
+                      {metric.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
+                <CTAButton href="/book">Inquire About Availability</CTAButton>
+                <CTAButton href="/speaker-kit" variant="secondary">
+                  Speaker Kit
+                </CTAButton>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <AudiencePathways pathways={audiencePathways} />
 
@@ -198,20 +285,22 @@ export default function Home() {
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <SectionHeader
                 eyebrow="Signature Topics"
-                title="A speaker platform built around proof, presence, and planner clarity."
-                body="Every path keeps the essentials visible: the reel, signature topics, audience outcomes, and a clear route to inquiry."
+                title="Topics that help people rise, reset, and lead with purpose."
+                body="Lornette brings championship discipline, lived resilience, and a coach's care to conversations audiences can carry into real life."
               />
               <CTAButton href="/speaking" variant="secondary">
                 Explore Speaking
               </CTAButton>
             </div>
             <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-              {services.slice(0, 4).map((service) => (
+              {signatureTopicCards.map((service) => (
                 <TopicCard key={service.title} title={service.title} body={service.body} href={service.href} />
               ))}
             </div>
           </div>
         </section>
+
+        <HomeProofSection />
 
         <MetricStrip />
 
@@ -219,9 +308,9 @@ export default function Home() {
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
               <SectionHeader
-                eyebrow="Recognition & Authority"
-                title="Elite athletic credibility, national coaching leadership, and award-recognized community impact."
-                body="For speaker bureaus and event planners, Lornette's platform is grounded in lived achievement: national sprint titles, decades of coaching, authorship, diversity recognition, and selected engagements across schools, community organizations, podcasts, and leadership rooms."
+                eyebrow="Credibility & Recognition"
+                title="A champion's discipline, a coach's heart, and a message people can use."
+                body="Lornette's work is rooted in national sprint titles, decades of coaching, authored resources, diversity recognition, and community service. She brings lived proof to every room, helping audiences see resilience as something they can practice."
               />
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {speakerSubmissionProfile.recognitionHighlights.slice(0, 4).map((item) => (
@@ -237,26 +326,20 @@ export default function Home() {
                 </CTAButton>
               </div>
             </div>
-            <ImageFrame image={images.recognitionDiversityAward} ratio="aspect-[5/4]" />
+            <ImageFrame image={images.recognitionCommunityAwards} ratio="aspect-[5/4]" />
           </div>
         </section>
 
         <section className="bg-[var(--sand)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionHeader
-              eyebrow="Impact"
-              title="What people are saying."
-              body="Testimonials are drawn from provided brand materials and kept separate from media proof claims."
+              eyebrow="Audience Impact"
+              title="People leave feeling seen, strengthened, and ready to move."
+              body="From keynote audiences to coached athletes and wellness communities, these reflections point to the same thing: Lornette meets people with honesty, hope, and practical next steps."
             />
-            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {testimonials.map((testimonial) => (
-                <TestimonialCard
-                  key={testimonial.name}
-                  quote={testimonial.excerpt}
-                  name={testimonial.name}
-                  context={testimonial.context}
-                  category={testimonial.category}
-                />
+                <TestimonialCard key={testimonial.name} {...testimonial} />
               ))}
             </div>
           </div>
@@ -267,12 +350,12 @@ export default function Home() {
             <div>
               <SectionHeader
                 eyebrow="Media & Community References"
-                title="A brand-provided reference collage for planner review."
-                body="The collage is presented as a single brand asset while final media permissions and individual logo usage are confirmed."
+                title="Trusted in rooms built for growth, leadership, and community."
+                body="Lornette's work has reached audiences through speaking engagements, media conversations, and community-centered partnerships across schools, sports, nonprofits, and public-sector spaces."
               />
-              <div className="mt-8 flex gap-3">
-                <CTAButton href="/impact">View Impact</CTAButton>
-                <CTAButton href="/speaker-kit" variant="secondary">Speaker Kit</CTAButton>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <CTAButton href="/impact" size="large">See Community Impact</CTAButton>
+                <CTAButton href="/speaker-kit" variant="secondary" size="large">Open Speaker Kit</CTAButton>
               </div>
             </div>
             <div className="border border-[var(--line)] bg-white p-4">
@@ -287,207 +370,48 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[var(--ink)] px-4 py-16 text-[var(--ivory)] sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.28em] text-[var(--champagne)]">
-                  Speaker Assets
-                </p>
-                <h2 className="mt-4 max-w-3xl font-serif text-5xl leading-tight text-balance text-white sm:text-6xl">
-                  A cleaner planner kit for booking, promoting, and preparing the room.
-                </h2>
-                <p className="mt-5 max-w-2xl text-base leading-8 text-[#d8cdbb]">
-                  Event teams can review Lornette&apos;s reel, download planning materials, and connect the message to books, keynotes, and audience outcomes without sorting through crowded graphics.
-                </p>
-              </div>
-
-              <div className="border border-white/10 bg-white/[0.04] p-6 shadow-[0_24px_90px_rgba(0,0,0,0.24)]">
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-[var(--champagne)]">
-                  Best starting point
-                </p>
-                <div className="mt-5 grid gap-4 sm:grid-cols-3">
-                  {[
-                    {
-                      title: "Speaker Reel",
-                      meta: mediaItems[0].duration ? `${mediaItems[0].duration} preview` : "Preview",
-                      href: "/media",
-                    },
-                    {
-                      title: "One-Sheet",
-                      meta: "Planner overview",
-                      href: speakerKitDownloads.find((item) => item.id === "speaker-one-sheet")?.href ?? "/speaker-kit",
-                    },
-                    {
-                      title: "Books",
-                      meta: `${bookListings.length} PDF resources`,
-                      href: "/books",
-                    },
-                  ].map((asset) => (
-                    <a
-                      key={asset.title}
-                      href={asset.href}
-                      className="group border border-white/12 bg-[var(--ivory)] px-5 py-4 text-[var(--ink)] transition hover:-translate-y-0.5 hover:border-[var(--champagne)] hover:bg-white"
-                    >
-                      <span className="block text-[0.68rem] font-bold uppercase tracking-[0.18em] text-[var(--gold-dark)]">
-                        {asset.meta}
-                      </span>
-                      <span className="mt-3 block font-serif text-2xl leading-tight">
-                        {asset.title}
-                      </span>
-                      <span className="mt-5 block text-xs font-bold uppercase tracking-[0.16em] text-[var(--gold-dark)]">
-                        Open asset
-                      </span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="relative overflow-hidden border border-white/10 bg-black/25 p-3">
-                  <ImageFrame
-                    image={images.diversityAwardAcceptance}
-                    ratio="aspect-[4/5]"
-                    framed={false}
-                    sizes="(max-width: 768px) 92vw, 360px"
-                  />
-                  <div className="absolute inset-x-3 bottom-3 bg-gradient-to-t from-black/82 to-transparent p-5">
-                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-[var(--champagne)]">
-                      Recognition Moment
-                    </p>
-                    <p className="mt-2 font-serif text-2xl leading-tight text-white">
-                      Diversity Awards acceptance.
-                    </p>
-                  </div>
-                </div>
-                <div className="relative overflow-hidden border border-white/10 bg-black/25 p-3">
-                  <ImageFrame
-                    image={images.podcastCard}
-                    ratio="aspect-[4/5]"
-                    framed={false}
-                    sizes="(max-width: 768px) 92vw, 360px"
-                  />
-                  <div className="absolute inset-x-3 bottom-3 bg-gradient-to-t from-black/82 to-transparent p-5">
-                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-[var(--champagne)]">
-                      Media Reference
-                    </p>
-                    <p className="mt-2 font-serif text-2xl leading-tight text-white">
-                      Podcast and interview support.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="border border-white/10 bg-[linear-gradient(135deg,rgba(250,247,240,0.98),rgba(232,221,203,0.9))] p-6 text-[var(--ink)] shadow-[0_24px_90px_rgba(0,0,0,0.24)] sm:p-8">
-                <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)]">
-                  What planners can pull quickly
-                </p>
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {speakerKitDownloads.slice(0, 6).map((item) => (
-                    <a
-                      key={item.id}
-                      href={item.href}
-                      download
-                      className="flex min-h-16 items-center justify-between gap-4 border border-[rgba(155,118,46,0.24)] bg-white/70 px-4 py-3 transition hover:border-[var(--champagne)] hover:bg-white"
-                    >
-                      <span className="font-semibold text-[var(--charcoal)]">{item.title}</span>
-                      <span className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--gold-dark)]">
-                        Download
-                      </span>
-                    </a>
-                  ))}
-                </div>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <CTAButton href="/speaker-kit">Open Full Speaker Kit</CTAButton>
-                  <CTAButton href="/book" variant="secondary">Book Lornette</CTAButton>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <section className="px-4 pb-16 pt-8 sm:px-6 lg:px-8 lg:pb-24 lg:pt-10">
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <SectionHeader
-                eyebrow="From The Blog"
-                title="Insights for resilience, leadership, and performance."
+                eyebrow="Speak Life Blog"
+                title="Reflections for the moments that ask you to keep going."
+                body="Read short, practical notes from Lornette on resilience, faith, purpose, vulnerability, and the courage to begin again."
               />
-              <CTAButton href="/blog" variant="secondary">All Articles</CTAButton>
+              <CTAButton href="/blog" variant="secondary">Read the Speak Life Blog</CTAButton>
             </div>
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              {posts.slice(0, 3).map((post) => (
-                <BlogCard key={post.slug} post={post} />
-              ))}
+            <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+              <div className="grid gap-6">
+                {posts[0] ? (
+                  <BlogCard post={posts[0]} variant="featured" headingLevel="h3" />
+                ) : null}
+                {posts[3] ? (
+                  <BlogCard post={posts[3]} variant="compact" headingLevel="h3" />
+                ) : null}
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+                {posts.slice(1, 3).map((post) => (
+                  <BlogCard
+                    key={post.slug}
+                    post={post}
+                    variant="compact"
+                    headingLevel="h3"
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
         <NewsletterBand />
 
-        <section
-          id="book"
-          className="bg-[var(--ink)] px-4 py-16 text-[var(--ivory)] sm:px-6 lg:px-8 lg:py-24"
-        >
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_0.7fr] lg:items-center">
+        <section className="px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto flex max-w-7xl flex-col gap-6 border-y border-[rgba(198,165,92,0.5)] py-10 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.26em] text-[var(--champagne)]">
-                Book Lornette
-              </p>
-              <h2 className="mt-4 font-serif text-5xl leading-tight text-white sm:text-6xl">
-                Ready to Bring Lornette&apos;s Message to Your Audience?
-              </h2>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-[#d8cdbb]">
-                Whether your audience needs resilience, confidence, faith, leadership, healing, or future-ready tools, Lornette delivers keynote experiences that inspire people to rise, believe again, and take action.
-              </p>
-              <p className="mt-5 text-sm font-bold uppercase tracking-[0.16em] text-[var(--champagne)]">
-                Available for keynotes, workshops, conferences, retreats, schools, churches, corporate events, and community gatherings.
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <CTAButton href="/book">Book Lornette to Speak</CTAButton>
-                <CTAButton
-                  href="/speaker-kit"
-                  variant="secondary"
-                  className="border-white/25 text-[var(--ivory)] hover:bg-white/10"
-                >
-                  Download Speaker One-Sheet
-                </CTAButton>
-                <CTAButton
-                  href="/media"
-                  variant="secondary"
-                  className="border-white/25 text-[var(--ivory)] hover:bg-white/10"
-                >
-                  Watch Speaker Reel
-                </CTAButton>
-              </div>
+              <p className="font-serif text-4xl text-[var(--ink)]">Ready to help your audience remember what they&apos;re capable of?</p>
+              <p className="mt-2 text-[#675d50]">Bring Lornette Daye to your school, team, conference, or community gathering.</p>
             </div>
-            <div className="border border-white/15 bg-white/[0.045] p-6 shadow-[0_30px_120px_rgba(0,0,0,0.28)]">
-              <CalendarCheck size={36} aria-hidden="true" className="text-[var(--champagne)]" />
-              <h3 className="mt-5 font-serif text-3xl text-white">
-                Fast Planner Path
-              </h3>
-              <ol className="mt-6 grid gap-4 text-sm leading-7 text-[#d8cdbb]">
-                {[
-                  "Share the event date, location, format, audience, and goals.",
-                  "Choose the keynote, workshop, or faith-based experience that fits.",
-                  "Receive next-step guidance for speaker kit, prep, and event fit.",
-                ].map((item, index) => (
-                  <li key={item} className="flex gap-3">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--champagne)] text-xs font-bold text-[var(--ink)]">
-                      {index + 1}
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ol>
-              <div className="mt-8">
-                <CTAButton href="/book" className="w-full">
-                  Start Booking Inquiry
-                </CTAButton>
-              </div>
-            </div>
+            <CTAButton href="/book">Start a Booking Inquiry</CTAButton>
           </div>
         </section>
       </main>

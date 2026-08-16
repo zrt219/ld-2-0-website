@@ -16,6 +16,9 @@ type VideoCardProps = {
   featured?: boolean;
   compact?: boolean;
   className?: string;
+  featuredColumns?: string;
+  spaciousFeaturedContent?: boolean;
+  featuredMediaSize?: string;
 };
 
 export function VideoCard({
@@ -28,22 +31,68 @@ export function VideoCard({
   featured = false,
   compact = false,
   className = "",
+  featuredColumns,
+  spaciousFeaturedContent = false,
+  featuredMediaSize,
 }: VideoCardProps) {
   const [open, setOpen] = useState(false);
   const isExternalVideo = Boolean(videoSrc?.startsWith("http"));
   const canPlay = Boolean(videoSrc) && !isExternalVideo;
   const canWatch = canPlay || isExternalVideo;
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const previouslyFocusedRef = useRef<HTMLElement | null>(null);
+
+  function openVideo() {
+    previouslyFocusedRef.current =
+      document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    setOpen(true);
+  }
+
+  function closeVideo() {
+    setOpen(false);
+  }
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
+      if (!open) {
+        return;
+      }
+
       if (event.key === "Escape") {
+        event.preventDefault();
         setOpen(false);
+        return;
+      }
+
+      if (event.key !== "Tab") {
+        return;
+      }
+
+      const focusable = Array.from(
+        dialogRef.current?.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), video[controls], [tabindex]:not([tabindex="-1"])',
+        ) ?? [],
+      ).filter((element) => !element.hasAttribute("disabled"));
+
+      if (focusable.length === 0) {
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
       }
     }
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, []);
+  }, [open]);
 
   useEffect(() => {
     if (!open) {
@@ -56,6 +105,7 @@ export function VideoCard({
 
     return () => {
       document.body.style.overflow = previousOverflow;
+      previouslyFocusedRef.current?.focus();
     };
   }, [open]);
 
@@ -63,12 +113,12 @@ export function VideoCard({
     <>
       <article
         className={`group overflow-hidden border border-[rgba(198,165,92,0.42)] bg-white shadow-[0_18px_70px_rgba(23,20,18,0.1)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_24px_90px_rgba(23,20,18,0.14)] ${
-          featured ? "lg:grid lg:grid-cols-[1.35fr_0.65fr]" : ""
+          featured ? featuredColumns ?? "lg:grid lg:grid-cols-[1.35fr_0.65fr]" : ""
         } ${className}`}
       >
         <div
           className={`relative block w-full overflow-hidden text-left ${
-            featured ? "min-h-[330px] lg:min-h-[430px]" : "aspect-video"
+            featured ? featuredMediaSize ?? "min-h-[330px] lg:min-h-[430px]" : "aspect-video"
           }`}
         >
           <Image
@@ -84,7 +134,7 @@ export function VideoCard({
           {canPlay ? (
             <button
               type="button"
-              onClick={() => setOpen(true)}
+              onClick={openVideo}
               className="absolute left-1/2 top-1/2 inline-flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/35 bg-[var(--champagne)] text-[var(--ink)] shadow-2xl ring-8 ring-black/20 transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.45)]"
               aria-label={`Play ${title}`}
             >
@@ -96,7 +146,7 @@ export function VideoCard({
               target="_blank"
               rel="noreferrer"
               className="absolute left-1/2 top-1/2 inline-flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/35 bg-[var(--champagne)] text-[var(--ink)] shadow-2xl ring-8 ring-black/20 transition hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.45)]"
-              aria-label={`Open ${title}`}
+              aria-label={`Open ${title} in a new tab`}
             >
               <Play fill="currentColor" size={24} aria-hidden="true" />
             </a>
@@ -128,7 +178,13 @@ export function VideoCard({
         {!compact ? (
           <div
             className={`p-6 ${
-              featured ? "bg-[var(--ink)] text-[var(--ivory)] lg:p-8" : ""
+              featured
+                ? `bg-[var(--ink)] text-[var(--ivory)] ${
+                    spaciousFeaturedContent
+                      ? "flex h-full flex-col justify-center lg:p-10 xl:p-12"
+                      : "lg:p-8"
+                  }`
+                : ""
             }`}
           >
             <p
@@ -146,8 +202,11 @@ export function VideoCard({
               {title}
             </h3>
             <p
-              className={`mt-4 text-sm leading-7 ${
-                featured ? "text-[#d8cdbb]" : "text-[#675d50]"
+              className={`mt-4 ${
+                featured && spaciousFeaturedContent
+                  ? "text-base leading-8 lg:text-lg lg:leading-9"
+                  : "text-sm leading-7"
+              } ${featured ? "text-[#d8cdbb]" : "text-[#675d50]"
               }`}
             >
               {summary}
@@ -155,29 +214,46 @@ export function VideoCard({
             {canPlay ? (
               <button
                 type="button"
-                onClick={() => setOpen(true)}
-                className={`mt-7 inline-flex min-h-11 items-center gap-2 border px-4 text-xs font-bold uppercase tracking-[0.16em] transition hover:bg-[rgba(198,165,92,0.1)] focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] ${
+                onClick={openVideo}
+                className={`inline-flex items-center justify-center gap-2 border text-center font-bold uppercase transition hover:bg-[rgba(198,165,92,0.1)] focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] ${
+                  featured && spaciousFeaturedContent
+                    ? "mt-10 min-h-16 w-full px-7 py-4 text-base tracking-[0.16em]"
+                    : "mt-7 min-h-11 px-4 text-xs tracking-[0.16em]"
+                } ${
                   featured
                     ? "border-white/20 text-[var(--champagne)]"
                     : "border-[rgba(155,118,46,0.34)] text-[var(--gold-dark)]"
                 }`}
               >
                 Play video
-                <Play fill="currentColor" size={13} aria-hidden="true" />
+                <Play
+                  fill="currentColor"
+                  size={featured && spaciousFeaturedContent ? 16 : 13}
+                  aria-hidden="true"
+                />
               </button>
             ) : isExternalVideo && videoSrc ? (
               <a
                 href={videoSrc}
                 target="_blank"
                 rel="noreferrer"
-                className={`mt-7 inline-flex min-h-11 items-center gap-2 border px-4 text-xs font-bold uppercase tracking-[0.16em] transition hover:bg-[rgba(198,165,92,0.1)] focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] ${
+                className={`inline-flex items-center justify-center gap-2 border text-center font-bold uppercase transition hover:bg-[rgba(198,165,92,0.1)] focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] ${
+                  featured && spaciousFeaturedContent
+                    ? "mt-10 min-h-16 w-full px-7 py-4 text-base tracking-[0.16em]"
+                    : "mt-7 min-h-11 px-4 text-xs tracking-[0.16em]"
+                } ${
                   featured
                     ? "border-white/20 text-[var(--champagne)]"
                     : "border-[rgba(155,118,46,0.34)] text-[var(--gold-dark)]"
                 }`}
               >
                 Open video
-                <Play fill="currentColor" size={13} aria-hidden="true" />
+                <span className="sr-only"> in a new tab</span>
+                <Play
+                  fill="currentColor"
+                  size={featured && spaciousFeaturedContent ? 16 : 13}
+                  aria-hidden="true"
+                />
               </a>
             ) : (
               <span
@@ -187,7 +263,7 @@ export function VideoCard({
                     : "border-[rgba(155,118,46,0.34)] text-[var(--gold-dark)]"
                 }`}
               >
-                {status ?? "Media pending"}
+                {status ?? "Coming soon"}
               </span>
             )}
           </div>
@@ -198,21 +274,25 @@ export function VideoCard({
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={`${title} video`}
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-black/78 p-4"
+          aria-labelledby={`${title.replace(/\W+/g, "-").toLowerCase()}-video-dialog-title`}
+          ref={dialogRef}
+          className="fixed inset-0 z-[80] flex items-center justify-center overflow-hidden bg-black/78 p-4"
           onClick={(event) => {
             if (event.target === event.currentTarget) {
-              setOpen(false);
+              closeVideo();
             }
           }}
         >
-          <div className="w-full max-w-5xl border border-white/15 bg-[var(--ink)] p-3 shadow-2xl">
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-2/3 bg-[radial-gradient(circle_at_70%_20%,rgba(198,165,92,0.24),transparent_34rem)]" />
+          <div className="relative w-full max-w-5xl border border-white/15 bg-[var(--ink)] p-3 shadow-2xl">
             <div className="mb-3 flex items-center justify-between gap-4 text-white">
-              <p className="font-semibold">{title}</p>
+              <p id={`${title.replace(/\W+/g, "-").toLowerCase()}-video-dialog-title`} className="font-semibold">
+                {title}
+              </p>
               <button
                 ref={closeButtonRef}
                 type="button"
-                onClick={() => setOpen(false)}
+                onClick={closeVideo}
                 className="inline-flex min-h-10 min-w-10 items-center justify-center border border-white/20 transition hover:border-[var(--champagne)] hover:text-[var(--champagne)] focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.32)]"
                 aria-label="Close video"
               >

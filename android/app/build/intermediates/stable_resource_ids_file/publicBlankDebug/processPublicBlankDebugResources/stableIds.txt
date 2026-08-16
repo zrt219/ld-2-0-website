@@ -1,0 +1,7 @@
+com.lornettedaye.speaker:style/AppTheme = 0x7f030000
+com.lornettedaye.speaker:string/app_name = 0x7f020000
+com.lornettedaye.speaker:xml/network_security_config = 0x7f040000
+com.lornettedaye.speaker:color/ld_sand = 0x7f010003
+com.lornettedaye.speaker:color/ld_ivory = 0x7f010002
+com.lornettedaye.speaker:color/ld_ink = 0x7f010001
+com.lornettedaye.speaker:color/ld_gold = 0x7f010000

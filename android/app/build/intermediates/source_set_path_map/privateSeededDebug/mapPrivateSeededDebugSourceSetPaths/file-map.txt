@@ -1,0 +1,9 @@
+com.lornettedaye.speaker.app-privateSeeded-0 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\build\generated\res\pngs\privateSeeded\debug
+com.lornettedaye.speaker.app-privateSeeded-1 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\build\generated\res\resValues\privateSeeded\debug
+com.lornettedaye.speaker.app-packagePrivateSeededDebugResources-2 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\build\intermediates\incremental\privateSeededDebug\packagePrivateSeededDebugResources\merged.dir
+com.lornettedaye.speaker.app-packagePrivateSeededDebugResources-3 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\build\intermediates\incremental\privateSeededDebug\packagePrivateSeededDebugResources\stripped.dir
+com.lornettedaye.speaker.app-privateSeededDebug-4 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\build\intermediates\merged_res\privateSeededDebug\mergePrivateSeededDebugResources
+com.lornettedaye.speaker.app-debug-5 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\src\debug\res
+com.lornettedaye.speaker.app-main-6 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\src\main\res
+com.lornettedaye.speaker.app-privateSeeded-7 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\src\privateSeeded\res
+com.lornettedaye.speaker.app-privateSeededDebug-8 C:\Users\Zhane\Documents\New project\LD 2.0 WEBSITE\android\app\src\privateSeededDebug\res

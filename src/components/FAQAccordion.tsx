@@ -6,7 +6,7 @@ import { useState } from "react";
 const faqs = [
   {
     q: "How far in advance should we book?",
-    a: "Share your timing as early as possible. The form captures preferred and alternate dates so availability can be reviewed clearly.",
+    a: "Share your timing as early as possible. Preferred and alternate dates help Lornette's team respond with a clear next step.",
   },
   {
     q: "What formats are available?",
@@ -30,10 +30,12 @@ export function FAQAccordion() {
       {faqs.map((faq, index) => (
         <div key={faq.q}>
           <button
+            id={`faq-trigger-${index}`}
             type="button"
             onClick={() => setOpen(open === index ? -1 : index)}
             className="flex w-full items-center justify-between gap-4 py-5 text-left font-semibold"
             aria-expanded={open === index}
+            aria-controls={`faq-panel-${index}`}
           >
             {faq.q}
             <ChevronDown
@@ -43,7 +45,14 @@ export function FAQAccordion() {
             />
           </button>
           {open === index ? (
-            <p className="pb-5 text-sm leading-7 text-[#675d50]">{faq.a}</p>
+            <p
+              id={`faq-panel-${index}`}
+              role="region"
+              aria-labelledby={`faq-trigger-${index}`}
+              className="pb-5 text-sm leading-7 text-[#675d50]"
+            >
+              {faq.a}
+            </p>
           ) : null}
         </div>
       ))}

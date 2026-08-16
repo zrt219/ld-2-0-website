@@ -1,14 +1,9 @@
 import { z } from "zod";
 
 export const topicOptions = [
-  "Public Speaking",
-  "Leadership Development",
-  "Diversity & Inclusion",
+  "Keynotes & Speaking",
   "Mentorship & Youth Development",
-  "Athlete & Performance Coaching",
-  "Resilience & Mindset Coaching",
-  "Training",
-  "Life Coaching",
+  "Purpose & Resilience Coaching",
 ] as const;
 
 export const inquirySchema = z.object({

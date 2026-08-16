@@ -48,7 +48,5 @@ next-env.d.ts
 # local agent/runtime state
 /.omx/
 
-# android
-/android/.gradle/
-/android/build/
-/android/app/build/
+.vercel
+.env*

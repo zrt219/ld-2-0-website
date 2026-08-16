@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ld_gold">#C8A85E</color>
+    <color name="ld_ink">#17130D</color>
+    <color name="ld_ivory">#FBF7EF</color>
+    <color name="ld_sand">#E8D8B8</color>
+    <string name="app_name" translatable="false">LD Speaker</string>
+    <style name="AppTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/ld_ivory</item>
+        <item name="android:navigationBarColor">@color/ld_ivory</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:colorAccent">@color/ld_gold</item>
+    </style>
+</resources>

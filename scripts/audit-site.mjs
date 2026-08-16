@@ -23,12 +23,11 @@ const requiredRoutes = [
   "/media",
   "/recognition",
   "/books",
-  "/collection",
   "/impact",
   "/programs",
   "/events",
   "/blog",
-  "/blog/the-champion-mindset",
+  "/blog/embrace-new-beginnings",
   "/speaker-kit",
   "/book",
 ];
@@ -301,10 +300,10 @@ async function checkMobileMenu(page) {
   const mobileMenuLinkCount = await mobileMenuLinks.count().catch(() => 0);
   record(
     "mobile-menu:link-count",
-    mobileMenuLinkCount >= 9 ? "pass" : "fail",
-    mobileMenuLinkCount >= 9
-      ? `Mobile menu exposes ${mobileMenuLinkCount} navigation links`
-      : `Expected at least 9 mobile navigation links, found ${mobileMenuLinkCount}`,
+    mobileMenuLinkCount === 9 ? "pass" : "fail",
+    mobileMenuLinkCount === 9
+      ? "Mobile menu exposes 9 navigation links"
+      : `Expected 9 mobile navigation links, found ${mobileMenuLinkCount}`,
   );
 
   const speakerLink = page.getByRole("link", { name: /^Speaker$/i }).first();
@@ -436,7 +435,7 @@ async function checkBooking(page) {
   await form.getByLabel(/event type/i).selectOption({ label: "Keynote" });
   await form.getByLabel(/event location/i).selectOption({ label: "Virtual" });
   await form.getByLabel(/audience size/i).fill("150");
-  await form.getByLabel(/public speaking/i).check();
+  await form.getByLabel(/keynotes & speaking/i).check();
   await form.getByLabel(/event goals/i).fill(
     "Audit submission checks that the booking form falls back to a prepared email.",
   );

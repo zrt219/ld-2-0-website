@@ -15,7 +15,7 @@ const requiredRoutes = [
   "/programs",
   "/events",
   "/blog",
-  "/blog/the-champion-mindset",
+  "/blog/embrace-new-beginnings",
   "/speaker-kit",
   "/book",
 ];

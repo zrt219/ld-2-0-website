@@ -1,0 +1,2 @@
+#- File Locator -
+listingFile=../../../../outputs/apk/privateSeeded/debug/output-metadata.json

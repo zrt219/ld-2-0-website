@@ -6,7 +6,6 @@ import {
   CreditCard,
   Download,
   FileText,
-  GraduationCap,
   LockKeyhole,
   Sparkles,
   Video,
@@ -53,22 +52,41 @@ const heroTrustMarkers = [
   { label: "Purpose-Led Tools", icon: Sparkles },
 ];
 
-const coverCropBySlug: Record<string, { objectPosition: string; transform: string }> = {
-  "survival-skills-for-men": { objectPosition: "50% 24%", transform: "scale(1.38)" },
-  "road-to-the-olympics": { objectPosition: "50% 22%", transform: "scale(1.48)" },
-  "surviving-life": { objectPosition: "50% 22%", transform: "scale(1.48)" },
+const coverCropBySlug: Record<
+  string,
+  { objectFit?: "cover" | "contain"; objectPosition: string; transform: string }
+> = {
+  "survival-skills-for-men": {
+    objectFit: "cover",
+    objectPosition: "top",
+    transform: "scale(1)",
+  },
+  "road-to-the-olympics": {
+    objectFit: "cover",
+    objectPosition: "top",
+    transform: "scale(1)",
+  },
+  "surviving-life": {
+    objectFit: "cover",
+    objectPosition: "top",
+    transform: "scale(1)",
+  },
 };
 
 function getCoverCrop(slug: string) {
-  return coverCropBySlug[slug] ?? { objectPosition: "50% 50%", transform: "scale(1)" };
+  return (
+    coverCropBySlug[slug] ?? {
+      objectFit: "cover" as const,
+      objectPosition: "top",
+      transform: "scale(1)",
+    }
+  );
 }
 
 const allProductsForJsonLd = [
   ...bookListings,
   ...workbookListings,
-  ...masterclassListings.filter(
-    (m) => !m.purchaseUrl.includes("placeholder"),
-  ),
+  ...masterclassListings,
 ];
 
 const productJsonLd = {
@@ -85,7 +103,7 @@ const productJsonLd = {
       brand: siteCopy.brandName,
       offers: {
         "@type": "Offer",
-        price: book.priceLabel.replace(/[^0-9.]/g, "").split(".")[0] + ".99",
+        price: book.priceLabel,
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
         url: book.purchaseUrl,
@@ -94,7 +112,7 @@ const productJsonLd = {
   })),
 };
 
-// ─── Shared card component ────────────────────────────────────────────────────
+// ─── Shared product card ──────────────────────────────────────────────────────
 
 function ProductCard({
   book,
@@ -105,18 +123,22 @@ function ProductCard({
   buyLabel?: string;
   aspectClass?: string;
 }) {
-  const isPlaceholder = book.purchaseUrl.includes("placeholder");
   const crop = getCoverCrop(book.slug);
 
   return (
     <article className="group flex h-full flex-col overflow-hidden border border-[rgba(198,165,92,0.34)] bg-white shadow-[0_20px_55px_rgba(23,20,18,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_28px_80px_rgba(23,20,18,0.13)]">
       <div className={`relative ${aspectClass} overflow-hidden bg-[#efe7d8]`}>
         <Image
-          src={typeof book.image.src === "string" ? book.image.src : book.image.src}
+          src={
+            typeof book.image.src === "string"
+              ? book.image.src
+              : book.image.src
+          }
           alt={book.image.alt}
           fill
+          unoptimized
           sizes="(min-width: 1024px) 33vw, 100vw"
-          className="object-cover object-top transition duration-500 group-hover:brightness-105"
+          className="object-cover transition duration-500 group-hover:brightness-105"
           style={crop}
         />
         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(23,20,18,0.72)] to-transparent p-5">
@@ -146,7 +168,9 @@ function ProductCard({
         <p className="mt-4 text-base font-semibold leading-7 text-[var(--charcoal)]">
           {book.subtitle}
         </p>
-        <p className="mt-3 text-sm leading-7 text-[#675d50]">{book.description}</p>
+        <p className="mt-3 text-sm leading-7 text-[#675d50]">
+          {book.description}
+        </p>
         <p className="mt-4 border-l-2 border-[var(--champagne)] pl-4 text-sm leading-7 text-[#675d50]">
           <span className="font-bold text-[var(--ink)]">Best for: </span>
           {book.audience}
@@ -154,7 +178,10 @@ function ProductCard({
 
         <ul className="mt-5 grid gap-3">
           {book.highlights.map((highlight) => (
-            <li key={highlight} className="flex items-start gap-3 text-sm text-[#5f564c]">
+            <li
+              key={highlight}
+              className="flex items-start gap-3 text-sm text-[#5f564c]"
+            >
               <CheckCircle2
                 className="mt-0.5 shrink-0 text-[var(--gold-dark)]"
                 size={17}
@@ -166,29 +193,23 @@ function ProductCard({
         </ul>
 
         <div className="mt-7 pt-2">
-          {isPlaceholder ? (
-            <div className="inline-flex min-h-12 w-full items-center justify-center gap-2 border border-[rgba(198,165,92,0.4)] bg-[var(--ivory)] px-5 py-3 text-center text-sm font-bold uppercase leading-5 text-[#9a8970]">
-              Coming Soon
-            </div>
-          ) : (
-            <a
-              href={book.purchaseUrl}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`Buy ${book.title} through Stripe`}
-              className="inline-flex min-h-12 w-full items-center justify-center gap-2 border border-transparent bg-[var(--ink)] px-5 py-3 text-center text-sm font-bold uppercase leading-5 text-[var(--ivory)] shadow-[0_14px_34px_rgba(23,20,18,0.18)] transition hover:bg-[var(--charcoal)] focus:outline-none focus:ring-2 focus:ring-[var(--gold-dark)] focus:ring-offset-2"
-            >
-              {buyLabel}
-              <ArrowRight size={17} aria-hidden="true" />
-            </a>
-          )}
+          <a
+            href={book.purchaseUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Buy ${book.title} through Stripe`}
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 border border-transparent bg-[var(--ink)] px-5 py-3 text-center text-sm font-bold uppercase leading-5 text-[var(--ivory)] shadow-[0_14px_34px_rgba(23,20,18,0.18)] transition hover:bg-[var(--charcoal)] focus:outline-none focus:ring-2 focus:ring-[var(--gold-dark)] focus:ring-offset-2"
+          >
+            {buyLabel}
+            <ArrowRight size={17} aria-hidden="true" />
+          </a>
         </div>
       </div>
     </article>
   );
 }
 
-// ─── Section header helper ────────────────────────────────────────────────────
+// ─── Section heading helper ───────────────────────────────────────────────────
 
 function SectionHeading({
   eyebrow,
@@ -204,7 +225,13 @@ function SectionHeading({
   return (
     <div className="max-w-3xl">
       <div className="flex items-center gap-3">
-        {Icon && <Icon size={20} className="text-[var(--gold-dark)]" aria-hidden="true" />}
+        {Icon && (
+          <Icon
+            size={18}
+            className="text-[var(--gold-dark)]"
+            aria-hidden="true"
+          />
+        )}
         <p className="text-xs font-bold uppercase tracking-[0.32em] text-[var(--gold-dark)]">
           {eyebrow}
         </p>
@@ -222,13 +249,13 @@ function SectionHeading({
 export default function BooksPage() {
   return (
     <PageShell>
-      <main className="bg-[var(--ivory)]" id="main-content">
+      <main className="bg-[var(--ivory)]">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
         />
 
-        {/* ── Hero ── */}
+        {/* ── Hero ─────────────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden border-b border-[var(--line)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_70%_35%,rgba(198,165,92,0.22),transparent_36%),linear-gradient(135deg,transparent,rgba(232,221,203,0.55))] lg:block" />
           <div className="absolute left-0 top-10 h-64 w-64 rounded-full bg-[rgba(198,165,92,0.11)] blur-3xl" />
@@ -242,10 +269,10 @@ export default function BooksPage() {
                 Practical Wisdom for Resilience, Purpose, and Renewal.
               </h1>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--charcoal)]">
-                Explore Lornette Daye&apos;s books and the full 10&nbsp;F&apos;s digital
-                library — workbooks, devotionals, planners, and masterclasses for readers
-                who want encouragement they can return to, reflect on, and apply in real
-                life.
+                Explore Lornette Daye&apos;s books and the full 10&nbsp;F&apos;s
+                digital library — workbooks, devotionals, planners, and
+                masterclasses for readers who want encouragement they can return
+                to, reflect on, and apply in real life.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <CTAButton href="#book-listings">Shop Books</CTAButton>
@@ -259,7 +286,11 @@ export default function BooksPage() {
                     key={label}
                     className="flex min-h-14 items-center gap-3 border border-[rgba(198,165,92,0.32)] bg-white/55 px-4"
                   >
-                    <Icon size={19} className="text-[var(--gold-dark)]" aria-hidden="true" />
+                    <Icon
+                      size={19}
+                      className="text-[var(--gold-dark)]"
+                      aria-hidden="true"
+                    />
                     <span>{label}</span>
                   </div>
                 ))}
@@ -280,6 +311,7 @@ export default function BooksPage() {
                         src={book.image.src}
                         alt={book.image.alt}
                         fill
+                        unoptimized
                         sizes="(min-width: 1024px) 260px, 33vw"
                         className="object-cover transition duration-500 group-hover:brightness-105"
                         style={getCoverCrop(book.slug)}
@@ -290,13 +322,14 @@ export default function BooksPage() {
                 ))}
               </div>
               <div className="mx-auto mt-6 max-w-lg border border-[rgba(198,165,92,0.35)] bg-white/75 p-5 text-center text-sm leading-7 text-[#675d50] shadow-[0_18px_45px_rgba(23,20,18,0.08)] backdrop-blur">
-                3 books + 20 student-athlete resources — all with secure Stripe checkout.
+                3 books + 20 student-athlete resources — all with secure Stripe
+                checkout.
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── Books ── */}
+        {/* ── Books ────────────────────────────────────────────────────────── */}
         <section id="book-listings" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionHeading
@@ -311,7 +344,7 @@ export default function BooksPage() {
                 <ProductCard
                   key={book.slug}
                   book={book}
-                  buyLabel="Buy PDF Download"
+                  buyLabel="Buy"
                   aspectClass="aspect-[3/4]"
                 />
               ))}
@@ -319,7 +352,7 @@ export default function BooksPage() {
           </div>
         </section>
 
-        {/* ── How It Works ── */}
+        {/* ── How It Works ─────────────────────────────────────────────────── */}
         <section className="border-y border-[var(--line)] bg-white px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
             <div>
@@ -342,10 +375,18 @@ export default function BooksPage() {
                       <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--champagne)] text-sm font-black text-[var(--ink)]">
                         {index + 1}
                       </span>
-                      <Icon size={21} className="text-[var(--gold-dark)]" aria-hidden="true" />
+                      <Icon
+                        size={21}
+                        className="text-[var(--gold-dark)]"
+                        aria-hidden="true"
+                      />
                     </div>
-                    <h3 className="mt-5 font-serif text-2xl text-[var(--ink)]">{step.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-[#675d50]">{step.body}</p>
+                    <h3 className="mt-5 font-serif text-2xl text-[var(--ink)]">
+                      {step.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-[#675d50]">
+                      {step.body}
+                    </p>
                   </div>
                 );
               })}
@@ -353,8 +394,11 @@ export default function BooksPage() {
           </div>
         </section>
 
-        {/* ── Workbooks & Guides ── */}
-        <section id="workbook-listings" className="bg-[var(--ivory)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        {/* ── Workbooks & Guides ───────────────────────────────────────────── */}
+        <section
+          id="workbook-listings"
+          className="bg-[var(--ivory)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+        >
           <div className="mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="Student-Athlete Workbooks & Guides"
@@ -376,8 +420,11 @@ export default function BooksPage() {
           </div>
         </section>
 
-        {/* ── Masterclasses ── */}
-        <section id="masterclass-listings" className="border-t border-[var(--line)] bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        {/* ── Masterclasses ────────────────────────────────────────────────── */}
+        <section
+          id="masterclass-listings"
+          className="border-t border-[var(--line)] bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+        >
           <div className="mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="10 F's Masterclass Courses"
@@ -387,29 +434,30 @@ export default function BooksPage() {
             />
 
             <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-              {masterclassListings
-                .filter((m) => !m.purchaseUrl.includes("placeholder"))
-                .map((book) => (
-                  <ProductCard
-                    key={book.slug}
-                    book={book}
-                    buyLabel="Enroll Now"
-                    aspectClass="aspect-[4/3]"
-                  />
-                ))}
+              {masterclassListings.map((book) => (
+                <ProductCard
+                  key={book.slug}
+                  book={book}
+                  buyLabel="Enroll Now"
+                  aspectClass="aspect-[4/3]"
+                />
+              ))}
             </div>
 
             <div className="mt-10 border border-[rgba(198,165,92,0.3)] bg-[var(--ivory)] p-6 text-sm leading-7 text-[#675d50]">
               <p>
-                <span className="font-bold text-[var(--ink)]">About masterclass pricing: </span>
-                Each course is $997/year with a $297 deposit to start. You will be contacted
-                by the team after checkout to confirm onboarding and community access.
+                <span className="font-bold text-[var(--ink)]">
+                  About masterclass pricing:{" "}
+                </span>
+                Each course is $997/year with a $297 deposit to start. You will
+                be contacted by the team after checkout to confirm onboarding
+                and community access.
               </p>
             </div>
           </div>
         </section>
 
-        {/* ── Speaking CTA ── */}
+        {/* ── Speaking CTA ─────────────────────────────────────────────────── */}
         <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="mx-auto grid max-w-7xl gap-8 border border-[rgba(198,165,92,0.34)] bg-[linear-gradient(135deg,#ffffff,rgba(232,221,203,0.56))] p-7 shadow-[0_24px_70px_rgba(23,20,18,0.08)] lg:grid-cols-[1fr_auto] lg:items-center lg:p-10">
             <div>
@@ -420,8 +468,9 @@ export default function BooksPage() {
                 Pair the books with a keynote, workshop, or mentoring session.
               </h2>
               <p className="mt-5 max-w-3xl text-base leading-8 text-[#675d50]">
-                These resources extend the same resilience, identity, purpose, and growth themes
-                Lornette brings to stages, classrooms, churches, teams, and community spaces.
+                These resources extend the same resilience, identity, purpose,
+                and growth themes Lornette brings to stages, classrooms,
+                churches, teams, and community spaces.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">

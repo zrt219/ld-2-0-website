@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 
 import { mainNav, siteCopy } from "@/content/site";
 import { CTAButton } from "./CTAButton";
@@ -51,14 +51,6 @@ export function Footer() {
                 <Mail size={16} aria-hidden="true" />
                 {siteCopy.contactEmail}
               </a>
-              <span className="inline-flex items-center gap-2">
-                <Phone size={16} aria-hidden="true" />
-                Response expectations are confirmed after inquiry.
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <MapPin size={16} aria-hidden="true" />
-                Canada and international events
-              </span>
             </div>
             <div className="mt-5 grid gap-2">
               {siteCopy.socialLinks.map((link) => (
@@ -75,8 +67,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-[#b9ad9a]">
-        Brand materials are used as supplied. Final logo, media, and testimonial
-        permissions should be verified before launch.
+        &copy; 2026 Lornette Daye. All rights reserved.
       </div>
     </footer>
   );

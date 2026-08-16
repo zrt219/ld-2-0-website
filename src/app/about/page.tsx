@@ -1,9 +1,10 @@
 import { CTAButton } from "@/components/CTAButton";
-import { ImageFrame } from "@/components/ImageFrame";
+import { AboutGallery } from "@/components/AboutGallery";
 import { MetricStrip } from "@/components/MetricStrip";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
-import { additionalImages, createMetadata, images, siteCopy, speakerSubmissionProfile } from "@/content/site";
+import { aboutGallerySlides } from "@/content/aboutGallery";
+import { createMetadata, siteCopy, speakerSubmissionProfile } from "@/content/site";
 
 export const metadata = createMetadata(
   "About Lornette",
@@ -11,33 +12,56 @@ export const metadata = createMetadata(
   "/about",
 );
 
-const timeline = ["Early Start", "Elite Athlete", "Coach & Mentor", "Expanding Impact", "Global Transformation"];
+const timeline = [
+  {
+    title: "Early Start",
+    description:
+      "After moving from Jamaica to Canada at ten, Lornette explored every sport she could. Track and Field became the passion that shaped her discipline and confidence.",
+  },
+  {
+    title: "Elite Athlete",
+    description:
+      "That passion became performance. Through discipline and focus, Lornette earned provincial and national titles, turning natural speed into a career shaped by resilience and purpose.",
+  },
+  {
+    title: "Coach & Mentor",
+    description:
+      "Even while competing, Lornette made time to encourage others. As a coach, she spent more than two decades helping athletes grow in sport, school, confidence, and wellness.",
+  },
+  {
+    title: "Expanding Impact",
+    description:
+      "After athletics, Lornette brought the same drive into corporate, nonprofit, and community work, helping organizations, families, and young athletes move forward with practical support.",
+  },
+  {
+    title: "Global Transformation",
+    description:
+      "Today, as a certified speaker, Lornette uses her story to reach the whole person, helping audiences leave with greater clarity, courage, and belief.",
+  },
+];
 
 export default function AboutPage() {
   return (
     <PageShell>
       <main>
         <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-center">
-            <div>
-              <p className="text-sm font-bold uppercase text-[var(--gold-dark)]">
-                About Lornette Daye
-              </p>
-              <h1 className="mt-5 font-serif text-5xl leading-tight text-balance sm:text-7xl">
-                Purpose, performance, and impact.
-              </h1>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-[#62594d]">
-                {siteCopy.biography}
-              </p>
-            </div>
-            <ImageFrame image={images.heroPortrait} priority ratio="aspect-[4/5]" />
+          <div className="mx-auto max-w-5xl">
+            <p className="text-sm font-bold uppercase text-[var(--gold-dark)]">
+              About Lornette Daye
+            </p>
+            <h1 className="mt-5 font-serif text-5xl leading-tight text-balance sm:text-7xl">
+              Purpose, performance, and impact.
+            </h1>
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-[#62594d]">
+              {siteCopy.biography}
+            </p>
           </div>
         </section>
         <MetricStrip />
         <section className="border-b border-[var(--line)] bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
             <SectionHeader
-              eyebrow="Bureau Biography"
+              eyebrow="Biography"
               title="A credible voice for resilience, identity, faith, leadership, and community change."
               body={speakerSubmissionProfile.role}
             />
@@ -53,18 +77,20 @@ export default function AboutPage() {
         <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
             <SectionHeader eyebrow="Timeline" title="A journey of discipline. A life of impact." />
-            <div className="mt-10 grid gap-4 md:grid-cols-5">
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {timeline.map((item) => (
-                <article key={item} className="border border-[var(--line)] bg-white p-5">
-                  <p className="font-serif text-2xl text-[var(--ink)]">{item}</p>
+                <article key={item.title} className="border border-[var(--line)] bg-white p-5">
+                  <p className="mx-auto max-w-full break-words text-center font-serif text-2xl leading-tight text-balance text-[var(--ink)] md:text-[1.35rem] xl:text-2xl">
+                    {item.title}
+                  </p>
                   <p className="mt-3 text-sm leading-7 text-[#675d50]">
-                    A chapter in Lornette&apos;s progression from sport and coaching to transformational public speaking.
+                    {item.description}
                   </p>
                 </article>
               ))}
             </div>
-            <div className="mt-12 grid gap-8 lg:grid-cols-2">
-              <ImageFrame image={additionalImages.aboutTimeline} ratio="aspect-[4/5]" />
+            <AboutGallery slides={aboutGallerySlides} />
+            <div className="mt-12">
               <div className="border border-[var(--line)] bg-white p-8">
                 <SectionHeader eyebrow="Mission" title="Unlock potential. Strengthen communities. Develop leaders." body={siteCopy.mission} />
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">

@@ -6,11 +6,8 @@ import monogram from "../../images/Beige & Black Elegant Typography Monogram Ini
 import featuredOnCollage from "../../images/chrome_pclmdSgQoj.png";
 import brandStatement from "../../images/c298ebb1-01e5-497d-a41e-33c2dba1b74c.png";
 import podcastCard from "../../images/588657892_17845278915616562_7038671232751376482_n.jpg";
-import diversityAwardAcceptance from "../../images/diversity-awards-acceptance.png";
 import speakingPoster from "../../images/unnamed (6).jpg";
-import leadershipPoster from "../../images/Gemini_Generated_Image_ekc5q1ekc5q1ekc5.png";
 import inclusionPoster from "../../images/unnamed (3).jpg";
-import mentorshipPoster from "../../images/Gemini_Generated_Image_tpd8xftpd8xftpd8.png";
 import athletePoster from "../../images/unnamed (5).jpg";
 import athleteInfoPoster from "../../images/Gemini_Generated_Image_6dpu516dpu516dpu.png";
 import athleteStrategyPoster from "../../images/Gemini_Generated_Image_imi2b2imi2b2imi2.png";
@@ -23,16 +20,15 @@ import programOverview from "../../images/unnamed (7).jpg";
 import eventWorkshop from "../../images/unnamed (1).jpg";
 import trainingPoster from "../../images/unnamed (8).jpg";
 import resiliencePoster from "../../images/unnamed (4).jpg";
-import blogSource from "../../images/unnamed (47).jpg";
-import blogNature from "../../images/unnamed (50).jpg";
-import blogVulnerability from "../../images/unnamed (51).jpg";
-import survivalSkillsMen from "../../images/unnamed (45).jpg";
-import survivingLife from "../../images/SURVIVING LIFE.jpg";
-import roadBook from "../../images/road.jpg";
+import survivalSkillsMen from "../../images/survival-skills-for-men-cover-new.png";
+import survivingLife from "../../images/surviving-life-cover-new.jpg";
+import finishStrongBook from "../../images/finish-strong-cover-new.jpg";
 import womensBook from "../../images/womensbook.jpg";
 import toastmastersLogo from "../../images/Toastmasters_2011.png";
 import rotaryLogo from "../../images/Rotary-Club-of-St-Albert--1-.jpeg";
 import flightPoster from "../../images/image.png";
+import executivePortrait from "../../images/lornette-executive-portrait.jpg";
+import speakingDeskPortrait from "../../images/lornette-speaking-desk-portrait.jpg";
 
 export const siteUrl = "https://lornettedaye.com";
 
@@ -40,6 +36,10 @@ export type SiteImage = {
   src: StaticImageData | string;
   alt: string;
   crop?: string;
+  caption?: string;
+  aspect?: string;
+  frameTone?: "warm-ivory";
+  showBottomFade?: boolean;
 };
 
 export type MediaItem = {
@@ -57,6 +57,28 @@ export type NavItem = {
   href: string;
 };
 
+export type MediaBandIcon = "film" | "mic" | "download" | "calendar" | "users" | "target";
+
+export type MediaBandCard = {
+  icon: MediaBandIcon;
+  title: string;
+  body: string;
+};
+
+export type MediaBandContent = {
+  eyebrow?: string;
+  title?: string;
+  body?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+  videoTitle?: string;
+  videoSummary?: string;
+  cards?: MediaBandCard[];
+  footerLabel?: string;
+};
+
 export type ServicePage = {
   slug: string;
   navLabel: string;
@@ -71,6 +93,7 @@ export type ServicePage = {
     items: string[];
   }[];
   cta: string;
+  mediaBand?: MediaBandContent;
 };
 
 export type Post = {
@@ -80,6 +103,22 @@ export type Post = {
   category: string;
   image: SiteImage;
   date: string;
+  author: string;
+  readTime: string;
+  amazonUrl?: string;
+  purchaseUrl?: string;
+  body: {
+    intro: string[];
+    sections: {
+      heading: string;
+      paragraphs: string[];
+      bullets?: {
+        label: string;
+        text: string;
+      }[];
+    }[];
+    conclusion?: string[];
+  };
 };
 
 export type BookListing = {
@@ -96,43 +135,28 @@ export type BookListing = {
   highlights: string[];
 };
 
-export type SpeakerAppRoute = {
-  label: string;
-  href: string;
-  appTab: "Home" | "Speaking" | "Notes" | "Book";
-};
-
-export type SpeakerNotesMode = "private-seeded" | "public-blank";
-
-export type Testimonial = {
-  quote: string;
-  excerpt: string;
-  name: string;
-  context: string;
-  category: string;
-};
-
 export const siteCopy = {
   brandName: "Lornette Daye",
-  contactEmail: "lornettedaye@outlook.com",
+  contactEmail: "ldayespeaking@gmail.com",
   seoTitle: "Lornette Daye | Transformational Speaker",
   seoDescription:
     "Keynote speaking, leadership development, inclusion, mentorship, youth development, and performance coaching with Lornette Daye.",
   descriptor:
     "Professional Keynote Speaker | Olympic-level Athlete & Coach | Canadian National Sprint Champion | Certified Transformational Speaker | Author | Youth Leader & Mentor | Project Manager",
   mainMessage:
-    "Transforming the lives of others that they can overcome anything because they matter.",
-  homepageHeadline: "Transforming Lives. Reminding People They Matter.",
+    "Helping people rise through challenge, remember their worth, and move forward with purpose.",
+  homepageHeadline: "Keynotes That Move People Forward.",
+  homepageEventHeadline: "Make Your Event Unforgettable.",
   homepageSubheadline:
-    "Professional Keynote Speaker | Olympic-level Athlete & Coach | Canadian National Sprint Champion | Certified Transformational Speaker | Author | Youth Leader & Mentor | Project Manager",
+    "Lornette brings four decades of elite sport, coaching, mentorship, and lived resilience to every room she enters",
   homepageIntro:
-    "For over four decades, Lornette Daye has inspired individuals, teams, and organizations to achieve excellence, resilience, and purpose-driven success through public speaking, leadership development, diversity and inclusion, mentorship, and athlete performance coaching.",
+    "Her talks help audiences strengthen confidence, navigate adversity, lead with compassion, and believe again in what is possible.",
   biography:
     "Certified Toastmasters Speaker, Olympic-level Athlete & Coach, Canadian National Sprint Champion, Author, and Transformational Speaker with over 40 years of experience inspiring individuals, teams, and organizations to achieve excellence, resilience, and purpose-driven success.",
   biographyExtended:
     "Through decades of elite competition and coaching over 500 athletes, including 150+ international competitors, she has developed a profound understanding of performance psychology, mindset mastery, goal-setting, and discipline.",
   mission:
-    "Her mission is transforming the lives of others that they can overcome anything because they matter. True success is measured not only by personal accomplishments but by the lives we touch, the communities we strengthen, and the leaders we develop.",
+    "Her mission is to help people rise through challenge, remember their worth, and move forward with purpose. True success is measured not only by personal accomplishments but by the lives we touch, the communities we strengthen, and the leaders we develop.",
   verifiedClaims: [
     "Professional Keynote Speaker",
     "Olympic-level Athlete & Coach",
@@ -147,31 +171,8 @@ export const siteCopy = {
     "Diversity Award Winner",
   ],
   socialLinks: [
-    { label: "Instagram", href: "https://www.instagram.com/lornettedaye" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/lornette-d-419276358" },
-    { label: "Email", href: "mailto:lornettedaye@outlook.com" },
-  ],
-};
-
-export const speakerAppConfig = {
-  appName: "LD Speaker",
-  androidPackage: "com.lornettedaye.speaker",
-  appUrlEnv: "LD_APP_URL",
-  notesModeEnv: "LD_NOTES_MODE",
-  notesModes: ["private-seeded", "public-blank"] satisfies SpeakerNotesMode[],
-  routes: [
-    { label: "Home", href: "/", appTab: "Home" },
-    { label: "Speaking", href: "/speaking", appTab: "Speaking" },
-    { label: "Notes", href: "native://speaker-notes", appTab: "Notes" },
-    { label: "Book", href: "/book", appTab: "Book" },
-  ] satisfies SpeakerAppRoute[],
-  marketingFocus: [
-    "Hero promise",
-    "Public speaking",
-    "About",
-    "Programs",
-    "Contact and booking",
-    "Selective credibility and media proof",
+    { label: "Email", href: "mailto:ldayespeaking@gmail.com" },
   ],
 };
 
@@ -204,12 +205,32 @@ export const requiredRoutes = [
   "/programs",
   "/events",
   "/blog",
-  "/blog/the-champion-mindset",
   "/speaker-kit",
   "/book",
 ];
 
 export const images = {
+  speakingDeskPortrait: {
+    src: speakingDeskPortrait,
+    alt: "Lornette Daye seated at an executive desk in a white blazer with the UMattr crest behind her.",
+    crop: "object-top",
+    frameTone: "warm-ivory" as const,
+    showBottomFade: true,
+  },
+  executivePortrait: {
+    src: executivePortrait,
+    alt: "Executive portrait of Lornette Daye in a white suit in a modern office with gold crest.",
+    crop: "object-top",
+    frameTone: "warm-ivory" as const,
+    showBottomFade: true,
+  },
+  homeHeroPortrait: {
+    src: "/generated/lornette-home-hero-original-cutout.png",
+    alt: "Seated portrait of Lornette Daye in an ivory blazer.",
+    crop: "object-center scale-[1.06]",
+    frameTone: "warm-ivory" as const,
+    showBottomFade: false,
+  },
   heroPortrait: {
     src: "/generated/lornette-hero-reference.png",
     alt: "Portrait-style speaker image of Lornette Daye in an ivory blazer.",
@@ -222,15 +243,11 @@ export const images = {
   },
   monogram: {
     src: monogram,
-    alt: "Lornette Daye monogram supplied in brand assets.",
-  },
-  signatureBlack: {
-    src: "/ld-signature-black.png",
-    alt: "Black Lornette Daye LD signature mark.",
+    alt: "Lornette Daye monogram.",
   },
   featuredOn: {
     src: featuredOnCollage,
-    alt: "Brand-provided collage of organizations and media references for review.",
+    alt: "Collage of organizations, media appearances, and community references connected to Lornette Daye.",
     crop: "object-bottom scale-[1.04]",
   },
   brandStatement: {
@@ -238,36 +255,41 @@ export const images = {
     alt: "Lornette Daye speaker brand artwork cropped to the portrait area.",
     crop: "object-[76%_44%] scale-[1.78]",
   },
+  speakingChampionMindset: {
+    src: "/generated/speaking-champion-abstract-gold-flow.png",
+    alt: "Abstract elegant gold and white flowing artwork for the speaking topics section.",
+    crop: "object-[72%_50%]",
+  },
   podcastCard: {
     src: podcastCard,
     alt: "Podcast appearance artwork featuring Lornette Daye.",
     crop: "object-top scale-[1.12]",
-  },
-  diversityAwardAcceptance: {
-    src: diversityAwardAcceptance,
-    alt: "Lornette Daye accepting recognition at a Diversity Awards event.",
-    crop: "object-top",
   },
   recognitionDiversityAward: {
     src: recognitionDiversityAward,
     alt: "Diversity Awards Friends of Diversity recognition artwork featuring Lornette Daye.",
     crop: "object-[50%_52%] scale-[1.02]",
   },
+  recognitionCommunityAwards: {
+    src: "/generated/recognition-awards-community-gold-centered.png",
+    alt: "Minimalist gold-themed artwork representing awards and community outreach.",
+    crop: "object-center",
+  },
   toastmastersLogo: {
     src: toastmastersLogo,
-    alt: "Toastmasters International logo supplied in project assets.",
+    alt: "Toastmasters International logo.",
   },
   rotaryLogo: {
     src: rotaryLogo,
-    alt: "Rotary Club of St. Albert logo supplied in project assets.",
+    alt: "Rotary Club of St. Albert logo.",
   },
 };
 
 export const metrics = [
-  { value: "40+", label: "Years of Inspiring Impact" },
-  { value: "500+", label: "Athletes Coached" },
-  { value: "150+", label: "International Competitors" },
-  { value: "Global", label: "Impact" },
+  { value: "40+", label: "Years Speaking, Coaching & Mentoring" },
+  { value: "500+", label: "Athletes Mentored and Coached" },
+  { value: "150+", label: "International-Level Competitors Guided" },
+  { value: "Global", label: "Perspective From Canada to the World" },
 ];
 
 export const audienceTypes = [
@@ -281,18 +303,18 @@ export const audienceTypes = [
 
 export const services = [
   {
-    title: "Public Speaking",
-    body: "Dynamic keynotes that motivate, educate, and leave a lasting impact.",
+    title: "Keynotes & Speaking",
+    body: "Messages that help audiences remember their worth, rise through adversity, and leave with practical next steps.",
     href: "/speaking",
   },
   {
-    title: "Leadership Development",
-    body: "Build confident leaders who inspire, influence, and drive results.",
+    title: "Resilient Leadership",
+    body: "Help leaders carry pressure with perspective, communicate with courage, and move people toward shared purpose.",
     href: "/leadership",
   },
   {
     title: "Diversity & Inclusion",
-    body: "Create inclusive cultures where everyone belongs and thrives.",
+    body: "Create spaces where people feel seen, respected, and responsible for building real belonging.",
     href: "/inclusion",
   },
   {
@@ -311,13 +333,13 @@ export const services = [
     href: "/programs",
   },
   {
-    title: "Training",
-    body: "Actionable workshops for practical skills and measurable momentum.",
+    title: "Workshops & Training",
+    body: "Interactive sessions that turn inspiration into practice, reflection, and usable next steps.",
     href: "/events",
   },
   {
-    title: "Life Coaching",
-    body: "Purpose-centered support for clarity, confidence, and next steps.",
+    title: "Purpose & Resilience Coaching",
+    body: "Purpose-centered support for people seeking clarity, confidence, and steady forward movement.",
     href: "/programs",
   },
 ];
@@ -329,18 +351,16 @@ export const servicePages: Record<string, ServicePage> = {
     title: "Powerful Messages. Lasting Impact.",
     eyebrow: "Speaking / Keynotes",
     description:
-      "Signature keynotes and facilitated sessions that connect resilience, leadership, purpose, and action.",
+      "Signature keynotes and facilitated sessions on achievement, adversity, change, disappointment, resilience, and perspective.",
     heroImage: {
       src: speakingPoster,
       alt: "Transformational public speaking artwork, cropped to keep the focus on the stage visual.",
       crop: "object-center scale-[1.58]",
     },
     pillars: [
-      "The Champion Mindset",
-      "Purpose in Motion",
-      "Leadership That Lasts",
-      "Inclusion in Action",
-      "Rise Above Adversity",
+      "Road to the Olympics",
+      "Navigating Change and Disappointment",
+      "Staying Grounded After Adversity",
     ],
     sections: [
       {
@@ -373,13 +393,13 @@ export const servicePages: Record<string, ServicePage> = {
     slug: "/leadership",
     navLabel: "Leadership",
     title: "Leadership That Builds Resilience, Confidence, and Results.",
-    eyebrow: "Leadership Development",
+    eyebrow: "Resilient Leadership",
     description:
       "Practical leadership development for people who need to communicate, execute, and lead with composure under pressure.",
     heroImage: {
-      src: leadershipPoster,
-      alt: "Leadership development artwork with gold staircase, cropped to focus on the main visual.",
-      crop: "object-[50%_60%] scale-[1.65]",
+      src: "/generated/leadership-soft-cream-gold-hero.png",
+      alt: "Soft cream and gold abstract pathway suggesting resilient leadership and purposeful movement.",
+      crop: "object-[50%_48%]",
     },
     pillars: [
       "Strategic Thinking",
@@ -390,7 +410,7 @@ export const servicePages: Record<string, ServicePage> = {
     ],
     sections: [
       {
-        title: "Program overview",
+        title: "What leaders practice",
         items: [
           "Decision-making clarity",
           "High-trust communication",
@@ -399,7 +419,7 @@ export const servicePages: Record<string, ServicePage> = {
         ],
       },
       {
-        title: "Outcomes",
+        title: "Team outcomes",
         items: [
           "Clearer standards",
           "Stronger teams",
@@ -408,7 +428,7 @@ export const servicePages: Record<string, ServicePage> = {
         ],
       },
       {
-        title: "Workshop cards",
+        title: "Leadership sessions",
         items: [
           "Leading Through Pressure",
           "Communication That Builds Trust",
@@ -417,6 +437,34 @@ export const servicePages: Record<string, ServicePage> = {
       },
     ],
     cta: "Schedule a Leadership Consultation",
+    mediaBand: {
+      eyebrow: "A Preview of Lornette in the Room",
+      title: "Hear the warmth, clarity, and challenge she brings to leaders.",
+      body: "Watch how Lornette connects personal resilience with communication, accountability, and confident leadership under pressure.",
+      primaryLabel: "Watch Speaker Reel",
+      secondaryLabel: "View Speaker Kit",
+      videoTitle: "Leadership Speaking Preview",
+      videoSummary:
+        "A quick look at Lornette's presence, storytelling, and ability to connect practical leadership lessons to real-life pressure.",
+      cards: [
+        {
+          icon: "film",
+          title: "Watch Her Speak",
+          body: "Get a quick feel for Lornette's tone, presence, and ability to connect leadership lessons to real life.",
+        },
+        {
+          icon: "target",
+          title: "Match the Message",
+          body: "See how her message connects to resilience, communication, accountability, and leading under pressure.",
+        },
+        {
+          icon: "calendar",
+          title: "Plan The Session",
+          body: "Use the speaker kit to shape the right leadership experience around your audience, goals, format, and date.",
+        },
+      ],
+      footerLabel: "Ready to plan a leadership session",
+    },
   },
   inclusion: {
     slug: "/inclusion",
@@ -465,9 +513,9 @@ export const servicePages: Record<string, ServicePage> = {
     description:
       "Youth-focused mentorship and development experiences that help young people build discipline, confidence, and self-belief.",
     heroImage: {
-      src: mentorshipPoster,
-      alt: "Mentorship and youth development artwork, cropped to focus on the gold pathway visual.",
-      crop: "object-[50%_72%] scale-[2.05]",
+      src: "/generated/mentorship-podium-soft-background.png",
+      alt: "Gold podium artwork with a simplified cream and gold background for mentorship and youth development.",
+      crop: "object-center",
     },
     pillars: [
       "One-on-One Mentoring",
@@ -478,8 +526,13 @@ export const servicePages: Record<string, ServicePage> = {
     ],
     sections: [
       {
-        title: "Mentorship process",
-        items: ["Discover", "Develop", "Empower", "Elevate"],
+        title: "How young people are supported",
+        items: [
+          "Name strengths and pressures",
+          "Build discipline and confidence",
+          "Practice healthy accountability",
+          "Leave with clear next steps",
+        ],
       },
       {
         title: "Youth outcomes",
@@ -536,11 +589,11 @@ export const servicePages: Record<string, ServicePage> = {
         ],
       },
       {
-        title: "Visual resources",
+        title: "Team sessions and takeaways",
         items: [
-          "Elite performance begins at the mental level",
-          "Strategy. Leadership. Elite Execution",
-          "Champion mindset development",
+          "Mindset before performance",
+          "Preparation under pressure",
+          "Confidence through repetition",
         ],
       },
     ],
@@ -548,42 +601,35 @@ export const servicePages: Record<string, ServicePage> = {
   },
 };
 
-export const testimonials: Testimonial[] = [
+export const testimonials = [
   {
+    category: "Coaching & Transformation",
     quote:
-      "Lornette is a passionate track coach. She encouraged my daughter to step up to the challenges of becoming a noteworthy track athlete by building a very good rapport with her and by making her set up track goals for herself which she held her accountable for. As a Life coach and Transformational Speaker, she indeed changes lives by drawing on vast life experiences and actionable insights that not only leave persons motivated but also leads to profound shifts in mindsets and behavior patterns. I find in her a good friend, always understanding, honest and trustworthy and would recommend Lornette any day.",
-    excerpt:
       "As a Life coach and Transformational Speaker, she indeed changes lives by drawing on vast life experiences and actionable insights.",
     name: "Ayo",
-    context: "Professional",
-    category: "Coaching & Transformation",
+    context: "Accounting, Technology Leadership & Healthcare Professional",
   },
   {
-    quote:
-      "I have witnessed countless business and motivational speakers over my career of 15 years. Lornette you are flat-out top of the charts for your ability to connect and interact with your audience to deliver a powerful message and generate positive change. Your takeaways were simple and easy to implement immediately. Lornette, you care about your audience and it was evident from your prepared work and customization before the presentation. Thank you for the keynote. Many were touched by your story and your success and felt honored that you came to speak to them. Your message was powerful and gave us an insight to refocus our energy on good effects and free ourselves from harmful ones. It was also timely and essential to the audience. I look forward to working with you again.",
-    excerpt:
-      "Lornette, you are flat-out top of the charts for your ability to connect and interact with your audience to deliver a powerful message.",
-    name: "Harriet Tinka",
-    context: "Founder/CEO, Bestselling Author, Turning Point Expert, Empowered Me Inc",
     category: "Keynote Speaking",
+    quote:
+      "Lornette, you are flat-out top of the charts for your ability to connect and interact with your audience to deliver a powerful message.",
+    name: "Dr. Harriet Tinka",
+    context: "CPA | CMA | Doctor of Philosophy | Financial Leader & Founder, EmpoweredMe Inc.",
   },
   {
+    category: "Faith & Wellness",
     quote:
-      "The first time I met Lornette we connected right away but I did not know what the connection meant. As we got to know each other and she shared with me her life journey I understood the connection. Lornette overcame challenges and she shared how her faith and coaching helped her to manage. I listened to her share about coaching and how she incorporates her faith as a daily practice with coaching and encouraging the young people she coaches to sweat it out. I thought that is a good strategy to physically sweat it out because it releases the stress. I got so motivated to be physically active. I then started walking and incorporating prayer as part of my walk. I would share with Lornette about my experience about my prayer walk and she encouraged me to increase the intensity and speed slowly, which I did and now I have been consistent with very brisk walking daily and including prayer and reflection as part of my walk. Lornette encouraged me and when I felt tired I would hear her beautiful voice gently reminding me to just sweat it out and I also hear her laughter when I tell her I have done it. She has a beautiful contagious laughter that even when you are tired you cannot help but to laugh as well.",
-    excerpt:
       "Lornette encouraged me to increase the intensity and speed slowly, and now I have been consistent with very brisk walking daily.",
     name: "Carol",
-    context: "Audience testimonial",
-    category: "Faith & Wellness",
+    context: "Wellness audience member",
   },
   {
-    quote:
-      "Lornette is truly an inspiration to today's youth. She is an exceptional track coach truly dedicated, and cares deeply for her athletes' futures. Lornette was my daughter's track coach for a few years while she was in middle school and high school, and taught her so much about focusing on goals, staying dedicated, and believing in herself. Her confidence during high school track competitions soared, which helped her succeed greatly as part of her three-time Metro-Edmonton Gold-Medal winning girls' relay team. My daughter's main reason why we turned to Lornette in the first place was to help her with her speed for her main sport, soccer. Lornette's impressive training sessions and motivational guidance helped a great deal. My daughter is now a varsity soccer player while in university, a key goal she had while she was a youth, and her coaches often comment on her impressive speed on the field. I highly recommend Lornette as a youth track coach and mentor.",
-    excerpt:
-      "Lornette is truly an inspiration to today's youth. She is an exceptional track coach, truly dedicated, and cares deeply for her athletes' futures.",
-    name: "Shawna Randolph",
-    context: "Youth coaching testimonial",
     category: "Youth Coaching",
+    quote:
+      "Lornette is truly an inspiration to today's youth. She is an exceptional track coach, truly dedicated, and cares deeply about her athletes' futures.",
+    name: "Shawna Randolph",
+    context:
+      "Sole Proprietor, Shawna Randolph Communications | Media Relations & Public Speaking Coach",
   },
 ];
 
@@ -591,63 +637,56 @@ export const mediaItems: MediaItem[] = [
   {
     title: "Speaker Reel",
     category: "Keynotes",
-    summary: "Primary speaker reel for event planners reviewing Lornette's message, presence, and audience fit.",
+    summary: "Watch Lornette speak with heart, clarity, and hard-earned wisdom about resilience, confidence, and the courage to keep going.",
     image: {
-      src: "/generated/speaker-reel-reference.png",
-      alt: "Speaker reel thumbnail showing Lornette Daye on a keynote stage.",
+      src: "/generated/speaker-reel-bronze-nature-thumbnail.png",
+      alt: "Bronze-gold abstract nature artwork for the speaker reel thumbnail.",
       crop: "object-center",
     },
     videoSrc: "/media/speaker-reel.mp4",
     duration: "1:51",
   },
   {
-    title: "Recent Speaking Short",
+    title: "One-Minute Speaking Moment",
     category: "Interviews",
-    summary: "Approved public YouTube short for reviewing Lornette's recent speaking presence and audience-facing message.",
+    summary: "A quick glimpse of Lornette's warmth, presence, and message in action.",
     image: images.podcastCard,
     videoSrc: "https://youtube.com/shorts/kkQw4iC2QgU?feature=share",
     duration: "Short",
   },
   {
-    title: "Speaker Message Clip",
+    title: "Speaking Clip: Resilience & Purpose",
     category: "Short Insights",
-    summary: "Approved public YouTube clip that supports speaker-bureau review and booking conversations.",
+    summary: "A concise message clip for teams exploring resilience, identity, and next steps.",
     image: {
       src: "/media/frames/speaker-reel-20.jpg",
-      alt: "Still frame from the supplied speaker reel video.",
+      alt: "Still frame from Lornette Daye's speaker reel video.",
       crop: "object-[50%_28%]",
     },
     videoSrc: "https://youtu.be/n8bzPA16hjw?si=fH7C44WRPIQ7B0Ww",
     duration: "YouTube",
   },
   {
-    title: "Performance Coaching Preview",
+    title: "Athlete Mindset Coaching",
     category: "Keynotes",
-    summary: "A future clip area for athletic mindset, discipline, and performance coaching.",
+    summary: "Elite-athlete lessons on mindset, discipline, preparation, and confidence under pressure.",
     image: {
       src: athletePoster,
       alt: "Athlete and performance coaching artwork, cropped to remove footer social icons.",
       crop: "object-top scale-[1.12]",
     },
-    status: "Clip pending",
+    status: "Coaching Focus",
   },
   {
-    title: "Diversity Award Recognition",
-    category: "Featured Appearances",
-    summary: "Recognition artwork for Friends of Diversity, supporting Lornette's inclusion and community-impact platform.",
-    image: images.recognitionDiversityAward,
-    status: "Recognition",
-  },
-  {
-    title: "Podcast Holding Card",
+    title: "Podcast & Interview Features",
     category: "Podcasts",
-    summary: "Podcast and interview area ready for approved audio or video links.",
+    summary: "Conversations on resilience, purpose, leadership, and the experiences that shape Lornette's work.",
     image: {
       src: mediaThumbnail,
-      alt: "Speaker reel and media thumbnail artwork cropped as a podcast holding card.",
+      alt: "Speaker reel and media thumbnail artwork for podcast and interview features.",
       crop: "object-top",
     },
-    status: "Audio pending",
+    status: "Interviews",
   },
 ];
 
@@ -674,9 +713,9 @@ export const speakerSubmissionProfile = {
   primaryKeynote: {
     title: "Road to the Olympics: Lessons Learned as an Elite Athlete",
     description:
-      "Everybody wants to achieve great things, but few are equipped to overcome the obstacles that inevitably appear along the way. In this keynote, audiences gain tools and strategies drawn directly from championship-level competition, learning how to rise above adversity while maintaining perspective, discipline, and self-esteem.",
+      "Drawing from her journey as an elite sprinter, Lornette shows audiences how discipline, faith, confidence, and perspective can carry them through setbacks without losing sight of who they are.",
     fit:
-      "Tailored for corporate, faith-based, youth, women's, athletic, community, and leadership audiences.",
+      "A powerful elite-athlete story on rising above adversity without losing yourself.",
     attendeeResults: [
       "Understand how foundational experiences shape elite outcomes.",
       "Develop a disciplined strategy for sustaining confidence and motivation.",
@@ -711,12 +750,13 @@ export const speakerSubmissionProfile = {
     "St. Albert Rotary Club",
     "Speak Feed Lead Project",
     "Millionaire Woman Podcast",
+    "Spruce Grove Rotary Club",
   ],
   recognitionHighlights: [
-    "Diversity Award Winner",
-    "Friends of Diversity recognition artwork supplied by brand materials",
-    "Former National Track Champion in 100m and 200m sprint events",
-    "National Coach with decades of athlete mentorship",
+    "Diversity Award winner for inclusion and community impact",
+    "Community volunteer committed to youth, belonging, and service",
+    "Former national 100m and 200m sprint champion",
+    "National coach who has mentored athletes across decades",
     "Author of resilience, performance, purpose, and personal-growth resources",
   ],
 };
@@ -733,68 +773,749 @@ export const categories = [
 
 export const posts: Post[] = [
   {
-    slug: "the-champion-mindset",
-    title: "The Champion Mindset: How Elite Athletes Translate Pressure Into Performance",
+    slug: "finish-strong-chasing-the-olympic-dream",
+    title: "Finish Strong: Lessons from Chasing the Olympic Dream",
     excerpt:
-      "Pressure does not create character from nowhere; it reveals the preparation, discipline, resilience, and teamwork already trained into the body.",
-    category: "Performance Psychology",
-    date: "2026-02-09",
+      "A story of athletic grit, unwavering confidence, and overcoming setbacks. Lornette Daye shares the mindsets that transform fierce competition into a legacy of lasting impact.",
+    category: "Keynotes & Mindset",
+    date: "2026-08-04",
+    author: "Lornette Daye",
+    readTime: "5 min read",
     image: {
-      src: blogSource,
-      alt: "Editorial artwork for champion mindset article.",
-      crop: "object-center",
+      src: "/books/finish-strong-main-cover.png",
+      alt: "Finish Strong: Chasing the Olympic Dream book cover artwork by Lornette Daye.",
+      caption: "A story of resilience. A message of confidence. A legacy of impact.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "Every dream worth pursuing will test your resolve. On the track, as a Canadian National Sprint Champion chasing the Olympic dream, I learned that victory isn't determined when you're feeling fresh—it is forged in the final 50 meters when your lungs burn and every impulse tells you to quit.",
+        "Finish Strong is my personal memoir and strategic framework. It details how to maintain focus when facing heartbreaks, injuries, and setbacks, transforming life's hardest trials into your greatest strength.",
+      ],
+      sections: [
+        {
+          heading: "Key Mindsets for Finishing Strong",
+          paragraphs: [
+            "Whether you are striving for business breakthroughs, recovery, or athletic excellence, these principles apply across every arena.",
+          ],
+          bullets: [
+            {
+              label: "The Final Push",
+              text: "How to summon deep internal power when you feel like giving up.",
+            },
+            {
+              label: "Overcoming Heartbreak",
+              text: "Rebuilding your game plan after missing a long-sought goal.",
+            },
+            {
+              label: "Unwavering Confidence",
+              text: "Believing in your preparation even when standing against elite odds.",
+            },
+          ],
+        },
+        {
+          heading: "Passing the Torch of Impact",
+          paragraphs: [
+            "Your story doesn't end when the race is over; it begins when you use your experience to coach, mentor, and inspire others to run their own race with conviction.",
+          ],
+        },
+      ],
+      conclusion: [
+        "It doesn't matter how you started your season or where you fell. What matters is how you finish. Finish strong!",
+      ],
     },
   },
   {
-    slug: "leadership-clarity",
-    title: "Leadership Clarity Starts With Self-Accountability",
+    slug: "your-setback-is-not-your-finish-line",
+    title: "Your Setback Is Not Your Finish Line",
     excerpt:
-      "A practical reflection on leading with steadiness, honesty, and repeatable habits.",
-    category: "Leadership",
-    date: "2026-02-08",
+      "When life challenges our resilience, it is easy to view a painful setback as an ending. Here is how athletes, leaders, and communities can shift their mindset, practice resilience, and turn painful seasons into enduring purpose.",
+    category: "Mindset Mastery",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "3 min read",
     image: {
-      src: blogSource,
-      alt: "Editorial blog artwork about staying close to your source.",
+      src: "/generated/blog-setback-finish-line.jpg",
+      alt: "Your Setback Is Not Your Finish Line artwork featuring running shoes, a whistle, microphone, medal, and performance plan.",
+      caption: "Turning pain into purpose on the path to finishing strong.",
+      aspect: "aspect-square",
       crop: "object-center",
+    },
+    body: {
+      intro: [
+        "In athletics, business, and daily life, we all encounter obstacles that threaten to stall our progress. A sudden setback—whether a career shift, an injury, a disappointment, or an unexpected transition—can easily feel like a permanent roadblock. But a true champion's perspective reminds us: a stumble on the track does not dictate the end of your race.",
+        "The true test of leadership and personal fortitude isn't avoiding hardship; it is discovering the capacity to rise above it. When you actively reframe your struggles, you uncover the profound opportunity to transform personal adversity and pain into powerful purpose.",
+      ],
+      sections: [
+        {
+          heading: "The Four Pillars of the Performance Plan",
+          paragraphs: [
+            "Rebuilding momentum requires more than wishful thinking—it calls for an actionable strategy and unwavering commitment. Whether you are leading a team, coaching youth, or personally striving for your next breakthrough, building a sturdy framework will anchor you when pressure builds.",
+          ],
+          bullets: [
+            {
+              label: "Focus",
+              text: "Direct your emotional and cognitive energy toward what you can control. Rather than looking backward at what was lost, fix your eyes forward on the actionable steps in front of you.",
+            },
+            {
+              label: "Preparation",
+              text: "True confidence is forged through deliberate preparation. Every setback offers invaluable lessons that enable you to refine your habits, study your terrain, and re-enter the arena better prepared than before.",
+            },
+            {
+              label: "Perseverance",
+              text: "Endurance is built in the extra miles. When fatigue and self-doubt arise, perseverance means making the simple, courageous decision to keep stepping forward, one day at a time.",
+            },
+            {
+              label: "Purpose",
+              text: "Your 'why' is your greatest source of sustainable fuel. When your personal goals connect to a lasting mission—inspiring others, uplifting your community, and leading with integrity—no setback can extinguish your drive.",
+            },
+          ],
+        },
+        {
+          heading: "Mindset, Discipline, and Resilience",
+          paragraphs: [
+            "An elite mindset isn't born entirely out of easy victories; it is carefully shaped through overcoming adversity. Discipline bridges the gap between motivation and enduring achievement. By committing to daily acts of self-improvement and keeping faith through difficult seasons, resilience becomes your quiet strength.",
+            "When leaders and athletes embrace this empowering viewpoint, communities benefit. Your willingness to stand up after falling gives others permission and courage to do the exact same thing.",
+          ],
+        },
+      ],
+      conclusion: [
+        "No matter where you find yourself today, remember that your current chapter is just one part of your broader story. Draw a line in the sand, embrace your renewed purpose, and fix your eyes on the road ahead. Your setback is simply the setup for your ultimate comeback—get ready to finish strong.",
+      ],
     },
   },
   {
-    slug: "inclusion-in-action",
-    title: "Inclusion in Action Is Built in Small Daily Choices",
+    slug: "embrace-new-beginnings",
+    title: "When It's Time to Begin Again",
     excerpt:
-      "Belonging becomes real when people practice listening, accountability, and shared courage.",
-    category: "Diversity & Inclusion",
-    date: "2026-02-08",
-    image: {
-      src: blogNature,
-      alt: "Warm nature editorial artwork for reflective blog content.",
-      crop: "object-center",
-    },
-  },
-  {
-    slug: "purpose-driven-success",
-    title: "Purpose-Driven Success Needs Resilience",
-    excerpt:
-      "A reflection on vulnerability, support, and strength during growth.",
+      "Fresh starts can feel uncertain. This reflection offers courage, practical steps, and a reminder that change can become a place of growth.",
     category: "Purpose-Driven Success",
-    date: "2026-02-08",
+    date: "2026-03-16",
+    author: "Lornette Daye",
+    readTime: "2 min read",
     image: {
-      src: blogVulnerability,
-      alt: "Warm park bench editorial artwork for vulnerability article.",
+      src: "/generated/blog-embrace-new-beginnings-forest.png",
+      alt: "A golden sunlit path winding through a quiet forest.",
+      caption: "A winding path through a forest.",
       crop: "object-center",
+    },
+    body: {
+      intro: [
+        "Starting over can feel like standing at the edge of a vast unknown. It is natural to hesitate when faced with the idea of leaving behind what is familiar. Yet the power of new beginnings lies in its ability to open doors to growth, self-discovery, and renewed purpose.",
+        "This post explores why embracing fresh starts is essential, shares inspiring stories of people who reinvented themselves, and offers practical steps to help you overcome fear and take that first step toward change.",
+      ],
+      sections: [
+        {
+          heading: "Why Starting Over Matters",
+          paragraphs: [
+            "Life rarely follows a straight line. Careers shift, relationships change, and personal goals evolve. When circumstances push us to start over, it can feel like a setback. But starting over is often a chance to realign with what truly matters.",
+            "New beginnings encourage resilience. Each time you embrace change, you strengthen your ability to adapt and thrive. This mindset turns challenges into opportunities. Instead of fearing failure, you begin to see every ending as a doorway to something better.",
+          ],
+        },
+        {
+          heading: "How to Overcome Fear and Take the First Step",
+          paragraphs: [
+            "Fear of the unknown often holds people back from starting over. Here are practical ways to move past that fear:",
+          ],
+          bullets: [
+            {
+              label: "Acknowledge Your Feelings",
+              text: "Recognize that fear is normal. Instead of fighting it, accept it as part of the process. This reduces its power over you.",
+            },
+            {
+              label: "Break Change Into Small Steps",
+              text: "Big changes can feel overwhelming. Divide your goal into manageable actions. If you want a new career, start by researching fields, then take a course, then apply for jobs.",
+            },
+            {
+              label: "Seek Support",
+              text: "Talk to friends, mentors, or support groups. Sharing your plans and fears can provide encouragement and new perspectives.",
+            },
+            {
+              label: "Learn From Setbacks",
+              text: "Expect some bumps along the way. Treat mistakes as learning opportunities rather than failures.",
+            },
+            {
+              label: "Commit to Growth",
+              text: "Focus on what you will gain rather than what you might lose. Growth requires stepping outside your comfort zone.",
+            },
+          ],
+        },
+        {
+          heading: "Seeing Starting Over as Opportunity",
+          paragraphs: [
+            "Starting over is not a sign of failure but a chance to rewrite your story. It offers:",
+          ],
+          bullets: [
+            {
+              label: "Self-Discovery",
+              text: "You learn more about your values, strengths, and desires when you step into new roles or environments.",
+            },
+            {
+              label: "Renewed Energy",
+              text: "New challenges can reignite passion and creativity.",
+            },
+            {
+              label: "Improved Confidence",
+              text: "Each successful step builds belief in your ability to handle change.",
+            },
+            {
+              label: "Expanded Horizons",
+              text: "You meet new people, explore different ideas, and open doors you never imagined.",
+            },
+          ],
+        },
+      ],
+      conclusion: [
+        "I hope this post inspires you to embrace new beginnings with an open heart. Remember, trusting yourself to navigate uncertainty is a powerful step toward creating a fulfilling life. As you embark on this journey, know that each challenge is an opportunity for growth, and every new path can lead to experiences you never imagined.",
+      ],
+    },
+  },
+  {
+    slug: "power-of-vulnerability",
+    title: "The Courage to Ask for Help",
+    excerpt:
+      "Vulnerability is not weakness. It can be the honest first step toward support, healing, and renewed strength.",
+    category: "Purpose-Driven Success",
+    date: "2026-01-28",
+    author: "Lornette Daye",
+    readTime: "5 min read",
+    image: {
+      src: "/generated/blog-vulnerability-bench.png",
+      alt: "A quiet bench in a golden park with a contemplative figure seated alone.",
+      caption: "A quiet bench beneath warm golden light.",
+      crop: "object-center",
+    },
+    body: {
+      intro: [
+        "Asking for help can feel like admitting weakness. Many people hesitate to reach out when they need support because they fear judgment or worry about appearing incapable.",
+        "But vulnerability is not the opposite of strength. It is often the place where strength begins to grow.",
+      ],
+      sections: [
+        {
+          heading: "Why Help Matters",
+          paragraphs: [
+            "No one grows alone. A trusted voice, a mentor, a friend, or a community can help us see what fear makes blurry. Support gives us language for what we are carrying and courage for the next step.",
+          ],
+        },
+        {
+          heading: "Practicing Courage Through Vulnerability",
+          paragraphs: [
+            "Vulnerability does not require sharing everything with everyone. It means choosing safe, wise places where honesty can lead to healing and growth.",
+          ],
+          bullets: [
+            {
+              label: "Name what you need",
+              text: "Clarity begins when you can say what kind of support would actually help.",
+            },
+            {
+              label: "Choose trusted people",
+              text: "Share with people who have earned access to your story.",
+            },
+            {
+              label: "Receive without shame",
+              text: "Let encouragement, guidance, and care strengthen you instead of resisting it.",
+            },
+          ],
+        },
+      ],
+      conclusion: [
+        "There is strength in reaching out. When you allow help to meet you where you are, you create room for resilience, wisdom, and renewed confidence.",
+      ],
+    },
+  },
+  {
+    slug: "power-of-nature",
+    title: "What Nature Teaches Us About Faith",
+    excerpt:
+      "The natural world has a quiet way of teaching patience, provision, renewal, and trust when we slow down enough to notice.",
+    category: "Purpose-Driven Success",
+    date: "2025-11-08",
+    author: "Lornette Daye",
+    readTime: "1 min read",
+    image: {
+      src: "/generated/blog-nature-flower.png",
+      alt: "A white flower glowing in warm sunlight in a peaceful meadow.",
+      caption: "A flower reaching toward warm sunlight.",
+      crop: "object-center",
+    },
+    body: {
+      intro: [
+        "Growing up, I spent a lot of time in nature. I loved climbing trees, picking fresh fruit, and enjoying the sounds of life all around me.",
+        "Nature has a way of teaching us if we are willing to slow down and pay attention.",
+      ],
+      sections: [
+        {
+          heading: "Lessons Hidden in Creation",
+          paragraphs: [
+            "A flower does not rush its blooming. A tree does not apologize for growing through seasons. The natural world reminds us that life has rhythm, timing, beauty, and purpose.",
+          ],
+          bullets: [
+            {
+              label: "Patience",
+              text: "Growth often happens quietly before it becomes visible.",
+            },
+            {
+              label: "Provision",
+              text: "There are signs of care and abundance in the details around us.",
+            },
+            {
+              label: "Renewal",
+              text: "Every season carries an invitation to begin again.",
+            },
+          ],
+        },
+      ],
+      conclusion: [
+        "When we pause long enough to notice, nature can point us back to gratitude, faith, and the steady hope that new life is always possible.",
+      ],
+    },
+  },
+  {
+    slug: "stay-close-to-your-source",
+    title: "Stay Close to Your Source",
+    excerpt:
+      "When life gets noisy, return to the people, practices, and faith that steady you and remind you who you are.",
+    category: "Purpose-Driven Success",
+    date: "2025-10-03",
+    author: "Lornette Daye",
+    readTime: "2 min read",
+    image: {
+      src: "/generated/blog-source-ship.png",
+      alt: "A vintage sailing ship on calm golden water at sunrise.",
+      caption: "A ship staying close to calm golden waters.",
+      crop: "object-center",
+    },
+    body: {
+      intro: [
+        "Many times in life, we can drift away from the things that grounded and encouraged us at the start of our journey. It could be a person, an activity, a place, a practice, or a quiet source of faith.",
+        "Staying close to your source helps you remember who you are and why you began.",
+      ],
+      sections: [
+        {
+          heading: "What Grounds You?",
+          paragraphs: [
+            "Your source is the place you return to when life becomes noisy. It reminds you of your values, your strength, and the truth that you are not defined by pressure.",
+          ],
+        },
+        {
+          heading: "Returning With Intention",
+          paragraphs: [
+            "When you feel disconnected, do not shame yourself. Pause, breathe, and take one step back toward what restores you.",
+          ],
+          bullets: [
+            {
+              label: "Reconnect",
+              text: "Make space for the people and practices that strengthen your spirit.",
+            },
+            {
+              label: "Reflect",
+              text: "Notice what pulls you away from peace and purpose.",
+            },
+            {
+              label: "Realign",
+              text: "Choose one grounded action that brings you back to what matters.",
+            },
+          ],
+        },
+      ],
+      conclusion: [
+        "When you stay close to your source, you carry steadiness into every new season.",
+      ],
+    },
+  },
+  {
+    slug: "survival-skills-for-athletes",
+    title: "Survival Skills for Athletes: Promoting Focus & Excellence in Every Stage of Life",
+    excerpt:
+      "Are you ready to build a life that feels just as fulfilling off the field as it does on it? Discover how to elevate your game, your mindset, and your legacy.",
+    category: "Athlete & Performance Coaching",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    amazonUrl: "https://a.co/d/0cuYaVO2",
+    image: {
+      src: "/books/survival-skills-for-athletes-cover.jpg",
+      alt: "Survival Skills for Athletes book cover artwork by Lornette Daye.",
+      caption: "A guide to promote focus and excellence in every stage of life.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "Are you ready to build a life that feels just as fulfilling off the field as it does on it?",
+        "As a high-achieving, driven, and ambitious athlete, I know firsthand that you are no stranger to the pursuit of excellence. You understand that every victory comes with profound sacrifice, every challenge is a hidden opportunity to grow, and every agonizing setback is a masterclass in resilience.",
+        "But I want to ask you a crucial question: Who are you beyond the trophies, the scoreboards, and the accolades?",
+        "There is a deeper journey waiting for you—one that calls for radical balance, continuous personal growth, and an unwavering commitment to living a life of true purpose. True success isn’t just about the victories you secure today; it’s about the holistic, rewarding life you build beyond them.",
+        "In Survival Skills for Athletes, I invite you to step into a life that is both elite in achievement and deeply rewarding in spirit. This isn't just a playbook for your sport—it's a playbook for your life.",
+      ],
+      sections: [
+        {
+          heading: "Inside these pages, you will learn how to:",
+          paragraphs: [],
+          bullets: [
+            {
+              label: "Strengthen Your Mindset:",
+              text: "Develop the unshakeable mental fortitude needed to handle extreme pressure and pivot gracefully during transitions.",
+            },
+            {
+              label: "Nurture Meaningful Relationships:",
+              text: "Build a bulletproof support system of family and friends that fuels your ambition rather than drains it.",
+            },
+            {
+              label: "Build a Future of Value:",
+              text: "Master the core pillars of Faith, Finance, Fitness, and more to ensure you thrive in every single stage of life.",
+            },
+          ],
+        },
+        {
+          heading: "Elevate Your Game, Your Mindset, and Your Legacy",
+          paragraphs: [
+            "Here, you’ll find the exact guidance, encouragement, and practical insights you need to grow—not just as a competitor, but as a complete person. Your journey is about so much more than winning. It’s time to elevate your game, your mindset, and your legacy.",
+          ],
+        },
+      ],
+      conclusion: [
+        "Ready to take the next step in your athletic and personal journey? Visit lornettedaye.com to book me for elite coaching, speaking engagements, and exclusive workshops, and grab your free Athlete's Daily Focus Checklist today!",
+      ],
+    },
+  },
+  {
+    slug: "survival-skills-for-women",
+    title: "Survival Skills for Women: Living with Hope, Resilience, and Meaning",
+    excerpt:
+      "A comprehensive guide for women navigating seasons of change, emotional demands, and leadership. Learn how to protect your peace, embrace your worth, and build an enduring legacy of purpose.",
+    category: "Resilience & Mindset",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    image: {
+      src: "/books/survival-skills-for-women-cover.png",
+      alt: "Survival Skills for Women book cover artwork by Lornette Daye.",
+      caption: "A comprehensive guide to living with hope, resilience, and meaning.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "Women are often called to balance countless roles—leading in careers, nurturing families, supporting communities, and holding together circles of strength. Yet in the midst of giving so much to others, it is easy to lose sight of your own renewal and purpose.",
+        "Survival Skills for Women was written as a warm, empowering roadmap to help you reclaim your space, honor your journey, and thrive with quiet confidence through every transition.",
+      ],
+      sections: [
+        {
+          heading: "Reclaiming Your Space & Inner Peace",
+          paragraphs: [
+            "True strength does not mean carrying every burden alone. It means knowing when to pause, establish healthy boundaries, and replenish your spirit.",
+          ],
+          bullets: [
+            {
+              label: "Self-Compassion & Healing",
+              text: "Replace perfectionism with self-grace, honoring the seasons where rest is your greatest victory.",
+            },
+            {
+              label: "Purpose Alignment",
+              text: "Clarify your core values so your daily choices reflect what truly matters to you.",
+            },
+            {
+              label: "Community & Support",
+              text: "Surround yourself with uplifting connections that encourage your personal and professional growth.",
+            },
+          ],
+        },
+        {
+          heading: "Thriving in Every Season",
+          paragraphs: [
+            "No matter what challenges you have faced in the past, your future is full of potential. When you step into your worth with intentionality, you inspire every woman around you to do the same.",
+          ],
+        },
+      ],
+      conclusion: [
+        "Take a deep breath and give yourself permission to grow. You possess everything you need to live with profound hope and purpose.",
+      ],
+    },
+  },
+  {
+    slug: "survival-skills-for-believers",
+    title: "Survival Skills for Believers: Living with Wisdom, Grace, and Peace",
+    excerpt:
+      "In times of uncertainty, standing firm in faith requires spiritual grounding and practical wisdom. Explore how grace, patience, and intentional living bring peace into everyday life.",
+    category: "Spiritual Growth",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    image: {
+      src: "/books/survival-skills-for-believers-cover.png",
+      alt: "Survival Skills for Believers book cover artwork by Lornette Daye.",
+      caption: "A Christian guide to living with wisdom, grace, and peace.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "Living out faith in a complex, fast-paced world demands both spiritual depth and daily practical wisdom. When life brings unexpected storms, our foundation must be rooted in unshakeable truth and grace.",
+        "Survival Skills for Believers offers scriptural encouragement and practical reflections designed to help you navigate hardship, anchor your heart in divine peace, and shine as a light in your home and workplace.",
+      ],
+      sections: [
+        {
+          heading: "Anchoring Your Heart in Unshakeable Truth",
+          paragraphs: [
+            "Spiritual resilience is cultivated day by day through prayer, scripture reflection, and choosing trust over fear.",
+          ],
+          bullets: [
+            {
+              label: "Wisdom in Decision-Making",
+              text: "Seek divine guidance before reacting to life's sudden challenges.",
+            },
+            {
+              label: "Grace Under Pressure",
+              text: "Respond to hostility and stress with patient grace and steady confidence.",
+            },
+            {
+              label: "Resting in Peace",
+              text: "Guard your heart against anxiety by entrusting your unknown future to a known God.",
+            },
+          ],
+        },
+        {
+          heading: "Walking Out Your Calling",
+          paragraphs: [
+            "Your faith is not just for quiet moments; it is meant to inspire your leadership, service, and community. When you walk with wisdom and peace, you become a sanctuary of hope for others.",
+          ],
+        },
+      ],
+      conclusion: [
+        "May you walk with quiet courage today, knowing that grace surrounds every step of your path.",
+      ],
+    },
+  },
+  {
+    slug: "umattr-devotional-reflections",
+    title: "UMATTR Devotional: Reflections for the Moments That Ask You to Keep Going",
+    excerpt:
+      "When fatigue sets in and the path forward feels steep, small daily reflections can reignite your purpose. Take time to pause, breathe, and remember that your journey deeply matters.",
+    category: "Personal Growth",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "3 min read",
+    image: {
+      src: "/books/umattr-devotional-cover.png",
+      alt: "UMATTR Devotional book cover artwork by Lornette Daye.",
+      caption: "Reflections for the moments that ask you to keep going.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "There are moments in every journey when the weight of responsibility feels heavy, and staying motivated seems difficult. In those quiet times, what we need isn't more pressure—it is gentle encouragement and a reminder of why we started.",
+        "The UMATTR Devotional was created as a peaceful space for daily reflection. Each entry offers a brief, powerful thought to help you ground your mind, renew your spirit, and keep moving forward.",
+      ],
+      sections: [
+        {
+          heading: "Daily Prompts for Renewal",
+          paragraphs: [
+            "Taking five minutes each day to write, reflect, and pray transforms how you handle daily stress.",
+          ],
+          bullets: [
+            {
+              label: "Pause & Reset",
+              text: "Create stillness amidst your busy schedule to listen to your inner voice.",
+            },
+            {
+              label: "Remember Your Value",
+              text: "Affirm your inherent worth—you matter, your story matters, and your contribution counts.",
+            },
+            {
+              label: "One Step at a Time",
+              text: "Focus on making progress today without worrying about tomorrow's mountain.",
+            },
+          ],
+        },
+        {
+          heading: "A Companion for the Road Ahead",
+          paragraphs: [
+            "Whether you keep this devotional on your nightstand or desk, let it serve as a gentle reminder that every small step of endurance leads toward a greater legacy.",
+          ],
+        },
+      ],
+      conclusion: [
+        "Never underestimate the power of showing up for yourself. You matter—keep going.",
+      ],
+    },
+  },
+  {
+    slug: "survival-skills-for-men-guide",
+    title: "Survival Skills for Men: Living with Balance, Meaning, and Impact",
+    excerpt:
+      "A practical blueprint for men balancing career, family, leadership, and emotional well-being. Learn to quiet the noise, lead with integrity, and build habits that sustain long-term strength.",
+    category: "Leadership & Men's Health",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    image: {
+      src: "/books/survival-skills-for-men-2026-cover.png",
+      alt: "2026 Survival Skills for Men book cover artwork by Lornette Daye.",
+      caption: "A comprehensive guide to living with balance, meaning, and impact.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "Men today face subtle yet intense pressure: to perform at work, provide for family, maintain strength, and remain emotionally grounded. Yet many men carry this weight silently without practical tools to manage stress or evaluate their true direction.",
+        "Survival Skills for Men provides honest, action-oriented strategies to help men break free from isolation, build emotional discipline, and lead their lives with authentic purpose.",
+      ],
+      sections: [
+        {
+          heading: "Building Steadier Habits & Emotional Strength",
+          paragraphs: [
+            "Real manhood isn't defined by invulnerability; it is demonstrated through self-awareness, discipline, and intentional brotherhood.",
+          ],
+          bullets: [
+            {
+              label: "Stress & Pressure Management",
+              text: "Recognize burnout early and establish healthy physical and mental outlets.",
+            },
+            {
+              label: "Purposeful Leadership",
+              text: "Lead your family, business, or team by modeling integrity and open communication.",
+            },
+            {
+              label: "Authentic Community",
+              text: "Build trusted friendships with men who hold you accountable to your highest standards.",
+            },
+          ],
+        },
+        {
+          heading: "Leaving a Lasting Impact",
+          paragraphs: [
+            "When a man gets clear on his principles and aligns his daily habits, everyone around him benefits. You have the power to shape a legacy of honor, resilience, and strength.",
+          ],
+        },
+      ],
+      conclusion: [
+        "Stand tall, step into your responsibility, and lead with balance and purpose.",
+      ],
+    },
+  },
+  {
+    slug: "survival-skills-surviving-to-thriving",
+    title: "Survival Skills: From Surviving to Thriving",
+    excerpt:
+      "Surviving is the first step, but thriving is your ultimate destination. Discover actionable strategies to shift out of survival mode and into a vibrant, intentional life of fulfillment.",
+    category: "Transformational Growth",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    image: {
+      src: "/books/survival-skills-surviving-to-thriving-cover.png",
+      alt: "2026 Survival Skills: Surviving to Thriving book cover artwork by Lornette Daye.",
+      caption: "Surviving to Thriving—building a life of enduring joy and fulfillment.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "When life hits hard, staying afloat is our initial instinct. We go into survival mode—managing crisis, enduring stress, and getting through the day. But survival was never meant to be your permanent state.",
+        "Survival Skills: From Surviving to Thriving is designed to guide you past survival mode and into a season of vitality, clarity, and thriving purpose.",
+      ],
+      sections: [
+        {
+          heading: "Shifting Your Mindset for Growth",
+          paragraphs: [
+            "Moving from surviving to thriving requires intentional reframing and practical tools to rebuild momentum.",
+          ],
+          bullets: [
+            {
+              label: "Breaking the Crisis Cycle",
+              text: "Transition from reactive survival habits to proactive, peaceful planning.",
+            },
+            {
+              label: "Cultivating Vitality",
+              text: "Prioritize physical wellness, emotional rest, and joy.",
+            },
+            {
+              label: "Designing Your Thriving Plan",
+              text: "Set clear goals aligned with your highest vision for life.",
+            },
+          ],
+        },
+        {
+          heading: "Your Season of Fullness",
+          paragraphs: [
+            "You are meant for more than just getting by. When you adopt a thriving mindset, you unlock the energy and vision to achieve your dreams.",
+          ],
+        },
+      ],
+      conclusion: [
+        "Step out of survival mode today. Your season of thriving starts now.",
+      ],
+    },
+  },
+  {
+    slug: "survival-skills-for-students",
+    title: "Survival Skills for Students: Strength, Wisdom, and Intentionality",
+    excerpt:
+      "Equipping the next generation of leaders with academic focus, emotional balance, and confidence. How students can navigate academic pressure and build a foundation for lifelong success.",
+    category: "Youth & Leadership",
+    date: "2026-08-03",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    image: {
+      src: "/books/survival-skills-for-students-cover.png",
+      alt: "2026 Survival Skills for Students book cover artwork by Lornette Daye.",
+      caption: "A comprehensive guide to living with strength, wisdom, and intentionality.",
+      aspect: "aspect-[2/3]",
+      crop: "object-contain",
+    },
+    body: {
+      intro: [
+        "Students today navigate unique challenges: academic demands, social media comparison, peer pressure, and decisions about future careers. Without strong guidance, it is easy to feel overwhelmed or unsure of one's path.",
+        "Survival Skills for Students was written to provide young adults and students with essential tools for building personal discipline, emotional resilience, and clear focus.",
+      ],
+      sections: [
+        {
+          heading: "Essential Tools for Student Success",
+          paragraphs: [
+            "Success in school and life is built on positive habits, strong character, and self-belief.",
+          ],
+          bullets: [
+            {
+              label: "Academic Focus & Discipline",
+              text: "Master time management and study habits to reduce stress and excel.",
+            },
+            {
+              label: "Confidence & Resilience",
+              text: "Learn to handle setbacks, peer pressure, and social anxieties with steady self-worth.",
+            },
+            {
+              label: "Vision & Purpose",
+              text: "Discover your unique gifts and set meaningful goals for higher education and career paths.",
+            },
+          ],
+        },
+        {
+          heading: "Empowering the Next Generation",
+          paragraphs: [
+            "When young people learn these survival skills early, they gain a lifelong advantage. They step into adulthood prepared to lead, create, and inspire.",
+          ],
+        },
+      ],
+      conclusion: [
+        "To every student reading this: your potential is limitless. Invest in your growth and live with intentionality!",
+      ],
     },
   },
 ];
 
 export const speakerKitDownloads = [
-  { id: "short-bio", title: "Short Bio", href: "/speaker-kit/short-bio-sample.html" },
-  { id: "long-bio", title: "Long Bio", href: "/speaker-kit/long-bio-sample.html" },
-  { id: "speaker-one-sheet", title: "Speaker One-Sheet", href: "/speaker-kit/speaker-one-sheet-sample.html" },
-  { id: "headshots", title: "Headshots", href: "/speaker-kit/headshots-sample.html" },
-  { id: "topic-sheet", title: "Topic Sheet", href: "/speaker-kit/topic-sheet-sample.html" },
-  { id: "intro-script", title: "Intro Script", href: "/speaker-kit/intro-script-sample.html" },
+  { id: "short-bio", title: "Short Bio", href: "/speaker-kit/lornette-short-bio.pdf" },
+  { id: "long-bio", title: "Long Bio", href: "/speaker-kit/lornette-long-bio.pdf" },
+  {
+    id: "speaker-one-sheet",
+    title: "Speaker One-Sheet",
+    cardTitle: "Speaker One-Sheet Site",
+    href: "https://ld-speaker-onesheet.vercel.app",
+  },
   { id: "av-requirements", title: "AV Requirements", href: "/speaker-kit/av-requirements-sample.html" },
-  { id: "logo-pack", title: "Logo Pack", href: "/speaker-kit/logo-pack-sample.html" },
 ];
 
 const stripeBookLinks = {
@@ -803,10 +1524,28 @@ const stripeBookLinks = {
     "https://buy.stripe.com/9B6bJ1542gA262JfCG1VK00",
   roadToTheOlympics:
     process.env.NEXT_PUBLIC_STRIPE_ROAD_TO_THE_OLYMPICS_URL ??
-    "https://buy.stripe.com/bJe4gz686fvY1Mt9ei1VK01",
+    "https://buy.stripe.com/8x28wP9ki1F8ezf9ei1VK0A",
   survivingLife:
     process.env.NEXT_PUBLIC_STRIPE_SURVIVING_LIFE_URL ??
     "https://buy.stripe.com/7sY8wPcwuabE62Jcqu1VK02",
+  survivalSkillsForAthletes:
+    process.env.NEXT_PUBLIC_STRIPE_SURVIVAL_SKILLS_FOR_ATHLETES_URL ??
+    "https://buy.stripe.com/PLACEHOLDER_ATHLETES",
+  survivalSkillsForBelievers:
+    process.env.NEXT_PUBLIC_STRIPE_SURVIVAL_SKILLS_FOR_BELIEVERS_URL ??
+    "https://buy.stripe.com/PLACEHOLDER_BELIEVERS",
+  survivalSkillsForWomen:
+    process.env.NEXT_PUBLIC_STRIPE_SURVIVAL_SKILLS_FOR_WOMEN_URL ??
+    "https://buy.stripe.com/PLACEHOLDER_WOMEN",
+  umattrDevotional:
+    process.env.NEXT_PUBLIC_STRIPE_UMATTR_DEVOTIONAL_URL ??
+    "https://buy.stripe.com/PLACEHOLDER_UMATTR",
+  survivalSkillsForStudents:
+    process.env.NEXT_PUBLIC_STRIPE_SURVIVAL_SKILLS_FOR_STUDENTS_URL ??
+    "https://buy.stripe.com/PLACEHOLDER_STUDENTS",
+  survivalSkillsSurvivingToThriving:
+    process.env.NEXT_PUBLIC_STRIPE_SURVIVAL_SKILLS_SURVIVING_TO_THRIVING_URL ??
+    "https://buy.stripe.com/PLACEHOLDER_SURVIVING_TO_THRIVING",
 };
 
 export const bookListings: BookListing[] = [
@@ -815,15 +1554,15 @@ export const bookListings: BookListing[] = [
     title: "Survival Skills for Men",
     subtitle: "Build resilience, balance, and purpose in every part of your life.",
     description:
-      "A practical digital guide for men who want to strengthen emotional resilience, clarify purpose, and build steadier daily habits through seasons of pressure and transition.",
+      "A comprehensive guide for men who want to strengthen emotional resilience, clarify purpose, and build steadier daily habits through seasons of pressure and transition.",
     audience:
-      "For readers, leaders, fathers, mentors, community builders, and men navigating personal growth.",
+      "For men seeking clarity and practical strategies to navigate pressure, stress, and leadership with confidence.",
     priceLabel: "$14.99 CAD",
-    format: "PDF download",
+    format: "Digital Edition",
     image: {
-      src: survivalSkillsMen,
-      alt: "Survival Skills for Men book cover artwork, cropped to focus on the book.",
-      crop: "object-[50%_35%] scale-[1.16]",
+      src: "/books/survival-skills-for-men-2026-cover.png",
+      alt: "Survival Skills for Men 2026 book cover.",
+      crop: "object-top",
     },
     purchaseUrl: stripeBookLinks.survivalSkillsForMen,
     stripePaymentLinkId: "plink_1TYMDiH99Nljn2XPaPvvbDhp",
@@ -835,21 +1574,21 @@ export const bookListings: BookListing[] = [
   },
   {
     slug: "road-to-the-olympics",
-    title: "Road to the Olympics",
+    title: "Finish Strong: Chasing the Olympic Dream",
     subtitle: "A journey of resilience, purpose, and legacy.",
     description:
-      "A motivational PDF resource drawn from Lornette's elite-athlete lens, focused on perseverance, identity, discipline, and rising again after setbacks.",
+      "A motivational autobiography drawn from Lornette's elite-athlete lens, focused on perseverance, identity, discipline, and rising again after setbacks.",
     audience:
-      "For athletes, coaches, youth leaders, schools, teams, and readers who need a champion-mindset reset.",
+      "For aspiring athletes, coaches, youth leaders, and anyone driven to achieve ambitious goals.",
     priceLabel: "$14.99 CAD",
-    format: "PDF download",
+    format: "Digital Edition",
     image: {
-      src: roadBook,
-      alt: "Road to the Olympics book cover artwork, cropped to focus on the book.",
-      crop: "object-[50%_35%] scale-[1.16]",
+      src: finishStrongBook,
+      alt: "Finish Strong: Chasing the Olympic Dream book cover artwork.",
+      crop: "object-center",
     },
     purchaseUrl: stripeBookLinks.roadToTheOlympics,
-    stripePaymentLinkId: "plink_1TYMKfH99Nljn2XPQs08iLxk",
+    stripePaymentLinkId: "plink_1TqLPUH99Nljn2XPX4TUpSQU",
     highlights: [
       "Elite athlete mindset",
       "Resilience after pressure",
@@ -859,17 +1598,17 @@ export const bookListings: BookListing[] = [
   {
     slug: "surviving-life",
     title: "Surviving Life",
-    subtitle: "A guide to resilience when life hits hard.",
+    subtitle: "A guide to finding strength, embracing purpose, and living with hope.",
     description:
-      "A warm, encouraging PDF guide for readers rebuilding hope, confidence, and perspective after difficult seasons.",
+      "A warm, encouraging guide for readers rebuilding hope, confidence, and perspective after difficult seasons.",
     audience:
       "For individuals, women's groups, mentoring circles, faith communities, and anyone seeking practical encouragement.",
     priceLabel: "$14.99 CAD",
-    format: "PDF download",
+    format: "Digital Edition",
     image: {
-      src: survivingLife,
-      alt: "Surviving Life book cover artwork, cropped to focus on the book.",
-      crop: "object-[50%_34%] scale-[1.16]",
+      src: "/books/surviving-life-2026-cover.png",
+      alt: "Surviving Life 2026 book cover — beach at sunrise with footprints in the sand.",
+      crop: "object-top",
     },
     purchaseUrl: stripeBookLinks.survivingLife,
     stripePaymentLinkId: "plink_1TYMVSH99Nljn2XPYvPsZSw0",
@@ -877,6 +1616,144 @@ export const bookListings: BookListing[] = [
       "Hope after hardship",
       "Resilience practices",
       "Confidence and renewal",
+    ],
+  },
+  {
+    slug: "survival-skills-for-athletes",
+    title: "Survival Skills for Athletes",
+    subtitle: "A guide to promote focus and excellence in every stage of life.",
+    description:
+      "A comprehensive resource for athletes at every level who want to build focus, resilience, discipline, and a champion mindset on and off the field.",
+    audience:
+      "For athletes, coaches, sports teams, youth leaders, and anyone competing in sport or in life.",
+    priceLabel: "$14.99 CAD",
+    format: "Digital Edition",
+    image: {
+      src: "/books/survival-skills-for-athletes-cover-new.png",
+      alt: "Survival Skills for Athletes book cover — a team of athletes in gold and white uniforms.",
+      crop: "object-top",
+    },
+    purchaseUrl: stripeBookLinks.survivalSkillsForAthletes,
+    stripePaymentLinkId: "",
+    highlights: [
+      "Champion mindset building",
+      "Focus and discipline on and off the field",
+      "Resilience through setbacks and pressure",
+    ],
+  },
+  {
+    slug: "survival-skills-for-believers",
+    title: "Survival Skills for Believers",
+    subtitle: "A Christian guide to living with wisdom, grace, and peace.",
+    description:
+      "A faith-based guide helping believers navigate life's hardest chapters with purpose, scripture-backed wisdom, and the confidence that comes from knowing your identity in Christ.",
+    audience:
+      "For Christians, faith communities, church groups, and anyone who wants to deepen their walk while navigating real-world challenges.",
+    priceLabel: "$14.99 CAD",
+    format: "Digital Edition",
+    image: {
+      src: "/books/survival-skills-for-believers-cover.png",
+      alt: "Survival Skills for Believers book cover — open Bible in a scenic landscape at sunrise.",
+      crop: "object-top",
+    },
+    purchaseUrl: stripeBookLinks.survivalSkillsForBelievers,
+    stripePaymentLinkId: "",
+    highlights: [
+      "Faith-centered resilience",
+      "Scripture-backed wisdom for hard seasons",
+      "Peace and purpose in every stage of life",
+    ],
+  },
+  {
+    slug: "survival-skills-for-women",
+    title: "Survival Skills for Women",
+    subtitle: "A comprehensive guide to living with hope, resilience, and meaning.",
+    description:
+      "A warm, practical guide for women who want to rebuild confidence, discover purpose, and thrive through every season — from pressure and loss to growth and renewal.",
+    audience:
+      "For women, women's groups, mentoring circles, faith communities, and anyone navigating personal growth and transformation.",
+    priceLabel: "$14.99 CAD",
+    format: "Digital Edition",
+    image: {
+      src: "/books/survival-skills-for-women-cover.png",
+      alt: "Survival Skills for Women book cover — a woman looking confidently toward the horizon.",
+      crop: "object-top",
+    },
+    purchaseUrl: stripeBookLinks.survivalSkillsForWomen,
+    stripePaymentLinkId: "",
+    highlights: [
+      "Confidence and identity restoration",
+      "Hope and healing after hard seasons",
+      "Practical tools for thriving with meaning",
+    ],
+  },
+  {
+    slug: "umattr-devotional",
+    title: "UMATTR Devotional",
+    subtitle: "Reflections for the moments that ask you to keep going.",
+    description:
+      "A devotional journal for anyone who needs a reminder that they matter — featuring reflective prompts, encouragement, and truth to hold onto when life gets heavy.",
+    audience:
+      "For students, athletes, individuals in transition, faith communities, and anyone who needs a daily anchor of hope and worth.",
+    priceLabel: "$14.99 CAD",
+    format: "Digital Edition",
+    image: {
+      src: "/books/umattr-devotional-cover.png",
+      alt: "UMATTR Devotional book cover — a journal by the ocean.",
+      crop: "object-top",
+    },
+    purchaseUrl: stripeBookLinks.umattrDevotional,
+    stripePaymentLinkId: "",
+    highlights: [
+      "Daily reflections to anchor your worth",
+      "Prompts for hope in hard moments",
+      "Faith-based encouragement to keep going",
+    ],
+  },
+  {
+    slug: "survival-skills-for-students",
+    title: "Survival Skills for Students",
+    subtitle: "Practical tools for focus, balance, and success at every stage.",
+    description:
+      "A student-centered guide packed with strategies for managing academic pressure, building healthy habits, and staying grounded in purpose through the demands of school and life.",
+    audience:
+      "For students, parents, educators, mentors, and youth leaders who want to support young people in building focus and resilience.",
+    priceLabel: "$14.99 CAD",
+    format: "Digital Edition",
+    image: {
+      src: "/books/survival-skills-for-students-cover.png",
+      alt: "Survival Skills for Students book cover.",
+      crop: "object-top",
+    },
+    purchaseUrl: stripeBookLinks.survivalSkillsForStudents,
+    stripePaymentLinkId: "",
+    highlights: [
+      "Academic pressure management",
+      "Balance and healthy habits for students",
+      "Purpose and resilience through school life",
+    ],
+  },
+  {
+    slug: "surviving-to-thriving",
+    title: "Survival Skills: Surviving to Thriving",
+    subtitle: "The journey from just getting by to truly living.",
+    description:
+      "A transformational guide that takes readers beyond survival mode — helping them identify what's holding them back, rebuild their foundation, and step into a life of genuine purpose and momentum.",
+    audience:
+      "For anyone feeling stuck, overwhelmed, or ready to move beyond surviving and into a life that truly thrives.",
+    priceLabel: "$14.99 CAD",
+    format: "Digital Edition",
+    image: {
+      src: "/books/survival-skills-surviving-to-thriving-cover.png",
+      alt: "Survival Skills: Surviving to Thriving book cover.",
+      crop: "object-top",
+    },
+    purchaseUrl: stripeBookLinks.survivalSkillsSurvivingToThriving,
+    stripePaymentLinkId: "",
+    highlights: [
+      "Moving beyond survival mode",
+      "Purpose-driven momentum",
+      "Rebuilding your foundation for real growth",
     ],
   },
 ];
@@ -890,7 +1767,7 @@ export const workbookListings: BookListing[] = [
     subtitle: "A faith-centered daily reset for athletes.",
     description:
       "A 30-day devotional covering identity, pressure, discipline, setbacks, confidence, and resilience. Designed to help athletes anchor their worth and purpose outside of performance.",
-    audience: "Best for: Daily spiritual and mental grounding.",
+    audience: "Daily spiritual and mental grounding.",
     priceLabel: "$25.99 USD",
     format: "PDF · Word · Kindle",
     image: {
@@ -911,7 +1788,7 @@ export const workbookListings: BookListing[] = [
     subtitle: "Short-form encouragement that still leads to action.",
     description:
       "30 motivational reflections featuring executive-level challenges, action steps, and Finish Strong statements. Quick-hit reflection for momentum language and sharper perspective.",
-    audience: "Best for: Quick daily motivation and mindset shifts.",
+    audience: "Quick daily motivation and mindset shifts.",
     priceLabel: "$25.99 USD",
     format: "PDF · Word · Kindle",
     image: {
@@ -932,7 +1809,7 @@ export const workbookListings: BookListing[] = [
     subtitle: "A confidence-building language bank for athletes.",
     description:
       "100 athlete affirmations covering identity, confidence, game day pressure, and life beyond sport. Repeatable declarations for hard moments and pre-competition confidence resets.",
-    audience: "Best for: Building unshakeable confidence and focus.",
+    audience: "Building unshakeable confidence and focus.",
     priceLabel: "$25.99 USD",
     format: "PDF · Word · Kindle",
     image: {
@@ -953,7 +1830,7 @@ export const workbookListings: BookListing[] = [
     subtitle: "Rebuild structure after your hardest weeks.",
     description:
       "A 7-day reset plan focusing on emotional check-ins, pressure management, and healthy routines. Slows the system down and rebuilds structure for overloaded athletes.",
-    audience: "Best for: Athletes feeling overwhelmed or burned out.",
+    audience: "Athletes feeling overwhelmed or burned out.",
     priceLabel: "$25.99 USD",
     format: "PDF · Word · Kindle",
     image: {
@@ -974,7 +1851,7 @@ export const workbookListings: BookListing[] = [
     subtitle: "Keep perspective when expectations rise.",
     description:
       "A 90-day gratitude journal designed specifically for the unique challenges of student-athletes. Helps athletes slow down, notice what is still good, and stay grounded.",
-    audience: "Best for: Developing a positive, grounded perspective.",
+    audience: "Developing a positive, grounded perspective.",
     priceLabel: "$25.99 USD",
     format: "PDF · Word · Kindle",
     image: {
@@ -995,7 +1872,7 @@ export const workbookListings: BookListing[] = [
     subtitle: "Smarter workflows without crossing integrity lines.",
     description:
       "A practical guide on using AI safely for career prep, networking, and studying without violating integrity. A practical AI playbook for athletes who want smarter workflows.",
-    audience: "Best for: Modern student-athletes navigating AI tools.",
+    audience: "Modern student-athletes navigating AI tools.",
     priceLabel: "$25.99 USD",
     format: "PDF · Word · Kindle",
     image: {
@@ -1016,7 +1893,7 @@ export const workbookListings: BookListing[] = [
     subtitle: "Translate athletic discipline into career language.",
     description:
       "Translate your athletic discipline into career language. Includes resume examples and interview builders. Helps athletes name transferable skills and move to a visible next step.",
-    audience: "Best for: Athletes transitioning into the workforce.",
+    audience: "Athletes transitioning into the workforce.",
     priceLabel: "$25.99 USD",
     format: "PDF · Word · Kindle",
     image: {
@@ -1037,7 +1914,7 @@ export const workbookListings: BookListing[] = [
     subtitle: "Build a strong, authentic public image.",
     description:
       "Audit your social media, define your values, and build a professional image for life and NIL deals. A personal brand system for better image control and clearer values.",
-    audience: "Best for: Building a strong, authentic public image.",
+    audience: "Building a strong, authentic public image.",
     priceLabel: "$25.99 USD",
     format: "PDF · Word · Kindle",
     image: {
@@ -1058,7 +1935,7 @@ export const workbookListings: BookListing[] = [
     subtitle: "Better filters around risk, visibility, and consequences.",
     description:
       "Understand how online decisions affect future opportunities and learn to navigate NIL safely. A reputation and NIL judgment guide for athletes who need better decision filters.",
-    audience: "Best for: Navigating sponsorships and digital footprint.",
+    audience: "Navigating sponsorships and digital footprint.",
     priceLabel: "$25.99 USD",
     format: "PDF · Word · Kindle",
     image: {
@@ -1079,7 +1956,7 @@ export const workbookListings: BookListing[] = [
     subtitle: "Better execution, sequencing, and follow-through.",
     description:
       "A structured planner balancing athletic, academic, wellness, and future-building habits every day. For athletes who need better execution, not more inspiration.",
-    audience: "Best for: Creating structure and achieving major goals.",
+    audience: "Creating structure and achieving major goals.",
     priceLabel: "$25.99 USD",
     format: "PDF · Word · Kindle",
     image: {
@@ -1105,7 +1982,7 @@ export const masterclassListings: BookListing[] = [
     subtitle: "Ground your identity beyond the scoreboard.",
     description:
       "A deep-dive video course designed to help athletes anchor their worth and purpose outside of performance. Rebuilds inner steadiness when external results feel uncertain.",
-    audience: "Best for: Athletes struggling with identity and pressure.",
+    audience: "Athletes struggling with identity and pressure.",
     priceLabel: "$997/yr ($297 deposit)",
     format: "Video Course · Community Access",
     image: {
@@ -1126,7 +2003,7 @@ export const masterclassListings: BookListing[] = [
     subtitle: "Master your physical readiness and recovery rhythm.",
     description:
       "Learn the exact discipline, recovery protocols, and injury prevention strategies elite athletes use. Optimizes the physical foundation that supports every other F.",
-    audience: "Best for: Athletes needing better training consistency and recovery.",
+    audience: "Athletes needing better training consistency and recovery.",
     priceLabel: "$997/yr ($297 deposit)",
     format: "Video Course · Community Access",
     image: {
@@ -1146,8 +2023,8 @@ export const masterclassListings: BookListing[] = [
     title: "The Athlete Fueling Masterclass",
     subtitle: "Stabilize your daily fuel plan for sustained energy.",
     description:
-      "A comprehensive nutrition strategy course covering hydration, game-day fueling, and healthy relationships with food. Sustained energy and better recovery nutrition.",
-    audience: "Best for: Athletes wanting to optimize their nutrition.",
+      "A comprehensive nutrition strategy course covering hydration, game-day fueling, and healthy relationships with food.",
+    audience: "Athletes wanting to optimize their nutrition.",
     priceLabel: "$997/yr ($297 deposit)",
     format: "Video Course · Community Access",
     image: {
@@ -1167,8 +2044,8 @@ export const masterclassListings: BookListing[] = [
     title: "The Inner Circle Masterclass",
     subtitle: "Tighten your support circle and protect your standards.",
     description:
-      "Learn how to build a network of peers and mentors who elevate you, and how to set healthy boundaries. Positive peer influence and strong accountability structures.",
-    audience: "Best for: Athletes needing to elevate their environment.",
+      "Learn how to build a network of peers and mentors who elevate you, and how to set healthy boundaries.",
+    audience: "Athletes needing to elevate their environment.",
     priceLabel: "$997/yr ($297 deposit)",
     format: "Video Course · Community Access",
     image: {
@@ -1188,8 +2065,8 @@ export const masterclassListings: BookListing[] = [
     title: "The Family Dynamics Masterclass",
     subtitle: "Navigate family expectations without losing your pace.",
     description:
-      "A guide to communicating boundaries, handling pressure, and building a legacy your family can be proud of. Clear communication and reduced family pressure.",
-    audience: "Best for: Athletes feeling overwhelmed by family expectations.",
+      "A guide to communicating boundaries, handling pressure, and building a legacy your family can be proud of.",
+    audience: "Athletes feeling overwhelmed by family expectations.",
     priceLabel: "$997/yr ($297 deposit)",
     format: "Video Course · Community Access",
     image: {
@@ -1209,8 +2086,8 @@ export const masterclassListings: BookListing[] = [
     title: "The Financial Playbook Masterclass",
     subtitle: "Build financial decision control and understand NIL safely.",
     description:
-      "Master budgeting, credit, contracts, and NIL decision-making to secure your financial future. Financial literacy and safe NIL decisions for long-term wealth habits.",
-    audience: "Best for: Athletes navigating NIL and basic finances.",
+      "Master budgeting, credit, contracts, and NIL decision-making to secure your financial future.",
+    audience: "Athletes navigating NIL and basic finances.",
     priceLabel: "$997/yr ($297 deposit)",
     format: "Video Course · Community Access",
     image: {
@@ -1230,8 +2107,8 @@ export const masterclassListings: BookListing[] = [
     title: "The Personal Brand & Presentation Masterclass",
     subtitle: "Strengthen your public presence and professional image.",
     description:
-      "Learn how to manage your digital footprint, interview with confidence, and build an authentic brand. Polished public image and strong personal brand for media readiness.",
-    audience: "Best for: Athletes wanting to monetize their name and image.",
+      "Learn how to manage your digital footprint, interview with confidence, and build an authentic brand.",
+    audience: "Athletes wanting to monetize their name and image.",
     priceLabel: "$997/yr ($297 deposit)",
     format: "Video Course · Community Access",
     image: {
@@ -1251,8 +2128,8 @@ export const masterclassListings: BookListing[] = [
     title: "The Athlete Joy & Recovery Masterclass",
     subtitle: "Schedule recovery that feels human and protect your joy.",
     description:
-      "Discover how to decompress, maintain hobbies outside of sport, and keep the passion for the game alive. Burnout prevention and renewed passion for the game.",
-    audience: "Best for: Athletes experiencing burnout or loss of passion.",
+      "Discover how to decompress, maintain hobbies outside of sport, and keep the passion for the game alive.",
+    audience: "Athletes experiencing burnout or loss of passion.",
     priceLabel: "$997/yr ($297 deposit)",
     format: "Video Course · Community Access",
     image: {
@@ -1272,8 +2149,8 @@ export const masterclassListings: BookListing[] = [
     title: "The Career Transition Masterclass",
     subtitle: "Make your next chapter visible and prepare for life after sport.",
     description:
-      "Translate your athletic skills onto a resume, network effectively, and build confidence for the professional world. Strong resume, networking skills, and career confidence.",
-    audience: "Best for: Athletes nearing the end of their athletic career.",
+      "Translate your athletic skills onto a resume, network effectively, and build confidence for the professional world.",
+    audience: "Athletes nearing the end of their athletic career.",
     priceLabel: "$997/yr ($297 deposit)",
     format: "Video Course · Community Access",
     image: {
@@ -1288,27 +2165,6 @@ export const masterclassListings: BookListing[] = [
       "Career confidence",
     ],
   },
-  {
-    slug: "course-finish-strong",
-    title: "The Finish Strong Execution Masterclass",
-    subtitle: "Turn good intentions into a finish-strong plan.",
-    description:
-      "Master time management, goal setting, accountability, and the responsible use of AI tools. Real structure for athletes who want better execution and accountability.",
-    audience: "Best for: Athletes needing better execution and accountability.",
-    priceLabel: "$997/yr ($297 deposit)",
-    format: "Video Course · Community Access",
-    image: {
-      src: "/images/products/10-finish-strong-action-planner-cover.png",
-      alt: "The Finish Strong Execution Masterclass",
-    },
-    purchaseUrl: "https://buy.stripe.com/placeholder_finish_strong",
-    stripePaymentLinkId: "",
-    highlights: [
-      "Goal achievement",
-      "Time management mastery",
-      "Accountability systems",
-    ],
-  },
 ];
 
 export const bookFeatures = [
@@ -1318,9 +2174,13 @@ export const bookFeatures = [
     image: { src: survivingLife, alt: "Surviving Life book cover artwork.", crop: "object-top" },
   },
   {
-    title: "Road to the Olympics",
+    title: "Finish Strong: Chasing the Olympic Dream",
     subtitle: "A journey of resilience, purpose, and legacy.",
-    image: { src: roadBook, alt: "Road to the Olympics book cover artwork.", crop: "object-top" },
+    image: {
+      src: finishStrongBook,
+      alt: "Finish Strong: Chasing the Olympic Dream book cover artwork.",
+      crop: "object-top",
+    },
   },
   {
     title: "Survival Skills for Women",
@@ -1345,32 +2205,32 @@ export const suppliedLogos = [
 export const additionalImages = {
   athleteInfo: {
     src: athleteInfoPoster,
-    alt: "Athletic achievement artwork supplied in brand materials.",
+    alt: "Athletic achievement artwork.",
     crop: "object-top scale-[1.04]",
   },
   athleteStrategy: {
     src: athleteStrategyPoster,
-    alt: "Strategy leadership elite execution artwork supplied in brand materials.",
+    alt: "Strategy, leadership, and elite execution artwork.",
     crop: "object-top scale-[1.03]",
   },
   aboutTimeline: {
     src: aboutTimelinePoster,
-    alt: "Graduation and champion athlete story artwork supplied in brand materials.",
+    alt: "Graduation and champion athlete story artwork.",
     crop: "object-top scale-[1.05]",
   },
   testimonialComposite: {
     src: testimonialComposite,
-    alt: "Audience testimonial artwork supplied in brand materials.",
+    alt: "Audience testimonial artwork.",
     crop: "object-top",
   },
   testimonialYouth: {
     src: testimonialYouth,
-    alt: "Youth coaching testimonial artwork supplied in brand materials.",
+    alt: "Youth coaching testimonial artwork.",
     crop: "object-top",
   },
   eventWorkshop: {
     src: eventWorkshop,
-    alt: "Workshop and event artwork supplied in brand materials.",
+    alt: "Workshop and event artwork.",
     crop: "object-top",
   },
   trainingPoster: {
@@ -1385,12 +2245,12 @@ export const additionalImages = {
   },
   flightPoster: {
     src: flightPoster,
-    alt: "Flight attendant graduate artwork supplied in brand materials.",
+    alt: "Flight attendant graduate artwork.",
     crop: "object-top scale-[1.02]",
   },
   programOverview: {
     src: programOverview,
-    alt: "Speaking and services overview artwork supplied in brand materials.",
+    alt: "Speaking and services overview artwork.",
     crop: "object-top scale-[1.06]",
   },
 };
