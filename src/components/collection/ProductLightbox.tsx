@@ -3,7 +3,7 @@
 import { useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, ChevronRight, Sparkles, Bell } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Sparkles, Bell, CheckCircle2, Quote } from "lucide-react";
 
 import { ProductItem } from "@/content/products";
 
@@ -129,7 +129,7 @@ export function ProductLightbox({
           role="dialog"
           aria-modal="true"
           aria-labelledby="lightbox-product-title"
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-8"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 lg:p-8"
           ref={dialogRef}
         >
           {/* Backdrop Blur */}
@@ -138,56 +138,82 @@ export function ProductLightbox({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/75 backdrop-blur-md"
+            className="fixed inset-0 bg-black/80 backdrop-blur-md"
             onClick={onClose}
             aria-hidden="true"
           />
 
           {/* Modal Container */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 16 }}
+            initial={{ opacity: 0, scale: 0.94, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 16 }}
-            transition={{ type: "spring", stiffness: 320, damping: 28 }}
-            className="relative z-10 mx-auto flex max-h-[90vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl border border-[rgba(198,165,92,0.35)] bg-[var(--ivory)] shadow-2xl"
+            exit={{ opacity: 0, scale: 0.94, y: 20 }}
+            transition={{ type: "spring", stiffness: 340, damping: 28 }}
+            className="relative z-10 mx-auto flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-[rgba(198,165,92,0.4)] bg-[var(--ivory)] shadow-2xl"
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
           >
-            {/* Top Action Header */}
-            <div className="flex items-center justify-between border-b border-[var(--line)] bg-white/90 px-5 py-3.5 backdrop-blur-sm">
-              <div className="flex items-center gap-2">
-                <span className="rounded-full bg-[var(--champagne)]/20 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider text-[var(--gold-dark)]">
+            {/* Top Action Bar */}
+            <div className="flex items-center justify-between border-b border-[var(--line)] bg-white/95 px-5 py-3.5 backdrop-blur-sm">
+              <div className="flex items-center gap-3">
+                <span className="rounded-full bg-[var(--champagne)]/25 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[var(--gold-dark)]">
                   {product.categoryName}
                 </span>
                 <span className="text-xs font-medium text-[#7d7164]">
-                  ({currentIndex + 1} of {products.length})
+                  Item {currentIndex + 1} of {products.length}
                 </span>
               </div>
 
-              <motion.button
-                type="button"
-                onClick={onClose}
-                whileHover={{ scale: 1.1, rotate: 90 }}
-                whileTap={{ scale: 0.9 }}
-                aria-label="Close product preview"
-                className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full text-[var(--charcoal)] transition hover:bg-black/5 hover:text-[var(--ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)]"
-              >
-                <X className="h-6 w-6" aria-hidden="true" />
-              </motion.button>
+              <div className="flex items-center gap-2">
+                {/* Navigation counter arrows */}
+                <div className="flex items-center gap-1 mr-2">
+                  <motion.button
+                    type="button"
+                    onClick={handlePrev}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    aria-label="Previous product"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[rgba(198,165,92,0.3)] bg-white text-[var(--ink)] transition hover:bg-[var(--ink)] hover:text-white"
+                  >
+                    <ChevronLeft className="h-4 w-4" />
+                  </motion.button>
+                  <motion.button
+                    type="button"
+                    onClick={handleNext}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    aria-label="Next product"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-[rgba(198,165,92,0.3)] bg-white text-[var(--ink)] transition hover:bg-[var(--ink)] hover:text-white"
+                  >
+                    <ChevronRight className="h-4 w-4" />
+                  </motion.button>
+                </div>
+
+                <motion.button
+                  type="button"
+                  onClick={onClose}
+                  whileHover={{ scale: 1.1, rotate: 90 }}
+                  whileTap={{ scale: 0.9 }}
+                  aria-label="Close product preview"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[rgba(198,165,92,0.2)] bg-[#faf7f0] text-[var(--charcoal)] transition hover:bg-black/10 hover:text-[var(--ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)]"
+                >
+                  <X className="h-5 w-5" aria-hidden="true" />
+                </motion.button>
+              </div>
             </div>
 
-            {/* Content Body */}
-            <div className="grid flex-1 overflow-y-auto md:grid-cols-[1.1fr_0.9fr]">
-              {/* Image Showcase Area */}
-              <div className="relative flex aspect-square items-center justify-center bg-gradient-to-b from-[#fdfbf7] to-[#f4ede2] p-6 md:p-10">
+            {/* Content Body: 50/50 Split View */}
+            <div className="grid flex-1 overflow-hidden md:grid-cols-2 md:max-h-[calc(92vh-60px)]">
+              {/* Left Column: Image Showcase Area */}
+              <div className="relative flex min-h-[300px] sm:min-h-[380px] md:min-h-full items-center justify-center bg-gradient-to-b from-[#fdfbf7] via-[#f7f2e9] to-[#eee5d5] p-6 sm:p-8 lg:p-10 border-b md:border-b-0 md:border-r border-[var(--line)]">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={product.id}
-                    initial={{ opacity: 0, scale: 0.92 }}
+                    initial={{ opacity: 0, scale: 0.94 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.92 }}
+                    exit={{ opacity: 0, scale: 0.94 }}
                     transition={{ duration: 0.25 }}
-                    className="relative h-full w-full"
+                    className="relative aspect-square h-full w-full max-w-[420px]"
                   >
                     <Image
                       src={product.image}
@@ -195,22 +221,22 @@ export function ProductLightbox({
                       fill
                       priority
                       unoptimized
-                      sizes="(max-width: 768px) 90vw, 450px"
-                      className="object-contain drop-shadow-md transition-all duration-300"
+                      sizes="(max-width: 768px) 90vw, 500px"
+                      className="object-contain drop-shadow-xl transition-all duration-300"
                     />
                   </motion.div>
                 </AnimatePresence>
 
-                {/* Prev / Next floating overlay controls for Desktop/Tablet */}
+                {/* Left/Right Floating Quick Arrows over Image on Mobile/Desktop */}
                 <motion.button
                   type="button"
                   onClick={handlePrev}
                   whileHover={{ scale: 1.1, x: -2 }}
                   whileTap={{ scale: 0.9 }}
                   aria-label="Previous product in collection"
-                  className="absolute left-3 top-1/2 -translate-y-1/2 inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-[rgba(198,165,92,0.4)] bg-white/90 text-[var(--ink)] shadow-md transition hover:bg-[var(--ink)] hover:text-[var(--ivory)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)]"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(198,165,92,0.4)] bg-white/90 text-[var(--ink)] shadow-md transition hover:bg-[var(--ink)] hover:text-white"
                 >
-                  <ChevronLeft className="h-6 w-6" aria-hidden="true" />
+                  <ChevronLeft className="h-5 w-5" aria-hidden="true" />
                 </motion.button>
 
                 <motion.button
@@ -219,87 +245,106 @@ export function ProductLightbox({
                   whileHover={{ scale: 1.1, x: 2 }}
                   whileTap={{ scale: 0.9 }}
                   aria-label="Next product in collection"
-                  className="absolute right-3 top-1/2 -translate-y-1/2 inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-[rgba(198,165,92,0.4)] bg-white/90 text-[var(--ink)] shadow-md transition hover:bg-[var(--ink)] hover:text-[var(--ivory)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)]"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 inline-flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(198,165,92,0.4)] bg-white/90 text-[var(--ink)] shadow-md transition hover:bg-[var(--ink)] hover:text-white"
                 >
-                  <ChevronRight className="h-6 w-6" aria-hidden="true" />
+                  <ChevronRight className="h-5 w-5" aria-hidden="true" />
                 </motion.button>
               </div>
 
-              {/* Product Details & Launch Info */}
-              <div className="flex flex-col justify-between bg-white p-6 sm:p-8">
+              {/* Right Column: Full Product Details, Story & Specs (Clean Scrollable Panel) */}
+              <div className="flex flex-col justify-between overflow-y-auto overflow-x-hidden bg-white p-6 sm:p-8 lg:p-10 [scrollbar-width:thin]">
                 <div>
+                  {/* Eyebrow badge */}
                   <div className="flex items-center gap-2">
                     <Sparkles className="h-4 w-4 text-[var(--gold-dark)]" aria-hidden="true" />
-                    <span className="text-xs font-bold uppercase tracking-widest text-[var(--gold-dark)]">
-                      Coming Soon • Exclusive Preview
+                    <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
+                      Coming Soon • Private Preview
                     </span>
                   </div>
 
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={product.id}
-                      initial={{ opacity: 0, y: 8 }}
+                      initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -8 }}
+                      exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.2 }}
+                      className="mt-3"
                     >
+                      {/* Product Title */}
                       <h3
                         id="lightbox-product-title"
-                        className="mt-3 font-serif text-2xl font-medium tracking-tight text-[var(--ink)] sm:text-3xl"
+                        className="font-serif text-2xl font-normal leading-snug tracking-tight text-[var(--ink)] sm:text-3xl lg:text-[2rem]"
                       >
                         {product.name}
                       </h3>
 
-                      <div className="mt-3 flex flex-wrap gap-2 text-xs">
-                        <span className="rounded-md border border-[var(--line)] bg-[var(--ivory)] px-2.5 py-1 font-semibold text-[var(--charcoal)]">
+                      {/* Attribute Pills */}
+                      <div className="mt-3.5 flex flex-wrap gap-2 text-xs">
+                        <span className="rounded-full border border-[rgba(198,165,92,0.4)] bg-[var(--ivory)] px-3 py-1 font-semibold text-[var(--charcoal)]">
                           {product.subcategory}
                         </span>
                         {product.fabric && (
-                          <span className="rounded-md border border-[var(--line)] bg-[var(--ivory)] px-2.5 py-1 font-semibold text-[var(--charcoal)]">
+                          <span className="rounded-full border border-[rgba(198,165,92,0.3)] bg-white px-3 py-1 font-medium text-[#6b5f52]">
                             {product.fabric}
                           </span>
                         )}
                         {product.fit && (
-                          <span className="rounded-md border border-[var(--line)] bg-[var(--ivory)] px-2.5 py-1 font-semibold text-[var(--charcoal)]">
-                            Fit: {product.fit}
+                          <span className="rounded-full border border-[rgba(198,165,92,0.3)] bg-white px-3 py-1 font-medium text-[#6b5f52]">
+                            {product.fit}
                           </span>
                         )}
                       </div>
 
-                      <div className="mt-5 space-y-4 text-sm leading-relaxed text-[#5c5246]">
-                        <p className="font-medium text-[var(--ink)]">
+                      {/* Overview & Short Description */}
+                      <div className="mt-5 space-y-4 text-sm leading-relaxed text-[#4a4237]">
+                        <p className="text-base font-normal text-[var(--ink)] leading-relaxed">
                           {product.shortDescription}
                         </p>
 
+                        {/* Curation Narrative Box */}
                         {product.curationReason && (
-                          <div className="rounded-lg border border-[rgba(198,165,92,0.25)] bg-[#faf7f0] p-3 text-xs text-[#736657]">
-                            <strong className="text-[var(--ink)] block mb-1 font-serif text-sm">Why Lornette Curated This:</strong>
-                            {product.curationReason}
+                          <div className="relative rounded-xl border border-[rgba(198,165,92,0.35)] bg-[#faf7f0] p-4 text-xs sm:text-sm text-[#5a4e40]">
+                            <div className="flex items-center gap-1.5 font-serif font-semibold text-[var(--ink)] mb-1.5 text-sm">
+                              <Quote className="h-3.5 w-3.5 text-[var(--gold-dark)]" />
+                              <span>Why Lornette Curated This:</span>
+                            </div>
+                            <p className="leading-relaxed">
+                              {product.curationReason}
+                            </p>
                           </div>
                         )}
 
+                        {/* Craftsmanship & Specifications */}
                         {product.details && product.details.length > 0 && (
-                          <div className="space-y-1.5 pt-1">
-                            <span className="text-xs font-bold uppercase tracking-wider text-[var(--charcoal)]">Craftsmanship & Features:</span>
-                            <ul className="list-disc pl-4 text-xs space-y-1 text-[#6b5f52]">
+                          <div className="space-y-2 pt-2">
+                            <span className="text-xs font-bold uppercase tracking-wider text-[var(--ink)] block">
+                              Craftsmanship & Features:
+                            </span>
+                            <ul className="space-y-2 text-xs sm:text-sm text-[#5a4e40]">
                               {product.details.map((detail, idx) => (
-                                <li key={idx}>{detail}</li>
+                                <li key={idx} className="flex items-start gap-2">
+                                  <CheckCircle2 className="h-4 w-4 shrink-0 text-[var(--gold-dark)] mt-0.5" />
+                                  <span className="leading-snug">{detail}</span>
+                                </li>
                               ))}
                             </ul>
                           </div>
                         )}
 
+                        {/* Editorial Quote */}
                         {product.editorialQuote && (
-                          <p className="italic text-xs text-[var(--gold-dark)] border-l-2 border-[var(--gold-dark)] pl-3 py-1">
+                          <div className="border-l-2 border-[var(--gold-dark)] pl-3.5 py-1 text-xs sm:text-sm italic text-[var(--gold-dark)]">
                             &ldquo;{product.editorialQuote}&rdquo;
-                          </p>
+                          </div>
                         )}
                       </div>
                     </motion.div>
                   </AnimatePresence>
                 </div>
 
-                <div className="mt-8 border-t border-[var(--line)] pt-6">
+                {/* Priority Reservation CTA Footer */}
+                <div className="mt-8 border-t border-[var(--line)] pt-5">
                   <motion.button
                     type="button"
                     onClick={() => {
@@ -308,11 +353,14 @@ export function ProductLightbox({
                     }}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-[var(--ink)] px-6 text-sm font-bold uppercase tracking-wider text-[var(--ivory)] shadow-md transition-all hover:bg-[var(--gold-dark)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)]"
+                    className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[var(--ink)] px-6 text-sm font-bold uppercase tracking-wider text-[var(--ivory)] shadow-md transition-all hover:bg-[var(--gold-dark)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)]"
                   >
                     <Bell className="h-4 w-4" aria-hidden="true" />
-                    Join Priority List for {product.name}
+                    <span>Join Priority List for This Item</span>
                   </motion.button>
+                  <p className="mt-2 text-center text-[0.7rem] text-[#8b7d6c]">
+                    Private launch announcements and early reservations will be shared exclusively with registered members.
+                  </p>
                 </div>
               </div>
             </div>
