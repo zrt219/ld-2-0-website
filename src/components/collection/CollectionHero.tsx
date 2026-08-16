@@ -68,6 +68,7 @@ export function CollectionHero() {
                   alt="Featured UMATTR Crown Care product curated by Lornette Daye"
                   fill
                   priority
+                  unoptimized
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 540px"
                   className="object-contain p-6 transition-transform duration-700 hover:scale-105"
                 />

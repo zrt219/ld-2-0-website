@@ -176,6 +176,7 @@ export function ProductLightbox({
                 alt={product.alt}
                 fill
                 priority
+                unoptimized
                 sizes="(max-width: 768px) 90vw, 450px"
                 className="object-contain drop-shadow-md transition-all duration-300"
               />

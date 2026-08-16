@@ -169,6 +169,7 @@ export function ProductGalleryRow({
                       src={product.imageSrc}
                       alt={product.alt}
                       fill
+                      unoptimized
                       loading="lazy"
                       sizes="(max-width: 640px) 78vw, (max-width: 1024px) 280px, 300px"
                       className="object-contain p-4 transition-transform duration-500 group-hover/card:scale-105"

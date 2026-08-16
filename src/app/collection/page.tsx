@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { collectionMeta, getActiveCategories } from "@/content/products";
+import { PageShell } from "@/components/PageShell";
 import { CollectionHero } from "@/components/collection/CollectionHero";
 import { CollectionClientView } from "@/components/collection/CollectionClientView";
 
@@ -37,12 +38,14 @@ export default function CollectionPage() {
   const activeCategories = getActiveCategories();
 
   return (
-    <div className="bg-[var(--ivory)] text-[var(--ink)]">
-      {/* Editorial Hero Section */}
-      <CollectionHero />
+    <PageShell>
+      <main className="bg-[var(--ivory)] text-[var(--ink)]">
+        {/* Editorial Hero Section */}
+        <CollectionHero />
 
-      {/* Interactive Category Galleries, Lightbox & Interest Form */}
-      <CollectionClientView categories={activeCategories} />
-    </div>
+        {/* Interactive Category Galleries, Lightbox & Interest Form */}
+        <CollectionClientView categories={activeCategories} />
+      </main>
+    </PageShell>
   );
 }
