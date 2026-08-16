@@ -12,6 +12,9 @@
 
 # testing
 /coverage
+/test-results/
+/playwright-report/
+/output/
 
 # next.js
 /.next/
@@ -39,3 +42,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
+
+# local agent/runtime state
+/.omx/
+
+# android
+/android/.gradle/
+/android/build/
+/android/app/build/

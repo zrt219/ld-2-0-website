@@ -1,0 +1,433 @@
+sequence,category_sequence,name,category,subcategory,status,source
+1,1,UMATTR Crown Moisture Shampoo,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+2,2,UMATTR Crown Moisture Conditioner,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+3,3,UMATTR Crown Deep Repair Mask,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+4,4,UMATTR Crown Aloe Leave-In Conditioner,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+5,5,UMATTR Crown Aloe Hair Milk,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+6,6,UMATTR Crown Scalp Oil,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+7,7,UMATTR Crown Black Hair Oil,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+8,8,UMATTR Crown Growth-Look Serum,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+9,9,UMATTR Crown Braid & Loc Spray,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+10,10,UMATTR Crown Curl Cream,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+11,11,UMATTR Crown Edge Control,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+12,12,UMATTR Crown Heat Protectant Mist,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+13,13,UMATTR Crown Detangling Spray,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+14,14,UMATTR Crown Co-Wash Cleanser,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+15,15,UMATTR Crown Scalp Scrub,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+16,16,UMATTR Crown Pre-Poo Treatment Oil,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+17,17,UMATTR Crown Daily Shine Mist,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+18,18,UMATTR Crown Satin Hair Wrap,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+19,19,UMATTR Crown Satin Bonnet,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+20,20,UMATTR Crown Detangling Comb,UMATTR Crown Care,Crown Care Core Products,Concept / Master List,UMATTR Official Product Master List
+21,1,UMATTR Crown Lace Front Wig — Body Wave,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+22,2,UMATTR Crown Lace Front Wig — Deep Wave,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+23,3,UMATTR Crown Lace Front Wig — Water Wave,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+24,4,UMATTR Crown Lace Front Wig — Straight Silk,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+25,5,UMATTR Crown Lace Front Wig — Kinky Straight,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+26,6,UMATTR Crown Lace Front Wig — Afro Kinky Curly,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+27,7,UMATTR Crown Closure Wig — Natural Wave,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+28,8,UMATTR Crown Closure Wig — Loose Curl,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+29,9,UMATTR Crown Headband Wig — Everyday Wave,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+30,10,UMATTR Crown Half Wig — Natural Blend,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+31,11,UMATTR Crown Bob Wig — Sleek Black,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+32,12,UMATTR Crown Bob Wig — Curly Bob,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+33,13,UMATTR Crown Pixie Wig,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+34,14,UMATTR Crown Braided Wig,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+35,15,UMATTR Crown Loc Wig,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+36,16,UMATTR Crown Clip-In Extensions,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+37,17,UMATTR Crown Ponytail Extension,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+38,18,UMATTR Crown Wig Care Spray,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+39,19,UMATTR Crown Wig Stand,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+40,20,UMATTR Crown Wig Storage Bag,UMATTR Crown Wigs,Wig Categories,Concept / Master List,UMATTR Official Product Master List
+41,1,UMATTR Skin Gentle Cleanser,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+42,2,UMATTR Skin Hydrating Cream Cleanser,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+43,3,UMATTR Skin Aloe Toner Mist,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+44,4,UMATTR Skin Vitamin Glow Serum,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+45,5,UMATTR Skin Hyaluronic Moisture Serum,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+46,6,UMATTR Skin Bright-Look Serum,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+47,7,UMATTR Skin Daily Moisture Cream,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+48,8,UMATTR Skin Rich Barrier Cream,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+49,9,UMATTR Skin Under-Eye Cream,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+50,10,UMATTR Skin Facial Oil,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+51,11,UMATTR Skin SPF Day Cream,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+52,12,UMATTR Skin Body Butter,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+53,13,UMATTR Skin Hand Cream,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+54,14,UMATTR Skin Body Oil,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+55,15,UMATTR Skin Exfoliating Polish,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+56,16,UMATTR Skin Clay Mask,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+57,17,UMATTR Skin Sheet Mask,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+58,18,UMATTR Skin Travel Set,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+59,19,UMATTR Skin Starter Routine Kit,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+60,20,UMATTR Skin Winter Moisture Kit,UMATTR Skin,Skin Care Core Products,Concept / Master List,UMATTR Official Product Master List
+61,1,UMATTR Glow Primer,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+62,2,UMATTR Glow Hydrating Primer,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+63,3,UMATTR Glow Matte Primer,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+64,4,UMATTR Glow Foundation,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+65,5,UMATTR Glow Skin Tint,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+66,6,UMATTR Glow Concealer,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+67,7,UMATTR Glow Corrector,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+68,8,UMATTR Glow Setting Powder,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+69,9,UMATTR Glow Pressed Powder,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+70,10,UMATTR Glow Bronzer,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+71,11,UMATTR Glow Contour Stick,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+72,12,UMATTR Glow Blush,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+73,13,UMATTR Glow Highlighter,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+74,14,UMATTR Glow Setting Spray,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+75,15,UMATTR Glow Makeup Remover Balm,UMATTR Glow Makeup,Face Products,Concept / Master List,UMATTR Official Product Master List
+76,16,UMATTR Glow Neutral Eyeshadow Palette,UMATTR Glow Makeup,Eye Products,Concept / Master List,UMATTR Official Product Master List
+77,17,UMATTR Glow Gold Eyeshadow Palette,UMATTR Glow Makeup,Eye Products,Concept / Master List,UMATTR Official Product Master List
+78,18,UMATTR Glow Everyday Brown Palette,UMATTR Glow Makeup,Eye Products,Concept / Master List,UMATTR Official Product Master List
+79,19,UMATTR Glow Eyeliner Pencil,UMATTR Glow Makeup,Eye Products,Concept / Master List,UMATTR Official Product Master List
+80,20,UMATTR Glow Liquid Liner,UMATTR Glow Makeup,Eye Products,Concept / Master List,UMATTR Official Product Master List
+81,21,UMATTR Glow Mascara,UMATTR Glow Makeup,Eye Products,Concept / Master List,UMATTR Official Product Master List
+82,22,UMATTR Glow Brow Pencil,UMATTR Glow Makeup,Eye Products,Concept / Master List,UMATTR Official Product Master List
+83,23,UMATTR Glow Brow Gel,UMATTR Glow Makeup,Eye Products,Concept / Master List,UMATTR Official Product Master List
+84,24,UMATTR Glow Brow Pomade,UMATTR Glow Makeup,Eye Products,Concept / Master List,UMATTR Official Product Master List
+85,25,UMATTR Glow Lash Set,UMATTR Glow Makeup,Eye Products,Concept / Master List,UMATTR Official Product Master List
+86,26,UMATTR Glow Foundation Brush,UMATTR Glow Makeup,Tools,Concept / Master List,UMATTR Official Product Master List
+87,27,UMATTR Glow Powder Brush,UMATTR Glow Makeup,Tools,Concept / Master List,UMATTR Official Product Master List
+88,28,UMATTR Glow Blush Brush,UMATTR Glow Makeup,Tools,Concept / Master List,UMATTR Official Product Master List
+89,29,UMATTR Glow Eyeshadow Brush Set,UMATTR Glow Makeup,Tools,Concept / Master List,UMATTR Official Product Master List
+90,30,UMATTR Glow Beauty Sponge,UMATTR Glow Makeup,Tools,Concept / Master List,UMATTR Official Product Master List
+91,31,UMATTR Glow Brush Travel Case,UMATTR Glow Makeup,Tools,Concept / Master List,UMATTR Official Product Master List
+92,32,UMATTR Glow Makeup Bag,UMATTR Glow Makeup,Tools,Concept / Master List,UMATTR Official Product Master List
+93,1,UMATTR Glow Lip Balm,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+94,2,UMATTR Glow Lip Oil,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+95,3,UMATTR Glow Clear Gloss,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+96,4,UMATTR Glow Nude Gloss,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+97,5,UMATTR Glow Brown Gloss,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+98,6,UMATTR Glow Champagne Gloss,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+99,7,UMATTR Glow Soft Pink Gloss,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+100,8,UMATTR Glow Deep Berry Gloss,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+101,9,UMATTR Glow Lip Liner — Brown,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+102,10,UMATTR Glow Lip Liner — Deep Brown,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+103,11,UMATTR Glow Lip Liner — Nude Rose,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+104,12,UMATTR Glow Lipstick — Everyday Nude,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+105,13,UMATTR Glow Lipstick — Soft Brown,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+106,14,UMATTR Glow Lipstick — Classic Red,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+107,15,UMATTR Glow Lipstick — Berry Crown,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+108,16,UMATTR Glow Matte Liquid Lip,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+109,17,UMATTR Glow Satin Liquid Lip,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+110,18,UMATTR Glow Lip Scrub,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+111,19,UMATTR Glow Lip Mask,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+112,20,UMATTR Glow Lip Kit,UMATTR Glow Lips,Lip Products,Concept / Master List,UMATTR Official Product Master List
+113,1,UMATTR Digest Comfort Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+114,2,UMATTR Calm Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+115,3,UMATTR Sleep Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+116,4,UMATTR Focus Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+117,5,UMATTR Energy Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+118,6,UMATTR Immunity Support Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+119,7,UMATTR Beauty Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+120,8,UMATTR Bloat Comfort Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+121,9,UMATTR Ginger Mint Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+122,10,UMATTR Hibiscus Glow Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+123,11,UMATTR Lemon Ginger Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+124,12,UMATTR Peppermint Comfort Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+125,13,UMATTR Chamomile Calm Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+126,14,UMATTR Turmeric Glow Tea,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+127,15,UMATTR Herbal Tea Sampler Box,UMATTR Tea & Wellness,Tea Collection,Concept / Master List,UMATTR Official Product Master List
+128,16,UMATTR Digest Comfort Powder,UMATTR Tea & Wellness,Powders and Wellness Blends,Concept / Master List,UMATTR Official Product Master List
+129,17,UMATTR Greens Powder,UMATTR Tea & Wellness,Powders and Wellness Blends,Concept / Master List,UMATTR Official Product Master List
+130,18,UMATTR Aloe Wellness Powder,UMATTR Tea & Wellness,Powders and Wellness Blends,Concept / Master List,UMATTR Official Product Master List
+131,19,UMATTR Ginger Digest Powder,UMATTR Tea & Wellness,Powders and Wellness Blends,Concept / Master List,UMATTR Official Product Master List
+132,20,UMATTR Daily Wellness Powder,UMATTR Tea & Wellness,Powders and Wellness Blends,Concept / Master List,UMATTR Official Product Master List
+133,21,UMATTR Tea Mug,UMATTR Tea & Wellness,Tea Accessories,Concept / Master List,UMATTR Official Product Master List
+134,22,UMATTR Tea Infuser,UMATTR Tea & Wellness,Tea Accessories,Concept / Master List,UMATTR Official Product Master List
+135,23,UMATTR Glass Tea Pot,UMATTR Tea & Wellness,Tea Accessories,Concept / Master List,UMATTR Official Product Master List
+136,24,UMATTR Tea Storage Tin,UMATTR Tea & Wellness,Tea Accessories,Concept / Master List,UMATTR Official Product Master List
+137,25,UMATTR Tea Gift Box,UMATTR Tea & Wellness,Tea Accessories,Concept / Master List,UMATTR Official Product Master List
+138,1,Ivory Wrap Midi Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+139,2,Ribbed Knit Midi Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+140,3,Satin Slip Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+141,4,Square Neck Midi Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+142,5,Belted Shirt Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+143,6,Polo Knit Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+144,7,One-Shoulder Midi Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+145,8,Tiered Maxi Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+146,9,Tank Knit Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+147,10,Ruched Wrap Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+148,11,Long Sleeve Slit Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+149,12,Bias Cut Satin Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+150,13,Off-Shoulder Midi Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+151,14,Pleated Midi Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+152,15,Collar Knit Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+153,16,Draped Satin Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+154,17,Kaftan Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+155,18,Velvet Evening Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+156,19,Square Neck Bodycon Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+157,20,Floral Chiffon Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+158,21,Button Front Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+159,22,Halter Neck Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+160,23,Corset Bodice Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+161,24,Knit Polo Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+162,25,Smocked Maxi Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+163,26,Cowl Neck Slip Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+164,27,Wrap Maxi Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+165,28,Cutout Knit Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+166,29,One-Shoulder Drape Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+167,30,Ribbed Lounge Midi Dress,UMATTR Fashion,Women’s Dresses,Concept / Master List,UMATTR Official Product Master List
+168,31,Satin Cowl Neck Camisole,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+169,32,Satin Collared Blouse,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+170,33,Draped High Neck Top,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+171,34,Silk Tie-Neck Blouse,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+172,35,Ribbed Scoop Tank,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+173,36,Sleeveless Button Blouse,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+174,37,Off-Shoulder Fold Top,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+175,38,Knit Polo Top,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+176,39,One-Shoulder Draped Top,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+177,40,Wrap Front Blouse,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+178,41,Ribbed Square Neck Tank,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+179,42,Balloon Sleeve Blouse,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+180,43,Pleated Neck Top,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+181,44,Draped Sleeveless Top,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+182,45,Satin Button-Down Shirt,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+183,46,Ribbed Mock Neck Top,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+184,47,Square Neck Peplum Top,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+185,48,Satin Wrap Blouse,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+186,49,Halter Neck Satin Top,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+187,50,Gathered Yoke Blouse,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+188,51,Tailored Vest Top,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+189,52,Corset Inspired Top,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+190,53,Asymmetric Wrap Top,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+191,54,Satin Short-Sleeve Shirt,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+192,55,Ivory Crew Neck Tee,UMATTR Fashion,Women’s Tops and Blouses,Concept / Master List,UMATTR Official Product Master List
+193,56,Tailored Straight Trouser,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+194,57,High-Waist Wide-Leg Pant,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+195,58,Relaxed Linen Pant,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+196,59,Pleated Wide-Leg Trouser,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+197,60,Slim Ankle Pant,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+198,61,Knit Jogger Pant,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+199,62,High-Waist Legging,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+200,63,Ribbed Flare Legging,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+201,64,Straight-Leg Jeans,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+202,65,Wide-Leg Jeans,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+203,66,Black Denim Jeans,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+204,67,White Denim Jeans,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+205,68,Satin Midi Skirt,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+206,69,Pencil Skirt,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+207,70,Pleated Midi Skirt,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+208,71,Tennis Skort,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+209,72,Wrap Skort,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+210,73,A-Line Mini Skirt,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+211,74,Tailored Shorts,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+212,75,Denim Shorts,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+213,76,Linen Shorts,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+214,77,High-Waist Shorts,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+215,78,Bermuda Shorts,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+216,79,Cargo Shorts,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+217,80,Faux Leather Pant,UMATTR Fashion,Women’s Bottoms,Concept / Master List,UMATTR Official Product Master List
+218,81,Long Trench Coat,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+219,82,Short Trench Jacket,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+220,83,Belted Wrap Coat,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+221,84,Double-Breasted Wool Coat,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+222,85,Stand Collar Coat,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+223,86,Cape Coat,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+224,87,Cropped Tweed Jacket,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+225,88,Cropped Leather Jacket,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+226,89,Satin Bomber Jacket,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+227,90,Quilted Puffer Jacket,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+228,91,Belted Puffer Coat,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+229,92,Shearling Aviator Jacket,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+230,93,Tailored Blazer,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+231,94,Oversized Blazer,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+232,95,Check Blazer,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+233,96,Knit Cardigan Jacket,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+234,97,Long Cardigan Coatigan,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+235,98,Belted Knit Jacket,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+236,99,Plaid Shacket,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+237,100,Utility Jacket,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+238,101,Field Jacket,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+239,102,Hooded Parka,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+240,103,Longline Puffer Vest,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+241,104,Tailored Vest,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+242,105,Lightweight Trench,UMATTR Fashion,Women’s Outerwear,Concept / Master List,UMATTR Official Product Master List
+243,106,Cashmere Turtleneck Sweater,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+244,107,Ribbed Turtleneck Sweater,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+245,108,Mock Neck Oversized Knit,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+246,109,Cable Knit Crewneck,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+247,110,Half-Zip Knit Sweater,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+248,111,Striped Breton Sweater,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+249,112,Chunky Rib Cardigan,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+250,113,V-Neck Button Cardigan,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+251,114,Cropped Knit Cardigan,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+252,115,Belted Wrap Cardigan,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+253,116,Sleeveless Mock Neck,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+254,117,Ribbed Knit Tank,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+255,118,High Neck Sleeveless Top,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+256,119,Knit Lounge Set,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+257,120,Knit Hoodie,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+258,121,Wide-Leg Knit Pants,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+259,122,Ribbed Knit Shorts,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+260,123,Knit Midi Skirt,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+261,124,Ribbed Knit Lounge Set,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+262,125,Soft Touch Hoodie Set,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+263,126,Relaxed Sweat Set,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+264,127,Cardigan Wide-Leg Set,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+265,128,Robe Wrap Lounge Set,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+266,129,Zip Hoodie Lounge Set,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+267,130,Lounge Tee Set,UMATTR Fashion,Women’s Knitwear and Lounge,Concept / Master List,UMATTR Official Product Master List
+268,131,Luxe Track Jacket,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+269,132,Luxe Track Pant,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+270,133,Half-Zip Performance Top,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+271,134,Support Sports Bra,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+272,135,Performance Legging,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+273,136,Cropped Zip Jacket,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+274,137,High-Waist Jogger,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+275,138,Tennis Dress,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+276,139,Lightweight Windbreaker,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+277,140,Racerback Tank,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+278,141,Cropped Sweatshirt,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+279,142,Performance Bike Short,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+280,143,Half-Zip Crop Top,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+281,144,Performance Skort,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+282,145,Luxe Hoodie,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+283,146,Zip-Up Hoodie,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+284,147,French Terry Jogger,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+285,148,Medium Support Bra,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+286,149,Full-Zip Performance Jacket,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+287,150,Tennis Polo Dress,UMATTR Fashion,Women’s Sport Luxe,Concept / Master List,UMATTR Official Product Master List
+288,1,Men’s Ivory Polo Shirt,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+289,2,Men’s Black Polo Shirt,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+290,3,Men’s Cream Knit Polo,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+291,4,Men’s Tailored Blazer,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+292,5,Men’s Black Power Blazer,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+293,6,Men’s Relaxed Suit Jacket,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+294,7,Men’s Linen Shirt,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+295,8,Men’s Satin-Collar Shirt,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+296,9,Men’s Everyday Crewneck Tee,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+297,10,Men’s Premium Hoodie,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+298,11,Men’s Half-Zip Pullover,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+299,12,Men’s Track Jacket,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+300,13,Men’s Tailored Trouser,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+301,14,Men’s Drawstring Linen Pant,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+302,15,Men’s Relaxed Jogger,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+303,16,Men’s Wide-Leg Lounge Pant,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+304,17,Men’s Performance Pant,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+305,18,Men’s Short-Sleeve Resort Shirt,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+306,19,Men’s Longline Coat,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+307,20,Men’s Trench Coat,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+308,21,Men’s Puffer Vest,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+309,22,Men’s Baseball Hat,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+310,23,Men’s Slides,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+311,24,Men’s Outdoor Sandal,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+312,25,Men’s Weekender Bag,UMATTR Men,Men’s Clothing and Lifestyle Products,Concept / Master List,UMATTR Official Product Master List
+313,1,UMATTR Soft Bralette,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+314,2,UMATTR Ribbed Bralette,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+315,3,UMATTR Support Bralette,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+316,4,UMATTR Seamless Bra,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+317,5,UMATTR Everyday Brief,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+318,6,UMATTR High-Waist Brief,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+319,7,UMATTR Seamless Brief,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+320,8,UMATTR Soft Short Set,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+321,9,UMATTR Satin Robe,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+322,10,UMATTR Cotton Robe,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+323,11,UMATTR Lounge Robe Set,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+324,12,UMATTR Slip Dress,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+325,13,UMATTR Sleep Cami,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+326,14,UMATTR Sleep Short,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+327,15,UMATTR Soft Lounge Pant,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+328,16,UMATTR Mom Comfort Set,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+329,17,UMATTR Bridal Ivory Set,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+330,18,UMATTR Travel Intimates Bag,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+331,19,UMATTR Satin Sleep Scarf,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+332,20,UMATTR Everyday Softwear Kit,UMATTR Intimates,"Lingerie, Robes, and Softwear",Concept / Master List,UMATTR Official Product Master List
+333,1,UMATTR Mom Comfort Slipper,UMATTR Step,Indoor Slippers,Concept / Master List,UMATTR Official Product Master List
+334,2,UMATTR Indoor Cloud Slipper,UMATTR Step,Indoor Slippers,Concept / Master List,UMATTR Official Product Master List
+335,3,UMATTR Ivory Plush Slipper,UMATTR Step,Indoor Slippers,Concept / Master List,UMATTR Official Product Master List
+336,4,UMATTR Gold Trim House Slipper,UMATTR Step,Indoor Slippers,Concept / Master List,UMATTR Official Product Master List
+337,5,UMATTR Memory Foam Slipper,UMATTR Step,Indoor Slippers,Concept / Master List,UMATTR Official Product Master List
+338,6,UMATTR Open-Toe Indoor Slipper,UMATTR Step,Indoor Slippers,Concept / Master List,UMATTR Official Product Master List
+339,7,UMATTR Closed-Toe Indoor Slipper,UMATTR Step,Indoor Slippers,Concept / Master List,UMATTR Official Product Master List
+340,8,UMATTR Cozy Winter Slipper,UMATTR Step,Indoor Slippers,Concept / Master List,UMATTR Official Product Master List
+341,9,UMATTR Spa Slipper,UMATTR Step,Indoor Slippers,Concept / Master List,UMATTR Official Product Master List
+342,10,UMATTR Travel Slipper,UMATTR Step,Indoor Slippers,Concept / Master List,UMATTR Official Product Master List
+343,11,UMATTR Outdoor Comfort Slide,UMATTR Step,Outdoor Sandals and Slides,Concept / Master List,UMATTR Official Product Master List
+344,12,UMATTR Black Logo Slide,UMATTR Step,Outdoor Sandals and Slides,Concept / Master List,UMATTR Official Product Master List
+345,13,UMATTR Ivory Logo Slide,UMATTR Step,Outdoor Sandals and Slides,Concept / Master List,UMATTR Official Product Master List
+346,14,UMATTR Gold Buckle Slide,UMATTR Step,Outdoor Sandals and Slides,Concept / Master List,UMATTR Official Product Master List
+347,15,UMATTR Everyday Sandal,UMATTR Step,Outdoor Sandals and Slides,Concept / Master List,UMATTR Official Product Master List
+348,16,UMATTR Double Strap Sandal,UMATTR Step,Outdoor Sandals and Slides,Concept / Master List,UMATTR Official Product Master List
+349,17,UMATTR Platform Comfort Sandal,UMATTR Step,Outdoor Sandals and Slides,Concept / Master List,UMATTR Official Product Master List
+350,18,UMATTR Leather-Look Sandal,UMATTR Step,Outdoor Sandals and Slides,Concept / Master List,UMATTR Official Product Master List
+351,19,UMATTR Sport Luxe Slide,UMATTR Step,Outdoor Sandals and Slides,Concept / Master List,UMATTR Official Product Master List
+352,20,UMATTR Men’s Outdoor Slide,UMATTR Step,Outdoor Sandals and Slides,Concept / Master List,UMATTR Official Product Master List
+353,21,UMATTR Pointed Flat,UMATTR Step,Dress and Everyday Shoes,Concept / Master List,UMATTR Official Product Master List
+354,22,UMATTR Gold Detail Flat,UMATTR Step,Dress and Everyday Shoes,Concept / Master List,UMATTR Official Product Master List
+355,23,UMATTR Stiletto Pump,UMATTR Step,Dress and Everyday Shoes,Concept / Master List,UMATTR Official Product Master List
+356,24,UMATTR Block Heel Sandal,UMATTR Step,Dress and Everyday Shoes,Concept / Master List,UMATTR Official Product Master List
+357,25,UMATTR White Sneaker,UMATTR Step,Dress and Everyday Shoes,Concept / Master List,UMATTR Official Product Master List
+358,26,UMATTR Black Ankle Boot,UMATTR Step,Dress and Everyday Shoes,Concept / Master List,UMATTR Official Product Master List
+359,27,UMATTR Nude Heel,UMATTR Step,Dress and Everyday Shoes,Concept / Master List,UMATTR Official Product Master List
+360,28,UMATTR Slingback Heel,UMATTR Step,Dress and Everyday Shoes,Concept / Master List,UMATTR Official Product Master List
+361,29,UMATTR Everyday Loafer,UMATTR Step,Dress and Everyday Shoes,Concept / Master List,UMATTR Official Product Master List
+362,30,UMATTR Travel Sneaker,UMATTR Step,Dress and Everyday Shoes,Concept / Master List,UMATTR Official Product Master List
+363,1,UMATTR Structured Handbag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+364,2,UMATTR Chain Shoulder Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+365,3,UMATTR Leather-Look Tote Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+366,4,UMATTR Mini Top Handle Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+367,5,UMATTR Crossbody Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+368,6,UMATTR Luxe Top Handle Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+369,7,UMATTR Everyday Work Tote,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+370,8,UMATTR Small Evening Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+371,9,UMATTR Black Signature Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+372,10,UMATTR Ivory Signature Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+373,11,UMATTR Cream Chain Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+374,12,UMATTR Gold Accent Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+375,13,UMATTR Bucket Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+376,14,UMATTR Soft Shoulder Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+377,15,UMATTR Travel Cosmetic Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+378,16,UMATTR Makeup Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+379,17,UMATTR Tea Tote Gift Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+380,18,UMATTR Weekender Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+381,19,UMATTR Men’s Weekender Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+382,20,UMATTR Laptop Work Bag,UMATTR Carry,Handbags and Bags,Concept / Master List,UMATTR Official Product Master List
+383,1,UMATTR Oversized Sunglasses,UMATTR Accessories,Sunglasses,Concept / Master List,UMATTR Official Product Master List
+384,2,UMATTR Cat-Eye Sunglasses,UMATTR Accessories,Sunglasses,Concept / Master List,UMATTR Official Product Master List
+385,3,UMATTR Aviator Sunglasses,UMATTR Accessories,Sunglasses,Concept / Master List,UMATTR Official Product Master List
+386,4,UMATTR Square Sunglasses,UMATTR Accessories,Sunglasses,Concept / Master List,UMATTR Official Product Master List
+387,5,UMATTR Round Sunglasses,UMATTR Accessories,Sunglasses,Concept / Master List,UMATTR Official Product Master List
+388,6,UMATTR Gold Frame Sunglasses,UMATTR Accessories,Sunglasses,Concept / Master List,UMATTR Official Product Master List
+389,7,UMATTR Black Frame Sunglasses,UMATTR Accessories,Sunglasses,Concept / Master List,UMATTR Official Product Master List
+390,8,UMATTR Tortoise Sunglasses,UMATTR Accessories,Sunglasses,Concept / Master List,UMATTR Official Product Master List
+391,9,UMATTR Ivory Frame Sunglasses,UMATTR Accessories,Sunglasses,Concept / Master List,UMATTR Official Product Master List
+392,10,UMATTR Travel Sunglasses Case,UMATTR Accessories,Sunglasses,Concept / Master List,UMATTR Official Product Master List
+393,11,UMATTR Baseball Hat,UMATTR Accessories,Hats,Concept / Master List,UMATTR Official Product Master List
+394,12,UMATTR Men’s Baseball Hat,UMATTR Accessories,Hats,Concept / Master List,UMATTR Official Product Master List
+395,13,UMATTR Ivory Baseball Hat,UMATTR Accessories,Hats,Concept / Master List,UMATTR Official Product Master List
+396,14,UMATTR Black Baseball Hat,UMATTR Accessories,Hats,Concept / Master List,UMATTR Official Product Master List
+397,15,UMATTR Bucket Hat,UMATTR Accessories,Hats,Concept / Master List,UMATTR Official Product Master List
+398,16,UMATTR Ivory Bucket Hat,UMATTR Accessories,Hats,Concept / Master List,UMATTR Official Product Master List
+399,17,UMATTR Gold Logo Bucket Hat,UMATTR Accessories,Hats,Concept / Master List,UMATTR Official Product Master List
+400,18,UMATTR Winter Knit Hat,UMATTR Accessories,Hats,Concept / Master List,UMATTR Official Product Master List
+401,19,UMATTR Satin-Lined Cap,UMATTR Accessories,Hats,Concept / Master List,UMATTR Official Product Master List
+402,20,UMATTR Hair-Friendly Hat,UMATTR Accessories,Hats,Concept / Master List,UMATTR Official Product Master List
+403,21,UMATTR Cashmere-Look Scarf,UMATTR Accessories,Scarves and Wraps,Concept / Master List,UMATTR Official Product Master List
+404,22,UMATTR Silk-Look Scarf,UMATTR Accessories,Scarves and Wraps,Concept / Master List,UMATTR Official Product Master List
+405,23,UMATTR Satin Hair Scarf,UMATTR Accessories,Scarves and Wraps,Concept / Master List,UMATTR Official Product Master List
+406,24,UMATTR Head Wrap,UMATTR Accessories,Scarves and Wraps,Concept / Master List,UMATTR Official Product Master List
+407,25,UMATTR Travel Scarf,UMATTR Accessories,Scarves and Wraps,Concept / Master List,UMATTR Official Product Master List
+408,26,UMATTR Winter Scarf,UMATTR Accessories,Scarves and Wraps,Concept / Master List,UMATTR Official Product Master List
+409,27,UMATTR Gold Accent Scarf,UMATTR Accessories,Scarves and Wraps,Concept / Master List,UMATTR Official Product Master List
+410,28,UMATTR Ivory Neck Scarf,UMATTR Accessories,Scarves and Wraps,Concept / Master List,UMATTR Official Product Master List
+411,29,UMATTR Bag Scarf,UMATTR Accessories,Scarves and Wraps,Concept / Master List,UMATTR Official Product Master List
+412,30,UMATTR Crown Wrap,UMATTR Accessories,Scarves and Wraps,Concept / Master List,UMATTR Official Product Master List
+413,31,UMATTR Gold Hoop Earrings,UMATTR Accessories,Jewelry and Finishers,Concept / Master List,UMATTR Official Product Master List
+414,32,UMATTR Layered Necklace,UMATTR Accessories,Jewelry and Finishers,Concept / Master List,UMATTR Official Product Master List
+415,33,UMATTR Gold Cuff Bracelet,UMATTR Accessories,Jewelry and Finishers,Concept / Master List,UMATTR Official Product Master List
+416,34,UMATTR Statement Ring,UMATTR Accessories,Jewelry and Finishers,Concept / Master List,UMATTR Official Product Master List
+417,35,UMATTR Minimal Ring Set,UMATTR Accessories,Jewelry and Finishers,Concept / Master List,UMATTR Official Product Master List
+418,36,UMATTR Watch,UMATTR Accessories,Jewelry and Finishers,Concept / Master List,UMATTR Official Product Master List
+419,37,UMATTR Signature Belt,UMATTR Accessories,Jewelry and Finishers,Concept / Master List,UMATTR Official Product Master List
+420,38,UMATTR Hair Cuffs,UMATTR Accessories,Jewelry and Finishers,Concept / Master List,UMATTR Official Product Master List
+421,39,UMATTR Pearl Clips,UMATTR Accessories,Jewelry and Finishers,Concept / Master List,UMATTR Official Product Master List
+422,40,UMATTR Gold Hair Pins,UMATTR Accessories,Jewelry and Finishers,Concept / Master List,UMATTR Official Product Master List
+423,1,UMATTR Candle,UMATTR Home & Gift,Lifestyle Add-Ons,Concept / Master List,UMATTR Official Product Master List
+424,2,UMATTR Room Spray,UMATTR Home & Gift,Lifestyle Add-Ons,Concept / Master List,UMATTR Official Product Master List
+425,3,UMATTR Vanity Tray,UMATTR Home & Gift,Lifestyle Add-Ons,Concept / Master List,UMATTR Official Product Master List
+426,4,UMATTR Gold Comb Set,UMATTR Home & Gift,Lifestyle Add-Ons,Concept / Master List,UMATTR Official Product Master List
+427,5,UMATTR Beauty Organizer,UMATTR Home & Gift,Lifestyle Add-Ons,Concept / Master List,UMATTR Official Product Master List
+428,6,UMATTR Tea Gift Box,UMATTR Home & Gift,Lifestyle Add-Ons,Concept / Master List,UMATTR Official Product Master List
+429,7,UMATTR Wellness Gift Box,UMATTR Home & Gift,Lifestyle Add-Ons,Concept / Master List,UMATTR Official Product Master List
+430,8,UMATTR Beauty Gift Box,UMATTR Home & Gift,Lifestyle Add-Ons,Concept / Master List,UMATTR Official Product Master List
+431,9,UMATTR Crown Care Gift Box,UMATTR Home & Gift,Lifestyle Add-Ons,Concept / Master List,UMATTR Official Product Master List
+432,10,UMATTR Full Lifestyle Starter Box,UMATTR Home & Gift,Lifestyle Add-Ons,Concept / Master List,UMATTR Official Product Master List
