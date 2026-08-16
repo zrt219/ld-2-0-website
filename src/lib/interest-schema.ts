@@ -1,12 +1,12 @@
 import { z } from "zod";
 
 export const categoryInterestOptions = [
-  "Hair Cleansing & Moisture",
-  "Scalp & Hair Growth Oils",
-  "Luxury Wigs & Clip-In Extensions",
-  "Serums & Facial Treatments",
-  "Body & Barrier Creams",
-  "Primers & Complexion Glow",
+  "Luxury Clothing & Apparel",
+  "Footwear & Shoes",
+  "Bags, Jewelry & Accessories",
+  "Hair & Crown Care (Wigs & Extensions)",
+  "Skincare & Makeup",
+  "Tea, Wellness & Lifestyle Gifts",
 ] as const;
 
 export const interestSchema = z.object({

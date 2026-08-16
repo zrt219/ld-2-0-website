@@ -166,8 +166,8 @@ export function ProductGalleryRow({
                   {/* Image container */}
                   <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-[#fbf9f5]">
                     <Image
-                      src={product.imageSrc}
-                      alt={product.alt}
+                      src={product.image}
+                      alt={product.name}
                       fill
                       unoptimized
                       loading="lazy"
@@ -177,7 +177,7 @@ export function ProductGalleryRow({
 
                     {/* Coming Soon Tag */}
                     <div className="absolute top-2.5 left-2.5 rounded-full border border-[rgba(198,165,92,0.4)] bg-[rgba(250,247,240,0.92)] px-2.5 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-[var(--gold-dark)] backdrop-blur-sm">
-                      {product.status}
+                      Coming Soon
                     </div>
 
                     {/* Hover Quick View Overlay */}
@@ -201,7 +201,7 @@ export function ProductGalleryRow({
                     </div>
 
                     <div className="mt-4 flex items-center justify-between border-t border-[var(--line)]/60 pt-3 text-xs font-medium text-[#7d7164]">
-                      <span>Curated Formulation</span>
+                      <span>Curated Item</span>
                       <span className="font-semibold text-[var(--gold-dark)]">
                         Launch Details →
                       </span>

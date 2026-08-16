@@ -172,8 +172,8 @@ export function ProductLightbox({
           <div className="relative flex aspect-square items-center justify-center bg-gradient-to-b from-[#fdfbf7] to-[#f4ede2] p-6 md:p-10">
             <div className="relative h-full w-full">
               <Image
-                src={product.imageSrc}
-                alt={product.alt}
+                src={product.image}
+                alt={product.name}
                 fill
                 priority
                 unoptimized
@@ -208,7 +208,7 @@ export function ProductLightbox({
               <div className="flex items-center gap-2">
                 <Sparkles className="h-4 w-4 text-[var(--gold-dark)]" aria-hidden="true" />
                 <span className="text-xs font-bold uppercase tracking-widest text-[var(--gold-dark)]">
-                  {product.status}
+                  Coming Soon • Exclusive Preview
                 </span>
               </div>
 
@@ -219,22 +219,45 @@ export function ProductLightbox({
                 {product.name}
               </h3>
 
-              <div className="mt-4 flex flex-wrap gap-2 text-xs">
+              <div className="mt-3 flex flex-wrap gap-2 text-xs">
                 <span className="rounded-md border border-[var(--line)] bg-[var(--ivory)] px-2.5 py-1 font-semibold text-[var(--charcoal)]">
-                  Subcategory: {product.subcategory}
+                  {product.subcategory}
                 </span>
-                <span className="rounded-md border border-[var(--line)] bg-[var(--ivory)] px-2.5 py-1 font-semibold text-[var(--charcoal)]">
-                  Master Sequence #{product.sequence}
-                </span>
+                {product.fabric && (
+                  <span className="rounded-md border border-[var(--line)] bg-[var(--ivory)] px-2.5 py-1 font-semibold text-[var(--charcoal)]">
+                    {product.fabric}
+                  </span>
+                )}
               </div>
 
-              <div className="mt-6 space-y-3 text-sm leading-relaxed text-[#5c5246]">
-                <p>
-                  Part of <em>The Collection — Curated by Lornette Daye</em>. Meticulously formulated with botanical care, intentional wellness, and premium everyday utility.
+              <div className="mt-5 space-y-4 text-sm leading-relaxed text-[#5c5246]">
+                <p className="font-medium text-[var(--ink)]">
+                  {product.shortDescription}
                 </p>
-                <p className="rounded-lg border border-[rgba(198,165,92,0.3)] bg-[#faf7f0] p-3.5 text-xs text-[#736657]">
-                  <strong className="text-[var(--ink)]">Launch Preview:</strong> Official release announcements, availability timelines, and exclusive member reservations will be shared with the Interest List.
-                </p>
+
+                {product.curationReason && (
+                  <div className="rounded-lg border border-[rgba(198,165,92,0.25)] bg-[#faf7f0] p-3 text-xs text-[#736657]">
+                    <strong className="text-[var(--ink)] block mb-1 font-serif text-sm">Why Lornette Curated This:</strong>
+                    {product.curationReason}
+                  </div>
+                )}
+
+                {product.details && product.details.length > 0 && (
+                  <div className="space-y-1.5 pt-1">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[var(--charcoal)]">Craftsmanship & Features:</span>
+                    <ul className="list-disc pl-4 text-xs space-y-1 text-[#6b5f52]">
+                      {product.details.map((detail, idx) => (
+                        <li key={idx}>{detail}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {product.editorialQuote && (
+                  <p className="italic text-xs text-[var(--gold-dark)] border-l-2 border-[var(--gold-dark)] pl-3 py-1">
+                    &ldquo;{product.editorialQuote}&rdquo;
+                  </p>
+                )}
               </div>
             </div>
 
@@ -248,7 +271,7 @@ export function ProductLightbox({
                 className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-[var(--ink)] px-6 text-sm font-bold uppercase tracking-wider text-[var(--ivory)] shadow-md transition-all hover:bg-[var(--gold-dark)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)]"
               >
                 <Bell className="h-4 w-4" aria-hidden="true" />
-                Join the Interest List for this Product
+                Join Priority List for {product.name}
               </button>
             </div>
           </div>

@@ -16,7 +16,7 @@ export function InterestForm({ initialSelectedCategory }: InterestFormProps) {
   const [selectedInterests, setSelectedInterests] = useState<string[]>(
     initialSelectedCategory
       ? [initialSelectedCategory]
-      : ["Hair Cleansing & Moisture", "Luxury Wigs & Clip-In Extensions"]
+      : ["Luxury Clothing & Apparel", "Bags, Jewelry & Accessories"]
   );
   const [notes, setNotes] = useState("");
   const [honeypot, setHoneypot] = useState("");
