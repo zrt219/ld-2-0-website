@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     title: siteCopy.seoTitle,
     description: siteCopy.seoDescription,
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
   robots: {
     index: true,
     follow: true,
