@@ -190,7 +190,7 @@ export default function Home() {
           secondaryHref="/media"
         />
 
-        <section className="bg-[var(--ink)] px-4 py-10 text-[var(--ivory)] sm:px-6 lg:px-8">
+        <section className="bg-[var(--ink)] px-4 py-16 text-[var(--ivory)] sm:px-6 sm:py-20 lg:px-8 lg:py-24">
           <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.28fr_1fr_0.32fr] lg:items-center">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--champagne)]">
               A Message Audiences Carry Home

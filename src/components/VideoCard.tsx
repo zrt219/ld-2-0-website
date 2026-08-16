@@ -99,12 +99,18 @@ export function VideoCard({
       return;
     }
 
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
     const previousOverflow = document.body.style.overflow;
+    const previousPaddingRight = document.body.style.paddingRight;
     document.body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
     closeButtonRef.current?.focus();
 
     return () => {
       document.body.style.overflow = previousOverflow;
+      document.body.style.paddingRight = previousPaddingRight;
       previouslyFocusedRef.current?.focus();
     };
   }, [open]);
@@ -112,7 +118,7 @@ export function VideoCard({
   return (
     <>
       <article
-        className={`group overflow-hidden border border-[rgba(198,165,92,0.42)] bg-white shadow-[0_18px_70px_rgba(23,20,18,0.1)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_24px_90px_rgba(23,20,18,0.14)] ${
+        className={`group overflow-hidden border border-[rgba(198,165,92,0.42)] bg-white shadow-[0_18px_70px_rgba(23,20,18,0.1)] transition duration-300 will-change-transform hover:-translate-y-0.5 hover:shadow-[0_24px_90px_rgba(23,20,18,0.14)] ${
           featured ? featuredColumns ?? "lg:grid lg:grid-cols-[1.35fr_0.65fr]" : ""
         } ${className}`}
       >

@@ -20,9 +20,9 @@ export function CTAButton({
 }: CTAButtonProps) {
   const styles = {
     primary:
-      "border-transparent bg-[var(--champagne)] text-[var(--ink)] shadow-[0_14px_34px_rgba(155,118,46,0.22)] hover:bg-[#d8b96e]",
+      "border-transparent bg-[linear-gradient(135deg,var(--champagne)_0%,#d8b96e_100%)] text-[var(--ink)] shadow-[0_14px_34px_rgba(155,118,46,0.22)] hover:shadow-[0_20px_40px_rgba(155,118,46,0.3)]",
     secondary:
-      "border-[rgba(155,118,46,0.45)] bg-white/35 text-[var(--ink)] hover:bg-[rgba(198,165,92,0.12)]",
+      "border-[rgba(155,118,46,0.45)] bg-white/35 text-[var(--ink)] hover:bg-[rgba(198,165,92,0.12)] hover:border-[rgba(155,118,46,0.7)]",
     dark: "border-transparent bg-[var(--ink)] text-[var(--ivory)] shadow-[0_14px_34px_rgba(23,20,18,0.18)] hover:bg-[var(--charcoal)]",
   };
   const sizes = {
@@ -34,7 +34,7 @@ export function CTAButton({
   return (
     <Link
       href={href}
-      className={`inline-flex w-full items-center justify-center gap-2 border text-center font-bold uppercase transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-xl active:scale-95 sm:w-auto ${sizes[size]} ${styles[variant]} ${className}`}
+      className={`inline-flex w-full items-center justify-center gap-2 border text-center font-bold uppercase transition-all duration-400 ease-out hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--gold-dark)] active:translate-y-0 sm:w-auto ${sizes[size]} ${styles[variant]} ${className}`}
     >
       {children}
       {showIcon ? <ArrowUpRight size={size === "default" ? 17 : 19} aria-hidden="true" /> : null}

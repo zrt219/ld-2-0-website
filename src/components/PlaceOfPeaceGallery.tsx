@@ -103,16 +103,21 @@ export function PlaceOfPeaceGallery() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleKeyDown]);
 
-  // Lock body scroll when modal is open
+  // Lock body scroll when modal is open without causing layout shift
   useEffect(() => {
     if (selectedCardIndex !== null) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      const previousOverflow = document.body.style.overflow;
+      const previousPaddingRight = document.body.style.paddingRight;
       document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+      }
+      return () => {
+        document.body.style.overflow = previousOverflow;
+        document.body.style.paddingRight = previousPaddingRight;
+      };
     }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
   }, [selectedCardIndex]);
 
   // Tripled list for infinite seamless marquee
@@ -208,6 +213,7 @@ export function PlaceOfPeaceGallery() {
                       scale: 1.02,
                       transition: { duration: 0.25, ease: "easeOut" },
                     }}
+                    whileTap={{ scale: 0.96 }}
                     onClick={() => setSelectedCardIndex(originalIndex)}
                     className="group relative flex-shrink-0 cursor-pointer overflow-hidden rounded-xl border border-[rgba(198,165,92,0.3)] bg-white shadow-md transition-shadow hover:border-[var(--gold)] hover:shadow-xl w-[260px] sm:w-[290px] md:w-[320px] aspect-square"
                   >

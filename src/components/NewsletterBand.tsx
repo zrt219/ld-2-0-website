@@ -25,13 +25,15 @@ export function NewsletterBand() {
             event.preventDefault();
             const form = event.currentTarget;
             const email = String(new FormData(form).get("newsletter-email") ?? "");
-            setMailtoHref(
-              `mailto:${siteCopy.contactEmail}?subject=${encodeURIComponent(
-                "Speak Life newsletter request",
-              )}&body=${encodeURIComponent(
-                `Please add me to Lornette Daye's Speak Life updates.\n\nEmail: ${email}`,
-              )}`,
-            );
+            const mailtoLink = `mailto:${siteCopy.contactEmail}?subject=${encodeURIComponent(
+              "Speak Life newsletter request",
+            )}&body=${encodeURIComponent(
+              `Please add me to Lornette Daye's Speak Life updates.\n\nEmail: ${email}`,
+            )}`;
+            setMailtoHref(mailtoLink);
+            try {
+              window.location.href = mailtoLink;
+            } catch {}
             setMessage("Almost there. Open the prepared email to finish joining the list.");
           }}
         >

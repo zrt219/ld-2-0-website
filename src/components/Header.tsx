@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { mainNav, siteCopy } from "@/content/site";
 
@@ -12,7 +13,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const isActive = (href: string) =>
-    pathname === href || (href !== "/" && pathname.startsWith(href));
+    pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
 
   return (
     <header className="sticky top-0 z-50 border-y border-[#dfd1b4] bg-[#fbf8f0]">
@@ -63,7 +64,7 @@ export function Header() {
         <button
           type="button"
           data-mobile-menu-trigger
-          className="inline-flex min-h-11 min-w-11 items-center justify-center border border-[#dfd1b4] text-[var(--ink)] lg:hidden"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center border border-[#dfd1b4] text-[var(--ink)] lg:hidden cursor-pointer"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
@@ -73,27 +74,33 @@ export function Header() {
         </button>
       </nav>
 
-      {open ? (
-        <div
-          id="mobile-menu"
-          data-mobile-menu
-          className="border-t border-[#dfd1b4] bg-[#fbf8f0] px-4 pb-5 lg:hidden"
-        >
-          <div className="mx-auto grid max-w-7xl gap-1 py-4">
-            {mainNav.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                aria-current={isActive(item.href) ? "page" : undefined}
-                onClick={() => setOpen(false)}
-                className="min-h-11 border-b border-[var(--line)] px-2 py-3 text-base font-semibold text-[var(--ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--gold-dark)]"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      ) : null}
+      <AnimatePresence>
+        {open ? (
+          <motion.div
+            id="mobile-menu"
+            data-mobile-menu
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="overflow-hidden border-t border-[#dfd1b4] bg-[#fbf8f0] lg:hidden"
+          >
+            <div className="mx-auto grid max-w-7xl gap-1 px-4 pb-5 pt-4">
+              {mainNav.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  onClick={() => setOpen(false)}
+                  className="min-h-11 border-b border-[var(--line)] px-2 py-3 text-base font-semibold text-[var(--ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--gold-dark)]"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </header>
   );
 }

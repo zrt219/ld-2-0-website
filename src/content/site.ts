@@ -20,7 +20,6 @@ import programOverview from "../../images/unnamed (7).jpg";
 import eventWorkshop from "../../images/unnamed (1).jpg";
 import trainingPoster from "../../images/unnamed (8).jpg";
 import resiliencePoster from "../../images/unnamed (4).jpg";
-import survivalSkillsMen from "../../images/survival-skills-for-men-cover-new.png";
 import survivingLife from "../../images/surviving-life-cover-new.jpg";
 import finishStrongBook from "../../images/finish-strong-cover-new.jpg";
 import womensBook from "../../images/womensbook.jpg";

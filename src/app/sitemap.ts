@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]));
 
   return routes.map((route) => ({
-    url: `${siteUrl}${route === "/" ? "" : route}`,
+    url: new URL(route === "/" ? "" : route, siteUrl).href,
     lastModified: new Date("2026-05-17"),
     changeFrequency: "monthly",
     priority: route === "/" ? 1 : 0.7,
