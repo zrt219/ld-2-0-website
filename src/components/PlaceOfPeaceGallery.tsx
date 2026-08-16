@@ -215,6 +215,7 @@ export function PlaceOfPeaceGallery() {
                       src={card.src}
                       alt={card.alt}
                       fill
+                      unoptimized
                       sizes="(max-width: 640px) 260px, (max-width: 768px) 290px, 320px"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
@@ -304,6 +305,7 @@ export function PlaceOfPeaceGallery() {
                   alt={peaceCards[selectedCardIndex].alt}
                   fill
                   priority
+                  unoptimized
                   className="object-contain"
                   sizes="(max-width: 768px) 92vw, 780px"
                 />
