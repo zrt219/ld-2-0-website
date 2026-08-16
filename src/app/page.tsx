@@ -9,9 +9,13 @@ import { HeroSplit } from "@/components/HeroSplit";
 import { HomeProofSection } from "@/components/HomeProofSection";
 import { ImageFrame } from "@/components/ImageFrame";
 import { MetricStrip } from "@/components/MetricStrip";
+import dynamic from "next/dynamic";
 import { NewsletterBand } from "@/components/NewsletterBand";
 import { PageShell } from "@/components/PageShell";
-import { PlaceOfPeaceGallery } from "@/components/PlaceOfPeaceGallery";
+
+const PlaceOfPeaceGallery = dynamic(
+  () => import("@/components/PlaceOfPeaceGallery").then((mod) => mod.PlaceOfPeaceGallery)
+);
 import { SectionHeader } from "@/components/SectionHeader";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { TopicCard } from "@/components/TopicCard";

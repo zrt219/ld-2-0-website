@@ -92,18 +92,21 @@ const allProductsForJsonLd = [
 const productJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Books by Lornette Daye",
+  name: "Books & Resources by Lornette Daye",
   itemListElement: allProductsForJsonLd.map((book, index) => ({
     "@type": "ListItem",
     position: index + 1,
     item: {
-      "@type": "Product",
+      "@type": "Book",
       name: book.title,
       description: book.description,
-      brand: siteCopy.brandName,
+      author: {
+        "@type": "Person",
+        name: siteCopy.brandName,
+      },
       offers: {
         "@type": "Offer",
-        price: book.priceLabel,
+        price: book.priceLabel.replace(/[^0-9.]/g, "") || "0.00",
         priceCurrency: "CAD",
         availability: "https://schema.org/InStock",
         url: book.purchaseUrl,

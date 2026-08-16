@@ -235,9 +235,40 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 export default function SpeakingPage() {
   const profile = speakerSubmissionProfile;
 
+  const speakingServiceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Professional Keynote Speaking",
+    provider: {
+      "@type": "Person",
+      name: "Lornette Daye",
+      jobTitle: "Keynote Speaker, Olympic-Level Athlete & Coach",
+    },
+    areaServed: "Global",
+    description:
+      "Keynote sessions on resilience, navigating adversity, leadership, and high-performance mindset.",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Keynote Speaking Topics",
+      itemListElement: speakingPillars.map((pillar, idx) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: pillar.keynoteName,
+          description: pillar.description,
+        },
+        position: idx + 1,
+      })),
+    },
+  };
+
   return (
     <PageShell>
       <main>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(speakingServiceJsonLd) }}
+        />
         <section
           id="speaking-hero"
           className="relative scroll-mt-28 overflow-hidden border-b border-[var(--line)] bg-[var(--ivory)] px-4 py-14 sm:px-6 lg:px-8 lg:py-16"

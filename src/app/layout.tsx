@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import { preconnect } from "react-dom";
 import "./globals.css";
 
 import { siteCopy, siteUrl } from "@/content/site";
@@ -61,15 +62,33 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  preconnect("https://www.youtube.com");
+  preconnect("https://youtu.be");
+
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: siteCopy.brandName,
     url: siteUrl,
-    jobTitle: siteCopy.verifiedClaims,
+    image: `${siteUrl}/images/lornette-executive-portrait.jpg`,
+    jobTitle: "Professional Keynote Speaker & Executive Coach",
+    description: siteCopy.seoDescription,
     sameAs: siteCopy.socialLinks
       .map((link) => link.href)
       .filter((href) => href.startsWith("http")),
+    knowsAbout: [
+      "Resilient Leadership",
+      "Diversity, Equity & Inclusion",
+      "Executive & Athlete Performance Coaching",
+      "Youth Development & Mentorship",
+    ],
+  };
+
+  const webSiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: `${siteCopy.brandName} - Keynote Speaker, Coach, Leader`,
+    url: siteUrl,
   };
 
   return (
@@ -82,6 +101,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
         />
         {children}
       </body>

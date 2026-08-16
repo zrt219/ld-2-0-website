@@ -2,7 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import { PageShell } from "@/components/PageShell";
-import { createMetadata, posts } from "@/content/site";
+import { createMetadata, posts, siteCopy, siteUrl } from "@/content/site";
 
 type BlogPostPageProps = {
   params: Promise<{
@@ -33,9 +33,36 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/blog/${post.slug}`,
+    },
+    author: {
+      "@type": "Person",
+      name: post.author || siteCopy.brandName,
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Person",
+      name: siteCopy.brandName,
+      url: siteUrl,
+    },
+  };
+
   return (
     <PageShell>
       <main className="bg-white px-6 py-8 sm:py-10">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        />
         <article className="mx-auto max-w-[740px] text-[14px] leading-[1.65] text-black">
           <h1 className="max-w-[660px] font-serif text-[30px] font-normal leading-[1.25] text-black sm:text-[34px]">
             {post.title}
