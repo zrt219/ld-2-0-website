@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Sparkles, ArrowDown } from "lucide-react";
 
 import { collectionMeta } from "@/content/products";
@@ -8,35 +11,68 @@ export function CollectionHero() {
   return (
     <section className="relative overflow-hidden border-b border-[var(--line)] bg-gradient-to-b from-white via-[var(--ivory)] to-[#f3ece0]/60 px-4 pt-12 pb-16 sm:px-6 sm:pt-16 sm:pb-20 lg:px-8 lg:pt-20 lg:pb-24">
       {/* Subtle decorative gold ambient glow */}
-      <div
-        className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 h-96 w-[48rem] max-w-full rounded-full bg-[radial-gradient(circle,rgba(198,165,92,0.18)_0%,transparent_70%)] blur-3xl"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 h-96 w-[48rem] max-w-full rounded-full bg-[radial-gradient(circle,rgba(198,165,92,0.22)_0%,transparent_70%)] blur-3xl"
         aria-hidden="true"
       />
 
       <div className="relative mx-auto max-w-7xl">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          {/* Text Content */}
-          <div className="flex flex-col items-start text-left">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(198,165,92,0.45)] bg-[rgba(250,247,240,0.85)] px-3.5 py-1.5 backdrop-blur-sm">
+          {/* Text Content with Framer Motion stagger */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col items-start text-left"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="inline-flex items-center gap-2 rounded-full border border-[rgba(198,165,92,0.45)] bg-[rgba(250,247,240,0.85)] px-3.5 py-1.5 backdrop-blur-sm"
+            >
               <Sparkles className="h-3.5 w-3.5 text-[var(--gold-dark)]" aria-hidden="true" />
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
                 {collectionMeta.eyebrow}
               </span>
-            </div>
+            </motion.div>
 
-            <h1 className="mt-6 font-serif text-4xl font-normal tracking-tight text-[var(--ink)] sm:text-5xl lg:text-6xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mt-6 font-serif text-4xl font-normal tracking-tight text-[var(--ink)] sm:text-5xl lg:text-6xl"
+            >
               {collectionMeta.title}
-            </h1>
+            </motion.h1>
 
-            <p className="mt-2 text-lg font-medium italic tracking-wide text-[var(--gold-dark)] sm:text-xl">
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mt-2 text-lg font-medium italic tracking-wide text-[var(--gold-dark)] sm:text-xl"
+            >
               {collectionMeta.signature}
-            </p>
+            </motion.p>
 
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-[#5c5246] sm:text-lg">
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="mt-6 max-w-xl text-base leading-relaxed text-[#5c5246] sm:text-lg"
+            >
               {collectionMeta.supportingCopy}
-            </p>
+            </motion.p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4 sm:mt-10">
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.45 }}
+              className="mt-8 flex flex-wrap items-center gap-4 sm:mt-10"
+            >
               <CTAButton href="#categories" variant="dark" className="group">
                 <span>{collectionMeta.primaryCtaText}</span>
                 <ArrowDown className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" aria-hidden="true" />
@@ -45,27 +81,37 @@ export function CollectionHero() {
               <CTAButton href="#interest-list" variant="secondary">
                 {collectionMeta.secondaryCtaText}
               </CTAButton>
-            </div>
+            </motion.div>
 
-            <div className="mt-8 flex items-center gap-6 border-t border-[rgba(198,165,92,0.3)] pt-6 text-xs text-[#7d7164]">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.55 }}
+              className="mt-8 flex items-center gap-6 border-t border-[rgba(198,165,92,0.3)] pt-6 text-xs text-[#7d7164]"
+            >
               <span className="flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-[var(--champagne)]" />
                 72 Curated Product Formulations
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-[var(--champagne)]" />
-                Pure Botanical Essentials
+                Pure Botanical & Tailored Essentials
               </span>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          {/* Editorial Visual Composition */}
-          <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
+          {/* Editorial Visual Composition with Framer Motion Float */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 24 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="relative mx-auto w-full max-w-lg lg:max-w-none"
+          >
             <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-[rgba(198,165,92,0.35)] bg-white p-3 shadow-[0_20px_50px_rgba(42,37,32,0.08)] sm:p-4">
               <div className="relative h-full w-full overflow-hidden rounded-xl bg-[#fdfbf7]">
                 <Image
                   src={collectionMeta.heroImage}
-                  alt="Featured UMATTR Crown Care product curated by Lornette Daye"
+                  alt="Featured Luxury Tailoring & Apparel curated by Lornette Daye"
                   fill
                   priority
                   unoptimized
@@ -83,12 +129,12 @@ export function CollectionHero() {
                     Exclusive Preview
                   </p>
                   <p className="text-sm font-serif font-medium text-[var(--ink)]">
-                    Signature Beauty, Crown Care & Holistic Wellness
+                    Signature Tailoring, Footwear, Crown Care & Holistic Wellness
                   </p>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

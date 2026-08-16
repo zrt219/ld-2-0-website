@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Eye } from "lucide-react";
 
 import { ProductCategory, ProductItem } from "@/content/products";
@@ -67,8 +68,12 @@ export function ProductGalleryRow({
   };
 
   return (
-    <section
+    <motion.section
       id={category.id}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="group relative border-b border-[var(--line)] py-16 sm:py-20"
       aria-label={`${category.name} gallery`}
     >
@@ -104,10 +109,12 @@ export function ProductGalleryRow({
             </div>
 
             <div className="flex items-center gap-2">
-              <button
+              <motion.button
                 type="button"
                 onClick={() => handleScroll("left")}
                 disabled={!canScrollLeft}
+                whileHover={canScrollLeft ? { scale: 1.05 } : {}}
+                whileTap={canScrollLeft ? { scale: 0.95 } : {}}
                 aria-label={`Scroll ${category.name} products left`}
                 className={`inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)] ${
                   canScrollLeft
@@ -116,12 +123,14 @@ export function ProductGalleryRow({
                 }`}
               >
                 <ChevronLeft className="h-5 w-5" aria-hidden="true" />
-              </button>
+              </motion.button>
 
-              <button
+              <motion.button
                 type="button"
                 onClick={() => handleScroll("right")}
                 disabled={!canScrollRight}
+                whileHover={canScrollRight ? { scale: 1.05 } : {}}
+                whileTap={canScrollRight ? { scale: 0.95 } : {}}
                 aria-label={`Scroll ${category.name} products right`}
                 className={`inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)] ${
                   canScrollRight
@@ -130,18 +139,18 @@ export function ProductGalleryRow({
                 }`}
               >
                 <ChevronRight className="h-5 w-5" aria-hidden="true" />
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>
 
-        {/* Scrollable Products Strip */}
+        {/* Scrollable Products Strip (Scrollbars Hidden) */}
         <div className="relative mt-8">
           <div
             ref={scrollContainerRef}
             tabIndex={0}
             aria-label={`${category.name} product list. Use left and right arrow keys or scroll buttons to navigate.`}
-            className="flex gap-4 overflow-x-auto no-scrollbar scroll-smooth pb-4 pt-2 snap-x snap-mandatory focus-visible:outline-none"
+            className="flex gap-4 overflow-x-auto pb-4 pt-2 snap-x snap-mandatory focus-visible:outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
             onKeyDown={(e) => {
               if (e.key === "ArrowLeft") {
                 e.preventDefault();
@@ -152,15 +161,21 @@ export function ProductGalleryRow({
               }
             }}
           >
-            {category.products.map((product) => (
-              <div
+            {category.products.map((product, idx) => (
+              <motion.div
                 key={product.id}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: Math.min(idx * 0.04, 0.3) }}
                 className="w-[78vw] max-w-[300px] shrink-0 snap-start sm:w-[280px] lg:w-[300px]"
               >
-                <button
+                <motion.button
                   type="button"
                   onClick={() => onSelectProduct(product)}
-                  className="group/card flex h-full w-full flex-col overflow-hidden rounded-xl border border-[rgba(198,165,92,0.25)] bg-white p-4 text-left shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[var(--gold-dark)] hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)]"
+                  whileHover={{ y: -6, transition: { duration: 0.25 } }}
+                  whileTap={{ scale: 0.99 }}
+                  className="group/card flex h-full w-full flex-col overflow-hidden rounded-xl border border-[rgba(198,165,92,0.25)] bg-white p-4 text-left shadow-sm transition-all duration-300 hover:border-[var(--gold-dark)] hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)]"
                   aria-label={`View details for ${product.name}`}
                 >
                   {/* Image container */}
@@ -182,7 +197,7 @@ export function ProductGalleryRow({
 
                     {/* Hover Quick View Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 backdrop-blur-[2px] transition-opacity duration-300 group-hover/card:opacity-100">
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--ink)] px-3 py-1.5 text-xs font-semibold text-[var(--ivory)] shadow-lg">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--ink)] px-3.5 py-1.5 text-xs font-semibold text-[var(--ivory)] shadow-lg">
                         <Eye className="h-3.5 w-3.5" aria-hidden="true" />
                         Preview
                       </span>
@@ -207,12 +222,12 @@ export function ProductGalleryRow({
                       </span>
                     </div>
                   </div>
-                </button>
-              </div>
+                </motion.button>
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

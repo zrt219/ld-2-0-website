@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Check, Mail, Sparkles, Send, AlertCircle } from "lucide-react";
 
 import { categoryInterestOptions, InterestPayload } from "@/lib/interest-schema";
@@ -257,26 +258,37 @@ export function InterestForm({ initialSelectedCategory }: InterestFormProps) {
                   Select all categories you wish to receive announcements and release access for.
                 </p>
 
-                <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
+                <div className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
                   {categoryInterestOptions.map((option) => {
                     const isChecked = selectedInterests.includes(option);
                     return (
-                      <button
+                      <motion.button
                         key={option}
                         type="button"
                         onClick={() => toggleInterest(option)}
                         aria-pressed={isChecked}
-                        className={`flex min-h-11 items-center justify-between rounded-lg border px-3 py-2 text-left text-xs font-semibold transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)] ${
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className={`flex min-h-12 items-center justify-between rounded-xl border px-4 py-2.5 text-left text-xs font-semibold transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)] ${
                           isChecked
-                            ? "border-[var(--gold-dark)] bg-[var(--ink)] text-[var(--ivory)]"
-                            : "border-[var(--line)] bg-[#faf7f0] text-[var(--charcoal)] hover:border-[var(--gold-dark)] hover:bg-white"
+                            ? "border-[var(--gold-dark)] bg-[var(--ink)] text-[var(--ivory)] shadow-sm"
+                            : "border-[rgba(198,165,92,0.3)] bg-[#faf7f0] text-[var(--charcoal)] hover:border-[var(--gold-dark)] hover:bg-white"
                         }`}
                       >
-                        <span className="truncate">{option}</span>
+                        <span className="truncate pr-2">{option}</span>
                         {isChecked ? (
-                          <Check className="ml-1.5 h-3.5 w-3.5 shrink-0 text-[var(--champagne)]" aria-hidden="true" />
-                        ) : null}
-                      </button>
+                          <motion.span
+                            initial={{ scale: 0 }}
+                            animate={{ scale: 1 }}
+                            transition={{ type: "spring", stiffness: 500, damping: 25 }}
+                            className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--gold-dark)] text-white"
+                          >
+                            <Check className="h-3 w-3" aria-hidden="true" />
+                          </motion.span>
+                        ) : (
+                          <span className="h-5 w-5 shrink-0 rounded-full border border-[rgba(198,165,92,0.4)] bg-white/50" />
+                        )}
+                      </motion.button>
                     );
                   })}
                 </div>
@@ -287,10 +299,12 @@ export function InterestForm({ initialSelectedCategory }: InterestFormProps) {
 
               {/* Submit Button */}
               <div className="pt-2">
-                <button
+                <motion.button
                   type="submit"
                   disabled={loading}
-                  className={`inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-[var(--ink)] px-8 text-sm font-bold uppercase tracking-wider text-[var(--ivory)] shadow-md transition-all hover:bg-[var(--gold-dark)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)] ${
+                  whileHover={loading ? {} : { scale: 1.02 }}
+                  whileTap={loading ? {} : { scale: 0.98 }}
+                  className={`inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-[var(--ink)] px-8 text-sm font-bold uppercase tracking-wider text-[var(--ivory)] shadow-md transition-all hover:bg-[var(--gold-dark)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)] ${
                     loading ? "cursor-wait opacity-70" : ""
                   }`}
                 >
@@ -302,7 +316,7 @@ export function InterestForm({ initialSelectedCategory }: InterestFormProps) {
                       <span>Join the Interest List</span>
                     </>
                   )}
-                </button>
+                </motion.button>
               </div>
 
               {/* Fallback mailto display */}
