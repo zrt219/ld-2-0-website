@@ -311,8 +311,8 @@ export default function SpeakingPage() {
               {/* Portrait behind the reel */}
               <div className="relative mx-auto aspect-[4/5] max-h-[520px] w-full max-w-[520px] overflow-hidden border border-[rgba(198,165,92,0.42)] bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)] shadow-[0_28px_110px_rgba(23,20,18,0.14)]">
                 <Image
-                  src={images.speakingDeskPortrait.src}
-                  alt={images.speakingDeskPortrait.alt}
+                  src={images.executivePortrait.src}
+                  alt={images.executivePortrait.alt}
                   fill
                   priority
                   sizes="(max-width: 768px) 92vw, 44vw"

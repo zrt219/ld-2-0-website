@@ -188,7 +188,7 @@ export default function Home() {
           eyebrow="Keynotes that build resilience and purpose"
           title={siteCopy.homepageHeadline}
           body={`${siteCopy.mainMessage} ${siteCopy.homepageSubheadline}. ${siteCopy.homepageIntro}`}
-          image={images.executivePortrait}
+          image={images.speakingDeskPortrait}
           primaryLabel="Book Lornette"
           secondaryLabel="Watch Speaker Reel"
           secondaryHref="/media"
