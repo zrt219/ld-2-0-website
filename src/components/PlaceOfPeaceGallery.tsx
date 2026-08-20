@@ -12,6 +12,66 @@ interface PeaceCard {
   title: string;
 }
 
+interface SanctuarySlide {
+  id: string;
+  src: string;
+  alt: string;
+  title: string;
+  caption: string;
+  tag: string;
+}
+
+const sanctuarySlides: SanctuarySlide[] = [
+  {
+    id: "sanctuary-1",
+    src: "/images/place-of-peace-sanctuary.jpg",
+    alt: "A Place of Peace - Travertine architectural alcove with delicate botanical vase and sculptural form",
+    title: "Sanctuary & Stillness",
+    caption: "Finding calm in the quiet, intentional spaces of life.",
+    tag: "Architectural Peace",
+  },
+  {
+    id: "sanctuary-2",
+    src: "/images/place-of-peace-coastal-terrace.jpg",
+    alt: "A Place of Peace - Mediterranean travertine loggia terrace overlooking calm azure ocean",
+    title: "Tides of Peace",
+    caption: "Allowing your mind to rest and reset like calm waters.",
+    tag: "Coastal Sanctuary",
+  },
+  {
+    id: "sanctuary-3",
+    src: "/images/place-of-peace-water-closeup.jpg",
+    alt: "A Place of Peace - Cinematic close-up of tranquil water ripples with gentle sunset reflections",
+    title: "Still Waters",
+    caption: "Peace that runs deep, quiet as still waters at eventide.",
+    tag: "Water & Serenity",
+  },
+  {
+    id: "sanctuary-4",
+    src: "/images/place-of-peace-coastal-dunes.jpg",
+    alt: "A Place of Peace - Golden sunrise over peaceful ocean shores",
+    title: "Morning Horizon",
+    caption: "Letting hope rise with the morning light and gentle tides.",
+    tag: "Seaside Horizon",
+  },
+  {
+    id: "sanctuary-5",
+    src: "/images/place-of-peace-mountain-loggia.jpg",
+    alt: "A Place of Peace - Majestic alpine mountain peaks at sunset above a sea of clouds",
+    title: "Mountain Strength",
+    caption: "Rooted above the clouds in quiet endurance and perspective.",
+    tag: "Alpine Solitude",
+  },
+  {
+    id: "sanctuary-6",
+    src: "/images/place-of-peace-mountain-valley.jpg",
+    alt: "A Place of Peace - Sunlit expansive mountain valley with pine ridges and snow-capped peaks",
+    title: "Open Horizons",
+    caption: "Space to breathe, reflect, and renew your spirit in wide vistas.",
+    tag: "Mountain Sanctuary",
+  },
+];
+
 const peaceCards: PeaceCard[] = [
   {
     id: "peace-1",
@@ -65,8 +125,20 @@ const peaceCards: PeaceCard[] = [
 
 export function PlaceOfPeaceGallery() {
   const [selectedCardIndex, setSelectedCardIndex] = useState<number | null>(null);
+  const [activeSanctuaryIndex, setActiveSanctuaryIndex] = useState(0);
+  const [isSanctuaryModalOpen, setIsSanctuaryModalOpen] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const [isCardHovered, setIsCardHovered] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Auto-advance sanctuary card on homepage when not hovered or open
+  useEffect(() => {
+    if (isCardHovered || isSanctuaryModalOpen) return;
+    const interval = setInterval(() => {
+      setActiveSanctuaryIndex((prev) => (prev + 1) % sanctuarySlides.length);
+    }, 6500);
+    return () => clearInterval(interval);
+  }, [isCardHovered, isSanctuaryModalOpen]);
 
   const handleScroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -80,22 +152,40 @@ export function PlaceOfPeaceGallery() {
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
-      if (selectedCardIndex === null) return;
-      if (e.key === "Escape") setSelectedCardIndex(null);
-      if (e.key === "ArrowRight") {
-        setSelectedCardIndex((prev) =>
-          prev !== null ? (prev + 1) % peaceCards.length : 0
-        );
+      if (e.key === "Escape") {
+        setSelectedCardIndex(null);
+        setIsSanctuaryModalOpen(false);
+        return;
       }
-      if (e.key === "ArrowLeft") {
-        setSelectedCardIndex((prev) =>
-          prev !== null
-            ? (prev - 1 + peaceCards.length) % peaceCards.length
-            : peaceCards.length - 1
-        );
+
+      if (isSanctuaryModalOpen) {
+        if (e.key === "ArrowRight") {
+          setActiveSanctuaryIndex((prev) => (prev + 1) % sanctuarySlides.length);
+        }
+        if (e.key === "ArrowLeft") {
+          setActiveSanctuaryIndex((prev) =>
+            (prev - 1 + sanctuarySlides.length) % sanctuarySlides.length
+          );
+        }
+        return;
+      }
+
+      if (selectedCardIndex !== null) {
+        if (e.key === "ArrowRight") {
+          setSelectedCardIndex((prev) =>
+            prev !== null ? (prev + 1) % peaceCards.length : 0
+          );
+        }
+        if (e.key === "ArrowLeft") {
+          setSelectedCardIndex((prev) =>
+            prev !== null
+              ? (prev - 1 + peaceCards.length) % peaceCards.length
+              : peaceCards.length - 1
+          );
+        }
       }
     },
-    [selectedCardIndex]
+    [selectedCardIndex, isSanctuaryModalOpen]
   );
 
   useEffect(() => {
@@ -103,9 +193,10 @@ export function PlaceOfPeaceGallery() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [handleKeyDown]);
 
-  // Lock body scroll when modal is open without causing layout shift
+  // Lock body scroll when any modal is open without causing layout shift
   useEffect(() => {
-    if (selectedCardIndex !== null) {
+    const isModalOpen = selectedCardIndex !== null || isSanctuaryModalOpen;
+    if (isModalOpen) {
       const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
       const previousOverflow = document.body.style.overflow;
       const previousPaddingRight = document.body.style.paddingRight;
@@ -118,10 +209,12 @@ export function PlaceOfPeaceGallery() {
         document.body.style.paddingRight = previousPaddingRight;
       };
     }
-  }, [selectedCardIndex]);
+  }, [selectedCardIndex, isSanctuaryModalOpen]);
 
   // Tripled list for infinite seamless marquee
   const marqueeCards = [...peaceCards, ...peaceCards, ...peaceCards];
+
+  const currentSanctuary = sanctuarySlides[activeSanctuaryIndex];
 
   return (
     <section
@@ -134,20 +227,117 @@ export function PlaceOfPeaceGallery() {
         aria-hidden="true"
       />
 
-      <div className="mx-auto max-w-7xl text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
-          Protect Your Peace
-        </p>
-        <h2 className="mt-3 font-serif text-4xl text-[var(--ink)] sm:text-5xl lg:text-6xl">
-          A Place of Peace
-        </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[#675d50] sm:text-lg">
-          A message wall to ground you in truth, reminding you that you are valued, seen, and never forgotten; that your life matters.
-        </p>
+      {/* Split Editorial Header */}
+      <div className="mx-auto max-w-7xl">
+        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
+          {/* Left Column: Typography and Intention */}
+          <div className="lg:col-span-6 xl:col-span-7">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(198,165,92,0.35)] bg-white/70 px-3.5 py-1 text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)] backdrop-blur-sm">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--gold)]" />
+              Protect Your Peace
+            </div>
+
+            <h2 className="mt-4 font-serif text-4xl leading-[1.15] text-[var(--ink)] sm:text-5xl lg:text-6xl">
+              A Place of Peace
+            </h2>
+
+            <p className="mt-5 text-lg leading-relaxed text-[#675d50] sm:text-xl">
+              A quiet sanctuary to ground you in truth, quiet the noise, and remind you that you are valued, seen, and never forgotten; that your life matters.
+            </p>
+
+            <div className="mt-6 border-l-2 border-[var(--gold)] bg-white/40 p-3.5 pl-4 rounded-r-lg italic text-[#7a6f60]">
+              &ldquo;Rest is not a detour from your purpose—it is the foundation that sustains it.&rdquo;
+            </div>
+
+            <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-[var(--gold-dark)]">
+              Explore the curated reflections below or click to immerse in full screen
+            </p>
+          </div>
+
+          {/* Right Column: Multi-Slide Sanctuary Showcase with Carousel & Lightbox */}
+          <div className="lg:col-span-6 xl:col-span-5">
+            <motion.div
+              onMouseEnter={() => setIsCardHovered(true)}
+              onMouseLeave={() => setIsCardHovered(false)}
+              whileHover={{ scale: 1.015, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => setIsSanctuaryModalOpen(true)}
+              className="group relative aspect-[16/10] sm:aspect-[4/3] w-full cursor-pointer overflow-hidden rounded-2xl border border-[rgba(198,165,92,0.4)] bg-white shadow-[0_20px_50px_rgba(23,20,18,0.09)] transition-all duration-300 hover:border-[var(--gold)] hover:shadow-[0_24px_60px_rgba(198,165,92,0.22)]"
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentSanctuary.id}
+                  initial={{ opacity: 0, scale: 1.04 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.98 }}
+                  transition={{ duration: 0.7, ease: "easeInOut" }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={currentSanctuary.src}
+                    alt={currentSanctuary.alt}
+                    fill
+                    priority
+                    unoptimized
+                    sizes="(max-width: 768px) 100vw, 600px"
+                    className="object-cover"
+                  />
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Subtle Warm Inset Vignette */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-50" />
+
+              {/* Top Navigation Dots */}
+              <div
+                className="absolute top-4 left-4 right-4 z-20 flex items-center justify-between"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <span className="rounded-full border border-white/20 bg-black/40 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-md">
+                  {currentSanctuary.tag}
+                </span>
+
+                {/* Mini Indicator Dots */}
+                <div className="flex items-center gap-1.5 rounded-full bg-black/40 px-2.5 py-1.5 backdrop-blur-md">
+                  {sanctuarySlides.map((slide, idx) => (
+                    <button
+                      key={slide.id}
+                      type="button"
+                      onClick={() => setActiveSanctuaryIndex(idx)}
+                      aria-label={`Go to sanctuary view ${idx + 1}: ${slide.title}`}
+                      className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
+                        idx === activeSanctuaryIndex
+                          ? "w-5 bg-[var(--gold)]"
+                          : "w-1.5 bg-white/50 hover:bg-white"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Bottom Floating Pill & Title */}
+              <div className="absolute bottom-4 left-4 right-4 z-20 flex items-end justify-between">
+                <div>
+                  <p className="font-serif text-base font-semibold text-white drop-shadow-md sm:text-lg">
+                    {currentSanctuary.title}
+                  </p>
+                  <p className="line-clamp-1 text-xs text-white/80 drop-shadow-sm">
+                    {currentSanctuary.caption}
+                  </p>
+                </div>
+
+                <span className="flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-xs font-semibold text-[var(--ink)] shadow-md transition-transform duration-200 group-hover:scale-105">
+                  <Maximize2 className="h-3.5 w-3.5 text-[var(--gold-dark)]" />
+                  View Sanctuary
+                </span>
+              </div>
+            </motion.div>
+          </div>
+        </div>
       </div>
 
       {/* Marquee Gallery Container */}
-      <div className="relative mt-12 w-full">
+      <div className="relative mt-14 w-full">
         {/* Navigation arrows */}
         <div className="mx-auto mb-4 flex max-w-7xl items-center justify-end gap-2 px-4 sm:px-0">
           <button
@@ -241,7 +431,127 @@ export function PlaceOfPeaceGallery() {
         </div>
       </div>
 
-      {/* Interactive Lightbox Modal */}
+      {/* Multi-Slide Sanctuary Fullscreen Lightbox Modal */}
+      <AnimatePresence>
+        {isSanctuaryModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-md sm:p-6 md:p-10"
+            onClick={() => setIsSanctuaryModalOpen(false)}
+          >
+            <div
+              className="relative flex w-full max-w-[980px] flex-col items-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Floating Close Button */}
+              <button
+                type="button"
+                onClick={() => setIsSanctuaryModalOpen(false)}
+                className="absolute -top-12 right-0 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-md transition-all hover:scale-110 hover:bg-white hover:text-[var(--ink)] focus:outline-none cursor-pointer"
+                aria-label="Close sanctuary preview"
+              >
+                <X className="h-5 w-5" />
+              </button>
+
+              {/* Prev Button */}
+              <button
+                type="button"
+                onClick={() =>
+                  setActiveSanctuaryIndex(
+                    (prev) =>
+                      (prev - 1 + sanctuarySlides.length) % sanctuarySlides.length
+                  )
+                }
+                className="absolute left-3 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white shadow-xl backdrop-blur-md transition-all hover:scale-110 hover:bg-white hover:text-[var(--ink)] focus:outline-none md:-left-16 md:bg-white/20 md:hover:bg-white cursor-pointer"
+                aria-label="Previous sanctuary view"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+
+              {/* Next Button */}
+              <button
+                type="button"
+                onClick={() =>
+                  setActiveSanctuaryIndex(
+                    (prev) => (prev + 1) % sanctuarySlides.length
+                  )
+                }
+                className="absolute right-3 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white shadow-xl backdrop-blur-md transition-all hover:scale-110 hover:bg-white hover:text-[var(--ink)] focus:outline-none md:-right-16 md:bg-white/20 md:hover:bg-white cursor-pointer"
+                aria-label="Next sanctuary view"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+
+              {/* Main Sanctuary Card with Slide Transition */}
+              <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden rounded-2xl border border-[rgba(198,165,92,0.45)] bg-[var(--ink)] shadow-2xl">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={currentSanctuary.id}
+                    initial={{ opacity: 0, scale: 0.96 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1.02 }}
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    className="absolute inset-0"
+                  >
+                    <Image
+                      src={currentSanctuary.src}
+                      alt={currentSanctuary.alt}
+                      fill
+                      priority
+                      unoptimized
+                      className="object-cover"
+                      sizes="(max-width: 768px) 94vw, 980px"
+                    />
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Caption & Navigation Controls */}
+              <div className="mt-4 flex w-full flex-col gap-2 px-2 sm:flex-row sm:items-center sm:justify-between text-neutral-300">
+                <div>
+                  <p className="font-serif text-lg font-semibold tracking-wide text-white">
+                    {currentSanctuary.title}
+                  </p>
+                  <p className="text-sm text-neutral-300">
+                    {currentSanctuary.caption}
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-3 self-end sm:self-center">
+                  {/* Indicator Dots */}
+                  <div className="flex items-center gap-1.5">
+                    {sanctuarySlides.map((slide, idx) => (
+                      <button
+                        key={slide.id}
+                        type="button"
+                        onClick={() => setActiveSanctuaryIndex(idx)}
+                        aria-label={`Go to slide ${idx + 1}`}
+                        className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                          idx === activeSanctuaryIndex
+                            ? "w-6 bg-[var(--gold)]"
+                            : "w-2 bg-white/40 hover:bg-white"
+                        }`}
+                      />
+                    ))}
+                  </div>
+
+                  <span className="font-mono text-xs font-medium text-[var(--sand)]">
+                    {activeSanctuaryIndex + 1} / {sanctuarySlides.length}
+                  </span>
+                  <span className="hidden text-xs text-neutral-400 md:inline">
+                    (Use ← → keys)
+                  </span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Message Cards Lightbox Modal */}
       <AnimatePresence>
         {selectedCardIndex !== null && (
           <motion.div
@@ -267,7 +577,7 @@ export function PlaceOfPeaceGallery() {
                 <X className="h-5 w-5" />
               </button>
 
-              {/* Prev Button (Floating beside on desktop, overlay on mobile) */}
+              {/* Prev Button */}
               <button
                 type="button"
                 onClick={() =>
@@ -283,7 +593,7 @@ export function PlaceOfPeaceGallery() {
                 <ChevronLeft className="h-6 w-6" />
               </button>
 
-              {/* Next Button (Floating beside on desktop, overlay on mobile) */}
+              {/* Next Button */}
               <button
                 type="button"
                 onClick={() =>
