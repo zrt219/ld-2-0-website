@@ -1,9 +1,9 @@
 import { CTAButton } from "@/components/CTAButton";
-import { AboutGallery } from "@/components/AboutGallery";
+// import { AboutGallery } from "@/components/AboutGallery";
 import { MetricStrip } from "@/components/MetricStrip";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
-import { aboutGallerySlides } from "@/content/aboutGallery";
+// import { aboutGallerySlides } from "@/content/aboutGallery";
 import { createMetadata, siteCopy, speakerSubmissionProfile } from "@/content/site";
 
 export const metadata = createMetadata(
@@ -89,7 +89,7 @@ export default function AboutPage() {
                 </article>
               ))}
             </div>
-            <AboutGallery slides={aboutGallerySlides} />
+            {/* <AboutGallery slides={aboutGallerySlides} /> */}
             <div className="mt-12">
               <div className="border border-[var(--line)] bg-white p-8">
                 <SectionHeader eyebrow="Mission" title="Unlock potential. Strengthen communities. Develop leaders." body={siteCopy.mission} />
