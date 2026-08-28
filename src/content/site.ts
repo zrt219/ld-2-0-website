@@ -772,6 +772,83 @@ export const categories = [
 
 export const posts: Post[] = [
   {
+    slug: "one-flag-one-journey-vision-for-sport",
+    title: "One Flag. One Journey. One Bigger Vision for Sport",
+    excerpt:
+      "137 women. 197 men. 29 sports. Great sporting cultures grow by backing many paths to excellence—developing the athlete, preparing the person, and building the future.",
+    category: "Athlete & Performance Coaching",
+    date: "2026-08-27",
+    author: "Lornette Daye",
+    readTime: "4 min read",
+    image: {
+      src: "/generated/one-flag-one-journey-vision-for-sport.jpg",
+      alt: "137 Women. 197 Men. 29 Sports. One flag, one journey, one bigger vision for sport celebrating athletes across disciplines.",
+      caption: "Great sporting cultures grow by backing many paths to excellence.",
+      aspect: "aspect-square",
+      crop: "object-cover object-center",
+    },
+    body: {
+      intro: [
+        "When you witness 137 women and 197 men stepping onto the international stage across 29 sports under one national flag, you are not just seeing a roster of competitors. You are witnessing the collective power of a nation that believes in the transformative potential of athletics.",
+        "Behind every singlet, gi, bow, paddle, and starting block lies an individual story of early-morning sacrifice, quiet discipline, and relentless determination. As a former national sprint champion and coach who has guided hundreds of international competitors, I know that championship moments are never accidental. They are the harvest of long-term vision, systematic investment, and holistic support.",
+      ],
+      sections: [
+        {
+          heading: "Different Disciplines, Different Stories: The Strength in Diversity",
+          paragraphs: [
+            "Sport is not a monolith. The hyper-focused precision required of an archer or fencer demands a completely different psychological cadence than the explosive endurance of a sprint kayaker, the sheer power of a weightlifter, or the fluid tactical cohesion of a volleyball squad.",
+            "Yet across all 29 disciplines, the heartbeat remains identical: the willingness to push past perceived limitations and test the boundaries of human achievement. When a sporting culture honors and funds diverse disciplines rather than concentrating only on one or two marquee sports, it unlocks untapped talent and creates a richer tapestry of national inspiration.",
+          ],
+          bullets: [
+            {
+              label: "Different Disciplines:",
+              text: "Every sport cultivates unique strengths—from explosive power to steady stillness, high-speed agility to calculated strategy.",
+            },
+            {
+              label: "Different Stories:",
+              text: "Every athlete brings a lived background of overcoming obstacles, personal sacrifice, and relentless community support.",
+            },
+            {
+              label: "One Unified Mission:",
+              text: "When athletes march under one flag, their individual triumphs become shared milestones of collective pride.",
+            },
+          ],
+        },
+        {
+          heading: "The Three Pillars: Athlete, Person, and Future",
+          paragraphs: [
+            "At the heart of any sustainable sports revolution is a three-fold blueprint that must never be separated: Developing the Athlete, Preparing the Person, and Building the Future.",
+          ],
+          bullets: [
+            {
+              label: "Developing the Athlete:",
+              text: "Providing elite tactical instruction, world-class sports science, recovery protocols, and mental conditioning so competitors can perform fearlessly under international pressure.",
+            },
+            {
+              label: "Preparing the Person:",
+              text: "Athletics is what someone does, not all of who they are. We must equip athletes with emotional resilience, character, leadership, and life skills that serve them long after their competitive days are done.",
+            },
+            {
+              label: "Building the Future:",
+              text: "Creating accessible grassroots pipelines and mentorship ecosystems so that today's national competitors become the mentors, coaches, and leaders inspiring the next generation.",
+            },
+          ],
+        },
+        {
+          heading: "One Nation Investing in Athletes",
+          paragraphs: [
+            "True athletic investment extends far beyond the final podium ceremony. It means standing with athletes during the unglamorous seasons of rehabilitation, technical rebuilds, and quiet training sessions when nobody is watching.",
+            "When a country, an organization, or a community commits to backing multiple pathways to excellence, it sends an unmistakable signal to every aspiring competitor: your dreams are worthy of support, and your dedication has a place on the world stage.",
+          ],
+        },
+      ],
+      conclusion: [
+        "Great sporting cultures grow by backing many paths to excellence. Whether you are stepping onto the track, diving into the water, stepping onto the court, or leading a team in your community, remember that your dedication matters.",
+        "One flag. One journey. One bigger vision for sport.",
+      ],
+    },
+  },
+  {
     slug: "finish-strong-chasing-the-olympic-dream",
     title: "Finish Strong: Lessons from Chasing the Olympic Dream",
     excerpt:
