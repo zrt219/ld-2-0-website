@@ -1,8 +1,8 @@
 {
-  "lastRun": "2026-09-14T08:12:27.948Z",
+  "lastRun": "2026-09-14T08:33:45.000Z",
   "rateLimitHit": true,
   "rateLimitWindow": "24h (250 requests/day)",
-  "retryAfterSeconds": 77889,
+  "retryAfterSeconds": 76528,
   "nextResetUTC": "2026-09-15T05:49:19.000Z",
   "nextResetMDT": "9/14/2026, 11:49:19 PM MDT",
   "masterCampaigns": {
@@ -37,6 +37,22 @@
       "status": "Staged on Production CDN (200 OK), queued for autonomous catchup upon 24h reset",
       "script": "scripts/schedule-parents-set-2-campaign.py",
       "report": "scripts/parents-set-2-scheduled-report.json"
+    },
+    "parents-set-3": {
+      "total": 42,
+      "scheduled": 0,
+      "staged": 42,
+      "status": "Staged on Production CDN (200 OK), queued for autonomous catchup upon 24h reset",
+      "script": "scripts/schedule-parents-set-3-campaign.py",
+      "report": "scripts/parents-set-3-scheduled-report.json"
+    },
+    "marcus-freeman": {
+      "total": 4,
+      "scheduled": 0,
+      "staged": 4,
+      "status": "Staged on Production CDN (200 OK), queued for autonomous catchup upon 24h reset",
+      "script": "scripts/schedule-marcus-freeman-campaign.py",
+      "report": "scripts/marcus-freeman-scheduled-report.json"
     }
   }
 }

@@ -14,13 +14,20 @@ const GRAPHQL_ENDPOINT = 'https://api.buffer.com';
 const isCatchup = process.argv.includes('--catchup');
 if (isCatchup) {
   console.log('[Catchup Mode] Executing pending campaign queue handlers...');
-  const parents2Script = path.join(process.cwd(), 'scripts', 'schedule-parents-set-2-campaign.py');
-  if (fs.existsSync(parents2Script)) {
-    try {
-      console.log('[Catchup Mode] Running schedule-parents-set-2-campaign.py...');
-      execSync(`python "${parents2Script}"`, { stdio: 'inherit' });
-    } catch (e) {
-      console.error('[Catchup Mode] Python script exited:', e.message);
+  const scriptsToRun = [
+    'schedule-parents-set-2-campaign.py',
+    'schedule-parents-set-3-campaign.py',
+    'schedule-marcus-freeman-campaign.py'
+  ];
+  for (const scriptName of scriptsToRun) {
+    const scriptPath = path.join(process.cwd(), 'scripts', scriptName);
+    if (fs.existsSync(scriptPath)) {
+      try {
+        console.log(`[Catchup Mode] Running ${scriptName}...`);
+        execSync(`python "${scriptPath}"`, { stdio: 'inherit' });
+      } catch (e) {
+        console.error(`[Catchup Mode] ${scriptName} exited:`, e.message);
+      }
     }
   }
 }
