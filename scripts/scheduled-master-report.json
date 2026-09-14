@@ -1,0 +1,42 @@
+{
+  "lastRun": "2026-09-14T08:12:27.948Z",
+  "rateLimitHit": true,
+  "rateLimitWindow": "24h (250 requests/day)",
+  "retryAfterSeconds": 77889,
+  "nextResetUTC": "2026-09-15T05:49:19.000Z",
+  "nextResetMDT": "9/14/2026, 11:49:19 PM MDT",
+  "masterCampaigns": {
+    "jessica-campbell": {
+      "total": 28,
+      "scheduled": 28,
+      "status": "100% Scheduled in Buffer Active Queue",
+      "report": "scripts/jessica-campbell-scheduled-report.json"
+    },
+    "japan-mens-volleyball": {
+      "total": 28,
+      "scheduled": 28,
+      "status": "100% Scheduled in Buffer Active Queue",
+      "report": "scripts/japan-volleyball-scheduled-report.json"
+    },
+    "parents-set-1": {
+      "total": 42,
+      "scheduled": 42,
+      "status": "100% Scheduled in Buffer Active Queue",
+      "report": "scripts/parents-scheduled-report.json"
+    },
+    "mondo-duplantis": {
+      "total": 42,
+      "scheduled": 42,
+      "status": "100% Scheduled in Buffer Active Queue",
+      "report": "scripts/mondo-scheduled-report.json"
+    },
+    "parents-set-2": {
+      "total": 42,
+      "scheduled": 0,
+      "staged": 42,
+      "status": "Staged on Production CDN (200 OK), queued for autonomous catchup upon 24h reset",
+      "script": "scripts/schedule-parents-set-2-campaign.py",
+      "report": "scripts/parents-set-2-scheduled-report.json"
+    }
+  }
+}
