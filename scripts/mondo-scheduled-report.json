@@ -1,0 +1,429 @@
+{
+  "campaign": "Mondo Duplantis - The Ceiling is an Illusion",
+  "total_posts": 42,
+  "successful_posts": 42,
+  "channelId": "6a39d30c5ab6d2f1065f5301",
+  "scheduled_at": "2026-09-14 02:01:34",
+  "results": [
+    {
+      "id": 1,
+      "slot": "Monday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-14T14:30:00.000Z",
+      "bufferPostId": "6aa7a733b78fe872efc1a662",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-1.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 2,
+      "slot": "Monday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-14T19:00:00.000Z",
+      "bufferPostId": "6aa7a73628b4a9b83480b7ba",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-2.png",
+      "cta": "Survival Skills for Athletes Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 3,
+      "slot": "Monday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-15T00:00:00.000Z",
+      "bufferPostId": "6aa7a738e4aa27d1cb0738db",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-3.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 4,
+      "slot": "Tuesday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-15T14:30:00.000Z",
+      "bufferPostId": "6aa7a73bd36607a69220c565",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-4.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 5,
+      "slot": "Tuesday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-15T19:00:00.000Z",
+      "bufferPostId": "6aa7a73e28b4a9b83480b85e",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-5.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 6,
+      "slot": "Tuesday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-16T00:00:00.000Z",
+      "bufferPostId": "6aa7a741d36607a69220c5ee",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-6.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 7,
+      "slot": "Wednesday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-16T14:30:00.000Z",
+      "bufferPostId": "6aa7a743b78fe872efc1a851",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-7.png",
+      "cta": "Survival Skills for Athletes Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 8,
+      "slot": "Wednesday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-16T19:00:00.000Z",
+      "bufferPostId": "6aa7a746369387a9e2f8f142",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-8.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 9,
+      "slot": "Wednesday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-17T00:00:00.000Z",
+      "bufferPostId": "6aa7a748b78fe872efc1a8bb",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-9.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 10,
+      "slot": "Thursday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-17T14:30:00.000Z",
+      "bufferPostId": "6aa7a74b5a4fa0b066998be2",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-10.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 11,
+      "slot": "Thursday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-18T00:00:00.000Z",
+      "bufferPostId": "6aa7a74ed36607a69220c6c2",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-1.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 12,
+      "slot": "Friday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-18T14:30:00.000Z",
+      "bufferPostId": "6aa7a750369387a9e2f8f26c",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-2.png",
+      "cta": "Survival Skills for Athletes Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 13,
+      "slot": "Friday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-18T19:00:00.000Z",
+      "bufferPostId": "6aa7a752d36607a69220c749",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-3.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 14,
+      "slot": "Friday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-19T00:00:00.000Z",
+      "bufferPostId": "6aa7a755b78fe872efc1a9fa",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-4.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 15,
+      "slot": "Saturday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-19T14:30:00.000Z",
+      "bufferPostId": "6aa7a757b78fe872efc1aa45",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-5.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 16,
+      "slot": "Saturday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-19T19:00:00.000Z",
+      "bufferPostId": "6aa7a75a369387a9e2f8f408",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-6.png",
+      "cta": "Survival Skills for Athletes Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 17,
+      "slot": "Saturday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-20T00:00:00.000Z",
+      "bufferPostId": "6aa7a98628b4a9b83480e6d2",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-7.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 18,
+      "slot": "Sunday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-20T14:30:00.000Z",
+      "bufferPostId": "6aa7a98a5a4fa0b06699bd86",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-8.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 19,
+      "slot": "Sunday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-20T19:00:00.000Z",
+      "bufferPostId": "6aa7a997b78fe872efc1ea3c",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-9.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 20,
+      "slot": "Sunday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-21T00:00:00.000Z",
+      "bufferPostId": "6aa7a9a0e4aa27d1cb077133",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-10.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 21,
+      "slot": "Monday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-21T14:30:00.000Z",
+      "bufferPostId": "6aa7a9a428b4a9b83480fb51",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-1.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 22,
+      "slot": "Monday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-21T19:00:00.000Z",
+      "bufferPostId": "6aa7a9a65a4fa0b06699d8e0",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-2.png",
+      "cta": "Survival Skills for Athletes Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 23,
+      "slot": "Monday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-22T00:00:00.000Z",
+      "bufferPostId": "6aa7a9a9e4aa27d1cb0775e5",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-3.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 24,
+      "slot": "Tuesday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-22T14:30:00.000Z",
+      "bufferPostId": "6aa7a9ac369387a9e2f93d1a",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-4.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 25,
+      "slot": "Tuesday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-22T19:00:00.000Z",
+      "bufferPostId": "6aa7a9b05a4fa0b06699dba8",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-5.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 26,
+      "slot": "Tuesday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-23T00:00:00.000Z",
+      "bufferPostId": "6aa7a9b3e4aa27d1cb077957",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-6.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 27,
+      "slot": "Wednesday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-23T14:30:00.000Z",
+      "bufferPostId": "6aa7a9b6d36607a6922117f2",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-7.png",
+      "cta": "Survival Skills for Athletes Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 28,
+      "slot": "Wednesday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-23T19:00:00.000Z",
+      "bufferPostId": "6aa7a9b9e4aa27d1cb077ab2",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-8.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 29,
+      "slot": "Wednesday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-24T00:00:00.000Z",
+      "bufferPostId": "6aa7a9bb5a4fa0b06699de29",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-9.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 30,
+      "slot": "Thursday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-24T19:00:00.000Z",
+      "bufferPostId": "6aa7a9bee4aa27d1cb077bc9",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-10.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 31,
+      "slot": "Thursday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-25T00:00:00.000Z",
+      "bufferPostId": "6aa7a9c15a4fa0b06699dfd7",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-1.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 32,
+      "slot": "Friday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-25T14:30:00.000Z",
+      "bufferPostId": "6aa7a9c4b78fe872efc2003b",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-2.png",
+      "cta": "Survival Skills for Athletes Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 33,
+      "slot": "Friday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-25T19:00:00.000Z",
+      "bufferPostId": "6aa7a9c628b4a9b83481045f",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-3.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 34,
+      "slot": "Friday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-26T00:00:00.000Z",
+      "bufferPostId": "6aa7a9c9e4aa27d1cb077ef6",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-4.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 35,
+      "slot": "Saturday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-26T14:30:00.000Z",
+      "bufferPostId": "6aa7a9ccd36607a69221207e",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-5.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 36,
+      "slot": "Saturday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-26T19:00:00.000Z",
+      "bufferPostId": "6aa7a9cfb78fe872efc20296",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-6.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 37,
+      "slot": "Saturday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-27T00:00:00.000Z",
+      "bufferPostId": "6aa7a9d2b78fe872efc2031c",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-7.png",
+      "cta": "Survival Skills for Athletes Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 38,
+      "slot": "Sunday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-27T14:30:00.000Z",
+      "bufferPostId": "6aa7a9d55a4fa0b06699e2ce",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-8.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 39,
+      "slot": "Sunday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-27T19:00:00.000Z",
+      "bufferPostId": "6aa7a9d828b4a9b834810738",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-9.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 40,
+      "slot": "Sunday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-28T00:00:00.000Z",
+      "bufferPostId": "6aa7a9dbe4aa27d1cb07848b",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-10.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 41,
+      "slot": "Sunday Evening Encore (7:30 PM MDT)",
+      "dueAt": "2026-09-28T01:30:00.000Z",
+      "bufferPostId": "6aa7a9dfb78fe872efc20602",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-1.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 42,
+      "slot": "Sunday Night Grand Finale (9:00 PM MDT)",
+      "dueAt": "2026-09-28T03:00:00.000Z",
+      "bufferPostId": "6aa7a9e35a4fa0b06699ec3a",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/mondo/mondo-4.png",
+      "cta": "Complete Catalog & Speaking (lornettedaye.com)",
+      "success": true
+    }
+  ]
+}
