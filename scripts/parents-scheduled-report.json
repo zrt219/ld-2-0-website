@@ -1,0 +1,429 @@
+{
+  "campaign": "Behind the Champion - Parents Set 1",
+  "total_posts": 42,
+  "successful_posts": 42,
+  "channelId": "6a39d30c5ab6d2f1065f5301",
+  "scheduled_at": "2026-09-14 01:49:35",
+  "results": [
+    {
+      "id": 1,
+      "slot": "Monday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-14T14:30:00.000Z",
+      "bufferPostId": "6aa7a6ae28b4a9b834809daf",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-1.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 2,
+      "slot": "Monday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-14T19:00:00.000Z",
+      "bufferPostId": "6aa7a6b1d36607a69220a0d5",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-2.png",
+      "cta": "Survival Skills for Men Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 3,
+      "slot": "Monday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-15T00:00:00.000Z",
+      "bufferPostId": "6aa7a6b4d36607a69220a114",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-3.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 4,
+      "slot": "Tuesday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-15T14:30:00.000Z",
+      "bufferPostId": "6aa7a6b7d36607a69220a433",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-6.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 5,
+      "slot": "Tuesday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-15T19:00:00.000Z",
+      "bufferPostId": "6aa7a6ba369387a9e2f8c74e",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-7.png",
+      "cta": "Survival Skills for Women Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 6,
+      "slot": "Tuesday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-16T00:00:00.000Z",
+      "bufferPostId": "6aa7a6bce4aa27d1cb0721ea",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-8.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 7,
+      "slot": "Wednesday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-16T14:30:00.000Z",
+      "bufferPostId": "6aa7a6be5a4fa0b066996ee2",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-4.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 8,
+      "slot": "Wednesday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-16T19:00:00.000Z",
+      "bufferPostId": "6aa7a6c15a4fa0b066996f30",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-5.png",
+      "cta": "Survival Skills for Athletes Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 9,
+      "slot": "Wednesday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-17T00:00:00.000Z",
+      "bufferPostId": "6aa7a6c4369387a9e2f8ca53",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-1.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 10,
+      "slot": "Thursday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-17T14:30:00.000Z",
+      "bufferPostId": "6aa7a6c6b78fe872efc188f6",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-9.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 11,
+      "slot": "Thursday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-17T19:00:00.000Z",
+      "bufferPostId": "6aa7a6c9369387a9e2f8caa1",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-10.png",
+      "cta": "UMATTR Devotional (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 12,
+      "slot": "Thursday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-18T00:00:00.000Z",
+      "bufferPostId": "6aa7a6cb369387a9e2f8caee",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-6.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 13,
+      "slot": "Friday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-18T14:30:00.000Z",
+      "bufferPostId": "6aa7a6cd28b4a9b83480a068",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-2.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 14,
+      "slot": "Friday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-18T19:00:00.000Z",
+      "bufferPostId": "6aa7a6d05a4fa0b06699706c",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-3.png",
+      "cta": "Survival Skills for Men Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 15,
+      "slot": "Friday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-19T00:00:00.000Z",
+      "bufferPostId": "6aa7a6d2b78fe872efc18a05",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-4.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 16,
+      "slot": "Saturday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-19T14:30:00.000Z",
+      "bufferPostId": "6aa7a6d5369387a9e2f8cc33",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-7.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 17,
+      "slot": "Saturday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-19T19:00:00.000Z",
+      "bufferPostId": "6aa7a6d728b4a9b83480a1fb",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-8.png",
+      "cta": "Survival Skills for Women Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 18,
+      "slot": "Saturday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-20T00:00:00.000Z",
+      "bufferPostId": "6aa7a6dab78fe872efc18b48",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-9.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 19,
+      "slot": "Sunday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-20T14:30:00.000Z",
+      "bufferPostId": "6aa7a6dcb78fe872efc18b6e",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-5.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 20,
+      "slot": "Sunday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-20T19:00:00.000Z",
+      "bufferPostId": "6aa7a6ded36607a69220a7f1",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-1.png",
+      "cta": "Survival Skills for Athletes Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 21,
+      "slot": "Sunday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-21T00:00:00.000Z",
+      "bufferPostId": "6aa7a6e0369387a9e2f8cce3",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-2.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 22,
+      "slot": "Monday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-21T14:30:00.000Z",
+      "bufferPostId": "6aa7a6e35a4fa0b066997248",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-10.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 23,
+      "slot": "Monday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-21T19:00:00.000Z",
+      "bufferPostId": "6aa7a6e5b78fe872efc18c57",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-6.png",
+      "cta": "Survival Skills for Women Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 24,
+      "slot": "Monday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-22T00:00:00.000Z",
+      "bufferPostId": "6aa7a6e8d36607a69220a8cf",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-7.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 25,
+      "slot": "Tuesday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-22T14:30:00.000Z",
+      "bufferPostId": "6aa7a6ea5a4fa0b0669972f4",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-3.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 26,
+      "slot": "Tuesday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-22T19:00:00.000Z",
+      "bufferPostId": "6aa7a6ec369387a9e2f8ce32",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-4.png",
+      "cta": "Survival Skills for Men Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 27,
+      "slot": "Tuesday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-23T00:00:00.000Z",
+      "bufferPostId": "6aa7a6ef28b4a9b83480a44c",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-5.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 28,
+      "slot": "Wednesday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-23T14:30:00.000Z",
+      "bufferPostId": "6aa7a6f1e4aa27d1cb07262d",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-8.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 29,
+      "slot": "Wednesday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-23T19:00:00.000Z",
+      "bufferPostId": "6aa7a6f428b4a9b83480a4b3",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-9.png",
+      "cta": "Survival Skills for Women Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 30,
+      "slot": "Wednesday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-24T00:00:00.000Z",
+      "bufferPostId": "6aa7a6f6d36607a69220aa18",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-10.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 31,
+      "slot": "Thursday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-24T14:30:00.000Z",
+      "bufferPostId": "6aa7a6f8369387a9e2f8cf40",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-1.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 32,
+      "slot": "Thursday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-24T19:00:00.000Z",
+      "bufferPostId": "6aa7a6fbb78fe872efc18dfb",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-2.png",
+      "cta": "Survival Skills for Athletes Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 33,
+      "slot": "Thursday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-25T00:00:00.000Z",
+      "bufferPostId": "6aa7a6fd28b4a9b83480a58c",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-3.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 34,
+      "slot": "Friday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-25T14:30:00.000Z",
+      "bufferPostId": "6aa7a70028b4a9b83480a5ba",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-6.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 35,
+      "slot": "Friday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-25T19:00:00.000Z",
+      "bufferPostId": "6aa7a702b78fe872efc18e71",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-7.png",
+      "cta": "Survival Skills for Women Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 36,
+      "slot": "Friday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-26T00:00:00.000Z",
+      "bufferPostId": "6aa7a704369387a9e2f8d0ee",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-8.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 37,
+      "slot": "Saturday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-26T14:30:00.000Z",
+      "bufferPostId": "6aa7a706e4aa27d1cb072826",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-4.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 38,
+      "slot": "Saturday Mid-day (1:00 PM MDT)",
+      "dueAt": "2026-09-26T19:00:00.000Z",
+      "bufferPostId": "6aa7a709369387a9e2f8d141",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-5.png",
+      "cta": "Survival Skills for Men Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 39,
+      "slot": "Saturday Evening (6:00 PM MDT)",
+      "dueAt": "2026-09-27T00:00:00.000Z",
+      "bufferPostId": "6aa7a70b5a4fa0b0669975b6",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-9.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 40,
+      "slot": "Sunday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-27T14:30:00.000Z",
+      "bufferPostId": "6aa7a70e369387a9e2f8d18f",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-1.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 41,
+      "slot": "Sunday Mid-day Encore (1:00 PM MDT)",
+      "dueAt": "2026-09-27T19:00:00.000Z",
+      "bufferPostId": "6aa7a7115a4fa0b0669979ba",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-10.png",
+      "cta": "Complete Catalog & Speaking (lornettedaye.com)",
+      "success": true
+    },
+    {
+      "id": 42,
+      "slot": "Sunday Night Grand Finale (6:00 PM MDT)",
+      "dueAt": "2026-09-28T00:00:00.000Z",
+      "bufferPostId": "6aa7a7135a4fa0b066997a06",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/parents-set-1/parents-5.png",
+      "cta": "Speaking & Books (lornettedaye.com)",
+      "success": true
+    }
+  ]
+}
