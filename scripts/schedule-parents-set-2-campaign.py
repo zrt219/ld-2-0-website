@@ -19,7 +19,7 @@ posts_data = [
   {
     "id": 1,
     "slot": "Monday Morning (8:30 AM MDT)",
-    "dueAt": "2026-09-14T14:30:00.000Z",
+    "dueAt": "2026-09-28T14:30:00.000Z",
     "assetFile": "parents-2-1.png",
     "cta": "Speaking (lornettedaye.com/speaking)",
     "text": "BEFORE THE TROPHIES, THERE WAS FAMILY. 🇪🇸🎾❤️\n\nCarlos Alcaraz is already a 4-time Grand Slam champion, an Olympic silver medalist, and the youngest World No. 1 in tennis history.\n\nThe sports media loves to talk about his thunderous forehand and his supersonic court coverage. But long before Carlos was lifting the trophy at Wimbledon, his father Carlos Sr. was managing a modest tennis club in El Palmar, stretching every peseta and euro so his boy could travel to junior tournaments.\n\nIn my 40+ years coaching Olympic athletes and national champions, I have learned an undeniable truth: Talent attracts sponsors, but family builds staying power. When an athlete knows their value at home has nothing to do with whether they win or lose, they play with fearless freedom.\n\nCoaches & Parents: How do you build an environment where your young athlete feels valued for who they are, not just what they produce on the court?\n\n👉 Book Lornette Daye for keynotes and leadership workshops on parenting champions and cultivating healthy youth sports cultures: lornettedaye.com/speaking\n\n#BehindTheChampion #YouthSports #CarlosAlcaraz #CocoGauff #BenShelton #NaomiOsaka #MondoDuplantis #SportsParenting #HighPerformance #AthleticDirector #CoachingExcellence #OlympicMindset #LornetteDaye #FamilyFoundation #RaisingChampions"
@@ -27,7 +27,7 @@ posts_data = [
   {
     "id": 2,
     "slot": "Monday Mid-day (1:00 PM MDT)",
-    "dueAt": "2026-09-14T19:00:00.000Z",
+    "dueAt": "2026-09-28T19:00:00.000Z",
     "assetFile": "parents-2-2.png",
     "cta": "Survival Skills for Men Book (lornettedaye.com/books)",
     "text": "THE WORLD SAW CARLOS. HE SAW HIS PARENTS. 🏆👀\n\nLook at Carlos Alcaraz's eyes in this moment. The stadium is erupting, cameras are flashing, and 15,000 spectators are on their feet.\n\nYet where does his gaze immediately travel? Straight to the player box. To the mother who washed his dirty tennis socks and cooked his favorite paella. To the father who taught him how to hit a drop shot with soft hands and a calm heart.\n\nFathers and mentors: In seasons of intense career pressure and outside noise, how do you keep your sons anchored in core family values?\n\nTrue masculine leadership isn't about shouting from the sidelines. It is about steady, consistent presence that reminds a young man where his foundation lies.\n\n👉 Strengthen your emotional resilience and purposeful leadership. Read *Survival Skills for Men* ($14.99 CAD): lornettedaye.com/books\n\n#BehindTheChampion #YouthSports #CarlosAlcaraz #CocoGauff #BenShelton #NaomiOsaka #MondoDuplantis #SportsParenting #HighPerformance #AthleticDirector #CoachingExcellence #OlympicMindset #LornetteDaye #FamilyFoundation #RaisingChampions"
@@ -35,7 +35,7 @@ posts_data = [
   {
     "id": 3,
     "slot": "Monday Evening (6:00 PM MDT)",
-    "dueAt": "2026-09-15T00:00:00.000Z",
+    "dueAt": "2026-09-29T00:00:00.000Z",
     "assetFile": "parents-2-1.png",
     "cta": "Speaking (lornettedaye.com/speaking)",
     "text": "WHY ALCARAZ STILL LIVES ABOVE A SHOP IN EL PALMAR. 🏠🇪🇸\n\nDo you know what Carlos Alcaraz did after winning his first US Open and reaching World No. 1 at 19 years old?\n\nHe went back home to El Palmar, Murcia, and slept in his childhood bedroom in his parents' apartment above a kebab shop. He ate breakfast at the kitchen table with his brothers, cleaned his room, and listened to his mother's advice.\n\nIn professional sports, premature independence and sudden wealth destroy more prodigies than injuries ever will. Carlos Alcaraz has dominated men's tennis because his family keeps him anchored to earth.\n\nAthletic Directors & Academy Leaders: Are you teaching your athletes how to manage fame and handle the isolation of the summit?\n\n👉 Bring Lornette Daye to your coaching conference or athletic department to train holistic champion mindsets: lornettedaye.com/speaking\n\n#BehindTheChampion #YouthSports #CarlosAlcaraz #CocoGauff #BenShelton #NaomiOsaka #MondoDuplantis #SportsParenting #HighPerformance #AthleticDirector #CoachingExcellence #OlympicMindset #LornetteDaye #FamilyFoundation #RaisingChampions"

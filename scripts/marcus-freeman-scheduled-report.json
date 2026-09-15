@@ -1,9 +1,50 @@
 {
   "campaign": "Marcus Freeman - Leadership. Legacy. Barriers Broken",
   "total_posts": 4,
-  "successful_posts": 0,
-  "daily_limit_hit": true,
+  "successful_posts": 4,
+  "daily_limit_hit": false,
   "channelId": "6a39d30c5ab6d2f1065f5301",
-  "scheduled_at": "2026-09-14 02:33:39",
-  "results": []
+  "scheduled_at": "2026-09-15 00:14:18",
+  "results": [
+    {
+      "id": 1,
+      "slot": "Week 1 Mid-Week: Wednesday Morning (10:00 AM MDT)",
+      "dueAt": "2026-09-16T16:00:00.000Z",
+      "bufferPostId": "6aa8e23a7c6c16e04a1b0aba",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/marcus-freeman/marcus-freeman.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 2,
+      "slot": "Week 1 Game Day: Saturday Morning (10:00 AM MDT)",
+      "dueAt": "2026-09-19T16:00:00.000Z",
+      "bufferPostId": "6aa8e23d7a172fa74f8a5ccc",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/marcus-freeman/marcus-freeman.png",
+      "cta": "Survival Skills for Men Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 3,
+      "slot": "Week 2 Mid-Week: Wednesday Morning (10:00 AM MDT)",
+      "dueAt": "2026-09-23T16:00:00.000Z",
+      "bufferPostId": "6aa8e23ffa1b0cab28aa4ea3",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/marcus-freeman/marcus-freeman.png",
+      "cta": "Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 4,
+      "slot": "Week 2 Game Day: Saturday Morning (10:00 AM MDT)",
+      "dueAt": "2026-09-26T16:00:00.000Z",
+      "bufferPostId": "6aa8e242fa1b0cab28aa4eee",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/marcus-freeman/marcus-freeman.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    }
+  ]
 }
