@@ -47,6 +47,18 @@
       "scheduled": 4,
       "status": "100% Scheduled in Buffer Active Queue",
       "report": "scripts/marcus-freeman-scheduled-report.json"
+    },
+    "como-parma-win": {
+      "total": 1,
+      "scheduled": 1,
+      "status": "100% Scheduled in Buffer Active Queue",
+      "report": "scripts/como-parma-scheduled-report.json"
+    },
+    "como-sinigaglia-video": {
+      "total": 8,
+      "scheduled": 8,
+      "status": "100% Scheduled in Buffer Active Queue",
+      "report": "scripts/como-video-scheduled-report.json"
     }
   }
 }
