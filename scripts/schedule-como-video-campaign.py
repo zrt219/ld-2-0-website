@@ -234,46 +234,48 @@ What higher standard are you setting for your life and career this month? Drop i
 
 mutation = """
 mutation CreatePost($input: CreatePostInput!) {
-  createPost(input: $input) {
-    __typename
-    ... on PostActionSuccess {
-      post {
-        id
-        dueAt
-        state
-        channelId
-      }
+    createPost(input: $input) {
+        __typename
+        ... on PostActionSuccess {
+            post {
+                id
+                dueAt
+                status
+            }
+        }
+        ... on LimitReachedError {
+            message
+        }
+        ... on InvalidInputError {
+            message
+        }
+        ... on UnexpectedError {
+            message
+        }
+        ... on UnauthorizedError {
+            message
+        }
     }
-    ... on UserError {
-      message
-    }
-    ... on LimitReachedError {
-      message
-    }
-    ... on RestProxyError {
-      message
-    }
-  }
 }
 """
 
 def buffer_request(query, variables=None):
-    url = "https://publish.buffer.com/graphql"
-    payload = json.dumps({"query": query, "variables": variables or {}}).encode("utf-8")
+    ctx = ssl._create_unverified_context()
+    payload = json.dumps({"query": query, "variables": variables or {}}).encode('utf-8')
     req = urllib.request.Request(
-        url,
+        "https://api.buffer.com",
         data=payload,
         headers={
-            "Authorization": f"Bearer {TOKEN}",
             "Content-Type": "application/json",
+            "Authorization": f"Bearer {TOKEN}",
             "User-Agent": "Mozilla/5.0"
         }
     )
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
-    with urllib.request.urlopen(req, context=ctx) as response:
-        return json.loads(response.read().decode("utf-8")).get("data", {})
+    with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
+        body = json.loads(resp.read().decode('utf-8'))
+        if "errors" in body:
+            print(f"   ❌ GraphQL Errors: {body['errors']}")
+        return body.get("data", {})
 
 def probe_asset(url):
     print(f"🔍 Probing production asset URL: {url}")
