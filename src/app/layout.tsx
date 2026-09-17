@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { preconnect } from "react-dom";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 import { siteCopy, siteUrl } from "@/content/site";
@@ -17,6 +18,13 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#faf7f0",
+  colorScheme: "light",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -24,6 +32,12 @@ export const metadata: Metadata = {
     template: `%s | ${siteCopy.brandName}`,
   },
   description: siteCopy.seoDescription,
+  manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: siteCopy.brandName,
+  },
   alternates: {
     canonical: "/",
   },
@@ -35,7 +49,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/lornette-executive-portrait.jpg",
+        url: "/generated/lornette-executive-portrait.jpg",
         width: 1200,
         height: 630,
         alt: `${siteCopy.brandName} - Keynote Speaker, Executive Coach, Author`,
@@ -46,10 +60,16 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteCopy.seoTitle,
     description: siteCopy.seoDescription,
-    images: ["/images/lornette-executive-portrait.jpg"],
+    images: ["/generated/lornette-executive-portrait.jpg"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/icon", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/apple-icon", sizes: "180x180", type: "image/png" },
+    ],
   },
   robots: {
     index: true,
@@ -70,7 +90,7 @@ export default function RootLayout({
     "@type": "Person",
     name: siteCopy.brandName,
     url: siteUrl,
-    image: `${siteUrl}/images/lornette-executive-portrait.jpg`,
+    image: `${siteUrl}/generated/lornette-executive-portrait.jpg`,
     jobTitle: "Professional Keynote Speaker & Executive Coach",
     description: siteCopy.seoDescription,
     sameAs: siteCopy.socialLinks
@@ -107,6 +127,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
