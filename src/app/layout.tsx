@@ -4,6 +4,7 @@ import { preconnect } from "react-dom";
 import "./globals.css";
 
 import { siteCopy, siteUrl } from "@/content/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -107,6 +108,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
