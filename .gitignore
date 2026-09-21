@@ -35,6 +35,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -47,6 +48,15 @@ next-env.d.ts
 
 # local agent/runtime state
 /.omx/
+/Lornette_Daye_Performance_Edge_Launch3_Prompt_Pack/
 
-.vercel
-.env*
+# AI / internal build material
+.ai-private/
+*.prompt.md
+*_PROMPTS.md
+*.zip
+__pycache__/
+*.pyc
+
+
+

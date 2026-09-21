@@ -1,64 +1,9 @@
 {
-  "lastRun": "2026-09-15T06:26:00.000Z",
+  "lastRun": "2026-09-17T11:05:50.053Z",
+  "totalPosts": 320,
+  "scheduledCount": 320,
+  "pendingCount": 0,
+  "scheduledThisRun": 0,
   "rateLimitHit": false,
-  "rateLimitWindow": "24h (250 requests/day)",
-  "retryAfterSeconds": 76528,
-  "nextResetUTC": "2026-09-15T05:49:19.000Z",
-  "nextResetMDT": "9/14/2026, 11:49:19 PM MDT",
-  "masterCampaigns": {
-    "jessica-campbell": {
-      "total": 28,
-      "scheduled": 28,
-      "status": "100% Scheduled in Buffer Active Queue",
-      "report": "scripts/jessica-campbell-scheduled-report.json"
-    },
-    "japan-mens-volleyball": {
-      "total": 28,
-      "scheduled": 28,
-      "status": "100% Scheduled in Buffer Active Queue",
-      "report": "scripts/japan-volleyball-scheduled-report.json"
-    },
-    "parents-set-1": {
-      "total": 42,
-      "scheduled": 42,
-      "status": "100% Scheduled in Buffer Active Queue",
-      "report": "scripts/parents-scheduled-report.json"
-    },
-    "mondo-duplantis": {
-      "total": 42,
-      "scheduled": 42,
-      "status": "100% Scheduled in Buffer Active Queue",
-      "report": "scripts/mondo-scheduled-report.json"
-    },
-    "parents-set-2": {
-      "total": 42,
-      "scheduled": 42,
-      "status": "100% Scheduled & Copy Refined in Buffer Active Queue",
-      "report": "scripts/parents-set-2-scheduled-report.json"
-    },
-    "parents-set-3": {
-      "total": 42,
-      "scheduled": 42,
-      "status": "100% Scheduled in Buffer Active Queue",
-      "report": "scripts/parents-set-3-scheduled-report.json"
-    },
-    "marcus-freeman": {
-      "total": 4,
-      "scheduled": 4,
-      "status": "100% Scheduled in Buffer Active Queue",
-      "report": "scripts/marcus-freeman-scheduled-report.json"
-    },
-    "como-parma-win": {
-      "total": 1,
-      "scheduled": 1,
-      "status": "100% Scheduled in Buffer Active Queue",
-      "report": "scripts/como-parma-scheduled-report.json"
-    },
-    "como-sinigaglia-video": {
-      "total": 8,
-      "scheduled": 8,
-      "status": "100% Scheduled in Buffer Active Queue",
-      "report": "scripts/como-video-scheduled-report.json"
-    }
-  }
+  "allComplete": true
 }

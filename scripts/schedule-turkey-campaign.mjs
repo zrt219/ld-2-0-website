@@ -1,370 +1,419 @@
 /**
- * Turkey Athlete Funding & Equity Campaign
- * 20 Unique High-Impact Pain-Point Captions with Maximum Hashtags
+ * Türkiye Athlete Investment & Holistic Well-Being Campaign
+ * 20 High-Impact Pain-Point Captions | Maximum Hashtag Stack | Lornette Daye Voice
  * 
- * Lornette Daye (40+ years experience, Olympian Coach, Canadian Sprint Champion, Keynote Speaker)
- * Image Creatives: public/campaigns/turkey/turkey-01.png to turkey-20.png
+ * Schedule: 7-Day High-Frequency Sprint (3x Daily at 9:00 AM, 1:00 PM, and 6:30 PM MDT)
+ * Creatives: https://lornettedaye.com/campaigns/turkey/turkey-01.png to turkey-20.png
  */
 
 import fs from 'fs';
 import path from 'path';
 
-export const turkeyPosts = [
+const BUFFER_TOKEN = process.env.BUFFER_ACCESS_TOKEN || 'mLbjEsRdn5FKtGOskFoGzK-gW2CGTl8dfAK8klDVEPC';
+const CHANNEL_ID = '6a39d30c5ab6d2f1065f5301';
+const GRAPHQL_ENDPOINT = 'https://api.buffer.com';
+const BASE_IMAGE_URL = 'https://lornettedaye.com/campaigns/turkey';
+
+export const turkeyCaptions = [
   {
     imageIndex: 1,
-    headline: "CONGRATULATIONS, TÜRKIYE. YOU'RE NOT JUST FUNDING SPORT. YOU'RE INVESTING IN ATHLETES.",
-    text: `For 40 years, I have walked alongside elite athletes who had Olympic-level potential but were forced to walk away from their dreams simply because they couldn't afford groceries, rent, or a plane ticket to a qualifying meet.
+    headline: "CONGRATULATIONS, TÜRKIYE. YOU'RE INVESTING IN ATHLETES, NOT JUST MEDALS.",
+    text: `For over 40 years as an Olympian coach and Canadian National Champion, I have witnessed the same heartbreak repeatedly:
 
-That is the heartbreaking reality of sport when institutions only fund the spectacle, but neglect the human being inside the jersey.
+Nations love waving flags when an athlete wins gold, but they vanish when that same athlete is working three jobs just to buy groceries and cover physiotherapy.
 
-When Türkiye commits to monthly athlete support, accommodation, food, travel, and equal development for Olympic, Paralympic, and Deaflympic competitors—that isn't charity. That is systemic leadership.
+Türkiye's comprehensive athlete support model—providing direct monthly stipends, accommodation, travel, nutrition, and equal backing across Olympic, Paralympic, and Deaflympic disciplines—is what true sports leadership looks like.
 
-The athlete is always more than the result on the scoreboard. When we invest in the person, the podium takes care of itself.
-
-Explore keynotes and sports policy consulting: lornettedaye.com/speaking
-
-#AthleteAdvocacy #OlympicDevelopment #Paralympics #Deaflympics #SportsPolicy #AthleteFunding #HighPerformance #LornetteDaye #SportsPhilanthropy #MentalHealthInSports #SportsManagement #SportsLeadership #YouthAthletics #SportsBusiness #TurkiyeSport #AthleteWelfare #HumanFirst #FinishStrong`,
-  },
-  {
-    imageIndex: 2,
-    headline: "DON'T JUST CELEBRATE THE MEDAL. SUPPORT THE JOURNEY.",
-    text: `Talent should NEVER have to choose between basic survival and competing on the world stage.
-
-As a former national sprint champion and longtime coach, I know the dark side of elite sports: athletes training 30 hours a week with broken equipment, nursing injuries without physio coverage, and wondering how they will pay for next month’s housing while carrying the pride of a nation on their shoulders.
-
-Greatness is forged years before anyone hears the national anthem. 
-
-If we only celebrate athletes when they win gold, but leave them unfunded in the unseen grind, we fail them. Real investment happens in the dark.
-
-Discover our athlete transition & mentorship framework: lornettedaye.com/athlete-coaching
-
-#AthleteSupport #OlympicJourney #ParalympicSport #SportsFunding #AthleteWellbeing #GrassrootsSport #HighPerformance #LornetteDaye #SportsEthics #SportsGovernance #SportsEcosystem #AthleteEmpowerment #OlympicHopefuls #WomenInSport #EquityInSport #GlobalAthletics #FinishStrong`,
-  },
-  {
-    imageIndex: 3,
-    headline: "5,239 ATHLETES. 86 TRAINING CENTRES. ONE BELIEF: POTENTIAL DESERVES INVESTMENT.",
-    text: `How many generational talents have slipped through the cracks because they lived in the wrong postal code, lacked transportation, or couldn't afford specialized coaching?
-
-5,239 athletes across 86 training centres. That is what intentional, decentralized sports infrastructure looks like.
-
-Potential is universal, but access is not. When a nation builds facilities where young people actually live, train, and study, it removes the crushing financial barrier that turns promising youth away from sport.
-
-The future of sport is built long before game day. Support athletes while they are becoming, not just after they have arrived.
-
-Learn about youth development and community impact: lornettedaye.com/impact
-
-#GrassrootsAthletics #SportsInfrastructure #YouthDevelopment #SportsEquity #AthletePathway #CommunitySport #OlympicTraining #LornetteDaye #SportsLeadership #TalentIdentification #SportsScience #SocialImpactThroughSport #YouthEmpowerment #AthleteMentorship #InclusiveSport #TurkiyeAthletics #KeynoteSpeaker`,
-  },
-  {
-    imageIndex: 4,
-    headline: "FROM THE TRACK TO THE PITCH. EVERY SPORT CREATES A DIFFERENT KIND OF LEADER.",
-    text: `Sport is not a luxury pastime—it is the world’s most effective leadership development lab.
-
-On the track, you learn hyper-accountability: when the gun goes off, there is nowhere to hide. On the football pitch and volleyball court, you learn communication under fire. In Paralympic sports, you master adaptive resilience against impossible odds.
-
-When institutions underfund multi-sport ecosystems, they aren't just losing medals—they are losing tomorrow’s civic, corporate, and community leaders.
-
-Invest in the athlete. Prepare the person. Build the future.
-
-Book Lornette Daye for leadership keynotes: lornettedaye.com/book
-
-#LeadershipThroughSport #MultiSportDevelopment #ParalympicLeadership #AthleteMindset #ExecutiveLeadership #TeamCulture #TrackAndField #LornetteDaye #SportsPsychology #YouthLeadership #SportsGovernance #CorporateLeadership #ResilienceInAction #OlympicMindset #TransformationalLeadership #FinishStrong`,
-  },
-  {
-    imageIndex: 5,
-    headline: "WOMEN'S SPORT BELONGS ON THE BIGGEST STAGE.",
-    text: `For decades, female athletes have been told to be grateful for whatever leftover resources, off-peak broadcast slots, and sub-par facilities came their way.
-
-Those days are over.
-
-When a nation backs women in sport with real capital, dedicated coaching, and prime-time visibility, it creates a seismic shift in societal confidence. 
-
-To every young girl watching from the stands or on her screen: your strength is not a disruption; it is your superpower. Dream bigger.
-
-Read more about women's leadership in athletics: lornettedaye.com/about
-
-#WomensSport #WomenInLeadership #FemaleAthletes #InvestInWomen #GirlsInSport #TitleIXLegacy #VolleyballWomen #LornetteDaye #RepresentationMatters #EmpowerWomen #SportsEquity #EuroVolley #SheCanPlay #AthleticExcellence #SportsAdvocacy #WomenLeaders #KeynoteSpeaker`,
-  },
-  {
-    imageIndex: 6,
-    headline: "137 WOMEN. 197 MEN. 29 SPORTS. ONE FLAG. ONE JOURNEY.",
-    text: `A truly great sporting culture is never a one-trick pony. It doesn't pour 99% of its budget into a single men's sport while archery, taekwondo, fencing, swimming, and rowing fight for scraps.
-
-137 women. 197 men. 29 distinct sports under one unified mission.
-
-When athletes across diverse disciplines feel equally seen, respected, and funded, national pride becomes an unstoppable wave.
-
-Excellence has many shapes, languages, and abilities. Let’s fund every single one of them.
-
-Read Lornette's full article 'One Flag, One Journey': lornettedaye.com/blog
-
-#OneFlagOneJourney #MultiSportEcosystem #OlympicDiversity #SportsPolicy #EqualOpportunity #AthleticsCanada #GlobalSport #LornetteDaye #InclusionInSport #NationalFederations #OlympicGames #ParalympicMovement #SportsFunding #HighPerformanceSport #SportsManagement #SportsCulture`,
-  },
-  {
-    imageIndex: 7,
-    headline: "AMATEUR SHOULD NEVER MEAN FORGOTTEN.",
-    text: `The word 'amateur' comes from the Latin word for 'love'—someone who pursues something for the love of the craft.
-
-Yet in modern athletics, 'amateur' has too often become code for 'unpaid, unprotected, and left behind.'
-
-Tomorrow’s world champion is playing on a dusty community field right now. If that field has no lighting, if that coach is an unpaid volunteer burning out, if that kid has no shoes—we break the pipeline before it even begins.
-
-When the top of sport grows, the grassroots MUST grow with it.
-
-Explore grassroots community programs: lornettedaye.com/programs
-
-#GrassrootsSport #AmateurAthletics #CommunityCoaching #YouthSportsCrisis #SportsPhilanthropy #SafeSport #AthleteProtection #LornetteDaye #SportsDevelopment #GrassrootsMatters #CommunityImpact #AccessToSport #YouthEmpowerment #SportsEthics #SportsJustice #FinishStrong`,
-  },
-  {
-    imageIndex: 8,
-    headline: "PAYING AN ATHLETE IS ONE THING. REMOVING THE BARRIERS AROUND THE ATHLETE IS SOMETHING BIGGER.",
-    text: `A stipend check alone does not build a champion.
-
-If an athlete has to worry about meal prep after a 6-hour training day, figure out travel visas on their own, juggle night shifts, and navigate mental health struggles in isolation—the money is just a band-aid on a broken system.
-
-Champions emerge when we remove the operational friction surrounding their lives:
-Nutrition. Safe housing. Travel logistics. Academic flexibility. Sports science.
-
-Developing the athlete means preparing the whole person.
-
-Connect with Lornette Daye for high-performance consultations: lornettedaye.com/athlete-coaching
-
-#HolisticAthleteDevelopment #SportsScience #HighPerformanceEcosystem #AthleteWellbeing #AthleteNutrition #SportsLogistics #LornetteDaye #AthleteSupport #OlympicPrep #SportsManagement #AthleteTransition #PerformanceOptimization #CoachingExcellence #SportsMedicine #FinishStrong`,
-  },
-  {
-    imageIndex: 9,
-    headline: "OLYMPIC. PARALYMPIC. DEAFLYMPIC. EXCELLENCE HAS MORE THAN ONE PATH.",
-    text: `Disability sport is not an afterthought, a sideshow, or a PR photo opportunity. It is elite athletics at its highest, most demanding level.
-
-When nations and corporate sponsors treat Paralympic and Deaflympic athletes as second-class competitors, they misunderstand the very essence of human potential.
-
-True equity means equal prize money, equal facility access, equal medical support, and equal institutional reverence.
-
-Respect the journey. Support the athlete. Every champion matters.
-
-Discover Lornette's inclusion framework: lornettedaye.com/inclusion
-
-#ParalympicExcellence #Deaflympics #AdaptiveSports #DisabilityInclusion #EqualPayInSports #ParaAthletics #LornetteDaye #InclusionMatters #SportsEquity #OlympicParalympic #UniversalAccess #AthleteAdvocacy #HumanRightsInSport #AdaptiveAthlete #ChampionMindset #InspirationalLeadership`,
-  },
-  {
-    imageIndex: 10,
-    headline: "SUCCESS SHOULD KEEP GIVING BACK.",
-    text: `What happens when the cheering stops?
-
-Too many athletes sacrifice their youth, their bodies, and their mental health for national glory—only to find themselves discarded with no resume, no career guidance, and no identity when retirement comes.
-
-That is an institutional tragedy.
-
-When a nation honours its athletes, it must honour the life that comes AFTER sport. Career transition, executive coaching, education, and dignifying pensions aren’t perks—they are the moral obligation of any sports federation.
-
-The person matters just as much as the podium.
-
-Explore athlete life transition coaching: lornettedaye.com/mentorship
-
-#LifeAfterSport #AthleteTransition #AthleteIdentity #PostSportCareer #SportsWelfare #MentalHealthAwareness #AthleteRetirement #LornetteDaye #CareerTransition #LifeBeyondThePodium #SportsGovernance #ExecutiveCoaching #AthletePensions #HumanDignity #FinishStrong`,
-  },
-  {
-    imageIndex: 11,
-    headline: "DON'T JUST CHEER THE WINNER. SUPPORT THE ATHLETE WHILE SHE IS STILL BECOMING.",
-    text: `It is easy to wave a flag when someone is standing on top of the podium wearing a gold medal.
-
-Where were the sponsors when she was waking up at 5:00 AM in the freezing rain? Where was the support when she tore her hamstring and spent 9 months in lonely rehabilitation?
-
-If you want the glory of the victory, you must invest in the vulnerability of the struggle.
-
-Great nations and visionary leaders invest in talent while it is still becoming.
-
-Book Lornette Daye for your next keynote: lornettedaye.com/speaking
-
-#InvestInTheStruggle #UnseenGrind #AthleteRehab #HighPerformanceCulture #SportsSponsorship #VisionaryLeadership #LornetteDaye #PodiumFinish #ResilienceInSport #KeynoteSpeaker #TrueSupport #OlympicDream #AthleticJourney #MentalGrit #FinishStrong`,
-  },
-  {
-    imageIndex: 12,
-    headline: "WHEN A COUNTRY BACKS WOMEN IN SPORT, IT BACKS THE FUTURE.",
-    text: `When girls see women commanding international stadiums, something changes in their neurological blueprint of what is possible.
-
-Opportunity changes who gets to dream.
-
-When we invest in women’s volleyball, track, football, and combat sports, we aren't just producing athletes—we are raising future CEOs, surgeons, founders, and community champions who know how to stand firm under pressure.
-
-Support creates the next champion. To every girl watching: Dream bigger.
-
-Learn about Lornette's mission and youth initiatives: lornettedaye.com/about
-
-#WomenInSport #FutureFemaleLeaders #NextGenAthletes #GirlsInVolleyball #SportsLeadership #LornetteDaye #EmpowerGirls #DreamBigger #EuroVolley #TitleIX #WomenInSTEMandSport #FemaleEmpowerment #TransformationalCoaching #RoleModelsMatter #FinishStrong`,
-  },
-  {
-    imageIndex: 13,
-    headline: "THE CHAMPION ON TV STARTED ON A COMMUNITY FIELD.",
-    text: `Look closely at any superstar you admire on television. Behind every jaw-dropping strike, sprint, or save is a ragged municipal park where someone’s parent or volunteer coach taped up the net.
-
-If municipal budgets continue slashing grassroots recreation, we dry up the wellspring of human talent.
-
-Recreation is not municipal overhead; it is crime prevention, youth mental health, community bonding, and national vitality.
-
-When the top of sport grows, the bottom must grow with it.
-
-Read Lornette's community leadership insights: lornettedaye.com/programs
-
-#CommunityRecreation #SaveOurFields #GrassrootsFootball #YouthSportFunding #MunicipalSports #LornetteDaye #CommunityFirst #YouthWellness #MentalHealthInYouth #PublicPolicy #SportsForChange #PositiveYouthDevelopment #SportsAdvocacy #FinishStrong`,
-  },
-  {
-    imageIndex: 14,
-    headline: "PAYING AN ATHLETE IS ONLY THE BEGINNING.",
-    text: `You cannot put a high-performance athlete in a high-stress, under-resourced environment and expect world-class output.
-
-Removing the friction around the human being is what allows raw talent to transform into enduring excellence.
-
-Food. Safe housing. Reliable international travel. Academic tutoring. Mental conditioning.
-
-When we build a protective ecosystem around our athletes, they don't just win medals—they thrive as complete human beings.
-
-Discover holistic high-performance coaching: lornettedaye.com/athlete-coaching
-
-#HighPerformanceEcosystem #RemoveTheFriction #SportsExcellence #CompleteAthlete #SportsAdministration #LornetteDaye #EliteTraining #MentalConditioning #SportsPerformance #WholePersonCare #OlympicStandard #AthleteCare #FinishStrong`,
-  },
-  {
-    imageIndex: 15,
-    headline: "OLYMPIC. PARALYMPIC. DEAFLYMPIC. EXCELLENCE HAS MORE THAN ONE PATH.",
-    text: `True strength is not measured in physical uniformity—it is measured in the depth of human resolve.
-
-Whether you run on a synthetic track, navigate a court in a custom racing chair, or communicate with your coach through sign language under the roaring lights of an international arena—the heartbeat of dedication is identical.
-
-A strong nation invests in every kind of champion. No exceptions, no second tiers.
-
-Respect the journey. Support the athlete.
-
-Explore Lornette's diversity and inclusion keynotes: lornettedaye.com/inclusion
-
-#AdaptiveSportsMovement #DeaflympicPride #ParalympicChampion #EqualReverence #DiversityInSports #LornetteDaye #HumanResolve #InclusiveCoaching #UniversalSports #ParaSportLeadership #InclusionMatters #KeynoteSpeaker #GlobalInclusion #FinishStrong`,
-  },
-  {
-    imageIndex: 16,
-    headline: "MANY SPORTS. ONE BELIEF. POTENTIAL DESERVES INVESTMENT.",
-    text: `Archery teaches stillness. Cycling builds engine endurance. Wrestling builds relentless mental fortitude. Volleyball teaches lightning-fast team synchronization.
-
-Every sport provides a distinct blueprint for mastering life.
-
-When national sports policies embrace a rich tapestry of disciplines, they build a society with multi-dimensional resilience.
-
-Back many paths to excellence.
-
-Visit lornettedaye.com for books, speaking, and leadership resources.
-
-#MultiSportCulture #NationalSportsStrategy #ArcheryLife #CyclingEcosystem #WrestlingGrit #VolleyballCommunity #LornetteDaye #SportsDiversity #CrossDisciplinaryLeadership #OlympicPreparation #SportsFederation #HighPerformance #FinishStrong`,
-  },
-  {
-    imageIndex: 17,
-    headline: "SUCCESS SHOULD GIVE BACK.",
-    text: `An athlete's identity should never end the day they hang up their spikes or jersey.
-
-In my 40+ years in sport, the most painful conversations have been with former champions who felt completely forgotten once their competitive utility to the federation expired.
-
-When we honour athletes, we must honour their long-term dignity: mentorship opportunities, business incubation, coaching accreditations, and mental health transition frameworks.
-
-The person matters as much as the podium.
-
-Explore mentorship and transition programs: lornettedaye.com/mentorship
-
-#DignityInSport #AthleteRetirementPlan #LifeAfterThePodium #HonourTheSacrifice #SportsLegacy #LornetteDaye #HumanFirstAlways #MentalHealthInAthletics #ExecutiveMentorship #CareerAfterSport #FinishStrong #KeynoteSpeaker`,
-  },
-  {
-    imageIndex: 18,
-    headline: "DON'T JUST CELEBRATE THE MEDAL. SUPPORT THE JOURNEY.",
-    text: `The starting blocks don't care about your potential; they only care about whether you had the support to prepare properly.
-
-Before an athlete can explode out of the blocks on the world stage, they need years of physio, clean nutrition, coaching wisdom, and financial stability.
-
-Talent should NEVER have to choose between surviving and competing.
-
-Let's build systems that empower every athlete to finish strong.
-
-Order 'Finish Strong' by Lornette Daye: lornettedaye.com/books
-
-#StartingBlockFocus #TrackAndFieldLife #SprintMechanics #OvercomingPovertyThroughSport #AthleteSponsorship #LornetteDaye #FinishStrongBook #OlympicMindset #SportsEquity #PodiumJourney #ResilienceUnderPressure #ChampionHabits #KeynoteSpeaker`,
-  },
-  {
-    imageIndex: 19,
-    headline: "SOMEONE HAS TO SEE IT BEFORE THEY CAN BECOME IT.",
-    text: `You cannot be what you cannot see.
-
-When young girls and boys look at national team athletes who look like them, come from their neighborhoods, and overcome the same barriers they face—belief becomes tangible.
-
-Investment in today's athlete is the seed of belief in tomorrow's generation.
-
-When athletes rise, a nation's dream rises with them.
-
-Discover Lornette Daye's youth and community mission: lornettedaye.com/about
-
-#RoleModelsMatter #RepresentationInSport #YouthBelief #InspireTheYouth #CommunityChampions #LornetteDaye #NextGeneration #SportsPhilanthropy #YouthMentorship #TransformativeImpact #WomenInSportsLeadership #FinishStrong`,
-  },
-  {
-    imageIndex: 20,
-    headline: "FROM THE TRACK TO THE PITCH. TÜRKIYE IS INVESTING IN THE ATHLETES WHO MOVE A NATION.",
-    text: `As we conclude this campaign on athlete welfare and systemic sports investment:
-
-Remember that medals fade and records get broken. But what never fades is the character, dignity, and empowerment built into an athlete who was truly supported along the way.
+The athlete is a human being before they are a medal count.
 
 Developing the athlete. Preparing the person. Building the future.
 
-Finish strong in whatever arena you are competing in today.
+Learn about athlete development frameworks: https://lornettedaye.com/athlete-coaching
 
-Book Lornette Daye for your next conference, event, or keynote: lornettedaye.com/book
+#TurkiyeSports #AthleteWelfare #HolisticAthlete #OlympicDevelopment #ParalympicPride #Deaflympics #SportsPolicy #LornetteDaye #AthleteFirst #DevelopingTheAthlete #SportsGovernance #DirectAthleteSupport #HighPerformance #HumanRightsInSport #EquitableFunding #SportsReform #PodiumFunding #AthleteAdvocacy #OlympicStandard #FinishStrong`,
+  },
 
-#DevelopingTheAthlete #PreparingThePerson #BuildingTheFuture #LornetteDaye #SportsWelfare #OlympicLegacy #ParalympicSpirit #AthleteAdvocacy #HighPerformanceLeadership #KeynoteSpeaker #FinishStrong #NationalSportsPride #GlobalImpact`,
+  {
+    imageIndex: 2,
+    headline: "DON'T JUST CELEBRATE THE MEDAL. SUPPORT THE JOURNEY.",
+    text: `Talent should never have to choose between surviving and competing.
+
+When young athletes are forced to quit because they cannot afford travel to international qualifiers or basic sports nutrition, that is not a failure of their talent—it is a systemic failure of leadership.
+
+Greatness is not manufactured on the podium. It is forged in empty training halls at 5:00 AM during years of untelevised sacrifice.
+
+If a society wants the glory of champions, it must shoulder the burden of their development.
+
+Discover athlete mentorship & well-being programs: https://lornettedaye.com/mentorship
+
+#SupportTheJourney #TalentWithoutBarrier #GrassrootsSport #AthleteSurvival #HighPerformanceFunding #LornetteDaye #SportsPhilanthropy #SafeSport #AthleteDignity #OlympicDream #ParalympicAthletes #DeaflympicExcellence #SportsEconomics #SustainableAthletics #CoachingMatters #NextGenAthletes #SportsPolicyReform #FinishStrong #ChampionMindset #AthleteDevelopment`,
+  },
+
+  {
+    imageIndex: 3,
+    headline: "AN ATHLETE'S DIGNITY IS NOT NEGOTIABLE.",
+    text: `When funding is tied exclusively to a podium finish, it creates a toxic culture of fear, burnout, and premature retirement.
+
+What happens when an elite athlete suffers an injury?
+What happens when they finish fourth by 0.01 seconds?
+Does their years of dedication suddenly lose all value?
+
+Basic monthly living security allows competitors to train with psychological safety, innovate in their craft, and perform without crippling existential anxiety.
+
+Treat athletes with the dignity they deserve.
+
+Explore organizational wellness and leadership keynotes: https://lornettedaye.com/leadership
+
+#AthleteDignity #PsychologicalSafety #MentalHealthInSports #PodiumPressure #LornetteDaye #SportsIntegrity #AthleteWellbeing #HighPerformanceCulture #DutyOfCare #OlympicGovernance #ParalympicMovement #DeaflympicsLeadership #CoachingEthics #SustainablePerformance #SportsReform #ExecutiveLeadership #WholePersonCare #HumanFirst #FinishStrong #SafeSport`,
+  },
+
+  {
+    imageIndex: 4,
+    headline: "PARALYMPIC & DEAFLYMPIC EQUALITY IS NON-NEGOTIABLE.",
+    text: `True sports equity is not about token PR statements—it is about equal checks, equal medical access, and equal institutional respect.
+
+Paralympians and Deaflympians train with the exact same relentless intensity, sacrifice, and tactical discipline as any Olympic champion.
+
+Türkiye setting a global benchmark by ensuring equal developmental resources across Olympic, Paralympic, and Deaflympic pipelines is a powerful message to every sports federation worldwide.
+
+Inclusion is an active investment, not passive sympathy.
+
+Read about inclusion and equity in sports: https://lornettedaye.com/inclusion
+
+#ParalympicEquity #DeaflympicsVisibility #AdaptiveSports #TrueInclusion #EqualFunding #LornetteDaye #DisabilityAdvocacy #SportsForEveryone #AccessibleAthletics #GlobalInclusion #ParalympicChampion #DeafSport #HighPerformanceEquity #InstitutionalReform #LeadByExample #EmpowerAllAthletes #SportsPolicy #UniversalDesign #FinishStrong #OneFlagOneJourney`,
+  },
+
+  {
+    imageIndex: 5,
+    headline: "BEYOND THE PODIUM: PREPARING FOR LIFE AFTER SPORT.",
+    text: `What happens when the national anthem fades and the career comes to an end?
+
+Too many retired athletes face identity crises, financial instability, and emotional isolation because their entire worth was reduced to physical metrics.
+
+Developing the athlete must include preparing the person:
+• Dual-career education
+• Financial literacy
+• Mental health counseling
+• Executive transition mentorship
+
+When we invest in their mind and character, we build leaders who transform society long after their spikes are hung up.
+
+Discover Lornette's dual-career transition programs: https://lornettedaye.com/programs
+
+#LifeAfterSport #AthleteTransition #DualCareer #CareerTransition #MentalHealthMatters #LornetteDaye #DevelopingTheAthlete #PreparingThePerson #BuildingTheFuture #AthleteAdvocacy #SportsEducation #LeadershipDevelopment #LifeSkillsThroughSport #PostAthleticCareer #HolisticDevelopment #FinishStrong #EmpoweringAthletes #FutureLeaders #TransformativeSport #AthleteWellbeing`,
+  },
+
+  {
+    imageIndex: 6,
+    headline: "GRASSROOTS TO GOLD: WHY EARLY INVESTMENT MATTERS.",
+    text: `You cannot harvest a championship crop without planting seeds and nourishing the soil for a decade.
+
+Too many corporate sponsors and sports bodies wait until an athlete is already famous before offering support. By then, hundreds of equally gifted athletes have already fallen through the cracks due to poverty.
+
+Early monthly stipends, access to quality coaching, and covered travel costs are what turn raw potential into world-class excellence.
+
+Invest early. Invest consistently. Watch human greatness flourish.
+
+Book Lornette Daye for your keynote summit: https://lornettedaye.com/speaking
+
+#GrassrootsToGold #EarlyInvestment #TalentIdentification #YouthSportsDevelopment #LornetteDaye #SportsFunding #CorporateSponsorship #SocialImpactInSport #BuildingChampions #OlympicPipeline #ParalympicTalent #DeaflympicsDevelopment #LongTermAthleteDevelopment #SportsInfrastructure #PatienceInExcellence #HighPerformanceLeadership #KeynoteSpeaker #FinishStrong #GlobalAthletics #Empowerment`,
+  },
+
+  {
+    imageIndex: 7,
+    headline: "THE REAL COST OF ELITE ATHLETICS.",
+    text: `Let's talk about the numbers nobody likes to discuss:
+
+• International airfare and baggage fees for adaptive equipment.
+• Specialized physio, osteopathy, and injury rehab.
+• Clean, calorie-dense nutrition and supplements.
+• High-performance coaching and facility access.
+
+When federations leave these expenses to athletes and their families, only the wealthy survive. True democracy in sport requires institutional funding that levels the playing field for everyone.
+
+Level the field. Lift the athlete.
+
+Explore sports consulting with Lornette Daye: https://lornettedaye.com/about
+
+#RealCostOfSport #LevelThePlayingField #SocioeconomicEquityInSport #SportsEconomics #LornetteDaye #HighPerformanceInfrastructure #AthleteAdvocacy #SportsNutrition #PhysiotherapyAccess #DemocratizeSport #OlympicCost #ParalympicFunding #GrassrootsAdvocacy #InstitutionalResponsibility #SportsReform #FinishStrong #AthleticsCanada #GlobalSportsGovernance #SafeSport #LeadershipVision`,
+  },
+
+  {
+    imageIndex: 8,
+    headline: "DEVELOPING THE ATHLETE. PREPARING THE PERSON. BUILDING THE FUTURE.",
+    text: `This is not just my personal coaching philosophy—it is the moral imperative for 21st-century sport.
+
+When coaches and federations treat athletes as disposable tools for medals, they break spirits. When we nurture their emotional intelligence, leadership, and personal dignity, they perform at heights they never dreamed possible.
+
+Great champions are built from the inside out.
+
+Let's build a sporting world where athletes thrive before, during, and long after competition.
+
+Order 'Finish Strong' by Lornette Daye: https://lornettedaye.com/books
+
+#DevelopingTheAthlete #PreparingThePerson #BuildingTheFuture #LornetteDaye #FinishStrongBook #HolisticCoaching #HumanCenteredSport #CoachingPhilosophy #40YearsOfExcellence #ChampionBuilder #OlympicCoach #ParalympicDevelopment #AthleteEmpowerment #TransformationalCoaching #SportsPsychology #MindBodySpirit #PodiumSuccess #SustainableGreatness #LeadershipWisdom #LegacyInSport`,
+  },
+
+  {
+    imageIndex: 9,
+    headline: "ENDING THE ERA OF DISPOSABLE ATHLETES.",
+    text: `How many promising juniors have you seen disappear after a single ACL tear?
+
+When nations only fund athletes who are currently winning, they encourage risky overtraining, concealing injuries, and irreversible physical damage.
+
+Direct monthly safety nets guarantee that an injured athlete can take the necessary 12 months of rehab without fearing homelessness or losing their career.
+
+Sustainable sports systems protect their most vulnerable assets: their people.
+
+Discover athlete health & longevity strategies: https://lornettedaye.com/athlete-coaching
+
+#EndDisposableSport #InjuryRehab #AthleteSafety #DutyOfCareInSports #LornetteDaye #SustainableAthletics #SportsLongevity #PreventBurnout #SafeSportMovement #AthleteFirst #OlympicHealth #ParalympicCare #MentalResilience #LongTermCare #SportsGovernanceReform #CoachingEthics #FinishStrong #HumanFirstAthleteSecond #TrueLeadership #SportsCare`,
+  },
+
+  {
+    imageIndex: 10,
+    headline: "TÜRKIYE: SETTING THE BLUEPRINT FOR GLOBAL SPORT GOVERNANCE.",
+    text: `When a nation commits to direct monthly athlete stipends, universal lodging, nutritional support, and equal development across Olympic, Paralympic, and Deaflympic sports, it sets a gold standard that every international federation should emulate.
+
+Sport is one of the greatest vehicles for national unity, youth health, and global prestige.
+
+Investing directly into the living conditions of athletes is the highest-return investment a country can make.
+
+Bravo, Türkiye. The sporting world is taking notice. 🇹🇷👏
+
+Connect with Lornette Daye: https://lornettedaye.com
+
+#TurkiyeModel #GlobalBlueprint #SportsGovernance #NationalPride #TurkiyeAthletes #LornetteDaye #OlympicInvestment #ParalympicSupport #DeaflympicsLeadership #SportsDiplomacy #FutureOfSport #HighPerformanceEcosystem #InternationalAthletics #NationalSportsReform #ChampionNations #InvestInPeople #SportsLeadership #PolicyMakers #FinishStrong #ExcellenceInAction`,
+  },
+
+  {
+    imageIndex: 11,
+    headline: "DON'T JUST CHEER THE WINNER. SUPPORT HER WHILE SHE IS BECOMING.",
+    text: `It takes zero courage to jump on the bandwagon when a young woman stands on top of the world with gold around her neck.
+
+Real leadership is believing in her, funding her travel, securing her nutrition, and shielding her from exploitation when she is still ranked outside the top 100.
+
+Nurture the process. Protect the dreamers. Great nations invest before the medal.
+
+Learn about women's leadership initiatives: https://lornettedaye.com/programs
+
+#WhileSheIsBecoming #WomenInSport #NurturePotential #InvestBeforeTheMedal #LornetteDaye #FemaleAthletics #GrassrootsEmpowerment #NextGenWomen #OlympicWomen #ParalympicWomen #DeaflympicWomen #SheCanLead #SportsEquity #SupportHerJourney #FinishStrong #HighPerformanceMindset #SafeSport #ChampionTheFuture #GirlPowerInSport #LegacyBuilders`,
+  },
+
+  {
+    imageIndex: 12,
+    headline: "FEMALE ATHLETES DESERVE FINANCIAL INDEPENDENCE.",
+    text: `When female competitors lack direct financial stipends, they become vulnerable to predatory sponsorships, toxic power dynamics, and premature career abandonment.
+
+Direct athlete funding provides autonomy.
+Direct athlete funding provides security.
+Direct athlete funding provides leverage.
+
+When women in sports are financially empowered, they lead with authority on and off the court.
+
+Explore executive coaching & female athlete advocacy: https://lornettedaye.com/leadership
+
+#FinancialIndependenceInSport #WomenAthletes #EmpowerWomenInSport #EqualPayInSports #LornetteDaye #AthleteAutonomy #SafeSport #FemaleLeadership #SportsEquity #FinancialLiteracy #WomensSportsMatter #ProtectFemaleAthletes #OlympicEquality #ParalympicEquality #DeaflympicEquality #FinishStrong #ExecutivePresence #WomenWhoLead #SportsBusiness #FairPlay`,
+  },
+
+  {
+    imageIndex: 13,
+    headline: "THE SILENT CRISIS: MENTAL HEALTH UNDER THE NATIONAL FLAG.",
+    text: `Carrying the expectations of an entire nation on your shoulders is a heavy burden for a 20-year-old athlete.
+
+When fear of losing funding is added to the pressure of global competition, mental health collapses.
+
+Comprehensive athlete support must include professional sports psychologists, confidential counseling, and unconditional institutional backing.
+
+A healthy mind produces an enduring champion.
+
+Read about mental performance frameworks: https://lornettedaye.com/blog
+
+#MentalHealthInSports #AthleteMindset #SilentCrises #PsychologicalSupport #LornetteDaye #MindHealthMatters #OlympicPressure #BreakTheStigma #SportsPsychology #MentalFortitude #HealthyAthletes #AthleteWellbeing #InnerPeaceOuterPower #WholeAthlete #FinishStrong #SafeSportEnvironment #CoachingCompassion #DutyOfCare #SportsMedicine #ChampionHealth`,
+  },
+
+  {
+    imageIndex: 14,
+    headline: "40 YEARS ON THE FRONTLINES OF COACHING EXCELLENCE.",
+    text: `Over four decades in international track & field and high-performance coaching, I have coached athletes to national titles, Olympic qualifications, and podium finishes.
+
+The single biggest lesson I have learned?
+
+Coaching is not about imposing your ego on an athlete; it is about creating an ecosystem where their unique genius can safely emerge.
+
+Support systems matter more than drills.
+
+Book Lornette Daye for high-performance team coaching: https://lornettedaye.com/athlete-coaching
+
+#40YearsOfCoaching #FrontlinesOfExcellence #OlympicCoach #HighPerformanceEcosystem #LornetteDaye #TrackAndField #MasteryInSport #CoachingExcellence #ChampionMaker #MentorshipMatters #LeadershipPhilosophy #SportsLegacy #CanadianTrack #InternationalAthletics #FinishStrong #DevelopingChampions #TrueGreatness #AthleteFirst #ExperienceCounts #TransformationalLeadership`,
+  },
+
+  {
+    imageIndex: 15,
+    headline: "SUSTAINABLE ATHLETIC PATHWAYS: FROM DISCOVERY TO RETIREMENT.",
+    text: `A world-class sports system is not a lottery where 99% of participants are discarded.
+
+It is a well-structured pipeline that:
+1. Discovers talent in every region and socioeconomic background.
+2. Nurtures fundamental athletic literacy without early burnout.
+3. Provides full living, nutritional, and medical support at the elite level.
+4. Transitions athletes seamlessly into coaching, governance, or enterprise careers.
+
+Build systems that last generations.
+
+Discover sports governance consulting: https://lornettedaye.com/about
+
+#SustainableSport #AthleticPathways #TalentPipeline #SystemicSportsDesign #LornetteDaye #LongTermDevelopment #GrassrootsInfrastructure #SportsGovernance #NoAthleteLeftBehind #OlympicLegacy #ParalympicPipeline #DeaflympicPathways #SportsManagement #BuildForGenerations #HighPerformanceStrategy #FinishStrong #SportsEcosystem #PolicyDesign #GlobalAthletics #TransformSport`,
+  },
+
+  {
+    imageIndex: 16,
+    headline: "PARALYMPIC CHAMPIONS ARE HIGH-PERFORMANCE ICONS.",
+    text: `Let's stop treating adaptive athletics as a charity project.
+
+The engineering, physiological adaptations, and mental fortitude required to master wheelchair racing, blind sprinting, and seated throws are among the highest feats of human performance on earth.
+
+Paralympic athletes deserve prime-time broadcast coverage, equal corporate sponsorships, and equal national funding.
+
+Recognize excellence for what it is.
+
+Explore inclusion and diversity programs with Lornette: https://lornettedaye.com/inclusion
+
+#ParalympicIcons #HighPerformanceAdaptive #WheelchairAthletics #BlindSprinting #LornetteDaye #EliteAdaptiveSport #EqualCoverage #ParalympicPride #UnstoppableAthletes #SportsEngineering #ExtremeHumanPerformance #DisabilityIsPower #AdaptiveExcellence #FinishStrong #InclusionInAction #OneFlagOneJourney #InspireTheWorld #UniversalSports #ParalympicStandard #BreakAllBarriers`,
+  },
+
+  {
+    imageIndex: 17,
+    headline: "SAFEGUARDING SPORT: RESPECT, DIGNITY, AND EQUAL ACCESS.",
+    text: `Every athlete has the fundamental human right to train and compete in an environment free from abuse, harassment, financial exploitation, and neglect.
+
+Safe sport is not an optional add-on—it is the non-negotiable bedrock of all ethical athletic governance.
+
+When nations institute direct, transparent monthly support, they strip away the corrupt leverage that abusers have traditionally held over vulnerable athletes.
+
+Transparency builds trust. Trust creates champions.
+
+Learn about Lornette's Safe Sport advocacy: https://lornettedaye.com/impact
+
+#SafeSport #AthleteSafeguarding #TransparencyInSport #HumanRightsInAthletics #LornetteDaye #EthicalGovernance #ProtectOurAthletes #ZeroTolerance #DignityInSport #SportsPolicy #AthleteProtection #TrustAndIntegrity #SafeTrainingEnvironments #OlympicValues #ParalympicIntegrity #DeaflympicSafety #FinishStrong #SpeakUpForSport #TrueLeadership #DutyOfCare`,
+  },
+
+  {
+    imageIndex: 18,
+    headline: "THE UNSUNG HEROES: OLYMPIC FAMILIES.",
+    text: `Behind every athlete you see on television is a mother who worked overtime shifts, a father who drove hundreds of miles to weekend meets, and siblings who sacrificed vacations so travel fees could be paid.
+
+When sports systems fail to fund athletes, the burden falls squarely on working-class families.
+
+Universal sports stipends take the financial stranglehold off families and allow athletes to compete on pure merit.
+
+To every sports parent and family member: we see you, we honor you, and we fight for systemic change on your behalf.
+
+Read 'Finish Strong' by Lornette Daye: https://lornettedaye.com/book
+
+#UnsungHeroes #SportsParents #OlympicFamilies #SacrificeForGreatness #LornetteDaye #FamilySupportInSport #GrassrootsRealities #WorkingClassChampions #CommunityImpact #ParentalDedication #SupportOurAthletes #FinishStrongBook #SystemicRelief #TrueChampions #FamilySacrifice #SportsMoments #HeartOfSport #BehindTheGold #SportsCommunity #LegacyOfLove`,
+  },
+
+  {
+    imageIndex: 19,
+    headline: "GLOBAL SPORTS POLICY: LESSONS FROM THE FRONTLINES.",
+    text: `Sports ministers and federation presidents frequently ask: 'How do we win more international medals?'
+
+The answer is surprisingly simple:
+Stop spending 80% of your budget on executive travel and administrative bureaucracy. Redirect the resources directly into the bank accounts, dinner plates, and physical therapy rooms of the athletes and coaches doing the actual work.
+
+Cut bureaucracy. Fund athletes. Win medals.
+
+Connect with Lornette Daye for organizational audits: https://lornettedaye.com/programs
+
+#SportsPolicyAudit #DirectAthleteFunding #CutTheBureaucracy #SportsGovernance #LornetteDaye #HighPerformanceReform #AthleteFirstPolicy #OlympicPolicy #ParalympicGovernance #DeaflympicSupport #SportsAdministration #CleanSport #ResultsDrivenPolicy #GlobalSportsStrategy #EfficiencyInSport #FinishStrong #ExecutiveAuditing #LeadFromFront #InvestInTalent #TransformationalPolicy`,
+  },
+
+  {
+    imageIndex: 20,
+    headline: "FINISH STRONG: THE ATHLETE'S JOURNEY BEYOND THE FINAL WHISTLE.",
+    text: `Your career as an active competitor may span 10 or 15 years.
+Your life as a human being spans 80.
+
+When we develop the whole person—equipping them with unshakeable self-worth, academic credentials, and ethical leadership tools—we ensure that their greatest victory is not a gold medal won at age 24, but the lasting impact they create for the rest of their lives.
+
+Developing the Athlete.
+Preparing the Person.
+Building the Future.
+
+Finish Strong. Always.
+
+Explore Lornette Daye's full body of work: https://lornettedaye.com
+
+#FinishStrong #DevelopingTheAthlete #PreparingThePerson #BuildingTheFuture #LornetteDaye #40YearsOfImpact #OlympicLegacy #ParalympicExcellence #DeaflympicsLeadership #WholePersonGreatness #LifeBeyondSport #ChampionMentality #KeynoteSpeaker #HighPerformanceCoach #AuthorFinishStrong #GenerationalImpact #HumanFirst #ExcellenceInLife #SportsInspiration #TheFinalFinish`,
   },
 ];
 
 async function main() {
+  console.log('======================================================');
+  console.log('Türkiye Athlete Well-Being Sprint: 20 Posts / 7 Days');
+  console.log('Times: 9:00 AM, 1:00 PM, and 6:30 PM MDT');
+  console.log('======================================================\n');
+
   const manifestPath = path.join(process.cwd(), 'scripts', 'campaign-manifest.json');
   let manifest = [];
-
   if (fs.existsSync(manifestPath)) {
     manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
   }
 
-  console.log(`Current posts in manifest: ${manifest.length}`);
+  const timeSlots = [
+    { label: '9:00 AM MDT', utcOffset: 15, hour: 9, minute: 0 },
+    { label: '1:00 PM MDT', utcOffset: 19, hour: 13, minute: 0 },
+    { label: '6:30 PM MDT', utcOffset: 0.5, hour: 18, minute: 30 },
+  ];
 
-  // Base date for Turkey campaign: starts after current campaign or on scheduled day
-  const hours = [18, 19, 20]; // 6pm, 7pm, 8pm MDT
-  const labels = ['6:00 PM MDT', '7:00 PM MDT', '8:00 PM MDT'];
+  let idCounter = manifest.length > 0 ? Math.max(...manifest.map(m => m.id)) : 0;
 
-  // Append Turkey posts
-  const startDay = manifest.length > 0 ? Math.max(...manifest.map(m => m.day)) + 1 : 1;
-  console.log(`Adding 20 Turkey posts starting on Day ${startDay}...`);
+  for (let i = 0; i < turkeyCaptions.length; i++) {
+    const captionObj = turkeyCaptions[i];
+    const day = Math.floor(i / 3) + 1;
+    const slotIdx = i % 3;
+    const slot = timeSlots[slotIdx];
+    const imgFile = `turkey-${String(captionObj.imageIndex).padStart(2, '0')}.png`;
+    const fullImageUrl = `${BASE_IMAGE_URL}/${imgFile}`;
 
-  turkeyPosts.forEach((p, i) => {
-    const dayOffset = startDay - 1 + Math.floor(i / 3);
-    const hourSlot = hours[i % 3];
-    const timeLabel = labels[i % 3];
-    const imgNum = String(p.imageIndex).padStart(2, '0');
+    let dueYear = 2026;
+    let dueMonth = 7; // August
+    let dueDay = 30 + (day - 1);
+    let dueHour = slot.utcOffset;
+    let dueMinute = 0;
 
-    // Due date calculation
-    const year = 2026;
-    const month = 7; // August (0-indexed)
-    const baseDay = 28;
-    const targetDate = new Date(Date.UTC(year, month, baseDay + dayOffset, hourSlot + 6, 0, 0, 0));
+    if (slotIdx === 2) {
+      dueDay += 1;
+      dueHour = 0;
+      dueMinute = 30;
+    }
 
-    const postObj = {
-      id: manifest.length + 1,
-      campaign: 'turkey-athlete-investment',
-      day: dayOffset + 1,
-      timeMDT: timeLabel,
+    const targetDate = new Date(Date.UTC(dueYear, dueMonth, dueDay, dueHour, dueMinute, 0, 0));
+    idCounter++;
+
+    manifest.push({
+      id: idCounter,
+      campaign: 'turkey-athlete-wellbeing',
+      day: day,
+      timeMDT: slot.label,
       dueAt: targetDate.toISOString(),
-      imageIndex: p.imageIndex,
-      imageFile: `turkey-${imgNum}.png`,
-      imageUrl: `https://lornettedaye.com/campaigns/turkey/turkey-${imgNum}.png`,
-      headline: p.headline,
-      text: p.text,
+      imageIndex: captionObj.imageIndex,
+      imageFile: imgFile,
+      imageUrl: fullImageUrl,
+      headline: captionObj.headline,
+      text: captionObj.text,
       status: 'pending',
       bufferPostId: null,
-    };
-
-    manifest.push(postObj);
-  });
+    });
+  }
 
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-  console.log(`🎉 Turkey campaign successfully added! Total posts in manifest: ${manifest.length}`);
+  console.log(`🎉 Successfully saved 20 Türkiye Athlete Welfare posts! Total posts in master manifest: ${manifest.length}`);
 }
 
-main().catch(console.error);
+export const turkeyPosts = turkeyCaptions;
+
+if (process.argv[1]?.includes('schedule-turkey-campaign.mjs') || process.argv[1]?.endsWith('schedule-turkey-campaign')) {
+  main().catch(console.error);
+}

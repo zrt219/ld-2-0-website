@@ -350,4 +350,6 @@ async function main() {
   console.log('======================================================================\n');
 }
 
-main().catch(console.error);
+if (process.argv[1]?.includes('schedule-lewis-campaign')) {
+  main().catch(console.error);
+}

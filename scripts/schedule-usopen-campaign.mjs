@@ -272,4 +272,6 @@ async function main() {
   console.log('======================================================');
 }
 
-main().catch(console.error);
+if (process.argv[1]?.includes('schedule-usopen-campaign')) {
+  main().catch(console.error);
+}

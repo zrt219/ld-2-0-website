@@ -2,18 +2,10 @@
 
 export const dynamic = "force-dynamic";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
-import {
-  ArrowLeft,
-  Calendar,
-  CheckCircle2,
-  FileBarChart,
-  Lock,
-  Printer,
-  ShieldCheck,
-  Users,
-} from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { ArrowLeft, Lock, Printer } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 
 type ReportCohort = {
@@ -27,7 +19,10 @@ type ReportCohort = {
   startDate: string;
 };
 
-export default function ClubExecutiveReportPage() {
+function ClubExecutiveReportInner() {
+  const searchParams = useSearchParams();
+  const cohortParam = searchParams.get("cohort") || searchParams.get("id");
+
   const [cohort, setCohort] = useState<ReportCohort>({
     id: "demo-cohort",
     title: "Derrick Golf & Winter Club",
@@ -52,10 +47,15 @@ export default function ClubExecutiveReportPage() {
   useEffect(() => {
     async function loadReportData() {
       try {
-        const { data: cohorts } = await supabase
+        let query = supabase
           .from("cohorts")
-          .select("id, title, cohort_code, capacity, status, start_date")
-          .limit(1);
+          .select("id, title, cohort_code, capacity, status, start_date");
+
+        if (cohortParam) {
+          query = query.eq("id", cohortParam);
+        }
+
+        const { data: cohorts } = await query.limit(1);
 
         if (cohorts && cohorts.length > 0) {
           const c = cohorts[0];
@@ -78,7 +78,7 @@ export default function ClubExecutiveReportPage() {
       } catch {}
     }
     loadReportData();
-  }, [supabase]);
+  }, [supabase, cohortParam]);
 
   const handlePrint = () => {
     if (typeof window !== "undefined") {
@@ -93,6 +93,12 @@ export default function ClubExecutiveReportPage() {
 
   return (
     <div className="min-h-screen bg-[#faf7f2] text-[#2c2620] font-sans antialiased selection:bg-[#dfc187]/40 print:bg-white print:text-black">
+      <style>{`
+        @media print {
+          @page { margin: 1.5cm; size: letter portrait; }
+          body { -webkit-print-color-adjust: exact; print-color-adjust: exact; background-color: #ffffff !important; }
+        }
+      `}</style>
       {/* Top Interactive Controls (Hidden during printing) */}
       <header className="sticky top-0 z-30 flex h-16 w-full items-center justify-between border-b border-[#ebdcc9] bg-[#fbf9f5] px-4 lg:px-8 shadow-xs print:hidden">
         <div className="flex items-center gap-3">
@@ -311,5 +317,13 @@ export default function ClubExecutiveReportPage() {
         </section>
       </main>
     </div>
+  );
+}
+
+export default function ClubExecutiveReportPage() {
+  return (
+    <Suspense fallback={<div className="p-8 font-serif text-[#2c2620]">Loading cohort report...</div>}>
+      <ClubExecutiveReportInner />
+    </Suspense>
   );
 }

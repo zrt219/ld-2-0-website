@@ -165,7 +165,7 @@ export function InterestForm({ initialSelectedCategory }: InterestFormProps) {
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} noValidate className="space-y-6">
+            <form onSubmit={handleSubmit} aria-describedby={statusType === 'error' ? "form-error" : undefined} noValidate className="space-y-6">
               {/* Honeypot field for spam prevention */}
               <div className="hidden" aria-hidden="true">
                 <label htmlFor="website">Website</label>
@@ -201,7 +201,7 @@ export function InterestForm({ initialSelectedCategory }: InterestFormProps) {
                     id="interest-first-name"
                     name="firstName"
                     type="text"
-                    required
+                    required aria-required="true"
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     placeholder="Lornette"
@@ -230,7 +230,7 @@ export function InterestForm({ initialSelectedCategory }: InterestFormProps) {
                     id="interest-email"
                     name="email"
                     type="email"
-                    required
+                    required aria-required="true"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="name@example.com"

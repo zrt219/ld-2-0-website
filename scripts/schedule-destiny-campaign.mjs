@@ -320,4 +320,6 @@ async function main() {
   console.log('======================================================================\n');
 }
 
-main().catch(console.error);
+if (process.argv[1]?.includes('schedule-destiny-campaign')) {
+  main().catch(console.error);
+}

@@ -23,6 +23,30 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/goal",
+        destination: "/foundations/plan",
+        permanent: false,
+      },
+      {
+        source: "/foundations/goal",
+        destination: "/foundations/plan",
+        permanent: false,
+      },
+      {
+        source: "/grill-me",
+        destination: "/foundations/grill-me",
+        permanent: false,
+      },
+      {
+        source: "/performance/admin",
+        destination: "/foundations/admin",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

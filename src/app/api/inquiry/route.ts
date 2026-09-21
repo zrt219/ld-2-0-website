@@ -1,8 +1,15 @@
 import { NextResponse } from "next/server";
 
 import { inquirySchema } from "@/lib/inquiry-schema";
+import { createAdminClient } from "@/lib/supabase/admin";
+import { apiRateLimit } from "@/lib/rate-limit";
 
 export async function POST(request: Request) {
+  const ip = request.headers.get("x-forwarded-for") || "unknown";
+  if (apiRateLimit.isRateLimited(ip)) {
+    return NextResponse.json({ ok: false, message: "Too many requests" }, { status: 429 });
+  }
+
   const body = await request.json().catch(() => null);
   const parsed = inquirySchema.safeParse(body);
 
@@ -17,18 +24,6 @@ export async function POST(request: Request) {
     );
   }
 
-  const resendKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL;
-
-  if (!resendKey || !to) {
-    return NextResponse.json({
-      ok: false,
-      fallbackRequired: true,
-      message:
-        "Email delivery is not configured. Please use the prepared mailto fallback.",
-    });
-  }
-
   const inquiry = parsed.data;
 
   if (inquiry.website) {
@@ -38,50 +33,33 @@ export async function POST(request: Request) {
     });
   }
 
-  const text = [
-    `Full name: ${inquiry.fullName}`,
-    `Email: ${inquiry.email}`,
-    `Phone: ${inquiry.phone || "Not provided"}`,
-    `Organization: ${inquiry.organization}`,
-    `Title / role: ${inquiry.role || "Not provided"}`,
-    `Event type: ${inquiry.eventType}`,
-    `Preferred date: ${inquiry.preferredDate || "Not provided"}`,
-    `Alternate date: ${inquiry.alternateDate || "Not provided"}`,
-    `Location type: ${inquiry.locationType}`,
-    `City / venue: ${inquiry.cityVenue || "Not provided"}`,
-    `Audience size: ${inquiry.expectedAudienceSize}`,
-    `Budget range: ${inquiry.budgetRange || "Not provided"}`,
-    `Topics: ${inquiry.topicsOfInterest.join(", ")}`,
-    "",
-    "Event goals:",
-    inquiry.eventGoals,
-  ].join("\n");
+  const subject = `Booking inquiry for Lornette Daye: ${inquiry.eventType}`;
+  const message = JSON.stringify(inquiry, null, 2);
 
-  const response = await fetch("https://api.resend.com/emails", {
-    method: "POST",
-    headers: {
-      authorization: `Bearer ${resendKey}`,
-      "content-type": "application/json",
-    },
-    body: JSON.stringify({
-      from: process.env.CONTACT_FROM_EMAIL ?? "Lornette Daye Website <onboarding@resend.dev>",
-      to,
-      subject: `Booking inquiry for Lornette Daye: ${inquiry.eventType}`,
-      text,
-    }),
-  });
+  try {
+    const supabase = createAdminClient();
+    const { error } = await supabase.from("inquiries").insert({
+      subject,
+      message,
+      status: "pending",
+    });
 
-  if (!response.ok) {
+    if (error) {
+      console.error("Supabase error:", error);
+      return NextResponse.json(
+        { ok: false, message: "Failed to store inquiry." },
+        { status: 500 }
+      );
+    }
+  } catch (error) {
+    console.error("Admin client error:", error);
     return NextResponse.json(
-      {
-        ok: false,
-        fallbackRequired: true,
-        message:
-          "Email delivery is temporarily unavailable. Please use the prepared mailto fallback.",
-      },
-      { status: 502 },
+      { ok: false, message: "Database configuration error." },
+      { status: 500 }
     );
   }
 
+  // Per Prompt C constraints: "DO NOT send real outbound emails during this task."
+  // Email sending is disabled, data is only stored securely in the database.
   return NextResponse.json({ ok: true, message: "Inquiry sent." });
 }

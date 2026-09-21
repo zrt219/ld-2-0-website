@@ -19,6 +19,7 @@ export default function SpeakerKitPage() {
             eyebrow="Speaker Kit"
             title="Everything You Need to Introduce Lornette."
             body={siteCopy.descriptor}
+            headingLevel="h1"
           />
           <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {speakerKitDownloads.map((item) => (

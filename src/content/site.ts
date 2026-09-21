@@ -54,6 +54,7 @@ export type MediaItem = {
 export type NavItem = {
   label: string;
   href: string;
+  children?: NavItem[];
 };
 
 export type MediaBandIcon = "film" | "mic" | "download" | "calendar" | "users" | "target";
@@ -153,7 +154,7 @@ export const siteCopy = {
   biography:
     "Certified Toastmasters Speaker, Olympic-level Athlete & Coach, Canadian National Sprint Champion, Author, and Transformational Speaker with over 40 years of experience inspiring individuals, teams, and organizations to achieve excellence, resilience, and purpose-driven success.",
   biographyExtended:
-    "Through decades of elite competition and coaching over 500 athletes, including 150+ international competitors, she has developed a profound understanding of performance psychology, mindset mastery, goal-setting, and discipline.",
+    "Through decades of elite competition and coaching over 500 athletes, including 150+ international-level competitors guided, she has developed a profound understanding of performance psychology, mindset mastery, goal-setting, and discipline.",
   mission:
     "Her mission is to help people rise through challenge, remember their worth, and move forward with purpose. True success is measured not only by personal accomplishments but by the lives we touch, the communities we strengthen, and the leaders we develop.",
   verifiedClaims: [
@@ -178,10 +179,25 @@ export const siteCopy = {
 export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Speaker", href: "/speaking" },
+  {
+    label: "Foundations",
+    href: "/foundations",
+    children: [
+      { label: "Golf", href: "/foundations/golf" },
+      { label: "For Clubs & Teams", href: "/foundations/clubs" },
+      { label: "Performance Edge Framework", href: "/foundations/performance-edge" },
+      { label: "Athlete & Coach Portal", href: "/foundations/login" },
+    ],
+  },
   { label: "Leadership", href: "/leadership" },
-  { label: "Books", href: "/books" },
-  { label: "Collection", href: "/collection" },
   { label: "Mentorship", href: "/mentorship" },
+  {
+    label: "Books",
+    href: "/books",
+    children: [
+      { label: "Collection", href: "/collection" },
+    ],
+  },
   { label: "About", href: "/about" },
   { label: "Media", href: "/media" },
   { label: "Blog", href: "/blog" },
@@ -206,6 +222,14 @@ export const requiredRoutes = [
   "/blog",
   "/speaker-kit",
   "/book",
+  "/foundations",
+  "/foundations/golf",
+  "/foundations/golf/keynote",
+  "/foundations/golf/workshop",
+  "/foundations/golf/program",
+  "/foundations/golf/club-partnership",
+  "/foundations/clubs",
+  "/foundations/performance-edge",
 ];
 
 export const images = {

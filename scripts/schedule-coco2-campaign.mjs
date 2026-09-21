@@ -532,4 +532,6 @@ async function executeBufferSchedule() {
   console.log('======================================================');
 }
 
-executeBufferSchedule().catch(console.error);
+if (process.argv[1]?.includes('schedule-coco2-campaign')) {
+  executeBufferSchedule().catch(console.error);
+}

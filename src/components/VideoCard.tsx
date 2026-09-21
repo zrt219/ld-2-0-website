@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Play, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 
 import type { SiteImage } from "@/content/site";
 
@@ -35,6 +35,11 @@ export function VideoCard({
   spaciousFeaturedContent = false,
   featuredMediaSize,
 }: VideoCardProps) {
+  const hydrated = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
   const [open, setOpen] = useState(false);
   const isExternalVideo = Boolean(videoSrc?.startsWith("http"));
   const canPlay = Boolean(videoSrc) && !isExternalVideo;
@@ -118,6 +123,7 @@ export function VideoCard({
   return (
     <>
       <article
+        data-hydrated={hydrated ? "true" : "false"}
         className={`group overflow-hidden border border-[rgba(198,165,92,0.42)] bg-white shadow-[0_18px_70px_rgba(23,20,18,0.1)] transition duration-300 will-change-transform hover:-translate-y-0.5 hover:shadow-[0_24px_90px_rgba(23,20,18,0.14)] ${
           featured ? featuredColumns ?? "lg:grid lg:grid-cols-[1.35fr_0.65fr]" : ""
         } ${className}`}

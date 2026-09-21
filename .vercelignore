@@ -9,3 +9,12 @@ playwright-report
 coverage
 *.log
 .env*
+Lornette_Daye_Performance_Edge_Launch3_Prompt_Pack
+__pycache__
+android
+
+# AI / internal build material
+.ai-private/
+*.prompt.md
+*_PROMPTS.md
+

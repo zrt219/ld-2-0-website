@@ -1,7 +1,7 @@
 "use client";
 
 import { Send } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 
 import { siteCopy } from "@/content/site";
 import { inquirySchema, topicOptions, type InquiryPayload } from "@/lib/inquiry-schema";
@@ -36,14 +36,14 @@ function getFormPayload(form: HTMLFormElement) {
 
 function toMailto(payload: InquiryPayload) {
   const body = [
-    `Full name: ${payload.fullName}`,
+    `Name: ${payload.fullName}`,
     `Email: ${payload.email}`,
     `Phone: ${payload.phone || "Not provided"}`,
     `Organization: ${payload.organization}`,
-    `Title / role: ${payload.role || "Not provided"}`,
+    `Role: ${payload.role || "Not provided"}`,
     `Event type: ${payload.eventType}`,
-    `Preferred date: ${payload.preferredDate || "Not provided"}`,
-    `Alternate date: ${payload.alternateDate || "Not provided"}`,
+    `Preferred date: ${payload.preferredDate || "Flexible"}`,
+    `Alternate date: ${payload.alternateDate || "Flexible"}`,
     `Location type: ${payload.locationType}`,
     `City / venue: ${payload.cityVenue || "Not provided"}`,
     `Audience size: ${payload.expectedAudienceSize}`,
@@ -60,6 +60,11 @@ function toMailto(payload: InquiryPayload) {
 }
 
 export function BookingForm() {
+  const hydrated = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "fallback" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -164,6 +169,7 @@ export function BookingForm() {
       onSubmit={onSubmit}
       className="grid gap-5"
       aria-busy={status === "loading"}
+      data-hydrated={hydrated ? "true" : "false"}
       noValidate
     >
       <div className="grid gap-5 md:grid-cols-2">
@@ -179,7 +185,7 @@ export function BookingForm() {
             id="fullName"
             name="fullName"
             autoComplete="name"
-            required
+            required aria-required="true"
             className={fieldClass}
             {...fieldA11y("fullName")}
           />
@@ -194,7 +200,7 @@ export function BookingForm() {
             name="email"
             type="email"
             autoComplete="email"
-            required
+            required aria-required="true"
             className={fieldClass}
             {...fieldA11y("email")}
           />
@@ -217,7 +223,7 @@ export function BookingForm() {
             id="organization"
             name="organization"
             autoComplete="organization"
-            required
+            required aria-required="true"
             className={fieldClass}
             {...fieldA11y("organization")}
           />
@@ -240,7 +246,7 @@ export function BookingForm() {
             id="eventType"
             name="eventType"
             defaultValue=""
-            required
+            required aria-required="true"
             className={fieldClass}
             {...fieldA11y("eventType")}
           >
@@ -279,7 +285,7 @@ export function BookingForm() {
             id="locationType"
             name="locationType"
             defaultValue=""
-            required
+            required aria-required="true"
             className={fieldClass}
             {...fieldA11y("locationType")}
           >
@@ -309,7 +315,7 @@ export function BookingForm() {
             id="expectedAudienceSize"
             name="expectedAudienceSize"
             inputMode="numeric"
-            required
+            required aria-required="true"
             className={fieldClass}
             {...fieldA11y("expectedAudienceSize")}
           />
@@ -339,7 +345,7 @@ export function BookingForm() {
               key={topic}
               className="flex min-h-12 items-center gap-3 border border-[var(--line)] bg-white px-4 text-sm"
             >
-              <input type="checkbox" name="topicsOfInterest" value={topic} className="h-4 w-4" />
+              <input type="checkbox" name="topicsOfInterest" value={topic} className="min-h-[24px] min-w-[24px] focus-visible:ring-2 focus-visible:ring-[var(--champagne)] focus-visible:outline-none" />
               {topic}
             </label>
           ))}
@@ -355,7 +361,7 @@ export function BookingForm() {
           id="eventGoals"
           name="eventGoals"
           rows={6}
-          required
+          required aria-required="true"
           className={`${fieldClass} py-3`}
           {...fieldA11y("eventGoals")}
         />
@@ -366,8 +372,8 @@ export function BookingForm() {
         <input
           type="checkbox"
           name="consent"
-          required
-          className="mt-1 h-4 w-4"
+          required aria-required="true"
+          className="mt-1 min-h-[24px] min-w-[24px] focus-visible:ring-2 focus-visible:ring-[var(--champagne)] focus-visible:outline-none"
           {...fieldA11y("consent")}
         />
         I consent to be contacted about this inquiry.

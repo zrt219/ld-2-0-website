@@ -24,6 +24,7 @@
 html {
   background: var(--background);
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -87,4 +88,13 @@ summary:focus-visible {
 
 .gold-text {
   color: var(--gold-dark);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
