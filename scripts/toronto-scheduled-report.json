@@ -1,0 +1,120 @@
+{
+  "campaign": "Toronto Raptors Legacy & Kyle Lowry #7 Gala",
+  "total_posts": 11,
+  "successful_posts": 11,
+  "daily_limit_hit": false,
+  "channelId": "6a39d30c5ab6d2f1065f5301",
+  "scheduled_at": "2026-09-21 18:24:53",
+  "results": [
+    {
+      "id": 1,
+      "slot": "Tuesday Morning (10:30 AM MDT)",
+      "dueAt": "2026-09-22T16:30:00.000Z",
+      "bufferPostId": "6ab1cac3826cfc54b8607e0d",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/toronto/toronto-01.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 2,
+      "slot": "Thursday Afternoon (4:30 PM MDT)",
+      "dueAt": "2026-09-24T22:30:00.000Z",
+      "bufferPostId": "6ab1cac5826cfc54b8607e3d",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/toronto/toronto-02.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 3,
+      "slot": "Saturday Morning (11:00 AM MDT)",
+      "dueAt": "2026-09-26T17:00:00.000Z",
+      "bufferPostId": "6ab1cac7c55232304bd6ec9e",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/toronto/toronto-03.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 4,
+      "slot": "Monday Morning (8:30 AM MDT)",
+      "dueAt": "2026-09-28T14:30:00.000Z",
+      "bufferPostId": "6ab1cac9826cfc54b8607e75",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/toronto/toronto-04.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 5,
+      "slot": "Wednesday Afternoon (1:00 PM MDT)",
+      "dueAt": "2026-09-30T19:00:00.000Z",
+      "bufferPostId": "6ab1cacce1612e2f787be70e",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/toronto/toronto-05.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 6,
+      "slot": "Friday Afternoon (5:00 PM MDT)",
+      "dueAt": "2026-10-02T23:00:00.000Z",
+      "bufferPostId": "6ab1cacea7ddea1d2b46f706",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/toronto/toronto-06.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 7,
+      "slot": "Sunday Mid-day (11:30 AM MDT)",
+      "dueAt": "2026-10-04T17:30:00.000Z",
+      "bufferPostId": "6ab1cad0a7ddea1d2b46f72f",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/toronto/toronto-07.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 8,
+      "slot": "Tuesday Morning (10:30 AM MDT)",
+      "dueAt": "2026-10-06T16:30:00.000Z",
+      "bufferPostId": "6ab1cad2e1612e2f787be753",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/toronto/toronto-08.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 9,
+      "slot": "Thursday Afternoon (4:00 PM MDT)",
+      "dueAt": "2026-10-08T22:00:00.000Z",
+      "bufferPostId": "6ab1cad4a7ddea1d2b46f76b",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/toronto/toronto-09.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 10,
+      "slot": "Saturday Morning (10:00 AM MDT)",
+      "dueAt": "2026-10-10T16:00:00.000Z",
+      "bufferPostId": "6ab1cad7826cfc54b8607eff",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/toronto/toronto-10.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 11,
+      "slot": "Monday Mid-day (12:00 PM MDT)",
+      "dueAt": "2026-10-12T18:00:00.000Z",
+      "bufferPostId": "6ab1cad9826cfc54b8607f30",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/toronto/toronto-11.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    }
+  ]
+}

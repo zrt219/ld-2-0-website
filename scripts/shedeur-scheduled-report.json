@@ -1,0 +1,110 @@
+{
+  "campaign": "Shedeur Sanders Solo QB Leadership",
+  "total_posts": 10,
+  "successful_posts": 10,
+  "daily_limit_hit": false,
+  "channelId": "6a39d30c5ab6d2f1065f5301",
+  "scheduled_at": "2026-09-21 19:13:39",
+  "results": [
+    {
+      "id": 1,
+      "slot": "Wednesday Morning (10:30 AM MDT)",
+      "dueAt": "2026-10-14T16:30:00.000Z",
+      "bufferPostId": "6ab1d634826cfc54b861a65a",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/shedeur-sanders/shedeur-01.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 2,
+      "slot": "Friday Afternoon (4:00 PM MDT)",
+      "dueAt": "2026-10-16T22:00:00.000Z",
+      "bufferPostId": "6ab1d636a7ddea1d2b481e36",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/shedeur-sanders/shedeur-02.png",
+      "cta": "Survival Skills for Athletes (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 3,
+      "slot": "Sunday Mid-day (11:30 AM MDT)",
+      "dueAt": "2026-10-18T17:30:00.000Z",
+      "bufferPostId": "6ab1d638826cfc54b861a6f4",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/shedeur-sanders/shedeur-03.png",
+      "cta": "Survival Skills for Men (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 4,
+      "slot": "Tuesday Morning (9:00 AM MDT)",
+      "dueAt": "2026-10-20T15:00:00.000Z",
+      "bufferPostId": "6ab1d63a40d6d6c92618ecf5",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/shedeur-sanders/shedeur-04.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 5,
+      "slot": "Thursday Afternoon (4:30 PM MDT)",
+      "dueAt": "2026-10-22T22:30:00.000Z",
+      "bufferPostId": "6ab1d63dc55232304bd81440",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/shedeur-sanders/shedeur-05.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 6,
+      "slot": "Saturday Morning (10:30 AM MDT)",
+      "dueAt": "2026-10-24T16:30:00.000Z",
+      "bufferPostId": "6ab1d63f826cfc54b861a781",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/shedeur-sanders/shedeur-06.png",
+      "cta": "Survival Skills for Athletes (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 7,
+      "slot": "Monday Morning (8:30 AM MDT)",
+      "dueAt": "2026-10-26T14:30:00.000Z",
+      "bufferPostId": "6ab1d641a7ddea1d2b481edf",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/shedeur-sanders/shedeur-07.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 8,
+      "slot": "Wednesday Afternoon (1:00 PM MDT)",
+      "dueAt": "2026-10-28T19:00:00.000Z",
+      "bufferPostId": "6ab1d64340d6d6c92618f01b",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/shedeur-sanders/shedeur-08.png",
+      "cta": "Survival Skills for Men (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 9,
+      "slot": "Friday Afternoon (5:00 PM MDT)",
+      "dueAt": "2026-10-30T23:00:00.000Z",
+      "bufferPostId": "6ab1d645e1612e2f787d0b4d",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/shedeur-sanders/shedeur-09.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 10,
+      "slot": "Sunday Mid-day (12:00 PM MDT)",
+      "dueAt": "2026-11-01T18:00:00.000Z",
+      "bufferPostId": "6ab1d64740d6d6c92618f085",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/shedeur-sanders/shedeur-10.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "campaign": "Travis Hunter Ironman & Versatility",
+  "total_posts": 10,
+  "successful_posts": 10,
+  "daily_limit_hit": false,
+  "channelId": "6a39d30c5ab6d2f1065f5301",
+  "scheduled_at": "2026-09-21 20:47:34",
+  "results": [
+    {
+      "id": 1,
+      "slot": "Thursday Afternoon (4:30 PM MDT)",
+      "dueAt": "2026-10-15T22:30:00.000Z",
+      "bufferPostId": "6ab1ec36c8163cbd58404b82",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/travis-hunter/travis-hunter-01.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 2,
+      "slot": "Saturday Morning (10:30 AM MDT)",
+      "dueAt": "2026-10-17T16:30:00.000Z",
+      "bufferPostId": "6ab1ec386ed20e9354f565cc",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/travis-hunter/travis-hunter-02.png",
+      "cta": "Survival Skills for Athletes (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 3,
+      "slot": "Monday Morning (8:30 AM MDT)",
+      "dueAt": "2026-10-19T14:30:00.000Z",
+      "bufferPostId": "6ab1ec3a6ed20e9354f56614",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/travis-hunter/travis-hunter-03.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 4,
+      "slot": "Wednesday Afternoon (1:00 PM MDT)",
+      "dueAt": "2026-10-21T19:00:00.000Z",
+      "bufferPostId": "6ab1ec3d9609314f621594c4",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/travis-hunter/travis-hunter-04.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 5,
+      "slot": "Friday Afternoon (5:00 PM MDT)",
+      "dueAt": "2026-10-23T23:00:00.000Z",
+      "bufferPostId": "6ab1ec3f6ed20e9354f56640",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/travis-hunter/travis-hunter-05.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 6,
+      "slot": "Sunday Mid-day (11:30 AM MDT)",
+      "dueAt": "2026-10-25T17:30:00.000Z",
+      "bufferPostId": "6ab1ec4174424003bca65020",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/travis-hunter/travis-hunter-06.png",
+      "cta": "Survival Skills for Athletes (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 7,
+      "slot": "Tuesday Morning (10:30 AM MDT)",
+      "dueAt": "2026-10-27T16:30:00.000Z",
+      "bufferPostId": "6ab1ec44c8163cbd58404ca5",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/travis-hunter/travis-hunter-07.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 8,
+      "slot": "Thursday Afternoon (4:00 PM MDT)",
+      "dueAt": "2026-10-29T22:00:00.000Z",
+      "bufferPostId": "6ab1ec4674424003bca6517c",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/travis-hunter/travis-hunter-08.png",
+      "cta": "Survival Skills for Men (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 9,
+      "slot": "Saturday Morning (10:00 AM MDT)",
+      "dueAt": "2026-10-31T16:00:00.000Z",
+      "bufferPostId": "6ab1ec486ed20e9354f56737",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/travis-hunter/travis-hunter-09.png",
+      "cta": "Survival Skills for Athletes (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 10,
+      "slot": "Tuesday Mid-day (12:00 PM MDT)",
+      "dueAt": "2026-11-03T18:00:00.000Z",
+      "bufferPostId": "6ab1ec4b6ed20e9354f56766",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/travis-hunter/travis-hunter-10.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    }
+  ]
+}

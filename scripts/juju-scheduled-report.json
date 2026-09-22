@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "slot": "Saturday Morning (11:15 AM MDT)",
+    "dueAt": "2026-10-03T17:15:00.000Z",
+    "postId": "6ab1f139ffe5c8afb1291bc8",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju/juju-01.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 2,
+    "slot": "Monday Morning (11:15 AM MDT)",
+    "dueAt": "2026-10-05T17:15:00.000Z",
+    "postId": "6ab1f13cc8163cbd5840be1d",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju/juju-02.png",
+    "cta": "Survival Skills for Athletes (lornettedaye.com/books)"
+  },
+  {
+    "id": 3,
+    "slot": "Wednesday Morning (11:15 AM MDT)",
+    "dueAt": "2026-10-07T17:15:00.000Z",
+    "postId": "6ab1f13fffe5c8afb1291c39",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju/juju-03.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 4,
+    "slot": "Friday Morning (11:15 AM MDT)",
+    "dueAt": "2026-10-09T17:15:00.000Z",
+    "postId": "6ab1f14174424003bca6d249",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju/juju-04.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 5,
+    "slot": "Sunday Morning (11:15 AM MDT)",
+    "dueAt": "2026-10-11T17:15:00.000Z",
+    "postId": "6ab1f145ffe5c8afb1291c86",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju/juju-05.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 6,
+    "slot": "Tuesday Morning (11:15 AM MDT)",
+    "dueAt": "2026-10-13T17:15:00.000Z",
+    "postId": "6ab1f147ffe5c8afb1291ccc",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju/juju-06.png",
+    "cta": "Survival Skills for Athletes (lornettedaye.com/books)"
+  },
+  {
+    "id": 7,
+    "slot": "Thursday Morning (11:15 AM MDT)",
+    "dueAt": "2026-10-15T17:15:00.000Z",
+    "postId": "6ab1f14bffe5c8afb1291d53",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju/juju-07.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 8,
+    "slot": "Saturday Morning (11:15 AM MDT)",
+    "dueAt": "2026-10-17T17:15:00.000Z",
+    "postId": "6ab1f14ec8163cbd5840bf76",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju/juju-08.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 9,
+    "slot": "Monday Morning (11:15 AM MDT)",
+    "dueAt": "2026-10-19T17:15:00.000Z",
+    "postId": "6ab1f15074424003bca6d372",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju/juju-09.png",
+    "cta": "Survival Skills for Athletes (lornettedaye.com/books)"
+  },
+  {
+    "id": 10,
+    "slot": "Wednesday Morning (11:15 AM MDT)",
+    "dueAt": "2026-10-21T17:15:00.000Z",
+    "postId": "6ab1f154ffe5c8afb1291de5",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju/juju-10.png",
+    "cta": "Finish Strong Book & Keynotes (lornettedaye.com)"
+  }
+]

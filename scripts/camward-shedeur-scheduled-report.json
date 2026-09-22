@@ -1,0 +1,110 @@
+{
+  "campaign": "Cam Ward x Shedeur Sanders QB Leadership",
+  "total_posts": 10,
+  "successful_posts": 10,
+  "daily_limit_hit": false,
+  "channelId": "6a39d30c5ab6d2f1065f5301",
+  "scheduled_at": "2026-09-21 19:01:12",
+  "results": [
+    {
+      "id": 1,
+      "slot": "Wednesday Morning (10:30 AM MDT)",
+      "dueAt": "2026-09-23T16:30:00.000Z",
+      "bufferPostId": "6ab1d346c55232304bd7c431",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/camward-shedeur/camward-shedeur-01.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 2,
+      "slot": "Friday Afternoon (4:00 PM MDT)",
+      "dueAt": "2026-09-25T22:00:00.000Z",
+      "bufferPostId": "6ab1d348c55232304bd7c571",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/camward-shedeur/camward-shedeur-02.png",
+      "cta": "Survival Skills for Athletes (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 3,
+      "slot": "Sunday Mid-day (11:30 AM MDT)",
+      "dueAt": "2026-09-27T17:30:00.000Z",
+      "bufferPostId": "6ab1d34b826cfc54b861567a",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/camward-shedeur/camward-shedeur-03.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 4,
+      "slot": "Tuesday Morning (9:00 AM MDT)",
+      "dueAt": "2026-09-29T15:00:00.000Z",
+      "bufferPostId": "6ab1d34d826cfc54b86156dd",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/camward-shedeur/camward-shedeur-04.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 5,
+      "slot": "Thursday Afternoon (4:30 PM MDT)",
+      "dueAt": "2026-10-01T22:30:00.000Z",
+      "bufferPostId": "6ab1d3508e2aab6eac525f93",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/camward-shedeur/camward-shedeur-05.png",
+      "cta": "Survival Skills for Men (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 6,
+      "slot": "Saturday Morning (10:30 AM MDT)",
+      "dueAt": "2026-10-03T16:30:00.000Z",
+      "bufferPostId": "6ab1d3538e2aab6eac526039",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/camward-shedeur/camward-shedeur-06.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 7,
+      "slot": "Monday Morning (8:30 AM MDT)",
+      "dueAt": "2026-10-05T14:30:00.000Z",
+      "bufferPostId": "6ab1d355826cfc54b861588d",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/camward-shedeur/camward-shedeur-07.png",
+      "cta": "Survival Skills for Athletes (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 8,
+      "slot": "Wednesday Afternoon (1:00 PM MDT)",
+      "dueAt": "2026-10-07T19:00:00.000Z",
+      "bufferPostId": "6ab1d358826cfc54b861591d",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/camward-shedeur/camward-shedeur-08.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    },
+    {
+      "id": 9,
+      "slot": "Friday Afternoon (5:00 PM MDT)",
+      "dueAt": "2026-10-09T23:00:00.000Z",
+      "bufferPostId": "6ab1d35a826cfc54b86159e8",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/camward-shedeur/camward-shedeur-09.png",
+      "cta": "Finish Strong Book (lornettedaye.com/books)",
+      "success": true
+    },
+    {
+      "id": 10,
+      "slot": "Sunday Mid-day (12:00 PM MDT)",
+      "dueAt": "2026-10-11T18:00:00.000Z",
+      "bufferPostId": "6ab1d35d8e2aab6eac52623d",
+      "status": "scheduled",
+      "assetUrl": "https://lornettedaye.com/campaigns/camward-shedeur/camward-shedeur-10.png",
+      "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+      "success": true
+    }
+  ]
+}

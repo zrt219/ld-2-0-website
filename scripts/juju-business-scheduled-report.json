@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "feature": "JUJU WATKINS",
+    "slot": "Tuesday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-06T20:45:00.000Z",
+    "postId": "6ab1f15b74424003bca6d487",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-01.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 2,
+    "feature": "JUJU WATKINS",
+    "slot": "Thursday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-08T20:45:00.000Z",
+    "postId": "6ab1f15effe5c8afb1291e81",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-02.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 3,
+    "feature": "JUJU WATKINS",
+    "slot": "Saturday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-10T20:45:00.000Z",
+    "postId": "6ab1f1616ed20e9354f5d384",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-03.png",
+    "cta": "Survival Skills for Athletes (lornettedaye.com/books)"
+  },
+  {
+    "id": 4,
+    "feature": "JUJU WATKINS",
+    "slot": "Monday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-12T20:45:00.000Z",
+    "postId": "6ab1f1649609314f62160ec2",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-04.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 5,
+    "feature": "JUJU WATKINS",
+    "slot": "Wednesday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-14T20:45:00.000Z",
+    "postId": "6ab1f1679609314f62160f07",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-05.png",
+    "cta": "Survival Skills for Women (lornettedaye.com/books)"
+  },
+  {
+    "id": 6,
+    "feature": "JUJU WATKINS",
+    "slot": "Friday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-16T20:45:00.000Z",
+    "postId": "6ab1f16bffe5c8afb1291ffb",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-06.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 7,
+    "feature": "JUJU WATKINS",
+    "slot": "Sunday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-18T20:45:00.000Z",
+    "postId": "6ab1f16ec8163cbd5840c4c2",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-07.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 8,
+    "feature": "JUJU WATKINS",
+    "slot": "Tuesday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-20T20:45:00.000Z",
+    "postId": "6ab1f1719609314f62160ff1",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-08.png",
+    "cta": "Survival Skills for Athletes (lornettedaye.com/books)"
+  },
+  {
+    "id": 9,
+    "feature": "JUJU WATKINS",
+    "slot": "Thursday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-22T20:45:00.000Z",
+    "postId": "6ab1f174c8163cbd5840c548",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-09.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 10,
+    "feature": "JUJU WATKINS",
+    "slot": "Saturday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-24T20:45:00.000Z",
+    "postId": "6ab1f17774424003bca6d6b4",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-10.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 11,
+    "feature": "NAOMI OSAKA",
+    "slot": "Monday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-26T20:45:00.000Z",
+    "postId": "6ab1f17a9609314f62161105",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-11.png",
+    "cta": "Survival Skills for Women (lornettedaye.com/books)"
+  },
+  {
+    "id": 12,
+    "feature": "NAOMI OSAKA",
+    "slot": "Wednesday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-28T20:45:00.000Z",
+    "postId": "6ab1f17d6ed20e9354f5d624",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-12.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 13,
+    "feature": "NAOMI OSAKA",
+    "slot": "Friday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-10-30T20:45:00.000Z",
+    "postId": "6ab1f180ffe5c8afb129220f",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-13.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 14,
+    "feature": "NAOMI OSAKA",
+    "slot": "Sunday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-11-01T21:45:00.000Z",
+    "postId": "6ab1f1836ed20e9354f5d690",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-14.png",
+    "cta": "Survival Skills for Athletes (lornettedaye.com/books)"
+  },
+  {
+    "id": 15,
+    "feature": "NAOMI OSAKA",
+    "slot": "Monday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-11-02T21:45:00.000Z",
+    "postId": "6ab1f18674424003bca6d80f",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-15.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 16,
+    "feature": "NAOMI OSAKA",
+    "slot": "Tuesday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-11-03T21:45:00.000Z",
+    "postId": "6ab1f189ffe5c8afb129225b",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-16.png",
+    "cta": "Survival Skills for Women (lornettedaye.com/books)"
+  },
+  {
+    "id": 17,
+    "feature": "NAOMI OSAKA",
+    "slot": "Wednesday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-11-04T21:45:00.000Z",
+    "postId": "6ab1f18cc8163cbd5840cdb2",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-17.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 18,
+    "feature": "NAOMI OSAKA",
+    "slot": "Thursday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-11-05T21:45:00.000Z",
+    "postId": "6ab1f18f6ed20e9354f5d821",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-18.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 19,
+    "feature": "NAOMI OSAKA",
+    "slot": "Friday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-11-06T21:45:00.000Z",
+    "postId": "6ab1f1929609314f6216138d",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-19.png",
+    "cta": "Survival Skills for Women (lornettedaye.com/books)"
+  },
+  {
+    "id": 20,
+    "feature": "NAOMI OSAKA",
+    "slot": "Saturday Afternoon (2:45 PM MDT)",
+    "dueAt": "2026-11-07T21:45:00.000Z",
+    "postId": "6ab1f1956ed20e9354f5d8ba",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/juju-business/juju-business-20.png",
+    "cta": "Finish Strong Book & Executive Coaching (lornettedaye.com)"
+  }
+]
