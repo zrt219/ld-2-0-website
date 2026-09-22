@@ -1,0 +1,599 @@
+# -*- coding: utf-8 -*-
+"""
+Campaign 4: Mendoza (High Performance & Elite Focus) - 20 Posts
+Generates and runs scripts/schedule-mendoza-campaign.py
+"""
+
+import os
+import sys
+import json
+
+sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
+sys.stderr.reconfigure(encoding='utf-8', line_buffering=True)
+
+slots_info = [
+    ("2026-10-18T21:45:00.000Z", "Sunday (03:45 PM MDT)"),
+    ("2026-10-18T23:45:00.000Z", "Sunday (05:45 PM MDT)"),
+    ("2026-10-19T14:30:00.000Z", "Monday (08:30 AM MDT)"),
+    ("2026-10-19T17:00:00.000Z", "Monday (11:00 AM MDT)"),
+    ("2026-10-19T19:15:00.000Z", "Monday (01:15 PM MDT)"),
+    ("2026-10-19T21:45:00.000Z", "Monday (03:45 PM MDT)"),
+    ("2026-10-19T23:45:00.000Z", "Monday (05:45 PM MDT)"),
+    ("2026-10-20T14:30:00.000Z", "Tuesday (08:30 AM MDT)"),
+    ("2026-10-20T17:00:00.000Z", "Tuesday (11:00 AM MDT)"),
+    ("2026-10-20T19:15:00.000Z", "Tuesday (01:15 PM MDT)"),
+    ("2026-10-20T21:45:00.000Z", "Tuesday (03:45 PM MDT)"),
+    ("2026-10-20T23:45:00.000Z", "Tuesday (05:45 PM MDT)"),
+    ("2026-10-21T14:30:00.000Z", "Wednesday (08:30 AM MDT)"),
+    ("2026-10-21T17:00:00.000Z", "Wednesday (11:00 AM MDT)"),
+    ("2026-10-21T19:15:00.000Z", "Wednesday (01:15 PM MDT)"),
+    ("2026-10-21T21:45:00.000Z", "Wednesday (03:45 PM MDT)"),
+    ("2026-10-21T23:45:00.000Z", "Wednesday (05:45 PM MDT)"),
+    ("2026-10-22T14:30:00.000Z", "Thursday (08:30 AM MDT)"),
+    ("2026-10-22T17:00:00.000Z", "Thursday (11:00 AM MDT)"),
+    ("2026-10-22T19:15:00.000Z", "Thursday (01:15 PM MDT)"),
+]
+
+posts_raw = [
+    {
+        "id": 1,
+        "title": "The Quarterback: Leadership Under Pressure",
+        "cta": "Finish Strong Book ($14.99 CAD)",
+        "text": (
+            "THE QUARTERBACK: LEADERSHIP UNDER PRESSURE. 🏈🎯\n\n"
+            "Every snap asks for clarity. Purpose. Pressure. Performance.\n\n"
+            "No position in team sports concentrates psychological weight like the quarterback. "
+            "Eighty thousand screaming spectators. Twenty-two moving bodies on the turf. "
+            "A rolling play clock ticking toward zero. In that cauldron, the quarterback cannot afford an anxious heartbeat. "
+            "He must see the coverage before the snap, diagnose rotation at the drop, and deliver the football on time.\n\n"
+            "In four decades of Olympic coaching, I have found that high-pressure clarity is not an innate gift. "
+            "It is a disciplined mental structure built through deliberate cognitive training.\n\n"
+            "Leaders: When market chaos collapses around your organization, do you react frantically, or command the pocket with calm?\n\n"
+            "👉 Master the poise of elite leaders who finish what they started. "
+            "Explore Finish Strong: Chasing the Olympic Dream ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#TheQuarterback #LeadershipUnderPressure #FernandoMendoza #CalFootball #FinishStrong #OlympicMindset #CoachLornette"
+        )
+    },
+    {
+        "id": 2,
+        "title": "QB2 May Be the Hardest Job: Wait Without Wasting",
+        "cta": "Survival Skills for Men ($14.99 CAD)",
+        "text": (
+            "QB2 MAY BE THE HARDEST JOB: PREPARE EVERY WEEK. WAIT WITHOUT WASTING. 📋⏳\n\n"
+            "Discipline builds opportunity before anyone offers you the stage.\n\n"
+            "The backup quarterback takes zero starting reps in practice. "
+            "He stands on the sideline holding a clipboard, enduring the cold wind, knowing he might not play a single snap. "
+            "Yet on third down in the fourth quarter, when the starter's helmet comes off, he must step onto the turf "
+            "and execute the two-minute drill without hesitation or warmup excuses.\n\n"
+            "Men often find themselves in seasons of waiting where their potential is overlooked. "
+            "The amateur wastes his waiting season in resentment. The champion uses his waiting season to master the playbook.\n\n"
+            "Men: Are you wasting your current holding pattern, or obsessively preparing for your sudden promotion?\n\n"
+            "👉 Build mental grit, steady balance, and emotional resilience through seasons of quiet demand. "
+            "Read Survival Skills for Men ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#QB2 #StayReady #DisciplineBuildsOpportunity #SurvivalSkillsForMen #PatienceAndPower #MenWhoLead #LornetteDaye"
+        )
+    },
+    {
+        "id": 3,
+        "title": "Clarity in the Pocket: Finding Stillness in Chaos",
+        "cta": "Survival Skills for Athletes ($14.99 CAD)",
+        "text": (
+            "THE STILL EYE IN THE STORM: POCKET PRESENCE AS A REFLEX. 🌪️👁️\n\n"
+            "When three-hundred-pound defensive linemen are closing from your blind side, human biology screams to run away.\n\n"
+            "Elite quarterback play demands the opposite: stepping into the pocket, keeping your eyes downfield, "
+            "and delivering the strike with a defender driving his shoulder into your sternum. "
+            "That courage does not come from bravado; it comes from an unshakeable faith in your mechanics and your offensive line.\n\n"
+            "Athletes must train their nervous system to override panic reflexes when physical collisions are imminent.\n\n"
+            "Athletes: Can you keep your eyes locked on the objective while chaos swirls around your periphery?\n\n"
+            "👉 Build ironclad focus and physiological recovery under heavy contact. "
+            "Explore Survival Skills for Athletes ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#PocketPresence #FocusUnderFire #QuarterbackMindset #SurvivalSkillsForAthletes #OlympicDiscipline #LornetteDaye"
+        )
+    },
+    {
+        "id": 4,
+        "title": "The Pre-Snap Read: The Invisible Chess Match",
+        "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+        "text": (
+            "THE PRE-SNAP READ: WINNING THE PLAY BEFORE THE BALL IS SNAPPED. 🧠🏈\n\n"
+            "By the time the ball leaves the quarterback's fingers, the outcome was decided five seconds earlier.\n\n"
+            "Fernando Mendoza reads the defensive alignment: safety depth, cornerback leverage, linebacker tilt. "
+            "He changes the protection, adjusts the hot route, and calls out the blitz disguise. "
+            "Great quarterbacking is 90% intellectual diagnosis and 10% physical execution.\n\n"
+            "In enterprise strategy, the executive who anticipates regulatory shifts and market consolidation "
+            "wins the quarter before competitors even realize the environment has changed.\n\n"
+            "Executives: Is your organization diagnosing market indicators, or merely reacting after disruption hits?\n\n"
+            "👉 Equip your executive suite with Olympic-caliber strategic foresight and operational poise. "
+            "Book Lornette Daye for keynotes: lornettedaye.com/speaking\n\n"
+            "#PreSnapRead #StrategicForesight #ExecutiveLeadership #QuarterbackVision #CoachLornette #CommandTheArena"
+        )
+    },
+    {
+        "id": 5,
+        "title": "More Than a Game: A Brighter Tomorrow Builds Today",
+        "cta": "Surviving Life ($14.99 CAD)",
+        "text": (
+            "MORE THAN A GAME: A BRIGHTER TOMORROW BUILDS TODAY. 🌅🏟️\n\n"
+            "Football provides a platform, but character provides the legacy.\n\n"
+            "When Fernando Mendoza leads his team through the tunnel into a stadium illuminated by golden California sunlight, "
+            "he carries more than play designs. He carries the discipline of family, the heritage of sacrifice, "
+            "and the realization that young athletes across the country are watching how he conducts himself. "
+            "Great leaders embrace the mantle of positive example.\n\n"
+            "When your daily labor is connected to a purpose greater than yourself, fatigue loses its power to derail you.\n\n"
+            "Readers: What greater mission fuels your perseverance when daily demands feel overwhelming?\n\n"
+            "👉 Discover encouragement, renewed purpose, and strength for difficult chapters. "
+            "Read Surviving Life ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#MoreThanAGame #PurposeLivesHigher #SurvivingLife #FernandoMendoza #LegacyInAction #LornetteDaye"
+        )
+    },
+    {
+        "id": 6,
+        "title": "Processing Speed: The 2.4-Second Standard",
+        "cta": "Survival Skills for Athletes ($14.99 CAD)",
+        "text": (
+            "2.4 SECONDS: THE RUTHLESS WINDOW OF DIVISION I PASSING. ⏱️⚡\n\n"
+            "In collegiate football, you do not have three seconds to admire the scenery. "
+            "The ball must be out of your hand in 2.4 seconds, or you are on your back.\n\n"
+            "To process five route concepts against split-field coverages in under two and a half seconds "
+            "requires complete elimination of mental friction. There is zero time for second-guessing. "
+            "Decisiveness is the difference between a sixty-yard touchdown and a devastating turnover.\n\n"
+            "In high-performance competition, hesitation is always more dangerous than an aggressive mistake.\n\n"
+            "Athletes: Have you trained your decision-making to fire cleanly without hesitation?\n\n"
+            "👉 Build rapid mental processing and pre-shot routines for elite competition. "
+            "Explore Survival Skills for Athletes ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#ProcessingSpeed #DecisiveExecution #NoHesitation #SurvivalSkillsForAthletes #OlympicMindset #LornetteDaye"
+        )
+    },
+    {
+        "id": 7,
+        "title": "The Accountability of the Captain's Patch",
+        "cta": "Finish Strong Book ($14.99 CAD)",
+        "text": (
+            "THE CAPTAIN'S PATCH: OWNING THE BLAME, SHARING THE GLORY. 🎖️🤝\n\n"
+            "True leadership is an asymmetrical trade: you absorb the failure, and deflect the credit to the huddle.\n\n"
+            "When an interception is thrown, the elite quarterback stands at the postgame microphone and takes full responsibility, "
+            "even if the receiver ran the incorrect depth. When three touchdowns are scored, he brings his offensive line to the podium "
+            "and talks about their protection. That is how loyalty and trust are forged in blood.\n\n"
+            "Teammates will lay everything on the line for a leader who protects them in public and holds them to excellence in private.\n\n"
+            "Leaders: Are you shielding your team from external criticism, or throwing them under the bus when results fall short?\n\n"
+            "👉 Master the principles of selfless, high-accountability leadership. "
+            "Read Finish Strong: Chasing the Olympic Dream ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#Captaincy #Accountability #SelflessLeadership #FinishStrong #TeamFirst #OlympicCoaching #LornetteDaye"
+        )
+    },
+    {
+        "id": 8,
+        "title": "Discipline Systems: The Film Room Habit",
+        "cta": "Survival Skills for Students ($14.99 CAD)",
+        "text": (
+            "THE FILM ROOM HABIT: WHERE VICTORY IS REHEARSED IN SILENCE. 📼💡\n\n"
+            "While peers are socializing on Friday evening, the committed quarterback is rewinding third-down pressures "
+            "for the twentieth time. He notes the weak-side linebacker's foot alignment. He studies the nickelback's blitz cadence. "
+            "When Saturday afternoon arrives, there are no surprises.\n\n"
+            "For collegiate student-athletes, balancing rigorous academic coursework with twenty hours of weekly film study "
+            "demands ruthless daily scheduling and zero procrastination.\n\n"
+            "Students: Are you studying your material deeply, or skimming the surface hoping to get by?\n\n"
+            "👉 Practical tools for focus, academic stamina, and purpose-driven habits for young leaders. "
+            "Read Survival Skills for Students ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#SurvivalSkillsForStudents #FilmStudy #PreparationWins #FocusAndExcellence #StudentAthleteDiscipline #LornetteDaye"
+        )
+    },
+    {
+        "id": 9,
+        "title": "Bouncing Back from the Pick-Six: The Zero Second Memory",
+        "cta": "Finish Strong Book ($14.99 CAD)",
+        "text": (
+            "THE ZERO-SECOND MEMORY: RISING IMMEDIATELY AFTER A DISASTER. 🔄🛡️\n\n"
+            "Every great quarterback throws an interception that gets returned for a touchdown. "
+            "The stadium boos. The momentum swings wildly. Your heart sinks into your cleats.\n\n"
+            "In that brutal moment, you have a stark choice: surrender to shame, or sit on the sideline bench, "
+            "put on the headset, review the coverage sheet, and prepare for the next possession. "
+            "The previous snap cannot hit the next throw. What matters is the drive that follows.\n\n"
+            "In Olympic competition, I teach athletes that resilient champions are defined by the speed of their mental reset.\n\n"
+            "Leaders: How quickly does your organization reset after a catastrophic setback?\n\n"
+            "👉 Build unshakeable emotional resilience and learn how to finish strong after failure. "
+            "Explore Finish Strong: Chasing the Olympic Dream ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#ZeroSecondMemory #ResilienceAfterSetback #ResetAndExecute #FinishStrong #OlympicMindset #LornetteDaye"
+        )
+    },
+    {
+        "id": 10,
+        "title": "Conditioning the Throwing Arm: Longevity in the Pocket",
+        "cta": "Survival Skills for Athletes ($14.99 CAD)",
+        "text": (
+            "THE KINETIC CHAIN: VELOCITY IS BORN IN THE HIPS AND FEET. 🦾⚙️\n\n"
+            "Amateurs throw with their arm. Champions throw with their entire kinetic chain.\n\n"
+            "A sixty-yard post pass against tight coverage originates in the back foot planted firmly in the turf, "
+            "rotates through the hips, transfers through core torque, and releases smoothly off the fingertips. "
+            "If your lower body is exhausted, your accuracy disintegrates.\n\n"
+            "Fernando Mendoza invests hours in rotational mobility, scapular stability, and core endurance. "
+            "When your physical foundation is rock solid, precision remains effortless into the fourth quarter.\n\n"
+            "Athletes: Are you training your complete kinetic foundation, or neglecting the supporting muscles?\n\n"
+            "👉 Build champion physical systems and injury prevention habits. "
+            "Read Survival Skills for Athletes ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#KineticChain #QuarterbackMechanics #ThrowingVelocity #SurvivalSkillsForAthletes #OlympicBiomechanics #LornetteDaye"
+        )
+    },
+    {
+        "id": 11,
+        "title": "The Golden Hour: California Heritage & Pride",
+        "cta": "Surviving Life ($14.99 CAD)",
+        "text": (
+            "GOLDEN STATE PRIDE: REPRESENTING SOMETHING BIGGER THAN YOURSELF. 🐻🏈\n\n"
+            "Putting on the blue and gold jersey of California football carries over a century of academic and athletic tradition. "
+            "From Memorial Stadium overlooking the San Francisco Bay to the halls of Berkeley, the expectations are massive. "
+            "Fernando Mendoza represents that legacy with immense pride and personal dignity.\n\n"
+            "When you understand that you stand on the shoulders of giants, personal vanity fades, and genuine stewardship takes over.\n\n"
+            "Readers: How does honoring your family and institutional roots give you strength today?\n\n"
+            "👉 Find deep meaning, renew perspective, and build a foundation of hope. "
+            "Read Surviving Life ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#CalBears #GoldenStatePride #Stewardship #SurvivingLife #LegacyAndHeritage #LornetteDaye"
+        )
+    },
+    {
+        "id": 12,
+        "title": "Commanding the Huddle: The Power of Eye Contact",
+        "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+        "text": (
+            "COMMANDING THE HUDDLE: THE PSYCHOLOGY OF EYE CONTACT. 👁️⚡\n\n"
+            "When ten exhausted, bruised teammates lean into the huddle with ninety seconds remaining, "
+            "they are not just listening to play numbers. They are looking into the quarterback's eyes.\n\n"
+            "If they see fear, they tighten up. If they see quiet conviction and calm certainty, their belief surges. "
+            "Fernando Mendoza steps into the circle, makes direct eye contact with every lineman and receiver, "
+            "and calls the play with unmistakable cadence. Presence is communicated before words are spoken.\n\n"
+            "In boardrooms, leaders who speak with grounded vocal resonance and calm posture inspire immediate organizational alignment.\n\n"
+            "Executives: Does your executive presence project calm authority in crisis situations?\n\n"
+            "👉 Train your senior executives to command high-stakes meetings with Olympic presence. "
+            "Book Lornette Daye: lornettedaye.com/speaking\n\n"
+            "#HuddleLeadership #ExecutivePresence #EyeContact #CommandTheRoom #CoachLornette #LeadershipInCrisis"
+        )
+    },
+    {
+        "id": 13,
+        "title": "The Red Zone: Operating in Compressed Space",
+        "cta": "Finish Strong Book ($14.99 CAD)",
+        "text": (
+            "THE RED ZONE: WHERE MARGINS SHRINK TO INCHES. 🔴🎯\n\n"
+            "Between the twenty-yard line and the goal line, the football field shrinks drastically. "
+            "Safeties compress down. Windows close in a fraction of a second. "
+            "A throw that is six inches off target is batted away or intercepted.\n\n"
+            "Success in the red zone requires extreme tactical discipline and ball placement. "
+            "You cannot force passes into triple coverage hoping for miracles. You take what the defense yields, "
+            "protect the possession, and strike ruthlessly when the seam opens.\n\n"
+            "In high-stakes corporate closings, the final mile demands surgical focus and zero emotional carelessness.\n\n"
+            "Leaders: Can your team execute with heightened precision when space and time are severely limited?\n\n"
+            "👉 Master the finishing mechanics that ensure victory at the goal line. "
+            "Read Finish Strong: Chasing the Olympic Dream ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#RedZoneExecution #PrecisionPassing #FinishStrong #HighStakesCloser #OlympicMindset #LornetteDaye"
+        )
+    },
+    {
+        "id": 14,
+        "title": "Emotional Poise: Calming the Heart Rate",
+        "cta": "Survival Skills for Athletes ($14.99 CAD)",
+        "text": (
+            "BIOFEEDBACK UNDER THE HELMET: CONTROLLING YOUR AUTONOMIC NERVOUS SYSTEM. 🧘‍♂️🏈\n\n"
+            "Elite athletic performance is biological mastery.\n\n"
+            "When adrenaline spikes to maximum levels during a hostile road contest, fine motor skills deteriorate. "
+            "Your grip tightens too hard on the football leather. Your throws sail high over receivers' heads. "
+            "The great quarterbacks practice box breathing between downs, consciously lowering their heart rate "
+            "to eighty-five beats per minute so their arm release remains fluid and soft.\n\n"
+            "In sports and leadership, you must master your physiology before you can master your performance.\n\n"
+            "Athletes: Do you know how to breathe down your anxiety in the middle of a high-stakes possession?\n\n"
+            "👉 Master physiological regulation and competitive poise on and off the field. "
+            "Explore Survival Skills for Athletes ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#EmotionalPoise #BoxBreathing #HeartRateControl #SurvivalSkillsForAthletes #OlympicSportsScience #LornetteDaye"
+        )
+    },
+    {
+        "id": 15,
+        "title": "The Unsung Heroes: Celebrating the Offensive Line",
+        "cta": "Survival Skills for Men ($14.99 CAD)",
+        "text": (
+            "THE BROTHERHOOD IN THE TRENCHES: HONORING THE UNHERALDED WORK. 🛡️🤝\n\n"
+            "A quarterback is only as clean as the five men battling in front of him.\n\n"
+            "Fernando Mendoza knows that without the left tackle anchoring against a speed rush, "
+            "or the center snapping the ball in the driving rain, brilliant statistics are impossible. "
+            "Great quarterbacks take their offensive linemen out to dinner, celebrate their blocks on tape, "
+            "and acknowledge their bruising sacrifices every single day.\n\n"
+            "Men: Who are the unheralded contributors in your life who protect your blind side while you receive the credit? "
+            "Have you expressed your gratitude to them lately?\n\n"
+            "👉 Build deeper relationships, humility, and steady teamwork across your personal and professional life. "
+            "Read Survival Skills for Men ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#TheOffensiveLine #BrotherhoodInTheTrenches #GratitudeInLeadership #SurvivalSkillsForMen #MenWhoLead #CoachLornette"
+        )
+    },
+    {
+        "id": 16,
+        "title": "Scrambling with Purpose: Buying Time Without Panicking",
+        "cta": "Finish Strong Book ($14.99 CAD)",
+        "text": (
+            "SCRAMBLING WITH PURPOSE: CREATING OFF-SCHEDULE BRILLIANCE. 🏃‍♂️💨\n\n"
+            "When the called play breaks down, does your mind disintegrate or innovate?\n\n"
+            "Fernando Mendoza does not scramble to pad rushing statistics; he maneuvers within the pocket to buy an extra 1.5 seconds "
+            "so a broken route can uncover. He keeps two hands on the football, stays balanced on the balls of his feet, "
+            "and directs traffic downfield with his off-hand. Off-schedule greatness is not chaotic scramble; it is disciplined improvisation.\n\n"
+            "In dynamic business landscapes, when market conditions invalidate your business plan, you must improvise with strategic purpose.\n\n"
+            "Leaders: Can your team pivot off-schedule without losing sight of the strategic target?\n\n"
+            "👉 Learn how elite athletes adapt under sudden pressure and finish strong. "
+            "Read Finish Strong: Chasing the Olympic Dream ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#OffScheduleGreatness #DisciplinedImprovisation #QuarterbackPlay #FinishStrong #Adaptability #LornetteDaye"
+        )
+    },
+    {
+        "id": 17,
+        "title": "The Fourth Quarter Drive: When Fatigue Tests Character",
+        "cta": "Finish Strong Book ($14.99 CAD)",
+        "text": (
+            "THE FOURTH QUARTER TWO-MINUTE DRILL: SEPARATING CONTENDERS FROM PRETENDERS. ⏱️🏆\n\n"
+            "Eighty yards. One timeout. Fifty-eight seconds on the clock. Score or go home.\n\n"
+            "In that crucible, tired muscles plead for mercy. "
+            "The quarterback's mind must remain crystal clear: clock management, sideline throws, taking intermediate yards, "
+            "knowing when to spike the football, and delivering the walk-off strike in the back corner of the end zone. "
+            "Games are won by those who preserve cognitive stamina into the dying seconds.\n\n"
+            "Endurance is not just physical; it is the mental willpower to think clearly when your body is completely spent.\n\n"
+            "Professionals: Does your execution hold its crispness at the conclusion of demanding quarters?\n\n"
+            "👉 Master the mindset of championship finishers who refuse to wilt when the clock winds down. "
+            "Explore Finish Strong: Chasing the Olympic Dream ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#TwoMinuteDrill #FourthQuarterFinish #CognitiveStamina #FinishStrong #OlympicStandards #LornetteDaye"
+        )
+    },
+    {
+        "id": 18,
+        "title": "Overcoming the Bench: Faith in the Long Game",
+        "cta": "Surviving Life ($14.99 CAD)",
+        "text": (
+            "OVERCOMING THE BENCH: REBUILDING YOUR HOPE WHEN YOU ARE NOT CHOSEN. 🪑✨\n\n"
+            "Being benched or demoted is one of the most painful psychological wounds an athlete can suffer. "
+            "You question your identity, your talent, and your worth.\n\n"
+            "Fernando Mendoza experienced chapters where he had to fight from the bottom of the depth chart, "
+            "competing every day without guarantee of starting. He kept his faith intact, supported the starter, "
+            "and threw extra passes after practice with student managers. When his opportunity finally arrived, he was undeniable.\n\n"
+            "If you feel sidelined in your career or personal journey right now, do not lose heart. "
+            "Use the quiet season to build character that cannot be shaken.\n\n"
+            "Readers: What hidden preparation can you invest in today while waiting for your next open door?\n\n"
+            "👉 Rebuild confidence, find strength in hardship, and step into renewal. "
+            "Read Surviving Life ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#SurvivingLife #OvercomingTheBench #FaithInTheProcess #PatienceAndResilience #HopeAfterHardship #LornetteDaye"
+        )
+    },
+    {
+        "id": 19,
+        "title": "A Higher Standard of Preparation: Purpose Over Hype",
+        "cta": "Keynote Speaking (lornettedaye.com/speaking)",
+        "text": (
+            "PURPOSE LIVES HIGHER: THE BLUEPRINT OF ELITE ATHLETIC COMMAND. 🏛️🏈\n\n"
+            "Greatness is never accidental. It is a mathematical equation of disciplined reps executed with spiritual intentionality.\n\n"
+            "When Fernando Mendoza takes the field, you see the convergence of athletic preparation, family values, "
+            "and a deep personal sense of purpose. He is not playing for social media clips; he is playing to establish "
+            "a legacy of excellence that inspires everyone around him.\n\n"
+            "When leaders lead with moral clarity and high technical standards, organizations achieve generational longevity.\n\n"
+            "Executives: Is your organization guided by transient market hype, or a higher standard of authentic purpose?\n\n"
+            "👉 Inspire your executive leadership with keynotes grounded in four decades of championship athletic wisdom. "
+            "Book Lornette Daye: lornettedaye.com/speaking\n\n"
+            "#PurposeLivesHigher #FernandoMendoza #EliteCommand #ExecutiveWisdom #HighPerformanceCulture #CoachLornette"
+        )
+    },
+    {
+        "id": 20,
+        "title": "The Finale: The Quarterback Legacy",
+        "cta": "Finish Strong Book ($14.99 CAD)",
+        "text": (
+            "THE QUARTERBACK LEGACY: PLAYING YOUR BEST WHEN IT MATTERS MOST. 👑🌟\n\n"
+            "Seasons come and go, but the standard you establish echoes for generations.\n\n"
+            "From high school roots to Division I quarterbacking on national television, "
+            "the lesson of Fernando Mendoza's journey is clear: stay ready, love your teammates, embrace the crucible of pressure, "
+            "and never let external circumstances dictate your internal standard of excellence.\n\n"
+            "In sports as in life, you will be remembered not for how you started, but for how you finished. "
+            "Step into the arena with conviction. Honor the reps. Finish strong.\n\n"
+            "👉 Master the habits and mindset of world-class champions across every field of endeavor. "
+            "Read Finish Strong: Chasing the Olympic Dream ($14.99 CAD): lornettedaye.com/books\n\n"
+            "#TheQuarterbackSeries #FernandoMendoza #FinishStrong #PlayYourBest #OlympicExcellence #LornetteDaye #MasteryInSport"
+        )
+    }
+]
+
+for p in posts_raw:
+    t = p["text"]
+    assert "—" not in t, f"Post #{p['id']} contains em dash —"
+    assert "\u2014" not in t, f"Post #{p['id']} contains unicode em dash"
+    assert "&mdash;" not in t, f"Post #{p['id']} contains &mdash;"
+
+print("Verification passed: ZERO em dashes across all 20 Mendoza posts!")
+
+posts_data = []
+for idx, p in enumerate(posts_raw):
+    due_at, slot_name = slots_info[idx]
+    asset_file = f"mendoza-{idx+1:02d}.png"
+    asset_url = f"https://lornettedaye.com/campaigns/mendoza/{asset_file}"
+    posts_data.append({
+        "id": p["id"],
+        "slot": slot_name,
+        "dueAt": due_at,
+        "assetFile": asset_file,
+        "assetUrl": asset_url,
+        "cta": p["cta"],
+        "text": p["text"]
+    })
+
+script_template = f'''# -*- coding: utf-8 -*-
+"""
+Automated Buffer Scheduler for Campaign 4: Mendoza (20 Posts)
+Target Channel: Lornette Daye LinkedIn (6a39d30c5ab6d2f1065f5301)
+"""
+
+import os
+import sys
+import json
+import urllib.request
+import urllib.error
+import ssl
+import time
+
+sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
+sys.stderr.reconfigure(encoding='utf-8', line_buffering=True)
+
+TOKEN = os.environ.get('BUFFER_ACCESS_TOKEN', 'mLbjEsRdn5FKtGOskFoGzK-gW2CGTl8dfAK8klDVEPC')
+CHANNEL_ID = '6a39d30c5ab6d2f1065f5301'
+
+posts_data = {json.dumps(posts_data, indent=4, ensure_ascii=False)}
+
+def schedule_post(post):
+    query = \'\'\'
+    mutation CreatePost($input: CreatePostInput!) {{
+        createPost(input: $input) {{
+            __typename
+            ... on PostActionSuccess {{
+                post {{
+                    id
+                    status
+                    dueAt
+                }}
+            }}
+            ... on LimitReachedError {{
+                message
+            }}
+            ... on InvalidInputError {{
+                message
+            }}
+            ... on UnexpectedError {{
+                message
+            }}
+            ... on UnauthorizedError {{
+                message
+            }}
+        }}
+    }}
+    \'\'\'
+
+    variables = {{
+        "input": {{
+            "channelId": CHANNEL_ID,
+            "text": post["text"],
+            "schedulingType": "automatic",
+            "mode": "customScheduled",
+            "dueAt": post["dueAt"],
+            "saveToDraft": False,
+            "needsApproval": False,
+            "assets": [
+                {{
+                    "image": {{
+                        "url": post["assetUrl"]
+                    }}
+                }}
+            ]
+        }}
+    }}
+
+    data = json.dumps({{"query": query, "variables": variables}}).encode('utf-8')
+    req = urllib.request.Request(
+        'https://api.buffer.com',
+        data=data,
+        headers={{
+            'Content-Type': 'application/json',
+            'Authorization': f'Bearer {{TOKEN}}',
+            'User-Agent': 'Mozilla/5.0'
+        }}
+    )
+
+    ctx = ssl._create_unverified_context()
+    try:
+        with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
+            return json.loads(resp.read().decode('utf-8'))
+    except urllib.error.HTTPError as e:
+        retry_after = e.headers.get('Retry-After')
+        return {{
+            "error": str(e),
+            "status_code": e.code,
+            "retry_after": int(retry_after) if retry_after and retry_after.isdigit() else 60
+        }}
+    except Exception as e:
+        return {{"error": str(e)}}
+
+def main():
+    print("=" * 75)
+    print("CAMPAIGN 4: MENDOZA - HIGH PERFORMANCE & ELITE FOCUS (20 POSTS)")
+    print(f"Target Channel: {{CHANNEL_ID}} (Lornette Daye LinkedIn)")
+    print(f"Time: {{time.strftime('%Y-%m-%d %H:%M:%S')}}")
+    print("=" * 75)
+
+    report_path = os.path.join(os.path.dirname(__file__), "mendoza-scheduled-report.json")
+    results = {{}}
+    if os.path.exists(report_path):
+        try:
+            with open(report_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                items = data if isinstance(data, list) else data.get("results", [])
+                for item in items:
+                    if item.get("status") in ["scheduled", "success"] and item.get("postId"):
+                        results[item["id"]] = item
+        except Exception as e:
+            print(f"Note: Could not parse existing report: {{e}}")
+
+    for idx, post in enumerate(posts_data, 1):
+        p_id = post["id"]
+        if p_id in results and results[p_id].get("postId"):
+            print(f"[{{idx}}/{{len(posts_data)}}] Post #{{p_id}} already scheduled (Buffer ID: {{results[p_id]['postId']}}). Skipping.")
+            continue
+
+        while True:
+            print(f"\\n[{{idx}}/{{len(posts_data)}}] Scheduling: Post #{{p_id}} ({{post['slot']}}) - {{post['dueAt']}}...")
+            print(f"  Asset: {{post['assetUrl']}}")
+            res = schedule_post(post)
+
+            if res.get("status_code") == 429 or "429" in str(res.get("error", "")):
+                wait_sec = res.get("retry_after", 60)
+                print(f"  [RATE LIMIT] HTTP 429 encountered. Waiting {{wait_sec + 5}}s...")
+                time.sleep(wait_sec + 5)
+                continue
+
+            create_post_data = res.get("data", {{}}).get("createPost", {{}})
+            typename = create_post_data.get("__typename")
+            post_obj = create_post_data.get("post")
+
+            if typename == "PostActionSuccess" and post_obj and post_obj.get("id"):
+                b_id = post_obj["id"]
+                st = post_obj.get("status")
+                due = post_obj.get("dueAt")
+                print(f"  >>> SUCCESS: Post ID {{b_id}} scheduled for {{due}} (status: {{st}})")
+                results[p_id] = {{
+                    "id": p_id,
+                    "slot": post["slot"],
+                    "dueAt": due,
+                    "postId": b_id,
+                    "status": st,
+                    "assetUrl": post["assetUrl"],
+                    "cta": post["cta"]
+                }}
+                break
+            else:
+                err_msg = create_post_data.get("message") or res.get("errors") or res.get("error") or str(res)
+                print(f"  >>> ERROR: {{err_msg}}")
+                results[p_id] = {{
+                    "id": p_id,
+                    "slot": post["slot"],
+                    "assetUrl": post["assetUrl"],
+                    "error": err_msg,
+                    "status": "failed"
+                }}
+                break
+
+            time.sleep(1.5)
+
+    with open(report_path, "w", encoding="utf-8") as f:
+        json.dump(list(results.values()), f, indent=2)
+
+    print("\\n" + "=" * 75)
+    print(f"Execution complete. Report written to {{report_path}}")
+    success_count = sum(1 for r in results.values() if r.get("status") in ["scheduled", "success"])
+    print(f"Summary: {{success_count}}/20 posts scheduled successfully.")
+    print("=" * 75)
+
+if __name__ == "__main__":
+    main()
+'''
+
+with open("scripts/schedule-mendoza-campaign.py", "w", encoding="utf-8") as f:
+    f.write(script_template)
+
+print("Generated scripts/schedule-mendoza-campaign.py successfully!")

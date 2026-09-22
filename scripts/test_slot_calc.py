@@ -1,26 +1,10 @@
 # -*- coding: utf-8 -*-
-"""
-Full Campaign Generator & Verifier for Lornette Daye Campaigns:
-1. vintage NFL (24 posts)
-2. macclung (11 posts)
-3. jazzy davidson (10 posts)
-4. mendoza (20 posts)
-5. nba (3 posts)
-6. cricket (14 posts)
-Total: 82 posts
-"""
-
 import os
-import sys
+import re
 import json
-import urllib.request
-import ssl
 from datetime import datetime, timedelta
 
-sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
-sys.stderr.reconfigure(encoding='utf-8', line_buffering=True)
-
-# 1. Calculate Slots
+# Load existing booked slots
 existing_due = set()
 for rpt in ['scripts/rescheduled-master-report.json', 'scripts/henry-scheduled-report.json']:
     if os.path.exists(rpt):
@@ -28,6 +12,8 @@ for rpt in ['scripts/rescheduled-master-report.json', 'scripts/henry-scheduled-r
             for item in json.load(f):
                 if item.get('dueAt'):
                     existing_due.add(item['dueAt'])
+
+print(f"Loaded {len(existing_due)} existing booked slots.")
 
 candidate_times = ['14:30:00.000Z', '17:00:00.000Z', '19:15:00.000Z', '21:45:00.000Z', '23:45:00.000Z']
 curr = datetime(2026, 10, 6)
@@ -42,11 +28,16 @@ while len(all_slots) < 82:
                 break
     curr += timedelta(days=1)
 
+print(f"Generated 82 slots: from {all_slots[0]} to {all_slots[-1]}")
+
 def get_slot_name(iso_str):
     dt = datetime.strptime(iso_str, '%Y-%m-%dT%H:%M:%S.%fZ')
+    # MDT is UTC-6
     mdt_dt = dt - timedelta(hours=6)
     day_name = mdt_dt.strftime('%A')
     time_str = mdt_dt.strftime('%I:%M %p')
     return f"{day_name} ({time_str} MDT)"
 
-print(f"Generated {len(all_slots)} non-colliding slots in October 2026.")
+print("Sample slots:")
+for i in [0, 23, 24, 34, 35, 44, 45, 64, 65, 67, 68, 81]:
+    print(f"Slot #{i+1}: {all_slots[i]} -> {get_slot_name(all_slots[i])}")
