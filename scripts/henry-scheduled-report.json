@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "slot": "Monday Midday (12:30 PM MDT)",
+    "dueAt": "2026-10-05T18:30:00.000Z",
+    "postId": "6ab1f735e2882add8db1c3dd",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/henry/henry-01.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 2,
+    "slot": "Tuesday Midday (12:30 PM MDT)",
+    "dueAt": "2026-10-06T18:30:00.000Z",
+    "postId": "6ab1f7386ed20e9354f64f7e",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/henry/henry-02.png",
+    "cta": "Survival Skills for Men (lornettedaye.com/books)"
+  },
+  {
+    "id": 3,
+    "slot": "Wednesday Midday (12:30 PM MDT)",
+    "dueAt": "2026-10-07T18:30:00.000Z",
+    "postId": "6ab1f73b74424003bca741e2",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/henry/henry-03.png",
+    "cta": "Survival Skills for Athletes (lornettedaye.com/books)"
+  },
+  {
+    "id": 4,
+    "slot": "Thursday Midday (12:30 PM MDT)",
+    "dueAt": "2026-10-08T18:30:00.000Z",
+    "postId": "6ab1f73effe5c8afb1299e63",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/henry/henry-04.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 5,
+    "slot": "Friday Midday (12:30 PM MDT)",
+    "dueAt": "2026-10-09T18:30:00.000Z",
+    "postId": "6ab1f741377d336018c71e28",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/henry/henry-05.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 6,
+    "slot": "Saturday Midday (12:30 PM MDT)",
+    "dueAt": "2026-10-10T18:30:00.000Z",
+    "postId": "6ab1f744377d336018c71e4e",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/henry/henry-06.png",
+    "cta": "Survival Skills for Athletes (lornettedaye.com/books)"
+  },
+  {
+    "id": 7,
+    "slot": "Sunday Midday (12:30 PM MDT)",
+    "dueAt": "2026-10-11T18:30:00.000Z",
+    "postId": "6ab1f7476ed20e9354f650a4",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/henry/henry-07.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 8,
+    "slot": "Monday Midday (12:30 PM MDT)",
+    "dueAt": "2026-10-12T18:30:00.000Z",
+    "postId": "6ab1f749e2882add8db1c551",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/henry/henry-08.png",
+    "cta": "Survival Skills for Men (lornettedaye.com/books)"
+  },
+  {
+    "id": 9,
+    "slot": "Tuesday Midday (12:30 PM MDT)",
+    "dueAt": "2026-10-13T18:30:00.000Z",
+    "postId": "6ab1f74c6ed20e9354f6518e",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/henry/henry-09.png",
+    "cta": "Survival Skills for Athletes (lornettedaye.com/books)"
+  },
+  {
+    "id": 10,
+    "slot": "Wednesday Midday (12:30 PM MDT)",
+    "dueAt": "2026-10-14T18:30:00.000Z",
+    "postId": "6ab1f74fe2882add8db1c5bc",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/henry/henry-10.png",
+    "cta": "Finish Strong Book & Leadership Summits (lornettedaye.com)"
+  }
+]
