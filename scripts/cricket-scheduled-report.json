@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "slot": "Monday (03:45 PM MDT)",
+    "dueAt": "2026-10-19T21:45:00.000Z",
+    "postId": "6ab200f3e2882add8db28459",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-01.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 2,
+    "slot": "Monday (05:45 PM MDT)",
+    "dueAt": "2026-10-19T23:45:00.000Z",
+    "postId": "6ab200f574424003bca8082f",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-02.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 3,
+    "slot": "Tuesday (08:30 AM MDT)",
+    "dueAt": "2026-10-20T14:30:00.000Z",
+    "postId": "6ab200f7e2882add8db284d7",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-03.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 4,
+    "slot": "Tuesday (11:00 AM MDT)",
+    "dueAt": "2026-10-20T17:00:00.000Z",
+    "postId": "6ab200f9377d336018c7f601",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-04.png",
+    "cta": "Surviving Life ($14.99 CAD)"
+  },
+  {
+    "id": 5,
+    "slot": "Tuesday (01:15 PM MDT)",
+    "dueAt": "2026-10-20T19:15:00.000Z",
+    "postId": "6ab200fb377d336018c7f627",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-05.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 6,
+    "slot": "Tuesday (03:45 PM MDT)",
+    "dueAt": "2026-10-20T21:45:00.000Z",
+    "postId": "6ab200fce2882add8db2853e",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-06.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 7,
+    "slot": "Tuesday (05:45 PM MDT)",
+    "dueAt": "2026-10-20T23:45:00.000Z",
+    "postId": "6ab200ff9609314f6217604f",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-07.png",
+    "cta": "Survival Skills for Men ($14.99 CAD)"
+  },
+  {
+    "id": 8,
+    "slot": "Wednesday (08:30 AM MDT)",
+    "dueAt": "2026-10-21T14:30:00.000Z",
+    "postId": "6ab20101377d336018c7f6b1",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-08.png",
+    "cta": "Survival Skills for Women ($14.99 CAD)"
+  },
+  {
+    "id": 9,
+    "slot": "Wednesday (11:00 AM MDT)",
+    "dueAt": "2026-10-21T17:00:00.000Z",
+    "postId": "6ab201036ed20e9354f72279",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-09.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 10,
+    "slot": "Wednesday (01:15 PM MDT)",
+    "dueAt": "2026-10-21T19:15:00.000Z",
+    "postId": "6ab20105e2882add8db28605",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-10.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 11,
+    "slot": "Wednesday (03:45 PM MDT)",
+    "dueAt": "2026-10-21T21:45:00.000Z",
+    "postId": "6ab20107ffe5c8afb12a7b35",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-11.png",
+    "cta": "Surviving Life ($14.99 CAD)"
+  },
+  {
+    "id": 12,
+    "slot": "Wednesday (05:45 PM MDT)",
+    "dueAt": "2026-10-21T23:45:00.000Z",
+    "postId": "6ab201089609314f62176131",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-12.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 13,
+    "slot": "Thursday (08:30 AM MDT)",
+    "dueAt": "2026-10-22T14:30:00.000Z",
+    "postId": "6ab2010ae2882add8db28668",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-13.png",
+    "cta": "Survival Skills for Women ($14.99 CAD)"
+  },
+  {
+    "id": 14,
+    "slot": "Thursday (11:00 AM MDT)",
+    "dueAt": "2026-10-22T17:00:00.000Z",
+    "postId": "6ab2010b6ed20e9354f72349",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/cricket/cricket-14.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "slot": "Friday (03:45 PM MDT)",
+    "dueAt": "2026-10-16T21:45:00.000Z",
+    "postId": "6ab200d7e2882add8db28252",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/jazzy-davidson/jazzy-davidson-01.png",
+    "cta": "Survival Skills for Women ($14.99 CAD)"
+  },
+  {
+    "id": 2,
+    "slot": "Friday (05:45 PM MDT)",
+    "dueAt": "2026-10-16T23:45:00.000Z",
+    "postId": "6ab200d974424003bca805a9",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/jazzy-davidson/jazzy-davidson-02.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 3,
+    "slot": "Saturday (08:30 AM MDT)",
+    "dueAt": "2026-10-17T14:30:00.000Z",
+    "postId": "6ab200db377d336018c7f3ad",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/jazzy-davidson/jazzy-davidson-03.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 4,
+    "slot": "Saturday (11:00 AM MDT)",
+    "dueAt": "2026-10-17T17:00:00.000Z",
+    "postId": "6ab200dc377d336018c7f3eb",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/jazzy-davidson/jazzy-davidson-04.png",
+    "cta": "Survival Skills for Students ($14.99 CAD)"
+  },
+  {
+    "id": 5,
+    "slot": "Saturday (01:15 PM MDT)",
+    "dueAt": "2026-10-17T19:15:00.000Z",
+    "postId": "6ab200de6ed20e9354f71f0e",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/jazzy-davidson/jazzy-davidson-05.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 6,
+    "slot": "Saturday (03:45 PM MDT)",
+    "dueAt": "2026-10-17T21:45:00.000Z",
+    "postId": "6ab200e074424003bca80615",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/jazzy-davidson/jazzy-davidson-06.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 7,
+    "slot": "Saturday (05:45 PM MDT)",
+    "dueAt": "2026-10-17T23:45:00.000Z",
+    "postId": "6ab200e19609314f62175d92",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/jazzy-davidson/jazzy-davidson-07.png",
+    "cta": "Surviving Life ($14.99 CAD)"
+  },
+  {
+    "id": 8,
+    "slot": "Sunday (08:30 AM MDT)",
+    "dueAt": "2026-10-18T14:30:00.000Z",
+    "postId": "6ab200e3377d336018c7f49a",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/jazzy-davidson/jazzy-davidson-08.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 9,
+    "slot": "Sunday (11:00 AM MDT)",
+    "dueAt": "2026-10-18T17:00:00.000Z",
+    "postId": "6ab200e4e2882add8db28369",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/jazzy-davidson/jazzy-davidson-09.png",
+    "cta": "Survival Skills for Women ($14.99 CAD)"
+  },
+  {
+    "id": 10,
+    "slot": "Sunday (01:15 PM MDT)",
+    "dueAt": "2026-10-18T19:15:00.000Z",
+    "postId": "6ab200e674424003bca80685",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/jazzy-davidson/jazzy-davidson-10.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  }
+]

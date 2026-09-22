@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "slot": "Monday (08:30 AM MDT)",
+    "dueAt": "2026-10-19T14:30:00.000Z",
+    "postId": "6ab200ec9609314f62175f10",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-01.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 2,
+    "slot": "Monday (11:00 AM MDT)",
+    "dueAt": "2026-10-19T17:00:00.000Z",
+    "postId": "6ab200ee6ed20e9354f72025",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-02.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 3,
+    "slot": "Monday (01:15 PM MDT)",
+    "dueAt": "2026-10-19T19:15:00.000Z",
+    "postId": "6ab200ef74424003bca807d2",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-03.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  }
+]

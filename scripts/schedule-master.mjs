@@ -15,9 +15,10 @@ const isCatchup = process.argv.includes('--catchup');
 if (isCatchup) {
   console.log('[Catchup Mode] Executing pending campaign queue handlers...');
   const scriptsToRun = [
-    'schedule-parents-set-2-campaign.py',
-    'schedule-parents-set-3-campaign.py',
-    'schedule-marcus-freeman-campaign.py'
+    'schedule-tyrese-gibson-campaign.py',
+    'schedule-mendoza-campaign.py',
+    'schedule-yaroslava-mahuchikh-campaign.py',
+    'schedule-saquon-barkley-campaign.py'
   ];
   for (const scriptName of scriptsToRun) {
     const scriptPath = path.join(process.cwd(), 'scripts', scriptName);
@@ -30,6 +31,13 @@ if (isCatchup) {
       }
     }
   }
+  try {
+    console.log('[Catchup Mode] Synchronizing master campaign queue and report...');
+    execSync(`python "${path.join(process.cwd(), 'scripts', 'sync_master_queue.py')}"`, { stdio: 'inherit' });
+  } catch (e) {
+    console.error('[Catchup Mode] Sync error:', e.message);
+  }
+  process.exit(0);
 }
 
 const manifestPath = path.join(process.cwd(), 'scripts', 'campaign-manifest.json');

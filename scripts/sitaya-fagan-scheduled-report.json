@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "slot": "Thursday (01:15 PM MDT)",
+    "dueAt": "2026-10-22T19:15:00.000Z",
+    "postId": "6ab2010f74424003bca809b9",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/sitaya-fagan/sitaya-fagan-01.png",
+    "cta": "Survival Skills for Women ($14.99 CAD)"
+  },
+  {
+    "id": 2,
+    "slot": "Thursday (03:45 PM MDT)",
+    "dueAt": "2026-10-22T21:45:00.000Z",
+    "postId": "6ab20111e2882add8db286b0",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/sitaya-fagan/sitaya-fagan-02.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 3,
+    "slot": "Thursday (05:45 PM MDT)",
+    "dueAt": "2026-10-22T23:45:00.000Z",
+    "postId": "6ab20113e2882add8db286d6",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/sitaya-fagan/sitaya-fagan-03.png",
+    "cta": "Survival Skills for Students ($14.99 CAD)"
+  },
+  {
+    "id": 4,
+    "slot": "Friday (08:30 AM MDT)",
+    "dueAt": "2026-10-23T14:30:00.000Z",
+    "postId": "6ab20114ffe5c8afb12a7c09",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/sitaya-fagan/sitaya-fagan-04.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 5,
+    "slot": "Friday (11:00 AM MDT)",
+    "dueAt": "2026-10-23T17:00:00.000Z",
+    "postId": "6ab20116377d336018c7f887",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/sitaya-fagan/sitaya-fagan-05.png",
+    "cta": "Surviving Life ($14.99 CAD)"
+  },
+  {
+    "id": 6,
+    "slot": "Friday (01:15 PM MDT)",
+    "dueAt": "2026-10-23T19:15:00.000Z",
+    "postId": "6ab201189609314f621761f5",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/sitaya-fagan/sitaya-fagan-06.png",
+    "cta": "Survival Skills for Women ($14.99 CAD)"
+  },
+  {
+    "id": 7,
+    "slot": "Friday (03:45 PM MDT)",
+    "dueAt": "2026-10-23T21:45:00.000Z",
+    "postId": "6ab20119377d336018c7f8e9",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/sitaya-fagan/sitaya-fagan-07.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 8,
+    "slot": "Friday (05:45 PM MDT)",
+    "dueAt": "2026-10-23T23:45:00.000Z",
+    "postId": "6ab2011b377d336018c7f910",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/sitaya-fagan/sitaya-fagan-08.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 9,
+    "slot": "Saturday (08:30 AM MDT)",
+    "dueAt": "2026-10-24T14:30:00.000Z",
+    "postId": "6ab2011d9609314f6217625a",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/sitaya-fagan/sitaya-fagan-09.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 10,
+    "slot": "Saturday (11:00 AM MDT)",
+    "dueAt": "2026-10-24T17:00:00.000Z",
+    "postId": "6ab2011e74424003bca80ad2",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/sitaya-fagan/sitaya-fagan-10.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  }
+]

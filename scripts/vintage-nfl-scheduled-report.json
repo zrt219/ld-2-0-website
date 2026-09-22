@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "slot": "Tuesday (08:30 AM MDT)",
+    "dueAt": "2026-10-06T14:30:00.000Z",
+    "postId": "6ab1ffeae2882add8db26ff4",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-01.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 2,
+    "slot": "Tuesday (05:45 PM MDT)",
+    "dueAt": "2026-10-06T23:45:00.000Z",
+    "postId": "6ab2009fe2882add8db27a2f",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-02.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 3,
+    "slot": "Wednesday (08:30 AM MDT)",
+    "dueAt": "2026-10-07T14:30:00.000Z",
+    "postId": "6ab200a0ffe5c8afb12a713b",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-03.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 4,
+    "slot": "Wednesday (05:45 PM MDT)",
+    "dueAt": "2026-10-07T23:45:00.000Z",
+    "postId": "6ab200a29609314f62175533",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-04.png",
+    "cta": "Survival Skills for Men ($14.99 CAD)"
+  },
+  {
+    "id": 5,
+    "slot": "Thursday (08:30 AM MDT)",
+    "dueAt": "2026-10-08T14:30:00.000Z",
+    "postId": "6ab200a4ffe5c8afb12a717e",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-05.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 6,
+    "slot": "Thursday (05:45 PM MDT)",
+    "dueAt": "2026-10-08T23:45:00.000Z",
+    "postId": "6ab200a574424003bca7fdfd",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-06.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 7,
+    "slot": "Friday (08:30 AM MDT)",
+    "dueAt": "2026-10-09T14:30:00.000Z",
+    "postId": "6ab200a6e2882add8db27aa9",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-07.png",
+    "cta": "Surviving Life ($14.99 CAD)"
+  },
+  {
+    "id": 8,
+    "slot": "Friday (05:45 PM MDT)",
+    "dueAt": "2026-10-09T23:45:00.000Z",
+    "postId": "6ab200a7e2882add8db27c81",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-08.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 9,
+    "slot": "Saturday (08:30 AM MDT)",
+    "dueAt": "2026-10-10T14:30:00.000Z",
+    "postId": "6ab200a99609314f6217578f",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-09.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 10,
+    "slot": "Saturday (03:45 PM MDT)",
+    "dueAt": "2026-10-10T21:45:00.000Z",
+    "postId": "6ab200aaffe5c8afb12a71fb",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-10.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 11,
+    "slot": "Saturday (05:45 PM MDT)",
+    "dueAt": "2026-10-10T23:45:00.000Z",
+    "postId": "6ab200ac74424003bca7fe7a",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-11.png",
+    "cta": "Survival Skills: Surviving to Thriving ($14.99 CAD)"
+  },
+  {
+    "id": 12,
+    "slot": "Sunday (08:30 AM MDT)",
+    "dueAt": "2026-10-11T14:30:00.000Z",
+    "postId": "6ab200ad377d336018c7ec63",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-12.png",
+    "cta": "Survival Skills for Men ($14.99 CAD)"
+  },
+  {
+    "id": 13,
+    "slot": "Sunday (03:45 PM MDT)",
+    "dueAt": "2026-10-11T21:45:00.000Z",
+    "postId": "6ab200ae9609314f621757e3",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-13.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 14,
+    "slot": "Sunday (05:45 PM MDT)",
+    "dueAt": "2026-10-11T23:45:00.000Z",
+    "postId": "6ab200b074424003bca7fef0",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-14.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 15,
+    "slot": "Monday (08:30 AM MDT)",
+    "dueAt": "2026-10-12T14:30:00.000Z",
+    "postId": "6ab200b16ed20e9354f7193a",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-15.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 16,
+    "slot": "Monday (03:45 PM MDT)",
+    "dueAt": "2026-10-12T21:45:00.000Z",
+    "postId": "6ab200b274424003bca7ff16",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-16.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 17,
+    "slot": "Monday (05:45 PM MDT)",
+    "dueAt": "2026-10-12T23:45:00.000Z",
+    "postId": "6ab200b49609314f6217581d",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-17.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 18,
+    "slot": "Tuesday (08:30 AM MDT)",
+    "dueAt": "2026-10-13T14:30:00.000Z",
+    "postId": "6ab200b5377d336018c7ecc8",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-18.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 19,
+    "slot": "Tuesday (11:00 AM MDT)",
+    "dueAt": "2026-10-13T17:00:00.000Z",
+    "postId": "6ab200b7e2882add8db27d69",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-19.png",
+    "cta": "Survival Skills for Men ($14.99 CAD)"
+  },
+  {
+    "id": 20,
+    "slot": "Tuesday (01:15 PM MDT)",
+    "dueAt": "2026-10-13T19:15:00.000Z",
+    "postId": "6ab200b86ed20e9354f71984",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-20.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 21,
+    "slot": "Tuesday (03:45 PM MDT)",
+    "dueAt": "2026-10-13T21:45:00.000Z",
+    "postId": "6ab200ba74424003bca7ff64",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-21.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 22,
+    "slot": "Tuesday (05:45 PM MDT)",
+    "dueAt": "2026-10-13T23:45:00.000Z",
+    "postId": "6ab200bb6ed20e9354f719ad",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-22.png",
+    "cta": "Survival Skills: Surviving to Thriving ($14.99 CAD)"
+  },
+  {
+    "id": 23,
+    "slot": "Wednesday (08:30 AM MDT)",
+    "dueAt": "2026-10-14T14:30:00.000Z",
+    "postId": "6ab200bd74424003bca7ff91",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-23.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 24,
+    "slot": "Wednesday (11:00 AM MDT)",
+    "dueAt": "2026-10-14T17:00:00.000Z",
+    "postId": "6ab200be74424003bca7ffba",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/vintage-nfl/vintage-nfl-24.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  }
+]

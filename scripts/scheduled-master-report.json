@@ -1,9 +1,75 @@
 {
-  "lastRun": "2026-09-17T11:05:50.053Z",
-  "totalPosts": 320,
-  "scheduledCount": 320,
-  "pendingCount": 0,
-  "scheduledThisRun": 0,
-  "rateLimitHit": false,
-  "allComplete": true
+  "lastRun": "2026-09-22T04:28:40.216786+00:00",
+  "totalPosts": 122,
+  "scheduledCount": 82,
+  "pendingCount": 40,
+  "completionRate": "67.2%",
+  "rateLimitHit": true,
+  "rateLimitDetails": {
+    "reason": "Buffer 24h rolling post limit per channel reached (HTTP 429)",
+    "cooldownSeconds": 72446,
+    "recoveryCommand": "node scripts/schedule-master.mjs --catchup"
+  },
+  "campaigns": {
+    "vintage-nfl": {
+      "expected": 24,
+      "scheduled": 24,
+      "pending": 0,
+      "status": "COMPLETED"
+    },
+    "macclung": {
+      "expected": 11,
+      "scheduled": 11,
+      "pending": 0,
+      "status": "COMPLETED"
+    },
+    "jazzy-davidson": {
+      "expected": 10,
+      "scheduled": 10,
+      "pending": 0,
+      "status": "COMPLETED"
+    },
+    "mendoza": {
+      "expected": 20,
+      "scheduled": 0,
+      "pending": 20,
+      "status": "PENDING"
+    },
+    "nba": {
+      "expected": 3,
+      "scheduled": 3,
+      "pending": 0,
+      "status": "COMPLETED"
+    },
+    "cricket": {
+      "expected": 14,
+      "scheduled": 14,
+      "pending": 0,
+      "status": "COMPLETED"
+    },
+    "sitaya-fagan": {
+      "expected": 10,
+      "scheduled": 10,
+      "pending": 0,
+      "status": "COMPLETED"
+    },
+    "tyrese-gibson": {
+      "expected": 12,
+      "scheduled": 10,
+      "pending": 2,
+      "status": "PARTIAL"
+    },
+    "yaroslava-mahuchikh": {
+      "expected": 8,
+      "scheduled": 0,
+      "pending": 8,
+      "status": "PENDING"
+    },
+    "saquon-barkley": {
+      "expected": 10,
+      "scheduled": 0,
+      "pending": 10,
+      "status": "PENDING"
+    }
+  }
 }
