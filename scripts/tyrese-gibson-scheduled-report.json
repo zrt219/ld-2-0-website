@@ -78,5 +78,23 @@
     "slot": "Monday (11:00 AM MDT)",
     "status": "scheduled",
     "assetUrl": "https://lornettedaye.com/campaigns/tyrese-gibson/tyrese-gibson-10.png"
+  },
+  {
+    "id": 11,
+    "slot": "Monday (01:15 PM MDT)",
+    "dueAt": "2026-10-26T19:15:00.000Z",
+    "postId": "6ab3679098ae6feaa626757f",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/tyrese-gibson/tyrese-gibson-11.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 12,
+    "slot": "Monday (03:45 PM MDT)",
+    "dueAt": "2026-10-26T21:45:00.000Z",
+    "postId": "6ab3679178330b3657e73d49",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/tyrese-gibson/tyrese-gibson-12.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
   }
 ]

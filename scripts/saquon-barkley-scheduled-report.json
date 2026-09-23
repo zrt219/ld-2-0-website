@@ -1,1 +1,92 @@
-[]
+[
+  {
+    "id": 1,
+    "slot": "Wednesday (01:15 PM MDT)",
+    "dueAt": "2026-10-28T19:15:00.000Z",
+    "postId": "6ab367a0340f92dcbe220c03",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/saquon-barkley/saquon-barkley-01.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 2,
+    "slot": "Wednesday (03:45 PM MDT)",
+    "dueAt": "2026-10-28T21:45:00.000Z",
+    "postId": "6ab367a2340f92dcbe220c51",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/saquon-barkley/saquon-barkley-02.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 3,
+    "slot": "Wednesday (05:45 PM MDT)",
+    "dueAt": "2026-10-28T23:45:00.000Z",
+    "postId": "6ab367a498ae6feaa62676f9",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/saquon-barkley/saquon-barkley-03.png",
+    "cta": "Survival Skills for Men ($14.99 CAD)"
+  },
+  {
+    "id": 4,
+    "slot": "Thursday (08:30 AM MDT)",
+    "dueAt": "2026-10-29T14:30:00.000Z",
+    "postId": "6ab367a62aa0e20bb474771a",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/saquon-barkley/saquon-barkley-04.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 5,
+    "slot": "Thursday (11:00 AM MDT)",
+    "dueAt": "2026-10-29T17:00:00.000Z",
+    "postId": "6ab367a72aa0e20bb474774a",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/saquon-barkley/saquon-barkley-05.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 6,
+    "slot": "Thursday (01:15 PM MDT)",
+    "dueAt": "2026-10-29T19:15:00.000Z",
+    "postId": "6ab367a998ae6feaa6267737",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/saquon-barkley/saquon-barkley-06.png",
+    "cta": "Surviving Life ($14.99 CAD)"
+  },
+  {
+    "id": 7,
+    "slot": "Thursday (03:45 PM MDT)",
+    "dueAt": "2026-10-29T21:45:00.000Z",
+    "postId": "6ab367aab777b65977f2551c",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/saquon-barkley/saquon-barkley-07.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 8,
+    "slot": "Thursday (05:45 PM MDT)",
+    "dueAt": "2026-10-29T23:45:00.000Z",
+    "postId": "6ab367ac78330b3657e73f2c",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/saquon-barkley/saquon-barkley-08.png",
+    "cta": "Survival Skills for Men ($14.99 CAD)"
+  },
+  {
+    "id": 9,
+    "slot": "Friday (08:30 AM MDT)",
+    "dueAt": "2026-10-30T14:30:00.000Z",
+    "postId": "6ab367ae78330b3657e73f65",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/saquon-barkley/saquon-barkley-09.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 10,
+    "slot": "Friday (11:00 AM MDT)",
+    "dueAt": "2026-10-30T17:00:00.000Z",
+    "postId": "6ab367b02aa0e20bb47477a8",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/saquon-barkley/saquon-barkley-10.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  }
+]

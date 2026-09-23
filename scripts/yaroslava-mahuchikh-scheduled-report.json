@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "id": 1,
+    "slot": "Monday (05:45 PM MDT)",
+    "dueAt": "2026-10-26T23:45:00.000Z",
+    "postId": "6ab367932aa0e20bb474751a",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/yaroslava-mahuchikh/yaroslava-mahuchikh-01.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 2,
+    "slot": "Tuesday (08:30 AM MDT)",
+    "dueAt": "2026-10-27T14:30:00.000Z",
+    "postId": "6ab367952aa0e20bb4747549",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/yaroslava-mahuchikh/yaroslava-mahuchikh-02.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 3,
+    "slot": "Tuesday (11:00 AM MDT)",
+    "dueAt": "2026-10-27T17:00:00.000Z",
+    "postId": "6ab36796b777b65977f253dc",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/yaroslava-mahuchikh/yaroslava-mahuchikh-03.png",
+    "cta": "Surviving Life ($14.99 CAD)"
+  },
+  {
+    "id": 4,
+    "slot": "Tuesday (01:15 PM MDT)",
+    "dueAt": "2026-10-27T19:15:00.000Z",
+    "postId": "6ab367987f829c66807c159f",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/yaroslava-mahuchikh/yaroslava-mahuchikh-04.png",
+    "cta": "Survival Skills for Women ($14.99 CAD)"
+  },
+  {
+    "id": 5,
+    "slot": "Tuesday (03:45 PM MDT)",
+    "dueAt": "2026-10-27T21:45:00.000Z",
+    "postId": "6ab3679ab777b65977f25433",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/yaroslava-mahuchikh/yaroslava-mahuchikh-05.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  },
+  {
+    "id": 6,
+    "slot": "Tuesday (05:45 PM MDT)",
+    "dueAt": "2026-10-27T23:45:00.000Z",
+    "postId": "6ab3679b78330b3657e73deb",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/yaroslava-mahuchikh/yaroslava-mahuchikh-06.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 7,
+    "slot": "Wednesday (08:30 AM MDT)",
+    "dueAt": "2026-10-28T14:30:00.000Z",
+    "postId": "6ab3679d78330b3657e73e14",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/yaroslava-mahuchikh/yaroslava-mahuchikh-07.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD)"
+  },
+  {
+    "id": 8,
+    "slot": "Wednesday (11:00 AM MDT)",
+    "dueAt": "2026-10-28T17:00:00.000Z",
+    "postId": "6ab3679f7f829c66807c1622",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/yaroslava-mahuchikh/yaroslava-mahuchikh-08.png",
+    "cta": "Finish Strong Book ($14.99 CAD)"
+  }
+]

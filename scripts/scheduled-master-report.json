@@ -1,10 +1,10 @@
 {
-  "lastRun": "2026-09-22T04:33:34.785786+00:00",
+  "lastRun": "2026-09-23T05:46:58.121356+00:00",
   "totalPosts": 122,
-  "scheduledCount": 82,
-  "pendingCount": 40,
-  "completionRate": "67.2%",
-  "rateLimitHit": true,
+  "scheduledCount": 122,
+  "pendingCount": 0,
+  "completionRate": "100.0%",
+  "rateLimitHit": false,
   "rateLimitDetails": {
     "reason": "Buffer 24h rolling post limit per channel reached (HTTP 429)",
     "cooldownSeconds": 72446,
@@ -31,9 +31,9 @@
     },
     "mendoza": {
       "expected": 20,
-      "scheduled": 0,
-      "pending": 20,
-      "status": "PENDING"
+      "scheduled": 20,
+      "pending": 0,
+      "status": "COMPLETED"
     },
     "nba": {
       "expected": 3,
@@ -55,21 +55,21 @@
     },
     "tyrese-gibson": {
       "expected": 12,
-      "scheduled": 10,
-      "pending": 2,
-      "status": "PARTIAL"
+      "scheduled": 12,
+      "pending": 0,
+      "status": "COMPLETED"
     },
     "yaroslava-mahuchikh": {
       "expected": 8,
-      "scheduled": 0,
-      "pending": 8,
-      "status": "PENDING"
+      "scheduled": 8,
+      "pending": 0,
+      "status": "COMPLETED"
     },
     "saquon-barkley": {
       "expected": 10,
-      "scheduled": 0,
-      "pending": 10,
-      "status": "PENDING"
+      "scheduled": 10,
+      "pending": 0,
+      "status": "COMPLETED"
     }
   }
 }
