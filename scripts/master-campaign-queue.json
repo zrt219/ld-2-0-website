@@ -2430,5 +2430,17 @@
     "assetFile": "curacao-full-highlights.mp4",
     "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
     "cta": "Championship Collection ($14.99 CAD) & Speaking"
+  },
+  {
+    "campaign": "curacao-fullmatch-raw",
+    "id": "curacao-raw-01",
+    "type": "video",
+    "dueAt": "2026-09-25T09:50:00.000Z",
+    "slot": "Immediate Breaking Drop: Friday 3:50 AM MDT (Sep 25, 2026)",
+    "postId": "6ab6433ca14029bcc72b1346",
+    "status": "scheduled",
+    "assetFile": "curacao-fullmatch.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-fullmatch.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
   }
 ]
