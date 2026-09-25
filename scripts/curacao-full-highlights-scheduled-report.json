@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "type": "video",
+    "slot": "Friday 6:30 AM MDT (Sep 25, 2026)",
+    "dueAt": "2026-09-25T12:30:00.000Z",
+    "postId": "6ab63d0adb73444101e7ebb0",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 2,
+    "type": "video",
+    "slot": "Friday 8:30 AM MDT (Sep 25, 2026)",
+    "dueAt": "2026-09-25T14:30:00.000Z",
+    "postId": "6ab63d0dcbe818dd4f00ae77",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 3,
+    "type": "video",
+    "slot": "Friday 11:15 AM MDT (Sep 25, 2026)",
+    "dueAt": "2026-09-25T17:15:00.000Z",
+    "postId": "6ab63d104be5473030ac80a9",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 4,
+    "type": "video",
+    "slot": "Friday 1:45 PM MDT (Sep 25, 2026)",
+    "dueAt": "2026-09-25T19:45:00.000Z",
+    "postId": "6ab63d13607bee5b032e68c3",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Championship Library ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 5,
+    "type": "video",
+    "slot": "Friday 6:00 PM MDT (Sep 25, 2026)",
+    "dueAt": "2026-09-26T00:00:00.000Z",
+    "postId": "6ab63d16cbe818dd4f00af2e",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 6,
+    "type": "video",
+    "slot": "Friday 9:15 PM MDT (Sep 25, 2026)",
+    "dueAt": "2026-09-26T03:15:00.000Z",
+    "postId": "6ab63d18db73444101e7ec9f",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 7,
+    "type": "video",
+    "slot": "Saturday 11:00 AM MDT (Sep 26, 2026)",
+    "dueAt": "2026-09-26T17:00:00.000Z",
+    "postId": "6ab63d1b8c95968bb0338600",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 8,
+    "type": "video",
+    "slot": "Saturday 5:30 PM MDT (Sep 26, 2026)",
+    "dueAt": "2026-09-26T23:30:00.000Z",
+    "postId": "6ab63d1ea14029bcc72a8035",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 9,
+    "type": "video",
+    "slot": "Sunday 10:00 AM MDT (Sep 27, 2026)",
+    "dueAt": "2026-09-27T16:00:00.000Z",
+    "postId": "6ab63d218c95968bb0338632",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 10,
+    "type": "video",
+    "slot": "Sunday 6:00 PM MDT (Sep 27, 2026)",
+    "dueAt": "2026-09-28T00:00:00.000Z",
+    "postId": "6ab63d244be5473030ac819c",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 11,
+    "type": "video",
+    "slot": "Monday 9:00 AM MDT (Sep 28, 2026)",
+    "dueAt": "2026-09-28T15:00:00.000Z",
+    "postId": "6ab63d27607bee5b032e69ef",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 12,
+    "type": "video",
+    "slot": "Monday 5:00 PM MDT (Sep 28, 2026)",
+    "dueAt": "2026-09-28T23:00:00.000Z",
+    "postId": "6ab63d294be5473030ac81dc",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 13,
+    "type": "video",
+    "slot": "Tuesday 9:00 AM MDT (Sep 29, 2026)",
+    "dueAt": "2026-09-29T15:00:00.000Z",
+    "postId": "6ab63d2cdb73444101e7edbb",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 14,
+    "type": "video",
+    "slot": "Tuesday 5:00 PM MDT (Sep 29, 2026)",
+    "dueAt": "2026-09-29T23:00:00.000Z",
+    "postId": "6ab63d2f607bee5b032e6b3c",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 15,
+    "type": "video",
+    "slot": "Wednesday 9:00 AM MDT (Sep 30, 2026)",
+    "dueAt": "2026-09-30T15:00:00.000Z",
+    "postId": "6ab63d32a14029bcc72a8182",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Championship Library ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 16,
+    "type": "video",
+    "slot": "Wednesday 5:00 PM MDT (Sep 30, 2026)",
+    "dueAt": "2026-09-30T23:00:00.000Z",
+    "postId": "6ab63d35a14029bcc72a81c8",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 17,
+    "type": "video",
+    "slot": "Thursday 8:00 AM MDT (Oct 01, 2026)",
+    "dueAt": "2026-10-01T14:00:00.000Z",
+    "postId": "6ab63d38a14029bcc72a824e",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 18,
+    "type": "video",
+    "slot": "Thursday 3:00 PM MDT (Oct 01, 2026)",
+    "dueAt": "2026-10-01T21:00:00.000Z",
+    "postId": "6ab63d3a4be5473030ac8406",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 19,
+    "type": "video",
+    "slot": "Friday 8:00 AM MDT (Oct 02, 2026)",
+    "dueAt": "2026-10-02T14:00:00.000Z",
+    "postId": "6ab63d3d8c95968bb03388c2",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 20,
+    "type": "video",
+    "slot": "Friday 3:00 PM MDT (Oct 02, 2026)",
+    "dueAt": "2026-10-02T21:00:00.000Z",
+    "postId": "6ab63d40a14029bcc72a82ef",
+    "status": "scheduled",
+    "assetFile": "curacao-full-highlights.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-full-highlights.mp4",
+    "cta": "Championship Collection ($14.99 CAD) & Speaking"
+  }
+]
