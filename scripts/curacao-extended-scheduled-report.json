@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "type": "video",
+    "slot": "Friday 7:00 AM MDT (Sep 25, 2026)",
+    "dueAt": "2026-09-25T13:00:00.000Z",
+    "postId": "6ab62517a14029bcc727afe3",
+    "status": "scheduled",
+    "assetFile": "curacao-extended.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-extended.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 2,
+    "type": "video",
+    "slot": "Friday 12:00 PM MDT (Sep 25, 2026)",
+    "dueAt": "2026-09-25T18:00:00.000Z",
+    "postId": "6ab6251adb73444101e5241b",
+    "status": "scheduled",
+    "assetFile": "curacao-extended.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-extended.mp4",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 3,
+    "type": "video",
+    "slot": "Friday 2:30 PM MDT (Sep 25, 2026)",
+    "dueAt": "2026-09-25T20:30:00.000Z",
+    "postId": "6ab6251d8c95968bb0309dd9",
+    "status": "scheduled",
+    "assetFile": "curacao-extended.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-extended.mp4",
+    "cta": "Official Championship Library ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 4,
+    "type": "video",
+    "slot": "Friday 8:00 PM MDT (Sep 25, 2026)",
+    "dueAt": "2026-09-26T02:00:00.000Z",
+    "postId": "6ab62520db73444101e524d1",
+    "status": "scheduled",
+    "assetFile": "curacao-extended.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-extended.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 5,
+    "type": "video",
+    "slot": "Saturday 9:30 AM MDT (Sep 26, 2026)",
+    "dueAt": "2026-09-26T15:30:00.000Z",
+    "postId": "6ab62523a14029bcc727b0f3",
+    "status": "scheduled",
+    "assetFile": "curacao-extended.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-extended.mp4",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 6,
+    "type": "video",
+    "slot": "Saturday 2:30 PM MDT (Sep 26, 2026)",
+    "dueAt": "2026-09-26T20:30:00.000Z",
+    "postId": "6ab62526607bee5b032bde80",
+    "status": "scheduled",
+    "assetFile": "curacao-extended.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-extended.mp4",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 7,
+    "type": "video",
+    "slot": "Saturday 8:00 PM MDT (Sep 26, 2026)",
+    "dueAt": "2026-09-27T02:00:00.000Z",
+    "postId": "6ab625298c95968bb0309f68",
+    "status": "scheduled",
+    "assetFile": "curacao-extended.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-extended.mp4",
+    "cta": "Official Digital Book Library ($14.99 CAD) & Speaking"
+  }
+]
