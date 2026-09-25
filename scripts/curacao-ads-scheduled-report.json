@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "type": "image",
+    "slot": "Day 1: Saturday 12:30 PM MDT (Sep 26, 2026)",
+    "dueAt": "2026-09-26T18:30:00.000Z",
+    "postId": "6ab64524db73444101e8b995",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-01.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-01.png",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 2,
+    "type": "image",
+    "slot": "Day 1: Saturday 7:15 PM MDT (Sep 26, 2026)",
+    "dueAt": "2026-09-27T01:15:00.000Z",
+    "postId": "6ab64526db73444101e8ba0b",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-02.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-02.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 3,
+    "type": "image",
+    "slot": "Day 2: Sunday 12:30 PM MDT (Sep 27, 2026)",
+    "dueAt": "2026-09-27T18:30:00.000Z",
+    "postId": "6ab64529607bee5b032f3220",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-03.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-03.png",
+    "cta": "Executive Keynote Speaking & Books"
+  },
+  {
+    "id": 4,
+    "type": "image",
+    "slot": "Day 2: Sunday 7:15 PM MDT (Sep 27, 2026)",
+    "dueAt": "2026-09-28T01:15:00.000Z",
+    "postId": "6ab6452c607bee5b032f326b",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-04.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-04.png",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 5,
+    "type": "image",
+    "slot": "Day 3: Monday 12:30 PM MDT (Sep 28, 2026)",
+    "dueAt": "2026-09-28T18:30:00.000Z",
+    "postId": "6ab6452fcbe818dd4f0170ef",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-05.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-05.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 6,
+    "type": "image",
+    "slot": "Day 3: Monday 7:15 PM MDT (Sep 28, 2026)",
+    "dueAt": "2026-09-29T01:15:00.000Z",
+    "postId": "6ab645314be5473030ad601e",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-06.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-06.png",
+    "cta": "Olympic Mindset Consulting & Books"
+  },
+  {
+    "id": 7,
+    "type": "image",
+    "slot": "Day 4: Tuesday 12:30 PM MDT (Sep 29, 2026)",
+    "dueAt": "2026-09-29T18:30:00.000Z",
+    "postId": "6ab64534db73444101e8bb11",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-07.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-07.png",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 8,
+    "type": "image",
+    "slot": "Day 4: Tuesday 7:15 PM MDT (Sep 29, 2026)",
+    "dueAt": "2026-09-30T01:15:00.000Z",
+    "postId": "6ab645378c95968bb0346aad",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-08.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-08.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 9,
+    "type": "image",
+    "slot": "Day 5: Wednesday 12:30 PM MDT (Sep 30, 2026)",
+    "dueAt": "2026-09-30T18:30:00.000Z",
+    "postId": "6ab6453aa14029bcc72b477b",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-09.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-09.png",
+    "cta": "Executive Keynote Speaking & Books"
+  },
+  {
+    "id": 10,
+    "type": "image",
+    "slot": "Day 5: Wednesday 7:15 PM MDT (Sep 30, 2026)",
+    "dueAt": "2026-10-01T01:15:00.000Z",
+    "postId": "6ab6453cdb73444101e8bb72",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-10.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-10.png",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 11,
+    "type": "image",
+    "slot": "Day 6: Thursday 12:30 PM MDT (Oct 01, 2026)",
+    "dueAt": "2026-10-01T18:30:00.000Z",
+    "postId": "6ab6453fa14029bcc72b48d8",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-11.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-11.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 12,
+    "type": "image",
+    "slot": "Day 6: Thursday 7:15 PM MDT (Oct 01, 2026)",
+    "dueAt": "2026-10-02T01:15:00.000Z",
+    "postId": "6ab645424be5473030ad61f1",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-12.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-12.png",
+    "cta": "Olympic Mindset Consulting & Books"
+  },
+  {
+    "id": 13,
+    "type": "image",
+    "slot": "Day 7: Friday 12:30 PM MDT (Oct 02, 2026)",
+    "dueAt": "2026-10-02T18:30:00.000Z",
+    "postId": "6ab64544607bee5b032f33b1",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-13.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-13.png",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 14,
+    "type": "image",
+    "slot": "Day 7: Friday 7:15 PM MDT (Oct 02, 2026)",
+    "dueAt": "2026-10-03T01:15:00.000Z",
+    "postId": "6ab64547607bee5b032f33ea",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-14.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-14.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 15,
+    "type": "image",
+    "slot": "Day 8: Saturday 12:30 PM MDT (Oct 03, 2026)",
+    "dueAt": "2026-10-03T18:30:00.000Z",
+    "postId": "6ab6454a8c95968bb0346f17",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-15.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-15.png",
+    "cta": "Executive Keynote Speaking & Books"
+  },
+  {
+    "id": 16,
+    "type": "image",
+    "slot": "Day 8: Saturday 7:15 PM MDT (Oct 03, 2026)",
+    "dueAt": "2026-10-04T01:15:00.000Z",
+    "postId": "6ab6454c4be5473030ad626d",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-16.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-16.png",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 17,
+    "type": "image",
+    "slot": "Day 9: Sunday 12:30 PM MDT (Oct 04, 2026)",
+    "dueAt": "2026-10-04T18:30:00.000Z",
+    "postId": "6ab6454f607bee5b032f3462",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-17.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-17.png",
+    "cta": "Survival Skills for Athletes ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 18,
+    "type": "image",
+    "slot": "Day 9: Sunday 7:15 PM MDT (Oct 04, 2026)",
+    "dueAt": "2026-10-05T01:15:00.000Z",
+    "postId": "6ab64552a14029bcc72b50e9",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-18.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-18.png",
+    "cta": "Olympic Mindset Consulting & Books"
+  },
+  {
+    "id": 19,
+    "type": "image",
+    "slot": "Day 10: Monday 12:30 PM MDT (Oct 05, 2026)",
+    "dueAt": "2026-10-05T18:30:00.000Z",
+    "postId": "6ab645548c95968bb0346fed",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-19.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-19.png",
+    "cta": "Finish Strong: Chasing the Olympic Dream ($14.99 CAD) & Speaking"
+  },
+  {
+    "id": 20,
+    "type": "image",
+    "slot": "Day 10: Monday 7:15 PM MDT (Oct 05, 2026)",
+    "dueAt": "2026-10-06T01:15:00.000Z",
+    "postId": "6ab64557db73444101e8bd35",
+    "status": "scheduled",
+    "assetFile": "curacao-ad-20.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-ad-20.png",
+    "cta": "Full Championship Library ($14.99 CAD) & Speaking"
+  }
+]
