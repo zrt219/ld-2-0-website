@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "type": "image",
+    "slot": "Thursday (10:30 AM MDT)",
+    "dueAt": "2026-10-01T16:30:00.000Z",
+    "postId": "6ab60a5ecbe818dd4ffa6d20",
+    "status": "scheduled",
+    "assetFile": "curacao-01.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-01.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 2,
+    "type": "image",
+    "slot": "Friday (10:30 AM MDT)",
+    "dueAt": "2026-10-02T16:30:00.000Z",
+    "postId": "6ab60a618c95968bb02d7043",
+    "status": "scheduled",
+    "assetFile": "curacao-02.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-02.png",
+    "cta": "Keynote Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 3,
+    "type": "image",
+    "slot": "Saturday (11:30 AM MDT)",
+    "dueAt": "2026-10-03T17:30:00.000Z",
+    "postId": "6ab60a63db73444101e1e663",
+    "status": "scheduled",
+    "assetFile": "curacao-03.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-03.png",
+    "cta": "Survival Skills for Athletes (lornettedaye.com/books)"
+  },
+  {
+    "id": 4,
+    "type": "video",
+    "slot": "Sunday (11:30 AM MDT)",
+    "dueAt": "2026-10-04T17:30:00.000Z",
+    "postId": "6ab60a668c95968bb02d70b5",
+    "status": "scheduled",
+    "assetFile": "curacao.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao.mp4",
+    "cta": "Keynotes & Book Catalog (lornettedaye.com)"
+  },
+  {
+    "id": 5,
+    "type": "image",
+    "slot": "Monday (03:15 PM MDT)",
+    "dueAt": "2026-10-05T21:15:00.000Z",
+    "postId": "6ab60a68db73444101e1e807",
+    "status": "scheduled",
+    "assetFile": "curacao-04.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-04.png",
+    "cta": "Executive Speaking (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 6,
+    "type": "image",
+    "slot": "Tuesday (07:00 AM MDT)",
+    "dueAt": "2026-10-06T13:00:00.000Z",
+    "postId": "6ab60a6acbe818dd4ffa6eac",
+    "status": "scheduled",
+    "assetFile": "curacao-05.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-05.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 7,
+    "type": "image",
+    "slot": "Wednesday (07:00 AM MDT)",
+    "dueAt": "2026-10-07T13:00:00.000Z",
+    "postId": "6ab60a6d4be5473030a653ae",
+    "status": "scheduled",
+    "assetFile": "curacao-06.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-06.png",
+    "cta": "Survival Skills for Athletes (lornettedaye.com/books)"
+  },
+  {
+    "id": 8,
+    "type": "video",
+    "slot": "Thursday (07:00 AM MDT)",
+    "dueAt": "2026-10-08T13:00:00.000Z",
+    "postId": "6ab60a6f607bee5b03287210",
+    "status": "scheduled",
+    "assetFile": "curacao.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao.mp4",
+    "cta": "Keynotes & Executive Summits (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 9,
+    "type": "image",
+    "slot": "Friday (07:00 AM MDT)",
+    "dueAt": "2026-10-09T13:00:00.000Z",
+    "postId": "6ab60a71cbe818dd4ffa6f61",
+    "status": "scheduled",
+    "assetFile": "curacao-07.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-07.png",
+    "cta": "Executive Coaching (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 10,
+    "type": "image",
+    "slot": "Saturday (02:00 PM MDT)",
+    "dueAt": "2026-10-10T20:00:00.000Z",
+    "postId": "6ab60a74a14029bcc7249ed9",
+    "status": "scheduled",
+    "assetFile": "curacao-08.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-08.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 11,
+    "type": "image",
+    "slot": "Sunday (02:00 PM MDT)",
+    "dueAt": "2026-10-11T20:00:00.000Z",
+    "postId": "6ab60a76607bee5b032872e1",
+    "status": "scheduled",
+    "assetFile": "curacao-09.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-09.png",
+    "cta": "Survival Skills for Athletes (lornettedaye.com/books)"
+  },
+  {
+    "id": 12,
+    "type": "video",
+    "slot": "Monday (02:00 PM MDT)",
+    "dueAt": "2026-10-12T20:00:00.000Z",
+    "postId": "6ab60a78a14029bcc7249f20",
+    "status": "scheduled",
+    "assetFile": "curacao.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao.mp4",
+    "cta": "Official Website & Books (lornettedaye.com)"
+  },
+  {
+    "id": 13,
+    "type": "image",
+    "slot": "Tuesday (06:45 AM MDT)",
+    "dueAt": "2026-10-13T12:45:00.000Z",
+    "postId": "6ab60a7adb73444101e1ea8a",
+    "status": "scheduled",
+    "assetFile": "curacao-10.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-10.png",
+    "cta": "Finish Strong Book (lornettedaye.com/books)"
+  },
+  {
+    "id": 14,
+    "type": "image",
+    "slot": "Wednesday (06:45 AM MDT)",
+    "dueAt": "2026-10-14T12:45:00.000Z",
+    "postId": "6ab60a7ca14029bcc7249f68",
+    "status": "scheduled",
+    "assetFile": "curacao-11.png",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao-11.png",
+    "cta": "Keynotes & Summits (lornettedaye.com/speaking)"
+  },
+  {
+    "id": 15,
+    "type": "video",
+    "slot": "Thursday (06:45 AM MDT)",
+    "dueAt": "2026-10-15T12:45:00.000Z",
+    "postId": "6ab60a7fdb73444101e1eb15",
+    "status": "scheduled",
+    "assetFile": "curacao.mp4",
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao/curacao.mp4",
+    "cta": "Official Leadership Catalog (lornettedaye.com)"
+  }
+]
