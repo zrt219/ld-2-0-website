@@ -6,7 +6,7 @@ const routes = [
     expectedImages: [
       'lornette-golf-putting-green-sunrise.png',
       'sunlight-golf-dew-flag.jpg',
-      'lornette-golf-coastal-links-sunrise.jpg',
+      'golfer-composure-green.jpg',
       'sunlight-golf-fairway-sunrise.jpg',
       'lornette-golf-simulator-studio-tablet.png'
     ]

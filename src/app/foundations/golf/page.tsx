@@ -57,7 +57,7 @@ const coreOutcomes = [
   {
     title: "Identity Grounded Beyond the Score",
     description:
-      "Separate your core self-worth from the numbers on the scorecard. Compete with freedom, discipline, and authority knowing your foundation remains unbroken regardless of outcome.",
+      "Separate your core self-worth from the numbers on the scorecard. Compete with freedom, discipline, and authority knowing your identity and worth remains unbroken regardless of outcome.",
   },
 ];
 
@@ -602,12 +602,12 @@ export default function FoundationsGolfPage() {
               </div>
               <div className="relative w-full aspect-[16/9] lg:aspect-auto lg:col-span-6 lg:min-h-[320px] order-1 lg:order-2">
                 <Image
-                  src="/foundations/golf/lornette-golf-coastal-links-sunrise.jpg"
-                  alt="Lornette Daye in white tailored suit standing by a custom golf bag overlooking a panoramic championship coastal links course at sunrise"
+                  src="/foundations/golf/golfer-composure-green.jpg"
+                  alt="Competitive golfer crouching on putting green lining up putt under tournament pressure"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
-                  style={{ objectPosition: "72% 20%" }}
+                  style={{ objectPosition: "35% 25%" }}
                 />
                 <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/20" />
               </div>

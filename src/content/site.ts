@@ -137,7 +137,7 @@ export type BookListing = {
 
 export const siteCopy = {
   brandName: "Lornette Daye",
-  contactEmail: "ldayespeaking@gmail.com",
+  contactEmail: "lornettedaye@umattr.ca",
   seoTitle: "Lornette Daye | Transformational Speaker",
   seoDescription:
     "Keynote speaking, leadership development, inclusion, mentorship, youth development, and performance coaching with Lornette Daye.",
@@ -172,7 +172,7 @@ export const siteCopy = {
   ],
   socialLinks: [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/lornette-d-419276358" },
-    { label: "Email", href: "mailto:ldayespeaking@gmail.com" },
+    { label: "Email", href: "mailto:lornettedaye@umattr.ca" },
   ],
 };
 

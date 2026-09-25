@@ -583,7 +583,7 @@ test.describe("foundations visual assets verification", () => {
     await expect(page.locator("img[src*='sunlight-golf-dew-flag.jpg']")).toHaveCount(1);
     await expect(page.locator("img[src*='sunlight-golf-fairway-sunrise.jpg']")).toHaveCount(1);
     await expect(page.locator("img[src*='lornette-golf-simulator-studio-tablet.png']")).toHaveCount(1);
-    await expect(page.locator("img[src*='lornette-golf-coastal-links-sunrise.jpg']")).toHaveCount(1);
+    await expect(page.locator("img[src*='golfer-composure-green.jpg']")).toHaveCount(1);
 
     await page.goto("/foundations/golf/keynote");
     await expect(page.locator("img[src*='lornette-golf-keynote-podium.png']")).toHaveCount(1);
