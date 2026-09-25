@@ -181,7 +181,7 @@ const golfTools = [
     whiteboard: "The Attention Game",
     tagline: "Win the internal battle for your eyes and mind.",
     description:
-      "In a 4-hour round, you swing for less than 4 minutes. We teach you to own the other 236. Toggle focus on and off, silence internal noise, and arrive at every address fully present.",
+      "In a 4-hour round, you swing for less than 4 minutes. We teach you to own the other 236. Activate focus more effectively, silence internal noise, and arrive at every location fully present.",
   },
   {
     number: "02",
@@ -787,7 +787,7 @@ export default function FoundationsGolfPage() {
         </section>
 
         {/* One Foundation at a Time: The Learning Rhythm */}
-        <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <section className="px-4 pt-16 pb-8 sm:px-6 sm:pt-20 sm:pb-10 lg:px-8 lg:pt-24 lg:pb-12">
           <div className="mx-auto max-w-7xl">
             <div className="text-center max-w-3xl mx-auto">
               <p className="text-xs font-bold uppercase tracking-[0.26em] text-[var(--gold-dark)]">
@@ -840,7 +840,7 @@ export default function FoundationsGolfPage() {
         </section>
 
         {/* Formats & Engagement */}
-        <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <section className="px-4 pt-4 pb-16 sm:px-6 sm:pt-6 sm:pb-20 lg:px-8 lg:pt-8 lg:pb-24">
           <div className="mx-auto max-w-7xl">
             <div className="text-center max-w-3xl mx-auto">
               <p className="text-xs font-bold uppercase tracking-[0.26em] text-[var(--gold-dark)]">
