@@ -147,7 +147,7 @@ const weeklyRhythmSteps = [
 
 const golfFaqs = [
   {
-    question: "Who is Lornette’s Foundation Golf designed for?",
+    question: "Who is Lornette’s Foundations Golf designed for?",
     answer:
       "This program is crafted for dedicated competitive golfers: junior tournament competitors preparing for collegiate recruiting, high school and collegiate athletes, mid-amateur tournament players, and aspiring professionals seeking an evidence-based mental edge under intense pressure.",
   },
