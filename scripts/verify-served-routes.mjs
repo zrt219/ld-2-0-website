@@ -8,7 +8,7 @@ const routes = [
       'sunlight-golf-dew-flag.jpg',
       'golfer-composure-green.jpg',
       'sunlight-golf-fairway-sunrise.jpg',
-      'lornette-golf-simulator-studio-tablet.png'
+      'golf-range-tablet-analytics.jpg'
     ]
   },
   {

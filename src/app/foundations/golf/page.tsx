@@ -890,12 +890,12 @@ export default function FoundationsGolfPage() {
             <div className="mt-14 overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] grid lg:grid-cols-12">
               <div className="relative aspect-[16/9] lg:aspect-auto lg:col-span-6 min-h-[320px]">
                 <Image
-                  src="/foundations/golf/lornette-golf-simulator-studio-tablet.png"
-                  alt="Lornette Daye holding a digital tablet in a luxury indoor golf studio with putting green and swing analysis monitors"
+                  src="/foundations/golf/golf-range-tablet-analytics.jpg"
+                  alt="Golf coach and competitive player analyzing swing data on a tablet at the outdoor practice range with launch monitor"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
-                  style={{ objectPosition: "32% 18%" }}
+                  style={{ objectPosition: "center 20%" }}
                 />
                 <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/20" />
               </div>
