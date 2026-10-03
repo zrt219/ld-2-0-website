@@ -6,17 +6,18 @@ with open('scripts/master-campaign-queue.json', 'r', encoding='utf-8') as f:
 
 by_due = defaultdict(list)
 camp_ranges = defaultdict(list)
-camp_status = defaultdict(lambda: {'scheduled': 0, 'pending': 0, 'failed': 0})
+camp_status = defaultdict(lambda: defaultdict(int))
 
 for item in queue:
-    by_due[item['dueAt']].append(f"{item['campaign']}#{item['postId']} ({item['status']})")
+    by_due[item['dueAt']].append(f"{item['campaign']}#{item.get('postId', '')} ({item.get('status', 'unknown')})")
     camp_ranges[item['campaign']].append(item['dueAt'])
-    camp_status[item['campaign']][item['status']] += 1
+    camp_status[item['campaign']][item.get('status', 'unknown')] += 1
 
 print("--- CAMPAIGN SUMMARY & DATE RANGES ---")
 for camp, dues in camp_ranges.items():
     st = camp_status[camp]
-    print(f"{camp:20s}: {len(dues):2d} posts | sched={st['scheduled']:2d}, pend={st['pending']:2d} | {min(dues)} to {max(dues)}")
+    status_str = ", ".join(f"{k}={v}" for k, v in sorted(st.items()))
+    print(f"{camp:25s}: {len(dues):2d} posts | {status_str} | {min(dues)} to {max(dues)}")
 
 print("\n--- COLLISIONS (SAME TIMESTAMP FOR MULTIPLE POSTS) ---")
 coll_count = 0
