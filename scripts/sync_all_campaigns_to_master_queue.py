@@ -30,6 +30,7 @@ def sync_queue():
     reports_to_sync = [
         ("Business Athletes (60 Days)", "scripts/business-athletes-scheduled-report.json", "Business Athletes"),
         ("Own The Next Chapter (60 Days / 180 Posts)", "scripts/own-the-next-chapter-scheduled-report.json", "Own The Next Chapter"),
+        ("Thierry Henry (40 Days / 120 Posts)", "scripts/thierry-henry-scheduled-report.json", "Thierry Henry"),
     ]
 
     total_added = 0

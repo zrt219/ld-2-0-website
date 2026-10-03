@@ -28,6 +28,21 @@ const campaignPipelines = [
     name: 'Michael Penix Jr. Campaign (14 posts)',
     script: 'schedule-penix-campaign.py',
     sync: 'sync_penix_to_queue.py'
+  },
+  {
+    name: 'Business Athletes Campaign (60 posts)',
+    script: 'schedule-business-athletes.py',
+    sync: 'sync_all_campaigns_to_master_queue.py'
+  },
+  {
+    name: 'Own The Next Chapter Campaign (180 posts)',
+    script: 'schedule-own-the-next-chapter.py',
+    sync: 'sync_all_campaigns_to_master_queue.py'
+  },
+  {
+    name: 'Thierry Henry: Vision Beyond the Game (120 posts)',
+    script: 'schedule-thierry-henry.py',
+    sync: 'sync_all_campaigns_to_master_queue.py'
   }
 ];
 
