@@ -1,6 +1,6 @@
 {
-  "totalScheduled": 235,
-  "pending": 30,
+  "totalScheduled": 249,
+  "pending": 44,
   "posts": [
     {
       "globalId": 1,
@@ -3045,6 +3045,174 @@
       "assetFile": "setback-not-finish-line.jpg",
       "assetUrl": "https://lornettedaye.com/campaigns/finish-strong-keynote/setback-not-finish-line.jpg",
       "cta": "Buy Book (lornettedaye.com/books)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-01",
+      "type": "image",
+      "dueAt": "2026-10-03T15:30:00.000Z",
+      "slot": "Day 1: Saturday, Oct 03, 2026 at 09:30 AM MDT",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-01.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-01.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-02",
+      "type": "image",
+      "dueAt": "2026-10-04T15:30:00.000Z",
+      "slot": "Day 2: Sunday, Oct 04, 2026 at 09:30 AM MDT (NFL Game Day)",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-golden-starter-poster.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-golden-starter-poster.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-03",
+      "type": "image",
+      "dueAt": "2026-10-05T15:30:00.000Z",
+      "slot": "Day 3: Monday, Oct 05, 2026 at 09:30 AM MDT",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-02.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-02.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-04",
+      "type": "image",
+      "dueAt": "2026-10-06T15:30:00.000Z",
+      "slot": "Day 4: Tuesday, Oct 06, 2026 at 09:30 AM MDT",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-03.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-03.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-05",
+      "type": "image",
+      "dueAt": "2026-10-07T15:30:00.000Z",
+      "slot": "Day 5: Wednesday, Oct 07, 2026 at 09:30 AM MDT",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-04.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-04.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-06",
+      "type": "image",
+      "dueAt": "2026-10-08T15:30:00.000Z",
+      "slot": "Day 6: Thursday, Oct 08, 2026 at 09:30 AM MDT",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-05.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-05.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-07",
+      "type": "image",
+      "dueAt": "2026-10-09T15:30:00.000Z",
+      "slot": "Day 7: Friday, Oct 09, 2026 at 09:30 AM MDT",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-06.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-06.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-08",
+      "type": "image",
+      "dueAt": "2026-10-10T15:30:00.000Z",
+      "slot": "Day 8: Saturday, Oct 10, 2026 at 09:30 AM MDT",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-07.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-07.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-09",
+      "type": "image",
+      "dueAt": "2026-10-11T15:30:00.000Z",
+      "slot": "Day 9: Sunday, Oct 11, 2026 at 09:30 AM MDT (NFL Game Day)",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-golden-starter-poster.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-golden-starter-poster.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-10",
+      "type": "image",
+      "dueAt": "2026-10-12T15:30:00.000Z",
+      "slot": "Day 10: Monday, Oct 12, 2026 at 09:30 AM MDT",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-08.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-08.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-11",
+      "type": "image",
+      "dueAt": "2026-10-13T15:30:00.000Z",
+      "slot": "Day 11: Tuesday, Oct 13, 2026 at 09:30 AM MDT",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-09.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-09.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-12",
+      "type": "image",
+      "dueAt": "2026-10-14T15:30:00.000Z",
+      "slot": "Day 12: Wednesday, Oct 14, 2026 at 09:30 AM MDT",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-10.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-10.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-13",
+      "type": "image",
+      "dueAt": "2026-10-15T15:30:00.000Z",
+      "slot": "Day 13: Thursday, Oct 15, 2026 at 09:30 AM MDT",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-01.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-01.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
+    },
+    {
+      "campaign": "penix",
+      "id": "penix-14",
+      "type": "image",
+      "dueAt": "2026-10-16T15:30:00.000Z",
+      "slot": "Day 14: Friday, Oct 16, 2026 at 09:30 AM MDT",
+      "postId": "",
+      "status": "staged",
+      "assetFile": "penix-golden-starter-poster.png",
+      "assetUrl": "https://lornettedaye.com/campaigns/penix/penix-golden-starter-poster.png",
+      "cta": "Book Keynote (lornettedaye.com/book)"
     }
   ]
 }
