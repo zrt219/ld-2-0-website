@@ -5,9 +5,11 @@
     "type": "image",
     "slot": "Tonight: Friday 8:00 PM MDT (Oct 02, 2026)",
     "dueAt": "2026-10-03T02:00:00.000Z",
+    "postId": "6ac04cddf942e39137030df9",
+    "status": "scheduled",
     "assetFile": "curacao-streak-01.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-01.png",
+    "cta": "Book Lornette (lornettedaye.com/book) & Buy a Book (lornettedaye.com/books)"
   },
   {
     "id": 2,
@@ -15,19 +17,23 @@
     "type": "image",
     "slot": "Day 1: Saturday 9:00 AM MDT (Oct 03, 2026)",
     "dueAt": "2026-10-03T15:00:00.000Z",
+    "postId": "6ac04ce008f9f1f9691f17ab",
+    "status": "scheduled",
     "assetFile": "curacao-streak-02.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-02.png",
+    "cta": "Buy a Book (lornettedaye.com/books) & Book Lornette (lornettedaye.com/book)"
   },
   {
     "id": 3,
     "wave": "Wave 1: Fulfilling My Prediction",
     "type": "image",
-    "slot": "Day 1: Saturday 4:30 PM MDT (Oct 03, 2026)",
-    "dueAt": "2026-10-03T22:30:00.000Z",
+    "slot": "Day 1: Saturday 5:30 PM MDT (Oct 03, 2026)",
+    "dueAt": "2026-10-03T23:30:00.000Z",
+    "postId": "6ac04ce3724c7034229b885c",
+    "status": "scheduled",
     "assetFile": "curacao-streak-03.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-03.png",
+    "cta": "Book Lornette (lornettedaye.com/book) & Buy a Book (lornettedaye.com/books)"
   },
   {
     "id": 4,
@@ -35,19 +41,23 @@
     "type": "image",
     "slot": "Day 2: Sunday 9:00 AM MDT (Oct 04, 2026)",
     "dueAt": "2026-10-04T15:00:00.000Z",
+    "postId": "6ac04ce66b1c05e151e76363",
+    "status": "scheduled",
     "assetFile": "curacao-streak-04.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-04.png",
+    "cta": "Buy a Book (lornettedaye.com/books) & Book Lornette (lornettedaye.com/book)"
   },
   {
     "id": 5,
     "wave": "Wave 1: Fulfilling My Prediction",
     "type": "image",
-    "slot": "Day 2: Sunday 4:30 PM MDT (Oct 04, 2026)",
-    "dueAt": "2026-10-04T22:30:00.000Z",
+    "slot": "Day 2: Sunday 5:30 PM MDT (Oct 04, 2026)",
+    "dueAt": "2026-10-04T23:30:00.000Z",
+    "postId": "6ac04ce95831428806aa9c41",
+    "status": "scheduled",
     "assetFile": "curacao-streak-05.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-05.png",
+    "cta": "Book Lornette (lornettedaye.com/book) & Buy a Book (lornettedaye.com/books)"
   },
   {
     "id": 6,
@@ -55,9 +65,11 @@
     "type": "image",
     "slot": "Day 3: Monday 9:00 AM MDT (Oct 05, 2026)",
     "dueAt": "2026-10-05T15:00:00.000Z",
+    "postId": "6ac04ceb6b1c05e151e763d2",
+    "status": "scheduled",
     "assetFile": "curacao-streak-06.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-06.png",
+    "cta": "Buy a Book (lornettedaye.com/books) & Book Lornette (lornettedaye.com/book)"
   },
   {
     "id": 7,
@@ -65,9 +77,11 @@
     "type": "image",
     "slot": "Day 3: Monday 6:00 PM MDT (Oct 05, 2026)",
     "dueAt": "2026-10-06T00:00:00.000Z",
+    "postId": "6ac04cee724c7034229b8932",
+    "status": "scheduled",
     "assetFile": "curacao-streak-07.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-07.png",
+    "cta": "Book Lornette (lornettedaye.com/book) & Buy a Book (lornettedaye.com/books)"
   },
   {
     "id": 8,
@@ -75,9 +89,11 @@
     "type": "image",
     "slot": "Day 4: Tuesday 11:00 AM MDT (Oct 06, 2026)",
     "dueAt": "2026-10-06T17:00:00.000Z",
+    "postId": "6ac04cf1ad2f47bd7d4d39ac",
+    "status": "scheduled",
     "assetFile": "curacao-streak-08.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-08.png",
+    "cta": "Buy a Book (lornettedaye.com/books) & Book Lornette (lornettedaye.com/book)"
   },
   {
     "id": 9,
@@ -85,9 +101,11 @@
     "type": "image",
     "slot": "Day 4: Tuesday 7:00 PM MDT (Oct 06, 2026)",
     "dueAt": "2026-10-07T01:00:00.000Z",
+    "postId": "6ac04cf3f942e39137030fc9",
+    "status": "scheduled",
     "assetFile": "curacao-streak-09.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-09.png",
+    "cta": "Book Lornette (lornettedaye.com/book) & Buy a Book (lornettedaye.com/books)"
   },
   {
     "id": 10,
@@ -95,9 +113,11 @@
     "type": "image",
     "slot": "Day 5: Wednesday 11:00 AM MDT (Oct 07, 2026)",
     "dueAt": "2026-10-07T17:00:00.000Z",
+    "postId": "6ac04cf65831428806aa9d0c",
+    "status": "scheduled",
     "assetFile": "curacao-streak-10.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-10.png",
+    "cta": "Buy a Book (lornettedaye.com/books) & Book Lornette (lornettedaye.com/book)"
   },
   {
     "id": 11,
@@ -105,9 +125,11 @@
     "type": "image",
     "slot": "Day 5: Wednesday 7:00 PM MDT (Oct 07, 2026)",
     "dueAt": "2026-10-08T01:00:00.000Z",
+    "postId": "6ac04cf96b1c05e151e7649e",
+    "status": "scheduled",
     "assetFile": "curacao-streak-11.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-11.png",
+    "cta": "Book Lornette (lornettedaye.com/book) & Buy a Book (lornettedaye.com/books)"
   },
   {
     "id": 12,
@@ -115,9 +137,11 @@
     "type": "image",
     "slot": "Day 6: Thursday 11:00 AM MDT (Oct 08, 2026)",
     "dueAt": "2026-10-08T17:00:00.000Z",
+    "postId": "6ac04cfbf942e39137031073",
+    "status": "scheduled",
     "assetFile": "curacao-streak-12.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-12.png",
+    "cta": "Buy a Book (lornettedaye.com/books) & Book Lornette (lornettedaye.com/book)"
   },
   {
     "id": 13,
@@ -125,9 +149,11 @@
     "type": "image",
     "slot": "Day 6: Thursday 7:00 PM MDT (Oct 08, 2026)",
     "dueAt": "2026-10-09T01:00:00.000Z",
+    "postId": "6ac04cfe6b1c05e151e76509",
+    "status": "scheduled",
     "assetFile": "curacao-streak-13.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-13.png",
+    "cta": "Book Lornette (lornettedaye.com/book) & Buy a Book (lornettedaye.com/books)"
   },
   {
     "id": 14,
@@ -135,9 +161,11 @@
     "type": "image",
     "slot": "Day 7: Friday 11:00 AM MDT (Oct 09, 2026)",
     "dueAt": "2026-10-09T17:00:00.000Z",
+    "postId": "6ac04d01ad2f47bd7d4d3afa",
+    "status": "scheduled",
     "assetFile": "curacao-streak-14.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-14.png",
+    "cta": "Buy a Book (lornettedaye.com/books) & Book Lornette (lornettedaye.com/book)"
   },
   {
     "id": 15,
@@ -145,9 +173,11 @@
     "type": "image",
     "slot": "Day 7: Friday 7:00 PM MDT (Oct 09, 2026)",
     "dueAt": "2026-10-10T01:00:00.000Z",
+    "postId": "6ac04d03724c7034229b8b24",
+    "status": "scheduled",
     "assetFile": "curacao-streak-15.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-15.png",
+    "cta": "Book Lornette (lornettedaye.com/book) & Buy a Book (lornettedaye.com/books)"
   },
   {
     "id": 16,
@@ -155,9 +185,11 @@
     "type": "image",
     "slot": "Day 8: Saturday 10:00 AM MDT (Oct 10, 2026)",
     "dueAt": "2026-10-10T16:00:00.000Z",
+    "postId": "6ac04d066b1c05e151e76579",
+    "status": "scheduled",
     "assetFile": "curacao-streak-16.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-16.png",
+    "cta": "Buy a Book (lornettedaye.com/books) & Book Lornette (lornettedaye.com/book)"
   },
   {
     "id": 17,
@@ -165,9 +197,11 @@
     "type": "image",
     "slot": "Day 8: Saturday 5:00 PM MDT (Oct 10, 2026)",
     "dueAt": "2026-10-10T23:00:00.000Z",
+    "postId": "6ac04d09724c7034229b8b83",
+    "status": "scheduled",
     "assetFile": "curacao-streak-17.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-17.png",
+    "cta": "Book Lornette (lornettedaye.com/book) & Buy a Book (lornettedaye.com/books)"
   },
   {
     "id": 18,
@@ -175,9 +209,11 @@
     "type": "image",
     "slot": "Day 9: Sunday 10:00 AM MDT (Oct 11, 2026)",
     "dueAt": "2026-10-11T16:00:00.000Z",
+    "postId": "6ac04d0bad2f47bd7d4d3bc9",
+    "status": "scheduled",
     "assetFile": "curacao-streak-18.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-18.png",
+    "cta": "Buy a Book (lornettedaye.com/books) & Book Lornette (lornettedaye.com/book)"
   },
   {
     "id": 19,
@@ -185,8 +221,10 @@
     "type": "image",
     "slot": "Day 9: Sunday 5:00 PM MDT (Oct 11, 2026)",
     "dueAt": "2026-10-11T23:00:00.000Z",
+    "postId": "6ac04d0e724c7034229b8bc7",
+    "status": "scheduled",
     "assetFile": "curacao-streak-19.png",
-    "error": "HTTP Error 401: Unauthorized",
-    "status": "failed"
+    "assetUrl": "https://lornettedaye.com/campaigns/curacao-streak/curacao-streak-19.png",
+    "cta": "Book Lornette (lornettedaye.com/book) & Buy a Book (lornettedaye.com/books)"
   }
 ]

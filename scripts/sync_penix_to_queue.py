@@ -16,35 +16,53 @@ else:
     spec.loader.exec_module(mod)
     penix_posts = mod.posts_data
 
-existing_ids = {p.get('postId') or p.get('id') for p in master_queue}
+queue_map = {p.get('id'): p for p in master_queue if p.get('id')}
 
 added = 0
+updated = 0
 for pp in penix_posts:
     pid = f"penix-{pp['id']:02d}"
-    if pid not in existing_ids:
-        master_queue.append({
+    b_pid = pp.get('postId', '')
+    status = pp.get('status', 'scheduled' if b_pid else 'staged')
+    if pid in queue_map:
+        queue_map[pid]['postId'] = b_pid
+        queue_map[pid]['bufferPostId'] = b_pid
+        queue_map[pid]['status'] = status
+        queue_map[pid]['dueAt'] = pp['dueAt']
+        queue_map[pid]['slot'] = pp['slot']
+        queue_map[pid]['assetFile'] = pp['assetFile']
+        queue_map[pid]['assetUrl'] = pp['assetUrl']
+        queue_map[pid]['cta'] = pp.get('cta', '')
+        updated += 1
+    else:
+        entry = {
             'campaign': 'penix',
             'id': pid,
             'type': pp.get('type', 'image'),
             'dueAt': pp['dueAt'],
             'slot': pp['slot'],
-            'postId': pp.get('postId', ''),
-            'status': pp.get('status', 'staged'),
+            'postId': b_pid,
+            'bufferPostId': b_pid,
+            'status': status,
             'assetFile': pp['assetFile'],
             'assetUrl': pp['assetUrl'],
             'cta': pp.get('cta', '')
-        })
-        existing_ids.add(pid)
+        }
+        master_queue.append(entry)
+        queue_map[pid] = entry
         added += 1
 
-print(f"Added {added} Michael Penix Jr. posts to master queue. Total items in master queue: {len(master_queue)}")
+print(f"Michael Penix Jr. sync: {updated} updated, {added} added. Total items in master queue: {len(master_queue)}")
+
+total_scheduled = sum(1 for p in master_queue if p.get('status') in ['scheduled', 'success'] and (p.get('postId') or p.get('bufferPostId')))
+pending = len(master_queue) - total_scheduled
 
 with open('scripts/master-campaign-queue.json', 'w', encoding='utf-8') as f:
     json.dump(master_queue, f, indent=2, ensure_ascii=False)
 
 with open('scripts/scheduled-master-report.json', 'w', encoding='utf-8') as f:
     json.dump({
-        'totalScheduled': len(master_queue),
-        'pending': sum(1 for p in master_queue if p.get('status') in ['staged', 'pending', 'failed']),
+        'totalScheduled': total_scheduled,
+        'pending': pending,
         'posts': master_queue
     }, f, indent=2, ensure_ascii=False)

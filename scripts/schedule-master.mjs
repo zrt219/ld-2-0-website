@@ -12,12 +12,23 @@ const scriptsDir = path.join(process.cwd(), 'scripts');
 const queuePath = path.join(scriptsDir, 'master-campaign-queue.json');
 const reportPath = path.join(scriptsDir, 'scheduled-master-report.json');
 
-// Ordered list of scripts handling pending campaigns in sequence
-const pendingCampaignScripts = [
-  'schedule-tyrese-gibson-campaign.py',
-  'schedule-yaroslava-mahuchikh-campaign.py',
-  'schedule-saquon-barkley-campaign.py',
-  'schedule-mendoza-campaign.py'
+// Ordered list of campaigns and their sync scripts in sequence
+const campaignPipelines = [
+  {
+    name: 'Curaçao 3-Win Streak Campaign (19 posts)',
+    script: 'schedule-curacao-streak.py',
+    sync: 'sync_curacao_streak_to_queue.py'
+  },
+  {
+    name: 'Finish Strong Keynote 60-Day Campaign (30 posts)',
+    script: 'schedule-finish-strong-keynote.py',
+    sync: 'sync_finish_strong_keynote_to_queue.py'
+  },
+  {
+    name: 'Michael Penix Jr. Campaign (14 posts)',
+    script: 'schedule-penix-campaign.py',
+    sync: 'sync_penix_to_queue.py'
+  }
 ];
 
 console.log('======================================================================');
@@ -25,29 +36,31 @@ console.log('MASTER CAMPAIGN QUEUE DAEMON & CATCHUP RUNNER');
 console.log(`Execution Time: ${new Date().toISOString()}`);
 console.log('======================================================================\n');
 
-let rateLimitEncountered = false;
-
-for (const scriptName of pendingCampaignScripts) {
-  const scriptPath = path.join(scriptsDir, scriptName);
+for (const pipeline of campaignPipelines) {
+  const scriptPath = path.join(scriptsDir, pipeline.script);
   if (!fs.existsSync(scriptPath)) {
-    console.warn(`[Queue Daemon] Warning: ${scriptName} not found at ${scriptPath}`);
+    console.warn(`[Queue Daemon] Warning: ${pipeline.script} not found at ${scriptPath}`);
     continue;
   }
 
-  console.log(`\n>>> [Queue Daemon] Executing ${scriptName}...`);
+  console.log(`\n>>> [Queue Daemon] Executing ${pipeline.name} (${pipeline.script})...`);
   try {
-    execSync(`python "${scriptPath}"`, { stdio: 'inherit' });
+    execSync(`python "${scriptPath}"`, { stdio: 'inherit', env: process.env });
   } catch (err) {
-    console.warn(`[Queue Daemon] ${scriptName} completed with exit notice (e.g. rate limit pause).`);
+    console.warn(`[Queue Daemon] ${pipeline.script} finished with notice/error: ${err.message}`);
   }
-}
 
-// Synchronize the master queue and master execution report
-console.log('\n>>> [Queue Daemon] Synchronizing master campaign queue and reports...');
-try {
-  execSync(`python "${path.join(scriptsDir, 'sync_master_queue.py')}"`, { stdio: 'inherit' });
-} catch (err) {
-  console.error('[Queue Daemon] Error synchronizing master queue:', err.message);
+  if (pipeline.sync) {
+    const syncPath = path.join(scriptsDir, pipeline.sync);
+    if (fs.existsSync(syncPath)) {
+      console.log(`>>> [Queue Daemon] Synchronizing ${pipeline.name} to master queue...`);
+      try {
+        execSync(`python "${syncPath}"`, { stdio: 'inherit', env: process.env });
+      } catch (err) {
+        console.error(`[Queue Daemon] Error syncing ${pipeline.sync}:`, err.message);
+      }
+    }
+  }
 }
 
 // Read updated master report
@@ -55,11 +68,14 @@ if (fs.existsSync(reportPath)) {
   try {
     const report = JSON.parse(fs.readFileSync(reportPath, 'utf-8'));
     console.log('\n======================================================================');
-    console.log(`STATUS SUMMARY: ${report.scheduledCount}/${report.totalPosts} posts scheduled (${report.completionRate})`);
-    console.log(`Pending: ${report.pendingCount} posts`);
-    if (report.rateLimitHit) {
-      console.log(`Rate Limit Cooldown: ${report.rateLimitDetails.reason}`);
-      console.log(`Autonomous Catchup Command: ${report.rateLimitDetails.recoveryCommand}`);
+    const totalScheduled = report.totalScheduled || (report.posts ? report.posts.filter(p => p.status === 'scheduled' || p.status === 'success').length : 0);
+    const totalPosts = (report.posts || []).length;
+    const pendingCount = report.pending !== undefined ? report.pending : (totalPosts - totalScheduled);
+    const completionRate = totalPosts > 0 ? ((totalScheduled / totalPosts) * 100).toFixed(1) + '%' : '0%';
+    console.log(`STATUS SUMMARY: ${totalScheduled}/${totalPosts} posts scheduled (${completionRate})`);
+    console.log(`Pending: ${pendingCount} posts`);
+    if (pendingCount > 0) {
+      console.log(`Autonomous Catchup Command: node scripts/schedule-master.mjs --catchup`);
     } else {
       console.log('ALL POSTS SUCCESSFULLY SCHEDULED IN BUFFER!');
     }

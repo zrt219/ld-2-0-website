@@ -10,7 +10,22 @@ import time
 sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
 sys.stderr.reconfigure(encoding='utf-8', line_buffering=True)
 
-TOKEN = os.environ.get('BUFFER_ACCESS_TOKEN', '')
+def get_token():
+    t = os.environ.get('BUFFER_ACCESS_TOKEN')
+    if t:
+        return t
+    for env_name in ['.env.local', '.env']:
+        p = os.path.join(os.path.dirname(__file__), '..', env_name)
+        if os.path.exists(p):
+            with open(p, 'r', encoding='utf-8') as f:
+                for line in f:
+                    if line.startswith('BUFFER_ACCESS_TOKEN='):
+                        val = line.strip().split('=', 1)[1].strip()
+                        if val:
+                            return val
+    return 'uR7DeyYk4O9VcFHqPQOnWseUl7BONqA8RZ4CK_03Ci0'
+
+TOKEN = get_token()
 CHANNEL_ID = '6a39d30c5ab6d2f1065f5301'  # Lornette Daye LinkedIn
 
 CDN_BASE = 'https://lornettedaye.com/campaigns/penix'
@@ -434,80 +449,121 @@ def schedule_posts():
             dueAt
           }
         }
-        ... on UserError {
+        ... on LimitReachedError {
+          message
+        }
+        ... on InvalidInputError {
+          message
+        }
+        ... on UnexpectedError {
+          message
+        }
+        ... on UnauthorizedError {
           message
         }
       }
     }
     """
 
-    results = []
-    success_count = 0
+    report_path = "scripts/penix-scheduled-report.json"
+    results = {}
+    if os.path.exists(report_path):
+        try:
+            with open(report_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                for item in data:
+                    if item.get("status") in ["scheduled", "success"] and item.get("postId"):
+                        results[item["id"]] = item
+        except Exception as e:
+            print(f"Note: Could not parse existing report: {e}")
 
     for i, p in enumerate(posts_data, 1):
-        print(f"\n[{i}/14] Scheduling Post #{p['id']} ({p['slot']}) - Due: {p['dueAt']}...")
-        print(f"  Asset: {p['assetUrl']}")
+        p_id = p["id"]
+        if p_id in results and results[p_id].get("postId"):
+            print(f"[{i}/14] Post #{p_id} already scheduled (Buffer ID: {results[p_id]['postId']}). Skipping.")
+            continue
 
-        payload = {
-            "query": mutation,
-            "variables": {
-                "input": {
-                    "channelId": CHANNEL_ID,
-                    "text": p["text"],
-                    "schedulingType": "automatic",
-                    "mode": "customScheduled",
-                    "dueAt": p["dueAt"],
-                    "saveToDraft": False,
-                    "needsApproval": False,
-                    "assets": [
-                        {
-                            "image": {
-                                "url": p["assetUrl"]
+        while True:
+            print(f"\n[{i}/14] Scheduling Post #{p['id']} ({p['slot']}) - Due: {p['dueAt']}...")
+            print(f"  Asset: {p['assetUrl']}")
+
+            payload = {
+                "query": mutation,
+                "variables": {
+                    "input": {
+                        "channelId": CHANNEL_ID,
+                        "text": p["text"],
+                        "schedulingType": "automatic",
+                        "mode": "customScheduled",
+                        "dueAt": p["dueAt"],
+                        "saveToDraft": False,
+                        "needsApproval": False,
+                        "assets": [
+                            {
+                                "image": {
+                                    "url": p["assetUrl"]
+                                }
                             }
-                        }
-                    ]
+                        ]
+                    }
                 }
             }
-        }
 
-        req = urllib.request.Request(graphql_url, data=json.dumps(payload).encode("utf-8"), headers=headers)
-        try:
-            with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
-                res_data = json.loads(resp.read().decode("utf-8"))
-                errors = res_data.get("errors")
-                if errors:
-                    print(f"  >>> GRAPHQL ERROR: {errors}")
-                    p["status"] = "failed"
-                    p["error"] = errors[0].get("message")
-                else:
-                    create_res = res_data.get("data", {}).get("createPost", {})
-                    if "post" in create_res:
-                        post_id = create_res["post"]["id"]
-                        p["status"] = "scheduled"
-                        p["postId"] = post_id
-                        print(f"  >>> SUCCESS: Post ID: {post_id}")
-                        success_count += 1
-                    else:
-                        err_msg = create_res.get("message", "Unknown error")
-                        print(f"  >>> ERROR: {err_msg}")
+            req = urllib.request.Request(graphql_url, data=json.dumps(payload).encode("utf-8"), headers=headers)
+            try:
+                with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
+                    res_data = json.loads(resp.read().decode("utf-8"))
+                    errors = res_data.get("errors")
+                    if errors:
+                        print(f"  >>> GRAPHQL ERROR: {errors}")
                         p["status"] = "failed"
-                        p["error"] = err_msg
-        except urllib.error.HTTPError as he:
-            err_body = he.read().decode("utf-8", errors="replace")
-            print(f"  >>> HTTP ERROR {he.code}: {err_body}")
-            p["status"] = "failed"
-            p["error"] = f"HTTP {he.code}: {err_body}"
-        except Exception as e:
-            print(f"  >>> NETWORK ERROR: {e}")
-            p["status"] = "failed"
-            p["error"] = str(e)
+                        p["error"] = errors[0].get("message")
+                        results[p_id] = p
+                        break
+                    else:
+                        create_res = res_data.get("data", {}).get("createPost", {})
+                        if "post" in create_res and create_res["post"].get("id"):
+                            post_id = create_res["post"]["id"]
+                            st = create_res["post"].get("status")
+                            due = create_res["post"].get("dueAt")
+                            p["status"] = st
+                            p["postId"] = post_id
+                            p["dueAt"] = due
+                            print(f"  >>> SUCCESS: Post ID: {post_id}")
+                            results[p_id] = p
+                            break
+                        else:
+                            err_msg = create_res.get("message", "Unknown error")
+                            print(f"  >>> ERROR: {err_msg}")
+                            p["status"] = "failed"
+                            p["error"] = err_msg
+                            results[p_id] = p
+                            break
+            except urllib.error.HTTPError as he:
+                if he.code == 429:
+                    retry_after = he.headers.get('Retry-After')
+                    wait_sec = int(retry_after) if retry_after and retry_after.isdigit() else 60
+                    print(f"  [RATE LIMIT] HTTP 429 encountered. Waiting {wait_sec + 5}s...")
+                    time.sleep(wait_sec + 5)
+                    continue
+                err_body = he.read().decode("utf-8", errors="replace")
+                print(f"  >>> HTTP ERROR {he.code}: {err_body}")
+                p["status"] = "failed"
+                p["error"] = f"HTTP {he.code}: {err_body}"
+                results[p_id] = p
+                break
+            except Exception as e:
+                print(f"  >>> NETWORK ERROR: {e}")
+                p["status"] = "failed"
+                p["error"] = str(e)
+                results[p_id] = p
+                break
 
-        results.append(p)
-        time.sleep(1.2)
+        time.sleep(2)
 
-    report_path = "scripts/penix-scheduled-report.json"
     with open(report_path, "w", encoding="utf-8") as rf:
-        json.dump(results, rf, indent=2, ensure_ascii=False)
+        json.dump(list(results.values()), rf, indent=2, ensure_ascii=False)
+    success_count = sum(1 for r in results.values() if r.get("status") in ["scheduled", "success"] and r.get("postId"))
     print(f"\nExecution complete. Saved {success_count}/14 successfully to {report_path}.")
     return success_count == len(posts_data)
 

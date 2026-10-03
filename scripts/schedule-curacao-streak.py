@@ -10,7 +10,22 @@ import time
 sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
 sys.stderr.reconfigure(encoding='utf-8', line_buffering=True)
 
-TOKEN = os.environ.get('BUFFER_ACCESS_TOKEN', 'mLbjEsRdn5FKtGOskFoGzK-gW2CGTl8dfAK8klDVEPC')
+def get_token():
+    t = os.environ.get('BUFFER_ACCESS_TOKEN')
+    if t:
+        return t
+    for env_name in ['.env.local', '.env']:
+        p = os.path.join(os.path.dirname(__file__), '..', env_name)
+        if os.path.exists(p):
+            with open(p, 'r', encoding='utf-8') as f:
+                for line in f:
+                    if line.startswith('BUFFER_ACCESS_TOKEN='):
+                        val = line.strip().split('=', 1)[1].strip()
+                        if val:
+                            return val
+    return 'uR7DeyYk4O9VcFHqPQOnWseUl7BONqA8RZ4CK_03Ci0'
+
+TOKEN = get_token()
 CHANNEL_ID = '6a39d30c5ab6d2f1065f5301'  # Lornette Daye LinkedIn
 
 CDN_BASE = 'https://lornettedaye.com/campaigns/curacao-streak'
@@ -74,8 +89,8 @@ posts_data = [
     {
         "id": 3,
         "wave": "Wave 1: Fulfilling My Prediction",
-        "slot": "Day 1: Saturday 4:30 PM MDT (Oct 03, 2026)",
-        "dueAt": "2026-10-03T22:30:00.000Z",
+        "slot": "Day 1: Saturday 5:30 PM MDT (Oct 03, 2026)",
+        "dueAt": "2026-10-03T23:30:00.000Z",
         "assetFile": "curacao-streak-03.png",
         "assetUrl": f"{CDN_BASE}/curacao-streak-03.png",
         "cta": "Book Lornette (lornettedaye.com/book) & Buy a Book (lornettedaye.com/books)",
@@ -127,8 +142,8 @@ posts_data = [
     {
         "id": 5,
         "wave": "Wave 1: Fulfilling My Prediction",
-        "slot": "Day 2: Sunday 4:30 PM MDT (Oct 04, 2026)",
-        "dueAt": "2026-10-04T22:30:00.000Z",
+        "slot": "Day 2: Sunday 5:30 PM MDT (Oct 04, 2026)",
+        "dueAt": "2026-10-04T23:30:00.000Z",
         "assetFile": "curacao-streak-05.png",
         "assetUrl": f"{CDN_BASE}/curacao-streak-05.png",
         "cta": "Book Lornette (lornettedaye.com/book) & Buy a Book (lornettedaye.com/books)",
