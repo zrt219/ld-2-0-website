@@ -1,0 +1,192 @@
+[
+  {
+    "id": 1,
+    "wave": "Wave 1: Fulfilling My Prediction",
+    "type": "image",
+    "slot": "Tonight: Friday 8:00 PM MDT (Oct 02, 2026)",
+    "dueAt": "2026-10-03T02:00:00.000Z",
+    "assetFile": "curacao-streak-01.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 2,
+    "wave": "Wave 1: Fulfilling My Prediction",
+    "type": "image",
+    "slot": "Day 1: Saturday 9:00 AM MDT (Oct 03, 2026)",
+    "dueAt": "2026-10-03T15:00:00.000Z",
+    "assetFile": "curacao-streak-02.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 3,
+    "wave": "Wave 1: Fulfilling My Prediction",
+    "type": "image",
+    "slot": "Day 1: Saturday 4:30 PM MDT (Oct 03, 2026)",
+    "dueAt": "2026-10-03T22:30:00.000Z",
+    "assetFile": "curacao-streak-03.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 4,
+    "wave": "Wave 1: Fulfilling My Prediction",
+    "type": "image",
+    "slot": "Day 2: Sunday 9:00 AM MDT (Oct 04, 2026)",
+    "dueAt": "2026-10-04T15:00:00.000Z",
+    "assetFile": "curacao-streak-04.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 5,
+    "wave": "Wave 1: Fulfilling My Prediction",
+    "type": "image",
+    "slot": "Day 2: Sunday 4:30 PM MDT (Oct 04, 2026)",
+    "dueAt": "2026-10-04T22:30:00.000Z",
+    "assetFile": "curacao-streak-05.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 6,
+    "wave": "Wave 1: Fulfilling My Prediction",
+    "type": "image",
+    "slot": "Day 3: Monday 9:00 AM MDT (Oct 05, 2026)",
+    "dueAt": "2026-10-05T15:00:00.000Z",
+    "assetFile": "curacao-streak-06.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 7,
+    "wave": "Wave 1: Fulfilling My Prediction",
+    "type": "image",
+    "slot": "Day 3: Monday 6:00 PM MDT (Oct 05, 2026)",
+    "dueAt": "2026-10-06T00:00:00.000Z",
+    "assetFile": "curacao-streak-07.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 8,
+    "wave": "Wave 2: What I Saw Change on the Pitch",
+    "type": "image",
+    "slot": "Day 4: Tuesday 11:00 AM MDT (Oct 06, 2026)",
+    "dueAt": "2026-10-06T17:00:00.000Z",
+    "assetFile": "curacao-streak-08.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 9,
+    "wave": "Wave 2: What I Saw Change on the Pitch",
+    "type": "image",
+    "slot": "Day 4: Tuesday 7:00 PM MDT (Oct 06, 2026)",
+    "dueAt": "2026-10-07T01:00:00.000Z",
+    "assetFile": "curacao-streak-09.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 10,
+    "wave": "Wave 2: What I Saw Change on the Pitch",
+    "type": "image",
+    "slot": "Day 5: Wednesday 11:00 AM MDT (Oct 07, 2026)",
+    "dueAt": "2026-10-07T17:00:00.000Z",
+    "assetFile": "curacao-streak-10.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 11,
+    "wave": "Wave 2: What I Saw Change on the Pitch",
+    "type": "image",
+    "slot": "Day 5: Wednesday 7:00 PM MDT (Oct 07, 2026)",
+    "dueAt": "2026-10-08T01:00:00.000Z",
+    "assetFile": "curacao-streak-11.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 12,
+    "wave": "Wave 2: What I Saw Change on the Pitch",
+    "type": "image",
+    "slot": "Day 6: Thursday 11:00 AM MDT (Oct 08, 2026)",
+    "dueAt": "2026-10-08T17:00:00.000Z",
+    "assetFile": "curacao-streak-12.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 13,
+    "wave": "Wave 2: What I Saw Change on the Pitch",
+    "type": "image",
+    "slot": "Day 6: Thursday 7:00 PM MDT (Oct 08, 2026)",
+    "dueAt": "2026-10-09T01:00:00.000Z",
+    "assetFile": "curacao-streak-13.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 14,
+    "wave": "Wave 3: What This Teaches Us About Leadership and Life",
+    "type": "image",
+    "slot": "Day 7: Friday 11:00 AM MDT (Oct 09, 2026)",
+    "dueAt": "2026-10-09T17:00:00.000Z",
+    "assetFile": "curacao-streak-14.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 15,
+    "wave": "Wave 3: What This Teaches Us About Leadership and Life",
+    "type": "image",
+    "slot": "Day 7: Friday 7:00 PM MDT (Oct 09, 2026)",
+    "dueAt": "2026-10-10T01:00:00.000Z",
+    "assetFile": "curacao-streak-15.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 16,
+    "wave": "Wave 3: What This Teaches Us About Leadership and Life",
+    "type": "image",
+    "slot": "Day 8: Saturday 10:00 AM MDT (Oct 10, 2026)",
+    "dueAt": "2026-10-10T16:00:00.000Z",
+    "assetFile": "curacao-streak-16.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 17,
+    "wave": "Wave 3: What This Teaches Us About Leadership and Life",
+    "type": "image",
+    "slot": "Day 8: Saturday 5:00 PM MDT (Oct 10, 2026)",
+    "dueAt": "2026-10-10T23:00:00.000Z",
+    "assetFile": "curacao-streak-17.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 18,
+    "wave": "Wave 3: What This Teaches Us About Leadership and Life",
+    "type": "image",
+    "slot": "Day 9: Sunday 10:00 AM MDT (Oct 11, 2026)",
+    "dueAt": "2026-10-11T16:00:00.000Z",
+    "assetFile": "curacao-streak-18.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  },
+  {
+    "id": 19,
+    "wave": "Wave 3: What This Teaches Us About Leadership and Life",
+    "type": "image",
+    "slot": "Day 9: Sunday 5:00 PM MDT (Oct 11, 2026)",
+    "dueAt": "2026-10-11T23:00:00.000Z",
+    "assetFile": "curacao-streak-19.png",
+    "error": "HTTP Error 401: Unauthorized",
+    "status": "failed"
+  }
+]
