@@ -2314,6 +2314,8 @@ def schedule_posts():
                             p["dueAt"] = due
                             print(f"  >>> SUCCESS: Post ID: {post_id}")
                             results[p_id] = p
+                            with open(report_path, "w", encoding="utf-8") as rf:
+                                json.dump(list(results.values()), rf, indent=2, ensure_ascii=False)
                             break
                         else:
                             err_msg = create_res.get("message", "Unknown error")
