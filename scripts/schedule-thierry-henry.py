@@ -33,10 +33,10 @@ CDN_BASE = 'https://lornettedaye.com/campaigns/thierry-henry'
 posts_data = [
     {
         "id": 1,
-        "day": 1,
-        "date": "2026-10-03",
+        "day": 41,
+        "date": "2026-11-12",
         "slot": "Morning (9:15 AM MDT/MST)",
-        "dueAt": "2026-10-03T15:15:00.000Z",
+        "dueAt": "2026-11-12T16:15:00.000Z",
         "assetFile": "thierry-henry-01.png",
         "assetUrl": "https://lornettedaye.com/campaigns/thierry-henry/thierry-henry-01.png",
         "cta": "Keynote Booking (lornettedaye.com/book)",
@@ -44,10 +44,10 @@ posts_data = [
     },
     {
         "id": 2,
-        "day": 1,
-        "date": "2026-10-03",
+        "day": 41,
+        "date": "2026-11-12",
         "slot": "Late Afternoon (4:15 PM MDT/MST)",
-        "dueAt": "2026-10-03T22:15:00.000Z",
+        "dueAt": "2026-11-12T23:15:00.000Z",
         "assetFile": "thierry-henry-02.png",
         "assetUrl": "https://lornettedaye.com/campaigns/thierry-henry/thierry-henry-02.png",
         "cta": "Buy Book - Finish Strong: Chasing the Olympic Dream (lornettedaye.com/books)",
@@ -1474,8 +1474,9 @@ def schedule_posts():
                             p["dueAt"] = due
                             print(f"  >>> SUCCESS: Post ID: {post_id}")
                             results[p_id] = p
+                            sorted_list = sorted(results.values(), key=lambda x: x.get("id", 0))
                             with open(report_path, "w", encoding="utf-8") as rf:
-                                json.dump(list(results.values()), rf, indent=2, ensure_ascii=False)
+                                json.dump(sorted_list, rf, indent=2, ensure_ascii=False)
                             break
                         else:
                             err_msg = create_res.get("message", "Unknown error")
@@ -1506,8 +1507,9 @@ def schedule_posts():
 
         time.sleep(2)
 
+    sorted_list = sorted(results.values(), key=lambda x: x.get("id", 0))
     with open(report_path, "w", encoding="utf-8") as rf:
-        json.dump(list(results.values()), rf, indent=2, ensure_ascii=False)
+        json.dump(sorted_list, rf, indent=2, ensure_ascii=False)
     success_count = sum(1 for r in results.values() if r.get("status") in ["scheduled", "success"] and r.get("postId"))
     print(f"\nExecution complete. Saved {success_count}/120 successfully to {report_path}.")
     return success_count == len(posts_data)
