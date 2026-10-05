@@ -175,7 +175,7 @@ Book Lornette Daye for your keynote: https://lornettedaye.com/book
 ]
 
 mutation = """
-mutation CreateScheduledPost($input: CreatePostInput!) {
+mutation CreatePost($input: CreatePostInput!) {
   createPost(input: $input) {
     ... on PostActionSuccess {
       post {
@@ -184,10 +184,16 @@ mutation CreateScheduledPost($input: CreatePostInput!) {
         dueAt
       }
     }
-    ... on MutationError {
+    ... on LimitReachedError {
       message
     }
-    ... on PostActionError {
+    ... on InvalidInputError {
+      message
+    }
+    ... on UnexpectedError {
+      message
+    }
+    ... on UnauthorizedError {
       message
     }
   }
