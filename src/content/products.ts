@@ -31,9 +31,9 @@ export const collectionMeta = {
   signature: "Curated by Lornette Daye",
   heroHeading: "A Thoughtful Curation of Beauty, Wellness & Style",
   supportingCopy:
-    "A thoughtful collection of beauty, wellness, fashion, and everyday essentials—chosen with confidence, purpose, and uncompromising quality.",
+    "A thoughtful collection of beauty, wellness, fashion, and everyday essentials, chosen with confidence, purpose, and uncompromising quality.",
   heroDescription:
-    "An exclusive preview of Lornette Daye's curated essentials—spanning luxury tailoring, footwear, leather goods, crown care, skincare, and wellness teas chosen with confidence, purpose, and uncompromising quality.",
+    "An exclusive preview of Lornette Daye's curated essentials, spanning luxury tailoring, footwear, leather goods, crown care, skincare, and wellness teas chosen with confidence, purpose, and uncompromising quality.",
   vipNote:
     "This is a coming-soon showcase. Products are not yet available for direct purchase. Join the priority interest list below to receive private launch invitations and exclusive early access.",
   primaryCtaText: "Explore The Collection",
@@ -41,7 +41,7 @@ export const collectionMeta = {
   heroImage: "/products/clean/product-01.png",
   seoTitle: "The Collection | Curated by Lornette Daye (Coming Soon)",
   seoDescription:
-    "Explore The Collection curated by Lornette Daye—a thoughtful coming-soon showcase of luxury clothing, footwear, handbags, wigs, skincare, and wellness teas.",
+    "Explore The Collection curated by Lornette Daye: a thoughtful coming-soon showcase of luxury clothing, footwear, handbags, wigs, skincare, and wellness teas.",
   canonicalUrl: "https://lornettedaye.com/collection",
   ogImage: "/products/clean/product-01.png",
 };
@@ -953,7 +953,7 @@ export const productCategories: ProductCategory[] = [
         ],
         "fabric": "100% Virgin Cuticle-Aligned Human Hair",
         "fit": "Customizable 21.5 - 23.5 inch breathable mesh cap",
-        "editorialQuote": "Your hair is your crown—wear it with absolute pride."
+        "editorialQuote": "Your hair is your crown. Wear it with absolute pride."
       },
       {
         "id": "product-40",

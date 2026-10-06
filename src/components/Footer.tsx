@@ -1,29 +1,23 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Mail } from "lucide-react";
 
 import { siteCopy } from "@/content/site";
 import { CTAButton } from "./CTAButton";
+import { GlowMonogram } from "./GlowMonogram";
 
 export function Footer() {
   return (
     <footer className="bg-[var(--ink)] text-[var(--ivory)]">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
         <div>
-          <div className="flex items-center gap-3.5">
-            <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg border border-[rgba(198,165,92,0.45)] bg-[#1e1915] shadow-md">
-              <Image
-                src="/monogramlogo.png"
-                alt="Lornette Daye Official Logo"
-                fill
-                sizes="48px"
-                className="object-contain p-1"
-                unoptimized
-              />
-            </div>
+          <div className="flex items-center gap-5">
+            <GlowMonogram className="h-[66px] w-[120px]" />
+            <span className="h-12 w-px shrink-0 bg-[rgba(198,165,92,0.55)]" aria-hidden="true" />
             <div>
-              <p className="font-serif text-3xl sm:text-4xl text-white">{siteCopy.brandName}</p>
-              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--champagne)]">
+              <p className="font-serif text-3xl leading-none tracking-[-0.01em] text-white sm:text-[2.6rem]">
+                {siteCopy.brandName}
+              </p>
+              <p className="mt-2.5 text-[11px] font-bold uppercase tracking-[0.3em] text-[var(--champagne)]">
                 Speaker · Coach · Leader
               </p>
             </div>

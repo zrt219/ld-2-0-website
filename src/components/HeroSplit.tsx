@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion, useReducedMotion } from "framer-motion";
 
 import { CTAButton } from "./CTAButton";
 import { VideoCard } from "./VideoCard";
@@ -53,6 +56,8 @@ export function HeroSplit({
   secondaryLabel = "Watch Speaker Reel",
   video,
 }: HeroSplitProps) {
+  const reduce = useReducedMotion();
+
   const imageFrameTone = image
     ? image.frameTone === "warm-ivory"
       ? "bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)]"
@@ -66,27 +71,57 @@ export function HeroSplit({
       <div className="pointer-events-none absolute left-0 top-10 h-px w-2/3 bg-gradient-to-r from-transparent via-[rgba(198,165,92,0.28)] to-transparent" />
 
       <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:min-h-[760px] lg:grid-cols-[minmax(0,0.92fr)_minmax(0,0.88fr)] lg:items-center lg:px-8 lg:py-16 xl:py-20">
-        <div className="min-w-0 max-w-3xl">
+        <motion.div
+          className="min-w-0 max-w-3xl"
+          initial={reduce ? { opacity: 1 } : { opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+        >
           {eyebrow ? (
-            <p className="inline-flex border border-[rgba(198,165,92,0.48)] bg-white/70 px-3 py-2 text-xs font-bold uppercase tracking-[0.22em] text-[var(--gold-dark)] shadow-sm">
+            <motion.p
+              initial={reduce ? { opacity: 1 } : { opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="inline-flex border border-[rgba(198,165,92,0.48)] bg-white/70 px-3 py-2 text-xs font-bold uppercase tracking-[0.22em] text-[var(--gold-dark)] shadow-sm"
+            >
               {eyebrow}
-            </p>
+            </motion.p>
           ) : null}
-          <h1 className="mt-6 max-w-4xl font-serif text-[2.38rem] leading-[0.98] text-balance text-[var(--ink)] sm:text-6xl lg:text-[4.1rem] xl:text-[4.72rem]">
+          <motion.h1
+            initial={reduce ? { opacity: 1 } : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-6 max-w-4xl font-serif text-[2.38rem] leading-[0.98] text-balance text-[var(--ink)] sm:text-6xl lg:text-[4.1rem] xl:text-[4.72rem]"
+          >
             {renderHeroTitle(title)}
-          </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-[#554b40]">
+          </motion.h1>
+          <motion.p
+            initial={reduce ? { opacity: 1 } : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-7 max-w-2xl text-lg leading-8 text-[#554b40]"
+          >
             {body}
-          </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          </motion.p>
+          <motion.div
+            initial={reduce ? { opacity: 1 } : { opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-9 flex flex-col gap-3 sm:flex-row"
+          >
             <CTAButton href={primaryHref}>{primaryLabel}</CTAButton>
             <CTAButton href={secondaryHref} variant="secondary">
               {secondaryLabel}
             </CTAButton>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="relative min-w-0 w-full max-w-[560px] lg:justify-self-end">
+        <motion.div
+          className="relative min-w-0 w-full max-w-[560px] lg:justify-self-end"
+          initial={reduce ? { opacity: 1 } : { opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.75, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+        >
           {image ? (
             <div className={`relative mx-auto aspect-[4/5] max-h-[590px] w-full max-w-[500px] overflow-hidden border border-[rgba(198,165,92,0.42)] shadow-[0_28px_110px_rgba(23,20,18,0.14)] ${imageFrameTone}`}>
               <Image
@@ -106,12 +141,18 @@ export function HeroSplit({
           ) : null}
 
           {video ? (
-            <div className={`relative z-10 mx-auto w-full max-w-[470px] ${image ? "-mt-10 lg:-ml-8 lg:-mt-16" : ""}`}>
+            <motion.div
+              initial={reduce ? { opacity: 1 } : { opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className={`relative z-10 mx-auto w-full max-w-[470px] ${image ? "-mt-10 lg:-ml-8 lg:-mt-16" : ""}`}
+            >
               <VideoCard {...video} compact />
-            </div>
+            </motion.div>
           ) : null}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 }
+

@@ -19,6 +19,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { logoutFoundationsAction } from "@/app/foundations/login/actions";
+import { useFoundationsStore } from "@/lib/foundations/store";
 
 type ScenicSlide = {
   src: string;
@@ -26,7 +27,7 @@ type ScenicSlide = {
   title: string;
 };
 
-const SCENIC_SLIDES: ScenicSlide[] = [
+const SCENIC_SLIDES_GOLF: ScenicSlide[] = [
   {
     src: "/foundations/golf/scenic-gold-sunrise.jpg",
     theme: "Gold Sunrise",
@@ -41,6 +42,32 @@ const SCENIC_SLIDES: ScenicSlide[] = [
     src: "/foundations/golf/scenic-mountain-fairway.jpg",
     theme: "Mountain Vista",
     title: "Sunlit Alpine Mountain Valley & Fairway Reflection Pond",
+  },
+];
+
+const SCENIC_SLIDES_HOCKEY: ScenicSlide[] = [
+  {
+    src: "/foundations/pathways/hockey/lornette-hockey-huddle-landscape.png",
+    theme: "Championship Ice",
+    title: "Coach Lornette Daye with Team during On-Ice Practice",
+  },
+  {
+    src: "/foundations/pathways/hockey/lornette-hockey-huddle-portrait.png",
+    theme: "Bench Composure",
+    title: "High-Speed Shift Resilience & Focus Protocol",
+  },
+];
+
+const SCENIC_SLIDES_CORPORATE: ScenicSlide[] = [
+  {
+    src: "/foundations/pathways/corporate/lornette-corporate-keynote.png",
+    theme: "Executive Presence",
+    title: "Coach Lornette Daye Executive Keynote",
+  },
+  {
+    src: "/foundations/pathways/corporate/lornette-corporate-boardroom.png",
+    theme: "Leadership Focus",
+    title: "Boardroom Strategic Composure & Decisive Action",
   },
 ];
 
@@ -68,6 +95,49 @@ type LearnerSidebarProps = {
 
 export function LearnerSidebar({ onNavClick, className = "" }: LearnerSidebarProps) {
   const pathname = usePathname();
+  const { state } = useFoundationsStore();
+  const activeTrack = state.activeTrack || "golf";
+  const isEurope = state.activeRegion === "europe";
+
+  const scenicSlides =
+    activeTrack === "hockey"
+      ? SCENIC_SLIDES_HOCKEY
+      : activeTrack === "corporate"
+      ? SCENIC_SLIDES_CORPORATE
+      : SCENIC_SLIDES_GOLF;
+
+  const workspaceTitle =
+    activeTrack === "hockey"
+      ? "Hockey Workspace"
+      : activeTrack === "corporate"
+      ? "Executive Workspace"
+      : "Athlete Workspace";
+
+  const trackBadge =
+    activeTrack === "hockey"
+      ? isEurope
+        ? "EU Hockey"
+        : "Hockey Track"
+      : activeTrack === "corporate"
+      ? isEurope
+        ? "EU Corporate"
+        : "Corporate Track"
+      : isEurope
+      ? "EU Golf Track"
+      : "10-Week Cohort";
+
+  const trackQuote =
+    activeTrack === "hockey"
+      ? "“Your last shift cannot play your next shift.”"
+      : activeTrack === "corporate"
+      ? "“Pressure is simply the signal to anchor your values.”"
+      : "“Your previous shot cannot hit your next shot.”";
+
+  const luxuryMotto =
+    activeTrack === "corporate"
+      ? "BETTER LEADERS · BETTER TEAMS"
+      : "BETTER PEOPLE · BETTER PLAYERS";
+
   const [activeSlide, setActiveSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
@@ -95,21 +165,21 @@ export function LearnerSidebar({ onNavClick, className = "" }: LearnerSidebarPro
     if (isPaused) return;
 
     const timer = setTimeout(() => {
-      setActiveSlide((prev) => (prev + 1) % SCENIC_SLIDES.length);
+      setActiveSlide((prev) => (prev + 1) % scenicSlides.length);
     }, 6000);
 
     return () => clearTimeout(timer);
-  }, [isPaused, activeSlide]);
+  }, [isPaused, activeSlide, scenicSlides.length]);
 
   const handleTabKeyDown = (e: React.KeyboardEvent, idx: number) => {
     if (e.key === "ArrowRight") {
       e.preventDefault();
-      const nextIdx = (idx + 1) % SCENIC_SLIDES.length;
+      const nextIdx = (idx + 1) % scenicSlides.length;
       setActiveSlide(nextIdx);
       tabRefs.current[nextIdx]?.focus();
     } else if (e.key === "ArrowLeft") {
       e.preventDefault();
-      const prevIdx = (idx - 1 + SCENIC_SLIDES.length) % SCENIC_SLIDES.length;
+      const prevIdx = (idx - 1 + scenicSlides.length) % scenicSlides.length;
       setActiveSlide(prevIdx);
       tabRefs.current[prevIdx]?.focus();
     }
@@ -128,13 +198,13 @@ export function LearnerSidebar({ onNavClick, className = "" }: LearnerSidebarPro
       className={`flex h-full w-full flex-col justify-between bg-[#fcfaf4] p-4 text-[#2c2620] overflow-y-auto no-scrollbar ${className}`}
     >
       <div>
-        {/* Section Header: Athlete Workspace */}
+        {/* Section Header: Track-Aware Workspace */}
         <div className="px-3.5 pb-2.5 pt-1 flex items-center justify-between">
           <p className="text-[12px] font-bold uppercase tracking-[0.2em] text-[#635546]">
-            Athlete Workspace
+            {workspaceTitle}
           </p>
           <span className="text-[10px] font-semibold text-[#8f8070] uppercase tracking-wider">
-            10-Week Cohort
+            {trackBadge}
           </span>
         </div>
 
@@ -179,6 +249,15 @@ export function LearnerSidebar({ onNavClick, className = "" }: LearnerSidebarPro
         {/* Secondary Links */}
         <div className="space-y-1.5">
           <Link
+            href="/foundations/select"
+            onClick={onNavClick}
+            className="group flex min-h-[48px] items-center gap-3.5 rounded-xl px-4 py-2.5 text-[16px] font-semibold text-[#3d3328] hover:bg-[#f3e9dc] hover:text-[#1a1714] transition-all duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--gold-dark)]"
+          >
+            <Compass size={21} aria-hidden="true" className="text-[#8a6828] stroke-[2] group-hover:text-[#1a1714]" />
+            <span className="tracking-[-0.015em] text-[#7f5b1d] font-bold">Switch Track</span>
+          </Link>
+
+          <Link
             href="/foundations/account"
             onClick={onNavClick}
             className={`group flex min-h-[48px] items-center gap-3.5 rounded-xl px-4 py-2.5 text-[16px] font-semibold transition-all duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--gold-dark)] ${
@@ -219,17 +298,17 @@ export function LearnerSidebar({ onNavClick, className = "" }: LearnerSidebarPro
         </div>
       </div>
 
-      {/* Bottom Scenic Golf Image & Lornette Principle */}
+      {/* Bottom Scenic Atmospheric Image & Lornette Principle */}
       <div className="pt-4 pb-1">
         <div
           className="rounded-xl border border-[#ebdcc9] bg-[#fbf9f4] p-3 shadow-xs"
           role="region"
           aria-roledescription="carousel"
-          aria-label="Scenic golf atmospheric gallery"
+          aria-label="Atmospheric gallery"
         >
           <div className="px-1 text-left">
             <p className="font-serif text-[11.5px] italic text-[#3d3328] leading-snug">
-              “Your previous shot cannot hit your next shot.”
+              {trackQuote}
             </p>
             <p className="mt-1 text-[9px] font-bold uppercase tracking-[0.2em] text-[#8e7e6e]">
               Coach Lornette Daye
@@ -243,7 +322,7 @@ export function LearnerSidebar({ onNavClick, className = "" }: LearnerSidebarPro
             onFocusCapture={() => setIsFocused(true)}
             onBlurCapture={() => setIsFocused(false)}
           >
-            {SCENIC_SLIDES.map((slide, idx) => {
+            {scenicSlides.map((slide, idx) => {
               const isCurrent = idx === activeSlide;
               return (
                 <div
@@ -272,7 +351,7 @@ export function LearnerSidebar({ onNavClick, className = "" }: LearnerSidebarPro
 
             {/* Scenic Theme Label */}
             <div className="absolute top-2 left-2 z-10 flex items-center gap-1 rounded-xs bg-black/60 px-1.5 py-0.5 text-[8px] font-bold uppercase tracking-[0.18em] text-[#e2c792] backdrop-blur-xs border border-[rgba(226,199,146,0.3)] shadow-xs select-none pointer-events-none transition-all duration-300">
-              <span>{SCENIC_SLIDES[activeSlide].theme}</span>
+              <span>{scenicSlides[activeSlide]?.theme || "Focus"}</span>
             </div>
           </div>
 
@@ -283,7 +362,7 @@ export function LearnerSidebar({ onNavClick, className = "" }: LearnerSidebarPro
               aria-label="Scenic gallery slides"
               className="flex items-center gap-1"
             >
-              {SCENIC_SLIDES.map((slide, idx) => {
+              {scenicSlides.map((slide, idx) => {
                 const isCurrent = idx === activeSlide;
                 return (
                   <button
@@ -300,7 +379,7 @@ export function LearnerSidebar({ onNavClick, className = "" }: LearnerSidebarPro
                     onClick={() => setActiveSlide(idx)}
                     onKeyDown={(e) => handleTabKeyDown(e, idx)}
                     className="group/tab min-h-[20px] min-w-[20px] inline-flex items-center justify-center p-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#a6864a] rounded-full cursor-pointer"
-                    aria-label={`Slide ${idx + 1} of ${SCENIC_SLIDES.length}: ${slide.theme}`}
+                    aria-label={`Slide ${idx + 1} of ${scenicSlides.length}: ${slide.theme}`}
                     title={slide.title}
                   >
                     <span
@@ -333,7 +412,7 @@ export function LearnerSidebar({ onNavClick, className = "" }: LearnerSidebarPro
 
           <div className="mt-2 text-center">
             <p className="font-serif text-[9.5px] font-bold tracking-[0.22em] text-[#a6864a] uppercase select-none">
-              Better People · Better Players
+              {luxuryMotto}
             </p>
           </div>
         </div>

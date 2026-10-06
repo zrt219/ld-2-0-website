@@ -105,7 +105,7 @@ export function GolfRegistrationForm({ id }: { id?: string }) {
                 Thank you, <span className="font-semibold text-black">{formData.firstName}</span>. We have received your application for the 10-Week Guided Athlete Development Program.
               </p>
               <p className="text-xs text-neutral-500 max-w-md mx-auto">
-                A notification has been routed to <span className="font-mono text-neutral-800 font-medium">{recipient}</span>. Coach Lornette Daye&apos;s team will follow up within 1–2 business days with your enrollment package.
+                A notification has been routed to <span className="font-mono text-neutral-800 font-medium">{recipient}</span>. Olympic-level coach Lornette Daye&apos;s team will follow up within 1-2 business days with your enrollment package.
               </p>
             </div>
 
@@ -269,10 +269,10 @@ export function GolfRegistrationForm({ id }: { id?: string }) {
                 >
                   <option value="">Select your handicap range</option>
                   <option value="Plus / Scratch (+1.0 or better)">Plus / Scratch (+1.0 or better)</option>
-                  <option value="0.0 – 4.9 Index">0.0 – 4.9 Index</option>
-                  <option value="5.0 – 9.9 Index">5.0 – 9.9 Index</option>
-                  <option value="10.0 – 14.9 Index">10.0 – 14.9 Index</option>
-                  <option value="15.0 – 19.9 Index">15.0 – 19.9 Index</option>
+                  <option value="0.0 - 4.9 Index">0.0 - 4.9 Index</option>
+                  <option value="5.0 - 9.9 Index">5.0 - 9.9 Index</option>
+                  <option value="10.0 - 14.9 Index">10.0 - 14.9 Index</option>
+                  <option value="15.0 - 19.9 Index">15.0 - 19.9 Index</option>
                   <option value="20.0+ Index">20.0+ Index</option>
                   <option value="Junior / Unranked Competitive">Junior / Unranked Competitive</option>
                 </select>

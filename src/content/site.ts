@@ -184,9 +184,9 @@ export const mainNav: NavItem[] = [
     href: "/foundations",
     children: [
       { label: "Golf", href: "/foundations/golf" },
-      { label: "For Clubs & Teams", href: "/foundations/clubs" },
-      { label: "Performance Edge Framework", href: "/foundations/performance-edge" },
-      { label: "Athlete & Coach Portal", href: "/foundations/login" },
+      { label: "Hockey", href: "/foundations/hockey" },
+      { label: "Corporate", href: "/foundations/corporate" },
+      { label: "Europe", href: "/foundations/europe" },
     ],
   },
   { label: "Leadership", href: "/leadership" },
@@ -195,7 +195,8 @@ export const mainNav: NavItem[] = [
     label: "Books",
     href: "/books",
     children: [
-      { label: "Collection", href: "/collection" },
+      { label: "Book Catalog & Guides", href: "/books" },
+      { label: "The Collection", href: "/collection" },
     ],
   },
   { label: "About", href: "/about" },
@@ -224,12 +225,11 @@ export const requiredRoutes = [
   "/book",
   "/foundations",
   "/foundations/golf",
-  "/foundations/golf/keynote",
-  "/foundations/golf/workshop",
-  "/foundations/golf/program",
-  "/foundations/golf/club-partnership",
   "/foundations/clubs",
   "/foundations/performance-edge",
+  "/foundations/hockey",
+  "/foundations/corporate",
+  "/foundations/europe",
 ];
 
 export const images = {
@@ -799,7 +799,7 @@ export const posts: Post[] = [
     slug: "one-flag-one-journey-vision-for-sport",
     title: "One Flag. One Journey. One Bigger Vision for Sport",
     excerpt:
-      "137 women. 197 men. 29 sports. Great sporting cultures grow by backing many paths to excellence—developing the athlete, preparing the person, and building the future.",
+      "137 women. 197 men. 29 sports. Great sporting cultures grow by backing many paths to excellence: developing the athlete, preparing the person, and building the future.",
     category: "Athlete & Performance Coaching",
     date: "2026-08-27",
     author: "Lornette Daye",
@@ -826,7 +826,7 @@ export const posts: Post[] = [
           bullets: [
             {
               label: "Different Disciplines:",
-              text: "Every sport cultivates unique strengths—from explosive power to steady stillness, high-speed agility to calculated strategy.",
+              text: "Every sport cultivates unique strengths, from explosive power to steady stillness, high-speed agility to calculated strategy.",
             },
             {
               label: "Different Stories:",
@@ -890,7 +890,7 @@ export const posts: Post[] = [
     },
     body: {
       intro: [
-        "Every dream worth pursuing will test your resolve. On the track, as a Canadian National Sprint Champion chasing the Olympic dream, I learned that victory isn't determined when you're feeling fresh—it is forged in the final 50 meters when your lungs burn and every impulse tells you to quit.",
+        "Every dream worth pursuing will test your resolve. On the track, as a Canadian National Sprint Champion chasing the Olympic dream, I learned that victory isn't determined when you're feeling fresh; it is forged in the final 50 meters when your lungs burn and every impulse tells you to quit.",
         "Finish Strong is my personal memoir and strategic framework. It details how to maintain focus when facing heartbreaks, injuries, and setbacks, transforming life's hardest trials into your greatest strength.",
       ],
       sections: [
@@ -944,14 +944,14 @@ export const posts: Post[] = [
     },
     body: {
       intro: [
-        "In athletics, business, and daily life, we all encounter obstacles that threaten to stall our progress. A sudden setback—whether a career shift, an injury, a disappointment, or an unexpected transition—can easily feel like a permanent roadblock. But a true champion's perspective reminds us: a stumble on the track does not dictate the end of your race.",
+        "In athletics, business, and daily life, we all encounter obstacles that threaten to stall our progress. A sudden setback, whether a career shift, an injury, a disappointment, or an unexpected transition, can easily feel like a permanent roadblock. But a true champion's perspective reminds us: a stumble on the track does not dictate the end of your race.",
         "The true test of leadership and personal fortitude isn't avoiding hardship; it is discovering the capacity to rise above it. When you actively reframe your struggles, you uncover the profound opportunity to transform personal adversity and pain into powerful purpose.",
       ],
       sections: [
         {
           heading: "The Four Pillars of the Performance Plan",
           paragraphs: [
-            "Rebuilding momentum requires more than wishful thinking—it calls for an actionable strategy and unwavering commitment. Whether you are leading a team, coaching youth, or personally striving for your next breakthrough, building a sturdy framework will anchor you when pressure builds.",
+            "Rebuilding momentum requires more than wishful thinking: it calls for an actionable strategy and unwavering commitment. Whether you are leading a team, coaching youth, or personally striving for your next breakthrough, building a sturdy framework will anchor you when pressure builds.",
           ],
           bullets: [
             {
@@ -968,7 +968,7 @@ export const posts: Post[] = [
             },
             {
               label: "Purpose",
-              text: "Your 'why' is your greatest source of sustainable fuel. When your personal goals connect to a lasting mission—inspiring others, uplifting your community, and leading with integrity—no setback can extinguish your drive.",
+              text: "Your 'why' is your greatest source of sustainable fuel. When your personal goals connect to a lasting mission (inspiring others, uplifting your community, and leading with integrity), no setback can extinguish your drive.",
             },
           ],
         },
@@ -981,7 +981,7 @@ export const posts: Post[] = [
         },
       ],
       conclusion: [
-        "No matter where you find yourself today, remember that your current chapter is just one part of your broader story. Draw a line in the sand, embrace your renewed purpose, and fix your eyes on the road ahead. Your setback is simply the setup for your ultimate comeback—get ready to finish strong.",
+        "No matter where you find yourself today, remember that your current chapter is just one part of your broader story. Draw a line in the sand, embrace your renewed purpose, and fix your eyes on the road ahead. Your setback is simply the setup for your ultimate comeback. Get ready to finish strong.",
       ],
     },
   },
@@ -1246,8 +1246,8 @@ export const posts: Post[] = [
         "Are you ready to build a life that feels just as fulfilling off the field as it does on it?",
         "As a high-achieving, driven, and ambitious athlete, I know firsthand that you are no stranger to the pursuit of excellence. You understand that every victory comes with profound sacrifice, every challenge is a hidden opportunity to grow, and every agonizing setback is a masterclass in resilience.",
         "But I want to ask you a crucial question: Who are you beyond the trophies, the scoreboards, and the accolades?",
-        "There is a deeper journey waiting for you—one that calls for radical balance, continuous personal growth, and an unwavering commitment to living a life of true purpose. True success isn’t just about the victories you secure today; it’s about the holistic, rewarding life you build beyond them.",
-        "In Survival Skills for Athletes, I invite you to step into a life that is both elite in achievement and deeply rewarding in spirit. This isn't just a playbook for your sport—it's a playbook for your life.",
+        "There is a deeper journey waiting for you: one that calls for radical balance, continuous personal growth, and an unwavering commitment to living a life of true purpose. True success isn’t just about the victories you secure today; it’s about the holistic, rewarding life you build beyond them.",
+        "In Survival Skills for Athletes, I invite you to step into a life that is both elite in achievement and deeply rewarding in spirit. This isn't just a playbook for your sport. It's a playbook for your life.",
       ],
       sections: [
         {
@@ -1271,7 +1271,7 @@ export const posts: Post[] = [
         {
           heading: "Elevate Your Game, Your Mindset, and Your Legacy",
           paragraphs: [
-            "Here, you’ll find the exact guidance, encouragement, and practical insights you need to grow—not just as a competitor, but as a complete person. Your journey is about so much more than winning. It’s time to elevate your game, your mindset, and your legacy.",
+            "Here, you’ll find the exact guidance, encouragement, and practical insights you need to grow, not just as a competitor, but as a complete person. Your journey is about so much more than winning. It’s time to elevate your game, your mindset, and your legacy.",
           ],
         },
       ],
@@ -1298,7 +1298,7 @@ export const posts: Post[] = [
     },
     body: {
       intro: [
-        "Women are often called to balance countless roles—leading in careers, nurturing families, supporting communities, and holding together circles of strength. Yet in the midst of giving so much to others, it is easy to lose sight of your own renewal and purpose.",
+        "Women are often called to balance countless roles, leading in careers, nurturing families, supporting communities, and holding together circles of strength. Yet in the midst of giving so much to others, it is easy to lose sight of your own renewal and purpose.",
         "Survival Skills for Women was written as a warm, empowering roadmap to help you reclaim your space, honor your journey, and thrive with quiet confidence through every transition.",
       ],
       sections: [
@@ -1406,7 +1406,7 @@ export const posts: Post[] = [
     },
     body: {
       intro: [
-        "There are moments in every journey when the weight of responsibility feels heavy, and staying motivated seems difficult. In those quiet times, what we need isn't more pressure—it is gentle encouragement and a reminder of why we started.",
+        "There are moments in every journey when the weight of responsibility feels heavy, and staying motivated seems difficult. In those quiet times, what we need isn't more pressure; it is gentle encouragement and a reminder of why we started.",
         "The UMATTR Devotional was created as a peaceful space for daily reflection. Each entry offers a brief, powerful thought to help you ground your mind, renew your spirit, and keep moving forward.",
       ],
       sections: [
@@ -1422,7 +1422,7 @@ export const posts: Post[] = [
             },
             {
               label: "Remember Your Value",
-              text: "Affirm your inherent worth—you matter, your story matters, and your contribution counts.",
+              text: "Affirm your inherent worth: you matter, your story matters, and your contribution counts.",
             },
             {
               label: "One Step at a Time",
@@ -1438,7 +1438,7 @@ export const posts: Post[] = [
         },
       ],
       conclusion: [
-        "Never underestimate the power of showing up for yourself. You matter—keep going.",
+        "Never underestimate the power of showing up for yourself. You matter. Keep going.",
       ],
     },
   },
@@ -1508,13 +1508,13 @@ export const posts: Post[] = [
     image: {
       src: "/books/survival-skills-surviving-to-thriving-cover.png",
       alt: "2026 Survival Skills: Surviving to Thriving book cover artwork by Lornette Daye.",
-      caption: "Surviving to Thriving—building a life of enduring joy and fulfillment.",
+      caption: "Surviving to Thriving: building a life of enduring joy and fulfillment.",
       aspect: "aspect-[2/3]",
       crop: "object-contain",
     },
     body: {
       intro: [
-        "When life hits hard, staying afloat is our initial instinct. We go into survival mode—managing crisis, enduring stress, and getting through the day. But survival was never meant to be your permanent state.",
+        "When life hits hard, staying afloat is our initial instinct. We go into survival mode: managing crisis, enduring stress, and getting through the day. But survival was never meant to be your permanent state.",
         "Survival Skills: From Surviving to Thriving is designed to guide you past survival mode and into a season of vitality, clarity, and thriving purpose.",
       ],
       sections: [
@@ -1707,7 +1707,7 @@ export const bookListings: BookListing[] = [
     format: "Digital Edition",
     image: {
       src: "/books/surviving-life-2026-cover.png",
-      alt: "Surviving Life 2026 book cover — beach at sunrise with footprints in the sand.",
+      alt: "Surviving Life 2026 book cover: beach at sunrise with footprints in the sand.",
       crop: "object-top",
     },
     purchaseUrl: stripeBookLinks.survivingLife,
@@ -1730,7 +1730,7 @@ export const bookListings: BookListing[] = [
     format: "Digital Edition",
     image: {
       src: "/books/survival-skills-for-athletes-cover-new.png",
-      alt: "Survival Skills for Athletes book cover — a team of athletes in gold and white uniforms.",
+      alt: "Survival Skills for Athletes book cover: a team of athletes in gold and white uniforms.",
       crop: "object-top",
     },
     purchaseUrl: stripeBookLinks.survivalSkillsForAthletes,
@@ -1753,7 +1753,7 @@ export const bookListings: BookListing[] = [
     format: "Digital Edition",
     image: {
       src: "/books/survival-skills-for-believers-cover.png",
-      alt: "Survival Skills for Believers book cover — open Bible in a scenic landscape at sunrise.",
+      alt: "Survival Skills for Believers book cover: open Bible in a scenic landscape at sunrise.",
       crop: "object-top",
     },
     purchaseUrl: stripeBookLinks.survivalSkillsForBelievers,
@@ -1769,14 +1769,14 @@ export const bookListings: BookListing[] = [
     title: "Survival Skills for Women",
     subtitle: "A comprehensive guide to living with hope, resilience, and meaning.",
     description:
-      "A warm, practical guide for women who want to rebuild confidence, discover purpose, and thrive through every season — from pressure and loss to growth and renewal.",
+      "A warm, practical guide for women who want to rebuild confidence, discover purpose, and thrive through every season, from pressure and loss to growth and renewal.",
     audience:
       "For women, women's groups, mentoring circles, faith communities, and anyone navigating personal growth and transformation.",
     priceLabel: "$14.99 CAD",
     format: "Digital Edition",
     image: {
       src: "/books/survival-skills-for-women-cover.png",
-      alt: "Survival Skills for Women book cover — a woman looking confidently toward the horizon.",
+      alt: "Survival Skills for Women book cover: a woman looking confidently toward the horizon.",
       crop: "object-top",
     },
     purchaseUrl: stripeBookLinks.survivalSkillsForWomen,
@@ -1792,14 +1792,14 @@ export const bookListings: BookListing[] = [
     title: "UMATTR Devotional",
     subtitle: "Reflections for the moments that ask you to keep going.",
     description:
-      "A devotional journal for anyone who needs a reminder that they matter — featuring reflective prompts, encouragement, and truth to hold onto when life gets heavy.",
+      "A devotional journal for anyone who needs a reminder that they matter, featuring reflective prompts, encouragement, and truth to hold onto when life gets heavy.",
     audience:
       "For students, athletes, individuals in transition, faith communities, and anyone who needs a daily anchor of hope and worth.",
     priceLabel: "$14.99 CAD",
     format: "Digital Edition",
     image: {
       src: "/books/umattr-devotional-cover.png",
-      alt: "UMATTR Devotional book cover — a journal by the ocean.",
+      alt: "UMATTR Devotional book cover: a journal by the ocean.",
       crop: "object-top",
     },
     purchaseUrl: stripeBookLinks.umattrDevotional,
@@ -1838,7 +1838,7 @@ export const bookListings: BookListing[] = [
     title: "Survival Skills: Surviving to Thriving",
     subtitle: "The journey from just getting by to truly living.",
     description:
-      "A transformational guide that takes readers beyond survival mode — helping them identify what's holding them back, rebuild their foundation, and step into a life of genuine purpose and momentum.",
+      "A transformational guide that takes readers beyond survival mode, helping them identify what's holding them back, rebuild their foundation, and step into a life of genuine purpose and momentum.",
     audience:
       "For anyone feeling stuck, overwhelmed, or ready to move beyond surviving and into a life that truly thrives.",
     priceLabel: "$14.99 CAD",

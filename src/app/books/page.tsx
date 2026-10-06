@@ -14,6 +14,12 @@ import {
 import { CTAButton } from "@/components/CTAButton";
 import { PageShell } from "@/components/PageShell";
 import {
+  MotionFadeIn,
+  MotionScaleIn,
+  MotionStaggerContainer,
+  MotionStaggerItem,
+} from "@/components/motion";
+import {
   BookListing,
   bookListings,
   masterclassListings,
@@ -264,7 +270,7 @@ export default function BooksPage() {
           <div className="absolute left-0 top-10 h-64 w-64 rounded-full bg-[rgba(198,165,92,0.11)] blur-3xl" />
 
           <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-            <div>
+            <MotionFadeIn>
               <p className="text-xs font-bold uppercase tracking-[0.32em] text-[var(--gold-dark)]">
                 Books &amp; Digital Guides
               </p>
@@ -273,7 +279,7 @@ export default function BooksPage() {
               </h1>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-[var(--charcoal)]">
                 Explore Lornette Daye&apos;s books and the full 10&nbsp;F&apos;s
-                digital library — workbooks, devotionals, planners, and
+                digital library: workbooks, devotionals, planners, and
                 masterclasses for readers who want encouragement they can return
                 to, reflect on, and apply in real life.
               </p>
@@ -298,9 +304,9 @@ export default function BooksPage() {
                   </div>
                 ))}
               </div>
-            </div>
+            </MotionFadeIn>
 
-            <div className="relative">
+            <MotionScaleIn className="relative" delay={0.15}>
               <div className="grid gap-4 sm:grid-cols-3 lg:translate-y-4">
                 {bookListings.map((book, index) => (
                   <div
@@ -325,54 +331,57 @@ export default function BooksPage() {
                 ))}
               </div>
               <div className="mx-auto mt-6 max-w-lg border border-[rgba(198,165,92,0.35)] bg-white/75 p-5 text-center text-sm leading-7 text-[#675d50] shadow-[0_18px_45px_rgba(23,20,18,0.08)] backdrop-blur">
-                3 books + 20 student-athlete resources — all with secure Stripe
+                3 books + 20 student-athlete resources, all with secure Stripe
                 checkout.
               </div>
-            </div>
+            </MotionScaleIn>
           </div>
         </section>
 
         {/* ── Books ────────────────────────────────────────────────────────── */}
         <section id="book-listings" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
-            <SectionHeading
-              eyebrow="Lornette's Books"
-              title="Digital resources designed to help you rise."
-              body="Each book offers practical encouragement for resilience, faith, purpose, leadership, and personal growth. Choose the resource that speaks to your season or the people you serve."
-              icon={BookOpenCheck}
-            />
+            <MotionFadeIn>
+              <SectionHeading
+                eyebrow="Lornette's Books"
+                title="Digital resources designed to help you rise."
+                body="Each book offers practical encouragement for resilience, faith, purpose, leadership, and personal growth. Choose the resource that speaks to your season or the people you serve."
+                icon={BookOpenCheck}
+              />
+            </MotionFadeIn>
 
-            <div className="mt-12 grid gap-7 lg:grid-cols-3">
+            <MotionStaggerContainer className="mt-12 grid gap-7 lg:grid-cols-3">
               {bookListings.map((book) => (
-                <ProductCard
-                  key={book.slug}
-                  book={book}
-                  buyLabel="Buy"
-                  aspectClass="aspect-[3/4]"
-                />
+                <MotionStaggerItem key={book.slug}>
+                  <ProductCard
+                    book={book}
+                    buyLabel="Buy"
+                    aspectClass="aspect-[3/4]"
+                  />
+                </MotionStaggerItem>
               ))}
-            </div>
+            </MotionStaggerContainer>
           </div>
         </section>
 
         {/* ── How It Works ─────────────────────────────────────────────────── */}
         <section className="border-y border-[var(--line)] bg-white px-4 py-14 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
-            <div>
+            <MotionFadeIn>
               <p className="text-xs font-bold uppercase tracking-[0.32em] text-[var(--gold-dark)]">
                 How It Works
               </p>
               <h2 className="mt-4 font-serif text-4xl leading-tight text-[var(--ink)]">
                 Simple purchase path for digital readers.
               </h2>
-            </div>
-            <div className="grid gap-4 md:grid-cols-3">
+            </MotionFadeIn>
+            <MotionStaggerContainer className="grid gap-4 md:grid-cols-3">
               {buyingSteps.map((step, index) => {
                 const Icon = step.icon;
                 return (
-                  <div
+                  <MotionStaggerItem
                     key={step.title}
-                    className="border border-[rgba(198,165,92,0.3)] bg-[var(--ivory)] p-6"
+                    className="border border-[rgba(198,165,92,0.3)] bg-[var(--ivory)] p-6 transition duration-200 hover:-translate-y-1 hover:border-[var(--champagne)]"
                   >
                     <div className="flex items-center gap-3">
                       <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--champagne)] text-sm font-black text-[var(--ink)]">
@@ -390,10 +399,10 @@ export default function BooksPage() {
                     <p className="mt-3 text-sm leading-7 text-[#675d50]">
                       {step.body}
                     </p>
-                  </div>
+                  </MotionStaggerItem>
                 );
               })}
-            </div>
+            </MotionStaggerContainer>
           </div>
         </section>
 
@@ -403,23 +412,26 @@ export default function BooksPage() {
           className="bg-[var(--ivory)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
         >
           <div className="mx-auto max-w-7xl">
-            <SectionHeading
-              eyebrow="Student-Athlete Workbooks & Guides"
-              title="Workbooks and guides for the exact area you need to strengthen next."
-              body="Each resource is tied to a specific part of the 10 F's system — browse by fit, find the gap, and start with the workbook that matches your current season."
-              icon={FileText}
-            />
+            <MotionFadeIn>
+              <SectionHeading
+                eyebrow="Student-Athlete Workbooks & Guides"
+                title="Workbooks and guides for the exact area you need to strengthen next."
+                body="Each resource is tied to a specific part of the 10 F's system. Browse by fit, find the gap, and start with the workbook that matches your current season."
+                icon={FileText}
+              />
+            </MotionFadeIn>
 
-            <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <MotionStaggerContainer className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {workbookListings.map((book) => (
-                <ProductCard
-                  key={book.slug}
-                  book={book}
-                  buyLabel="Buy Now"
-                  aspectClass="aspect-[3/4]"
-                />
+                <MotionStaggerItem key={book.slug}>
+                  <ProductCard
+                    book={book}
+                    buyLabel="Buy Now"
+                    aspectClass="aspect-[3/4]"
+                  />
+                </MotionStaggerItem>
               ))}
-            </div>
+            </MotionStaggerContainer>
           </div>
         </section>
 
@@ -429,25 +441,28 @@ export default function BooksPage() {
           className="border-t border-[var(--line)] bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
         >
           <div className="mx-auto max-w-7xl">
-            <SectionHeading
-              eyebrow="10 F's Masterclass Courses"
-              title="Deep-dive video courses for every part of the student-athlete system."
-              body="Each masterclass goes deeper than a workbook — video lessons, community access, and structured learning tied to one of the 10 F's. One-year membership with a deposit to start."
-              icon={Video}
-            />
+            <MotionFadeIn>
+              <SectionHeading
+                eyebrow="10 F's Masterclass Courses"
+                title="Deep-dive video courses for every part of the student-athlete system."
+                body="Each masterclass goes deeper than a workbook: video lessons, community access, and structured learning tied to one of the 10 F's. One-year membership with a deposit to start."
+                icon={Video}
+              />
+            </MotionFadeIn>
 
-            <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+            <MotionStaggerContainer className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
               {masterclassListings.map((book) => (
-                <ProductCard
-                  key={book.slug}
-                  book={book}
-                  buyLabel="Enroll Now"
-                  aspectClass="aspect-[4/3]"
-                />
+                <MotionStaggerItem key={book.slug}>
+                  <ProductCard
+                    book={book}
+                    buyLabel="Enroll Now"
+                    aspectClass="aspect-[4/3]"
+                  />
+                </MotionStaggerItem>
               ))}
-            </div>
+            </MotionStaggerContainer>
 
-            <div className="mt-10 border border-[rgba(198,165,92,0.3)] bg-[var(--ivory)] p-6 text-sm leading-7 text-[#675d50]">
+            <MotionFadeIn className="mt-10 border border-[rgba(198,165,92,0.3)] bg-[var(--ivory)] p-6 text-sm leading-7 text-[#675d50]">
               <p>
                 <span className="font-bold text-[var(--ink)]">
                   About masterclass pricing:{" "}
@@ -456,13 +471,13 @@ export default function BooksPage() {
                 be contacted by the team after checkout to confirm onboarding
                 and community access.
               </p>
-            </div>
+            </MotionFadeIn>
           </div>
         </section>
 
         {/* ── Speaking CTA ─────────────────────────────────────────────────── */}
         <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-          <div className="mx-auto grid max-w-7xl gap-8 border border-[rgba(198,165,92,0.34)] bg-[linear-gradient(135deg,#ffffff,rgba(232,221,203,0.56))] p-7 shadow-[0_24px_70px_rgba(23,20,18,0.08)] lg:grid-cols-[1fr_auto] lg:items-center lg:p-10">
+          <MotionFadeIn className="mx-auto grid max-w-7xl gap-8 border border-[rgba(198,165,92,0.34)] bg-[linear-gradient(135deg,#ffffff,rgba(232,221,203,0.56))] p-7 shadow-[0_24px_70px_rgba(23,20,18,0.08)] lg:grid-cols-[1fr_auto] lg:items-center lg:p-10">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.32em] text-[var(--gold-dark)]">
                 Bring the Message to the Room
@@ -482,7 +497,7 @@ export default function BooksPage() {
                 Book Lornette
               </CTAButton>
             </div>
-          </div>
+          </MotionFadeIn>
         </section>
       </main>
     </PageShell>

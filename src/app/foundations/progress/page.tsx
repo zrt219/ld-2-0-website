@@ -95,14 +95,36 @@ const CANONICAL_JOURNEY_STAGES: JourneyStage[] = [
 import { useFoundationsStore } from "@/lib/foundations/store";
 
 export default function FoundationsProgressPage() {
-  const { activeAthlete } = useFoundationsStore();
+  const { activeAthlete, state } = useFoundationsStore();
   const completedCount = activeAthlete.completedFoundations.length;
+  const activeTrack = state.activeTrack || "golf";
+  const isEurope = state.activeRegion === "europe";
+
+  const trackJourneyMotto =
+    activeTrack === "hockey"
+      ? isEurope
+        ? "European League Poise. Better Hockey."
+        : "Better Hockey. A Stronger Team."
+      : activeTrack === "corporate"
+      ? isEurope
+        ? "European Boardroom Clarity. Better Leadership."
+        : "Better Leadership. A Stronger Organization."
+      : isEurope
+      ? "European Academy Poise. Better Golf."
+      : "Better Golf. A Stronger You.";
+
+  const trackTenWeeksSub =
+    activeTrack === "hockey"
+      ? "Ten weeks. Practical shift tools. One composed shift at a time."
+      : activeTrack === "corporate"
+      ? "Ten weeks. Practical leadership systems. One strategic decision at a time."
+      : "Ten weeks. Practical tools. One next shot at a time.";
 
   return (
     <LearnerShell>
       <div className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-6">
         {/* ========================================================= */}
-        {/* TOP HERO BANNER (Matches Mockup 3 media_1789625869325.jpg) */}
+        {/* TOP HERO BANNER                                           */}
         {/* ========================================================= */}
         <section className="relative overflow-hidden rounded-2xl border border-[#dfcca6] bg-[#fbf9f4] p-6 sm:p-8 shadow-[0_4px_24px_rgba(30,24,15,0.04)]">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
@@ -111,13 +133,13 @@ export default function FoundationsProgressPage() {
                 YOUR PERFORMANCE JOURNEY
               </h1>
               <p className="mt-2 font-serif text-base sm:text-xl text-[#665a4c]">
-                Ten weeks. Practical tools. One next shot at a time.
+                {trackTenWeeksSub}
               </p>
             </div>
 
             <div className="text-right flex flex-col items-end">
               <span className="font-serif text-xl sm:text-2xl italic text-[#b89456]">
-                Better Golf. A Stronger You.
+                {trackJourneyMotto}
               </span>
               <div className="mt-2 inline-flex items-center gap-2 rounded-full bg-[#f4ede1] px-3.5 py-1 text-xs font-semibold text-[#1e3a29] border border-[#dfcca6]/50">
                 <Sparkles size={13} />
@@ -131,12 +153,12 @@ export default function FoundationsProgressPage() {
         {/* 2-COLUMN LAYOUT: COACH CARD + 10-FOUNDATION OVERVIEW      */}
         {/* ========================================================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          {/* Left Column: Coach Lornette Profile Card (col-span-4) */}
+          {/* Left Column: Lornette Daye Profile Card (col-span-4) */}
           <div className="lg:col-span-4 rounded-xl border border-[#ebdcc9] bg-[#fdfbf7] p-6 shadow-[0_2px_12px_rgba(30,24,15,0.03)] space-y-5">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg border border-[#dfcca6]/60 shadow-xs">
               <Image
                 src="/generated/lornette-executive-portrait.jpg"
-                alt="Coach Lornette Daye in white blazer"
+                alt="Olympic-level coach Lornette Daye in white blazer"
                 fill
                 sizes="(max-width: 1024px) 100vw, 380px"
                 quality={95}

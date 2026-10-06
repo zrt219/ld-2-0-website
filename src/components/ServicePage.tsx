@@ -1,3 +1,6 @@
+"use client";
+
+import { motion, useReducedMotion } from "framer-motion";
 import { mediaItems, type ServicePage as ServicePageData } from "@/content/site";
 import { CTAButton } from "./CTAButton";
 import { HeroSplit } from "./HeroSplit";
@@ -5,6 +8,7 @@ import { SectionHeader } from "./SectionHeader";
 import { SpeakerMediaBand } from "./SpeakerMediaBand";
 
 export function ServicePage({ page }: { page: ServicePageData }) {
+  const reduce = useReducedMotion();
   const mediaBandProps = page.mediaBand ?? {};
 
   return (
@@ -26,20 +30,30 @@ export function ServicePage({ page }: { page: ServicePageData }) {
             body="Each keynote, workshop, or coaching experience connects Lornette's story with tools your audience can use under pressure, through change, and beyond the event."
           />
           <div className="mt-10 grid gap-4 md:grid-cols-5">
-            {page.pillars.map((pillar) => (
-              <div
+            {page.pillars.map((pillar, idx) => (
+              <motion.div
                 key={pillar}
-                className="border border-[var(--line)] bg-white p-5 text-center font-serif text-xl text-[var(--ink)] shadow-[0_14px_55px_rgba(23,20,18,0.05)]"
+                initial={reduce ? { opacity: 1 } : { opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.45, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={reduce ? undefined : { y: -4, transition: { duration: 0.2 } }}
+                className="border border-[var(--line)] bg-white p-5 text-center font-serif text-xl text-[var(--ink)] shadow-[0_14px_55px_rgba(23,20,18,0.05)] hover:border-[rgba(198,165,92,0.6)] hover:shadow-md transition-all duration-300"
               >
                 {pillar}
-              </div>
+              </motion.div>
             ))}
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            {page.sections.map((section) => (
-              <article
+            {page.sections.map((section, idx) => (
+              <motion.article
                 key={section.title}
-                className="border border-[var(--line)] bg-white p-6 shadow-[0_18px_70px_rgba(23,20,18,0.06)]"
+                initial={reduce ? { opacity: 1 } : { opacity: 0, y: 22 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.55, delay: idx * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={reduce ? undefined : { y: -5, transition: { duration: 0.25 } }}
+                className="border border-[var(--line)] bg-white p-6 shadow-[0_18px_70px_rgba(23,20,18,0.06)] hover:border-[rgba(198,165,92,0.6)] hover:shadow-lg transition-all duration-300"
               >
                 <h2 className="font-serif text-3xl text-[var(--ink)]">
                   {section.title}
@@ -59,7 +73,7 @@ export function ServicePage({ page }: { page: ServicePageData }) {
                     </li>
                   ))}
                 </ul>
-              </article>
+              </motion.article>
             ))}
           </div>
           <div className="mt-12 border-y border-[rgba(198,165,92,0.5)] py-10">
@@ -80,3 +94,4 @@ export function ServicePage({ page }: { page: ServicePageData }) {
     </main>
   );
 }
+

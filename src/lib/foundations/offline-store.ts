@@ -1,7 +1,10 @@
+import { ProgramTrack } from "./store";
+
 export type OfflineReflectionRecord = {
-  id: string; // athleteId_lessonId
+  id: string; // athleteId_track_lessonId or legacy
   athleteId: string;
   lessonId: number;
+  track?: ProgramTrack;
   foundationTitle: string;
   noticed: string;
   worked: string;
@@ -47,10 +50,12 @@ function openDB(): Promise<IDBDatabase> {
 export function makeDraftKey(
   athleteId: string,
   lessonId: number,
-  cohortId?: string | null
+  cohortId?: string | null,
+  track?: ProgramTrack | null
 ): string {
   const safeCohort = cohortId && cohortId.trim() ? cohortId.trim() : "default";
-  return `foundation-draft:${athleteId}:${safeCohort}:${lessonId}`;
+  const safeTrack = track || "golf";
+  return `foundation-draft:${athleteId}:${safeCohort}:${safeTrack}:${lessonId}`;
 }
 
 export function notifySyncStatus(detail: Partial<SyncStatusDetail>) {
@@ -74,12 +79,13 @@ export async function saveOfflineDraft(
   noticed: string,
   worked: string,
   repeated: string,
-  cohortId?: string | null
+  cohortId?: string | null,
+  track?: ProgramTrack | null
 ): Promise<void> {
-  const id = makeDraftKey(athleteId, lessonId, cohortId);
+  const id = makeDraftKey(athleteId, lessonId, cohortId, track);
   const isAllEmpty = !noticed.trim() && !worked.trim() && !repeated.trim();
   if (isAllEmpty) {
-    await clearOfflineDraft(athleteId, lessonId, cohortId);
+    await clearOfflineDraft(athleteId, lessonId, cohortId, track);
     return;
   }
 
@@ -87,6 +93,7 @@ export async function saveOfflineDraft(
     id,
     athleteId,
     lessonId,
+    track: track || "golf",
     foundationTitle,
     noticed,
     worked,
@@ -97,9 +104,14 @@ export async function saveOfflineDraft(
 
   try {
     const db = await openDB();
-    const tx = db.transaction([STORE_REFLECTIONS], "readwrite");
-    const store = tx.objectStore(STORE_REFLECTIONS);
-    store.put(record);
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction([STORE_REFLECTIONS], "readwrite");
+      const store = tx.objectStore(STORE_REFLECTIONS);
+      store.put(record);
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+      tx.onabort = () => reject(tx.error);
+    });
   } catch {
     if (typeof window !== "undefined") {
       try {
@@ -112,9 +124,11 @@ export async function saveOfflineDraft(
 export async function getOfflineDraft(
   athleteId: string,
   lessonId: number,
-  cohortId?: string | null
+  cohortId?: string | null,
+  track?: ProgramTrack | null
 ): Promise<OfflineReflectionRecord | null> {
-  const primaryId = makeDraftKey(athleteId, lessonId, cohortId);
+  const primaryId = makeDraftKey(athleteId, lessonId, cohortId, track);
+  const fallbackLegacyCohortId = `foundation-draft:${athleteId}:${cohortId || "default"}:${lessonId}`;
   const fallbackLegacyId = `${athleteId}_${lessonId}`;
 
   try {
@@ -127,10 +141,19 @@ export async function getOfflineDraft(
         if (req.result) {
           resolve(req.result);
         } else {
-          // Check fallback legacy key
-          const fallbackReq = store.get(fallbackLegacyId);
-          fallbackReq.onsuccess = () => resolve(fallbackReq.result || null);
-          fallbackReq.onerror = () => resolve(null);
+          // Check fallback legacy trackless key
+          const fallbackReq1 = store.get(fallbackLegacyCohortId);
+          fallbackReq1.onsuccess = () => {
+            if (fallbackReq1.result) {
+              resolve(fallbackReq1.result);
+            } else {
+              // Check fallback legacy id
+              const fallbackReq2 = store.get(fallbackLegacyId);
+              fallbackReq2.onsuccess = () => resolve(fallbackReq2.result || null);
+              fallbackReq2.onerror = () => resolve(null);
+            }
+          };
+          fallbackReq1.onerror = () => resolve(null);
         }
       };
       req.onerror = () => resolve(null);
@@ -142,7 +165,10 @@ export async function getOfflineDraft(
   // Fallback to localStorage
   if (typeof window !== "undefined") {
     try {
-      const raw = localStorage.getItem(primaryId) ||
+      const raw =
+        localStorage.getItem(primaryId) ||
+        localStorage.getItem(fallbackLegacyCohortId) ||
+        localStorage.getItem(fallbackLegacyId) ||
         localStorage.getItem(`ld_reflection_draft_${athleteId}_lesson_${lessonId}`);
       if (raw) {
         const parsed = JSON.parse(raw);
@@ -150,6 +176,7 @@ export async function getOfflineDraft(
           id: primaryId,
           athleteId,
           lessonId,
+          track: parsed.track || track || "golf",
           foundationTitle: parsed.foundationTitle || "",
           noticed: parsed.noticed || "",
           worked: parsed.worked || "",
@@ -166,22 +193,31 @@ export async function getOfflineDraft(
 export async function clearOfflineDraft(
   athleteId: string,
   lessonId: number,
-  cohortId?: string | null
+  cohortId?: string | null,
+  track?: ProgramTrack | null
 ): Promise<void> {
-  const primaryId = makeDraftKey(athleteId, lessonId, cohortId);
+  const primaryId = makeDraftKey(athleteId, lessonId, cohortId, track);
+  const fallbackLegacyCohortId = `foundation-draft:${athleteId}:${cohortId || "default"}:${lessonId}`;
   const legacyId = `${athleteId}_${lessonId}`;
 
   try {
     const db = await openDB();
-    const tx = db.transaction([STORE_REFLECTIONS], "readwrite");
-    const store = tx.objectStore(STORE_REFLECTIONS);
-    store.delete(primaryId);
-    store.delete(legacyId);
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction([STORE_REFLECTIONS], "readwrite");
+      const store = tx.objectStore(STORE_REFLECTIONS);
+      store.delete(primaryId);
+      store.delete(fallbackLegacyCohortId);
+      store.delete(legacyId);
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+      tx.onabort = () => reject(tx.error);
+    });
   } catch {}
 
   if (typeof window !== "undefined") {
     try {
       localStorage.removeItem(primaryId);
+      localStorage.removeItem(fallbackLegacyCohortId);
       localStorage.removeItem(legacyId);
       localStorage.removeItem(`ld_reflection_draft_${athleteId}_lesson_${lessonId}`);
     } catch {}
@@ -191,17 +227,23 @@ export async function clearOfflineDraft(
 export async function purgeAthleteDrafts(athleteId: string): Promise<void> {
   try {
     const db = await openDB();
-    const tx = db.transaction([STORE_REFLECTIONS], "readwrite");
-    const store = tx.objectStore(STORE_REFLECTIONS);
-    const req = store.getAll();
-    req.onsuccess = () => {
-      const records: OfflineReflectionRecord[] = req.result || [];
-      records.forEach((r) => {
-        if (r.athleteId === athleteId) {
-          store.delete(r.id);
-        }
-      });
-    };
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction([STORE_REFLECTIONS], "readwrite");
+      const store = tx.objectStore(STORE_REFLECTIONS);
+      const req = store.getAll();
+      req.onsuccess = () => {
+        const records: OfflineReflectionRecord[] = req.result || [];
+        records.forEach((r) => {
+          if (r.athleteId === athleteId) {
+            store.delete(r.id);
+          }
+        });
+      };
+      req.onerror = () => reject(req.error);
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+      tx.onabort = () => reject(tx.error);
+    });
   } catch {}
 
   if (typeof window !== "undefined") {
@@ -219,19 +261,87 @@ export async function purgeAthleteDrafts(athleteId: string): Promise<void> {
   }
 }
 
+/**
+ * GDPR Data Erasure helper: removes all local drafts, reflections, and outbox records
+ * for a specific athlete from IndexedDB and localStorage (Right to be Forgotten).
+ */
+export async function purgeAthleteAllData(athleteId: string): Promise<void> {
+  try {
+    const db = await openDB();
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction([STORE_REFLECTIONS, STORE_OUTBOX], "readwrite");
+      const refStore = tx.objectStore(STORE_REFLECTIONS);
+      const outboxStore = tx.objectStore(STORE_OUTBOX);
+
+      const refReq = refStore.getAll();
+      refReq.onsuccess = () => {
+        const records: OfflineReflectionRecord[] = refReq.result || [];
+        records.forEach((r) => {
+          if (r.athleteId === athleteId) {
+            refStore.delete(r.id);
+          }
+        });
+      };
+      refReq.onerror = () => reject(refReq.error);
+
+      const outboxReq = outboxStore.getAll();
+      outboxReq.onsuccess = () => {
+        const records: OfflineReflectionRecord[] = outboxReq.result || [];
+        records.forEach((r) => {
+          if (r.athleteId === athleteId) {
+            outboxStore.delete(r.id);
+          }
+        });
+      };
+      outboxReq.onerror = () => reject(outboxReq.error);
+
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+      tx.onabort = () => reject(tx.error);
+    });
+  } catch {}
+
+  if (typeof window !== "undefined") {
+    try {
+      const prefix = `foundation-draft:${athleteId}:`;
+      const outboxPrefix = `ld_outbox_${athleteId}_`;
+      const keysToRemove: string[] = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (
+          key &&
+          (key.startsWith(prefix) ||
+            key.startsWith(`ld_reflection_draft_${athleteId}_`) ||
+            key.startsWith(outboxPrefix) ||
+            key.includes(athleteId))
+        ) {
+          keysToRemove.push(key);
+        }
+      }
+      keysToRemove.forEach((k) => localStorage.removeItem(k));
+    } catch {}
+  }
+
+  const outbox = await getPendingOutboxSyncs();
+  notifySyncStatus({ pendingCount: outbox.length });
+}
+
 export async function queueReflectionSync(
   athleteId: string,
   lessonId: number,
   foundationTitle: string,
   noticed: string,
   worked: string,
-  repeated: string
+  repeated: string,
+  track?: ProgramTrack | null
 ): Promise<void> {
-  const id = `${athleteId}_${lessonId}`;
+  const safeTrack = track || "golf";
+  const id = `${athleteId}_${safeTrack}_${lessonId}`;
   const record: OfflineReflectionRecord = {
     id,
     athleteId,
     lessonId,
+    track: safeTrack,
     foundationTitle,
     noticed,
     worked,
@@ -242,9 +352,14 @@ export async function queueReflectionSync(
 
   try {
     const db = await openDB();
-    const tx = db.transaction([STORE_REFLECTIONS, STORE_OUTBOX], "readwrite");
-    tx.objectStore(STORE_REFLECTIONS).put(record);
-    tx.objectStore(STORE_OUTBOX).put(record);
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction([STORE_REFLECTIONS, STORE_OUTBOX], "readwrite");
+      tx.objectStore(STORE_REFLECTIONS).put(record);
+      tx.objectStore(STORE_OUTBOX).put(record);
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+      tx.onabort = () => reject(tx.error);
+    });
   } catch {
     if (typeof window !== "undefined") {
       try {
@@ -260,8 +375,13 @@ export async function queueReflectionSync(
 export async function clearSyncedOutboxRecord(id: string): Promise<void> {
   try {
     const db = await openDB();
-    const tx = db.transaction([STORE_OUTBOX], "readwrite");
-    tx.objectStore(STORE_OUTBOX).delete(id);
+    await new Promise<void>((resolve, reject) => {
+      const tx = db.transaction([STORE_OUTBOX], "readwrite");
+      tx.objectStore(STORE_OUTBOX).delete(id);
+      tx.oncomplete = () => resolve();
+      tx.onerror = () => reject(tx.error);
+      tx.onabort = () => reject(tx.error);
+    });
   } catch {
     if (typeof window !== "undefined") {
       try {

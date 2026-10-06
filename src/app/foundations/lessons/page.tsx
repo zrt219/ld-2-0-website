@@ -126,13 +126,44 @@ const CANONICAL_LESSONS: FoundationLesson[] = [
 ];
 
 export default function FoundationsLessonsPage() {
-  const { activeAthlete, saveReflection } = useFoundationsStore();
+  const { activeAthlete, state, saveReflection } = useFoundationsStore();
+  const activeTrack = state.activeTrack || "golf";
+  const isEurope = state.activeRegion === "europe";
+
   const [activeLessonId, setActiveLessonId] = useState<number>(3);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(38); // 38%
   const [showSubtitles, setShowSubtitles] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+
+  // Track-specific video posters
+  const videoPoster =
+    activeTrack === "hockey"
+      ? "/foundations/pathways/hockey/lornette-hockey-huddle-landscape.png"
+      : activeTrack === "corporate"
+      ? "/foundations/pathways/corporate/lornette-corporate-keynote.png"
+      : "/foundations/golf/lornette-golf-simulator-studio-tablet.png";
+
+  const welcomeHeadline =
+    activeTrack === "hockey"
+      ? "WELCOME, HOCKEY ATHLETE"
+      : activeTrack === "corporate"
+      ? "WELCOME, EXECUTIVE LEADER"
+      : "WELCOME, GOLFER";
+
+  const trackMotto =
+    activeTrack === "hockey"
+      ? isEurope
+        ? "European League Composure. Relentless Shift Execution."
+        : "A More Composed Shift. A Stronger Team."
+      : activeTrack === "corporate"
+      ? isEurope
+        ? "European Executive Poise. Decisive Boardroom Clarity."
+        : "Poise Under Pressure. Decisive Leadership."
+      : isEurope
+      ? "European Academy Poise. A Stronger Game."
+      : "A More Focused You. A Stronger Game.";
 
   // Initialize reflection from activeAthlete store or localStorage draft
   const existingReflection = activeAthlete.reflections[activeLessonId];
@@ -152,7 +183,7 @@ export default function FoundationsLessonsPage() {
   useEffect(() => {
     let isMounted = true;
     const athleteCohort = (activeAthlete as { cohortId?: string })?.cohortId || null;
-    getOfflineDraft(activeAthlete.id, activeLessonId, athleteCohort).then((draft) => {
+    getOfflineDraft(activeAthlete.id, activeLessonId, athleteCohort, activeTrack).then((draft) => {
       if (!isMounted || !draft) return;
       const draftTime = draft.updatedAt ? new Date(draft.updatedAt).getTime() : 0;
       const serverTime = existingReflection?.updatedAt ? new Date(existingReflection.updatedAt).getTime() : 0;
@@ -176,7 +207,7 @@ export default function FoundationsLessonsPage() {
     return () => {
       isMounted = false;
     };
-  }, [activeAthlete.id, activeLessonId, existingReflection]);
+  }, [activeAthlete.id, activeLessonId, existingReflection, activeTrack]);
 
   // Debounced auto-save draft to IndexedDB on input change (750ms)
   useEffect(() => {
@@ -184,7 +215,7 @@ export default function FoundationsLessonsPage() {
     const athleteCohort = (activeAthlete as { cohortId?: string })?.cohortId || null;
     const hasContent = reflectionNotice.trim() || reflectionWorked.trim() || reflectionRepeat.trim();
     if (!hasContent) {
-      clearOfflineDraft(activeAthlete.id, activeLessonId, athleteCohort);
+      clearOfflineDraft(activeAthlete.id, activeLessonId, athleteCohort, activeTrack);
       return;
     }
 
@@ -197,19 +228,22 @@ export default function FoundationsLessonsPage() {
         reflectionNotice,
         reflectionWorked,
         reflectionRepeat,
-        athleteCohort
+        athleteCohort,
+        activeTrack
       );
       const isOnline = typeof navigator !== "undefined" ? navigator.onLine : true;
       setDraftStatus(isOnline ? "Draft saved on this device" : "Offline - draft protected");
     }, 750);
 
     return () => clearTimeout(timeout);
-  }, [reflectionNotice, reflectionWorked, reflectionRepeat, activeAthlete, activeLessonId]);
+  }, [reflectionNotice, reflectionWorked, reflectionRepeat, activeAthlete, activeLessonId, activeTrack]);
 
-  // Sync reflection state when active athlete persona switches
+  // Sync reflection state when active athlete persona or track switches
   const [prevAthleteId, setPrevAthleteId] = useState(activeAthlete.id);
-  if (activeAthlete.id !== prevAthleteId) {
+  const [prevTrack, setPrevTrack] = useState(activeTrack);
+  if (activeAthlete.id !== prevAthleteId || activeTrack !== prevTrack) {
     setPrevAthleteId(activeAthlete.id);
+    setPrevTrack(activeTrack);
     const ref = activeAthlete.reflections[activeLessonId];
     setReflectionNotice(ref?.noticed || "");
     setReflectionWorked(ref?.worked || "");
@@ -227,7 +261,7 @@ export default function FoundationsLessonsPage() {
     setSavedStatus(null);
     const athleteCohort = (activeAthlete as { cohortId?: string })?.cohortId || null;
     const ref = activeAthlete.reflections[lessonId];
-    const draft = await getOfflineDraft(activeAthlete.id, lessonId, athleteCohort);
+    const draft = await getOfflineDraft(activeAthlete.id, lessonId, athleteCohort, activeTrack);
     const draftTime = draft?.updatedAt ? new Date(draft.updatedAt).getTime() : 0;
     const serverTime = ref?.updatedAt ? new Date(ref.updatedAt).getTime() : 0;
 
@@ -283,10 +317,11 @@ export default function FoundationsLessonsPage() {
         activeLesson.foundation,
         reflectionNotice,
         reflectionWorked,
-        reflectionRepeat
+        reflectionRepeat,
+        activeTrack
       );
       // Queued in durable offline store outbox, safe to clear working draft
-      await clearOfflineDraft(activeAthlete.id, activeLesson.id, athleteCohort);
+      await clearOfflineDraft(activeAthlete.id, activeLesson.id, athleteCohort, activeTrack);
       setSavedStatus("Saved to device (Offline mode). Queued to sync when back online.");
     } else {
       try {
@@ -296,12 +331,13 @@ export default function FoundationsLessonsPage() {
           activeLesson.foundation,
           reflectionNotice,
           reflectionWorked,
-          reflectionRepeat
+          reflectionRepeat,
+          activeTrack
         );
         const syncResult = await flushOutboxSync();
         if (syncResult.remaining === 0) {
           // Success: delete local draft only after verified server save
-          await clearOfflineDraft(activeAthlete.id, activeLesson.id, athleteCohort);
+          await clearOfflineDraft(activeAthlete.id, activeLesson.id, athleteCohort, activeTrack);
           setSavedStatus("Reflection saved to your Performance Edge Plan.");
         } else {
           setSavedStatus("Reflection saved to device. Queued for cloud sync.");
@@ -330,7 +366,7 @@ export default function FoundationsLessonsPage() {
             </p>
             <div className="flex items-baseline gap-3 mt-1">
               <h1 className="font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-[#1e1b18]">
-                WELCOME, GOLFER
+                {welcomeHeadline}
               </h1>
               <span className="font-serif text-lg sm:text-xl italic text-[#b89456]">
                 Begin with Lornette.
@@ -340,7 +376,7 @@ export default function FoundationsLessonsPage() {
 
           <div className="text-right">
             <p className="font-serif text-sm italic text-[#7a6f62]">
-              A More Focused You. A Stronger Game.
+              {trackMotto}
             </p>
             <div className="mt-1 flex items-center justify-end gap-2 text-xs font-semibold text-[#1e3a29]">
               <span className="h-2 w-2 rounded-full bg-[#1e3a29]" />
@@ -362,7 +398,7 @@ export default function FoundationsLessonsPage() {
                 <video
                   className="h-full w-full object-cover"
                   controls
-                  poster="/foundations/golf/lornette-golf-simulator-studio-tablet.png"
+                  poster={videoPoster}
                   onPlay={() => setIsPlaying(true)}
                   onPause={() => setIsPlaying(false)}
                   onTimeUpdate={(e) => {

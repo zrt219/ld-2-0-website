@@ -1,36 +1,77 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  Building2,
+  CheckCircle2,
   ChevronDown,
+  ClipboardList,
   Clock,
   Compass,
   Crosshair,
   Eye,
   Flag,
   Layers,
+  Mic,
   RotateCcw,
   ShieldCheck,
   Sparkles,
   Target,
+  Users,
 } from "lucide-react";
 
 import { CTAButton } from "@/components/CTAButton";
+import { FAQAccordion } from "@/components/FAQAccordion";
 import { PageShell } from "@/components/PageShell";
 import { FoundationsSubNav } from "@/components/foundations/FoundationsSubNav";
+import { FoundationsFloatingAction } from "@/components/foundations/FoundationsFloatingAction";
+import { GolfRegistrationForm } from "@/components/foundations/GolfRegistrationForm";
+import {
+  MotionFadeIn,
+  MotionScaleIn,
+  MotionStaggerContainer,
+  MotionStaggerItem,
+  ScrollProgressBar,
+  MotionShimmerButton,
+} from "@/components/motion";
 import { createMetadata } from "@/content/site";
 
 export const metadata = createMetadata(
-  "Lornette’s Foundation Golf | 10-Week Guided Program",
-  "A specialized 10-week guided athlete development program powered by the Performance Edge Framework, helping golfers master the 10 Athletic Foundations and practical mental game tools.",
+  "Lornette’s Foundation Golf | 10-Week Guided Program & Club Partnerships",
+  "The comprehensive mental performance pathway for competitive golfers and private clubs led by Olympic-level coach Lornette Daye. Powered by the Performance Edge Framework.",
   "/foundations/golf",
 );
 
-const credibilityStats = [
-  { value: "Multi-Decade", label: "National Record Unsurpassed", detail: "Canadian sprint mark stood for decades · Canada Summer Games Double Gold Champion" },
-  { value: "40+", label: "Years Coaching at Olympic Level", detail: "Canadian national sprint champion, multi-decade record holder, elite international coach" },
-  { value: "150+", label: "International Competitors", detail: "Mentored across Olympic Trials, World Championships & national arenas" },
-  { value: "500+", label: "Championship Athletes Coached", detail: "Elite juniors, collegiate NCAA contenders & tournament leaders coached to peak poise" },
-  { value: "10", label: "Athletic Foundations", detail: "Comprehensive life & competition curriculum powered by Performance Edge" },
+const golfSignatureStandouts = [
+  {
+    title: "Preparation",
+    label: "Mental Readiness for Competition",
+    detail: "Structured practice systems that prime focus before tournament play.",
+    icon: ClipboardList,
+  },
+  {
+    title: "Routine",
+    label: "Repeatable Routines That Build Confidence",
+    detail: "Automated 6-step pre-shot cadence that anchors clarity in all conditions.",
+    icon: Crosshair,
+  },
+  {
+    title: "Pressure",
+    label: "Composure in High-Stakes Moments",
+    detail: "Physiological regulation and breath work when the round is on the line.",
+    icon: Sparkles,
+  },
+  {
+    title: "Reset",
+    label: "Tools to Recover and Refresh",
+    detail: "Your previous shot cannot hit your next shot: 5-second mistake recovery.",
+    icon: RotateCcw,
+  },
+  {
+    title: "Confidence",
+    label: "Play Your Best When It Matters",
+    detail: "An internal evidence ledger of executed routines that holds firm under heat.",
+    icon: ShieldCheck,
+  },
 ];
 
 const coreOutcomes = [
@@ -65,7 +106,7 @@ const curriculumPhases = [
   {
     phase: "Phase 1",
     title: "Build Your Foundation",
-    weeksLabel: "Weeks 1–3",
+    weeksLabel: "Weeks 1-3",
     theme: "Internal Identity & Daily Preparation Systems",
     description:
       "Championship performance begins with unshakeable preparation. Phase 1 anchors your self-worth beyond the scorecard, refines your attention discipline, and establishes a repeatable pre-shot routine that holds steady in any competitive environment.",
@@ -79,7 +120,7 @@ const curriculumPhases = [
   {
     phase: "Phase 2",
     title: "Perform & Respond",
-    weeksLabel: "Weeks 4–6",
+    weeksLabel: "Weeks 4-6",
     theme: "Tournament Pressure & In-Round Recovery",
     description:
       "True composure is demonstrated in how quickly you reset after adversity. Phase 2 installs elite recovery protocols, physiological regulation skills, and competitive poise that allow you to execute each shot on its own terms.",
@@ -93,7 +134,7 @@ const curriculumPhases = [
   {
     phase: "Phase 3",
     title: "Build What Comes Next",
-    weeksLabel: "Weeks 7–10",
+    weeksLabel: "Weeks 7-10",
     theme: "Ecosystem, Career, Brand & Legacy",
     description:
       "A complete champion builds an enduring foundation: establishing healthy support ecosystems, professional financial literacy, and a capstone performance plan.",
@@ -111,7 +152,7 @@ const weeklyRhythmSteps = [
   {
     step: "01",
     name: "Lornette Guidance",
-    time: "15–20 Mins",
+    time: "15-20 Mins",
     description:
       "A focused video and audio orientation breaking down the week's athletic foundation and competitive significance.",
   },
@@ -335,8 +376,9 @@ const deliveryFormats = [
   {
     title: "Keynote Experience",
     subtitle: "Playing Your Best When It Matters",
-    time: "60–90 Minutes",
-    href: "/foundations/golf/keynote",
+    time: "60-90 Minutes",
+    href: "#club-partnership",
+    icon: Mic,
     description:
       "A dynamic, inspiring address for club banquets, member tournaments, or coach symposiums introducing the core principles of competitive mental toughness.",
   },
@@ -344,7 +386,8 @@ const deliveryFormats = [
     title: "Member Workshop & Clinic",
     subtitle: "The Performance Edge Workshop & Member Clinic",
     time: "Approx. 2 Hours",
-    href: "/foundations/golf/workshop",
+    href: "#club-partnership",
+    icon: Users,
     description:
       "Our flagship hands-on member clinic combining whiteboard instruction with live pre-shot routine development, pressure breathing, and mistake recovery drills.",
   },
@@ -352,7 +395,8 @@ const deliveryFormats = [
     title: "10-Week Guided Program",
     subtitle: "Lornette’s Foundation Golf 10-Week Guided Program",
     time: "10 Weeks Structured",
-    href: "/foundations/golf/program",
+    href: "#program",
+    icon: Compass,
     description:
       "A 10-week cohort-based guided journey led by Lornette, combining 10 Foundation modules, structured on-course field assignments, and peer accountability for competitive players.",
   },
@@ -360,15 +404,49 @@ const deliveryFormats = [
     title: "Club Partnership",
     subtitle: "Lornette’s Foundation Golf Club Partnership",
     time: "Seasonal / Annual",
-    href: "/foundations/golf/club-partnership",
+    href: "#club-partnership",
+    icon: Building2,
     description:
       "Complete club alignment including keynotes, member clinics, junior development integration, and coach collaboration to elevate the club's golf culture.",
   },
 ];
 
+const clubPartnershipTiers = [
+  {
+    tier: "Full Season Alliance",
+    subtitle: "Complete Club Mental Conditioning",
+    description:
+      "Year-long integration with 2 keynotes, 4 member clinics, junior camp integration, and coach advisory sessions.",
+    highlight: "Most Popular for Private Clubs",
+  },
+  {
+    tier: "Tournament Series Package",
+    subtitle: "Pre-Championship Intensive",
+    description:
+      "Targeted support built around your club's championship calendar: Member-Guest, Club Championship, and Interclub qualifiers.",
+    highlight: "Seasonal Focus",
+  },
+  {
+    tier: "Junior Academy Pathway",
+    subtitle: "Next-Generation Champion Development",
+    description:
+      "Specialized mental performance curriculum tailored specifically for competitive youth and junior development programs.",
+    highlight: "Academy & Development",
+  },
+];
+
+const clubAdvantages = [
+  "More engaged, resilient, and confident members",
+  "A stronger, more connected club community",
+  "Programs tailored to your club’s culture and calendar",
+  "Measurable impact, anonymous reporting, and ongoing support",
+  "A premier institutional experience led by Lornette Daye",
+];
+
 export default function FoundationsGolfPage() {
   return (
     <PageShell>
+      <ScrollProgressBar />
       <main className="bg-[var(--ivory)] text-[var(--ink)]">
         <FoundationsSubNav />
 
@@ -378,13 +456,10 @@ export default function FoundationsGolfPage() {
 
           <div className="relative mx-auto max-w-7xl">
             <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
-              <div className="lg:col-span-7">
+              <MotionFadeIn className="lg:col-span-7">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="border border-[rgba(198,165,92,0.48)] bg-white/70 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)] shadow-sm">
-                    Lornette’s Foundation
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#7d7164]">
-                    Mental Game &amp; Performance
+                    LORNETTE’S FOUNDATION | GOLF PERFORMANCE
                   </span>
                 </div>
 
@@ -396,25 +471,21 @@ export default function FoundationsGolfPage() {
                   Lornette’s Foundation Golf
                 </p>
 
-                <p className="mt-2 text-xs font-bold uppercase tracking-[0.22em] text-[var(--gold-dark)]">
-                  Powered by the Performance Edge Framework
-                </p>
-
                 <p className="mt-6 text-base leading-8 text-[#4f4438] sm:text-lg">
-                  The mental side of golf performance, focus under pressure, and repeatable execution. Guided by Olympic-level coach Lornette Daye, the 10-Week Guided Program develops the 10 Athletic Foundations alongside practical Performance Edge routines to help competitive golfers play their best when it matters most.
+                  A 10-week mental performance pathway for competitive golfers who want stronger composure, clearer routines, better recovery, and confident execution under pressure.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <CTAButton href="/foundations/golf/program">
-                    EXPLORE THE 10-WEEK PROGRAM
-                  </CTAButton>
-                  <CTAButton href="/foundations/clubs" variant="secondary">
-                    FOR CLUBS & TEAMS
+                  <MotionShimmerButton href="#program">
+                    Explore the 10-Week Program
+                  </MotionShimmerButton>
+                  <CTAButton href="/book" variant="secondary">
+                    Book a Program Call
                   </CTAButton>
                 </div>
-              </div>
+              </MotionFadeIn>
 
-              <div className="relative lg:col-span-5">
+              <MotionScaleIn className="relative lg:col-span-5" delay={0.15}>
                 <div className="relative w-full aspect-[4/5] overflow-hidden border border-[rgba(198,165,92,0.42)] bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)] shadow-[0_28px_110px_rgba(23,20,18,0.14)]">
                   <Image
                     src="/foundations/golf/lornette-golf-putting-green-sunrise.png"
@@ -435,42 +506,50 @@ export default function FoundationsGolfPage() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </MotionScaleIn>
             </div>
           </div>
         </section>
 
-        {/* Verified Credibility Strip */}
+        {/* Signature Standouts Strip */}
         <section
-          aria-label="Verified athletic credentials"
-          className="border-b border-[rgba(198,165,92,0.3)] bg-white/70 px-4 py-10 sm:px-6 lg:px-8"
+          aria-label="Golf signature standouts"
+          className="border-b border-[var(--line)] bg-white px-4 py-10 sm:px-6 lg:px-8"
         >
           <div className="mx-auto max-w-7xl">
-            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5 lg:gap-8">
-              {credibilityStats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="border-l-2 border-[var(--gold-dark)] pl-4 sm:pl-6"
-                >
-                  <span className="block font-serif text-3xl font-bold text-[var(--gold-dark)] sm:text-4xl">
-                    {stat.value}
-                  </span>
-                  <span className="mt-1 block text-xs font-bold uppercase tracking-[0.14em] text-[var(--ink)]">
-                    {stat.label}
-                  </span>
-                  <span className="mt-1 block text-xs text-[#6e6355]">
-                    {stat.detail}
-                  </span>
-                </div>
-              ))}
-            </div>
+            <MotionStaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5 divide-y divide-[rgba(198,165,92,0.3)] sm:divide-y-0">
+              {golfSignatureStandouts.map((item, idx) => {
+                const StatIcon = item.icon;
+                return (
+                  <MotionStaggerItem
+                    key={item.title}
+                    className={`text-center border-l-0 lg:border-l lg:first:border-l-0 border-[rgba(198,165,92,0.3)] ${
+                      idx > 0 ? "pt-6 sm:pt-0 lg:pl-6" : ""
+                    }`}
+                  >
+                    <div className="mx-auto mb-2.5 flex h-8 w-8 items-center justify-center rounded-full border border-[rgba(198,165,92,0.35)] bg-[var(--sand)]/40 text-[var(--gold-dark)] shadow-xs">
+                      <StatIcon size={16} aria-hidden="true" />
+                    </div>
+                    <p className="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[var(--gold-dark)]">
+                      {item.title}
+                    </p>
+                    <span className="mt-1 block text-xs font-bold uppercase tracking-[0.16em] text-[var(--ink)]">
+                      {item.label}
+                    </span>
+                    <span className="mt-1.5 block text-xs leading-relaxed text-[#675d50]">
+                      {item.detail}
+                    </span>
+                  </MotionStaggerItem>
+                );
+              })}
+            </MotionStaggerContainer>
           </div>
         </section>
 
         {/* Core Outcomes: What This Program Helps Build */}
         <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
-            <div className="max-w-3xl">
+            <MotionFadeIn className="max-w-3xl">
               <p className="text-xs font-bold uppercase tracking-[0.26em] text-[var(--gold-dark)]">
                 Proven Competitive Capabilities
               </p>
@@ -480,13 +559,13 @@ export default function FoundationsGolfPage() {
               <p className="mt-4 text-base leading-8 text-[#5b5043]">
                 Real breakthroughs on the course are not built on swing gimmicks or false positivity. They are built on repeatable psychological systems tested under tournament pressure.
               </p>
-            </div>
+            </MotionFadeIn>
 
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <MotionStaggerContainer className="mt-12 flex flex-wrap justify-center gap-6">
               {coreOutcomes.map((outcome, idx) => (
-                <div
+                <MotionStaggerItem
                   key={outcome.title}
-                  className="border border-[rgba(198,165,92,0.34)] bg-white p-7 shadow-[0_16px_50px_rgba(23,20,18,0.04)]"
+                  className="w-full border border-[rgba(198,165,92,0.34)] bg-white p-7 shadow-[0_16px_50px_rgba(23,20,18,0.04)] sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)] transition duration-200 hover:-translate-y-1 hover:border-[var(--champagne)]"
                 >
                   <div className="flex items-center gap-3">
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#c5aa68]/20 font-serif text-sm font-bold text-[var(--gold-dark)]">
@@ -499,16 +578,16 @@ export default function FoundationsGolfPage() {
                   <p className="mt-4 text-sm leading-7 text-[#5b5043]">
                     {outcome.description}
                   </p>
-                </div>
+                </MotionStaggerItem>
               ))}
-            </div>
+            </MotionStaggerContainer>
           </div>
         </section>
 
         {/* The Practical Performance Tools */}
         <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
-            <div className="text-center max-w-3xl mx-auto">
+            <MotionFadeIn className="text-center max-w-3xl mx-auto">
               <p className="text-xs font-bold uppercase tracking-[0.26em] text-[var(--gold-dark)]">
                 The Performance Edge Framework
               </p>
@@ -518,13 +597,13 @@ export default function FoundationsGolfPage() {
               <p className="mt-4 text-base leading-8 text-[#675d50]">
                 Actionable mental game tools integrated across the 10 Athletic Foundations to address decisive psychological challenges golfers face on the course.
               </p>
-            </div>
+            </MotionFadeIn>
 
-            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <MotionStaggerContainer className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {golfTools.map((tool) => {
                 const Icon = tool.icon;
                 return (
-                  <article
+                  <MotionStaggerItem
                     key={tool.title}
                     className="border border-[rgba(198,165,92,0.34)] bg-white p-7 shadow-[0_16px_50px_rgba(23,20,18,0.05)] transition duration-200 hover:-translate-y-1 hover:border-[var(--champagne)]"
                   >
@@ -549,13 +628,13 @@ export default function FoundationsGolfPage() {
                     <p className="mt-3 text-sm leading-7 text-[#675d50]">
                       {tool.description}
                     </p>
-                  </article>
+                  </MotionStaggerItem>
                 );
               })}
-            </div>
+            </MotionStaggerContainer>
 
             {/* Editorial Sunlight Feature: The Attention Game */}
-            <div className="mt-14 overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] grid lg:grid-cols-12">
+            <MotionFadeIn className="mt-14 overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] grid lg:grid-cols-12">
               <div className="relative aspect-[16/9] lg:aspect-auto lg:col-span-6 min-h-[300px]">
                 <Image
                   src="/foundations/golf/sunlight-golf-dew-flag.jpg"
@@ -577,10 +656,10 @@ export default function FoundationsGolfPage() {
                   In an 18-hole tournament round lasting over four hours, the physical swing consumes less than four minutes of actual motion. The remaining 236 minutes are spent walking, waiting, calculating, and managing the mind. The Performance Edge Framework equips golfers with repeatable rituals to govern attention during those silent intervals.
                 </p>
               </div>
-            </div>
+            </MotionFadeIn>
 
             {/* Editorial Showcase: Championship Presence & Coastal Discipline */}
-            <div className="mt-10 overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] grid grid-cols-1 lg:grid-cols-12">
+            <MotionFadeIn className="mt-10 overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] grid grid-cols-1 lg:grid-cols-12">
               <div className="min-w-0 p-6 sm:p-8 lg:p-12 lg:col-span-6 flex flex-col justify-center bg-[linear-gradient(135deg,#fffdf8_0%,#faf6ee_100%)] order-2 lg:order-1">
                 <span className="text-xs font-bold uppercase tracking-[0.22em] text-[var(--gold-dark)]">
                   Championship Demeanor & Composure
@@ -611,14 +690,14 @@ export default function FoundationsGolfPage() {
                 />
                 <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/20" />
               </div>
-            </div>
+            </MotionFadeIn>
           </div>
         </section>
 
         {/* 10-Week Curriculum: 3-Phase Presentation + Accessible Progressive Disclosure */}
-        <section className="border-y border-[var(--line)] bg-[var(--sand)]/35 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <section id="program" className="scroll-mt-24 border-y border-[var(--line)] bg-[var(--sand)]/35 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
-            <div className="grid gap-8 lg:grid-cols-[0.5fr_0.5fr] lg:items-end">
+            <MotionFadeIn className="grid gap-8 lg:grid-cols-[0.5fr_0.5fr] lg:items-end">
               <div>
                 <p className="text-xs font-bold uppercase tracking-[0.26em] text-[var(--gold-dark)]">
                   Curriculum Architecture
@@ -630,14 +709,14 @@ export default function FoundationsGolfPage() {
               <p className="text-base leading-8 text-[#5b5043]">
                 Structured for sustainable athletic mastery, the curriculum unfolds across three progressive phases, guiding competitors from foundational identity to tournament execution and enduring legacy.
               </p>
-            </div>
+            </MotionFadeIn>
 
             {/* 3 Phases High-Level Cards */}
-            <div className="mt-14 grid gap-8 lg:grid-cols-3">
+            <MotionStaggerContainer className="mt-14 grid gap-8 lg:grid-cols-3">
               {curriculumPhases.map((phase) => (
-                <div
+                <MotionStaggerItem
                   key={phase.phase}
-                  className="border border-[rgba(198,165,92,0.4)] bg-white p-7 shadow-[0_16px_50px_rgba(23,20,18,0.06)] flex flex-col justify-between"
+                  className="border border-[rgba(198,165,92,0.4)] bg-white p-7 shadow-[0_16px_50px_rgba(23,20,18,0.06)] flex flex-col justify-between transition duration-200 hover:-translate-y-1 hover:border-[var(--champagne)]"
                 >
                   <div>
                     <div className="flex items-center justify-between border-b border-[var(--line)] pb-4">
@@ -683,9 +762,9 @@ export default function FoundationsGolfPage() {
                       {phase.milestone}
                     </p>
                   </div>
-                </div>
+                </MotionStaggerItem>
               ))}
-            </div>
+            </MotionStaggerContainer>
 
             {/* Accessible Progressive Disclosure for All 10 Weeks */}
             <details className="group mt-12 rounded-sm border border-[rgba(198,165,92,0.4)] bg-white p-6 sm:p-8 shadow-sm">
@@ -755,7 +834,7 @@ export default function FoundationsGolfPage() {
             </details>
 
             {/* Editorial Feature: On-Course Execution */}
-            <div className="mt-14 overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] grid lg:grid-cols-12">
+            <MotionFadeIn className="mt-14 overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] grid lg:grid-cols-12">
               <div className="p-8 lg:p-12 lg:col-span-6 flex flex-col justify-center bg-[linear-gradient(135deg,#fffdf8_0%,#faf6ee_100%)] order-2 lg:order-1">
                 <span className="text-xs font-bold uppercase tracking-[0.22em] text-[var(--gold-dark)]">
                   On-Course Field Work
@@ -767,29 +846,38 @@ export default function FoundationsGolfPage() {
                   Every week combines Foundation insights with structured field assignments on the practice range and course. Players codify non-negotiable routines, audit decision choices, and build a permanent evidence ledger that withstands tournament heat.
                 </p>
                 <div className="mt-6">
-                  <CTAButton href="/foundations/golf/program">
-                    EXPLORE THE 10-WEEK COHORT
+                  <CTAButton href="#register">
+                    APPLY FOR THE 10-WEEK COHORT
                   </CTAButton>
                 </div>
               </div>
-              <div className="relative aspect-[16/9] lg:aspect-auto lg:col-span-6 min-h-[300px] order-1 lg:order-2">
+              <div className="relative aspect-[16/9] lg:aspect-auto lg:col-span-6 min-h-[340px] order-1 lg:order-2 overflow-hidden border-b lg:border-b-0 lg:border-l border-[rgba(198,165,92,0.3)]">
                 <Image
-                  src="/foundations/golf/sunlight-golf-fairway-sunrise.jpg"
-                  alt="Championship golf course fairway at golden sunrise with morning mist"
+                  src="/foundations/golf/golf-coach-fairway.png"
+                  alt="Olympic-level coach Lornette Daye standing on the fairway at golden sunset with golf bag and championship course"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
+                  style={{ objectPosition: "center 20%" }}
                 />
                 <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/20" />
+                <div className="absolute inset-x-0 bottom-0 border-t border-[rgba(198,165,92,0.4)] bg-[rgba(18,15,13,0.85)] p-4 sm:p-5 backdrop-blur-md shadow-2xl">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--champagne)]">
+                    ON-COURSE MENTAL CONDITIONING
+                  </p>
+                  <p className="mt-1 font-serif text-base text-white sm:text-lg leading-snug">
+                    Turn deliberate practice into earned tournament confidence.
+                  </p>
+                </div>
               </div>
-            </div>
+            </MotionFadeIn>
           </div>
         </section>
 
         {/* One Foundation at a Time: The Learning Rhythm */}
         <section className="px-4 pt-16 pb-8 sm:px-6 sm:pt-20 sm:pb-10 lg:px-8 lg:pt-24 lg:pb-12">
           <div className="mx-auto max-w-7xl">
-            <div className="text-center max-w-3xl mx-auto">
+            <MotionFadeIn className="text-center max-w-3xl mx-auto">
               <p className="text-xs font-bold uppercase tracking-[0.26em] text-[var(--gold-dark)]">
                 The Learning Rhythm
               </p>
@@ -799,13 +887,13 @@ export default function FoundationsGolfPage() {
               <p className="mt-4 text-base leading-8 text-[#5b5043]">
                 Master one Athletic Foundation at a time through a structured weekly cadence engineered to integrate seamlessly with school, training, and competitive tournament schedules.
               </p>
-            </div>
+            </MotionFadeIn>
 
-            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+            <MotionStaggerContainer className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {weeklyRhythmSteps.map((step) => (
-                <div
+                <MotionStaggerItem
                   key={step.step}
-                  className="border border-[rgba(198,165,92,0.35)] bg-white p-6 shadow-sm flex flex-col justify-between"
+                  className="border border-[rgba(198,165,92,0.35)] bg-white p-6 shadow-sm flex flex-col justify-between transition duration-200 hover:-translate-y-1 hover:border-[var(--champagne)]"
                 >
                   <div>
                     <div className="flex items-center justify-between">
@@ -824,25 +912,25 @@ export default function FoundationsGolfPage() {
                       {step.description}
                     </p>
                   </div>
-                </div>
+                </MotionStaggerItem>
               ))}
-            </div>
+            </MotionStaggerContainer>
 
-            <div className="mt-10 rounded-sm border border-[rgba(198,165,92,0.35)] bg-[#faf6ee] p-6 text-center max-w-2xl mx-auto">
+            <MotionFadeIn className="mt-10 rounded-sm border border-[rgba(198,165,92,0.35)] bg-[#faf6ee] p-6 text-center max-w-2xl mx-auto">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--gold-dark)]">
                 Weekly Time Commitment
               </p>
               <p className="mt-2 text-sm text-[#4f4438] leading-relaxed">
-                <strong>~60–90 minutes</strong> of guided online study per week, plus integrated on-course drills during your regular practice rounds. Zero busywork. Pure performance leverage.
+                <strong>~60-90 minutes</strong> of guided online study per week, plus integrated on-course drills during your regular practice rounds. Zero busywork. Pure performance leverage.
               </p>
-            </div>
+            </MotionFadeIn>
           </div>
         </section>
 
         {/* Formats & Engagement */}
         <section className="px-4 pt-4 pb-16 sm:px-6 sm:pt-6 sm:pb-20 lg:px-8 lg:pt-8 lg:pb-24">
           <div className="mx-auto max-w-7xl">
-            <div className="text-center max-w-3xl mx-auto">
+            <MotionFadeIn className="text-center max-w-3xl mx-auto">
               <p className="text-xs font-bold uppercase tracking-[0.26em] text-[var(--gold-dark)]">
                 Program Delivery
               </p>
@@ -852,42 +940,48 @@ export default function FoundationsGolfPage() {
               <p className="mt-4 text-base leading-8 text-[#5b5043]">
                 Available as member clinics, keynote addresses, structured 10-week cohorts, or full club partnerships.
               </p>
-            </div>
+            </MotionFadeIn>
 
-            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {deliveryFormats.map((format) => (
-                <div
-                  key={format.title}
-                  className="border border-[rgba(198,165,92,0.34)] bg-white p-7 shadow-[0_16px_50px_rgba(23,20,18,0.05)] flex flex-col justify-between"
-                >
-                  <div>
-                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
-                      {format.time}
-                    </span>
-                    <h3 className="mt-3 font-serif text-2xl text-[var(--ink)]">
-                      {format.title}
-                    </h3>
-                    <p className="mt-1 text-xs font-semibold text-[#786b5d]">
-                      {format.subtitle}
-                    </p>
-                    <p className="mt-4 text-sm leading-7 text-[#5b5043]">
-                      {format.description}
-                    </p>
-                  </div>
-                  <div className="mt-6 pt-4 border-t border-[var(--line)]">
-                    <Link
-                      href={format.href}
-                      className="inline-flex min-h-11 items-center gap-1 text-xs font-bold uppercase tracking-[0.16em] text-[var(--gold-dark)] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--gold-dark)]"
-                    >
-                      Explore Format Details &rarr;
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <MotionStaggerContainer className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {deliveryFormats.map((format) => {
+                const Icon = format.icon;
+                return (
+                  <MotionStaggerItem
+                    key={format.title}
+                    className="border border-[rgba(198,165,92,0.34)] bg-white p-7 shadow-[0_16px_50px_rgba(23,20,18,0.05)] flex flex-col justify-between transition duration-200 hover:-translate-y-1 hover:border-[var(--champagne)]"
+                  >
+                    <div>
+                      <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[rgba(198,165,92,0.35)] bg-[var(--sand)]/35 text-[var(--gold-dark)] shadow-xs mb-4">
+                        <Icon size={17} aria-hidden="true" />
+                      </div>
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
+                        {format.time}
+                      </span>
+                      <h3 className="mt-3 font-serif text-2xl text-[var(--ink)]">
+                        {format.title}
+                      </h3>
+                      <p className="mt-1 text-xs font-semibold text-[#786b5d]">
+                        {format.subtitle}
+                      </p>
+                      <p className="mt-4 text-sm leading-7 text-[#5b5043]">
+                        {format.description}
+                      </p>
+                    </div>
+                    <div className="mt-6 pt-4 border-t border-[var(--line)]">
+                      <Link
+                        href={format.href}
+                        className="inline-flex min-h-11 items-center gap-1 text-xs font-bold uppercase tracking-[0.16em] text-[var(--gold-dark)] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--gold-dark)]"
+                      >
+                        Explore Format Details &rarr;
+                      </Link>
+                    </div>
+                  </MotionStaggerItem>
+                );
+              })}
+            </MotionStaggerContainer>
 
             {/* Editorial Feature: Modern Studio Precision */}
-            <div className="mt-14 overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] grid lg:grid-cols-12">
+            <MotionFadeIn className="mt-14 overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] grid lg:grid-cols-12">
               <div className="relative aspect-[16/9] lg:aspect-auto lg:col-span-6 min-h-[320px]">
                 <Image
                   src="/foundations/golf/golf-range-tablet-analytics.jpg"
@@ -910,22 +1004,136 @@ export default function FoundationsGolfPage() {
                   Trackman data and high-speed cameras tell players what their clubface did, but they cannot teach how to quiet a racing heart over a four-foot putt. The Performance Edge Framework complements technical golf coaching by ensuring mental stability matches physical swing mechanics.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <CTAButton href="/foundations/golf/workshop">
-                    EXPLORE WORKSHOPS
+                  <CTAButton href="#club-partnership">
+                    CLUB PARTNERSHIPS & WORKSHOPS
                   </CTAButton>
-                  <CTAButton href="/foundations/golf/program" variant="secondary">
+                  <CTAButton href="#program" variant="secondary">
                     10-WEEK COHORT
                   </CTAButton>
                 </div>
               </div>
-            </div>
+            </MotionFadeIn>
+          </div>
+        </section>
+
+        {/* Club Partnership Section */}
+        <section
+          id="club-partnership"
+          className="scroll-mt-24 border-t border-[rgba(198,165,92,0.35)] bg-[linear-gradient(180deg,#faf6ee_0%,#fbf8f0_100%)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+        >
+          <div className="mx-auto max-w-7xl">
+            <MotionFadeIn className="max-w-3xl">
+              <span className="border border-[rgba(198,165,92,0.48)] bg-white/70 px-3 py-1 text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)] shadow-xs">
+                Institutional Partnership
+              </span>
+              <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--ink)]">
+                Golf Club Partnership &amp; Clinics
+              </h2>
+              <p className="mt-4 font-serif text-xl sm:text-2xl text-[var(--gold-dark)]">
+                Stronger Members. A Stronger Club.
+              </p>
+              <p className="mt-4 text-base leading-8 text-[#554b40] sm:text-lg">
+                Partner with Lornette Daye to bring the Foundations Golf mental conditioning experience directly to your club membership, junior academy, or coaching staff. We help clubs elevate member composure, reduce tournament friction, and foster a championship culture on and off the course.
+              </p>
+            </MotionFadeIn>
+
+            {/* Quote Callout */}
+            <MotionFadeIn className="mt-8 border-l-2 border-[var(--gold-dark)] bg-white/80 p-5 shadow-xs max-w-2xl" delay={0.1}>
+              <p className="font-serif text-base italic text-[#2c2620] leading-relaxed">
+                “Better people make a better game. Better clubs build an enduring golf community.”
+              </p>
+              <p className="mt-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
+                Lornette Daye
+              </p>
+            </MotionFadeIn>
+
+            {/* Partnership Tiers Grid */}
+            <MotionStaggerContainer className="mt-12 grid gap-6 sm:grid-cols-3">
+              {clubPartnershipTiers.map((tier) => (
+                <MotionStaggerItem
+                  key={tier.tier}
+                  className="border border-[rgba(198,165,92,0.34)] bg-white p-7 shadow-xs flex flex-col justify-between transition duration-200 hover:-translate-y-1 hover:border-[var(--champagne)]"
+                >
+                  <div>
+                    <span className="inline-block rounded-xs bg-[#c5aa68]/20 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--gold-dark)]">
+                      {tier.highlight}
+                    </span>
+                    <h3 className="mt-4 font-serif text-2xl text-[var(--ink)]">
+                      {tier.tier}
+                    </h3>
+                    <p className="mt-1 text-xs font-semibold text-[#786b5d]">
+                      {tier.subtitle}
+                    </p>
+                    <p className="mt-4 text-sm leading-7 text-[#5b5043]">
+                      {tier.description}
+                    </p>
+                  </div>
+                  <div className="mt-6 pt-4 border-t border-[var(--line)]">
+                    <Link
+                      href="/book"
+                      className="inline-flex min-h-11 items-center gap-1 text-xs font-bold uppercase tracking-[0.16em] text-[var(--gold-dark)] hover:underline"
+                    >
+                      Inquire for Your Club &rarr;
+                    </Link>
+                  </div>
+                </MotionStaggerItem>
+              ))}
+            </MotionStaggerContainer>
+
+            {/* Club Advantage Checklist */}
+            <MotionFadeIn className="mt-12 rounded-xs border border-[rgba(198,165,92,0.3)] bg-white p-6 sm:p-8 shadow-xs">
+              <span className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)]">
+                The Club Advantage
+              </span>
+              <h3 className="mt-2 font-serif text-2xl text-[var(--ink)]">
+                Elevating Member Experience &amp; Athletic Value
+              </h3>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {clubAdvantages.map((adv) => (
+                  <div key={adv} className="flex items-start gap-3">
+                    <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[var(--gold-dark)]" />
+                    <span className="text-xs sm:text-sm text-[#4a3f33] leading-snug">{adv}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <CTAButton href="/book">Schedule a Club Partnership Call</CTAButton>
+                <CTAButton href="/speaker-kit" variant="secondary">
+                  Download Program Overview
+                </CTAButton>
+              </div>
+            </MotionFadeIn>
+          </div>
+        </section>
+
+        {/* 10-Week Cohort Registration Section */}
+        <section
+          id="register"
+          className="scroll-mt-24 border-t border-[rgba(198,165,92,0.35)] bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+        >
+          <div className="mx-auto max-w-4xl">
+            <MotionFadeIn className="text-center max-w-2xl mx-auto">
+              <span className="border border-[rgba(198,165,92,0.48)] bg-[var(--ivory)] px-3 py-1 text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)] shadow-xs">
+                Next Cohort Application
+              </span>
+              <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--ink)]">
+                Register for Lornette’s Foundation Golf
+              </h2>
+              <p className="mt-4 text-base leading-8 text-[#5b5043]">
+                Submit your golfer application for the upcoming 10-week guided athlete development cohort. Lornette Daye reviews all registrations to ensure cohort quality and personalized competitive feedback.
+              </p>
+            </MotionFadeIn>
+
+            <MotionFadeIn className="mt-12 rounded-xs border border-[rgba(198,165,92,0.35)] bg-[#faf6ee] p-6 sm:p-10 shadow-sm" delay={0.15}>
+              <GolfRegistrationForm />
+            </MotionFadeIn>
           </div>
         </section>
 
         {/* Frequently Asked Questions */}
         <section className="border-t border-[var(--line)] bg-white/60 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-4xl">
-            <div className="text-center max-w-2xl mx-auto">
+            <MotionFadeIn className="text-center max-w-2xl mx-auto">
               <p className="text-xs font-bold uppercase tracking-[0.26em] text-[var(--gold-dark)]">
                 Got Questions?
               </p>
@@ -935,28 +1143,11 @@ export default function FoundationsGolfPage() {
               <p className="mt-4 text-base leading-8 text-[#5b5043]">
                 Clear answers regarding the curriculum, coaching integration, and engagement options.
               </p>
-            </div>
+            </MotionFadeIn>
 
-            <div className="mt-12 space-y-4">
-              {golfFaqs.map((faq) => (
-                <details
-                  key={faq.question}
-                  className="group rounded-sm border border-[rgba(198,165,92,0.35)] bg-white p-5 sm:p-6 shadow-sm transition duration-150 open:border-[var(--champagne)]"
-                >
-                  <summary className="flex cursor-pointer items-center justify-between text-base sm:text-lg font-serif font-medium text-[var(--ink)] hover:text-[var(--gold-dark)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--gold-dark)] select-none">
-                    <span>{faq.question}</span>
-                    <ChevronDown
-                      size={18}
-                      aria-hidden="true"
-                      className="text-[var(--gold-dark)] shrink-0 ml-4 transition-transform duration-200 group-open:rotate-180"
-                    />
-                  </summary>
-                  <p className="mt-4 text-sm leading-7 text-[#554a3e] border-t border-[var(--line)] pt-4">
-                    {faq.answer}
-                  </p>
-                </details>
-              ))}
-            </div>
+            <MotionFadeIn className="mt-12" delay={0.1}>
+              <FAQAccordion items={golfFaqs} variant="boxed" />
+            </MotionFadeIn>
           </div>
         </section>
 
@@ -975,7 +1166,7 @@ export default function FoundationsGolfPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/75" />
           </div>
 
-          <div className="relative z-10 mx-auto max-w-4xl">
+          <MotionFadeIn className="relative z-10 mx-auto max-w-4xl">
             <p className="text-xs font-bold uppercase tracking-[0.26em] text-[var(--champagne)]">
               Next Action
             </p>
@@ -986,7 +1177,7 @@ export default function FoundationsGolfPage() {
               Whether you are an individual competitor looking to break through tournament plateaus or a golf club seeking an exceptional member clinic, connect with Lornette Daye to discuss upcoming programs.
             </p>
             <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-              <CTAButton href="/book">INQUIRE ABOUT GOLF PROGRAMS</CTAButton>
+              <MotionShimmerButton href="/book">INQUIRE ABOUT GOLF PROGRAMS</MotionShimmerButton>
               <CTAButton
                 href="/foundations/clubs"
                 variant="secondary"
@@ -995,9 +1186,10 @@ export default function FoundationsGolfPage() {
                 FOR CLUBS & CLINICS
               </CTAButton>
             </div>
-          </div>
+          </MotionFadeIn>
         </section>
       </main>
+      <FoundationsFloatingAction track="golf" />
     </PageShell>
   );
 }

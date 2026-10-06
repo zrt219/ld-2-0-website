@@ -1,4 +1,7 @@
+"use client";
+
 import { Quote } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 type TestimonialCardProps = {
   category?: string;
@@ -13,8 +16,13 @@ export function TestimonialCard({
   name,
   context,
 }: TestimonialCardProps) {
+  const reduce = useReducedMotion();
+
   return (
-    <figure className="flex min-h-[344px] flex-col border border-[rgba(198,165,92,0.18)] bg-[linear-gradient(180deg,#ffffff_0%,#faf7f0_100%)] p-7 shadow-[0_18px_70px_rgba(23,20,18,0.03)] transition-all duration-500 hover:border-[rgba(198,165,92,0.45)] hover:shadow-[0_24px_80px_rgba(198,165,92,0.08)] sm:p-8">
+    <motion.figure
+      whileHover={reduce ? undefined : { y: -6, transition: { duration: 0.25, ease: "easeOut" } }}
+      className="flex min-h-[344px] flex-col border border-[rgba(198,165,92,0.18)] bg-[linear-gradient(180deg,#ffffff_0%,#faf7f0_100%)] p-7 shadow-[0_18px_70px_rgba(23,20,18,0.03)] transition-all duration-300 hover:border-[rgba(198,165,92,0.55)] hover:shadow-[0_24px_80px_rgba(198,165,92,0.12)] sm:p-8"
+    >
       <div className="flex min-h-6 items-start justify-between gap-4">
         <Quote className="shrink-0 text-[var(--champagne)]" size={26} aria-hidden="true" />
         {category ? (
@@ -32,6 +40,7 @@ export function TestimonialCard({
           {context}
         </p>
       </figcaption>
-    </figure>
+    </motion.figure>
   );
 }
+

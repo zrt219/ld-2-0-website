@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ArrowRight,
   CalendarCheck,
@@ -8,6 +10,7 @@ import {
   Users,
   type LucideIcon,
 } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 import { mediaItems, type MediaBandContent, type MediaBandIcon } from "@/content/site";
 import { CTAButton } from "./CTAButton";
@@ -58,6 +61,8 @@ export function SpeakerMediaBand({
   cards = plannerLinks,
   footerLabel = "Ready when your audience needs hope, resilience, and purpose",
 }: MediaBandContent) {
+  const reduce = useReducedMotion();
+
   const cardGridClass =
     cards.length === 3
       ? "mx-auto mt-10 grid max-w-7xl gap-4 md:grid-cols-3"
@@ -65,11 +70,16 @@ export function SpeakerMediaBand({
 
   return (
     <section
-      className="bg-[var(--ink)] px-4 py-16 text-[var(--ivory)] sm:px-6 lg:px-8 lg:py-24"
+      className="bg-[var(--ink)] px-4 py-16 text-[var(--ivory)] sm:px-6 lg:px-8 lg:py-24 overflow-hidden"
       aria-labelledby="speaker-media-band-heading"
     >
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
-        <div>
+        <motion.div
+          initial={reduce ? { opacity: 1 } : { opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-30px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        >
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--champagne)]">
             {eyebrow}
           </p>
@@ -94,37 +104,56 @@ export function SpeakerMediaBand({
               {secondaryLabel}
             </CTAButton>
           </div>
-        </div>
+        </motion.div>
 
-        <VideoCard
-          {...mediaItems[0]}
-          title={videoTitle}
-          summary={videoSummary}
-          featured
-          className="shadow-[0_32px_120px_rgba(0,0,0,0.35)]"
-        />
+        <motion.div
+          initial={reduce ? { opacity: 1 } : { opacity: 0, scale: 0.96 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-30px" }}
+          transition={{ duration: 0.65, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <VideoCard
+            {...mediaItems[0]}
+            title={videoTitle}
+            summary={videoSummary}
+            featured
+            className="shadow-[0_32px_120px_rgba(0,0,0,0.35)]"
+          />
+        </motion.div>
       </div>
 
       <div className={cardGridClass}>
-        {cards.map((item) => {
+        {cards.map((item, idx) => {
           const Icon = iconMap[item.icon];
           return (
-            <article
+            <motion.article
               key={item.title}
-              className="border border-white/12 bg-white/[0.045] p-5 shadow-[0_18px_80px_rgba(0,0,0,0.18)]"
+              initial={reduce ? { opacity: 1 } : { opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={reduce ? undefined : { y: -5, transition: { duration: 0.25 } }}
+              className="border border-white/12 bg-white/[0.045] p-5 shadow-[0_18px_80px_rgba(0,0,0,0.18)] hover:border-[var(--champagne)] transition-all duration-300"
             >
               <Icon className="text-[var(--champagne)]" size={25} aria-hidden="true" />
               <h3 className="mt-4 font-serif text-2xl text-white">{item.title}</h3>
               <p className="mt-3 text-base leading-7 text-[#d8cdbb]">{item.body}</p>
-            </article>
+            </motion.article>
           );
         })}
       </div>
 
-      <div className="mx-auto mt-10 flex max-w-7xl items-center gap-3 border-t border-white/12 pt-6 text-sm font-bold uppercase tracking-[0.18em] text-[var(--champagne)]">
+      <motion.div
+        initial={reduce ? { opacity: 1 } : { opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-20px" }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+        className="mx-auto mt-10 flex max-w-7xl items-center gap-3 border-t border-white/12 pt-6 text-sm font-bold uppercase tracking-[0.18em] text-[var(--champagne)]"
+      >
         {footerLabel}
         <ArrowRight size={16} aria-hidden="true" />
-      </div>
+      </motion.div>
     </section>
   );
 }
+

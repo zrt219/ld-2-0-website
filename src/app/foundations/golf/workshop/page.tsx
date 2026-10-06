@@ -24,7 +24,7 @@ const clinicModules = [
     title: "2. The 6-Step Pre-Shot Routine Engineering",
     setting: "Practice Range / Simulator (35 mins)",
     description:
-      "Active construction and timing of each golfer's personal routine sequence: Assess → Decide → Visualize → Reset → Execute → Release. Timing standardized between 12–18 seconds.",
+      "Active construction and timing of each golfer's personal routine sequence: Assess → Decide → Visualize → Reset → Execute → Release. Timing standardized between 12-18 seconds.",
   },
   {
     title: "3. The Pressure 5 Field Drill",
@@ -96,7 +96,7 @@ export default function GolfWorkshopPage() {
                   </div>
                   <div className="flex items-center gap-2 border border-[rgba(198,165,92,0.4)] bg-white/60 px-3 py-1.5">
                     <Users size={14} className="text-[var(--gold-dark)]" />
-                    <span>Group Size: 12–24 Members (Intimate Cohort)</span>
+                    <span>Group Size: 12-24 Members (Intimate Cohort)</span>
                   </div>
                   <div className="flex items-center gap-2 border border-[rgba(198,165,92,0.4)] bg-white/60 px-3 py-1.5">
                     <MapPin size={14} className="text-[var(--gold-dark)]" />
@@ -246,7 +246,7 @@ export default function GolfWorkshopPage() {
                   Individual Diagnostic Attention
                 </h3>
                 <p className="mt-4 text-base leading-relaxed text-[#5e5346]">
-                  Every workshop is capped at 12–24 participants to ensure direct observation of each golfer’s pre-shot timing, eye patterns, and post-shot reactions. Athletes receive real-time pacing adjustments from Lornette that immediately settle physical tension.
+                  Every workshop is capped at 12-24 participants to ensure direct observation of each golfer’s pre-shot timing, eye patterns, and post-shot reactions. Athletes receive real-time pacing adjustments from Lornette that immediately settle physical tension.
                 </p>
                 <div className="mt-6">
                   <CTAButton href="/book">

@@ -62,7 +62,7 @@ const audiences = [
 const engagementFormats = [
   {
     format: "Keynote Presentation",
-    timeframe: "60–90 Minutes",
+    timeframe: "60-90 Minutes",
     focus: "Main-Stage Inspiration & Practical Principles",
     description:
       "High-energy address for banquets, seasonal kickoffs, or coach symposiums introducing the core principles of elite composure and resilience.",

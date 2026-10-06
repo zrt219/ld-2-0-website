@@ -246,7 +246,7 @@ export function PlaceOfPeaceGallery() {
             </p>
 
             <div className="mt-6 border-l-2 border-[var(--gold)] bg-white/40 p-3.5 pl-4 rounded-r-lg italic text-[#7a6f60]">
-              &ldquo;Rest is not a detour from your purpose—it is the foundation that sustains it.&rdquo;
+              &ldquo;Rest is not a detour from your purpose: it is the foundation that sustains it.&rdquo;
             </div>
 
             <p className="mt-5 text-xs font-bold uppercase tracking-[0.16em] text-[var(--gold-dark)]">

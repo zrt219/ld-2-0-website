@@ -93,7 +93,7 @@ const curriculumWeeks = [
     assignment: "Personal career roadmap and professional readiness inventory.",
     lornetteMessage: "Thinking long-term about your athletic career.",
     image: "/foundations/golf/curriculum/week-08-mentorship.jpg",
-    imageAlt: "Coach Lornette Daye in focused one-on-one mentorship dialogue with an athlete",
+    imageAlt: "Lornette Daye in focused one-on-one mentorship dialogue with an athlete",
   },
   {
     week: "Week 9",
@@ -190,7 +190,7 @@ export default function GolfProgramPage() {
                 </div>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-                  <CTAButton href="/foundations/golf/register">Register for the Next Cohort</CTAButton>
+                  <CTAButton href="/book">Register for the Next Cohort</CTAButton>
                   <CTAButton href="/foundations/golf" variant="secondary">
                     Explore Program Overview
                   </CTAButton>
@@ -311,7 +311,7 @@ export default function GolfProgramPage() {
                   Every weekly lesson is paired with specific field drills performed directly during practice rounds. Golfers test their pre-shot cadence, log internal tension metrics, and build tangible evidence that their mental routine works under tournament pressure.
                 </p>
                 <div className="mt-6">
-                  <CTAButton href="/foundations/golf/register">
+                  <CTAButton href="/book">
                     REGISTER FOR THE NEXT COHORT
                   </CTAButton>
                 </div>
@@ -398,8 +398,8 @@ export default function GolfProgramPage() {
               </h2>
               <p className="text-sm sm:text-base text-[#675d50] max-w-2xl mx-auto leading-relaxed">
                 Join a cohort of dedicated golfers building tournament composure, discipline systems, and emotional recovery. Or visit our{" "}
-                <Link href="/foundations/golf/register" className="font-semibold text-[var(--gold-dark)] hover:underline">
-                  dedicated registration page ↗
+                <Link href="/book" className="font-semibold text-[var(--gold-dark)] hover:underline">
+                  registration inquiry page ↗
                 </Link>
                 .
               </p>
@@ -457,10 +457,10 @@ export default function GolfProgramPage() {
               Step Onto the First Tee With Earned Certainty
             </h2>
             <p className="mt-4 text-base leading-8 text-[#d8cdbb]">
-              Cohort enrollment is strictly capped to ensure direct personal feedback and comprehensive review from Coach Lornette Daye on every player&apos;s competition plan.
+              Cohort enrollment is strictly capped to ensure direct personal feedback and comprehensive review from Lornette Daye on every player&apos;s competition plan.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-              <CTAButton href="/foundations/golf/register">Apply for the Next Guided Cohort</CTAButton>
+              <CTAButton href="/book">Apply for the Next Guided Cohort</CTAButton>
               <CTAButton
                 href="/book"
                 variant="secondary"

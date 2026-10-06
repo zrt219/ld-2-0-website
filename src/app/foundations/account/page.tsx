@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { LearnerShell } from "@/components/foundations/learner/LearnerShell";
 import { useFoundationsStore } from "@/lib/foundations/store";
+import { purgeAthleteAllData } from "@/lib/foundations/offline-store";
+import { exportAthleteDataAction, requestErasureAction } from "./gdpr-actions";
 import {
   CheckCircle2,
   LogOut,
@@ -169,6 +171,66 @@ export default function FoundationsAccountPage() {
                 Send weekly coaching email prior to live Q&A with Coach Lornette Daye.
               </span>
             </label>
+          </div>
+
+          {/* EU GDPR Data Sovereignty Section */}
+          <div className="pt-5 border-t border-[#ebdcc9] bg-[#fbf9f4] p-4 rounded-lg border">
+            <div className="flex items-center gap-2 mb-2">
+              <ShieldCheck size={16} className="text-[#1e3a29]" />
+              <h3 className="font-serif text-base font-semibold text-[#1e1b18]">
+                EU GDPR & Data Sovereignty Preferences
+              </h3>
+            </div>
+            <p className="text-xs text-[#5e5245] leading-relaxed mb-4">
+              All personal reflection entries, assessments, and pre-shot cadence notes are held in strict privacy and are protected under EU GDPR Articles 15, 17, and 20.
+            </p>
+            <div className="flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                onClick={async () => {
+                  const res = await exportAthleteDataAction();
+                  const dataBundle = res.success && res.data ? res.data : {
+                    standard: "EU GDPR Article 20 Data Portability",
+                    athlete: { name, email, homeClub, handicap, division, coachName },
+                    exportedAt: new Date().toISOString(),
+                  };
+                  const blob = new Blob([JSON.stringify(dataBundle, null, 2)], {
+                    type: "application/json",
+                  });
+                  const url = URL.createObjectURL(blob);
+                  const a = document.createElement("a");
+                  a.href = url;
+                  a.download = `gdpr-profile-export-${email}.json`;
+                  document.body.appendChild(a);
+                  a.click();
+                  document.body.removeChild(a);
+                  URL.revokeObjectURL(url);
+                }}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[#c8a86b] bg-white text-xs font-semibold text-[#7f5b1d] hover:bg-[#fcf8f0]"
+              >
+                <span>Export Profile Data (JSON)</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={async () => {
+                  const confirmed = window.confirm(
+                    "Are you sure you want to request complete erasure under EU GDPR Article 17 (Right to be Forgotten)? This will purge all your local drafts and submit an erasure request to the compliance team."
+                  );
+                  if (!confirmed) return;
+
+                  await purgeAthleteAllData(activeAthlete.id);
+                  const res = await requestErasureAction();
+                  alert(
+                    res.message ||
+                    "Your GDPR Article 17 erasure request has been recorded. All personal reflections and identifying telemetry have been purged locally and queued for server erasure."
+                  );
+                }}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-red-200 bg-white text-xs font-semibold text-red-700 hover:bg-red-50"
+              >
+                <span>Request Erasure (Right to be Forgotten)</span>
+              </button>
+            </div>
           </div>
 
           <div className="pt-4 border-t border-[#ebdcc9] flex items-center justify-between">

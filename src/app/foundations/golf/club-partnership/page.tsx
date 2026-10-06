@@ -27,7 +27,7 @@ const clubSolutions = [
     description:
       "An inspiring, high-impact talk that energizes your members and sets the tone for a stronger, more resilient game and life.",
     image: "/foundations/golf/lornette-golf-keynote-speaking-podium.png",
-    imageAlt: "Coach Lornette Daye delivering a championship keynote to golf club members",
+    imageAlt: "Olympic-level coach Lornette Daye delivering a championship keynote to golf club members",
     href: "/foundations/golf/keynote",
     ctaText: "Learn More",
   },
@@ -173,7 +173,7 @@ export default function GolfClubPartnershipPage() {
                     “Better people make a better game. Better clubs build a brighter tomorrow.”
                   </p>
                   <p className="mt-2 text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
-                    Coach Lornette Daye
+                    Lornette Daye
                   </p>
                 </div>
 

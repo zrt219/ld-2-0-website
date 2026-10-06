@@ -75,13 +75,13 @@ export default function GolfKeynotePage() {
                 </p>
 
                 <p className="mt-6 text-base leading-8 text-[#554b40] sm:text-lg">
-                  A 60–90 minute high-impact keynote crafted specifically for golf audiences. Lornette Daye brings four decades of elite sport, national sprint championships, and Olympic-level coaching to the psychological realities of the game.
+                  A 60-90 minute high-impact keynote crafted specifically for golf audiences. Lornette Daye brings four decades of elite sport, national sprint championships, and Olympic-level coaching to the psychological realities of the game.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4 text-xs font-semibold text-[#6e6355]">
                   <div className="flex items-center gap-2 border border-[rgba(198,165,92,0.4)] bg-white/60 px-3 py-1.5">
                     <Clock size={14} className="text-[var(--gold-dark)]" />
-                    <span>Duration: 60–90 Minutes</span>
+                    <span>Duration: 60-90 Minutes</span>
                   </div>
                   <div className="flex items-center gap-2 border border-[rgba(198,165,92,0.4)] bg-white/60 px-3 py-1.5">
                     <Users size={14} className="text-[var(--gold-dark)]" />

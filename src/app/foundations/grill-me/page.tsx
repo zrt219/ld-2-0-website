@@ -16,46 +16,33 @@ import {
   Zap,
 } from "lucide-react";
 import { useFoundationsStore } from "@/lib/foundations/store";
-
-const TOURNAMENT_SCENARIOS = [
-  {
-    id: "sc-18th-water",
-    title: "18th Tee with Water Left & Out of Bounds Right",
-    stakes: "Club Championship Final Round · 1-Shot Lead",
-    context:
-      "You are 1 shot off or holding a 1-shot lead on the 18th tee box. Water hugs the left side; thick trees and out-of-bounds line the right. The group ahead took 15 minutes to clear the green, so you've been standing in the wind. Your hands feel cold and your pulse is noticeably elevated.",
-    challengePrompt:
-      "Grill me: What is your exact physical reset cadence, where do your eyes lock, and what is your non-negotiable anchor cue before stepping into this shot?",
-  },
-  {
-    id: "sc-bogey-cascade",
-    title: "Back-to-Back Bogeys Entering Tough 3-Hole Stretch",
-    stakes: "Medal Play · Holes 16–18",
-    context:
-      "You just three-putted 14 and lipped out for par on 15. Your lead has vanished. A voice in your head says: 'You're giving this away again.' You have 3 minutes walking to the 16th tee box.",
-    challengePrompt:
-      "Grill me: How do you definitively close the door on the previous hole so your previous shot cannot hit your next shot?",
-  },
-  {
-    id: "sc-downhill-slider",
-    title: "3-Foot Downhill Slider to Force Playoff",
-    stakes: "18th Green · Match On The Line",
-    context:
-      "You have a 3-foot downhill, right-to-left putt to force sudden-death playoff. The entire clubhouse gallery is surrounding the fringe. You feel an impulse to hit it quickly just to get it over with.",
-    challengePrompt:
-      "Grill me: How do you govern your breath, pace your routine, and strike the putt with pure visual commitment?",
-  },
-];
+import { getTrackConfig, TrackId } from "@/lib/foundations/track-registry";
 
 export default function FoundationsGrillMePage() {
-  const { activeAthlete, submitGrillMeChallenge, updateActivePlan } = useFoundationsStore();
+  const { activeAthlete, state, submitGrillMeChallenge, updateActivePlan } = useFoundationsStore();
+  const currentTrack: TrackId = (state.activeTrack as TrackId) || "golf";
+  const trackConfig = getTrackConfig(currentTrack);
+
   const [selectedScenarioId, setSelectedScenarioId] = useState(
-    TOURNAMENT_SCENARIOS[0].id
+    trackConfig.grillMeScenarios[0]?.id || "sc-1"
   );
 
+  // Sync scenario if track changes
+  const [prevTrack, setPrevTrack] = useState(currentTrack);
+  if (prevTrack !== currentTrack) {
+    setPrevTrack(currentTrack);
+    setSelectedScenarioId(trackConfig.grillMeScenarios[0]?.id || "sc-1");
+  }
+
   const selectedScenario =
-    TOURNAMENT_SCENARIOS.find((s) => s.id === selectedScenarioId) ||
-    TOURNAMENT_SCENARIOS[0];
+    trackConfig.grillMeScenarios.find((s) => s.id === selectedScenarioId) ||
+    trackConfig.grillMeScenarios[0] || {
+      id: "fallback",
+      title: "Pressure Reset Challenge",
+      stakes: "Championship Pressure",
+      context: "Apply your 5-second somatic reset under intense competition pressure.",
+      challengePrompt: "Grill me: What is your exact reset cadence?",
+    };
 
   const [golferResponse, setGolferResponse] = useState("");
   const [resetProtocolApplied, setResetProtocolApplied] = useState(
@@ -133,7 +120,7 @@ export default function FoundationsGrillMePage() {
                 Select Pressure Scenario
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                {TOURNAMENT_SCENARIOS.map((sc) => {
+                {trackConfig.grillMeScenarios.map((sc) => {
                   const isSelected = selectedScenarioId === sc.id;
                   return (
                     <button

@@ -27,30 +27,45 @@ export async function verifyAdminCodeAction(code: string) {
   }
 
   // Set persistent admin access cookie
+  const isSecure = process.env.NODE_ENV === "production" && Boolean(process.env.VERCEL);
   const cookieStore = await cookies();
   cookieStore.set("ld_admin_access", "true", {
     path: "/",
     httpOnly: true,
     sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
+    secure: isSecure,
     maxAge: 60 * 60 * 24 * 30, // 30 days
   });
 
   return {
     success: true,
-    message: "Admin code verified. Access granted to Performance Edge Golf workspace.",
+    message: "Admin code verified. Access granted to your private workspace.",
     athleteId: "admin-coach-lornette",
   };
 }
 
 export async function createParticipantSessionAction(athleteId?: string) {
+  const isSecure = process.env.NODE_ENV === "production" && Boolean(process.env.VERCEL);
   const cookieStore = await cookies();
   cookieStore.set("ld_participant_access", athleteId || "participant", {
     path: "/",
     httpOnly: true,
     sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
+    secure: isSecure,
     maxAge: 60 * 60 * 24 * 30, // 30 days
+  });
+  return { success: true };
+}
+
+export async function createGuestPreviewSessionAction() {
+  const isSecure = process.env.NODE_ENV === "production" && Boolean(process.env.VERCEL);
+  const cookieStore = await cookies();
+  cookieStore.set("ld_guest_preview", "true", {
+    path: "/",
+    httpOnly: true,
+    sameSite: "lax",
+    secure: isSecure,
+    maxAge: 60 * 60 * 24 * 7, // 7 days
   });
   return { success: true };
 }
@@ -59,5 +74,7 @@ export async function logoutFoundationsAction() {
   const cookieStore = await cookies();
   cookieStore.delete("ld_admin_access");
   cookieStore.delete("ld_participant_access");
+  cookieStore.delete("ld_guest_preview");
   return { success: true };
 }
+

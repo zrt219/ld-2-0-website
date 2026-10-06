@@ -57,6 +57,12 @@ const defaultTimelineItems: readonly HomeProofTimelineItem[] = [
   },
 ];
 
+import {
+  MotionFadeIn,
+  MotionStaggerContainer,
+  MotionStaggerItem,
+} from "@/components/motion";
+
 export function HomeProofSection({
   title = "Years of Proof.",
   body = "From provincial and national titles to records broken and defended, she knows what long-term success looks like.",
@@ -72,17 +78,19 @@ export function HomeProofSection({
 
           <div className="relative">
             <div className="min-w-0">
-              <h2 className="font-serif text-4xl leading-tight text-balance text-[var(--ink)] sm:text-5xl">
-                {title}
-              </h2>
+              <MotionFadeIn>
+                <h2 className="font-serif text-4xl leading-tight text-balance text-[var(--ink)] sm:text-5xl">
+                  {title}
+                </h2>
 
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-[#5f5548] sm:text-xl sm:leading-9">
-                {body}
-              </p>
+                <p className="mt-6 max-w-3xl text-lg leading-8 text-[#5f5548] sm:text-xl sm:leading-9">
+                  {body}
+                </p>
+              </MotionFadeIn>
 
-              <ol className="mt-10 border-y border-[rgba(198,165,92,0.32)]">
+              <MotionStaggerContainer className="mt-10 border-y border-[rgba(198,165,92,0.32)]">
                 {timelineItems.map((item) => (
-                  <li
+                  <MotionStaggerItem
                     key={`${item.years}-${item.title}`}
                     className="grid gap-4 border-t border-[rgba(198,165,92,0.22)] py-6 first:border-t-0 md:grid-cols-[12rem_minmax(0,1fr)] md:gap-8 lg:grid-cols-[14rem_minmax(0,1fr)]"
                   >
@@ -117,9 +125,9 @@ export function HomeProofSection({
                         </div>
                       ) : null}
                     </div>
-                  </li>
+                  </MotionStaggerItem>
                 ))}
-              </ol>
+              </MotionStaggerContainer>
             </div>
           </div>
         </div>

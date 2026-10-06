@@ -12,13 +12,44 @@ type LearnerHeaderProps = {
 
 export function LearnerHeader({ onOpenMobileMenu }: LearnerHeaderProps) {
   const [showResetCard, setShowResetCard] = useState(false);
-  const { activeAthlete } = useFoundationsStore();
+  const { activeAthlete, state } = useFoundationsStore();
   const nameParts = activeAthlete.golferName.split(" ");
   const monogram = nameParts.map((n: string) => n[0]).join("").toUpperCase().slice(0, 2);
-  const firstName = nameParts[0] || "Golfer";
+  const firstName = nameParts[0] || "Athlete";
+
+  const activeTrack = state.activeTrack || "golf";
+  const isEurope = state.activeRegion === "europe";
+
+  const brandHeading =
+    activeTrack === "hockey"
+      ? "Lornette’s Foundation Hockey"
+      : activeTrack === "corporate"
+      ? "Lornette’s Foundation Leadership"
+      : "Lornette’s Foundation Golf";
+
+  const brandSub =
+    activeTrack === "hockey"
+      ? isEurope
+        ? "European League & Composure Systems"
+        : "Powered by the High-Performance Hockey Framework"
+      : activeTrack === "corporate"
+      ? isEurope
+        ? "European Executive & Boardroom Framework"
+        : "Powered by the Executive Performance Edge Framework"
+      : isEurope
+      ? "European Championship & Academy Performance Track"
+      : "Powered by the Performance Edge Framework";
+
+  const mottoPrinciple =
+    activeTrack === "hockey"
+      ? "Speed, Composure, and Shift Execution."
+      : activeTrack === "corporate"
+      ? "Poise Under Executive Pressure."
+      : "Playing Your Best When It Matters.";
+
   return (
     <header className="sticky top-0 z-30 flex min-h-16 sm:min-h-20 h-auto py-2 w-full items-center justify-between border-b border-[#ebdcc9] bg-[#fbf9f5] px-4 lg:px-6 shadow-xs relative overflow-hidden">
-      {/* Master Panoramic Sunrise Golf Lake Background */}
+      {/* Master Panoramic Sunrise Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <Image
           src="/foundations/learner/banner-header-sunrise-lake.jpg"
@@ -63,13 +94,20 @@ export function LearnerHeader({ onOpenMobileMenu }: LearnerHeaderProps) {
           </div>
 
           <div className="min-w-0">
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-2">
               <div className="font-serif text-[14.5px] sm:text-base lg:text-lg font-bold tracking-tight text-[#141210] leading-tight drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)]">
-                Lornette’s Foundation Golf
+                {brandHeading}
               </div>
+              <Link
+                href="/foundations/select"
+                className="hidden md:inline-flex items-center gap-1 rounded-full border border-[#cfb78f] bg-white/90 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[#7f5b1d] hover:bg-[#f2e8dc] transition-colors"
+                title="Change active sport or corporate track"
+              >
+                Change Track
+              </Link>
             </div>
-            <p className="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-[0.16em] sm:tracking-[0.22em] text-[#332b23] drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)]">
-              Powered by the Performance Edge Framework
+            <p className="text-[9.5px] sm:text-[10px] font-bold uppercase tracking-[0.16em] sm:tracking-[0.22em] text-[#332b23] drop-shadow-[0_1px_1px_rgba(255,255,255,0.9)] truncate max-w-[280px] sm:max-w-none">
+              {brandSub}
             </p>
           </div>
         </Link>
@@ -83,7 +121,7 @@ export function LearnerHeader({ onOpenMobileMenu }: LearnerHeaderProps) {
             Good morning,
           </span>
           <span className="font-serif text-sm sm:text-[15px] font-semibold text-[#1e1b18] tracking-tight">
-            Playing Your Best When It Matters.
+            {mottoPrinciple}
           </span>
           <div className="mt-1 h-[1.5px] w-12 bg-[#c8a86b]" />
         </div>

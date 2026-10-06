@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import { preconnect } from "react-dom";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { PageTransitionLoader } from "@/components/PageTransitionLoader";
 
 import { siteCopy, siteUrl } from "@/content/site";
 
@@ -127,6 +128,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
         />
         {children}
+        <PageTransitionLoader />
         <Analytics />
       </body>
     </html>

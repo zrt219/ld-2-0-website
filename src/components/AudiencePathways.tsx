@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 type PathwayTopic = {
   title: string;
@@ -89,7 +90,7 @@ export function AudiencePathways({ pathways }: AudiencePathwaysProps) {
                   tabIndex={selected ? 0 : -1}
                   onClick={() => setActiveIndex(index)}
                   onKeyDown={(event) => onTabKeyDown(event, index)}
-                  className={`min-h-24 border px-4 py-4 text-left transition focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] ${
+                  className={`relative min-h-24 border px-4 py-4 text-left transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[rgba(198,165,92,0.24)] cursor-pointer ${
                     selected
                       ? "border-[var(--champagne)] bg-[var(--ink)] text-[var(--ivory)] shadow-[0_22px_70px_rgba(23,20,18,0.16)]"
                       : "border-[rgba(198,165,92,0.36)] bg-white/80 text-[var(--ink)] hover:border-[var(--champagne)] hover:bg-white"
@@ -116,93 +117,121 @@ export function AudiencePathways({ pathways }: AudiencePathwaysProps) {
           role="tabpanel"
           aria-labelledby={`audience-pathway-tab-${activeIndex}`}
           tabIndex={0}
-          className="mt-10 grid overflow-hidden border border-[rgba(198,165,92,0.42)] bg-white shadow-[0_24px_90px_rgba(23,20,18,0.08)] lg:grid-cols-[0.9fr_1.1fr]"
+          className="mt-10 overflow-hidden border border-[rgba(198,165,92,0.42)] bg-white shadow-[0_24px_90px_rgba(23,20,18,0.08)]"
         >
-          <div className="bg-[var(--ink)] p-7 text-[var(--ivory)] sm:p-9 lg:p-10">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--champagne)]">
-              Audience Focus
-            </p>
-            <h3 className="mt-4 font-serif text-4xl leading-tight text-white">
-              {activePathway.title}
-            </h3>
-            <p className="mt-5 text-base leading-8 text-[#d8cdbb]">
-              {activePathway.description}
-            </p>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activePathway.audience}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              className="grid lg:grid-cols-[0.9fr_1.1fr]"
+            >
+              <div className="bg-[var(--ink)] p-7 text-[var(--ivory)] sm:p-9 lg:p-10 flex flex-col justify-between">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--champagne)]">
+                    Audience Focus
+                  </p>
+                  <h3 className="mt-4 font-serif text-4xl leading-tight text-white">
+                    {activePathway.title}
+                  </h3>
+                  <p className="mt-5 text-base leading-8 text-[#d8cdbb]">
+                    {activePathway.description}
+                  </p>
 
-            <div className="mt-8 grid gap-3">
-              {activePathway.proofPoints.map((point) => (
-                <div key={point} className="flex gap-3 border-t border-white/10 pt-3 text-sm font-semibold leading-6 text-[#efe5d4]">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--champagne)]" aria-hidden="true" />
-                  <span>{point}</span>
+                  <div className="mt-8 grid gap-3">
+                    {activePathway.proofPoints.map((point, pIdx) => (
+                      <motion.div
+                        key={point}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3, delay: pIdx * 0.08 }}
+                        className="flex gap-3 border-t border-white/10 pt-3 text-sm font-semibold leading-6 text-[#efe5d4]"
+                      >
+                        <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[var(--champagne)]" aria-hidden="true" />
+                        <span>{point}</span>
+                      </motion.div>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/book"
-                className="inline-flex min-h-12 items-center justify-center gap-2 border border-transparent bg-[var(--champagne)] px-5 py-3 text-center text-sm font-bold uppercase leading-5 text-[var(--ink)] shadow-[0_14px_34px_rgba(155,118,46,0.22)] transition hover:bg-[#d8b96e]"
-              >
-                Inquire About Availability
-                <ArrowUpRight size={17} aria-hidden="true" />
-              </Link>
-              <Link
-                href="/speaker-kit"
-                className="inline-flex min-h-12 items-center justify-center gap-2 border border-white/20 px-5 py-3 text-center text-sm font-bold uppercase leading-5 text-[var(--ivory)] transition hover:border-[var(--champagne)] hover:text-[var(--champagne)]"
-              >
-                Speaker Kit
-                <ArrowUpRight size={17} aria-hidden="true" />
-              </Link>
-            </div>
-          </div>
-
-          <div className="p-6 sm:p-8 lg:p-10">
-            <div className="flex flex-col gap-4 border-b border-[var(--line)] pb-6 sm:flex-row sm:items-end sm:justify-between">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
-                  Talks That Fit
-                </p>
-                <p className="mt-2 text-sm leading-7 text-[#675d50]">
-                  When a topic feels right, share your event details and Lornette&apos;s
-                  team can shape the next step.
-                </p>
+                <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                  <Link
+                    href="/book"
+                    className="inline-flex min-h-12 items-center justify-center gap-2 border border-transparent bg-[var(--champagne)] px-5 py-3 text-center text-sm font-bold uppercase leading-5 text-[var(--ink)] shadow-[0_14px_34px_rgba(155,118,46,0.22)] transition hover:bg-[#d8b96e]"
+                  >
+                    Inquire About Availability
+                    <ArrowUpRight size={17} aria-hidden="true" />
+                  </Link>
+                  <Link
+                    href="/speaker-kit"
+                    className="inline-flex min-h-12 items-center justify-center gap-2 border border-white/20 px-5 py-3 text-center text-sm font-bold uppercase leading-5 text-[var(--ivory)] transition hover:border-[var(--champagne)] hover:text-[var(--champagne)]"
+                  >
+                    Speaker Kit
+                    <ArrowUpRight size={17} aria-hidden="true" />
+                  </Link>
+                </div>
               </div>
-              <Link
-                href={activePathway.primaryHref}
-                className="inline-flex items-center gap-2 text-sm font-bold uppercase text-[var(--gold-dark)]"
-              >
-                Explore This Audience
-                <ArrowUpRight size={16} aria-hidden="true" />
-              </Link>
-            </div>
 
-            <div className="mt-6 grid gap-4">
-              {activePathway.topics.map((topic, index) => (
-                <Link
-                  key={`${activePathway.audience}-${topic.title}`}
-                  href={topic.href}
-                  className="group grid gap-4 border border-[var(--line)] bg-[var(--ivory)] p-5 transition hover:border-[var(--champagne)] hover:bg-white sm:grid-cols-[3.5rem_1fr_auto] sm:items-start"
-                >
-                  <span className="font-serif text-4xl leading-none text-[rgba(155,118,46,0.42)]">
-                    {index + 1}
-                  </span>
-                  <span>
-                    <span className="block font-serif text-2xl leading-tight text-[var(--ink)]">
-                      {topic.title}
-                    </span>
-                    <span className="mt-2 block text-sm leading-7 text-[#675d50]">
-                      {topic.body}
-                    </span>
-                  </span>
-                  <span className="hidden h-10 w-10 items-center justify-center border border-[rgba(155,118,46,0.3)] text-[var(--gold-dark)] transition group-hover:bg-[var(--champagne)] group-hover:text-[var(--ink)] sm:inline-flex">
-                    <ArrowUpRight size={16} aria-hidden="true" />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
+              <div className="p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+                <div>
+                  <div className="flex flex-col gap-4 border-b border-[var(--line)] pb-6 sm:flex-row sm:items-end sm:justify-between">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
+                        Talks That Fit
+                      </p>
+                      <p className="mt-2 text-sm leading-7 text-[#675d50]">
+                        When a topic feels right, share your event details and Lornette&apos;s
+                        team can shape the next step.
+                      </p>
+                    </div>
+                    <Link
+                      href={activePathway.primaryHref}
+                      className="inline-flex items-center gap-2 text-sm font-bold uppercase text-[var(--gold-dark)] hover:text-[var(--ink)] transition-colors whitespace-nowrap"
+                    >
+                      Explore This Audience
+                      <ArrowUpRight size={16} aria-hidden="true" />
+                    </Link>
+                  </div>
+
+                  <div className="mt-6 grid gap-4">
+                    {activePathway.topics.map((topic, index) => (
+                      <motion.div
+                        key={`${activePathway.audience}-${topic.title}`}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.35, delay: index * 0.08 }}
+                      >
+                        <Link
+                          href={topic.href}
+                          className="group grid gap-4 border border-[var(--line)] bg-[var(--ivory)] p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--champagne)] hover:bg-white hover:shadow-md sm:grid-cols-[3.5rem_1fr_auto] sm:items-start block"
+                        >
+                          <span className="font-serif text-4xl leading-none text-[rgba(155,118,46,0.42)] group-hover:text-[var(--gold-dark)] transition-colors">
+                            {index + 1}
+                          </span>
+                          <span>
+                            <span className="block font-serif text-2xl leading-tight text-[var(--ink)] group-hover:text-[var(--gold-dark)] transition-colors">
+                              {topic.title}
+                            </span>
+                            <span className="mt-2 block text-sm leading-7 text-[#675d50]">
+                              {topic.body}
+                            </span>
+                          </span>
+                          <span className="hidden h-10 w-10 items-center justify-center border border-[rgba(155,118,46,0.3)] text-[var(--gold-dark)] transition group-hover:bg-[var(--champagne)] group-hover:text-[var(--ink)] sm:inline-flex">
+                            <ArrowUpRight size={16} aria-hidden="true" />
+                          </span>
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </section>
   );
 }
+

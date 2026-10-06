@@ -43,6 +43,16 @@ export type GrillMeSubmission = {
   status: "pending_grill" | "reviewed_by_lornette";
 };
 
+export type ProgramTrack = "golf" | "hockey" | "corporate" | "europe";
+export type RegionFocus = "north_america" | "europe";
+
+export type GdprConsentState = {
+  analytics: boolean;
+  coachingRecordings: boolean;
+  peerFeedback: boolean;
+  acceptedAt?: string;
+};
+
 export type AthleteSubmission = {
   id: string;
   golferName: string;
@@ -51,6 +61,9 @@ export type AthleteSubmission = {
   handicap: string;
   division: string;
   coachName: string;
+  track?: ProgramTrack;
+  region?: RegionFocus;
+  gdprConsents?: GdprConsentState;
   pressureSignal: string;
   resetProtocol: string;
   anchorCue: string;
@@ -87,10 +100,13 @@ export type CohortItem = {
   currentWeek: number;
   startDate: string;
   club: string;
+  track?: ProgramTrack;
 };
 
 export type FoundationsStoreState = {
   isLoading: boolean;
+  activeTrack: ProgramTrack;
+  activeRegion: RegionFocus;
   activeAthleteId: string;
   athletes: AthleteSubmission[];
   inquiries: InquiryItem[];
@@ -172,6 +188,8 @@ const DEFAULT_ATHLETE: AthleteSubmission = ADMIN_ATHLETE;
 
 const DEFAULT_STORE: FoundationsStoreState = {
   isLoading: false,
+  activeTrack: "golf",
+  activeRegion: "europe",
   activeAthleteId: "admin-coach-lornette",
   athletes: SAMPLE_ATHLETES,
   inquiries: [],
@@ -184,6 +202,7 @@ const DEFAULT_STORE: FoundationsStoreState = {
       currentWeek: 4,
       startDate: "2026-06-01",
       club: "Royal Mayfair Golf Club",
+      track: "golf",
     },
     {
       code: "DERRICK-FALL-2026",
@@ -193,11 +212,58 @@ const DEFAULT_STORE: FoundationsStoreState = {
       currentWeek: 1,
       startDate: "2026-09-15",
       club: "Private Member Club",
+      track: "golf",
+    },
+    {
+      code: "HOCKEY-PRO-2026",
+      title: "High-Performance Hockey Academy",
+      enrolled: 16,
+      capacity: 20,
+      currentWeek: 2,
+      startDate: "2026-08-01",
+      club: "Regional Ice Centre",
+      track: "hockey",
+    },
+    {
+      code: "CORP-LEAD-2026",
+      title: "Executive Leadership Masterclass",
+      enrolled: 10,
+      capacity: 15,
+      currentWeek: 3,
+      startDate: "2026-07-15",
+      club: "Executive Advisory Group",
+      track: "corporate",
+    },
+    {
+      code: "EU-ACADEMY-2026",
+      title: "Continental European Sport Academy",
+      enrolled: 14,
+      capacity: 18,
+      currentWeek: 2,
+      startDate: "2026-09-01",
+      club: "Mediterranean Athletic Campus",
+      track: "europe",
     },
   ],
 };
 
+const STORAGE_KEY = "ld_foundations_store_state";
+
 let memoryStore: FoundationsStoreState = DEFAULT_STORE;
+if (typeof window !== "undefined") {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      memoryStore = {
+        ...DEFAULT_STORE,
+        ...parsed,
+      };
+    }
+  } catch (e) {
+    // fallback to DEFAULT_STORE
+  }
+}
 let initialized = false;
 
 const EVENT_KEY = "ld_foundations_store_update";
@@ -209,6 +275,16 @@ function getStore(): FoundationsStoreState {
 function notifyStoreUpdate(nextState: FoundationsStoreState) {
   memoryStore = nextState;
   if (typeof window !== "undefined") {
+    try {
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify({
+          activeTrack: nextState.activeTrack,
+          activeRegion: nextState.activeRegion,
+          activeAthleteId: nextState.activeAthleteId,
+        })
+      );
+    } catch (e) {}
     window.dispatchEvent(new CustomEvent(EVENT_KEY, { detail: nextState }));
   }
 }
@@ -524,6 +600,9 @@ export function useFoundationsStore() {
       (c) => c.code.toUpperCase() === codeUpper
     );
 
+    const determinedTrack: ProgramTrack = matched?.track || state.activeTrack || "golf";
+    const determinedRegion: RegionFocus = determinedTrack === "europe" ? "europe" : state.activeRegion;
+
     const newAthlete: AthleteSubmission = {
       ...DEFAULT_ATHLETE,
       id: `athlete-${Date.now()}`,
@@ -539,6 +618,8 @@ export function useFoundationsStore() {
 
     notifyStoreUpdate({
       ...state,
+      activeTrack: determinedTrack,
+      activeRegion: determinedRegion,
       activeAthleteId: newAthlete.id,
       athletes: [newAthlete, ...state.athletes],
     });
@@ -577,6 +658,119 @@ export function useFoundationsStore() {
     });
   };
 
+  const setActiveTrack = (track: ProgramTrack) => {
+    notifyStoreUpdate({
+      ...memoryStore,
+      activeTrack: track,
+    });
+  };
+
+  const setActiveRegion = (region: RegionFocus) => {
+    notifyStoreUpdate({
+      ...memoryStore,
+      activeRegion: region,
+    });
+  };
+
+  const updateGdprConsents = async (
+    consents: Partial<GdprConsentState>
+  ) => {
+    const updatedAthleteConsents: GdprConsentState = {
+      analytics: consents.analytics ?? activeAthlete.gdprConsents?.analytics ?? false,
+      coachingRecordings:
+        consents.coachingRecordings ??
+        activeAthlete.gdprConsents?.coachingRecordings ??
+        false,
+      peerFeedback:
+        consents.peerFeedback ?? activeAthlete.gdprConsents?.peerFeedback ?? false,
+      acceptedAt: new Date().toISOString(),
+    };
+
+    notifyStoreUpdate({
+      ...state,
+      athletes: state.athletes.map((ath) =>
+        ath.id === state.activeAthleteId
+          ? { ...ath, gdprConsents: updatedAthleteConsents }
+          : ath
+      ),
+    });
+
+    try {
+      const supabase = createClient();
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      if (user) {
+        await supabase
+          .from("profiles")
+          .update({
+            gdpr_analytics_consent: updatedAthleteConsents.analytics,
+            gdpr_coaching_recording_consent: updatedAthleteConsents.coachingRecordings,
+            gdpr_consent_date: updatedAthleteConsents.acceptedAt,
+          })
+          .eq("id", user.id);
+
+        await supabase.from("gdpr_compliance_requests").insert({
+          profile_id: user.id,
+          request_type: "consent_update",
+          status: "completed",
+          details: updatedAthleteConsents,
+        });
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  const exportGdprDataArchive = () => {
+    const exportPayload = {
+      compliance: "EU General Data Protection Regulation (GDPR) Article 15 & 20",
+      program: "Lornette’s Foundation Guided Development Program",
+      exportedAt: new Date().toISOString(),
+      athleteProfile: {
+        id: activeAthlete.id,
+        name: activeAthlete.golferName,
+        email: activeAthlete.email,
+        club: activeAthlete.club,
+        division: activeAthlete.division,
+        handicap: activeAthlete.handicap,
+        coachAlignment: activeAthlete.coachName,
+        activeTrack: state.activeTrack,
+        activeRegion: state.activeRegion,
+      },
+      plan: {
+        pressureSignal: activeAthlete.pressureSignal,
+        resetProtocol: activeAthlete.resetProtocol,
+        anchorCue: activeAthlete.anchorCue,
+        preShotRoutine: activeAthlete.preShotRoutine,
+        goals: activeAthlete.goals,
+      },
+      progress: {
+        currentWeek: activeAthlete.currentWeek,
+        completedFoundations: activeAthlete.completedFoundations,
+        reflectionsCount: Object.keys(activeAthlete.reflections || {}).length,
+        reflections: activeAthlete.reflections,
+      },
+      privacyConsents: activeAthlete.gdprConsents || {
+        analytics: false,
+        coachingRecordings: false,
+        peerFeedback: false,
+      },
+    };
+
+    const blob = new Blob([JSON.stringify(exportPayload, null, 2)], {
+      type: "application/json",
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `lornettes-foundation-gdpr-data-export-${activeAthlete.id}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return {
     state,
     activeAthlete,
@@ -587,6 +781,10 @@ export function useFoundationsStore() {
     updateGrillMeCritique,
     updateInquiryStatus,
     setActiveAthleteId,
+    setActiveTrack,
+    setActiveRegion,
+    updateGdprConsents,
+    exportGdprDataArchive,
     redeemCohortCode,
     advanceCohortWeek,
     updateAthleteProfile,

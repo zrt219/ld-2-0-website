@@ -5,6 +5,10 @@ import { MediaGrid } from "@/components/MediaGrid";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { VideoCard } from "@/components/VideoCard";
+import {
+  MotionFadeIn,
+  MotionScaleIn,
+} from "@/components/motion";
 import { createMetadata, mediaItems, speakerKitDownloads } from "@/content/site";
 
 export const metadata = createMetadata(
@@ -20,20 +24,22 @@ export default function MediaPage() {
         <section className="relative overflow-hidden border-b border-[var(--line)] bg-[var(--ivory)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[rgba(198,165,92,0.34)] to-transparent" />
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
-            <div>
+            <MotionFadeIn>
               <SectionHeader
                 eyebrow="Media / Speaker Reel"
                 title="Watch. Listen. Experience the Impact."
                 body="Explore Lornette's warmth, conviction, and message through video clips, speaking moments, and media features."
                 headingLevel="h1"
               />
-            </div>
-            <VideoCard {...mediaItems[0]} featured className="shadow-[0_30px_120px_rgba(23,20,18,0.16)]" />
+            </MotionFadeIn>
+            <MotionScaleIn delay={0.15}>
+              <VideoCard {...mediaItems[0]} featured className="shadow-[0_30px_120px_rgba(23,20,18,0.16)]" />
+            </MotionScaleIn>
           </div>
         </section>
 
         <section className="bg-[var(--ink)] px-4 py-10 text-[var(--ivory)] sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.8fr_1.2fr_auto] lg:items-center">
+          <MotionFadeIn className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.8fr_1.2fr_auto] lg:items-center">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-[var(--champagne)]">
                 Media Hub
@@ -57,7 +63,7 @@ export default function MediaPage() {
               </span>
             </div>
             <CTAButton href="/book">Book Lornette</CTAButton>
-          </div>
+          </MotionFadeIn>
         </section>
 
         <section className="px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">

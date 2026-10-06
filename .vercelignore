@@ -17,4 +17,5 @@ android
 .ai-private/
 *.prompt.md
 *_PROMPTS.md
+scratch/
 

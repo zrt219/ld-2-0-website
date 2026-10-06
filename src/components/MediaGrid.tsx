@@ -14,6 +14,8 @@ const categories = [
   "Podcasts",
 ];
 
+import { motion, AnimatePresence } from "framer-motion";
+
 export function MediaGrid() {
   const [category, setCategory] = useState("All Videos");
   const [query, setQuery] = useState("");
@@ -85,25 +87,39 @@ export function MediaGrid() {
         </div>
       </div>
 
-      <div className="mt-8 grid gap-7 md:grid-cols-2" aria-live="polite" aria-atomic="false">
-        {filtered.map((item) => (
-          <VideoCard
-            key={item.title}
-            title={item.title}
-            summary={item.summary}
-            image={item.image}
-            videoSrc={item.videoSrc}
-            duration={item.duration}
-          />
-        ))}
-      </div>
+      <motion.div layout className="mt-8 grid gap-7 md:grid-cols-2" aria-live="polite" aria-atomic="false">
+        <AnimatePresence mode="popLayout">
+          {filtered.map((item) => (
+            <motion.div
+              layout
+              key={item.title}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.28, ease: "easeOut" }}
+            >
+              <VideoCard
+                title={item.title}
+                summary={item.summary}
+                image={item.image}
+                videoSrc={item.videoSrc}
+                duration={item.duration}
+              />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
       {filtered.length === 0 ? (
-        <div className="mt-8 border border-[var(--line)] bg-white p-8 text-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="mt-8 border border-[var(--line)] bg-white p-8 text-center"
+        >
           <p className="font-serif text-3xl text-[var(--ink)]">No media matched that search.</p>
           <p className="mt-2 text-sm text-[#675d50]">
             Try another topic or choose All Videos.
           </p>
-        </div>
+        </motion.div>
       ) : null}
     </div>
   );

@@ -18,9 +18,13 @@ import {
   Trash2,
 } from "lucide-react";
 import { useFoundationsStore, GoalItem } from "@/lib/foundations/store";
+import { getTrackConfig, TrackId } from "@/lib/foundations/track-registry";
 
 export default function FoundationsPlanPage() {
-  const { activeAthlete, updateActivePlan } = useFoundationsStore();
+  const { activeAthlete, state, updateActivePlan } = useFoundationsStore();
+  const currentTrack: TrackId = (state.activeTrack as TrackId) || "golf";
+  const isEurope = state.activeRegion === "europe" || currentTrack === "europe";
+  const trackConfig = getTrackConfig(currentTrack);
 
   const [prevAthleteId, setPrevAthleteId] = useState(activeAthlete.id);
   const [pressureSignal, setPressureSignal] = useState(activeAthlete.pressureSignal);
@@ -29,6 +33,10 @@ export default function FoundationsPlanPage() {
   const [goals, setGoals] = useState<GoalItem[]>(activeAthlete.goals);
   const [newGoalText, setNewGoalText] = useState("");
   const [isSaved, setIsSaved] = useState(false);
+
+  const blueprintEyebrow = `${trackConfig.editorialBadge} BLUEPRINT`;
+  const blueprintHeadline = `My ${trackConfig.label} Performance Plan`;
+  const blueprintDesc = trackConfig.heroDescription;
 
   // Sync state when activeAthlete changes
   if (prevAthleteId !== activeAthlete.id) {
@@ -86,13 +94,13 @@ export default function FoundationsPlanPage() {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
               <p className="font-sans text-[11px] font-bold uppercase tracking-[0.28em] text-[#8e7e6e]">
-                INDIVIDUAL ATHLETE BLUEPRINT
+                {blueprintEyebrow}
               </p>
               <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-[#1e1b18]">
-                My Performance Edge Plan
+                {blueprintHeadline}
               </h1>
               <p className="mt-2 font-sans text-xs sm:text-sm text-[#665a4c] max-w-xl leading-relaxed">
-                Your personalized competitive blueprint, reset cues, pre-shot routine cadence, and 30-day performance commitments.
+                {blueprintDesc}
               </p>
             </div>
 
@@ -200,28 +208,33 @@ export default function FoundationsPlanPage() {
               </div>
             </div>
 
-            {/* Section 2: 6-Step Pre-Shot Routine Cadence */}
+            {/* Section 2: Repeatable Routine Cadence */}
             <div className="rounded-xl border border-[#ebdcc9] bg-[#fdfbf7] p-6 shadow-[0_2px_12px_rgba(30,24,15,0.03)] space-y-4">
               <div className="flex items-center gap-2 border-b border-[#ebdcc9] pb-3">
                 <Compass size={18} className="text-[#a6864a]" />
-                <h2 className="font-serif text-lg font-semibold text-[#1e1b18]">
-                  2. Repeatable 6-Step Pre-Shot Cadence
-                </h2>
+                <div>
+                  <h2 className="font-serif text-lg font-semibold text-[#1e1b18]">
+                    2. {trackConfig.routineTitle}
+                  </h2>
+                  <p className="text-[11px] text-[#706456]">
+                    {trackConfig.routineSubtitle}
+                  </p>
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {activeAthlete.preShotRoutine.map((s) => (
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {(trackConfig.routineSteps || []).map((s) => (
                   <div
                     key={s.step}
                     className="rounded-lg border border-[#ebdcc9] bg-[#fcfaf5] p-3.5"
                   >
                     <span className="text-[10px] font-bold uppercase tracking-wider text-[#a6864a] block">
-                      {s.step}
+                      Step {s.step}
                     </span>
                     <h3 className="font-serif text-sm font-semibold text-[#1e1b18]">
                       {s.title}
                     </h3>
-                    <p className="text-xs text-[#706456] mt-0.5">{s.desc}</p>
+                    <p className="text-xs text-[#706456] mt-0.5 leading-relaxed">{s.desc}</p>
                   </div>
                 ))}
               </div>

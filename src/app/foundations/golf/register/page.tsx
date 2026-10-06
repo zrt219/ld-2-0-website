@@ -15,7 +15,7 @@ import { GolfRegistrationForm } from "@/components/foundations/GolfRegistrationF
 export const metadata: Metadata = {
   title: "Register for Golf Program | Lornette’s Foundation Golf",
   description:
-    "Register for the 10-Week Guided Athlete Development Program with Olympian Coach Lornette Daye. Build elite mental resilience, focus, and purposeful performance.",
+    "Register for the 10-Week Guided Athlete Development Program with Olympian coach Lornette Daye. Build elite mental resilience, focus, and purposeful performance.",
   openGraph: {
     title: "Register for Golf Program | Lornette’s Foundation Golf",
     description:
@@ -61,7 +61,7 @@ const nextSteps = [
   },
   {
     step: "2",
-    text: "Our team will follow up personally within 1–2 business days.",
+    text: "Our team will follow up personally within 1-2 business days.",
   },
   {
     step: "3",
@@ -149,7 +149,7 @@ export default function GolfRegisterPage() {
                 <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full">
                   <Image
                     src="/foundations/golf/lornette-golf-fairway-composure-sunset.jpg"
-                    alt="Coach Lornette Daye standing on the fairway with golf clubs at sunset"
+                    alt="Olympic-level coach Lornette Daye standing on the fairway with golf clubs at sunset"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover object-[center_35%] transition-transform duration-700 group-hover:scale-[1.02]"
@@ -164,7 +164,7 @@ export default function GolfRegisterPage() {
                       &ldquo;Performance isn&apos;t just about what you do on the course. It&apos;s about who you become.&rdquo;
                     </p>
                     <p className="text-xs uppercase tracking-[0.2em] text-[var(--champagne)] font-semibold">
-                      Coach Lornette Daye &middot; <span className="opacity-90 font-normal">Speaker. Coach. Leader.</span>
+                      Lornette Daye &middot; <span className="opacity-90 font-normal">Speaker. Coach. Leader.</span>
                     </p>
                   </div>
                 </div>

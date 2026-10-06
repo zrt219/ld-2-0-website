@@ -21,6 +21,12 @@ import { TestimonialCard } from "@/components/TestimonialCard";
 import { TopicCard } from "@/components/TopicCard";
 import { VideoCard } from "@/components/VideoCard";
 import {
+  MotionFadeIn,
+  MotionStaggerContainer,
+  MotionStaggerItem,
+  MotionScaleIn,
+} from "@/components/motion";
+import {
   audienceTypes,
   images,
   mediaItems,
@@ -195,7 +201,7 @@ export default function Home() {
         />
 
         <section className="bg-[var(--ink)] px-4 py-16 text-[var(--ivory)] sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-          <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.28fr_1fr_0.32fr] lg:items-center">
+          <MotionFadeIn className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.28fr_1fr_0.32fr] lg:items-center">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--champagne)]">
               A Message Audiences Carry Home
             </p>
@@ -212,12 +218,12 @@ export default function Home() {
                 Watch Reel
               </CTAButton>
             </div>
-          </div>
+          </MotionFadeIn>
         </section>
 
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
-            <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
+            <MotionFadeIn className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
               <VideoCard
                 {...mediaItems[0]}
                 title="Watch Lornette in Action"
@@ -241,9 +247,9 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </div>
+            </MotionFadeIn>
 
-            <div className="mt-8 border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-6 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-8 lg:grid lg:grid-cols-[0.26fr_1fr] lg:items-start lg:gap-8">
+            <MotionFadeIn delay={0.1} className="mt-8 border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-6 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-8 lg:grid lg:grid-cols-[0.26fr_1fr] lg:items-start lg:gap-8">
               <div className="border-b border-[var(--line)] pb-5 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-8">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
                   Signature Keynote
@@ -257,21 +263,21 @@ export default function Home() {
                   {speakerSubmissionProfile.primaryKeynote.description}
                 </p>
               </div>
-            </div>
+            </MotionFadeIn>
 
-            <div className="mt-8 border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-6 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-8">
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <MotionFadeIn delay={0.15} className="mt-8 border border-[rgba(198,165,92,0.42)] bg-[var(--ivory)] p-6 shadow-[0_18px_70px_rgba(23,20,18,0.08)] sm:p-8">
+              <MotionStaggerContainer className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {metrics.slice(0, 4).map((metric) => (
-                  <div key={metric.label} className="border-l-2 border-[var(--champagne)] bg-white px-4 py-3">
+                  <MotionStaggerItem key={metric.label} className="border-l-2 border-[var(--champagne)] bg-white px-4 py-3">
                     <p className="font-serif text-3xl leading-none text-[var(--ink)]">
                       {metric.value}
                     </p>
                     <p className="mt-2 text-xs font-bold uppercase leading-5 text-[#62594d]">
                       {metric.label}
                     </p>
-                  </div>
+                  </MotionStaggerItem>
                 ))}
-              </div>
+              </MotionStaggerContainer>
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
                 <CTAButton href="/book">Inquire About Availability</CTAButton>
@@ -279,7 +285,7 @@ export default function Home() {
                   Speaker Kit
                 </CTAButton>
               </div>
-            </div>
+            </MotionFadeIn>
           </div>
         </section>
 
@@ -287,7 +293,7 @@ export default function Home() {
 
         <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <MotionFadeIn className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <SectionHeader
                 eyebrow="Signature Topics"
                 title="Topics that help people rise, reset, and lead with purpose."
@@ -296,12 +302,14 @@ export default function Home() {
               <CTAButton href="/speaking" variant="secondary">
                 Explore Speaking
               </CTAButton>
-            </div>
-            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            </MotionFadeIn>
+            <MotionStaggerContainer className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
               {signatureTopicCards.map((service) => (
-                <TopicCard key={service.title} title={service.title} body={service.body} href={service.href} />
+                <MotionStaggerItem key={service.title}>
+                  <TopicCard title={service.title} body={service.body} href={service.href} />
+                </MotionStaggerItem>
               ))}
-            </div>
+            </MotionStaggerContainer>
           </div>
         </section>
 
@@ -311,48 +319,54 @@ export default function Home() {
 
         <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div>
+            <MotionFadeIn>
               <SectionHeader
                 eyebrow="Credibility & Recognition"
                 title="A champion's discipline, a coach's heart, and a message people can use."
                 body="Lornette's work is rooted in national sprint titles, decades of coaching, authored resources, diversity recognition, and community service. She brings lived proof to every room, helping audiences see resilience as something they can practice."
               />
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <MotionStaggerContainer className="mt-8 grid gap-3 sm:grid-cols-2">
                 {speakerSubmissionProfile.recognitionHighlights.slice(0, 4).map((item) => (
-                  <div key={item} className="border-l-2 border-[var(--champagne)] bg-white px-4 py-3 text-sm font-semibold leading-6 text-[#62594d]">
+                  <MotionStaggerItem key={item} className="border-l-2 border-[var(--champagne)] bg-white px-4 py-3 text-sm font-semibold leading-6 text-[#62594d]">
                     {item}
-                  </div>
+                  </MotionStaggerItem>
                 ))}
-              </div>
+              </MotionStaggerContainer>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <CTAButton href="/recognition">View Awards & Recognition</CTAButton>
                 <CTAButton href="/books" variant="secondary">
                   View Authored Books
                 </CTAButton>
               </div>
-            </div>
-            <ImageFrame image={images.recognitionCommunityAwards} ratio="aspect-[5/4]" />
+            </MotionFadeIn>
+            <MotionScaleIn delay={0.15}>
+              <ImageFrame image={images.recognitionCommunityAwards} ratio="aspect-[5/4]" />
+            </MotionScaleIn>
           </div>
         </section>
 
         <section className="bg-[var(--sand)] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
-            <SectionHeader
-              eyebrow="Audience Impact"
-              title="People leave feeling seen, strengthened, and ready to move."
-              body="From keynote audiences to coached athletes and wellness communities, these reflections point to the same thing: Lornette meets people with honesty, hope, and practical next steps."
-            />
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <MotionFadeIn>
+              <SectionHeader
+                eyebrow="Audience Impact"
+                title="People leave feeling seen, strengthened, and ready to move."
+                body="From keynote audiences to coached athletes and wellness communities, these reflections point to the same thing: Lornette meets people with honesty, hope, and practical next steps."
+              />
+            </MotionFadeIn>
+            <MotionStaggerContainer className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {testimonials.map((testimonial) => (
-                <TestimonialCard key={testimonial.name} {...testimonial} />
+                <MotionStaggerItem key={testimonial.name}>
+                  <TestimonialCard {...testimonial} />
+                </MotionStaggerItem>
               ))}
-            </div>
+            </MotionStaggerContainer>
           </div>
         </section>
 
         <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
-            <div>
+            <MotionFadeIn>
               <SectionHeader
                 eyebrow="Media & Community References"
                 title="Trusted in rooms built for growth, leadership, and community."
@@ -362,8 +376,8 @@ export default function Home() {
                 <CTAButton href="/impact" size="large">See Community Impact</CTAButton>
                 <CTAButton href="/speaker-kit" variant="secondary" size="large">Open Speaker Kit</CTAButton>
               </div>
-            </div>
-            <div className="border border-[var(--line)] bg-white p-4">
+            </MotionFadeIn>
+            <MotionScaleIn delay={0.15} className="border border-[var(--line)] bg-white p-4">
               <Image
                 src={images.featuredOn.src}
                 alt={images.featuredOn.alt}
@@ -371,40 +385,45 @@ export default function Home() {
                 className="h-auto w-full"
                 sizes="(max-width: 768px) 92vw, 720px"
               />
-            </div>
+            </MotionScaleIn>
           </div>
         </section>
 
         <section className="px-4 pb-16 pt-8 sm:px-6 lg:px-8 lg:pb-24 lg:pt-10">
           <div className="mx-auto max-w-7xl">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <MotionFadeIn className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <SectionHeader
                 eyebrow="Speak Life Blog"
                 title="Reflections for the moments that ask you to keep going."
                 body="Read short, practical notes from Lornette on resilience, faith, purpose, vulnerability, and the courage to begin again."
               />
               <CTAButton href="/blog" variant="secondary">Read the Speak Life Blog</CTAButton>
-            </div>
-            <div className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+            </MotionFadeIn>
+            <MotionStaggerContainer className="mt-10 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
               <div className="grid gap-6">
                 {posts[0] ? (
-                  <BlogCard post={posts[0]} variant="featured" headingLevel="h3" />
+                  <MotionStaggerItem>
+                    <BlogCard post={posts[0]} variant="featured" headingLevel="h3" />
+                  </MotionStaggerItem>
                 ) : null}
                 {posts[3] ? (
-                  <BlogCard post={posts[3]} variant="compact" headingLevel="h3" />
+                  <MotionStaggerItem>
+                    <BlogCard post={posts[3]} variant="compact" headingLevel="h3" />
+                  </MotionStaggerItem>
                 ) : null}
               </div>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
                 {posts.slice(1, 3).map((post) => (
-                  <BlogCard
-                    key={post.slug}
-                    post={post}
-                    variant="compact"
-                    headingLevel="h3"
-                  />
+                  <MotionStaggerItem key={post.slug}>
+                    <BlogCard
+                      post={post}
+                      variant="compact"
+                      headingLevel="h3"
+                    />
+                  </MotionStaggerItem>
                 ))}
               </div>
-            </div>
+            </MotionStaggerContainer>
           </div>
         </section>
 
@@ -413,13 +432,13 @@ export default function Home() {
         <NewsletterBand />
 
         <section className="px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto flex max-w-7xl flex-col gap-6 border-y border-[rgba(198,165,92,0.5)] py-10 lg:flex-row lg:items-center lg:justify-between">
+          <MotionFadeIn className="mx-auto flex max-w-7xl flex-col gap-6 border-y border-[rgba(198,165,92,0.5)] py-10 lg:flex-row lg:items-center lg:justify-between">
             <div>
               <p className="font-serif text-4xl text-[var(--ink)]">Ready to help your audience remember what they&apos;re capable of?</p>
               <p className="mt-2 text-[#675d50]">Bring Lornette Daye to your school, team, conference, or community gathering.</p>
             </div>
             <CTAButton href="/book">Start a Booking Inquiry</CTAButton>
-          </div>
+          </MotionFadeIn>
         </section>
       </main>
     </PageShell>

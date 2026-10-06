@@ -10,9 +10,12 @@ This version has breaking changes — APIs, conventions, and file structure may 
    - Always extract Server Actions into a dedicated `actions.ts` file marked with `"use server"` at the very top.
    - Server-only modules (`next/headers`, `next/cache`, `revalidatePath`, `cookies()`) must only be imported into `actions.ts` or standalone server utilities, never mixed into modules consumed by client trees.
 
-2. **Local Hosting & Dev Server Verification**:
+2. **Local Hosting & Dev Server Verification Protocol**:
    - When requested to host or test locally, always check for stale processes occupying port 3000 (`Get-NetTCPConnection -LocalPort 3000`) before launching.
+   - If an existing process is running on port 3000, ALWAYS terminate it explicitly (`Stop-Process -Id <PID> -Force`) before starting a new server to prevent serving orphaned builds or stale visual mockups.
    - Prefer `npx next start -p 3000` (production mode) after running `npm run build` to verify genuine production runtime behavior and avoid Next.js 16 Webpack-vs-Turbopack dev mode discrepancies.
+   - Always probe key routes via `curl.exe -I -s http://localhost:3000/<route>` to ensure `HTTP 200 OK` and inspect headers before confirming completion.
+   - **Browser Cache Invariant**: When prompting or testing in the browser, always account for browser cache persistence and recommend a hard refresh (`Ctrl + F5` or incognito window).
 <!-- END:nextjs-agent-rules -->
 
 <!-- BEGIN:buffer-publishing-rules -->
@@ -234,7 +237,28 @@ Execute the numbered Performance Edge build plan one prompt at a time.
 3. **Strict No Em Dash Invariant ("—")**:
    - **Never** use em dashes (`—`, `&mdash;`, or `\u2014`) in any ad copy, headlines, paragraphs, captions, or editorial text.
    - Use clean, standard punctuation instead: periods for distinct thoughts, commas for parentheticals/clauses, colons for introductions, or restructure into clear, standalone sentences.
+4. **Corporate, Foundations & Executive Naming Invariant (Strictly No "Coach Lornette")**:
+   - Across the main website, Foundations hub (`/foundations`), corporate pages (`/foundations/corporate`, `/leadership`), keynotes, and executive masterclasses, **never** refer to Lornette Daye as *"Coach Lornette"* or *"Coach Lornette Daye"*.
+   - Use **"Lornette Daye"** or refer to her credentials directly (e.g. *"Olympic-level coach Lornette Daye"*, *"Canadian national sprint champion Lornette Daye"*).
+   - Reserve coaching title prefixes (e.g., *"Coach Lornette"*) strictly and exclusively for internal athlete LMS review contexts (such as the learner portal reflection grading queue and Golf/Hockey youth cohort mentorship).
+
+5. **High-Resolution Master Visual Assets Invariant (Zero Low-Res Thumbnails)**:
+   - All visual assets, galleries, environment carousels, and feature showcases MUST reference high-resolution master media files (minimum 1600+ pixels wide for landscape banners/galleries).
+   - **Never** use low-resolution thumbnails (e.g. 320x180 px or compressed scratch previews) as public page hero or gallery images.
+   - When generating or sourcing gallery items, always link to canonical master assets (`public/foundations/...`) and convert uncompressed RGBA/PNG plates at high quality (quality 95+) to prevent compression artifacts or blurriness.
 <!-- END:brand-voice-and-copy-invariants -->
+
+<!-- BEGIN:canonical-pathway-assets-lock -->
+# Canonical Foundations Pathway Cards Visual Lock
+
+1. **Mandatory Pathway Assets**:
+   - The 4 Signature Pathway cards displayed on the Foundations landing page (`/foundations` via `FoundationsPathwayCards.tsx`) and the Foundations MegaMenu (`FoundationsMegaMenu.tsx`) MUST strictly reference the canonical files in `public/foundations/pathways/`:
+     - **Golf (Athlete Pathway)**: `/foundations/pathways/golf-pathway.jpg` (Alt: "Competitive golfer swing follow-through at golden sunset", Position: `center 30%`)
+     - **Hockey (Team Pathway)**: `/foundations/pathways/hockey-pathway.jpg` (Alt: "Elite hockey player jersey #10 standing in packed arena lights", Position: `center 20%`)
+     - **Corporate (Organizational Pathway)**: `/foundations/pathways/corporate-pathway.jpg` (Alt: "Executive speaker addressing high-level corporate audience", Position: `center 20%`)
+     - **Europe (European Partnerships)**: `/foundations/pathways/europe-pathway.jpg` (Alt: "Lornette Daye speaking at European summit with international flags", Position: `center 15%`)
+   - **Never** swap these images for scratch generated files or uncurated workshop photos unless explicitly instructed by the user.
+<!-- END:canonical-pathway-assets-lock -->
 
 <!-- BEGIN:canonical-monogram-logo-invariant -->
 # Canonical Monogram Logo Invariant
@@ -350,3 +374,64 @@ Invariants:
 - Requirements from `03_ITALY_FIG` must never be used to block or expand the First Club MVP.
 - Simulated stress test feedback must be clearly labeled as `Source: Simulated institutional stress test` until validated by real user data.
 <!-- END:lornettes-foundation-product-backlog -->
+
+<!-- BEGIN:navigation-mega-menu-and-pathway-card-invariants -->
+# High-Conversion Navigation Dropdowns & Signature Pathway Card Invariants
+
+The primary navigation dropdowns—specifically the Foundations Signature Pathways Mega Menu and program pathways—serve as the primary financial conversion engine for Lornette Daye's athlete, team, corporate, and international programs. Protect their visual hierarchy and conversion mechanics unconditionally.
+
+## 1. Architectural Positioning & Zero Containing-Block Traps
+- **Root-Level Flyout Anchoring**: All full-width mega menus (`FoundationsMegaMenu`, etc.) must render directly under `<header>` at `top-full left-0 right-0`, outside the navigation `<ul>` or nested `<li>` elements.
+- **Strict Prohibition of CSS Transforms on Ancestors**:
+  - Never apply CSS transforms (e.g., `-translate-y-[2px]`, `translate-x-*`, `scale-*`, or framer-motion transforms) to the `<header>`, `<nav>`, or navigation `<ul>` containers holding or coordinating dropdown flyouts.
+  - Applying transforms to ancestor containers creates a new CSS containing block, trapping full-width fixed/absolute flyouts and severely shrinking their width to the link container.
+- **Dedicated Dropdown Refs**: Flyout dropdowns rendered outside the `<ul>` must maintain dedicated element references (`megaMenuRef`) and be verified in `handleClickOutside` and `onBlur` listeners to prevent premature closing.
+
+## 2. Card Dimensions, Aspect Ratios & Track Geometry
+- **Strict Isolated Aspect-Ratio Geometry**:
+  - In both the header dropdown (`FoundationsMegaMenu.tsx`) and the main Foundations page (`src/app/foundations/page.tsx`), pathway cards must strictly use `w-full min-w-0 aspect-[3/4]` without competing `min-h-[...]` classes.
+  - Competing `min-h-[...]` causes CSS Grid columns to expand beyond track boundaries on desktop (`1024px`), causing cards to collide and overlap.
+  - Calibrate internal card padding (`p-4.5 sm:p-5 xl:p-6`) and button text (`whitespace-nowrap tracking-[0.14em] sm:tracking-[0.18em]`) so labels remain clean and non-wrapping across all viewports.
+- **Aspect Ratio Calibration**: Preserve `aspect-[3/4]` for optimal subject framing and device compatibility.
+
+## 3. Zero Ellipsis & Clean High-Conversion Content Hierarchy
+- **Strict Prohibition of Card Description Snippets**:
+  - Never squeeze multi-line body paragraphs or description snippets (`line-clamp-2`, `line-clamp-1`) into pathway cards. Truncated ellipsis text ("composure, and...", "leadershi...") damages brand prestige and clutters the visual field.
+- **Canonical Three-Element Card Content Stack**:
+  1. **Eyebrow**: Champagne uppercase tracking label (`text-[10px] font-extrabold uppercase tracking-[0.24em] text-[var(--champagne)] mb-1.5`)
+  2. **Title**: High-contrast white serif headline (`font-serif text-2xl sm:text-3xl font-bold tracking-tight text-white leading-tight`)
+  3. **Call-To-Action Badge**: High-visibility luxury gold button (`px-4 py-2.5 text-xs font-bold uppercase tracking-[0.2em] text-[var(--champagne)] bg-[linear-gradient(180deg,rgba(198,165,92,0.24)_0%,rgba(146,118,58,0.4)_100%)]`) with animated hover arrow.
+- **Cinematic Hover Dynamics**: Image zoom (`group-hover:scale-108 duration-700`), smooth upward card translation (`hover:-translate-y-2`), gold border highlight (`hover:border-[#dfc385]`), and deep shadow bloom (`hover:shadow-[0_28px_65px_rgba(0,0,0,0.42)]`).
+
+## 4. Local Verification & Stale Node Process Purging
+- When updating navigation components, mega menus, or layout files, always verify `Get-NetTCPConnection -LocalPort 3000` to terminate stale running Node processes before re-launching `npx next start -p 3000`.
+- Verify runtime output by inspecting served HTML to ensure full-width markup is live before closing tasks.
+<!-- END:navigation-mega-menu-and-pathway-card-invariants -->
+
+<!-- BEGIN:main-pages-real-lornette-imagery-invariant -->
+# Main Pages Real Lornette Daye Imagery Invariant
+
+1. **Mandatory Authentic Lornette Imagery on Main and Pathway Hero Sections**:
+   - All primary pages and pathway landing pages (`/`, `/foundations`, `/foundations/golf`, `/foundations/hockey`, `/foundations/corporate`, `/foundations/europe`, `/leadership`, `/about`, `/speaking`) must feature authentic, verified images of Coach Lornette Daye in the primary hero and signature feature positions.
+   - For hockey specifically, always use `/foundations/hockey/lornette-hockey-hero.jpg` (Coach Lornette speaking directly with hockey players in uniform).
+
+2. **Strict Prohibition of Generic or Surrogate Coaches**:
+   - Never place generic coaches, anonymous third-party trainers, or male coach figures in hero containers or primary signature card positions representing Lornette's brand and coaching presence.
+
+3. **Permissible Scope for Secondary Visuals**:
+   - Action shots of athletes, equipment close-ups (such as skate blades, pucks, or golf clubs), team huddles, and regional partner ecosystems are welcome in secondary modular grids (such as "Built For", "Game-Speed Composure", or "Regional Context"), provided the primary hero anchor remains Coach Lornette Daye.
+<!-- END:main-pages-real-lornette-imagery-invariant -->
+
+<!-- BEGIN:css-grid-aspect-ratio-invariants -->
+# CSS Grid Aspect-Ratio & Track Isolation Invariants
+
+1. **No Competing Min-Height on Aspect-Ratio Grid Items**:
+   - Never declare `min-h-[...]` simultaneously with `aspect-[...]` on CSS Grid children.
+   - Always enforce `w-full min-w-0 aspect-[X/Y]` to guarantee that the grid column geometry controls the item width, with height derived cleanly from the aspect ratio.
+   - Ensure action button labels inside grid cards specify `whitespace-nowrap` and calibrated letter-spacing (`tracking-[0.14em] sm:tracking-[0.18em]`) to prevent mid-word or multi-line breaks at `1024px` breakpoints.
+
+2. **Panoramic Closing Banner Luminosity & Contrast Invariant**:
+   - Sweeping wide-angle cinematic venue photography must be selected for panoramic closing CTA sections instead of tight, dark subject close-ups.
+   - Closing banner gradient overlays must follow calibrated opacity (`bg-gradient-to-t from-black/85 via-black/55 to-black/75`) so architectural and surface illumination shines through while maintaining WCAG AAA text legibility.
+<!-- END:css-grid-aspect-ratio-invariants -->
+

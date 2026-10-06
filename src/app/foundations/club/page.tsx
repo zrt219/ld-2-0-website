@@ -634,7 +634,7 @@ export default function FoundationsClubDashboardPage() {
                 INTERNAL-06: PGA Club Delivery Companion
               </h3>
               <p className="text-xs text-[#706456] max-w-xl">
-                Guide for Head Professionals and Academy coaches to align technical swing instruction with Coach Lornette’s mental performance routines.
+                Guide for Head Professionals and Academy coaches to align technical swing instruction with Lornette Daye’s mental performance routines.
               </p>
               <div className="mt-2 flex items-center gap-3 text-[11px] text-[#5e5245]">
                 <Link

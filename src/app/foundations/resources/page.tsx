@@ -9,6 +9,7 @@ import {
   Search,
 } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
+import { useFoundationsStore } from "@/lib/foundations/store";
 
 type ResourceItem = {
   id: string;
@@ -21,10 +22,41 @@ type ResourceItem = {
 };
 
 export default function FoundationsResourcesPage() {
+  const { state } = useFoundationsStore();
+  const activeTrack = state.activeTrack || "golf";
+  const isEurope = state.activeRegion === "europe";
+
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [resources, setResources] = useState<ResourceItem[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const vaultEyebrow =
+    activeTrack === "hockey"
+      ? isEurope
+        ? "EUROPEAN HOCKEY TEAM TOOLKIT & FIELD GUIDES"
+        : "HOCKEY TEAM VAULT & BENCH TOOLKIT"
+      : activeTrack === "corporate"
+      ? isEurope
+        ? "EUROPEAN EXECUTIVE VAULT & LEADERSHIP GUIDES"
+        : "EXECUTIVE VAULT & LEADERSHIP TOOLKIT"
+      : isEurope
+      ? "EUROPEAN ACADEMY VAULT & FIELD GUIDES"
+      : "PARTICIPANT VAULT & TOOLKIT";
+
+  const vaultHeadline =
+    activeTrack === "hockey"
+      ? "Hockey Resources & Bench Guides"
+      : activeTrack === "corporate"
+      ? "Executive Resources & Decision Guides"
+      : "Resources & Field Guides";
+
+  const vaultDesc =
+    activeTrack === "hockey"
+      ? "Downloadable team workbooks, bench shift cards, and audio focus tracks designed for game-day execution."
+      : activeTrack === "corporate"
+      ? "Downloadable executive playbooks, boardroom composure cards, and guided reflection audios for senior leaders."
+      : "Downloadable PDF workbooks, pocket routine cards, and audio prep tracks designed for on-course execution.";
 
   const supabase = createClient();
 
@@ -105,13 +137,13 @@ export default function FoundationsResourcesPage() {
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
               <p className="font-sans text-[11px] font-bold uppercase tracking-[0.28em] text-[#8e7e6e]">
-                PARTICIPANT VAULT & TOOLKIT
+                {vaultEyebrow}
               </p>
               <h1 className="mt-1 font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-[#1e1b18]">
-                Resources & Field Guides
+                {vaultHeadline}
               </h1>
               <p className="mt-2 font-sans text-xs sm:text-sm text-[#665a4c] max-w-xl leading-relaxed">
-                Downloadable PDF workbooks, pocket routine cards, and audio prep tracks designed for on-course execution.
+                {vaultDesc}
               </p>
             </div>
 

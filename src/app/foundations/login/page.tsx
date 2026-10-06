@@ -52,7 +52,7 @@ function LoginFormInner() {
 
   const [authMethod, setAuthMethod] = useState<"magic_link" | "email_otp">("magic_link");
   const [name, setName] = useState("");
-  const [email, setEmail] = useState(() => emailParam || "golfer@performanceedge.com");
+  const [email, setEmail] = useState(() => emailParam || "member@lornettedaye.com");
   const [inviteCode, setInviteCode] = useState(() => codeParam);
   const [adminCode, setAdminCode] = useState(() => (codeParam && ["LD-ADMIN-2026", "ADMIN2026", "LORNETTE-ADMIN", "COACH2026"].includes(codeParam) ? codeParam : ""));
   const [otpCode, setOtpCode] = useState("");
@@ -92,7 +92,7 @@ function LoginFormInner() {
         return;
       }
       setActiveAthleteId(ADMIN_ATHLETE.id);
-      setSuccessMessage("Admin code verified. Access granted to Performance Edge Golf workspace.");
+      setSuccessMessage("Admin code verified. Access granted to your private workspace.");
       setTimeout(() => {
         router.push(destination);
       }, 500);
@@ -154,9 +154,10 @@ function LoginFormInner() {
 
       await createParticipantSessionAction(name.trim());
       setSuccessMessage(res.message);
+      document.cookie = `ld_participant_access=${encodeURIComponent(name.trim())}; path=/; max-age=2592000; SameSite=Lax`;
       setTimeout(() => {
-        router.push(destination);
-      }, 600);
+        window.location.assign(destination);
+      }, 300);
       return;
     }
 
@@ -227,7 +228,7 @@ function LoginFormInner() {
       {/* Top Subtle Header */}
       <header className="flex items-center justify-between px-6 py-5 border-b border-[#ebdcc9]/60">
         <Link
-          href="/foundations/golf"
+          href="/foundations/select"
           className="flex items-center gap-3 group focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--gold-dark)]"
         >
           <div className="relative flex h-9 sm:h-11 w-12 sm:w-14 items-center justify-center rounded-sm overflow-hidden shrink-0">
@@ -246,16 +247,16 @@ function LoginFormInner() {
               Lornette’s Foundation
             </p>
             <p className="font-serif text-sm font-semibold tracking-tight text-[#1e1b18]">
-              Golf · My Performance Edge
+              Private Member Portal
             </p>
           </div>
         </Link>
 
         <Link
-          href="/foundations/golf"
+          href="/foundations/select"
           className="text-xs font-semibold uppercase tracking-[0.16em] text-[#7a6e60] hover:text-[#1e1b18] transition-colors"
         >
-          Return to Program Overview
+          ← Choose Track
         </Link>
       </header>
 
@@ -270,16 +271,16 @@ function LoginFormInner() {
             </div>
             <h1 className="mt-4 font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-[#1e1b18]">
               {mode === "signin"
-                ? "Welcome, Golfer"
+                ? "Welcome to Your Workspace"
                 : mode === "register"
-                ? "Athlete Registration"
+                ? "Participant Registration"
                 : "Coach & Admin Access"}
             </h1>
             <p className="mt-2 text-sm text-[#6d6255] font-sans">
               {mode === "signin"
                 ? "Enter your participant credentials to open your private workspace."
                 : mode === "register"
-                ? "Enter your details and club invitation code to register your workspace."
+                ? "Enter your details and invitation code to register your workspace."
                 : "Enter your official admin access code to manage or preview the Foundations dashboard."}
             </p>
 
@@ -554,7 +555,7 @@ function LoginFormInner() {
                         </div>
                       ) : (
                         <p className="mt-1 text-[11px] text-[#8e7e6e]">
-                          Provided by your PGA coach, club director, or site admin.
+                          Provided by your coach, director, or site administrator.
                         </p>
                       )}
                     </div>
@@ -614,10 +615,10 @@ function LoginFormInner() {
           {/* Coach Signature Note */}
           <div className="mt-8 text-center text-xs text-[#7a6f62]">
             <p className="italic font-serif text-sm text-[#4d4337]">
-              “A stronger you creates a stronger game.”
+              “A stronger you creates a stronger performance.”
             </p>
             <p className="mt-1 font-sans text-[11px] uppercase tracking-[0.18em] text-[#8e7e6e]">
-              Coach Lornette Daye · 40+ Years Olympic Coach
+              Lornette Daye · Olympic-Level Coach &amp; Founder
             </p>
           </div>
         </div>
@@ -696,7 +697,7 @@ function LoginFormInner() {
 
       {/* Footer */}
       <footer className="py-6 border-t border-[#ebdcc9]/60 text-center text-xs text-[#8e7e6e]">
-        <p>Lornette’s Foundation Golf · Powered by the Performance Edge Framework</p>
+        <p>Lornette’s Foundation · Private Member Workspace</p>
       </footer>
     </div>
   );

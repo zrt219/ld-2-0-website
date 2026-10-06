@@ -2,6 +2,11 @@ import { CTAButton } from "@/components/CTAButton";
 import { PageShell } from "@/components/PageShell";
 import { SectionHeader } from "@/components/SectionHeader";
 import { SpeakerKitDownload } from "@/components/SpeakerKitDownload";
+import {
+  MotionFadeIn,
+  MotionStaggerContainer,
+  MotionStaggerItem,
+} from "@/components/motion";
 import { createMetadata, servicePages, speakerKitDownloads, siteCopy } from "@/content/site";
 
 export const metadata = createMetadata(
@@ -15,20 +20,22 @@ export default function SpeakerKitPage() {
     <PageShell>
       <main className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
-          <SectionHeader
-            eyebrow="Speaker Kit"
-            title="Everything You Need to Introduce Lornette."
-            body={siteCopy.descriptor}
-            headingLevel="h1"
-          />
-          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <MotionFadeIn>
+            <SectionHeader
+              eyebrow="Speaker Kit"
+              title="Everything You Need to Introduce Lornette."
+              body={siteCopy.descriptor}
+              headingLevel="h1"
+            />
+          </MotionFadeIn>
+          <MotionStaggerContainer className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {speakerKitDownloads.map((item) => (
-              <div id={item.id} key={item.title}>
+              <MotionStaggerItem key={item.title}>
                 <SpeakerKitDownload title={item.cardTitle ?? item.title} href={item.href} />
-              </div>
+              </MotionStaggerItem>
             ))}
-          </div>
-          <div className="mt-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          </MotionStaggerContainer>
+          <MotionFadeIn delay={0.15} className="mt-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
             <section className="border border-[var(--line)] bg-white p-7">
               <h2 className="font-serif text-3xl text-[var(--ink)]">Speaker Topics</h2>
               <ul className="mt-5 grid gap-3">
@@ -47,11 +54,11 @@ export default function SpeakerKitPage() {
                 One Sheet Site
               </a>
             </div>
-          </div>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          </MotionFadeIn>
+          <MotionFadeIn delay={0.2} className="mt-10 flex flex-col gap-3 sm:flex-row">
             <CTAButton href="/book">Inquire About Availability</CTAButton>
             <CTAButton href="/media" variant="secondary">Watch Speaker Reel</CTAButton>
-          </div>
+          </MotionFadeIn>
         </div>
       </main>
     </PageShell>

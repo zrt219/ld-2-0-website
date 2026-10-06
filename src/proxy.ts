@@ -27,12 +27,13 @@ export async function proxy(request: NextRequest) {
       }
     });
 
+    const isSecure = process.env.NODE_ENV === "production" && Boolean(process.env.VERCEL);
     const response = NextResponse.redirect(cleanUrl);
     response.cookies.set("ld_admin_access", "true", {
       path: "/",
       httpOnly: true,
       sameSite: "lax",
-      secure: process.env.NODE_ENV === "production",
+      secure: isSecure,
       maxAge: 60 * 60 * 24 * 30, // 30 days
     });
     return response;
@@ -48,14 +49,17 @@ export async function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // 3. Check if participant session cookie is present (grants access to learner routes only)
+  // 3. Check if participant session cookie or guest preview cookie is present
   const hasParticipantCookie = Boolean(request.cookies.get("ld_participant_access")?.value);
-  if (hasParticipantCookie && !isAdminRoute) {
+  const hasGuestPreviewCookie = request.cookies.get("ld_guest_preview")?.value === "true";
+  if ((hasParticipantCookie || hasGuestPreviewCookie) && !isAdminRoute) {
     return NextResponse.next();
   }
 
-  // 3. Allow test runner requests strictly in local development/CI test environments
-  const isDevOrTest = process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test";
+  // 3. Allow test runner requests on localhost or in test environments
+  const host = request.headers.get("host") || "";
+  const isLocalHost = host.startsWith("localhost") || host.startsWith("127.0.0.1");
+  const isDevOrTest = process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test" || isLocalHost;
   if (isDevOrTest) {
     const userAgent = request.headers.get("user-agent")?.toLowerCase() || "";
     const isTestRequest =

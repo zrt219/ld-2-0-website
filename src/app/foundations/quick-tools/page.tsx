@@ -14,8 +14,13 @@ import {
   Target,
   Wind,
 } from "lucide-react";
+import { useFoundationsStore } from "@/lib/foundations/store";
 
 export default function QuickToolsPage() {
+  const { state } = useFoundationsStore();
+  const activeTrack = state.activeTrack || "golf";
+  const isEurope = state.activeRegion === "europe";
+
   const [activeTab, setActiveTab] = useState<"reset" | "routine" | "pressure" | "cue">("reset");
 
   const handlePrint = () => {
@@ -24,6 +29,33 @@ export default function QuickToolsPage() {
     }
   };
 
+  const fieldRefEyebrow =
+    activeTrack === "hockey"
+      ? isEurope
+        ? "EUROPEAN LEAGUE BENCH & ON-ICE REFERENCE"
+        : "ON-ICE PERFORMANCE BENCH REFERENCE"
+      : activeTrack === "corporate"
+      ? isEurope
+        ? "EUROPEAN BOARDROOM & EXECUTIVE REFERENCE"
+        : "EXECUTIVE PERFORMANCE FIELD REFERENCE"
+      : isEurope
+      ? "EUROPEAN CHAMPIONSHIP FIELD REFERENCE"
+      : "ON-COURSE PERFORMANCE FIELD REFERENCE";
+
+  const fieldRefHeadline =
+    activeTrack === "hockey"
+      ? "Quick Hockey Composure Tools"
+      : activeTrack === "corporate"
+      ? "Quick Executive Composure Tools"
+      : "Quick Golf Field Tools";
+
+  const fieldRefDesc =
+    activeTrack === "hockey"
+      ? "Fast-access composure protocols designed for immediate bench and shift application under competition intensity."
+      : activeTrack === "corporate"
+      ? "Fast-access mental frameworks designed for immediate boardroom and high-stakes negotiation pressure."
+      : "Fast-access mental performance protocols designed for immediate on-course application under competition pressure.";
+
   return (
     <LearnerShell>
       <div className="p-4 sm:p-6 lg:p-8 max-w-5xl mx-auto space-y-6 print:p-0 print:max-w-none">
@@ -31,13 +63,13 @@ export default function QuickToolsPage() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-[#ebdcc9] pb-4 print:border-black">
           <div>
             <p className="font-sans text-[11px] font-bold uppercase tracking-[0.24em] text-[#8e7e6e] print:text-black">
-              On-Course Performance Field Reference
+              {fieldRefEyebrow}
             </p>
             <h1 className="font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-[#1e1b18] print:text-black">
-              Quick Golf Field Tools
+              {fieldRefHeadline}
             </h1>
             <p className="text-xs sm:text-sm text-[#706456] mt-1 print:text-black">
-              Fast-access mental performance protocols designed for immediate on-course application under competition pressure.
+              {fieldRefDesc}
             </p>
           </div>
 

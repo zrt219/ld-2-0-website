@@ -4,6 +4,7 @@
   --ivory: #faf7f0;
   --white: #ffffff;
   --champagne: #c6a55c;
+  --gold: #c6a55c;
   --gold-dark: #7f5b1d;
   --ink: #171412;
   --charcoal: #2a2520;
@@ -98,3 +99,54 @@ summary:focus-visible {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* Accessibility Enhancement Tokens & Modes */
+html[data-a11y-text="large"] {
+  font-size: 112%;
+}
+
+html[data-a11y-text="xlarge"] {
+  font-size: 125%;
+}
+
+html[data-a11y-contrast="high"] {
+  --ink: #000000;
+  --charcoal: #0a0a0a;
+  --line: #2b251f;
+  --foreground: #000000;
+}
+
+html[data-a11y-contrast="high"] p,
+html[data-a11y-contrast="high"] span,
+html[data-a11y-contrast="high"] li,
+html[data-a11y-contrast="high"] dd,
+html[data-a11y-contrast="high"] dt,
+html[data-a11y-contrast="high"] h1,
+html[data-a11y-contrast="high"] h2,
+html[data-a11y-contrast="high"] h3,
+html[data-a11y-contrast="high"] h4 {
+  font-weight: 500;
+  color: #000000 !important;
+}
+
+html[data-a11y-spacing="relaxed"] p,
+html[data-a11y-spacing="relaxed"] li,
+html[data-a11y-spacing="relaxed"] dd,
+html[data-a11y-spacing="relaxed"] span {
+  line-height: 1.85 !important;
+  letter-spacing: 0.02em !important;
+}
+

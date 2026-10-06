@@ -76,12 +76,12 @@ export default function NotFound() {
             </p>
           </div>
 
-          {/* Coach Lornette Quote Plaque */}
+          {/* Lornette Daye Quote Plaque */}
           <div className="mx-auto mt-10 max-w-3xl overflow-hidden rounded-2xl border border-[rgba(198,165,92,0.35)] bg-[rgba(23,20,18,0.94)] p-6 shadow-2xl backdrop-blur-md sm:p-8">
             <div className="flex flex-col items-center text-center">
               <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--champagne)]">
                 <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
-                <span>Coach Lornette Daye · Signature Principle</span>
+                <span>Lornette Daye · Signature Principle</span>
               </div>
               <blockquote className="mt-3 font-serif text-xl italic text-[var(--ivory)] sm:text-2xl">
                 &ldquo;Your previous shot cannot hit your next shot.&rdquo;
