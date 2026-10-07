@@ -213,11 +213,11 @@ export const TRACK_REGISTRY: Record<TrackId, TrackConfig> = {
       "Anchor your team with authoritative calm, disciplined execution, and high-trust accountability.",
     heroDescription:
       "Translate Olympic championship pedagogy into boardroom poise, calm sales floor consultation, and sustainable executive energy.",
-    heroImage: "/foundations/Calm leadership in the executive workshop-3.png",
+    heroImage: "/foundations/pathways/corporate/lornette-corporate-keynote-stage.png",
     heroImageAlt: "Executive leadership workshop led by Olympic-level coach Lornette Daye in warm light",
     quoteEyebrow: "EXECUTIVE PEDAGOGY · LORNETTE DAYE",
     quote: "“Calm leadership creates confident teams.”",
-    bottomImage: "/foundations/Refined leadership workshop in warm light-10.png",
+    bottomImage: "/foundations/pathways/corporate/lornette-corporate-boardroom-portrait.png",
     quickActionLabels: {
       journeyDesc: "Review leadership milestones, quarterly goals, and team impact.",
       lessonsDesc: "10 Foundations for emotional regulation, focus, and strategic trust.",
