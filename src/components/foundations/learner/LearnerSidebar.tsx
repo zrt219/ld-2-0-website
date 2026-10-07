@@ -52,7 +52,7 @@ const SCENIC_SLIDES_HOCKEY: ScenicSlide[] = [
     title: "Coach Lornette Daye with Team during On-Ice Practice",
   },
   {
-    src: "/foundations/pathways/hockey/lornette-hockey-huddle-portrait.png",
+    src: "/foundations/pathways/hockey/lornette-hockey-ice-portrait.png",
     theme: "Bench Composure",
     title: "High-Speed Shift Resilience & Focus Protocol",
   },
@@ -60,12 +60,12 @@ const SCENIC_SLIDES_HOCKEY: ScenicSlide[] = [
 
 const SCENIC_SLIDES_CORPORATE: ScenicSlide[] = [
   {
-    src: "/foundations/pathways/corporate/lornette-corporate-keynote.png",
+    src: "/foundations/pathways/corporate/lornette-corporate-keynote-stage.png",
     theme: "Executive Presence",
     title: "Coach Lornette Daye Executive Keynote",
   },
   {
-    src: "/foundations/pathways/corporate/lornette-corporate-boardroom.png",
+    src: "/foundations/pathways/corporate/lornette-corporate-boardroom-portrait.png",
     theme: "Leadership Focus",
     title: "Boardroom Strategic Composure & Decisive Action",
   },

@@ -142,7 +142,7 @@ export default function FoundationsLessonsPage() {
     activeTrack === "hockey"
       ? "/foundations/pathways/hockey/lornette-hockey-huddle-landscape.png"
       : activeTrack === "corporate"
-      ? "/foundations/pathways/corporate/lornette-corporate-keynote.png"
+      ? "/foundations/pathways/corporate/lornette-corporate-keynote-stage.png"
       : "/foundations/golf/lornette-golf-simulator-studio-tablet.png";
 
   const welcomeHeadline =
