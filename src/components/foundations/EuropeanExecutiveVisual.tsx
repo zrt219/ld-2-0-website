@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import { RobustImage } from "@/components/ui/RobustImage";
 
 interface VisualPerspective {
   id: "session" | "envoy";
@@ -52,8 +52,13 @@ export function EuropeanExecutiveVisual() {
               isCurrent ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
-            <Image
+            <RobustImage
               src={p.image}
+              fallbackSrcs={[
+                "/foundations/pathways/europe/lornette-europe-summit-hero.jpg",
+                "/foundations/pathways/europe-pathway.jpg",
+                "/foundations/select-stock/europe.jpg",
+              ]}
               alt={p.alt}
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"

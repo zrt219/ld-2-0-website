@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { MapPin, CheckCircle2 } from "lucide-react";
+import { RobustImage } from "@/components/ui/RobustImage";
 
 interface RegionalCard {
   id: string;
@@ -81,8 +81,13 @@ export function RegionalEcosystemGrid() {
           >
             {/* Card Image with Docked Luxury Editorial Plaque */}
             <div className="relative aspect-[16/10] sm:aspect-[4/3] w-full overflow-hidden bg-[#120f0d]">
-              <Image
+              <RobustImage
                 src={card.image}
+                fallbackSrcs={[
+                  "/foundations/pathways/europe/lornette-europe-summit-hero.jpg",
+                  "/foundations/pathways/europe-pathway.jpg",
+                  "/foundations/select-stock/europe.jpg",
+                ]}
                 alt={card.title}
                 fill
                 sizes="(max-width: 1024px) 100vw, 33vw"

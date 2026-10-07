@@ -9,6 +9,7 @@ import { FoundationsAccessibilityDock } from "@/components/foundations/Foundatio
 import { FoundationsFloatingAction } from "@/components/foundations/FoundationsFloatingAction";
 import { FoundationsSubNav } from "@/components/foundations/FoundationsSubNav";
 import { RegionalEcosystemGrid } from "@/components/foundations/RegionalEcosystemGrid";
+import { RobustImage } from "@/components/ui/RobustImage";
 import {
   MotionFadeIn,
   MotionScaleIn,
@@ -220,8 +221,13 @@ export default function FoundationsEuropePage() {
 
               <MotionScaleIn className="relative lg:col-span-5" delay={0.15}>
                 <div className="relative w-full aspect-[4/5] overflow-hidden border border-[rgba(198,165,92,0.42)] bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)] shadow-[0_28px_110px_rgba(23,20,18,0.14)]">
-                  <Image
+                  <RobustImage
                     src="/foundations/europe/lornette-europe-conference-hero.jpg"
+                    fallbackSrcs={[
+                      "/foundations/pathways/europe/lornette-europe-summit-hero.jpg",
+                      "/foundations/pathways/europe-pathway.jpg",
+                      "/foundations/select-stock/europe.jpg",
+                    ]}
                     alt="Olympic-level coach Lornette Daye presenting to European sports directors and academy delegates"
                     fill
                     priority
@@ -301,8 +307,13 @@ export default function FoundationsEuropePage() {
                   className="group flex flex-col overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#dfc385] hover:shadow-[0_24px_60px_rgba(23,20,18,0.14)]"
                 >
                   <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#120f0d]">
-                    <Image
+                    <RobustImage
                       src={tier.image}
+                      fallbackSrcs={[
+                        "/foundations/pathways/europe/lornette-europe-summit-hero.jpg",
+                        "/foundations/pathways/europe-pathway.jpg",
+                        "/foundations/select-stock/europe.jpg",
+                      ]}
                       alt={tier.title}
                       fill
                       sizes="(max-width: 1024px) 100vw, 33vw"
@@ -465,8 +476,13 @@ export default function FoundationsEuropePage() {
                   className="group flex flex-col overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#dfc385] hover:shadow-[0_24px_60px_rgba(23,20,18,0.14)]"
                 >
                   <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#120f0d]">
-                    <Image
+                    <RobustImage
                       src={card.image}
+                      fallbackSrcs={[
+                        "/foundations/pathways/europe/lornette-europe-summit-hero.jpg",
+                        "/foundations/pathways/europe-pathway.jpg",
+                        "/foundations/select-stock/europe.jpg",
+                      ]}
                       alt={card.title}
                       fill
                       sizes="(max-width: 1024px) 100vw, 33vw"

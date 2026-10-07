@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import { RobustImage } from "@/components/ui/RobustImage";
 
 interface RegionalSlide {
   id: string;
@@ -110,8 +110,13 @@ export function EuropeanBannerSlideshow() {
                 isActive ? "opacity-100 z-10" : "opacity-0 z-0"
               }`}
             >
-              <Image
+              <RobustImage
                 src={slide.image}
+                fallbackSrcs={[
+                  "/foundations/banners/european-pathway-banner.jpg",
+                  "/foundations/banners/scenic-alpine-training.jpg",
+                  "/foundations/select-stock/europe.jpg",
+                ]}
                 alt={slide.alt}
                 fill
                 priority={idx === 0}
