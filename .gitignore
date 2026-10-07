@@ -64,3 +64,4 @@ cookies.txt
 nul
 tests/screenshots/
 tests/audit-report.json
+.env*.local
