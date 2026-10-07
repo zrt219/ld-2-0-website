@@ -246,6 +246,13 @@ Execute the numbered Performance Edge build plan one prompt at a time.
    - All visual assets, galleries, environment carousels, and feature showcases MUST reference high-resolution master media files (minimum 1600+ pixels wide for landscape banners/galleries).
    - **Never** use low-resolution thumbnails (e.g. 320x180 px or compressed scratch previews) as public page hero or gallery images.
    - When generating or sourcing gallery items, always link to canonical master assets (`public/foundations/...`) and convert uncompressed RGBA/PNG plates at high quality (quality 95+) to prevent compression artifacts or blurriness.
+
+6. **Canonical Brand Pluralization & Hub Hero Subtitle Invariant ("Lornette’s Foundations")**:
+   - **Strictly Plural Brand Name**: The official platform and umbrella brand is strictly plural: **"Lornette’s Foundations"** (never singular *"Lornette’s Foundation"* or *"Lornette's Foundation"*).
+   - **Universal Scope**: This pluralization applies universally across all discipline pathways (*Lornette’s Foundations Golf*, *Lornette’s Foundations Hockey*, *Lornette’s Foundations Corporate*, *Lornette’s Foundations Europe*), navigation elements, metadata titles, checkout items, and UI badges.
+   - **Foundations Hub Hero Subtitle Lock**: On the primary Foundations hub hero (`/foundations`), the canonical subtitle is strictly **"The 10 Foundations Built by Lornette"** (never *"The 10 Athletic Foundations"*).
+   - **Eyebrow Badge Preservation**: The top eyebrow badge on `/foundations` remains **"THE COMPLETE ATHLETE DEVELOPMENT SYSTEM"**.
+   - **Program-Specific Curriculum Independence**: Sub-pathway curriculum descriptions (e.g. Golf 10-week curriculum modules) retain their established curriculum phrasing without forced blanket substitution.
 <!-- END:brand-voice-and-copy-invariants -->
 
 <!-- BEGIN:canonical-pathway-assets-lock -->
