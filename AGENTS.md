@@ -448,3 +448,26 @@ The primary navigation dropdowns—specifically the Foundations Signature Pathwa
    - Never assume git commit equals live production.
    - Probe target URLs on https://lornettedaye.com/... via HTTP HEAD/GET and confirm HTTP 200 OK before confirming completion to the user.
 <!-- END:multi-tier-image-fallback-invariants -->
+
+<!-- BEGIN:framer-motion-ssr-viewport-invariants -->
+# Framer Motion SSR & React 19 Viewport Margin Invariants
+
+1. **Zero Negative Viewport Margin Invariant**:
+   - Never use negative viewport margins (such as `margin: "-30px"` or `margin: "-40px"`) in Framer Motion `whileInView` configurations (`MotionFadeIn`, `MotionStaggerContainer`, or standalone `motion.div`).
+   - Negative margins create SSR scroll-traps where elements remain locked at `opacity: 0`.
+   - Always use positive margins (`margin: "50px"`) and `amount: "some"` so elements reveal reliably upon entering or resting within the visible viewport.
+<!-- END:framer-motion-ssr-viewport-invariants -->
+
+<!-- BEGIN:foundations-europe-layout-lock -->
+# Lornette Daye Foundations Europe Page Layout Lock
+
+1. **Canonical Collaboration Pathways Deck**:
+   - The primary feature cards section on `/foundations/europe` must strictly present the 3 Collaboration Pathways:
+     1. **Applied Performance Science & Biomechanics** (`BIOMECHANICS & TESTING`)
+        - Asset: `/foundations/europe/europe-biomechanics-lab.jpg` (`objectPosition: "center 30%"`)
+     2. **Sports Technology & Innovation Networks** (`INNOVATION NETWORKS`)
+        - Asset: `/foundations/europe/europe-innovation-expo.jpg` (`objectPosition: "center 25%"`)
+     3. **Strategic Delegations & Club Alignment** (`CLUB PARTNERSHIPS`)
+        - Asset: `/foundations/europe/europe-strategic-delegations.jpg` (`objectPosition: "center 30%"`)
+   - Do not reintroduce redundant duplicate 3-card sections (`summitDialogueCards` or `RegionalEcosystemGrid`) on `/foundations/europe`.
+<!-- END:foundations-europe-layout-lock -->
