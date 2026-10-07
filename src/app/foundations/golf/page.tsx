@@ -853,12 +853,12 @@ export default function FoundationsGolfPage() {
               </div>
               <div className="relative aspect-[16/9] lg:aspect-auto lg:col-span-6 min-h-[340px] order-1 lg:order-2 overflow-hidden border-b lg:border-b-0 lg:border-l border-[rgba(198,165,92,0.3)]">
                 <Image
-                  src="/foundations/golf/golfpracticerange.jpg"
-                  alt="Championship golf course practice green at sunset with practice balls, alignment tools, and expansive fairway"
+                  src="/foundations/golf/golflandscape.jpg"
+                  alt="Championship golf course fairway and green at golden sunset with scenic mountain backdrop"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
-                  style={{ objectPosition: "center 60%" }}
+                  style={{ objectPosition: "center 50%" }}
                 />
                 <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/20" />
                 <div className="absolute inset-x-0 bottom-0 border-t border-[rgba(198,165,92,0.4)] bg-[rgba(18,15,13,0.85)] p-4 sm:p-5 backdrop-blur-md shadow-2xl">
