@@ -280,15 +280,6 @@ export function FoundationsEnvironmentGallery() {
                     </blockquote>
                   </div>
 
-                  {/* Practical Takeaway Application */}
-                  <div className="mt-6">
-                    <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[var(--ink)]">
-                      Practical Application
-                    </p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-[#5e5346]">
-                      {activeItem.application}
-                    </p>
-                  </div>
                 </div>
 
                 {/* Bottom Actions */}
