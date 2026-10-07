@@ -152,10 +152,10 @@ Execute the numbered Performance Edge build plan one prompt at a time.
 <!-- END:visual-framing-and-editorial-plaque-rules -->
 
 <!-- BEGIN:foundations-10-week-canonical-invariants -->
-# Lornette's Foundation — Golf 10-Week Canonical Invariants
+# Lornette’s Foundations — Golf 10-Week Canonical Invariants
 
 1. **Strict 10-Week / 10-Foundation Architecture**:
-   - The canonical Golf program is **Lornette's Foundation — Golf: 10-Week Guided Athlete Development Program**.
+   - The canonical Golf program is **Lornette’s Foundations — Golf: 10-Week Guided Athlete Development Program**.
    - Curriculum consists of exactly **10 Athletic Foundations**:
      1. Identity Beyond Sport
      2. Champion Mindset
@@ -198,7 +198,7 @@ Execute the numbered Performance Edge build plan one prompt at a time.
 # Learner Portal & Course Player Visual System Lock
 
 1. **Brand Hierarchy & Naming Invariant**:
-   - Canonical program brand: **Lornette’s Foundation — Golf**.
+   - Canonical program brand: **Lornette’s Foundations — Golf**.
    - Subordinate methodology line: **Powered by the Performance Edge Framework**.
    - Private golfer workspace: **My Performance Edge** / **Welcome to My Performance Edge**.
    - Prohibited program heading: `The Performance Edge — Golf`.
@@ -359,9 +359,9 @@ Execute the numbered Performance Edge build plan one prompt at a time.
 <!-- END:foundations-admin-and-portal-auth-invariants -->
 
 <!-- BEGIN:lornettes-foundation-product-backlog -->
-# Lornette's Foundation Canonical Product Roadmap & Backlog
+# Lornette’s Foundations Canonical Product Roadmap & Backlog
 
-For Lornette's Foundation roadmap questions, read:
+For Lornette’s Foundations roadmap questions, read:
 `LORNETTES_FOUNDATION/README.md`
 and the relevant workstream README:
 

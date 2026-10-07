@@ -725,7 +725,7 @@ export function useFoundationsStore() {
   const exportGdprDataArchive = () => {
     const exportPayload = {
       compliance: "EU General Data Protection Regulation (GDPR) Article 15 & 20",
-      program: "Lornette’s Foundation Guided Development Program",
+      program: "Lornette’s Foundations Guided Development Program",
       exportedAt: new Date().toISOString(),
       athleteProfile: {
         id: activeAthlete.id,
@@ -764,7 +764,7 @@ export function useFoundationsStore() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `lornettes-foundation-gdpr-data-export-${activeAthlete.id}.json`;
+    a.download = `lornettes-foundations-gdpr-data-export-${activeAthlete.id}.json`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

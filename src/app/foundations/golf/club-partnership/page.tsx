@@ -15,7 +15,7 @@ import { PageShell } from "@/components/PageShell";
 import { createMetadata } from "@/content/site";
 
 export const metadata = createMetadata(
-  "Golf Club Partnership | Lornette’s Foundation",
+  "Golf Club Partnership | Lornette’s Foundations",
   "Institutional mental performance partnerships for private golf clubs, country clubs, and junior academies led by Olympic-level coach Lornette Daye.",
   "/foundations/golf/club-partnership",
 );
@@ -164,7 +164,7 @@ export default function GolfClubPartnershipPage() {
                 </p>
 
                 <p className="mt-5 text-base leading-8 text-[#554b40] sm:text-lg">
-                  Partner with Lornette Daye to bring Lornette’s Foundation Golf experience to your club. We help private clubs and golf organizations elevate the mental game, build resilient members, and create a more engaged, connected, and high-performing community, both on and off the course.
+                  Partner with Lornette Daye to bring Lornette’s Foundations Golf experience to your club. We help private clubs and golf organizations elevate the mental game, build resilient members, and create a more engaged, connected, and high-performing community, both on and off the course.
                 </p>
 
                 {/* Lornette Signature Quote Callout */}
@@ -455,7 +455,7 @@ export default function GolfClubPartnershipPage() {
                   Seamless Integration for General Managers &amp; Directors of Golf
                 </h3>
                 <p className="mt-4 text-base leading-relaxed text-[#5e5346]">
-                  Lornette’s Foundation brings institutional prestige and tangible member retention value. Designed to harmonize with your club’s PGA professionals rather than replace technical instruction, partnerships enhance member satisfaction, junior development, and inter-club competitive standing.
+                  Lornette’s Foundations brings institutional prestige and tangible member retention value. Designed to harmonize with your club’s PGA professionals rather than replace technical instruction, partnerships enhance member satisfaction, junior development, and inter-club competitive standing.
                 </p>
                 <div className="mt-6">
                   <CTAButton href="/book">

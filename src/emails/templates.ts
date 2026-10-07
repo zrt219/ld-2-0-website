@@ -3,7 +3,7 @@ export const emailTemplates = {
   registrationReceived: (name: string) => `
     <h1>Registration Received</h1>
     <p>Hi ${name},</p>
-    <p>We have received your registration for Lornette's Foundation Golf Program.</p>
+    <p>We have received your registration for Lornette’s Foundations Golf Program.</p>
     <p>We will be in touch shortly.</p>
   `,
   accountActivation: (name: string, link: string) => `

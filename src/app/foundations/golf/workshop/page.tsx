@@ -70,7 +70,7 @@ export default function GolfWorkshopPage() {
               <div className="lg:col-span-7">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="border border-[rgba(198,165,92,0.48)] bg-white/70 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)] shadow-sm">
-                    Lornette’s Foundation Golf
+                    Lornette’s Foundations Golf
                   </span>
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#7d7164]">
                     Hands-on Clinic

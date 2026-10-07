@@ -13,11 +13,11 @@ import {
 import { GolfRegistrationForm } from "@/components/foundations/GolfRegistrationForm";
 
 export const metadata: Metadata = {
-  title: "Register for Golf Program | Lornette’s Foundation Golf",
+  title: "Register for Golf Program | Lornette’s Foundations Golf",
   description:
     "Register for the 10-Week Guided Athlete Development Program with Olympian coach Lornette Daye. Build elite mental resilience, focus, and purposeful performance.",
   openGraph: {
-    title: "Register for Golf Program | Lornette’s Foundation Golf",
+    title: "Register for Golf Program | Lornette’s Foundations Golf",
     description:
       "Join the next 10-Week Guided Athlete Development Cohort with Lornette Daye. A Stronger Mind. A Calmer You. A Better Game.",
     images: [
@@ -111,7 +111,7 @@ export default function GolfRegisterPage() {
             <div className="lg:col-span-6 space-y-8">
               <div className="space-y-3">
                 <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-[var(--champagne-dark)]">
-                  Lornette’s Foundation Golf
+                  Lornette’s Foundations Golf
                 </p>
                 <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-neutral-950 leading-[1.12]">
                   Join the 10-Week Guided Program
@@ -120,7 +120,7 @@ export default function GolfRegisterPage() {
                   A Stronger Mind. A Calmer You. A Better Game.
                 </p>
                 <p className="text-sm sm:text-base text-neutral-600 leading-relaxed pt-2">
-                  Lornette’s Foundation Golf, powered by the Performance Edge Framework, is a transformational experience designed for individuals, teams, and organizations who are ready to play with greater focus, confidence, and purpose. Choose your path below to register for the next cohort or inquire about bringing the program to your club or organization.
+                  Lornette’s Foundations Golf, powered by the Performance Edge Framework, is a transformational experience designed for individuals, teams, and organizations who are ready to play with greater focus, confidence, and purpose. Choose your path below to register for the next cohort or inquire about bringing the program to your club or organization.
                 </p>
               </div>
 

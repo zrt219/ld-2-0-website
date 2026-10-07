@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
     params.append("customer_email", email);
     params.append("payment_method_types[0]", "card");
     params.append("line_items[0][price_data][currency]", "cad");
-    params.append("line_items[0][price_data][product_data][name]", "Lornette’s Foundation: Golf 10-Week Guided Cohort");
+    params.append("line_items[0][price_data][product_data][name]", "Lornette’s Foundations: Golf 10-Week Guided Cohort");
     params.append("line_items[0][price_data][product_data][description]", "Full 10-week guided athlete development program, weekly Lornette sessions, and Performance Edge plan review.");
     params.append("line_items[0][price_data][unit_amount]", "149900");
     params.append("line_items[0][quantity]", "1");

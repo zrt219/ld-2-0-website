@@ -17,7 +17,7 @@ import {
 import { createMetadata } from "@/content/site";
 
 export const metadata = createMetadata(
-  "Lornette’s Foundation Corporate | Executive Mental Performance & Team Composure",
+  "Lornette’s Foundations Corporate | Executive Mental Performance & Team Composure",
   "High-performance executive composure, team accountability, and pressure management for corporate organizations, leadership teams, and premium automotive dealerships.",
   "/foundations/corporate",
 );
@@ -166,7 +166,7 @@ export default function FoundationsCorporatePage() {
               <MotionFadeIn className="lg:col-span-7">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="border border-[rgba(198,165,92,0.48)] bg-white/70 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)] shadow-sm">
-                    LORNETTE’S FOUNDATION | CORPORATE &amp; RETAIL LEADERSHIP
+                    LORNETTE’S FOUNDATIONS | CORPORATE &amp; RETAIL LEADERSHIP
                   </span>
                 </div>
 
@@ -265,7 +265,7 @@ export default function FoundationsCorporatePage() {
                 Automotive dealerships operate in a constant performance environment. Sales teams carry monthly targets. Service teams manage urgency, expectations, and trust. Finance teams guide customers through major decisions. Leaders hold the standard across the entire ownership experience.
               </p>
               <p className="mt-3 text-base sm:text-lg leading-relaxed text-[#554b40]">
-                Lornette’s Foundation Corporate helps dealership teams build the composure, communication, accountability, and reset skills needed to perform with consistency when the pressure rises.
+                Lornette’s Foundations Corporate helps dealership teams build the composure, communication, accountability, and reset skills needed to perform with consistency when the pressure rises.
               </p>
             </MotionFadeIn>
 

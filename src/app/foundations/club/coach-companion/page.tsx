@@ -271,7 +271,7 @@ export default function CoachCompanionPage() {
 
         {/* Footer */}
         <footer className="pt-4 border-t border-[#ebdcc9] text-center text-xs text-[#8e7e6e]">
-          <p>Lornette’s Foundation Golf · INTERNAL-06 PGA Club Delivery Companion</p>
+          <p>Lornette’s Foundations Golf · INTERNAL-06 PGA Club Delivery Companion</p>
           <p className="mt-0.5">Confidential Staff Instruction Material · For Authorized Club Coaches Only</p>
         </footer>
       </main>

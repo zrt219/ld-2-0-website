@@ -244,7 +244,7 @@ function LoginFormInner() {
           </div>
           <div>
             <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#8e7e6e]">
-              Lornette’s Foundation
+              Lornette’s Foundations
             </p>
             <p className="font-serif text-sm font-semibold tracking-tight text-[#1e1b18]">
               Private Member Portal
@@ -697,7 +697,7 @@ function LoginFormInner() {
 
       {/* Footer */}
       <footer className="py-6 border-t border-[#ebdcc9]/60 text-center text-xs text-[#8e7e6e]">
-        <p>Lornette’s Foundation · Private Member Workspace</p>
+        <p>Lornette’s Foundations · Private Member Workspace</p>
       </footer>
     </div>
   );

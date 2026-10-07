@@ -22,10 +22,10 @@ export function LearnerHeader({ onOpenMobileMenu }: LearnerHeaderProps) {
 
   const brandHeading =
     activeTrack === "hockey"
-      ? "Lornette’s Foundation Hockey"
+      ? "Lornette’s Foundations Hockey"
       : activeTrack === "corporate"
-      ? "Lornette’s Foundation Leadership"
-      : "Lornette’s Foundation Golf";
+      ? "Lornette’s Foundations Leadership"
+      : "Lornette’s Foundations Golf";
 
   const brandSub =
     activeTrack === "hockey"

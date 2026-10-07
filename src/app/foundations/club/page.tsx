@@ -321,7 +321,7 @@ export default function FoundationsClubDashboardPage() {
               </span>
             </div>
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8e7e6e]">
-              Lornette’s Foundation Golf Cohort Analytics
+              Lornette’s Foundations Golf Cohort Analytics
             </p>
           </div>
         </div>

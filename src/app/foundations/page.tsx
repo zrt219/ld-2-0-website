@@ -35,7 +35,7 @@ import {
 import { createMetadata } from "@/content/site";
 
 export const metadata = createMetadata(
-  "Lornette’s Foundation | Athlete Development",
+  "Lornette’s Foundations | Athlete Development",
   "A whole-athlete development program from former national sprint champion and Olympian Lornette Daye, helping athletes build performance, resilience, confidence and preparation for sport and life.",
   "/foundations",
 );
@@ -115,7 +115,7 @@ export default function FoundationsPage() {
   const athleteServiceJsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: "Lornette’s Foundation Athlete Development Program",
+    name: "Lornette’s Foundations Athlete Development Program",
     provider: {
       "@type": "Person",
       name: "Lornette Daye",
@@ -152,15 +152,15 @@ export default function FoundationsPage() {
               </MotionFadeIn>
               <MotionFadeIn delay={0.15}>
                 <h1 className="mt-6 font-serif text-[2.75rem] leading-[0.98] text-balance text-[var(--ink)] sm:text-6xl lg:text-[4.3rem] xl:text-[4.75rem]">
-                  Lornette’s Foundation
+                  Lornette’s Foundations
                 </h1>
                 <p className="mt-5 font-serif text-2xl leading-snug text-[var(--gold-dark)] sm:text-3xl">
-                  The 10 Athletic Foundations
+                  The 10 Foundations Built by Lornette
                 </p>
               </MotionFadeIn>
               <MotionFadeIn delay={0.25}>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-[#554b40] sm:text-lg">
-                  Most athletes train physical mechanics. Elite competitors train what governs them under pressure. Lornette’s Foundation builds composure, discipline, identity, leadership, and grounded execution through practical 10-week pathway experiences.
+                  Most athletes train physical mechanics. Elite competitors train what governs them under pressure. Lornette’s Foundations builds composure, discipline, identity, leadership, and grounded execution through practical 10-week pathway experiences.
                 </p>
               </MotionFadeIn>
 
@@ -397,7 +397,7 @@ export default function FoundationsPage() {
               Your athletes are physically ready. Give them the mental game that matches their talent, and discover what they&apos;re truly capable of achieving.
             </p>
             <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
-              <MotionShimmerButton href="/foundations/golf">EXPLORE LORNETTE’S FOUNDATION</MotionShimmerButton>
+              <MotionShimmerButton href="/foundations/golf">EXPLORE LORNETTE’S FOUNDATIONS</MotionShimmerButton>
               <CTAButton
                 href="/book"
                 variant="secondary"

@@ -36,7 +36,7 @@ import {
 import { createMetadata } from "@/content/site";
 
 export const metadata = createMetadata(
-  "Lornette’s Foundation Golf | 10-Week Guided Program & Club Partnerships",
+  "Lornette’s Foundations Golf | 10-Week Guided Program & Club Partnerships",
   "The comprehensive mental performance pathway for competitive golfers and private clubs led by Olympic-level coach Lornette Daye. Powered by the Performance Edge Framework.",
   "/foundations/golf",
 );
@@ -393,7 +393,7 @@ const deliveryFormats = [
   },
   {
     title: "10-Week Guided Program",
-    subtitle: "Lornette’s Foundation Golf 10-Week Guided Program",
+    subtitle: "Lornette’s Foundations Golf 10-Week Guided Program",
     time: "10 Weeks Structured",
     href: "#program",
     icon: Compass,
@@ -402,7 +402,7 @@ const deliveryFormats = [
   },
   {
     title: "Club Partnership",
-    subtitle: "Lornette’s Foundation Golf Club Partnership",
+    subtitle: "Lornette’s Foundations Golf Club Partnership",
     time: "Seasonal / Annual",
     href: "#club-partnership",
     icon: Building2,
@@ -459,7 +459,7 @@ export default function FoundationsGolfPage() {
               <MotionFadeIn className="lg:col-span-7">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="border border-[rgba(198,165,92,0.48)] bg-white/70 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)] shadow-sm">
-                    LORNETTE’S FOUNDATION | GOLF PERFORMANCE
+                    LORNETTE’S FOUNDATIONS | GOLF PERFORMANCE
                   </span>
                 </div>
 
@@ -468,7 +468,7 @@ export default function FoundationsGolfPage() {
                 </h1>
 
                 <p className="mt-4 font-serif text-2xl text-[var(--gold-dark)] sm:text-3xl">
-                  Lornette’s Foundation Golf
+                  Lornette’s Foundations Golf
                 </p>
 
                 <p className="mt-6 text-base leading-8 text-[#4f4438] sm:text-lg">
@@ -1117,7 +1117,7 @@ export default function FoundationsGolfPage() {
                 Next Cohort Application
               </span>
               <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--ink)]">
-                Register for Lornette’s Foundation Golf
+                Register for Lornette’s Foundations Golf
               </h2>
               <p className="mt-4 text-base leading-8 text-[#5b5043]">
                 Submit your golfer application for the upcoming 10-week guided athlete development cohort. Lornette Daye reviews all registrations to ensure cohort quality and personalized competitive feedback.

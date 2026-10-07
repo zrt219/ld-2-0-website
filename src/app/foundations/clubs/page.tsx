@@ -15,7 +15,7 @@ import { FoundationsSubNav } from "@/components/foundations/FoundationsSubNav";
 import { createMetadata } from "@/content/site";
 
 export const metadata = createMetadata(
-  "Lornette’s Foundation For Clubs & Teams",
+  "Lornette’s Foundations For Clubs & Teams",
   "Partner with Lornette Daye to deliver athlete-development keynotes, member clinics, guided cohorts, and institutional athletic partnerships.",
   "/foundations/clubs",
 );
@@ -86,7 +86,7 @@ const engagementFormats = [
     timeframe: "Multi-Session Seasonal",
     focus: "Comprehensive Whole-Athlete Curriculum",
     description:
-      "A seasonal partnership embedding Lornette’s Foundation curriculum into your academy or team’s ongoing training calendar.",
+      "A seasonal partnership embedding Lornette’s Foundations curriculum into your academy or team’s ongoing training calendar.",
   },
   {
     format: "Club / Federation Partnership",
@@ -120,7 +120,7 @@ export default function FoundationsClubsPage() {
               <div className="lg:col-span-7">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="border border-[rgba(198,165,92,0.48)] bg-white/70 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)] shadow-sm">
-                    Lornette’s Foundation
+                    Lornette’s Foundations
                   </span>
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#7d7164]">
                     Institutional Partnerships
@@ -128,7 +128,7 @@ export default function FoundationsClubsPage() {
                 </div>
 
                 <h1 className="mt-6 font-serif text-4xl leading-[1.02] text-balance text-[var(--ink)] sm:text-6xl lg:text-[3.8rem]">
-                  Lornette’s Foundation for Clubs &amp; Teams
+                  Lornette’s Foundations for Clubs &amp; Teams
                 </h1>
 
                 <p className="mt-5 font-serif text-2xl text-[var(--gold-dark)] sm:text-3xl">

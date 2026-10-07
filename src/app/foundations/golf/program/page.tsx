@@ -9,7 +9,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { createMetadata } from "@/content/site";
 
 export const metadata = createMetadata(
-  "Lornette’s Foundation Golf | 10-Week Guided Program",
+  "Lornette’s Foundations Golf | 10-Week Guided Program",
   "The flagship 10-week guided athlete development program for competitive golfers, elite juniors, and club players led by Olympic-level coach Lornette Daye. Powered by the Performance Edge Framework.",
   "/foundations/golf/program",
 );
@@ -155,7 +155,7 @@ export default function GolfProgramPage() {
               <div className="lg:col-span-7">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="border border-[rgba(198,165,92,0.48)] bg-white/70 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)] shadow-sm">
-                    Lornette’s Foundation Golf
+                    Lornette’s Foundations Golf
                   </span>
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#7d7164]">
                     10-Week Guided Program
@@ -163,7 +163,7 @@ export default function GolfProgramPage() {
                 </div>
 
                 <h1 className="mt-6 font-serif text-4xl leading-[1.04] text-balance text-[var(--ink)] sm:text-6xl">
-                  Lornette’s Foundation Golf: 10-Week Guided Program
+                  Lornette’s Foundations Golf: 10-Week Guided Program
                 </h1>
 
                 <p className="mt-4 text-sm font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)]">
@@ -418,7 +418,7 @@ export default function GolfProgramPage() {
                   For Clubs &amp; Academies
                 </p>
                 <h3 className="mt-2 font-serif text-2xl text-[var(--ink)]">
-                  Interested in Bringing Lornette’s Foundation to Your Entire Golf Club?
+                  Interested in Bringing Lornette’s Foundations to Your Entire Golf Club?
                 </h3>
                 <p className="mt-1 text-sm text-[#675d50]">
                   Explore full club partnerships with custom cohort scheduling and coach integration.

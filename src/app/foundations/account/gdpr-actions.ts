@@ -87,7 +87,7 @@ export async function requestErasureAction() {
     return {
       success: true,
       message:
-        "Your GDPR Article 17 erasure request has been submitted to the Lornette’s Foundation compliance office. All private reflections and identifying telemetry will be purged in accordance with statutory privacy obligations.",
+        "Your GDPR Article 17 erasure request has been submitted to the Lornette’s Foundations compliance office. All private reflections and identifying telemetry will be purged in accordance with statutory privacy obligations.",
     };
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : "Failed to record erasure request";

@@ -8,7 +8,7 @@ import { createMetadata } from "@/content/site";
 
 export const metadata = createMetadata(
   "The Performance Edge Framework | Athlete Methodology",
-  "The practical performance methodology inside Lornette’s Foundation, equipping athletes with repeatable tools for focus, routine, pressure, and mistake recovery.",
+  "The practical performance methodology inside Lornette’s Foundations, equipping athletes with repeatable tools for focus, routine, pressure, and mistake recovery.",
   "/foundations/performance-edge",
 );
 
@@ -109,7 +109,7 @@ export default function FoundationsPerformanceEdgePage() {
               <div className="lg:col-span-7">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="border border-[rgba(198,165,92,0.48)] bg-white/70 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)] shadow-sm">
-                    Lornette’s Foundation
+                    Lornette’s Foundations
                   </span>
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#7d7164]">
                     Athlete Methodology
@@ -121,7 +121,7 @@ export default function FoundationsPerformanceEdgePage() {
                 </h1>
 
                 <p className="mt-5 font-serif text-2xl text-[var(--gold-dark)] sm:text-3xl">
-                  The practical performance methodology inside Lornette’s Foundation.
+                  The practical performance methodology inside Lornette’s Foundations.
                 </p>
 
                 <p className="mt-6 text-base leading-8 text-[#554b40] sm:text-lg">

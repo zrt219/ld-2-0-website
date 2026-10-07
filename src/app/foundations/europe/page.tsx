@@ -20,7 +20,7 @@ import {
 import { createMetadata } from "@/content/site";
 
 export const metadata = createMetadata(
-  "Lornette’s Foundation Europe | European Sport Excellence & Partnerships",
+  "Lornette’s Foundations Europe | European Sport Excellence & Partnerships",
   "A partnership pathway for international sport clubs, regional federations, and European sport ecosystems seeking practical mental performance, leadership, and athlete development programming.",
   "/foundations/europe",
 );
@@ -151,7 +151,7 @@ export default function FoundationsEuropePage() {
               <MotionFadeIn className="lg:col-span-7">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="border border-[rgba(198,165,92,0.48)] bg-white/70 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)] shadow-sm">
-                    LORNETTE’S FOUNDATION | EUROPEAN PARTNERSHIPS
+                    LORNETTE’S FOUNDATIONS | EUROPEAN PARTNERSHIPS
                   </span>
                 </div>
 

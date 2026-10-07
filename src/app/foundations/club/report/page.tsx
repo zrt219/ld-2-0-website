@@ -140,7 +140,7 @@ function ClubExecutiveReportInner() {
                 {cohort.title}
               </h1>
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#8a6828] print:text-black">
-                Lornette’s Foundation Golf · Cohort {cohort.code}
+                Lornette’s Foundations Golf · Cohort {cohort.code}
               </p>
             </div>
 
@@ -288,7 +288,7 @@ function ClubExecutiveReportInner() {
             <span>Participant Privacy & Governance Assurance</span>
           </div>
           <p className="text-xs text-[#5c5042] leading-relaxed print:text-black">
-            In accordance with Lornette’s Foundation athlete governance invariants, all participant reflections, personal vulnerabilities, trigger analyses, and Coach Lornette review notes remain strictly private between each individual athlete and Coach Lornette Daye. Club staff and Board members have visibility into operational completion and aggregate participation only.
+            In accordance with Lornette’s Foundations athlete governance invariants, all participant reflections, personal vulnerabilities, trigger analyses, and Coach Lornette review notes remain strictly private between each individual athlete and Coach Lornette Daye. Club staff and Board members have visibility into operational completion and aggregate participation only.
           </p>
           {isSmallCohort && (
             <p className="text-[11px] font-semibold text-[#8a6828] italic print:text-black">

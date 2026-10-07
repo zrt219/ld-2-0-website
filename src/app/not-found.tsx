@@ -31,7 +31,7 @@ const pathways = [
     icon: BookOpen,
   },
   {
-    title: "Lornette's Foundation: Golf",
+    title: "Lornette’s Foundations: Golf",
     tagline: "Athlete Development Program",
     description:
       "10-Week Guided Athlete Development Program powered by the Performance Edge Framework for competitive players.",

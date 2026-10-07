@@ -172,7 +172,7 @@ export default function FoundationsSelectPage() {
             </div>
             <div>
               <p className="font-serif text-lg font-bold text-[var(--ink)] leading-tight group-hover:text-[var(--gold-dark)] transition-colors">
-                Lornette’s Foundation
+                Lornette’s Foundations
               </p>
               <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[var(--gold-dark)]">
                 Universal Performance Gateway

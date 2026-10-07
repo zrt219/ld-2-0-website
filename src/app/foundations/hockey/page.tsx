@@ -16,7 +16,7 @@ import {
 import { createMetadata } from "@/content/site";
 
 export const metadata = createMetadata(
-  "Lornette’s Foundation Hockey | High-Performance Team Composure",
+  "Lornette’s Foundations Hockey | High-Performance Team Composure",
   "Mental performance, composure under contact, and championship resilience for competitive hockey players, academies, and teams.",
   "/foundations/hockey",
 );
@@ -211,7 +211,7 @@ export default function FoundationsHockeyPage() {
               <MotionFadeIn className="lg:col-span-7">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="border border-[rgba(198,165,92,0.48)] bg-white/70 px-3.5 py-1.5 text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)] shadow-sm">
-                    LORNETTE’S FOUNDATION | HOCKEY PERFORMANCE
+                    LORNETTE’S FOUNDATIONS | HOCKEY PERFORMANCE
                   </span>
                 </div>
 
@@ -220,7 +220,7 @@ export default function FoundationsHockeyPage() {
                 </h1>
 
                 <p className="mt-5 font-serif text-2xl text-[var(--gold-dark)] sm:text-3xl">
-                  Lornette’s Foundation Hockey
+                  Lornette’s Foundations Hockey
                 </p>
 
                 <p className="mt-6 text-base leading-8 text-[#554b40] sm:text-lg">
@@ -438,7 +438,7 @@ export default function FoundationsHockeyPage() {
                       Championship composure is not an accident that happens during the third period; it is built into the weekly cadence of video analysis, whiteboard strategy, and bench resets.
                     </p>
                     <p className="mt-3 text-base leading-relaxed text-[#554b40]">
-                      Lornette’s Foundation Hockey equips players and coaches with shared vocabulary and emotional reset protocols so every shift is approached with focus, trust, and deliberate intent.
+                      Lornette’s Foundations Hockey equips players and coaches with shared vocabulary and emotional reset protocols so every shift is approached with focus, trust, and deliberate intent.
                     </p>
 
                     <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -653,7 +653,7 @@ export default function FoundationsHockeyPage() {
           </div>
           <MotionFadeIn className="relative z-10 max-w-3xl mx-auto text-white">
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--champagne)]">
-              LORNETTE’S FOUNDATION HOCKEY
+              LORNETTE’S FOUNDATIONS HOCKEY
             </p>
             <h2 className="mt-3 font-serif text-3xl sm:text-5xl text-white">
               Take the Next Step.
