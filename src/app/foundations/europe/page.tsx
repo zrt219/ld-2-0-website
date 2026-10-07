@@ -8,7 +8,6 @@ import { EuropeanExecutiveVisual } from "@/components/foundations/EuropeanExecut
 import { FoundationsAccessibilityDock } from "@/components/foundations/FoundationsAccessibilityDock";
 import { FoundationsFloatingAction } from "@/components/foundations/FoundationsFloatingAction";
 import { FoundationsSubNav } from "@/components/foundations/FoundationsSubNav";
-import { RegionalEcosystemGrid } from "@/components/foundations/RegionalEcosystemGrid";
 import { RobustImage } from "@/components/ui/RobustImage";
 import {
   MotionFadeIn,
@@ -63,7 +62,7 @@ const collaborationTiers = [
   {
     title: "Applied Performance Science & Biomechanics",
     image: "/foundations/europe/europe-biomechanics-lab.jpg",
-    objectPosition: "center 40%",
+    objectPosition: "center 30%",
     description:
       "High-precision motion capture analysis, instrumented sensor track testing, and physiological feedback protocols tailored for European youth and elite academies.",
     tag: "Biomechanics & Testing",
@@ -76,7 +75,7 @@ const collaborationTiers = [
   {
     title: "Sports Technology & Innovation Networks",
     image: "/foundations/europe/europe-innovation-expo.jpg",
-    objectPosition: "center 40%",
+    objectPosition: "center 25%",
     description:
       "Collaborative exploration of sports engineering, equipment innovation, digital performance tracking, and pan-European athletic technology partnerships.",
     tag: "Innovation Networks",
@@ -89,7 +88,7 @@ const collaborationTiers = [
   {
     title: "Strategic Delegations & Club Alignment",
     image: "/foundations/europe/europe-strategic-delegations.jpg",
-    objectPosition: "center 45%",
+    objectPosition: "center 30%",
     description:
       "Morning bilateral briefings and strategic planning sessions structured for sports directors, federation officials, and academy leaders across Europe.",
     tag: "Club Partnerships",
@@ -101,50 +100,7 @@ const collaborationTiers = [
   },
 ];
 
-const summitDialogueCards = [
-  {
-    title: "Applied Sports Science Briefings",
-    eyebrow: "PERFORMANCE SCIENCE & DATA",
-    image: "/foundations/europe/europe-sports-science-briefing.jpg",
-    objectPosition: "center 30%",
-    tag: "Science Briefings",
-    description:
-      "Interactive presentations translating Olympic-level mental conditioning, biometric analysis, and movement science into practical coaching toolkits.",
-    highlights: [
-      "Movement Analysis & Sensor Tracking",
-      "Composure Under Championship Pressure",
-      "Data-Informed Coach Pedagogy",
-    ],
-  },
-  {
-    title: "Bilateral Executive Roundtables",
-    eyebrow: "EXECUTIVE ROUNDTABLES",
-    image: "/foundations/europe/europe-roundtable-dialogue.jpg",
-    objectPosition: "center 35%",
-    tag: "Strategic Alignment",
-    description:
-      "Facilitated peer-level dialogues addressing athletic culture, dual-career pathways, youth retention, and sustainable club leadership models.",
-    highlights: [
-      "Club Leadership & Team Alignment",
-      "Youth Transition & Retention Frameworks",
-      "Psychological Safety in High Stakes",
-    ],
-  },
-  {
-    title: "Transatlantic Ecosystem Exchange",
-    eyebrow: "PAN-EUROPEAN NETWORKING",
-    image: "/foundations/europe/europe-summit-networking.jpg",
-    objectPosition: "center 28%",
-    tag: "Diplomatic Exchange",
-    description:
-      "Cross-border gatherings connecting North American athletic excellence with European sport systems, academies, and regional federations.",
-    highlights: [
-      "Transatlantic Knowledge Exchange",
-      "Federation & Academy Alliances",
-      "Cross-Border Athlete Development",
-    ],
-  },
-];
+
 
 const partnershipAreas = [
   {
@@ -454,108 +410,7 @@ export default function FoundationsEuropePage() {
           </div>
         </section>
 
-        {/* Section: Transatlantic Summit & Collaborative Dialogue (3-Card Feature Grid) */}
-        <section className="border-t border-[var(--line)] bg-[var(--sand)]/20 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto max-w-7xl">
-            <MotionFadeIn className="text-center max-w-3xl mx-auto">
-              <p className="text-xs font-bold uppercase tracking-[0.26em] text-[var(--gold-dark)]">
-                TRANSATLANTIC DIALOGUE &amp; SUMMITS
-              </p>
-              <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-[var(--ink)]">
-                European Sports Leadership in Action
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-[#675d50]">
-                Collaborative roundtables, performance science briefings, and high-level athletic diplomacy across European host venues.
-              </p>
-            </MotionFadeIn>
 
-            <MotionStaggerContainer className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {summitDialogueCards.map((card) => (
-                <MotionStaggerItem
-                  key={card.title}
-                  className="group flex flex-col overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#dfc385] hover:shadow-[0_24px_60px_rgba(23,20,18,0.14)]"
-                >
-                  <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#120f0d]">
-                    <RobustImage
-                      src={card.image}
-                      fallbackSrcs={[
-                        "/foundations/pathways/europe/lornette-europe-summit-hero.jpg",
-                        "/foundations/pathways/europe-pathway.jpg",
-                        "/foundations/select-stock/europe.jpg",
-                      ]}
-                      alt={card.title}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 33vw"
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                      style={{ objectPosition: card.objectPosition }}
-                    />
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-80 group-hover:opacity-70 transition-opacity" />
-                    <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
-
-                    <div className="absolute inset-x-0 bottom-0 border-t border-[rgba(198,165,92,0.4)] bg-[rgba(18,15,13,0.86)] p-4 backdrop-blur-md shadow-2xl">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[var(--champagne)]">
-                        {card.eyebrow}
-                      </p>
-                      <p className="mt-1 font-serif text-base text-white leading-snug">
-                        {card.title}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-1 flex-col justify-between p-6 bg-[linear-gradient(180deg,#fffdfa_0%,#faf6ee_100%)]">
-                    <div>
-                      <div className="flex items-center gap-1.5 text-xs font-semibold text-[var(--gold-dark)] mb-2.5">
-                        <span className="inline-block h-1.5 w-1.5 rounded-full bg-[var(--gold-dark)]" />
-                        <span>{card.tag}</span>
-                      </div>
-                      <p className="text-sm leading-relaxed text-[#554b40]">
-                        {card.description}
-                      </p>
-                    </div>
-
-                    <div className="mt-5 border-t border-[rgba(198,165,92,0.22)] pt-4">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#7d7164] mb-2.5">
-                        Key Deliverables
-                      </p>
-                      <ul className="space-y-1.5">
-                        {card.highlights.map((item) => (
-                          <li key={item} className="flex items-start gap-2 text-xs text-[#5e5346]">
-                            <CheckCircle2 size={13} className="text-[var(--gold-dark)] shrink-0 mt-0.5" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </MotionStaggerItem>
-              ))}
-            </MotionStaggerContainer>
-          </div>
-        </section>
-
-        {/* Section 3: European Context & Regional Ecosystems (3-Pillar Tabbed Clusters) */}
-        <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto max-w-7xl">
-            <MotionFadeIn className="text-center max-w-3xl mx-auto">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-[var(--gold-dark)]">
-                EUROPEAN CONTEXT
-              </p>
-              <h2 className="mt-3 font-serif text-3xl sm:text-4xl text-[var(--ink)]">
-                Regional Ecosystems &amp; Collaborative Dialogue
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-[#554b40]">
-                Current areas of interest for dialogue and exploration across the continent. These represent potential partnership contexts, not confirmed partnerships.
-              </p>
-            </MotionFadeIn>
-
-            {/* 3 Regional Ecosystem Focus Cards */}
-            <RegionalEcosystemGrid />
-
-            <p className="mt-8 text-center text-xs text-[#7d7164] italic">
-              * Exploratory dialogue initiatives structured for athletic clubs, youth academies, and regional sports networks.
-            </p>
-          </div>
-        </section>
 
         {/* Panoramic Ecosystem Closing Slideshow */}
         <EuropeanBannerSlideshow />

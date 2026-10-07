@@ -37,7 +37,7 @@ export function MotionStaggerContainer({
   staggerDelay = 0.08,
   delayChildren = 0.05,
   className = "",
-  viewportMargin = "-40px",
+  viewportMargin = "50px",
   id,
 }: MotionStaggerContainerProps) {
   const reduce = useReducedMotion();
@@ -52,7 +52,7 @@ export function MotionStaggerContainer({
       variants={containerVariants(staggerDelay, delayChildren)}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: viewportMargin }}
+      viewport={{ once: true, margin: viewportMargin, amount: "some" }}
       className={className}
     >
       {children}

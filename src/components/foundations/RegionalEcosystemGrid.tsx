@@ -74,7 +74,7 @@ export function RegionalEcosystemGrid() {
             key={card.id}
             initial={reduce ? { opacity: 1 } : { opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-30px" }}
+            viewport={{ once: true, margin: "50px", amount: "some" }}
             transition={{ duration: 0.5, delay: idx * 0.12, ease: [0.22, 1, 0.36, 1] }}
             whileHover={reduce ? undefined : { y: -6, transition: { duration: 0.25 } }}
             className="group flex flex-col overflow-hidden border border-[rgba(198,165,92,0.36)] bg-white shadow-[0_16px_50px_rgba(23,20,18,0.06)] transition-all duration-300 hover:border-[#dfc385] hover:shadow-[0_24px_60px_rgba(23,20,18,0.14)]"

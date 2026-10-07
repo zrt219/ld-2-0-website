@@ -19,7 +19,7 @@ export function MotionFadeIn({
   duration = 0.55,
   yOffset = 24,
   className = "",
-  viewportMargin = "-30px",
+  viewportMargin = "50px",
   id,
 }: MotionFadeInProps) {
   const reduce = useReducedMotion();
@@ -33,7 +33,7 @@ export function MotionFadeIn({
       id={id}
       initial={{ opacity: 0, y: yOffset }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: viewportMargin }}
+      viewport={{ once: true, margin: viewportMargin, amount: "some" }}
       transition={{ duration, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
     >
