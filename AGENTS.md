@@ -435,3 +435,16 @@ The primary navigation dropdowns—specifically the Foundations Signature Pathwa
    - Closing banner gradient overlays must follow calibrated opacity (`bg-gradient-to-t from-black/85 via-black/55 to-black/75`) so architectural and surface illumination shines through while maintaining WCAG AAA text legibility.
 <!-- END:css-grid-aspect-ratio-invariants -->
 
+
+<!-- BEGIN:multi-tier-image-fallback-invariants -->
+# Multi-Tier Image Fallback & Zero-Broken-Image Invariants
+
+1. **Mandatory 2-3 Fallback Progression**:
+   - For all major hero, pathway, track, and card visual components, never rely solely on a single unshielded image path.
+   - Use <RobustImage> with allbackSrcs containing 2 to 3 pre-verified production assets (e.g., Track Master -> Canonical Pathway -> Universal Stock Fallback).
+   - If an asset fails to load or returns non-200, the UI must automatically cascade to the next fallback without displaying broken image place-boxes or layout shifts.
+
+2. **Production Asset Verification Before Declaration**:
+   - Never assume git commit equals live production.
+   - Probe target URLs on https://lornettedaye.com/... via HTTP HEAD/GET and confirm HTTP 200 OK before confirming completion to the user.
+<!-- END:multi-tier-image-fallback-invariants -->
