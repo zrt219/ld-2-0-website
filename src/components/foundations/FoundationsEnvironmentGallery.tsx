@@ -30,9 +30,9 @@ export const galleryEnvironments: GalleryEnvironment[] = [
       "Preparation is where composure is forged. Championship execution begins long before entering the competition arena.",
     application:
       "Daily training cadences that turn erratic effort into structured, repeatable athletic habits.",
-    imageSrc: "/foundations/lornette-foundations-curved-track-athletes.png",
+    imageSrc: "/foundations/football-film-room-strategy-session.jpg",
     imageAlt:
-      "Lornette Daye standing in sunlit high-performance training atrium with athletes",
+      "Coach and football players analyzing game tape and strategy on large screen in film room",
     objectPosition: "center center",
   },
   {
@@ -45,10 +45,10 @@ export const galleryEnvironments: GalleryEnvironment[] = [
       "Your internal focus must remain as clear as the lane in front of you. When you master your attention, external pressure dissolves.",
     application:
       "Deploying the Attention Dial tool to narrow mental focus onto immediate execution cues.",
-    imageSrc: "/foundations/lornette-foundations-track-gold.png",
+    imageSrc: "/foundations/track-sprinter-starting-blocks.jpg",
     imageAlt:
-      "Lornette Daye in white tailored suit standing in architectural concentric track pavilion",
-    objectPosition: "center center",
+      "Focused sprinter in starting blocks on running track at golden sunset",
+    objectPosition: "center 40%",
   },
   {
     id: "stadium-sunset",
@@ -60,9 +60,9 @@ export const galleryEnvironments: GalleryEnvironment[] = [
       "The stadium lights will test your composure. When the noise rises, your breath and somatic routines keep you centered.",
     application:
       "Physiological reset protocols to regulate nervous tension during critical competition moments.",
-    imageSrc: "/foundations/lornette-foundations-stadium-sunrise.png",
+    imageSrc: "/foundations/golfer-fairway-course-focus.jpg",
     imageAlt:
-      "Lornette Daye leaning against stadium railing overlooking championship track at golden sunset",
+      "Golfer holding club assessing the fairway and green through trees with poise and focus",
     objectPosition: "center center",
   },
   {
@@ -72,12 +72,12 @@ export const galleryEnvironments: GalleryEnvironment[] = [
     pillar: "Identity Beyond Sport",
     pillarNumber: "01",
     quote:
-      "Who you are before the sun comes up defines who you are when the trophy is presented. Ground your identity first.",
+      "'Athlete' is only one part of the story. We are students, parents, professionals, and builders with complex needs and endless potential.",
     application:
       "Separating personal self-worth from athletic scoreboards to cultivate unshakeable confidence.",
-    imageSrc: "/foundations/lornette-foundations-stadium-dawn.png",
+    imageSrc: "/foundations/student-lecture-exam-focus.jpg",
     imageAlt:
-      "Lornette Daye standing on stadium field under golden morning sunrise",
+      "Dedicated university student writing an exam in a lecture hall with calm concentration",
     objectPosition: "center center",
   },
   {
@@ -132,9 +132,9 @@ export function FoundationsEnvironmentGallery() {
         </div>
 
         {/* Interactive Gallery Stage & Info Card */}
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Main Visual Stage (7 cols on lg) */}
-          <div className="lg:col-span-7 flex flex-col justify-between">
+          <div className="lg:col-span-7 flex flex-col">
             <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full overflow-hidden rounded-[2px] border border-[rgba(198,165,92,0.45)] bg-[#120f0d] shadow-[0_20px_50px_rgba(23,20,18,0.12)]">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -166,11 +166,8 @@ export function FoundationsEnvironmentGallery() {
               <div className="absolute inset-x-0 bottom-0 border-t border-[rgba(198,165,92,0.4)] bg-[rgba(18,15,13,0.85)] p-4 sm:p-5 backdrop-blur-md shadow-2xl">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.22em] text-[var(--champagne)]">
-                      {activeItem.subtitle}
-                    </p>
-                    <p className="mt-0.5 font-serif text-base sm:text-xl text-white leading-snug">
-                      {activeItem.title}
+                    <p className="font-serif text-base sm:text-xl text-white leading-snug">
+                      {activeItem.pillar}
                     </p>
                   </div>
                   <div className="shrink-0 flex items-center gap-1.5">
@@ -234,7 +231,7 @@ export function FoundationsEnvironmentGallery() {
           </div>
 
           {/* Docked Editorial Info Card (5 cols on lg) */}
-          <div className="lg:col-span-5 flex flex-col justify-between rounded-[2px] border border-[rgba(198,165,92,0.38)] bg-white p-6 sm:p-8 shadow-[0_16px_40px_rgba(30,24,15,0.08)]">
+          <div className="lg:col-span-5 rounded-[2px] border border-[rgba(198,165,92,0.38)] bg-white p-6 sm:p-8 shadow-[0_16px_40px_rgba(30,24,15,0.08)]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem.id}
@@ -242,7 +239,7 @@ export function FoundationsEnvironmentGallery() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="flex flex-col justify-between h-full"
+                className="flex flex-col"
               >
                 <div>
                   {/* Pillar Counter Header */}
@@ -260,18 +257,15 @@ export function FoundationsEnvironmentGallery() {
                     </span>
                   </div>
 
-                  {/* Title & Core Pillar */}
-                  <div className="mt-5">
-                    <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#857665]">
+                  {/* Foundation Header */}
+                  <div className="mt-4 sm:mt-5">
+                    <h3 className="font-serif text-2xl sm:text-3xl text-[var(--ink)] leading-snug">
                       {activeItem.pillar}
-                    </p>
-                    <h3 className="mt-1.5 font-serif text-2xl sm:text-3xl text-[var(--ink)] leading-snug">
-                      {activeItem.title}
                     </h3>
                   </div>
 
                   {/* Lornette Daye Quote */}
-                  <div className="mt-6 border-l-2 border-[var(--gold-dark)] bg-[#fcfaf5] p-4.5 rounded-r-[2px]">
+                  <div className="mt-5 border-l-2 border-[var(--gold-dark)] bg-[#fcfaf5] p-4 sm:p-4.5 rounded-r-[2px]">
                     <p className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--gold-dark)] mb-1">
                       Lornette Daye
                     </p>
@@ -283,7 +277,7 @@ export function FoundationsEnvironmentGallery() {
                 </div>
 
                 {/* Bottom Actions */}
-                <div className="mt-8 pt-6 border-t border-[var(--line)] flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <div className="mt-5 pt-4 sm:pt-5 border-t border-[var(--line)] flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <Link
                     href="#pathways"
                     className="inline-flex items-center justify-center gap-2 rounded-[2px] bg-[var(--gold-dark)] px-5 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-sm transition hover:bg-[#8e7232]"
