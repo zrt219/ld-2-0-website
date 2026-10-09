@@ -90,9 +90,9 @@ export const galleryEnvironments: GalleryEnvironment[] = [
       "Between preparation and the podium lies the tunnel. Breathe, step forward with intention, and trust your training.",
     application:
       "The 5-Second Reset routine to release previous mistakes and focus 100% on the immediate next action.",
-    imageSrc: "/foundations/lornette-foundations-stadium-tunnel.png",
+    imageSrc: "/foundations/athlete-setback-crutches-field.jpg",
     imageAlt:
-      "Lornette Daye striding forward through illuminated modern architectural arena tunnel",
+      "Injured athlete standing on crutches looking out over sports field at golden sunset",
     objectPosition: "center center",
   },
 ];
