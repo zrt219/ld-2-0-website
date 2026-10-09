@@ -51,8 +51,8 @@ export const foundationsPathways: FoundationsPathway[] = [
     ctaText: "Explore Europe",
     href: "/foundations/europe",
     imageSrc: "/foundations/pathways/europe-pathway.jpg",
-    imageAlt: "Lornette Daye at European sports summit with international flags",
-    objectPosition: "center 15%",
+    imageAlt: "Sunlit luxury European lounge with international flags overlooking historic cathedral waterfront",
+    objectPosition: "center 25%",
   },
 ];
 

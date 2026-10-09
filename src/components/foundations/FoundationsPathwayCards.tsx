@@ -58,8 +58,8 @@ export const pathwayCardItems: PathwayCardItem[] = [
     href: "/foundations/europe",
     ctaText: "Explore Europe",
     imageSrc: "/foundations/pathways/europe-pathway.jpg",
-    imageAlt: "Lornette Daye speaking at European summit with international flags",
-    objectPosition: "center 15%",
+    imageAlt: "Sunlit luxury European lounge with international flags overlooking historic cathedral waterfront",
+    objectPosition: "center 25%",
     description: "International athletic development, multi-nation partnerships, and European federations.",
   },
 ];
