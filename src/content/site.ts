@@ -26,7 +26,7 @@ import womensBook from "../../images/womensbook.jpg";
 import toastmastersLogo from "../../images/Toastmasters_2011.png";
 import rotaryLogo from "../../images/Rotary-Club-of-St-Albert--1-.jpeg";
 import flightPoster from "../../images/image.png";
-import executivePortrait from "../../images/lornette-umattr-reception-portrait.jpg";
+import executivePortrait from "../../images/lornette-black-suit-reception-portrait.jpg";
 import speakingDeskPortrait from "../../images/lornette-speaking-desk-portrait.jpg";
 
 export const siteUrl = "https://lornettedaye.com";
@@ -242,7 +242,7 @@ export const images = {
   },
   executivePortrait: {
     src: executivePortrait,
-    alt: "Lornette Daye in an executive white suit with gold trim in front of the UMattr gold logo wall.",
+    alt: "Lornette Daye smiling in an executive black suit in front of the UMattr gold logo wall.",
     crop: "object-top",
     frameTone: "warm-ivory" as const,
     showBottomFade: true,
