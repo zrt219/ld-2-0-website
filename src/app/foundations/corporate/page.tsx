@@ -60,8 +60,8 @@ const dealershipCards = [
     title: "Sales Floor Composure",
     eyebrow: "SALES & CLIENT CONSULTATION",
     icon: Target,
-    image: "/foundations/corporate/lornette-executive-boardroom-dialogue.jpg",
-    objectPosition: "center 20%",
+    image: "/foundations/corporate/dealership-sales-floor-composure.jpg",
+    objectPosition: "center 30%",
     description:
       "Help sales teams stay calm, clear, and customer-centred during objections, negotiations, monthly volume targets, and high-stakes buying decisions.",
     highlights: [
@@ -74,7 +74,7 @@ const dealershipCards = [
     title: "Service Lane Confidence",
     eyebrow: "FIXED OPERATIONS & SERVICE DRIVE",
     icon: Wrench,
-    image: "/foundations/corporate/lornette-executive-presentation-screen.jpg",
+    image: "/foundations/corporate/dealership-service-lane-confidence.jpg",
     objectPosition: "center 20%",
     description:
       "Support service advisors and technicians with reset tools, communication habits, and emotional control during urgent or difficult customer moments.",
@@ -88,8 +88,8 @@ const dealershipCards = [
     title: "Premium Customer Experience",
     eyebrow: "OWNERSHIP JOURNEY & CSI EXCELLENCE",
     icon: Sparkles,
-    image: "/foundations/corporate/lornette-executive-one-on-one-consultation.jpg",
-    objectPosition: "center 20%",
+    image: "/foundations/corporate/dealership-customer-experience-handover.jpg",
+    objectPosition: "center 25%",
     description:
       "Train teams to create trust, consistency, and care across the full ownership journey, from first conversation to long-term service relationships.",
     highlights: [
@@ -102,8 +102,8 @@ const dealershipCards = [
     title: "Leadership & Culture",
     eyebrow: "MANAGEMENT & GENERAL MANAGERS",
     icon: Award,
-    image: "/foundations/corporate/lornette-executive-leadership-standing-portrait.jpg",
-    objectPosition: "center 15%",
+    image: "/foundations/corporate/dealership-leadership-huddle.jpg",
+    objectPosition: "center 20%",
     description:
       "Equip managers to reinforce standards, coach through pressure, and build a team culture where performance and people both matter.",
     highlights: [
@@ -373,12 +373,12 @@ export default function FoundationsCorporatePage() {
 
                 <div className="relative min-h-[340px] sm:min-h-[420px] lg:col-span-5 overflow-hidden bg-[#120f0d]">
                   <Image
-                    src="/foundations/corporate/lornette-executive-podium-full.jpg"
-                    alt="Lornette Daye addressing executive leaders at podium assembly"
+                    src="/foundations/corporate/corporate-keynote-executive-briefing.jpg"
+                    alt="Keynote address and executive briefing for corporate leaders in conference auditorium"
                     fill
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     className="object-cover"
-                    style={{ objectPosition: "center 20%" }}
+                    style={{ objectPosition: "center 25%" }}
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-75" />
                   <div className="absolute inset-x-0 bottom-0 border-t border-[rgba(198,165,92,0.4)] bg-[rgba(18,15,13,0.88)] p-4 sm:p-5 backdrop-blur-md shadow-2xl">
@@ -398,12 +398,12 @@ export default function FoundationsCorporatePage() {
               <div className="grid lg:grid-cols-12 items-stretch">
                 <div className="relative min-h-[360px] sm:min-h-[440px] lg:col-span-5 overflow-hidden bg-[#120f0d]">
                   <Image
-                    src="/foundations/corporate/lornette-executive-roundtable-standing.jpg"
-                    alt="Lornette Daye leading executive corporate leadership roundtable workshop"
+                    src="/foundations/corporate/corporate-leadership-intensive-roundtable.jpg"
+                    alt="Senior executive leadership intensive roundtable session"
                     fill
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     className="object-cover"
-                    style={{ objectPosition: "center 20%" }}
+                    style={{ objectPosition: "center 25%" }}
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-80" />
                   <div className="absolute inset-x-0 bottom-0 border-t border-[rgba(198,165,92,0.4)] bg-[rgba(18,15,13,0.86)] p-4 sm:p-5 backdrop-blur-md shadow-2xl">
