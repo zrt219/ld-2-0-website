@@ -187,11 +187,11 @@ const onIceActionStockCards = [
     description: "Breath regulation and shift neutrality that ensure errors do not carry over to the next possession.",
   },
   {
-    title: "Tactical Execution on the Fly",
-    eyebrow: "PLAYBOOK PRECISION",
-    image: "/foundations/hockey/hockey-tactical-playbook.png",
+    title: "Athlete Focus & Presence",
+    eyebrow: "ON-ICE IDENTITY",
+    image: "/foundations/pathways/hockey/hockey-player-jersey10-portrait.png",
     objectPosition: "center 20%",
-    description: "Translating team systems into instant muscle memory and synchronized five-man execution.",
+    description: "Maintaining emotional poise and complete physical readiness under intense arena lights.",
   },
 ];
 
