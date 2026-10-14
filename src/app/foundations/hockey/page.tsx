@@ -238,13 +238,13 @@ export default function FoundationsHockeyPage() {
               <MotionScaleIn className="relative lg:col-span-5" delay={0.15}>
                 <div className="relative w-full aspect-[4/5] overflow-hidden border border-[rgba(198,165,92,0.42)] bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)] shadow-[0_28px_110px_rgba(23,20,18,0.14)]">
                   <Image
-                    src="/foundations/hockey/lornette-hockey-hero.jpg"
-                    alt="Olympic-level coach Lornette Daye speaking with competitive hockey players on the ice"
+                    src="/foundations/hockey/hockey-skater-ice-action.jpg"
+                    alt="Elite competitive hockey player skating at full speed with stick and puck on arena ice"
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     className="object-cover"
-                    style={{ objectPosition: "center top" }}
+                    style={{ objectPosition: "center 25%" }}
                   />
                   <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/40" />
                   <div className="absolute inset-x-0 bottom-0 border-t border-[rgba(198,165,92,0.4)] bg-[rgba(18,15,13,0.85)] p-4 sm:p-5 backdrop-blur-md shadow-2xl">
