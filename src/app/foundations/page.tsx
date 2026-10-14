@@ -154,9 +154,6 @@ export default function FoundationsPage() {
                 <h1 className="mt-6 font-serif text-[2.75rem] leading-[0.98] text-balance text-[var(--ink)] sm:text-6xl lg:text-[4.3rem] xl:text-[4.75rem]">
                   Lornette’s Foundations
                 </h1>
-                <p className="mt-5 font-serif text-2xl leading-snug text-[var(--gold-dark)] sm:text-3xl">
-                  The 10 Foundations Built by Lornette
-                </p>
               </MotionFadeIn>
               <MotionFadeIn delay={0.25}>
                 <p className="mt-6 max-w-2xl text-base leading-8 text-[#554b40] sm:text-lg">
@@ -187,16 +184,15 @@ export default function FoundationsPage() {
 
             <div className="relative lg:col-span-5">
               <MotionScaleIn delay={0.2}>
-                <div className="relative w-full aspect-[4/5] overflow-hidden border border-[rgba(198,165,92,0.42)] bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)] shadow-[0_28px_110px_rgba(23,20,18,0.14)]">
+                <div className="relative mx-auto w-full max-w-[480px] aspect-[1183/1329] overflow-hidden border border-[rgba(198,165,92,0.42)] bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)] shadow-[0_28px_110px_rgba(23,20,18,0.14)]">
                   <Image
-                    src="/foundations/lornette-foundations-grand-staircase.png"
-                    alt="Former national sprint champion Lornette Daye in tailored white suit standing before the gold LD monogram grand staircase"
+                    src="/foundations/lornette-foundations-multisport-collage.jpg"
+                    alt="Olympic-level coach Lornette Daye with multi-sport athletes across golf, hockey, soccer, and basketball"
                     fill
                     priority
                     unoptimized
                     sizes="(max-width: 768px) 92vw, 44vw"
-                    className="object-cover"
-                    style={{ objectPosition: "68% 16%" }}
+                    className="object-cover object-center"
                   />
                   <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/30" />
                   <div className="absolute inset-x-0 bottom-0 border-t border-[rgba(198,165,92,0.4)] bg-[rgba(18,15,13,0.82)] p-4 sm:p-5 backdrop-blur-md shadow-2xl">
