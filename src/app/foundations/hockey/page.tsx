@@ -59,7 +59,7 @@ const builtForCards = [
     title: "Athletes",
     eyebrow: "ATHLETE PATHWAY",
     icon: Target,
-    image: "/foundations/hockey/lornette-hockey-ice-huddle.jpg",
+    image: "/foundations/hockey/hockey-athlete-locker-room.jpg",
     objectPosition: "center 20%",
     description: "Develop focus, emotional control and confidence to perform at your best.",
   },
@@ -67,15 +67,15 @@ const builtForCards = [
     title: "Teams",
     eyebrow: "TEAM CULTURE",
     icon: Users,
-    image: "/foundations/hockey/lornette-hockey-boardroom-executive.jpg",
-    objectPosition: "center 25%",
+    image: "/foundations/hockey/hockey-team-coaching-meeting.jpg",
+    objectPosition: "center 20%",
     description: "Build a stronger culture, leadership standards, and unified team alignment.",
   },
   {
     title: "Academies",
     eyebrow: "ACADEMY FOUNDATIONS",
     icon: GraduationCap,
-    image: "/foundations/pathways/hockey/lornette-hockey-ice-portrait.png",
+    image: "/foundations/hockey/hockey-academy-training-line.jpg",
     objectPosition: "center 25%",
     description: "Equip the next generation with the mental tools to thrive on and off the ice.",
   },
@@ -113,21 +113,21 @@ const gameSpeedComposureCards = [
   {
     title: "Reset After Mistakes",
     eyebrow: "SHIFT-TO-SHIFT COMPOSURE",
-    image: "/foundations/hockey/lornette-hockey-bench-coaching.jpg",
+    image: "/foundations/hockey/hockey-bench-reset-focus.jpg",
     objectPosition: "center 20%",
     description: "Let go, refocus, and get back into the game with a clear mind.",
   },
   {
     title: "Stronger Communication",
     eyebrow: "BOARDS & ICE CONNECTION",
-    image: "/foundations/hockey/lornette-hockey-boards-rink.jpg",
+    image: "/foundations/hockey/hockey-boards-communication-reset.jpg",
     objectPosition: "center 25%",
     description: "Build trust, stay connected, and support each other through intense shifts.",
   },
   {
     title: "Confidence Under Pressure",
     eyebrow: "DECISIVE EXECUTION",
-    image: "/foundations/hockey/lornette-hockey-digital-tactics.jpg",
+    image: "/foundations/hockey/hockey-goalie-pressure-crease.jpg",
     objectPosition: "center 20%",
     description: "Stay calm, trust your preparation, and perform when it matters most.",
   },
@@ -137,28 +137,28 @@ const tacticalShowcaseCards = [
   {
     title: "Locker Room Strategy Alignment",
     eyebrow: "STRATEGIC INTENT",
-    image: "/foundations/hockey/lornette-hockey-whiteboard-strategy.jpg",
+    image: "/foundations/hockey/hockey-locker-room-playbook.jpg",
     objectPosition: "center 20%",
     description: "Whiteboard breakdowns that transform high-pressure assignments into clear, instinctive execution before the puck drops.",
   },
   {
     title: "Bench Composure & Shift Cadence",
     eyebrow: "EMOTIONAL REGULATION",
-    image: "/foundations/hockey/hockey-boards-communication.png",
+    image: "/foundations/hockey/hockey-bench-cadence-coaching.jpg",
     objectPosition: "center 20%",
     description: "Direct real-time reset coaching between whistles to keep players grounded, non-reactive, and prepared for the next shift.",
   },
   {
     title: "On-Ice Huddle & Athlete Poise",
     eyebrow: "TEAM SYNCHRONICITY",
-    image: "/foundations/hockey/lornette-hockey-on-ice-huddle.jpg",
+    image: "/foundations/hockey/hockey-on-ice-huddle-unity.jpg",
     objectPosition: "center 20%",
-    description: "Unified athlete presence where Lornette Daye instills calm authority, accountable peer support, and collective resilience.",
+    description: "Unified athlete presence where team leaders instill calm authority, accountable peer support, and collective resilience.",
   },
   {
     title: "Video Room Analytics & Reads",
     eyebrow: "DECISION PRECISION",
-    image: "/foundations/pathways/hockey/lornette-hockey-video-analytics.png",
+    image: "/foundations/hockey/hockey-video-analytics-room.jpg",
     objectPosition: "center 20%",
     description: "Deep game analysis and perceptual training translating film breakdowns directly into instinctive ice execution.",
   },
@@ -168,8 +168,8 @@ const onIceActionStockCards = [
   {
     title: "High-Speed Shift Transitions",
     eyebrow: "GAME-SPEED READS",
-    image: "/foundations/hockey/hockey-action-pressure.png",
-    objectPosition: "center 25%",
+    image: "/foundations/hockey/hockey-neutral-zone-speed.jpg",
+    objectPosition: "center 20%",
     description: "Processing dynamic lane coverage and high-speed neutral zone transitions without hesitation.",
   },
   {
@@ -182,7 +182,7 @@ const onIceActionStockCards = [
   {
     title: "Bench Reset Between Whistles",
     eyebrow: "RAPID RECOVERY",
-    image: "/foundations/hockey/hockey-bench-reset-stock.jpg",
+    image: "/foundations/hockey/hockey-bench-reset-focus.jpg",
     objectPosition: "center 20%",
     description: "Breath regulation and shift neutrality that ensure errors do not carry over to the next possession.",
   },
@@ -408,8 +408,8 @@ export default function FoundationsHockeyPage() {
               <div className="grid lg:grid-cols-12 items-stretch">
                 <div className="relative min-h-[360px] sm:min-h-[440px] lg:col-span-5 overflow-hidden bg-[#120f0d]">
                   <Image
-                    src="/foundations/hockey/hockey-locker-room-standards.png"
-                    alt="Olympic-level coach Lornette Daye leading tactical strategy session at locker room whiteboard"
+                    src="/foundations/hockey/hockey-locker-room-playbook.jpg"
+                    alt="Hockey head coach breaking down neutral zone strategy on locker room whiteboard with players"
                     fill
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     className="object-cover"
@@ -540,7 +540,7 @@ export default function FoundationsHockeyPage() {
                 Tactical Leadership on the Ice
               </h2>
               <p className="mt-4 text-base leading-relaxed text-[#554b40]">
-                Watch Olympic-level coach Lornette Daye guide athletes through high-pressure game reads, bench resets, and shared culture standards.
+                Equipping athletes and coaching staffs with proven frameworks for high-pressure game reads, bench resets, and championship culture standards.
               </p>
             </MotionFadeIn>
 
