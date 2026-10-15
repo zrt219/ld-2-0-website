@@ -178,13 +178,13 @@ export default function FoundationsEuropePage() {
               <MotionScaleIn className="relative lg:col-span-5" delay={0.15}>
                 <div className="relative w-full aspect-[4/5] overflow-hidden border border-[rgba(198,165,92,0.42)] bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)] shadow-[0_28px_110px_rgba(23,20,18,0.14)]">
                   <RobustImage
-                    src="/foundations/europe/europe-europa-building-brussels-hero.jpg"
+                    src="/foundations/europe/europe-europa-building-daytime-hero.jpg"
                     fallbackSrcs={[
                       "/foundations/pathways/europe/lornette-europe-summit-hero.jpg",
                       "/foundations/pathways/europe-pathway.jpg",
                       "/foundations/select-stock/europe.jpg",
                     ]}
-                    alt="The Europa building in Brussels, seat of the European Council and Council of the European Union, illuminated at twilight with European Union flags"
+                    alt="The Europa building in Brussels under inspiring morning daylight, showcasing the monumental glass cube and glowing inner lantern"
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 42vw"
