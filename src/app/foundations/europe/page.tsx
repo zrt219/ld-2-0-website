@@ -178,18 +178,18 @@ export default function FoundationsEuropePage() {
               <MotionScaleIn className="relative lg:col-span-5" delay={0.15}>
                 <div className="relative w-full aspect-[4/5] overflow-hidden border border-[rgba(198,165,92,0.42)] bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)] shadow-[0_28px_110px_rgba(23,20,18,0.14)]">
                   <RobustImage
-                    src="/foundations/europe/lornette-europe-conference-hero.jpg"
+                    src="/foundations/europe/europe-partnerships-summit-hero.jpg"
                     fallbackSrcs={[
                       "/foundations/pathways/europe/lornette-europe-summit-hero.jpg",
                       "/foundations/pathways/europe-pathway.jpg",
                       "/foundations/select-stock/europe.jpg",
                     ]}
-                    alt="Olympic-level coach Lornette Daye presenting to European sports directors and academy delegates"
+                    alt="European sports directors and academy delegates at European sport partnerships summit keynote"
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     className="object-cover"
-                    style={{ objectPosition: "center top" }}
+                    style={{ objectPosition: "center 25%" }}
                   />
                   <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/40" />
                   <div className="absolute inset-x-0 bottom-0 border-t border-[rgba(198,165,92,0.4)] bg-[rgba(18,15,13,0.85)] p-4 sm:p-5 backdrop-blur-md shadow-2xl">

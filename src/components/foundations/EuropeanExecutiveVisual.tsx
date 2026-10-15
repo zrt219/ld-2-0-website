@@ -17,8 +17,8 @@ const PERSPECTIVES: VisualPerspective[] = [
   {
     id: "session",
     label: "In Session",
-    image: "/foundations/europe/lornette-europe-salon-session.jpg",
-    alt: "Olympic-level coach Lornette Daye in white suit standing and facilitating an executive salon consultation with European delegates",
+    image: "/foundations/europe/europe-transatlantic-salon-session.jpg",
+    alt: "Olympic-level coach leading executive coach development salon with European sports directors",
     objectPosition: "center 25%",
     eyebrow: "TRANSATLANTIC KNOWLEDGE EXCHANGE",
     title: "Olympic Pedagogy for European Sport Directors",
@@ -26,9 +26,9 @@ const PERSPECTIVES: VisualPerspective[] = [
   {
     id: "envoy",
     label: "Strategic Envoy",
-    image: "/foundations/europe/lornette-europe-standing-portrait.jpg",
-    alt: "Lornette Daye in white suit standing with hands in pockets in front of European flags and Nordic waterfront skyline",
-    objectPosition: "center 20%",
+    image: "/foundations/europe/europe-strategic-envoy-dialogue.jpg",
+    alt: "Olympic-level coach leading sports science and athlete development consultation with European coaches and athletes",
+    objectPosition: "center 25%",
     eyebrow: "EXECUTIVE LEADERSHIP & ENVOY",
     title: "Olympic-Level Coaching & Transatlantic Advisory",
   },
