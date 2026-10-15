@@ -61,7 +61,7 @@ const europeSignatureStandouts = [
 const collaborationTiers = [
   {
     title: "Applied Performance Science & Biomechanics",
-    image: "/foundations/europe/europe-biomechanics-lab.jpg",
+    image: "/foundations/europe/europe-applied-biomechanics-testing.jpg",
     objectPosition: "center 30%",
     description:
       "High-precision motion capture analysis, instrumented sensor track testing, and physiological feedback protocols tailored for European youth and elite academies.",
@@ -74,7 +74,7 @@ const collaborationTiers = [
   },
   {
     title: "Sports Technology & Innovation Networks",
-    image: "/foundations/europe/europe-innovation-expo.jpg",
+    image: "/foundations/europe/europe-sports-technology-innovation.jpg",
     objectPosition: "center 25%",
     description:
       "Collaborative exploration of sports engineering, equipment innovation, digital performance tracking, and pan-European athletic technology partnerships.",
@@ -87,7 +87,7 @@ const collaborationTiers = [
   },
   {
     title: "Strategic Delegations & Club Alignment",
-    image: "/foundations/europe/europe-strategic-delegations.jpg",
+    image: "/foundations/europe/europe-bilateral-federation-delegations.jpg",
     objectPosition: "center 30%",
     description:
       "Morning bilateral briefings and strategic planning sessions structured for sports directors, federation officials, and academy leaders across Europe.",
