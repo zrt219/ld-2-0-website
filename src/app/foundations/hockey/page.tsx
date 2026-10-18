@@ -135,11 +135,11 @@ const gameSpeedComposureCards = [
 
 const tacticalShowcaseCards = [
   {
-    title: "Locker Room Strategy Alignment",
+    title: "Bench Strategy & Shift Communication",
     eyebrow: "STRATEGIC INTENT",
-    image: "/foundations/hockey/hockey-locker-room-playbook.jpg",
-    objectPosition: "center 20%",
-    description: "Whiteboard breakdowns that transform high-pressure assignments into clear, instinctive execution before the puck drops.",
+    image: "/foundations/hockey/hockey-bench-coach-dialogue.jpg",
+    objectPosition: "60% 20%",
+    description: "Direct real-time communication between coach and player that transforms game pressure into clear, instinctive execution.",
   },
   {
     title: "Bench Composure & Shift Cadence",
@@ -156,11 +156,11 @@ const tacticalShowcaseCards = [
     description: "Unified athlete presence where team leaders instill calm authority, accountable peer support, and collective resilience.",
   },
   {
-    title: "Video Room Analytics & Reads",
+    title: "Faceoff Reads & Anticipation",
     eyebrow: "DECISION PRECISION",
-    image: "/foundations/hockey/hockey-video-analytics-room.jpg",
+    image: "/foundations/hockey/hockey-faceoff-anticipation-read.jpg",
     objectPosition: "center 20%",
-    description: "Deep game analysis and perceptual training translating film breakdowns directly into instinctive ice execution.",
+    description: "Deep game awareness and split-second anticipation translating preparation directly into instinctive faceoff execution.",
   },
 ];
 
@@ -408,12 +408,12 @@ export default function FoundationsHockeyPage() {
               <div className="grid lg:grid-cols-12 items-stretch">
                 <div className="relative min-h-[360px] sm:min-h-[440px] lg:col-span-5 overflow-hidden bg-[#120f0d]">
                   <Image
-                    src="/foundations/hockey/hockey-locker-room-playbook.jpg"
-                    alt="Hockey head coach breaking down neutral zone strategy on locker room whiteboard with players"
+                    src="/foundations/hockey/hockey-bench-coach-dialogue.jpg"
+                    alt="Hockey head coach talking directly to a player on the bench during a game stoppage"
                     fill
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     className="object-cover"
-                    style={{ objectPosition: "center 20%" }}
+                    style={{ objectPosition: "60% 20%" }}
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-80" />
                   <div className="absolute inset-x-0 bottom-0 border-t border-[rgba(198,165,92,0.4)] bg-[rgba(18,15,13,0.86)] p-4 sm:p-5 backdrop-blur-md shadow-2xl">
@@ -444,10 +444,10 @@ export default function FoundationsHockeyPage() {
                     <div className="mt-6 grid gap-4 sm:grid-cols-2">
                       <div className="border border-[rgba(198,165,92,0.3)] bg-white p-4 shadow-sm">
                         <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--gold-dark)]">
-                          Video Analytics &amp; Decision Speed
+                          Game Reads &amp; Decision Speed
                         </p>
                         <p className="mt-1 text-xs text-[#675d50] leading-relaxed">
-                          Translating game review into proactive reads on the ice without hesitation or second-guessing.
+                          Translating game preparation into proactive reads on the ice without hesitation or second-guessing.
                         </p>
                       </div>
                       <div className="border border-[rgba(198,165,92,0.3)] bg-white p-4 shadow-sm">
