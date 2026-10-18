@@ -17,9 +17,9 @@ const PERSPECTIVES: VisualPerspective[] = [
   {
     id: "session",
     label: "In Session",
-    image: "/foundations/europe/europe-transatlantic-salon-session.jpg",
+    image: "/foundations/europe/europe-transatlantic-seated-salon.jpg",
     alt: "Olympic-level coach leading executive coach development salon with European sports directors",
-    objectPosition: "center 25%",
+    objectPosition: "center 30%",
     eyebrow: "TRANSATLANTIC KNOWLEDGE EXCHANGE",
     title: "Olympic Pedagogy for European Sport Directors",
   },
