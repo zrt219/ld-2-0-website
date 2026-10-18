@@ -488,13 +488,13 @@ export default function FoundationsGolfPage() {
               <MotionScaleIn className="relative lg:col-span-5" delay={0.15}>
                 <div className="relative w-full aspect-[4/5] overflow-hidden border border-[rgba(198,165,92,0.42)] bg-[linear-gradient(180deg,#fffdf8_0%,#f5efe4_100%)] shadow-[0_28px_110px_rgba(23,20,18,0.14)]">
                   <Image
-                    src="/foundations/golf/lornette-golf-putting-green-sunrise.png"
-                    alt="Lornette Daye coaching a competitive golfer on the putting green at sunrise"
+                    src="/foundations/golf/coastal-links-editorial-hero.jpg"
+                    alt="Atmospheric coastal links golf course under soft overcast morning light with dewy green and rugged dunes"
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     className="object-cover"
-                    style={{ objectPosition: "82% 18%" }}
+                    style={{ objectPosition: "center 52%" }}
                   />
                   <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/40" />
                   <div className="absolute inset-x-0 bottom-0 border-t border-[rgba(198,165,92,0.4)] bg-[rgba(18,15,13,0.82)] p-4 sm:p-5 backdrop-blur-md shadow-2xl">
