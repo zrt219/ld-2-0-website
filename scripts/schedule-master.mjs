@@ -1,101 +1,167 @@
-/**
- * 100% Autonomous Master Buffer Campaign Publisher & Queue Daemon
- * Handles continuous scheduling, rate limit cooldowns, and automatic recovery
- * Target Channel: Lornette Daye LinkedIn (6a39d30c5ab6d2f1065f5301)
- */
-
+// scripts/schedule-master.mjs
+// Autonomous Catchup & Recovery Engine for 21-Day Multi-Sport Campaign Rescheduling
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
+import https from 'https';
 
-const scriptsDir = path.join(process.cwd(), 'scripts');
-const queuePath = path.join(scriptsDir, 'master-campaign-queue.json');
-const reportPath = path.join(scriptsDir, 'scheduled-master-report.json');
+const TOKEN = process.env.BUFFER_ACCESS_TOKEN || 'uR7DeyYk4O9VcFHqPQOnWseUl7BONqA8RZ4CK_03Ci0';
+const CHANNEL_ID = '6a39d30c5ab6d2f1065f5301';
 
-// Ordered list of campaigns and their sync scripts in sequence
-const campaignPipelines = [
-  {
-    name: 'Curaçao 3-Win Streak Campaign (19 posts)',
-    script: 'schedule-curacao-streak.py',
-    sync: 'sync_curacao_streak_to_queue.py'
-  },
-  {
-    name: 'Finish Strong Keynote 60-Day Campaign (30 posts)',
-    script: 'schedule-finish-strong-keynote.py',
-    sync: 'sync_finish_strong_keynote_to_queue.py'
-  },
-  {
-    name: 'Michael Penix Jr. Campaign (14 posts)',
-    script: 'schedule-penix-campaign.py',
-    sync: 'sync_penix_to_queue.py'
-  },
-  {
-    name: 'Business Athletes Campaign (60 posts)',
-    script: 'schedule-business-athletes.py',
-    sync: 'sync_all_campaigns_to_master_queue.py'
-  },
-  {
-    name: 'Own The Next Chapter Campaign (180 posts)',
-    script: 'schedule-own-the-next-chapter.py',
-    sync: 'sync_all_campaigns_to_master_queue.py'
-  },
-  {
-    name: 'Thierry Henry: Vision Beyond the Game (120 posts)',
-    script: 'schedule-thierry-henry.py',
-    sync: 'sync_all_campaigns_to_master_queue.py'
-  }
+const PACED_SCHEDULE = [
+  { id: "CAMPAIGN_MULTI_001", day: 1, slot: "Day 1 Morning (08:30 AM MDT)", dueAt: "2026-10-30T14:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_002", day: 1, slot: "Day 1 Afternoon (03:00 PM MDT)", dueAt: "2026-10-30T21:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_003", day: 2, slot: "Day 2 Morning (08:30 AM MDT)", dueAt: "2026-10-31T14:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_004", day: 2, slot: "Day 2 Afternoon (03:00 PM MDT)", dueAt: "2026-10-31T21:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_005", day: 3, slot: "Day 3 Mid-Day (11:00 AM MST)", dueAt: "2026-11-01T18:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_006", day: 4, slot: "Day 4 Mid-Day (11:00 AM MST)", dueAt: "2026-11-02T18:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_007", day: 5, slot: "Day 5 Morning (08:30 AM MST)", dueAt: "2026-11-03T15:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_008", day: 5, slot: "Day 5 Afternoon (03:00 PM MST)", dueAt: "2026-11-03T22:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_009", day: 6, slot: "Day 6 Morning (08:30 AM MST)", dueAt: "2026-11-04T15:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_010", day: 7, slot: "Day 7 Morning (08:30 AM MST)", dueAt: "2026-11-05T15:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_011", day: 7, slot: "Day 7 Afternoon (03:00 PM MST)", dueAt: "2026-11-05T22:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_012", day: 8, slot: "Day 8 Morning (08:30 AM MST)", dueAt: "2026-11-06T15:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_013", day: 9, slot: "Day 9 Morning (08:30 AM MST)", dueAt: "2026-11-07T15:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_014", day: 9, slot: "Day 9 Afternoon (03:00 PM MST)", dueAt: "2026-11-07T22:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_015", day: 10, slot: "Day 10 Mid-Day (11:00 AM MST)", dueAt: "2026-11-08T18:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_016", day: 11, slot: "Day 11 Mid-Day (11:00 AM MST)", dueAt: "2026-11-09T18:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_017", day: 12, slot: "Day 12 Morning (08:30 AM MST)", dueAt: "2026-11-10T15:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_018", day: 12, slot: "Day 12 Afternoon (03:00 PM MST)", dueAt: "2026-11-10T22:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_019", day: 13, slot: "Day 13 Morning (08:30 AM MST)", dueAt: "2026-11-11T15:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_020", day: 14, slot: "Day 14 Morning (08:30 AM MST)", dueAt: "2026-11-12T15:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_021", day: 14, slot: "Day 14 Afternoon (03:00 PM MST)", dueAt: "2026-11-12T22:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_022", day: 15, slot: "Day 15 Morning (08:30 AM MST)", dueAt: "2026-11-13T15:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_023", day: 16, slot: "Day 16 Morning (08:30 AM MST)", dueAt: "2026-11-14T15:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_024", day: 16, slot: "Day 16 Afternoon (03:00 PM MST)", dueAt: "2026-11-14T22:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_025", day: 17, slot: "Day 17 Mid-Day (11:00 AM MST)", dueAt: "2026-11-15T18:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_026", day: 18, slot: "Day 18 Mid-Day (11:00 AM MST)", dueAt: "2026-11-16T18:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_027", day: 19, slot: "Day 19 Morning (08:30 AM MST)", dueAt: "2026-11-17T15:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_028", day: 19, slot: "Day 19 Afternoon (03:00 PM MST)", dueAt: "2026-11-17T22:00:00.000Z" },
+  { id: "CAMPAIGN_MULTI_029", day: 20, slot: "Day 20 Morning (08:30 AM MST)", dueAt: "2026-11-18T15:30:00.000Z" },
+  { id: "CAMPAIGN_MULTI_030", day: 21, slot: "Day 21 Morning (08:30 AM MST)", dueAt: "2026-11-19T15:30:00.000Z" }
 ];
 
-console.log('======================================================================');
-console.log('MASTER CAMPAIGN QUEUE DAEMON & CATCHUP RUNNER');
-console.log(`Execution Time: ${new Date().toISOString()}`);
-console.log('======================================================================\n');
-
-for (const pipeline of campaignPipelines) {
-  const scriptPath = path.join(scriptsDir, pipeline.script);
-  if (!fs.existsSync(scriptPath)) {
-    console.warn(`[Queue Daemon] Warning: ${pipeline.script} not found at ${scriptPath}`);
-    continue;
-  }
-
-  console.log(`\n>>> [Queue Daemon] Executing ${pipeline.name} (${pipeline.script})...`);
-  try {
-    execSync(`python "${scriptPath}"`, { stdio: 'inherit', env: process.env });
-  } catch (err) {
-    console.warn(`[Queue Daemon] ${pipeline.script} finished with notice/error: ${err.message}`);
-  }
-
-  if (pipeline.sync) {
-    const syncPath = path.join(scriptsDir, pipeline.sync);
-    if (fs.existsSync(syncPath)) {
-      console.log(`>>> [Queue Daemon] Synchronizing ${pipeline.name} to master queue...`);
-      try {
-        execSync(`python "${syncPath}"`, { stdio: 'inherit', env: process.env });
-      } catch (err) {
-        console.error(`[Queue Daemon] Error syncing ${pipeline.sync}:`, err.message);
+const EDIT_MUTATION = `
+mutation EditPost($input: EditPostInput!) {
+  editPost(input: $input) {
+    __typename
+    ... on PostActionSuccess {
+      post {
+        id
+        status
+        dueAt
       }
     }
+    ... on LimitReachedError { message }
+    ... on InvalidInputError { message }
+    ... on UnexpectedError { message }
   }
+}
+`;
+
+function sendGraphql(payload) {
+  return new Promise((resolve, reject) => {
+    const data = JSON.stringify(payload);
+    const req = https.request('https://api.buffer.com', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${TOKEN}`,
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(data),
+        'User-Agent': 'Mozilla/5.0'
+      },
+      rejectUnauthorized: false
+    }, (res) => {
+      let body = '';
+      res.on('data', chunk => body += chunk);
+      res.on('end', () => {
+        if (res.statusCode === 429) {
+          const retryAfter = res.headers['retry-after'];
+          return resolve({ error: 429, retryAfter });
+        }
+        try {
+          resolve(JSON.parse(body));
+        } catch (e) {
+          resolve({ error: 'PARSE_ERROR', body });
+        }
+      });
+    });
+    req.on('error', reject);
+    req.write(data);
+    req.end();
+  });
 }
 
-// Read updated master report
-if (fs.existsSync(reportPath)) {
-  try {
-    const report = JSON.parse(fs.readFileSync(reportPath, 'utf-8'));
-    console.log('\n======================================================================');
-    const totalScheduled = report.totalScheduled || (report.posts ? report.posts.filter(p => p.status === 'scheduled' || p.status === 'success').length : 0);
-    const totalPosts = (report.posts || []).length;
-    const pendingCount = report.pending !== undefined ? report.pending : (totalPosts - totalScheduled);
-    const completionRate = totalPosts > 0 ? ((totalScheduled / totalPosts) * 100).toFixed(1) + '%' : '0%';
-    console.log(`STATUS SUMMARY: ${totalScheduled}/${totalPosts} posts scheduled (${completionRate})`);
-    console.log(`Pending: ${pendingCount} posts`);
-    if (pendingCount > 0) {
-      console.log(`Autonomous Catchup Command: node scripts/schedule-master.mjs --catchup`);
-    } else {
-      console.log('ALL POSTS SUCCESSFULLY SCHEDULED IN BUFFER!');
+async function runCatchup() {
+  console.log("================================================================");
+  console.log("🔄 21-DAY MULTI-SPORT CAMPAIGN AUTONOMOUS RESCHEDULER");
+  console.log("================================================================\n");
+
+  const reportPath = path.resolve('scripts/multi-sport-scheduled-report.json');
+  const queuePath = path.resolve('scripts/master-multi-sport-queue.json');
+
+  const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+  const queue = JSON.parse(fs.readFileSync(queuePath, 'utf8'));
+
+  const queueMap = new Map(queue.map(q => [q.id, q]));
+
+  let updatedCount = 0;
+  for (const item of PACED_SCHEDULE) {
+    const rep = report[item.id];
+    if (!rep) continue;
+
+    // Check if already updated to target dueAt
+    if (rep.dueAt === item.dueAt) {
+      continue;
     }
-    console.log('======================================================================');
-  } catch (e) {
-    console.error('Error reading final report:', e.message);
+
+    const postData = queueMap.get(item.id);
+    if (!postData) continue;
+
+    console.log(`Processing ${item.id} -> Day ${item.day} (${item.slot})...`);
+    const resp = await sendGraphql({
+      query: EDIT_MUTATION,
+      variables: {
+        input: {
+          id: rep.postId,
+          dueAt: item.dueAt,
+          mode: "customScheduled",
+          schedulingType: "automatic",
+          text: postData.text,
+          assets: [{ image: { url: postData.asset_url } }]
+        }
+      }
+    });
+
+    if (resp.error === 429) {
+      console.log(`⚠️ Rate limit active. Retry-After: ${resp.retryAfter}s`);
+      console.log(`Will self-heal autonomously upon timer or next run.`);
+      break;
+    }
+
+    const postSuccess = resp.data?.editPost?.__typename === 'PostActionSuccess';
+    if (postSuccess) {
+      console.log(`   ✅ SUCCESS: Post ${rep.postId} updated to ${item.dueAt}`);
+      rep.dueAt = item.dueAt;
+      rep.slot = item.slot;
+      rep.day = item.day;
+      report[item.id] = rep;
+
+      postData.dueAt = item.dueAt;
+      postData.slot = item.slot;
+
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), 'utf8');
+      fs.writeFileSync(queuePath, JSON.stringify(queue, null, 2), 'utf8');
+      updatedCount++;
+      await new Promise(r => setTimeout(r, 1500));
+    } else {
+      console.log(`   ⚠️ Failed to update ${item.id}:`, JSON.stringify(resp));
+      break;
+    }
   }
+
+  const fullyUpdated = PACED_SCHEDULE.filter(s => report[s.id]?.dueAt === s.dueAt).length;
+  console.log(`\nProgress: ${fullyUpdated}/30 posts aligned with 21-day timeline.`);
+  return { fullyUpdated, total: PACED_SCHEDULE.length };
 }
+
+runCatchup().catch(console.error);

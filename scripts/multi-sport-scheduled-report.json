@@ -2,65 +2,72 @@
   "CAMPAIGN_MULTI_001": {
     "postId": "6ad972a9282deeeeb2c56b88",
     "status": "scheduled",
-    "dueAt": "2026-10-30T14:15:00.000Z",
+    "dueAt": "2026-10-30T14:30:00.000Z",
     "sport": "Football",
     "title": "Chase & Sydney Brown",
-    "slot": "Day 1 Morning (08:15 AM MDT)",
-    "asset_url": "https://lornettedaye.com/campaigns/football/football-01-chase-sydney-brown.png"
+    "slot": "Day 1 Morning (08:30 AM MDT)",
+    "asset_url": "https://lornettedaye.com/campaigns/football/football-01-chase-sydney-brown.png",
+    "day": 1
   },
   "CAMPAIGN_MULTI_002": {
     "postId": "6ad972ac7dadc432f7365aa9",
     "status": "scheduled",
-    "dueAt": "2026-10-30T19:00:00.000Z",
+    "dueAt": "2026-10-30T21:00:00.000Z",
     "sport": "Grant Fuhr",
     "title": "Golden Goaltender Tribute",
-    "slot": "Day 1 Mid-Day (01:00 PM MDT)",
-    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-01-golden-goaltender.png"
+    "slot": "Day 1 Afternoon (03:00 PM MDT)",
+    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-01-golden-goaltender.png",
+    "day": 1
   },
   "CAMPAIGN_MULTI_003": {
     "postId": "6ad972afdeacf5d25326cb4c",
     "status": "scheduled",
-    "dueAt": "2026-10-30T22:30:00.000Z",
+    "dueAt": "2026-10-31T14:30:00.000Z",
     "sport": "Hockey",
     "title": "Willie O'Ree: The Man Who Opened The Door",
-    "slot": "Day 1 Late Afternoon (04:30 PM MDT)",
-    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-01-willie-oree.png"
+    "slot": "Day 2 Morning (08:30 AM MDT)",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-01-willie-oree.png",
+    "day": 2
   },
   "CAMPAIGN_MULTI_004": {
     "postId": "6ad972b21093844846d8c9d8",
     "status": "scheduled",
-    "dueAt": "2026-10-31T14:15:00.000Z",
+    "dueAt": "2026-10-31T21:00:00.000Z",
     "sport": "Football",
     "title": "Chase Brown: London Raised. NFL Proven.",
-    "slot": "Day 2 Morning (08:15 AM MDT)",
-    "asset_url": "https://lornettedaye.com/campaigns/football/football-02-chase-brown.png"
+    "slot": "Day 2 Afternoon (03:00 PM MDT)",
+    "asset_url": "https://lornettedaye.com/campaigns/football/football-02-chase-brown.png",
+    "day": 2
   },
   "CAMPAIGN_MULTI_005": {
     "postId": "6ad972b61093844846d8ca30",
     "status": "scheduled",
-    "dueAt": "2026-10-31T19:00:00.000Z",
+    "dueAt": "2026-11-01T18:00:00.000Z",
     "sport": "Grant Fuhr",
     "title": "Greatest Goaltender: 5 Stanley Cups",
-    "slot": "Day 2 Mid-Day (01:00 PM MDT)",
-    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-02-greatest-goaltender.png"
+    "slot": "Day 3 Mid-Day (11:00 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-02-greatest-goaltender.png",
+    "day": 3
   },
   "CAMPAIGN_MULTI_006": {
     "postId": "6ad972b9282deeeeb2c56e7a",
     "status": "scheduled",
-    "dueAt": "2026-10-31T22:30:00.000Z",
+    "dueAt": "2026-11-02T18:00:00.000Z",
     "sport": "Hockey",
     "title": "Jarome Iginla: 625 Goals. A Legacy.",
-    "slot": "Day 2 Late Afternoon (04:30 PM MDT)",
-    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-02-jarome-iginla.png"
+    "slot": "Day 4 Mid-Day (11:00 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-02-jarome-iginla.png",
+    "day": 4
   },
   "CAMPAIGN_MULTI_007": {
     "postId": "6ad972bcecaa6cda0422b0f4",
     "status": "scheduled",
-    "dueAt": "2026-11-01T15:15:00.000Z",
+    "dueAt": "2026-11-03T15:30:00.000Z",
     "sport": "Football",
     "title": "Chuba Hubbard: Sherwood Park to Sunday Lights",
-    "slot": "Day 3 Morning (08:15 AM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/football/football-03-chuba-hubbard.png"
+    "slot": "Day 5 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/football/football-03-chuba-hubbard.png",
+    "day": 5
   },
   "CAMPAIGN_MULTI_008": {
     "postId": "6ad972bfb086d40f572c9e16",
