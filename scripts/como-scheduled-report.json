@@ -4,231 +4,267 @@
     "status": "sending",
     "dueAt": "2026-10-21T20:15:00Z",
     "mode": "shareNow",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-nico-paz-potm.mp4"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-nico-paz-potm.mp4",
+    "cleaned_asterisks": true,
+    "note": "editPost returned UnauthorizedError: Account is not allowed to perform this action on post"
   },
   "COMO_POST_002": {
     "postId": "6ad9700bb086d40f572c12ee",
     "status": "scheduled",
     "dueAt": "2026-10-22T07:45:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-03.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-03.png",
+    "cleaned_asterisks": true,
+    "note": "editPost returned UnauthorizedError: Account is not allowed to perform this action on post"
   },
   "COMO_POST_003": {
     "postId": "6ad9700becaa6cda04222923",
     "status": "scheduled",
     "dueAt": "2026-10-22T12:15:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-04.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-04.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_004": {
     "postId": "6ad9700cb086d40f572c133c",
     "status": "scheduled",
     "dueAt": "2026-10-22T15:30:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-05.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-05.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_005": {
     "postId": "6ad9700db086d40f572c136e",
     "status": "scheduled",
     "dueAt": "2026-10-22T19:00:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-nico-paz-potm.mp4"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-nico-paz-potm.mp4",
+    "cleaned_asterisks": true,
+    "note": "editPost returned UnauthorizedError: Account is not allowed to perform this action on post"
   },
   "COMO_POST_006": {
     "postId": "6ad9700e7dadc432f735e90e",
     "status": "scheduled",
     "dueAt": "2026-10-23T07:45:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-07.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-07.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_007": {
     "postId": "6ad9700fdeacf5d253264ec3",
     "status": "scheduled",
     "dueAt": "2026-10-23T12:15:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-08.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-08.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_008": {
     "postId": "6ad97010ecaa6cda042229d0",
     "status": "scheduled",
     "dueAt": "2026-10-23T15:30:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-09.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-09.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_009": {
     "postId": "6ad970111093844846d85247",
     "status": "scheduled",
     "dueAt": "2026-10-23T19:00:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-rain-warmup-stadium.mp4"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-rain-warmup-stadium.mp4",
+    "cleaned_asterisks": true
   },
   "COMO_POST_010": {
     "postId": "6ad97012deacf5d253264f34",
     "status": "scheduled",
     "dueAt": "2026-10-24T07:45:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-11.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-11.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_011": {
     "postId": "6ad97013b086d40f572c1401",
     "status": "scheduled",
     "dueAt": "2026-10-24T12:15:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-12.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-12.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_012": {
     "postId": "6ad970137dadc432f735ea45",
     "status": "scheduled",
     "dueAt": "2026-10-24T15:30:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-13.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-13.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_013": {
     "postId": "6ad970141093844846d85345",
     "status": "scheduled",
     "dueAt": "2026-10-24T19:00:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-field-level-warmups.mp4"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-field-level-warmups.mp4",
+    "cleaned_asterisks": true
   },
   "COMO_POST_014": {
     "postId": "6ad970157dadc432f735eabd",
     "status": "scheduled",
     "dueAt": "2026-10-25T07:45:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-15.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-15.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_015": {
     "postId": "6ad97017deacf5d253265037",
     "status": "scheduled",
     "dueAt": "2026-10-25T12:15:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-16.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-16.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_016": {
     "postId": "6ad97018deacf5d253265074",
     "status": "scheduled",
     "dueAt": "2026-10-25T15:30:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-17.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-17.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_017": {
     "postId": "6ad9701a1093844846d85407",
     "status": "scheduled",
     "dueAt": "2026-10-25T19:00:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-crowd-pre-match.mp4"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-crowd-pre-match.mp4",
+    "cleaned_asterisks": true
   },
   "COMO_POST_018": {
     "postId": "6ad9701a1093844846d85430",
     "status": "scheduled",
     "dueAt": "2026-10-26T07:45:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-19.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-19.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_019": {
     "postId": "6ad9701b282deeeeb2c4e1ab",
     "status": "scheduled",
     "dueAt": "2026-10-26T12:15:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-01.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-01.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_020": {
     "postId": "6ad9701cecaa6cda04222bc5",
     "status": "scheduled",
     "dueAt": "2026-10-26T15:30:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-02.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-02.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_021": {
     "postId": "6ad9701ddeacf5d2532650fe",
     "status": "scheduled",
     "dueAt": "2026-10-26T19:00:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-nico-paz-potm.mp4"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-nico-paz-potm.mp4",
+    "cleaned_asterisks": true
   },
   "COMO_POST_022": {
     "postId": "6ad9701eecaa6cda04222c0f",
     "status": "scheduled",
     "dueAt": "2026-10-27T07:45:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-04.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-04.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_023": {
     "postId": "6ad9701f1093844846d8551c",
     "status": "scheduled",
     "dueAt": "2026-10-27T12:15:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-05.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-05.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_024": {
     "postId": "6ad9701fecaa6cda04222c4e",
     "status": "scheduled",
     "dueAt": "2026-10-27T15:30:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-06.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-06.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_025": {
     "postId": "6ad97020282deeeeb2c4e228",
     "status": "scheduled",
     "dueAt": "2026-10-27T19:00:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-rain-warmup-stadium.mp4"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-rain-warmup-stadium.mp4",
+    "cleaned_asterisks": true
   },
   "COMO_POST_026": {
     "postId": "6ad97021deacf5d2532655a5",
     "status": "scheduled",
     "dueAt": "2026-10-28T07:45:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-08.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-08.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_027": {
     "postId": "6ad97021ecaa6cda04222c87",
     "status": "scheduled",
     "dueAt": "2026-10-28T12:15:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-09.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-09.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_028": {
     "postId": "6ad970227dadc432f735ed43",
     "status": "scheduled",
     "dueAt": "2026-10-28T15:30:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-10.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-10.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_029": {
     "postId": "6ad970237dadc432f735ed6e",
     "status": "scheduled",
     "dueAt": "2026-10-28T19:00:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-field-level-warmups.mp4"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-field-level-warmups.mp4",
+    "cleaned_asterisks": true
   },
   "COMO_POST_030": {
     "postId": "6ad970237dadc432f735ed97",
     "status": "scheduled",
     "dueAt": "2026-10-29T07:45:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-12.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-12.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_031": {
     "postId": "6ad970241093844846d8563b",
     "status": "scheduled",
     "dueAt": "2026-10-29T12:15:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-13.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-13.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_032": {
     "postId": "6ad97024b086d40f572c1727",
     "status": "scheduled",
     "dueAt": "2026-10-29T15:30:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-14.png"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-still-14.png",
+    "cleaned_asterisks": true
   },
   "COMO_POST_033": {
     "postId": "6ad97025deacf5d253265610",
     "status": "scheduled",
     "dueAt": "2026-10-29T19:00:00Z",
     "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/como/como-crowd-pre-match.mp4"
+    "asset_url": "https://lornettedaye.com/campaigns/como/como-crowd-pre-match.mp4",
+    "cleaned_asterisks": true
   },
   "COMO_POST_034": {
     "postId": "6ad970251093844846d8566b",

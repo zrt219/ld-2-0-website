@@ -197,13 +197,13 @@ In the boardroom, companies often look for quick-fix acquisitions instead of fix
         takeaway = "Stop looking for shortcuts to the podium. Build your operational foundations so soundly that victory becomes the inevitable outcome."
         hashtags = "#ExecutiveLeadership #OrganizationalCulture #Como1907 #InfrastructureBuilding #HighPerformance #LornetteDaye #Foundations"
 
-    post_text = f"""**{title}**
+    post_text = f"""{title}
 
 {hook}
 
 {body}
 
-**Key Takeaway:** {takeaway}
+Key Takeaway: {takeaway}
 
 In your corner,
 Lornette Daye

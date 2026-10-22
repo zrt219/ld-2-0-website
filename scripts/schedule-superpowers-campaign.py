@@ -162,13 +162,13 @@ In Lornette’s Foundations, we build Better People and Better Players. Because 
 Order your published digital edition ($14.99 CAD): https://lornettedaye.com/books"""
         hashtags = "#HighPerformance #ChampionMindset #AjaWilson #JeremiahSmith #MikeGrier #MultiSportExcellence #AthleteDevelopment #ExecutiveLeadership #LornetteDaye #LD #Foundations"
 
-    post_text = f"""**{title}**
+    post_text = f"""{title}
 
 {hook}
 
 {body}
 
-**Key Takeaway:** {takeaway}
+Key Takeaway: {takeaway}
 
 In your corner,
 Lornette Daye
