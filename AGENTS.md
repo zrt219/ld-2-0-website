@@ -43,6 +43,15 @@ This version has breaking changes — APIs, conventions, and file structure may 
      - **Power-Off & Reboot Fallback (Self-Healing)**: All queue progress is persisted to `scripts/scheduled-master-report.json`. Upon session re-engagement or computer startup, the agent must automatically check for pending/overdue queue items and run catchup execution (`node scripts/schedule-master.mjs --catchup`) without requiring user prompts.
      - **Zero User Interventions**: Confirm to the user that execution is 100% autonomous, resilient to system restarts, and self-healing.
 6. **Maximized Visibility & Conversion**: Include rich, pain-point-driven copy in Lornette Daye's authoritative voice (40+ years Olympian coach & national champion), an exhaustive hashtag stack for platform discoverability, and clear calls-to-action to `https://lornettedaye.com`.
+7. **Strict Zero-Asterisk & Zero-Markdown Social Media Invariant**:
+   - Standard social platforms (LinkedIn, Facebook, X, etc.) and Buffer plain-text caption fields **do not support Markdown syntax** (`**bold**`, `*italics*`, `# headers`).
+   - **Absolute Ban on Asterisks**: Never include `*` or `**` anywhere in social media copy, review HTML galleries, or scheduled queues.
+   - **Emphasis Convention**: Use clean uppercase headers (e.g. `KEY TAKEAWAY:`, `THE REALITY:`, `THE PLAYBOOK:`) and standard punctuation (colons, line breaks) for visual hierarchy.
+   - **Mandatory Pre-Flight Guard**: All campaign generation scripts and scheduling engines must execute an automated assertion (`caption.includes('*') === false`) before staging, queueing, or updating posts.
+8. **Strict Calendar Duration & Pacing Fidelity**:
+   - When the user specifies a campaign timeline (e.g. "2–3 weeks", "3 weeks", "over the next month"), the schedule **must strictly span that full calendar window**.
+   - For a 3-week request, posts must be distributed evenly across **at least 21 distinct calendar days** (1–2 posts per day).
+   - **Never compress multi-week campaigns into rapid bursts** (e.g. 10 days or 3 posts/day) unless explicitly and unambiguously instructed by the user.
 <!-- END:buffer-publishing-rules -->
 
 <!-- BEGIN:lornette-daye-book-catalog -->
