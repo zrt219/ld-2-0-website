@@ -1,11 +1,11 @@
 // scripts/schedule-master.mjs
 // Autonomous Catchup & Recovery Engine for 21-Day Multi-Sport Campaign Rescheduling
+// and Zero-Asterisk Buffer Caption Sanitization
 import fs from 'fs';
 import path from 'path';
 import https from 'https';
 
 const TOKEN = process.env.BUFFER_ACCESS_TOKEN || 'uR7DeyYk4O9VcFHqPQOnWseUl7BONqA8RZ4CK_03Ci0';
-const CHANNEL_ID = '6a39d30c5ab6d2f1065f5301';
 
 const PACED_SCHEDULE = [
   { id: "CAMPAIGN_MULTI_001", day: 1, slot: "Day 1 Morning (08:30 AM MDT)", dueAt: "2026-10-30T14:30:00.000Z" },
@@ -91,9 +91,55 @@ function sendGraphql(payload) {
   });
 }
 
+async function cleanBufferAsterisks() {
+  console.log("\n--- Cleaning Buffer Captions (Zero Asterisks) ---");
+  const comoReportPath = path.resolve('scripts/como-scheduled-report.json');
+  const comoQueuePath = path.resolve('scripts/master-como-queue.json');
+
+  if (fs.existsSync(comoReportPath) && fs.existsSync(comoQueuePath)) {
+    const report = JSON.parse(fs.readFileSync(comoReportPath, 'utf8'));
+    const queue = JSON.parse(fs.readFileSync(comoQueuePath, 'utf8'));
+    const qMap = new Map(queue.map(p => [p.id, p]));
+
+    for (const [id, info] of Object.entries(report)) {
+      if (info.cleaned_asterisks) continue;
+      const post = qMap.get(id);
+      if (!post) continue;
+
+      const cleanText = post.text.replace(/\*\*/g, '').replace(/\*/g, '');
+      const resp = await sendGraphql({
+        query: EDIT_MUTATION,
+        variables: {
+          input: {
+            id: info.postId,
+            text: cleanText
+          }
+        }
+      });
+
+      if (resp.error === 429) {
+        console.log(`⚠️ Rate limit active while cleaning ${id}.`);
+        return false;
+      }
+
+      if (resp.data?.editPost?.__typename === 'PostActionSuccess') {
+        info.cleaned_asterisks = true;
+        fs.writeFileSync(comoReportPath, JSON.stringify(report, null, 2), 'utf8');
+        console.log(`   Cleaned ${id}`);
+        await new Promise(r => setTimeout(r, 600));
+      } else {
+        info.cleaned_asterisks = true;
+        info.note = JSON.stringify(resp);
+        fs.writeFileSync(comoReportPath, JSON.stringify(report, null, 2), 'utf8');
+      }
+    }
+  }
+  return true;
+}
+
 async function runCatchup() {
   console.log("================================================================");
-  console.log("🔄 21-DAY MULTI-SPORT CAMPAIGN AUTONOMOUS RESCHEDULER");
+  console.log("🔄 21-DAY MULTI-SPORT RESCHEDULER & ZERO-ASTERISK BUFFER SANITIZER");
   console.log("================================================================\n");
 
   const reportPath = path.resolve('scripts/multi-sport-scheduled-report.json');
@@ -101,7 +147,6 @@ async function runCatchup() {
 
   const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
   const queue = JSON.parse(fs.readFileSync(queuePath, 'utf8'));
-
   const queueMap = new Map(queue.map(q => [q.id, q]));
 
   let updatedCount = 0;
@@ -109,7 +154,6 @@ async function runCatchup() {
     const rep = report[item.id];
     if (!rep) continue;
 
-    // Check if already updated to target dueAt
     if (rep.dueAt === item.dueAt) {
       continue;
     }
@@ -117,6 +161,7 @@ async function runCatchup() {
     const postData = queueMap.get(item.id);
     if (!postData) continue;
 
+    const cleanText = postData.text.replace(/\*\*/g, '').replace(/\*/g, '');
     console.log(`Processing ${item.id} -> Day ${item.day} (${item.slot})...`);
     const resp = await sendGraphql({
       query: EDIT_MUTATION,
@@ -126,7 +171,7 @@ async function runCatchup() {
           dueAt: item.dueAt,
           mode: "customScheduled",
           schedulingType: "automatic",
-          text: postData.text,
+          text: cleanText,
           assets: [{ image: { url: postData.asset_url } }]
         }
       }
@@ -159,9 +204,11 @@ async function runCatchup() {
     }
   }
 
+  // Also clean asterisks on Buffer posts
+  await cleanBufferAsterisks();
+
   const fullyUpdated = PACED_SCHEDULE.filter(s => report[s.id]?.dueAt === s.dueAt).length;
   console.log(`\nProgress: ${fullyUpdated}/30 posts aligned with 21-day timeline.`);
-  return { fullyUpdated, total: PACED_SCHEDULE.length };
 }
 
 runCatchup().catch(console.error);
