@@ -93,7 +93,7 @@ In my athlete development work, I tell young athletes: talent gets you noticed, 
 
 For young competitors, parents, and coaches:
 Order 'Survival Skills for Athletes' ($14.99 CAD): https://lornettedaye.com/books"""
-        hashtags = "#JeremiahSmith #OhioState #Buckeyes #CollegeFootball #CFB #BigTen #WideReceiver #NextLevelReady #AthleteDevelopment #YouthSports #MentalFocus #CoachLornette #LornetteDaye #LD #Superpowers"
+        hashtags = "#JeremiahSmith #OhioState #Buckeyes #CollegeFootball #CFB #BigTen #WideReceiver #NextLevelReady #AthleteDevelopment #YouthSports #MentalFocus #OlympicCoach #LornetteDaye #LD #Superpowers"
 
     elif cycle == 2:
         # Jeremiah Smith - Built for the Big Moment

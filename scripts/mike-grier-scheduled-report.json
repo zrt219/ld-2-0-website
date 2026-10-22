@@ -1,0 +1,29 @@
+{
+  "GRIER_SERIES_01": {
+    "postId": "6ad975ef1093844846d9663b",
+    "status": "scheduled",
+    "dueAt": "2026-10-25T15:00:00.000Z",
+    "week": "Week 1",
+    "slot": "Sunday, Oct 25, 2026 (09:00 AM MDT)",
+    "theme": "The Transition: From 1,060 NHL Games to the Front Office",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-11-mike-grier-front-office.jpg"
+  },
+  "GRIER_SERIES_02": {
+    "postId": "6ad975f3282deeeeb2c5ed73",
+    "status": "scheduled",
+    "dueAt": "2026-11-01T16:00:00.000Z",
+    "week": "Week 2",
+    "slot": "Sunday, Nov 01, 2026 (09:00 AM MST)",
+    "theme": "Executive Leadership Under Pressure: Rebuilding an NHL Franchise",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-11-mike-grier-front-office.jpg"
+  },
+  "GRIER_SERIES_03": {
+    "postId": "6ad975f51093844846d966f6",
+    "status": "scheduled",
+    "dueAt": "2026-11-08T16:00:00.000Z",
+    "week": "Week 3",
+    "slot": "Sunday, Nov 08, 2026 (09:00 AM MST)",
+    "theme": "History in the Boardroom: Expanding Hockey's Horizons & Creating Legacy",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-11-mike-grier-front-office.jpg"
+  }
+}
