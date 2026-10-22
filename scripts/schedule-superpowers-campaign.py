@@ -355,6 +355,7 @@ def main():
             }
             with open(report_file, "w", encoding="utf-8") as f:
                 json.dump(scheduled_ids, f, indent=2)
+            time.sleep(2)  # Polite pacing between API requests
         else:
             print(f"   ⚠️ STOP / LIMIT: {res_id} - {res_status}")
             print(f"   Post will remain queued in {queue_file} for autonomous catchup.")

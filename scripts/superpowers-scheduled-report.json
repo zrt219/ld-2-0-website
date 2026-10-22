@@ -1,0 +1,296 @@
+{
+  "SUPERPOWER_001": {
+    "postId": "6ad97615282deeeeb2c5f07b",
+    "status": "sending",
+    "dueAt": "2026-10-21T21:00:00Z",
+    "mode": "shareNow",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-own-the-moment.jpg"
+  },
+  "SUPERPOWER_002": {
+    "postId": "6ad976207dadc432f736ed46",
+    "status": "scheduled",
+    "dueAt": "2026-10-22T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-raise-the-standard.jpg"
+  },
+  "SUPERPOWER_003": {
+    "postId": "6ad97620deacf5d2532761e9",
+    "status": "scheduled",
+    "dueAt": "2026-10-22T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-more-than-talent.jpg"
+  },
+  "SUPERPOWER_004": {
+    "postId": "6ad976217dadc432f736ed6f",
+    "status": "scheduled",
+    "dueAt": "2026-10-23T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-built-for-the-big-moment.jpg"
+  },
+  "SUPERPOWER_005": {
+    "postId": "6ad976227dadc432f736ed98",
+    "status": "scheduled",
+    "dueAt": "2026-10-23T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_006": {
+    "postId": "6ad976221093844846d96c9b",
+    "status": "scheduled",
+    "dueAt": "2026-10-24T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-own-the-moment.jpg"
+  },
+  "SUPERPOWER_007": {
+    "postId": "6ad97622282deeeeb2c5f238",
+    "status": "scheduled",
+    "dueAt": "2026-10-24T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_008": {
+    "postId": "6ad97623ecaa6cda04233ed1",
+    "status": "scheduled",
+    "dueAt": "2026-10-25T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-raise-the-standard.jpg"
+  },
+  "SUPERPOWER_009": {
+    "postId": "6ad97623ecaa6cda04233f06",
+    "status": "scheduled",
+    "dueAt": "2026-10-25T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-more-than-talent.jpg"
+  },
+  "SUPERPOWER_010": {
+    "postId": "6ad976247dadc432f736ede4",
+    "status": "scheduled",
+    "dueAt": "2026-10-26T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-built-for-the-big-moment.jpg"
+  },
+  "SUPERPOWER_011": {
+    "postId": "6ad97624b086d40f572d3484",
+    "status": "scheduled",
+    "dueAt": "2026-10-26T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_012": {
+    "postId": "6ad97625ecaa6cda04233f2f",
+    "status": "scheduled",
+    "dueAt": "2026-10-27T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-own-the-moment.jpg"
+  },
+  "SUPERPOWER_013": {
+    "postId": "6ad97625deacf5d253276281",
+    "status": "scheduled",
+    "dueAt": "2026-10-27T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_014": {
+    "postId": "6ad97625ecaa6cda04233f74",
+    "status": "scheduled",
+    "dueAt": "2026-10-28T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-raise-the-standard.jpg"
+  },
+  "SUPERPOWER_015": {
+    "postId": "6ad976267dadc432f736ee30",
+    "status": "scheduled",
+    "dueAt": "2026-10-28T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-more-than-talent.jpg"
+  },
+  "SUPERPOWER_016": {
+    "postId": "6ad976261093844846d96d2d",
+    "status": "scheduled",
+    "dueAt": "2026-10-29T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-built-for-the-big-moment.jpg"
+  },
+  "SUPERPOWER_017": {
+    "postId": "6ad97627b086d40f572d34f3",
+    "status": "scheduled",
+    "dueAt": "2026-10-29T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_018": {
+    "postId": "6ad97627282deeeeb2c5f2f4",
+    "status": "scheduled",
+    "dueAt": "2026-10-30T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-own-the-moment.jpg"
+  },
+  "SUPERPOWER_019": {
+    "postId": "6ad976281093844846d96d5c",
+    "status": "scheduled",
+    "dueAt": "2026-10-30T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_020": {
+    "postId": "6ad97628deacf5d25327632b",
+    "status": "scheduled",
+    "dueAt": "2026-10-31T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-raise-the-standard.jpg"
+  },
+  "SUPERPOWER_021": {
+    "postId": "6ad976297dadc432f736eeb3",
+    "status": "scheduled",
+    "dueAt": "2026-10-31T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-more-than-talent.jpg"
+  },
+  "SUPERPOWER_022": {
+    "postId": "6ad97629ecaa6cda04233fd5",
+    "status": "scheduled",
+    "dueAt": "2026-11-01T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-built-for-the-big-moment.jpg"
+  },
+  "SUPERPOWER_023": {
+    "postId": "6ad9762ab086d40f572d35e5",
+    "status": "scheduled",
+    "dueAt": "2026-11-01T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_024": {
+    "postId": "6ad9762a7dadc432f736ef06",
+    "status": "scheduled",
+    "dueAt": "2026-11-02T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-own-the-moment.jpg"
+  },
+  "SUPERPOWER_025": {
+    "postId": "6ad9762c282deeeeb2c5f365",
+    "status": "scheduled",
+    "dueAt": "2026-11-02T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_026": {
+    "postId": "6ad9762cb086d40f572d360d",
+    "status": "scheduled",
+    "dueAt": "2026-11-03T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-raise-the-standard.jpg"
+  },
+  "SUPERPOWER_027": {
+    "postId": "6ad9762cdeacf5d2532763a9",
+    "status": "scheduled",
+    "dueAt": "2026-11-03T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-more-than-talent.jpg"
+  },
+  "SUPERPOWER_028": {
+    "postId": "6ad9762d282deeeeb2c5f38f",
+    "status": "scheduled",
+    "dueAt": "2026-11-04T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-built-for-the-big-moment.jpg"
+  },
+  "SUPERPOWER_029": {
+    "postId": "6ad9762d1093844846d96df7",
+    "status": "scheduled",
+    "dueAt": "2026-11-04T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_030": {
+    "postId": "6ad9762edeacf5d2532763e7",
+    "status": "scheduled",
+    "dueAt": "2026-11-05T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-own-the-moment.jpg"
+  },
+  "SUPERPOWER_031": {
+    "postId": "6ad9762eb086d40f572d3650",
+    "status": "scheduled",
+    "dueAt": "2026-11-05T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_032": {
+    "postId": "6ad9762e282deeeeb2c5f54e",
+    "status": "scheduled",
+    "dueAt": "2026-11-06T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-raise-the-standard.jpg"
+  },
+  "SUPERPOWER_033": {
+    "postId": "6ad9762fb086d40f572d3682",
+    "status": "scheduled",
+    "dueAt": "2026-11-06T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-more-than-talent.jpg"
+  },
+  "SUPERPOWER_034": {
+    "postId": "6ad9762f282deeeeb2c5f59f",
+    "status": "scheduled",
+    "dueAt": "2026-11-07T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-built-for-the-big-moment.jpg"
+  },
+  "SUPERPOWER_035": {
+    "postId": "6ad97630b086d40f572d36ad",
+    "status": "scheduled",
+    "dueAt": "2026-11-07T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_036": {
+    "postId": "6ad97630ecaa6cda042340c9",
+    "status": "scheduled",
+    "dueAt": "2026-11-08T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-own-the-moment.jpg"
+  },
+  "SUPERPOWER_037": {
+    "postId": "6ad976311093844846d96e63",
+    "status": "scheduled",
+    "dueAt": "2026-11-08T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_038": {
+    "postId": "6ad97631deacf5d253276465",
+    "status": "scheduled",
+    "dueAt": "2026-11-09T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-raise-the-standard.jpg"
+  },
+  "SUPERPOWER_039": {
+    "postId": "6ad97632282deeeeb2c5f5f0",
+    "status": "scheduled",
+    "dueAt": "2026-11-09T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-more-than-talent.jpg"
+  },
+  "SUPERPOWER_040": {
+    "postId": "6ad97632ecaa6cda042340f3",
+    "status": "scheduled",
+    "dueAt": "2026-11-10T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/jeremiah-smith-built-for-the-big-moment.jpg"
+  },
+  "SUPERPOWER_041": {
+    "postId": "6ad97633282deeeeb2c5f618",
+    "status": "scheduled",
+    "dueAt": "2026-11-10T17:45:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/mike-grier-front-office.jpg"
+  },
+  "SUPERPOWER_042": {
+    "postId": "6ad97635282deeeeb2c5f66e",
+    "status": "scheduled",
+    "dueAt": "2026-11-11T08:15:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/champions/aja-wilson-own-the-moment.jpg"
+  }
+}
