@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "athlete": "Anthony Edwards (Hero - Personal Favorite)",
+    "slot": "Thursday Oct 22 (08:30 AM MDT)",
+    "dueAt": "2026-10-22T14:30:00.000Z",
+    "postId": "6ad96e771093844846d7ea83",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-01.png",
+    "cta": "Lornette's Foundations (lornettedaye.com/foundations)"
+  },
+  {
+    "id": 2,
+    "athlete": "Shai Gilgeous-Alexander",
+    "slot": "Thursday Oct 22 (01:00 PM MDT)",
+    "dueAt": "2026-10-22T19:00:00.000Z",
+    "postId": "6ad96e7bdeacf5d25325ec76",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-canadian-01-sga.png",
+    "cta": "Lornette's Foundations (lornettedaye.com/foundations)"
+  },
+  {
+    "id": 3,
+    "athlete": "Jamal Murray",
+    "slot": "Friday Oct 23 (08:30 AM MDT)",
+    "dueAt": "2026-10-23T14:30:00.000Z",
+    "postId": "6ad96e7fb086d40f572bb7a4",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-canadian-02-murray.png",
+    "cta": "Lornette's Foundations (lornettedaye.com/foundations)"
+  },
+  {
+    "id": 4,
+    "athlete": "RJ Barrett",
+    "slot": "Friday Oct 23 (01:00 PM MDT)",
+    "dueAt": "2026-10-23T19:00:00.000Z",
+    "postId": "6ad96e847dadc432f735819b",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-canadian-03-barrett.png",
+    "cta": "Lornette's Foundations (lornettedaye.com/foundations)"
+  },
+  {
+    "id": 5,
+    "athlete": "Luguentz Dort",
+    "slot": "Saturday Oct 24 (09:30 AM MDT)",
+    "dueAt": "2026-10-24T15:30:00.000Z",
+    "postId": "6ad96e87ecaa6cda0421c31e",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-canadian-05-dort.png",
+    "cta": "Lornette's Foundations (lornettedaye.com/foundations)"
+  },
+  {
+    "id": 6,
+    "athlete": "Nickeil Alexander-Walker",
+    "slot": "Sunday Oct 25 (10:00 AM MDT)",
+    "dueAt": "2026-10-25T16:00:00.000Z",
+    "postId": "6ad96e8b7dadc432f735892b",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-canadian-04-alexander-walker.png",
+    "cta": "Lornette's Foundations (lornettedaye.com/foundations)"
+  },
+  {
+    "id": 7,
+    "athlete": "Andrew Nembhard",
+    "slot": "Monday Oct 26 (08:15 AM MDT)",
+    "dueAt": "2026-10-26T14:15:00.000Z",
+    "postId": "6ad96e8eecaa6cda0421c4f2",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-canadian-09-nembhard.png",
+    "cta": "Lornette's Foundations (lornettedaye.com/foundations)"
+  },
+  {
+    "id": 8,
+    "athlete": "Bennedict Mathurin",
+    "slot": "Monday Oct 26 (01:30 PM MDT)",
+    "dueAt": "2026-10-26T19:30:00.000Z",
+    "postId": "6ad96e92b086d40f572bc035",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-canadian-07-mathurin.png",
+    "cta": "Lornette's Foundations (lornettedaye.com/foundations)"
+  },
+  {
+    "id": 9,
+    "athlete": "Zach Edey",
+    "slot": "Tuesday Oct 27 (08:30 AM MDT)",
+    "dueAt": "2026-10-27T14:30:00.000Z",
+    "postId": "6ad96e95ecaa6cda0421c6ca",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-canadian-08-edey.png",
+    "cta": "Lornette's Foundations (lornettedaye.com/foundations)"
+  },
+  {
+    "id": 10,
+    "athlete": "Shaedon Sharpe",
+    "slot": "Wednesday Oct 28 (08:30 AM MDT)",
+    "dueAt": "2026-10-28T14:30:00.000Z",
+    "postId": "6ad96e981093844846d7f33d",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-canadian-06-sharpe.png",
+    "cta": "Lornette's Foundations (lornettedaye.com/foundations)"
+  },
+  {
+    "id": 11,
+    "athlete": "Dillon Brooks",
+    "slot": "Thursday Oct 29 (08:30 AM MDT)",
+    "dueAt": "2026-10-29T14:30:00.000Z",
+    "postId": "6ad96e9bb086d40f572bc5c2",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/nba/nba-canadian-10-brooks.png",
+    "cta": "Lornette's Foundations (lornettedaye.com/foundations)"
+  }
+]
