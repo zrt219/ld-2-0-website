@@ -72,208 +72,231 @@
   "CAMPAIGN_MULTI_008": {
     "postId": "6ad972bfb086d40f572c9e16",
     "status": "scheduled",
-    "dueAt": "2026-11-01T20:00:00.000Z",
+    "dueAt": "2026-11-03T22:00:00.000Z",
     "sport": "Grant Fuhr",
     "title": "Golden Goaltending Legacy: Spruce Grove Roots",
-    "slot": "Day 3 Mid-Day (01:00 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-03-golden-legacy.png"
+    "slot": "Day 5 Afternoon (03:00 PM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-03-golden-legacy.png",
+    "day": 5
   },
   "CAMPAIGN_MULTI_009": {
     "postId": "6ad972c21093844846d8cc63",
     "status": "scheduled",
-    "dueAt": "2026-11-01T23:30:00.000Z",
+    "dueAt": "2026-11-04T15:30:00.000Z",
     "sport": "Hockey",
     "title": "Wayne Simmonds: Every Shift",
-    "slot": "Day 3 Late Afternoon (04:30 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-03-wayne-simmonds.png"
+    "slot": "Day 6 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-03-wayne-simmonds.png",
+    "day": 6
   },
   "CAMPAIGN_MULTI_010": {
     "postId": "6ad972c5ecaa6cda0422b1b7",
     "status": "scheduled",
-    "dueAt": "2026-11-02T15:15:00.000Z",
+    "dueAt": "2026-11-05T15:30:00.000Z",
     "sport": "Football",
     "title": "Jevon Holland: Coquitlam to the Big Stage",
-    "slot": "Day 4 Morning (08:15 AM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/football/football-04-jevon-holland.png"
+    "slot": "Day 7 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/football/football-04-jevon-holland.png",
+    "day": 7
   },
   "CAMPAIGN_MULTI_011": {
     "postId": "6ad972c8b086d40f572c9ee4",
     "status": "scheduled",
-    "dueAt": "2026-11-02T20:00:00.000Z",
+    "dueAt": "2026-11-05T22:00:00.000Z",
     "sport": "Grant Fuhr",
     "title": "Edmonton's Golden Legend: Poise Defined an Era",
-    "slot": "Day 4 Mid-Day (01:00 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-04-edmontons-golden-legend.png"
+    "slot": "Day 7 Afternoon (03:00 PM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-04-edmontons-golden-legend.png",
+    "day": 7
   },
   "CAMPAIGN_MULTI_012": {
     "postId": "6ad972ca1093844846d8ce90",
     "status": "scheduled",
-    "dueAt": "2026-11-02T23:30:00.000Z",
+    "dueAt": "2026-11-06T15:30:00.000Z",
     "sport": "Hockey",
     "title": "P.K. Subban: He Changed The Game His Way",
-    "slot": "Day 4 Late Afternoon (04:30 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-04-pk-subban.png"
+    "slot": "Day 8 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-04-pk-subban.png",
+    "day": 8
   },
   "CAMPAIGN_MULTI_013": {
     "postId": "6ad972ce7dadc432f7366143",
     "status": "scheduled",
-    "dueAt": "2026-11-03T15:15:00.000Z",
+    "dueAt": "2026-11-07T15:30:00.000Z",
     "sport": "Football",
     "title": "Elic Ayomanor: Medicine Hat, Big League Dreams",
-    "slot": "Day 5 Morning (08:15 AM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/football/football-05-elic-ayomanor.png"
+    "slot": "Day 9 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/football/football-05-elic-ayomanor.png",
+    "day": 9
   },
   "CAMPAIGN_MULTI_014": {
     "postId": "6ad972d37dadc432f7366213",
     "status": "scheduled",
-    "dueAt": "2026-11-03T20:00:00.000Z",
+    "dueAt": "2026-11-07T22:00:00.000Z",
     "sport": "Grant Fuhr",
     "title": "The Greatest: Legacy Built Save By Save",
-    "slot": "Day 5 Mid-Day (01:00 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-05-the-greatest.png"
+    "slot": "Day 9 Afternoon (03:00 PM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-05-the-greatest.png",
+    "day": 9
   },
   "CAMPAIGN_MULTI_015": {
     "postId": "6ad972d8deacf5d25326dae3",
     "status": "scheduled",
-    "dueAt": "2026-11-03T23:30:00.000Z",
+    "dueAt": "2026-11-08T18:00:00.000Z",
     "sport": "Hockey",
     "title": "Quinton Byfield: The Next Era Is His To Shape",
-    "slot": "Day 5 Late Afternoon (04:30 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-05-quinton-byfield.png"
+    "slot": "Day 10 Mid-Day (11:00 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-05-quinton-byfield.png",
+    "day": 10
   },
   "CAMPAIGN_MULTI_016": {
     "postId": "6ad972dcb086d40f572ca34e",
     "status": "scheduled",
-    "dueAt": "2026-11-04T15:15:00.000Z",
+    "dueAt": "2026-11-09T18:00:00.000Z",
     "sport": "Football",
     "title": "Joshua Palmer: Brampton Built. Buffalo Ready.",
-    "slot": "Day 6 Morning (08:15 AM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/football/football-06-joshua-palmer.png"
+    "slot": "Day 11 Mid-Day (11:00 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/football/football-06-joshua-palmer.png",
+    "day": 11
   },
   "CAMPAIGN_MULTI_017": {
     "postId": "6ad972dfb086d40f572ca4d1",
     "status": "scheduled",
-    "dueAt": "2026-11-04T20:00:00.000Z",
+    "dueAt": "2026-11-10T15:30:00.000Z",
     "sport": "Grant Fuhr",
     "title": "Goaltending Greatness: Hall of Fame History",
-    "slot": "Day 6 Mid-Day (01:00 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-06-goaltending-greatness.png"
+    "slot": "Day 12 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-06-goaltending-greatness.png",
+    "day": 12
   },
   "CAMPAIGN_MULTI_018": {
     "postId": "6ad972e21093844846d8d5cf",
     "status": "scheduled",
-    "dueAt": "2026-11-04T23:30:00.000Z",
+    "dueAt": "2026-11-10T22:00:00.000Z",
     "sport": "Hockey",
     "title": "Jet Greaves: From Cambridge to the Crease",
-    "slot": "Day 6 Late Afternoon (04:30 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-06-jet-greaves.png"
+    "slot": "Day 12 Afternoon (03:00 PM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-06-jet-greaves.png",
+    "day": 12
   },
   "CAMPAIGN_MULTI_019": {
     "postId": "6ad972e5b086d40f572ca5c7",
     "status": "scheduled",
-    "dueAt": "2026-11-05T15:15:00.000Z",
+    "dueAt": "2026-11-11T15:30:00.000Z",
     "sport": "Football",
     "title": "John Metchie III: Bigger Than Football",
-    "slot": "Day 7 Morning (08:15 AM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/football/football-07-john-metchie.png"
+    "slot": "Day 13 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/football/football-07-john-metchie.png",
+    "day": 13
   },
   "CAMPAIGN_MULTI_020": {
     "postId": "6ad972e8ecaa6cda0422bb31",
     "status": "scheduled",
-    "dueAt": "2026-11-05T20:00:00.000Z",
+    "dueAt": "2026-11-12T15:30:00.000Z",
     "sport": "Grant Fuhr",
     "title": "Legendary Goaltender: When The Game Got Loud",
-    "slot": "Day 7 Mid-Day (01:00 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-07-legendary-goaltender.png"
+    "slot": "Day 14 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-07-legendary-goaltender.png",
+    "day": 14
   },
   "CAMPAIGN_MULTI_021": {
     "postId": "6ad972eab086d40f572ca6d1",
     "status": "scheduled",
-    "dueAt": "2026-11-05T23:30:00.000Z",
+    "dueAt": "2026-11-12T22:00:00.000Z",
     "sport": "Hockey",
     "title": "Anthony Duclair: Speed. Skill. Purpose.",
-    "slot": "Day 7 Late Afternoon (04:30 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-07-anthony-duclair.png"
+    "slot": "Day 14 Afternoon (03:00 PM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-07-anthony-duclair.png",
+    "day": 14
   },
   "CAMPAIGN_MULTI_022": {
     "postId": "6ad972edb086d40f572ca70e",
     "status": "scheduled",
-    "dueAt": "2026-11-06T15:15:00.000Z",
+    "dueAt": "2026-11-13T15:30:00.000Z",
     "sport": "Football",
     "title": "Theo Johnson: Windsor to New York",
-    "slot": "Day 8 Morning (08:15 AM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/football/football-08-theo-johnson.png"
+    "slot": "Day 15 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/football/football-08-theo-johnson.png",
+    "day": 15
   },
   "CAMPAIGN_MULTI_023": {
     "postId": "6ad972f0282deeeeb2c57810",
     "status": "scheduled",
-    "dueAt": "2026-11-06T20:00:00.000Z",
+    "dueAt": "2026-11-14T15:30:00.000Z",
     "sport": "Grant Fuhr",
     "title": "Canadian Hockey Legend: Number 31 Retired",
-    "slot": "Day 8 Mid-Day (01:00 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-08-canadian-hockey-legend.png"
+    "slot": "Day 16 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-08-canadian-hockey-legend.png",
+    "day": 16
   },
   "CAMPAIGN_MULTI_024": {
     "postId": "6ad972f4282deeeeb2c578f6",
     "status": "scheduled",
-    "dueAt": "2026-11-06T23:30:00.000Z",
+    "dueAt": "2026-11-14T22:00:00.000Z",
     "sport": "Hockey",
     "title": "K'Andre Miller: The Ring Tells Part of the Story",
-    "slot": "Day 8 Late Afternoon (04:30 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-08-kandre-miller.png"
+    "slot": "Day 16 Afternoon (03:00 PM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-08-kandre-miller.png",
+    "day": 16
   },
   "CAMPAIGN_MULTI_025": {
     "postId": "6ad972f7282deeeeb2c5796c",
     "status": "scheduled",
-    "dueAt": "2026-11-07T15:15:00.000Z",
+    "dueAt": "2026-11-15T18:00:00.000Z",
     "sport": "Football",
     "title": "Akheem Mesidor: Ottawa Produced an NFL Pass Rusher",
-    "slot": "Day 9 Morning (08:15 AM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/football/football-09-akheem-mesidor.png"
+    "slot": "Day 17 Mid-Day (11:00 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/football/football-09-akheem-mesidor.png",
+    "day": 17
   },
   "CAMPAIGN_MULTI_026": {
     "postId": "6ad972f9deacf5d25326df13",
     "status": "scheduled",
-    "dueAt": "2026-11-07T20:00:00.000Z",
+    "dueAt": "2026-11-16T18:00:00.000Z",
     "sport": "Grant Fuhr",
     "title": "Canadian Goaltending Excellence: World-Class Game",
-    "slot": "Day 9 Mid-Day (01:00 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-09-goaltending-excellence.png"
+    "slot": "Day 18 Mid-Day (11:00 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-09-goaltending-excellence.png",
+    "day": 18
   },
   "CAMPAIGN_MULTI_027": {
     "postId": "6ad972fc1093844846d8dcaf",
     "status": "scheduled",
-    "dueAt": "2026-11-07T23:30:00.000Z",
+    "dueAt": "2026-11-17T15:30:00.000Z",
     "sport": "Hockey",
     "title": "Darnell Nurse: New Colours. Determination.",
-    "slot": "Day 9 Late Afternoon (04:30 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-09-darnell-nurse.png"
+    "slot": "Day 19 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-09-darnell-nurse.png",
+    "day": 19
   },
   "CAMPAIGN_MULTI_028": {
     "postId": "6ad972ff282deeeeb2c57a27",
     "status": "scheduled",
-    "dueAt": "2026-11-08T15:15:00.000Z",
+    "dueAt": "2026-11-17T22:00:00.000Z",
     "sport": "Football",
     "title": "Matthew Bergeron: Quebec Roots. Atlanta Stage.",
-    "slot": "Day 10 Morning (08:15 AM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/football/football-10-matthew-bergeron.png"
+    "slot": "Day 19 Afternoon (03:00 PM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/football/football-10-matthew-bergeron.png",
+    "day": 19
   },
   "CAMPAIGN_MULTI_029": {
     "postId": "6ad97302b086d40f572ca935",
     "status": "scheduled",
-    "dueAt": "2026-11-08T20:00:00.000Z",
+    "dueAt": "2026-11-18T15:30:00.000Z",
     "sport": "Grant Fuhr",
     "title": "A Canadian Legend: 100 Greatest Players",
-    "slot": "Day 10 Mid-Day (01:00 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-10-a-canadian-legend.png"
+    "slot": "Day 20 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/fuhr/fuhr-10-a-canadian-legend.png",
+    "day": 20
   },
   "CAMPAIGN_MULTI_030": {
     "postId": "6ad97305282deeeeb2c57afb",
     "status": "scheduled",
-    "dueAt": "2026-11-08T23:30:00.000Z",
+    "dueAt": "2026-11-19T15:30:00.000Z",
     "sport": "Hockey",
     "title": "Willie O'Ree: A Pioneer. A Trailblazer. A Lasting Legacy.",
-    "slot": "Day 10 Late Afternoon (04:30 PM MST)",
-    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-10-willie-oree-legacy.png"
+    "slot": "Day 21 Morning (08:30 AM MST)",
+    "asset_url": "https://lornettedaye.com/campaigns/hockey/hockey-10-willie-oree-legacy.png",
+    "day": 21
   }
 }
