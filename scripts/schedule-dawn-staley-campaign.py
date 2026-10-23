@@ -17,6 +17,7 @@ import sys
 import os
 import json
 import ssl
+import time
 import urllib.request
 import urllib.error
 from datetime import datetime, timedelta
@@ -130,7 +131,7 @@ def build_queue():
         ("Evening", 18, 30)
     ]
     
-    start_date = datetime(2026, 10, 22)
+    start_date = datetime(2026, 10, 23)
     post_idx = 1
     
     for day_offset in range(28):
