@@ -1,0 +1,82 @@
+{
+  "YAXEL_001": {
+    "postId": "6adc1959e4be8a4d8638f453",
+    "status": "scheduled",
+    "dueAt": "2026-10-24T14:30:00.000Z",
+    "slot": "Day 1 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-01.png"
+  },
+  "YAXEL_002": {
+    "postId": "6adc195a8b3d437ddc99899b",
+    "status": "scheduled",
+    "dueAt": "2026-10-26T14:30:00.000Z",
+    "slot": "Day 3 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-02.png"
+  },
+  "YAXEL_003": {
+    "postId": "6adc195c8b3d437ddc9989d3",
+    "status": "scheduled",
+    "dueAt": "2026-10-28T14:30:00.000Z",
+    "slot": "Day 5 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-03.png"
+  },
+  "YAXEL_004": {
+    "postId": "6adc195e8b3d437ddc998a11",
+    "status": "scheduled",
+    "dueAt": "2026-10-30T14:30:00.000Z",
+    "slot": "Day 7 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-04.png"
+  },
+  "YAXEL_005": {
+    "postId": "6adc195fe4be8a4d8638f5ab",
+    "status": "scheduled",
+    "dueAt": "2026-11-01T15:30:00.000Z",
+    "slot": "Day 9 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-05.png"
+  },
+  "YAXEL_006": {
+    "postId": "6adc19610b5343d070606e05",
+    "status": "scheduled",
+    "dueAt": "2026-11-03T15:30:00.000Z",
+    "slot": "Day 11 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-06.png"
+  },
+  "YAXEL_007": {
+    "postId": "6adc19638b3d437ddc998a94",
+    "status": "scheduled",
+    "dueAt": "2026-11-05T15:30:00.000Z",
+    "slot": "Day 13 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-07.png"
+  },
+  "YAXEL_008": {
+    "postId": "6adc19640b5343d070606e7d",
+    "status": "scheduled",
+    "dueAt": "2026-11-07T15:30:00.000Z",
+    "slot": "Day 15 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-08.png"
+  },
+  "YAXEL_009": {
+    "postId": "6adc19660b5343d070606ea9",
+    "status": "scheduled",
+    "dueAt": "2026-11-10T15:30:00.000Z",
+    "slot": "Day 18 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-09.png"
+  },
+  "YAXEL_010": {
+    "postId": "6adc1968bd33ce99c300ba7a",
+    "status": "scheduled",
+    "dueAt": "2026-11-13T15:30:00.000Z",
+    "slot": "Day 21 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-10.png"
+  }
+}
