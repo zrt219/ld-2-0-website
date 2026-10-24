@@ -177,8 +177,22 @@ Olympic-level Coach and Canadian National Champion
 
     return text
 
+REPEAT_DATES = [
+    {"ad_num": 1, "dueAt": "2026-11-15T15:30:00.000Z", "slot": "Encore Day 1 (Sun Nov 15, 08:30 AM MST)"},
+    {"ad_num": 2, "dueAt": "2026-11-16T15:30:00.000Z", "slot": "Encore Day 2 (Mon Nov 16, 08:30 AM MST)"},
+    {"ad_num": 3, "dueAt": "2026-11-18T15:30:00.000Z", "slot": "Encore Day 4 (Wed Nov 18, 08:30 AM MST)"},
+    {"ad_num": 4, "dueAt": "2026-11-19T15:30:00.000Z", "slot": "Encore Day 5 (Thu Nov 19, 08:30 AM MST)"},
+    {"ad_num": 5, "dueAt": "2026-11-21T15:30:00.000Z", "slot": "Encore Day 7 (Sat Nov 21, 08:30 AM MST)"},
+    {"ad_num": 6, "dueAt": "2026-11-22T15:30:00.000Z", "slot": "Encore Day 8 (Sun Nov 22, 08:30 AM MST)"},
+    {"ad_num": 7, "dueAt": "2026-11-24T15:30:00.000Z", "slot": "Encore Day 10 (Tue Nov 24, 08:30 AM MST)"},
+    {"ad_num": 8, "dueAt": "2026-11-25T15:30:00.000Z", "slot": "Encore Day 11 (Wed Nov 25, 08:30 AM MST)"},
+    {"ad_num": 9, "dueAt": "2026-11-27T15:30:00.000Z", "slot": "Encore Day 13 (Fri Nov 27, 08:30 AM MST)"},
+    {"ad_num": 10, "dueAt": "2026-11-28T15:30:00.000Z", "slot": "Encore Day 14 (Sat Nov 28, 08:30 AM MST)"}
+]
+
 def build_queue():
     queue = []
+    # 1. First 3-week run (Oct 24 - Nov 13, 2026)
     for item in CAMPAIGN_DATA:
         img_name = f"yaxel-{item['ad_num']:02d}.png"
         img_url = f"{BASE_URL}/{img_name}"
@@ -197,6 +211,29 @@ def build_queue():
             "asset_type": "image",
             "text": post_text
         })
+
+    # 2. Second 2-week repeat run (Nov 15 - Nov 28, 2026)
+    data_by_ad = {item["ad_num"]: item for item in CAMPAIGN_DATA}
+    for rpt in REPEAT_DATES:
+        item = data_by_ad[rpt["ad_num"]]
+        img_name = f"yaxel-{item['ad_num']:02d}.png"
+        img_url = f"{BASE_URL}/{img_name}"
+        post_text = build_post_text(item)
+        
+        queue.append({
+            "id": f"YAXEL_REPEAT_{item['ad_num']:03d}",
+            "ad_num": item["ad_num"],
+            "title": item["title"],
+            "slot": rpt["slot"],
+            "dueAt": rpt["dueAt"],
+            "channel_id": CHANNEL_ID,
+            "mode": "customScheduled",
+            "schedulingType": "automatic",
+            "asset_url": img_url,
+            "asset_type": "image",
+            "text": post_text
+        })
+        
     return queue
 
 def main():
