@@ -176,6 +176,61 @@ async function runCocoRacismQueue() {
   return true;
 }
 
+// 3. Yaxel Lendeborg 3-Week Campaign Processing
+async function runYaxelQueue() {
+  console.log("\n--- Processing 3-Week Yaxel Lendeborg Campaign Queue ---");
+  const queuePath = path.resolve('scripts/master-yaxel-queue.json');
+  const reportPath = path.resolve('scripts/yaxel-scheduled-report.json');
+
+  if (!fs.existsSync(queuePath)) return;
+
+  const queue = JSON.parse(fs.readFileSync(queuePath, 'utf8'));
+  const report = fs.existsSync(reportPath) ? JSON.parse(fs.readFileSync(reportPath, 'utf8')) : {};
+
+  for (const item of queue) {
+    if (report[item.id]) continue;
+
+    console.log(`Scheduling AD ${item.ad_num}: ${item.id} | ${item.slot}...`);
+    const resp = await sendGraphql({
+      query: CREATE_POST_MUTATION,
+      variables: {
+        input: {
+          channelId: CHANNEL_ID,
+          text: item.text,
+          schedulingType: "automatic",
+          mode: item.mode || "customScheduled",
+          dueAt: item.dueAt,
+          assets: [{ image: { url: item.asset_url } }]
+        }
+      }
+    });
+
+    if (resp.error === 429) {
+      console.log(`⚠️ Rate limit active. Retry-After: ${resp.retryAfter}s`);
+      return false;
+    }
+
+    if (resp.data?.createPost?.__typename === 'PostActionSuccess') {
+      const p = resp.data.createPost.post;
+      console.log(`   ✅ SUCCESS: Post ${p.id} (${p.status})`);
+      report[item.id] = {
+        postId: p.id,
+        status: p.status,
+        dueAt: item.dueAt,
+        slot: item.slot,
+        mode: item.mode,
+        asset_url: item.asset_url
+      };
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), 'utf8');
+      await new Promise(r => setTimeout(r, 1200));
+    } else {
+      console.log(`   ⚠️ Failed to schedule ${item.id}:`, JSON.stringify(resp));
+      return false;
+    }
+  }
+  return true;
+}
+
 async function runMaster() {
   console.log("================================================================");
   console.log("🚀 MASTER AUTONOMOUS CAMPAIGN SCHEDULER & RECOVERY ENGINE");
@@ -192,6 +247,13 @@ async function runMaster() {
   const cocoOk = await runCocoRacismQueue();
   if (!cocoOk) {
     console.log("\nPaused on Coco Gauff due to Buffer quota limit. Waiting for timer reset.");
+    return;
+  }
+
+  // 3. Schedule 3-Week Yaxel Lendeborg
+  const yaxelOk = await runYaxelQueue();
+  if (!yaxelOk) {
+    console.log("\nPaused on Yaxel Lendeborg due to Buffer quota limit. Waiting for timer reset.");
     return;
   }
 
