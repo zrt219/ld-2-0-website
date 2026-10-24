@@ -460,5 +460,131 @@
     "dueAt": "2026-11-13T18:30:00Z",
     "mode": "customScheduled",
     "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-06.png"
+  },
+  "DAWN_STALEY_067": {
+    "postId": "6adc0e19bd33ce99c3fde537",
+    "status": "scheduled",
+    "dueAt": "2026-11-14T08:00:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-07.png"
+  },
+  "DAWN_STALEY_068": {
+    "postId": "6adc0e1a0b5343d0705d88e7",
+    "status": "scheduled",
+    "dueAt": "2026-11-14T13:00:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-08.png"
+  },
+  "DAWN_STALEY_069": {
+    "postId": "6adc0e1bbd33ce99c3fde59c",
+    "status": "scheduled",
+    "dueAt": "2026-11-14T18:30:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-09.png"
+  },
+  "DAWN_STALEY_070": {
+    "postId": "6adc0e1d3d5b27036b5fcfd7",
+    "status": "scheduled",
+    "dueAt": "2026-11-15T08:00:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-10.png"
+  },
+  "DAWN_STALEY_071": {
+    "postId": "6adc0e1ee4be8a4d8635ee55",
+    "status": "scheduled",
+    "dueAt": "2026-11-15T13:00:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-11.png"
+  },
+  "DAWN_STALEY_072": {
+    "postId": "6adc0e1f6887a2efc19317eb",
+    "status": "scheduled",
+    "dueAt": "2026-11-15T18:30:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-12.png"
+  },
+  "DAWN_STALEY_073": {
+    "postId": "6adc0e218b3d437ddc9693bb",
+    "status": "scheduled",
+    "dueAt": "2026-11-16T08:00:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-01.png"
+  },
+  "DAWN_STALEY_074": {
+    "postId": "6adc0e22bd33ce99c3fde658",
+    "status": "scheduled",
+    "dueAt": "2026-11-16T13:00:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-02.png"
+  },
+  "DAWN_STALEY_075": {
+    "postId": "6adc0e248b3d437ddc969416",
+    "status": "scheduled",
+    "dueAt": "2026-11-16T18:30:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-03.png"
+  },
+  "DAWN_STALEY_076": {
+    "postId": "6adc0e25bd33ce99c3fdeccc",
+    "status": "scheduled",
+    "dueAt": "2026-11-17T08:00:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-04.png"
+  },
+  "DAWN_STALEY_077": {
+    "postId": "6adc0e260b5343d0705d8a85",
+    "status": "scheduled",
+    "dueAt": "2026-11-17T13:00:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-05.png"
+  },
+  "DAWN_STALEY_078": {
+    "postId": "6adc0e288b3d437ddc969508",
+    "status": "scheduled",
+    "dueAt": "2026-11-17T18:30:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-06.png"
+  },
+  "DAWN_STALEY_079": {
+    "postId": "6adc0e29e4be8a4d8635f4c2",
+    "status": "scheduled",
+    "dueAt": "2026-11-18T08:00:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-07.png"
+  },
+  "DAWN_STALEY_080": {
+    "postId": "6adc0e2a6887a2efc1931f4f",
+    "status": "scheduled",
+    "dueAt": "2026-11-18T13:00:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-08.png"
+  },
+  "DAWN_STALEY_081": {
+    "postId": "6adc0e2ce4be8a4d8635f507",
+    "status": "scheduled",
+    "dueAt": "2026-11-18T18:30:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-09.png"
+  },
+  "DAWN_STALEY_082": {
+    "postId": "6adc0e2de4be8a4d8635f539",
+    "status": "scheduled",
+    "dueAt": "2026-11-19T08:00:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-10.png"
+  },
+  "DAWN_STALEY_083": {
+    "postId": "6adc0e2ebd33ce99c3fdee54",
+    "status": "scheduled",
+    "dueAt": "2026-11-19T13:00:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-11.png"
+  },
+  "DAWN_STALEY_084": {
+    "postId": "6adc0e306887a2efc193201e",
+    "status": "scheduled",
+    "dueAt": "2026-11-19T18:30:00Z",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/dawn-staley/dawn-staley-12.png"
   }
 }

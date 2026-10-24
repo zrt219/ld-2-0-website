@@ -1,0 +1,731 @@
+{
+  "COCO_RACISM_001": {
+    "postId": "6adc0e320b5343d0705d8be4",
+    "status": "scheduled",
+    "dueAt": "2026-10-24T02:30:00.000Z",
+    "slot": "Day 1 Launch Evening (08:30 PM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-video-01.mp4",
+    "asset_type": "video"
+  },
+  "COCO_RACISM_002": {
+    "postId": "6adc0e34e4be8a4d8635f600",
+    "status": "scheduled",
+    "dueAt": "2026-10-24T14:30:00.000Z",
+    "slot": "Day 2 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-01.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_003": {
+    "postId": "6adc0e356887a2efc19320d9",
+    "status": "scheduled",
+    "dueAt": "2026-10-25T14:30:00.000Z",
+    "slot": "Day 3 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-02.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_004": {
+    "postId": "6adc0e370b5343d0705d8c62",
+    "status": "scheduled",
+    "dueAt": "2026-10-26T14:30:00.000Z",
+    "slot": "Day 4 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-03.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_005": {
+    "postId": "6adc0e396887a2efc1932158",
+    "status": "scheduled",
+    "dueAt": "2026-10-27T14:30:00.000Z",
+    "slot": "Day 5 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-04.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_006": {
+    "postId": "6adc0e3be4be8a4d8635f7bd",
+    "status": "scheduled",
+    "dueAt": "2026-10-28T14:30:00.000Z",
+    "slot": "Day 6 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-05.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_007": {
+    "postId": "6adc0e3c3d5b27036b5fd826",
+    "status": "scheduled",
+    "dueAt": "2026-10-29T14:30:00.000Z",
+    "slot": "Day 7 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-06.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_008": {
+    "postId": "6adc0e3e3d5b27036b5fd857",
+    "status": "scheduled",
+    "dueAt": "2026-10-30T14:30:00.000Z",
+    "slot": "Day 8 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-07.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_009": {
+    "postId": "6adc0e406887a2efc19323c6",
+    "status": "scheduled",
+    "dueAt": "2026-10-31T14:30:00.000Z",
+    "slot": "Day 9 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-08.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_010": {
+    "postId": "6adc0e428b3d437ddc969abe",
+    "status": "scheduled",
+    "dueAt": "2026-11-01T14:30:00.000Z",
+    "slot": "Day 10 Morning (08:30 AM MDT)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-09.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_011": {
+    "postId": "6adc0e433d5b27036b5fd8d4",
+    "status": "scheduled",
+    "dueAt": "2026-11-02T15:30:00.000Z",
+    "slot": "Day 11 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-10.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_012": {
+    "postId": "6adc0e450b5343d0705d8f75",
+    "status": "scheduled",
+    "dueAt": "2026-11-03T15:30:00.000Z",
+    "slot": "Day 12 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-11.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_013": {
+    "postId": "6adc0e47e4be8a4d8635f969",
+    "status": "scheduled",
+    "dueAt": "2026-11-04T15:30:00.000Z",
+    "slot": "Day 13 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-12.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_014": {
+    "postId": "6adc0e498b3d437ddc969bd6",
+    "status": "scheduled",
+    "dueAt": "2026-11-05T15:30:00.000Z",
+    "slot": "Day 14 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-13.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_015": {
+    "postId": "6adc0e4b3d5b27036b5fd996",
+    "status": "scheduled",
+    "dueAt": "2026-11-06T15:30:00.000Z",
+    "slot": "Day 15 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-14.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_016": {
+    "postId": "6adc0e4dbd33ce99c3fdf10e",
+    "status": "scheduled",
+    "dueAt": "2026-11-07T15:30:00.000Z",
+    "slot": "Day 16 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-15.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_017": {
+    "postId": "6adc0e4e8b3d437ddc969cbe",
+    "status": "scheduled",
+    "dueAt": "2026-11-08T15:30:00.000Z",
+    "slot": "Day 17 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-16.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_018": {
+    "postId": "6adc0e503d5b27036b5fda28",
+    "status": "scheduled",
+    "dueAt": "2026-11-09T15:30:00.000Z",
+    "slot": "Day 18 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-17.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_019": {
+    "postId": "6adc0e52bd33ce99c3fdf218",
+    "status": "scheduled",
+    "dueAt": "2026-11-10T15:30:00.000Z",
+    "slot": "Day 19 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-18.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_020": {
+    "postId": "6adc0e546887a2efc1932892",
+    "status": "scheduled",
+    "dueAt": "2026-11-11T15:30:00.000Z",
+    "slot": "Day 20 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-19.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_021": {
+    "postId": "6adc0e568b3d437ddc969d97",
+    "status": "scheduled",
+    "dueAt": "2026-11-12T15:30:00.000Z",
+    "slot": "Day 21 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-20.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_022": {
+    "postId": "6adc0e586887a2efc19328c3",
+    "status": "scheduled",
+    "dueAt": "2026-11-13T15:30:00.000Z",
+    "slot": "Day 22 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-21.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_023": {
+    "postId": "6adc0e598b3d437ddc969de5",
+    "status": "scheduled",
+    "dueAt": "2026-11-14T15:30:00.000Z",
+    "slot": "Day 23 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-22.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_024": {
+    "postId": "6adc0e5bbd33ce99c3fdf2e6",
+    "status": "scheduled",
+    "dueAt": "2026-11-15T15:30:00.000Z",
+    "slot": "Day 24 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-23.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_025": {
+    "postId": "6adc0e5d3d5b27036b5fdb70",
+    "status": "scheduled",
+    "dueAt": "2026-11-16T15:30:00.000Z",
+    "slot": "Day 25 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-24.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_026": {
+    "postId": "6adc0e5f6887a2efc1932960",
+    "status": "scheduled",
+    "dueAt": "2026-11-17T15:30:00.000Z",
+    "slot": "Day 26 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-25.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_027": {
+    "postId": "6adc0e606887a2efc1932988",
+    "status": "scheduled",
+    "dueAt": "2026-11-18T15:30:00.000Z",
+    "slot": "Day 27 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-26.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_028": {
+    "postId": "6adc0e626887a2efc19329b0",
+    "status": "scheduled",
+    "dueAt": "2026-11-19T15:30:00.000Z",
+    "slot": "Day 28 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-27.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_029": {
+    "postId": "6adc0e64bd33ce99c3fdf3ba",
+    "status": "scheduled",
+    "dueAt": "2026-11-20T15:30:00.000Z",
+    "slot": "Day 29 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-28.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_030": {
+    "postId": "6adc0e66e4be8a4d8635fc72",
+    "status": "scheduled",
+    "dueAt": "2026-11-21T15:30:00.000Z",
+    "slot": "Day 30 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-29.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_031": {
+    "postId": "6adc0e67bd33ce99c3fdf41b",
+    "status": "scheduled",
+    "dueAt": "2026-11-22T15:30:00.000Z",
+    "slot": "Day 31 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-30.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_032": {
+    "postId": "6adc0e690b5343d0705d9506",
+    "status": "scheduled",
+    "dueAt": "2026-11-23T15:30:00.000Z",
+    "slot": "Day 32 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-video-01.mp4",
+    "asset_type": "video"
+  },
+  "COCO_RACISM_033": {
+    "postId": "6adc0e6b6887a2efc1932a7a",
+    "status": "scheduled",
+    "dueAt": "2026-11-24T15:30:00.000Z",
+    "slot": "Day 33 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-01.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_034": {
+    "postId": "6adc0e6c8b3d437ddc969fba",
+    "status": "scheduled",
+    "dueAt": "2026-11-25T15:30:00.000Z",
+    "slot": "Day 34 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-02.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_035": {
+    "postId": "6adc0e6ee4be8a4d8635fd5d",
+    "status": "scheduled",
+    "dueAt": "2026-11-26T15:30:00.000Z",
+    "slot": "Day 35 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-03.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_036": {
+    "postId": "6adc0e6fe4be8a4d8635fd9a",
+    "status": "scheduled",
+    "dueAt": "2026-11-27T15:30:00.000Z",
+    "slot": "Day 36 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-04.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_037": {
+    "postId": "6adc0e716887a2efc1932aee",
+    "status": "scheduled",
+    "dueAt": "2026-11-28T15:30:00.000Z",
+    "slot": "Day 37 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-05.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_038": {
+    "postId": "6adc0e72e4be8a4d8635fdf7",
+    "status": "scheduled",
+    "dueAt": "2026-11-29T15:30:00.000Z",
+    "slot": "Day 38 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-06.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_039": {
+    "postId": "6adc0e74e4be8a4d8635fe2c",
+    "status": "scheduled",
+    "dueAt": "2026-11-30T15:30:00.000Z",
+    "slot": "Day 39 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-07.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_040": {
+    "postId": "6adc0e758b3d437ddc96a03c",
+    "status": "scheduled",
+    "dueAt": "2026-12-01T15:30:00.000Z",
+    "slot": "Day 40 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-08.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_041": {
+    "postId": "6adc0e778b3d437ddc96a07c",
+    "status": "scheduled",
+    "dueAt": "2026-12-02T15:30:00.000Z",
+    "slot": "Day 41 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-09.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_042": {
+    "postId": "6adc0e78e4be8a4d8635feb2",
+    "status": "scheduled",
+    "dueAt": "2026-12-03T15:30:00.000Z",
+    "slot": "Day 42 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-10.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_043": {
+    "postId": "6adc0e7a3d5b27036b5fded6",
+    "status": "scheduled",
+    "dueAt": "2026-12-04T15:30:00.000Z",
+    "slot": "Day 43 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-11.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_044": {
+    "postId": "6adc0e7be4be8a4d8635ff10",
+    "status": "scheduled",
+    "dueAt": "2026-12-05T15:30:00.000Z",
+    "slot": "Day 44 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-12.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_045": {
+    "postId": "6adc0e7d3d5b27036b5fdf29",
+    "status": "scheduled",
+    "dueAt": "2026-12-06T15:30:00.000Z",
+    "slot": "Day 45 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-13.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_046": {
+    "postId": "6adc0e7e8b3d437ddc96a157",
+    "status": "scheduled",
+    "dueAt": "2026-12-07T15:30:00.000Z",
+    "slot": "Day 46 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-14.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_047": {
+    "postId": "6adc0e80bd33ce99c3fdf5d1",
+    "status": "scheduled",
+    "dueAt": "2026-12-08T15:30:00.000Z",
+    "slot": "Day 47 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-15.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_048": {
+    "postId": "6adc0e816887a2efc1932c71",
+    "status": "scheduled",
+    "dueAt": "2026-12-09T15:30:00.000Z",
+    "slot": "Day 48 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-16.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_049": {
+    "postId": "6adc0e838b3d437ddc96a19e",
+    "status": "scheduled",
+    "dueAt": "2026-12-10T15:30:00.000Z",
+    "slot": "Day 49 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-17.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_050": {
+    "postId": "6adc0e840b5343d0705d97bb",
+    "status": "scheduled",
+    "dueAt": "2026-12-11T15:30:00.000Z",
+    "slot": "Day 50 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-18.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_051": {
+    "postId": "6adc0e860b5343d0705d97f2",
+    "status": "scheduled",
+    "dueAt": "2026-12-12T15:30:00.000Z",
+    "slot": "Day 51 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-19.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_052": {
+    "postId": "6adc0e873d5b27036b5fe030",
+    "status": "scheduled",
+    "dueAt": "2026-12-13T15:30:00.000Z",
+    "slot": "Day 52 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-20.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_053": {
+    "postId": "6adc0e896887a2efc1932cfb",
+    "status": "scheduled",
+    "dueAt": "2026-12-14T15:30:00.000Z",
+    "slot": "Day 53 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-21.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_054": {
+    "postId": "6adc0e8abd33ce99c3fdf6ee",
+    "status": "scheduled",
+    "dueAt": "2026-12-15T15:30:00.000Z",
+    "slot": "Day 54 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-22.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_055": {
+    "postId": "6adc0e8c3d5b27036b5fe0eb",
+    "status": "scheduled",
+    "dueAt": "2026-12-16T15:30:00.000Z",
+    "slot": "Day 55 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-23.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_056": {
+    "postId": "6adc0e8de4be8a4d86360094",
+    "status": "scheduled",
+    "dueAt": "2026-12-17T15:30:00.000Z",
+    "slot": "Day 56 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-24.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_057": {
+    "postId": "6adc0e8fe4be8a4d863600cc",
+    "status": "scheduled",
+    "dueAt": "2026-12-18T15:30:00.000Z",
+    "slot": "Day 57 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-25.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_058": {
+    "postId": "6adc0e900b5343d0705d98b7",
+    "status": "scheduled",
+    "dueAt": "2026-12-19T15:30:00.000Z",
+    "slot": "Day 58 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-26.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_059": {
+    "postId": "6adc0e928b3d437ddc96a2cb",
+    "status": "scheduled",
+    "dueAt": "2026-12-20T15:30:00.000Z",
+    "slot": "Day 59 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-27.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_060": {
+    "postId": "6adc0e940b5343d0705d9935",
+    "status": "scheduled",
+    "dueAt": "2026-12-21T15:30:00.000Z",
+    "slot": "Day 60 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-28.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_061": {
+    "postId": "6adc0e95e4be8a4d86360237",
+    "status": "scheduled",
+    "dueAt": "2026-12-22T15:30:00.000Z",
+    "slot": "Day 61 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-29.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_062": {
+    "postId": "6adc0e97e4be8a4d8636026e",
+    "status": "scheduled",
+    "dueAt": "2026-12-23T15:30:00.000Z",
+    "slot": "Day 62 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-30.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_063": {
+    "postId": "6adc0e998b3d437ddc96a3ff",
+    "status": "scheduled",
+    "dueAt": "2026-12-24T15:30:00.000Z",
+    "slot": "Day 63 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-video-01.mp4",
+    "asset_type": "video"
+  },
+  "COCO_RACISM_064": {
+    "postId": "6adc0e9a0b5343d0705d9adf",
+    "status": "scheduled",
+    "dueAt": "2026-12-25T15:30:00.000Z",
+    "slot": "Day 64 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-01.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_065": {
+    "postId": "6adc0e9cbd33ce99c3fdfabb",
+    "status": "scheduled",
+    "dueAt": "2026-12-26T15:30:00.000Z",
+    "slot": "Day 65 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-02.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_066": {
+    "postId": "6adc0e9d6887a2efc1932fd9",
+    "status": "scheduled",
+    "dueAt": "2026-12-27T15:30:00.000Z",
+    "slot": "Day 66 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-03.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_067": {
+    "postId": "6adc0e9f0b5343d0705d9c0d",
+    "status": "scheduled",
+    "dueAt": "2026-12-28T15:30:00.000Z",
+    "slot": "Day 67 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-04.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_068": {
+    "postId": "6adc0ea0bd33ce99c3fdfb57",
+    "status": "scheduled",
+    "dueAt": "2026-12-29T15:30:00.000Z",
+    "slot": "Day 68 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-05.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_069": {
+    "postId": "6adc0ea28b3d437ddc96a525",
+    "status": "scheduled",
+    "dueAt": "2026-12-30T15:30:00.000Z",
+    "slot": "Day 69 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-06.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_070": {
+    "postId": "6adc0ea3bd33ce99c3fdfbb0",
+    "status": "scheduled",
+    "dueAt": "2026-12-31T15:30:00.000Z",
+    "slot": "Day 70 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-07.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_071": {
+    "postId": "6adc0ea5bd33ce99c3fdfc0a",
+    "status": "scheduled",
+    "dueAt": "2027-01-01T15:30:00.000Z",
+    "slot": "Day 71 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-08.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_072": {
+    "postId": "6adc0ea63d5b27036b5fe451",
+    "status": "scheduled",
+    "dueAt": "2027-01-02T15:30:00.000Z",
+    "slot": "Day 72 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-09.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_073": {
+    "postId": "6adc0ea83d5b27036b5fe485",
+    "status": "scheduled",
+    "dueAt": "2027-01-03T15:30:00.000Z",
+    "slot": "Day 73 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-10.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_074": {
+    "postId": "6adc0ea98b3d437ddc96a64a",
+    "status": "scheduled",
+    "dueAt": "2027-01-04T15:30:00.000Z",
+    "slot": "Day 74 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-11.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_075": {
+    "postId": "6adc0eabe4be8a4d86360563",
+    "status": "scheduled",
+    "dueAt": "2027-01-05T15:30:00.000Z",
+    "slot": "Day 75 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-12.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_076": {
+    "postId": "6adc0eac0b5343d0705d9d13",
+    "status": "scheduled",
+    "dueAt": "2027-01-06T15:30:00.000Z",
+    "slot": "Day 76 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-13.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_077": {
+    "postId": "6adc0eae0b5343d0705d9d41",
+    "status": "scheduled",
+    "dueAt": "2027-01-07T15:30:00.000Z",
+    "slot": "Day 77 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-14.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_078": {
+    "postId": "6adc0eafe4be8a4d863605c2",
+    "status": "scheduled",
+    "dueAt": "2027-01-08T15:30:00.000Z",
+    "slot": "Day 78 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-15.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_079": {
+    "postId": "6adc0eb10b5343d0705d9da1",
+    "status": "scheduled",
+    "dueAt": "2027-01-09T15:30:00.000Z",
+    "slot": "Day 79 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-16.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_080": {
+    "postId": "6adc0eb26887a2efc193321a",
+    "status": "scheduled",
+    "dueAt": "2027-01-10T15:30:00.000Z",
+    "slot": "Day 80 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-17.png",
+    "asset_type": "image"
+  },
+  "COCO_RACISM_081": {
+    "postId": "6adc0eb43d5b27036b5fe6d5",
+    "status": "scheduled",
+    "dueAt": "2027-01-11T15:30:00.000Z",
+    "slot": "Day 81 Morning (08:30 AM MST)",
+    "mode": "customScheduled",
+    "asset_url": "https://lornettedaye.com/campaigns/coco-racism/coco-racism-18.png",
+    "asset_type": "image"
+  }
+}
