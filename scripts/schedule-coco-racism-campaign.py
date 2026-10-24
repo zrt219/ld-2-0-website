@@ -47,7 +47,7 @@ mutation CreatePost($input: CreatePostInput!) {
     ... on UnexpectedError {
       message
     }
-    ... on RestError {
+    ... on UnauthorizedError {
       message
     }
   }

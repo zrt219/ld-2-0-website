@@ -24,7 +24,7 @@ mutation CreatePost($input: CreatePostInput!) {
     ... on LimitReachedError { message }
     ... on InvalidInputError { message }
     ... on UnexpectedError { message }
-    ... on RestError { message }
+    ... on UnauthorizedError { message }
   }
 }
 `;
