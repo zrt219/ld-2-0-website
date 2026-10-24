@@ -231,6 +231,61 @@ async function runYaxelQueue() {
   return true;
 }
 
+// 4. CFL-NFL Gameday & Playoff Campaign Processing
+async function runCflNflQueue() {
+  console.log("\n--- Processing CFL-NFL Gameday & Playoff Campaign Queue ---");
+  const queuePath = path.resolve('scripts/master-cfl-nfl-queue.json');
+  const reportPath = path.resolve('scripts/cfl-nfl-scheduled-report.json');
+
+  if (!fs.existsSync(queuePath)) return;
+
+  const queue = JSON.parse(fs.readFileSync(queuePath, 'utf8'));
+  const report = fs.existsSync(reportPath) ? JSON.parse(fs.readFileSync(reportPath, 'utf8')) : {};
+
+  for (const item of queue) {
+    if (report[item.id]) continue;
+
+    console.log(`Scheduling ${item.id} | ${item.slot}...`);
+    const resp = await sendGraphql({
+      query: CREATE_POST_MUTATION,
+      variables: {
+        input: {
+          channelId: CHANNEL_ID,
+          text: item.text,
+          schedulingType: "automatic",
+          mode: item.mode || "customScheduled",
+          dueAt: item.dueAt,
+          assets: [{ image: { url: item.asset_url } }]
+        }
+      }
+    });
+
+    if (resp.error === 429) {
+      console.log(`⚠️ Rate limit active. Retry-After: ${resp.retryAfter}s`);
+      return false;
+    }
+
+    if (resp.data?.createPost?.__typename === 'PostActionSuccess') {
+      const p = resp.data.createPost.post;
+      console.log(`   ✅ SUCCESS: Post ${p.id} (${p.status})`);
+      report[item.id] = {
+        postId: p.id,
+        status: p.status,
+        dueAt: item.dueAt,
+        slot: item.slot,
+        mode: item.mode,
+        asset_url: item.asset_url
+      };
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), 'utf8');
+      await new Promise(r => setTimeout(r, 1200));
+    } else {
+      console.log(`   ⚠️ Failed to schedule ${item.id}:`, JSON.stringify(resp));
+      return false;
+    }
+  }
+  return true;
+}
+
 async function runMaster() {
   console.log("================================================================");
   console.log("🚀 MASTER AUTONOMOUS CAMPAIGN SCHEDULER & RECOVERY ENGINE");
@@ -254,6 +309,13 @@ async function runMaster() {
   const yaxelOk = await runYaxelQueue();
   if (!yaxelOk) {
     console.log("\nPaused on Yaxel Lendeborg due to Buffer quota limit. Waiting for timer reset.");
+    return;
+  }
+
+  // 4. Schedule CFL-NFL Gameday & Playoff Series
+  const cflNflOk = await runCflNflQueue();
+  if (!cflNflOk) {
+    console.log("\nPaused on CFL-NFL due to Buffer quota limit. Waiting for timer reset.");
     return;
   }
 
