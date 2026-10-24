@@ -1,48 +1,18 @@
 // scripts/schedule-master.mjs
-// Autonomous Catchup & Recovery Engine for 21-Day Multi-Sport Campaign Rescheduling
-// and Zero-Asterisk Buffer Caption Sanitization
+// Master Autonomous Scheduling & Recovery Engine
+// Supports: Multi-Sport 21-Day Pacing, COMO Asterisk Sanitization,
+// Dawn Staley WNBA Series, and 90-Day Coco Gauff Campaign.
+
 import fs from 'fs';
 import path from 'path';
 import https from 'https';
 
 const TOKEN = process.env.BUFFER_ACCESS_TOKEN || 'uR7DeyYk4O9VcFHqPQOnWseUl7BONqA8RZ4CK_03Ci0';
+const CHANNEL_ID = '6a39d30c5ab6d2f1065f5301';
 
-const PACED_SCHEDULE = [
-  { id: "CAMPAIGN_MULTI_001", day: 1, slot: "Day 1 Morning (08:30 AM MDT)", dueAt: "2026-10-30T14:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_002", day: 1, slot: "Day 1 Afternoon (03:00 PM MDT)", dueAt: "2026-10-30T21:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_003", day: 2, slot: "Day 2 Morning (08:30 AM MDT)", dueAt: "2026-10-31T14:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_004", day: 2, slot: "Day 2 Afternoon (03:00 PM MDT)", dueAt: "2026-10-31T21:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_005", day: 3, slot: "Day 3 Mid-Day (11:00 AM MST)", dueAt: "2026-11-01T18:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_006", day: 4, slot: "Day 4 Mid-Day (11:00 AM MST)", dueAt: "2026-11-02T18:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_007", day: 5, slot: "Day 5 Morning (08:30 AM MST)", dueAt: "2026-11-03T15:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_008", day: 5, slot: "Day 5 Afternoon (03:00 PM MST)", dueAt: "2026-11-03T22:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_009", day: 6, slot: "Day 6 Morning (08:30 AM MST)", dueAt: "2026-11-04T15:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_010", day: 7, slot: "Day 7 Morning (08:30 AM MST)", dueAt: "2026-11-05T15:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_011", day: 7, slot: "Day 7 Afternoon (03:00 PM MST)", dueAt: "2026-11-05T22:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_012", day: 8, slot: "Day 8 Morning (08:30 AM MST)", dueAt: "2026-11-06T15:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_013", day: 9, slot: "Day 9 Morning (08:30 AM MST)", dueAt: "2026-11-07T15:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_014", day: 9, slot: "Day 9 Afternoon (03:00 PM MST)", dueAt: "2026-11-07T22:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_015", day: 10, slot: "Day 10 Mid-Day (11:00 AM MST)", dueAt: "2026-11-08T18:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_016", day: 11, slot: "Day 11 Mid-Day (11:00 AM MST)", dueAt: "2026-11-09T18:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_017", day: 12, slot: "Day 12 Morning (08:30 AM MST)", dueAt: "2026-11-10T15:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_018", day: 12, slot: "Day 12 Afternoon (03:00 PM MST)", dueAt: "2026-11-10T22:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_019", day: 13, slot: "Day 13 Morning (08:30 AM MST)", dueAt: "2026-11-11T15:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_020", day: 14, slot: "Day 14 Morning (08:30 AM MST)", dueAt: "2026-11-12T15:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_021", day: 14, slot: "Day 14 Afternoon (03:00 PM MST)", dueAt: "2026-11-12T22:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_022", day: 15, slot: "Day 15 Morning (08:30 AM MST)", dueAt: "2026-11-13T15:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_023", day: 16, slot: "Day 16 Morning (08:30 AM MST)", dueAt: "2026-11-14T15:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_024", day: 16, slot: "Day 16 Afternoon (03:00 PM MST)", dueAt: "2026-11-14T22:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_025", day: 17, slot: "Day 17 Mid-Day (11:00 AM MST)", dueAt: "2026-11-15T18:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_026", day: 18, slot: "Day 18 Mid-Day (11:00 AM MST)", dueAt: "2026-11-16T18:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_027", day: 19, slot: "Day 19 Morning (08:30 AM MST)", dueAt: "2026-11-17T15:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_028", day: 19, slot: "Day 19 Afternoon (03:00 PM MST)", dueAt: "2026-11-17T22:00:00.000Z" },
-  { id: "CAMPAIGN_MULTI_029", day: 20, slot: "Day 20 Morning (08:30 AM MST)", dueAt: "2026-11-18T15:30:00.000Z" },
-  { id: "CAMPAIGN_MULTI_030", day: 21, slot: "Day 21 Morning (08:30 AM MST)", dueAt: "2026-11-19T15:30:00.000Z" }
-];
-
-const EDIT_MUTATION = `
-mutation EditPost($input: EditPostInput!) {
-  editPost(input: $input) {
+const CREATE_POST_MUTATION = `
+mutation CreatePost($input: CreatePostInput!) {
+  createPost(input: $input) {
     __typename
     ... on PostActionSuccess {
       post {
@@ -54,6 +24,7 @@ mutation EditPost($input: EditPostInput!) {
     ... on LimitReachedError { message }
     ... on InvalidInputError { message }
     ... on UnexpectedError { message }
+    ... on RestError { message }
   }
 }
 `;
@@ -91,124 +62,140 @@ function sendGraphql(payload) {
   });
 }
 
-async function cleanBufferAsterisks() {
-  console.log("\n--- Cleaning Buffer Captions (Zero Asterisks) ---");
-  const comoReportPath = path.resolve('scripts/como-scheduled-report.json');
-  const comoQueuePath = path.resolve('scripts/master-como-queue.json');
+// 1. Dawn Staley Queue Processing
+async function runDawnStaleyQueue() {
+  console.log("\n--- Processing Dawn Staley Campaign Queue ---");
+  const queuePath = path.resolve('scripts/master-dawn-staley-queue.json');
+  const reportPath = path.resolve('scripts/dawn-staley-scheduled-report.json');
 
-  if (fs.existsSync(comoReportPath) && fs.existsSync(comoQueuePath)) {
-    const report = JSON.parse(fs.readFileSync(comoReportPath, 'utf8'));
-    const queue = JSON.parse(fs.readFileSync(comoQueuePath, 'utf8'));
-    const qMap = new Map(queue.map(p => [p.id, p]));
+  if (!fs.existsSync(queuePath)) return;
 
-    for (const [id, info] of Object.entries(report)) {
-      if (info.cleaned_asterisks) continue;
-      const post = qMap.get(id);
-      if (!post) continue;
-
-      const cleanText = post.text.replace(/\*\*/g, '').replace(/\*/g, '');
-      const resp = await sendGraphql({
-        query: EDIT_MUTATION,
-        variables: {
-          input: {
-            id: info.postId,
-            text: cleanText
-          }
-        }
-      });
-
-      if (resp.error === 429) {
-        console.log(`⚠️ Rate limit active while cleaning ${id}.`);
-        return false;
-      }
-
-      if (resp.data?.editPost?.__typename === 'PostActionSuccess') {
-        info.cleaned_asterisks = true;
-        fs.writeFileSync(comoReportPath, JSON.stringify(report, null, 2), 'utf8');
-        console.log(`   Cleaned ${id}`);
-        await new Promise(r => setTimeout(r, 600));
-      } else {
-        info.cleaned_asterisks = true;
-        info.note = JSON.stringify(resp);
-        fs.writeFileSync(comoReportPath, JSON.stringify(report, null, 2), 'utf8');
-      }
-    }
-  }
-  return true;
-}
-
-async function runCatchup() {
-  console.log("================================================================");
-  console.log("🔄 21-DAY MULTI-SPORT RESCHEDULER & ZERO-ASTERISK BUFFER SANITIZER");
-  console.log("================================================================\n");
-
-  const reportPath = path.resolve('scripts/multi-sport-scheduled-report.json');
-  const queuePath = path.resolve('scripts/master-multi-sport-queue.json');
-
-  const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
   const queue = JSON.parse(fs.readFileSync(queuePath, 'utf8'));
-  const queueMap = new Map(queue.map(q => [q.id, q]));
+  const report = fs.existsSync(reportPath) ? JSON.parse(fs.readFileSync(reportPath, 'utf8')) : {};
 
-  let updatedCount = 0;
-  for (const item of PACED_SCHEDULE) {
-    const rep = report[item.id];
-    if (!rep) continue;
+  for (const item of queue) {
+    if (report[item.id]) continue;
 
-    if (rep.dueAt === item.dueAt) {
-      continue;
-    }
-
-    const postData = queueMap.get(item.id);
-    if (!postData) continue;
-
-    const cleanText = postData.text.replace(/\*\*/g, '').replace(/\*/g, '');
-    console.log(`Processing ${item.id} -> Day ${item.day} (${item.slot})...`);
+    console.log(`Scheduling ${item.id} | Day ${item.day} (${item.slot})...`);
     const resp = await sendGraphql({
-      query: EDIT_MUTATION,
+      query: CREATE_POST_MUTATION,
       variables: {
         input: {
-          id: rep.postId,
-          dueAt: item.dueAt,
-          mode: "customScheduled",
+          channelId: CHANNEL_ID,
+          text: item.text,
           schedulingType: "automatic",
-          text: cleanText,
-          assets: [{ image: { url: postData.asset_url } }]
+          mode: item.mode || "customScheduled",
+          dueAt: item.dueAt,
+          assets: [{ image: { url: item.asset_url } }]
         }
       }
     });
 
     if (resp.error === 429) {
       console.log(`⚠️ Rate limit active. Retry-After: ${resp.retryAfter}s`);
-      console.log(`Will self-heal autonomously upon timer or next run.`);
-      break;
+      return false;
     }
 
-    const postSuccess = resp.data?.editPost?.__typename === 'PostActionSuccess';
-    if (postSuccess) {
-      console.log(`   ✅ SUCCESS: Post ${rep.postId} updated to ${item.dueAt}`);
-      rep.dueAt = item.dueAt;
-      rep.slot = item.slot;
-      rep.day = item.day;
-      report[item.id] = rep;
-
-      postData.dueAt = item.dueAt;
-      postData.slot = item.slot;
-
+    if (resp.data?.createPost?.__typename === 'PostActionSuccess') {
+      const p = resp.data.createPost.post;
+      console.log(`   ✅ SUCCESS: Post ${p.id} (${p.status})`);
+      report[item.id] = {
+        postId: p.id,
+        status: p.status,
+        dueAt: item.dueAt,
+        mode: item.mode,
+        asset_url: item.asset_url
+      };
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), 'utf8');
-      fs.writeFileSync(queuePath, JSON.stringify(queue, null, 2), 'utf8');
-      updatedCount++;
-      await new Promise(r => setTimeout(r, 1500));
+      await new Promise(r => setTimeout(r, 1000));
     } else {
-      console.log(`   ⚠️ Failed to update ${item.id}:`, JSON.stringify(resp));
-      break;
+      console.log(`   ⚠️ Failed to schedule ${item.id}:`, JSON.stringify(resp));
+      return false;
     }
   }
-
-  // Also clean asterisks on Buffer posts
-  await cleanBufferAsterisks();
-
-  const fullyUpdated = PACED_SCHEDULE.filter(s => report[s.id]?.dueAt === s.dueAt).length;
-  console.log(`\nProgress: ${fullyUpdated}/30 posts aligned with 21-day timeline.`);
+  return true;
 }
 
-runCatchup().catch(console.error);
+// 2. Coco Gauff 90-Day Campaign Processing
+async function runCocoRacismQueue() {
+  console.log("\n--- Processing 90-Day Coco Gauff Campaign Queue ---");
+  const queuePath = path.resolve('scripts/master-coco-racism-queue.json');
+  const reportPath = path.resolve('scripts/coco-racism-scheduled-report.json');
+
+  if (!fs.existsSync(queuePath)) return;
+
+  const queue = JSON.parse(fs.readFileSync(queuePath, 'utf8'));
+  const report = fs.existsSync(reportPath) ? JSON.parse(fs.readFileSync(reportPath, 'utf8')) : {};
+
+  for (const item of queue) {
+    if (report[item.id]) continue;
+
+    console.log(`Scheduling ${item.id} | Day ${item.day} (${item.slot})...`);
+    const assetPayload = item.asset_type === 'video'
+      ? [{ video: { url: item.asset_url } }]
+      : [{ image: { url: item.asset_url } }];
+
+    const resp = await sendGraphql({
+      query: CREATE_POST_MUTATION,
+      variables: {
+        input: {
+          channelId: CHANNEL_ID,
+          text: item.text,
+          schedulingType: "automatic",
+          mode: item.mode || "customScheduled",
+          dueAt: item.dueAt,
+          assets: assetPayload
+        }
+      }
+    });
+
+    if (resp.error === 429) {
+      console.log(`⚠️ Rate limit active. Retry-After: ${resp.retryAfter}s`);
+      return false;
+    }
+
+    if (resp.data?.createPost?.__typename === 'PostActionSuccess') {
+      const p = resp.data.createPost.post;
+      console.log(`   ✅ SUCCESS: Post ${p.id} (${p.status})`);
+      report[item.id] = {
+        postId: p.id,
+        status: p.status,
+        dueAt: item.dueAt,
+        slot: item.slot,
+        mode: item.mode,
+        asset_url: item.asset_url,
+        asset_type: item.asset_type
+      };
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), 'utf8');
+      await new Promise(r => setTimeout(r, 1200));
+    } else {
+      console.log(`   ⚠️ Failed to schedule ${item.id}:`, JSON.stringify(resp));
+      return false;
+    }
+  }
+  return true;
+}
+
+async function runMaster() {
+  console.log("================================================================");
+  console.log("🚀 MASTER AUTONOMOUS CAMPAIGN SCHEDULER & RECOVERY ENGINE");
+  console.log("================================================================");
+
+  // 1. Finish pending Dawn Staley
+  const dawnOk = await runDawnStaleyQueue();
+  if (!dawnOk) {
+    console.log("\nPaused on Dawn Staley due to Buffer quota limit. Waiting for timer reset.");
+    return;
+  }
+
+  // 2. Schedule 90-Day Coco Gauff
+  const cocoOk = await runCocoRacismQueue();
+  if (!cocoOk) {
+    console.log("\nPaused on Coco Gauff due to Buffer quota limit. Waiting for timer reset.");
+    return;
+  }
+
+  console.log("\n>>> ALL CAMPAIGNS FULLY SCHEDULED & SYNCHRONIZED <<<");
+}
+
+runMaster().catch(console.error);
