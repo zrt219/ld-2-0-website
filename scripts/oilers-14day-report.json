@@ -1,0 +1,156 @@
+[
+  {
+    "day": 1,
+    "title": "Post 1 (Live Tonight): The Return of Ryan Nugent-Hopkins",
+    "date": "Saturday, Oct 24, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add79008b3d437ddced0153",
+    "postStatus": "sending",
+    "shareMode": "shareNow",
+    "dueAt": "2026-10-25T03:35:28.212Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-is-back-poster.png"
+  },
+  {
+    "day": 2,
+    "title": "Post 2: Overcoming Injury and the Battle of Rhythm",
+    "date": "Sunday, Oct 25, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add790c6887a2efc1e8033d",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-10-25T18:15:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-one-shot-poster.png"
+  },
+  {
+    "day": 3,
+    "title": "Post 3: The Shootout as a Solitary Pressure Chamber",
+    "date": "Monday, Oct 26, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add790f8b3d437ddced02e1",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-10-26T17:30:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-shootout-hero-poster.png"
+  },
+  {
+    "day": 4,
+    "title": "Post 4: McDavid and Draisaitl's 5-Point Nights",
+    "date": "Tuesday, Oct 27, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add79118b3d437ddced0332",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-10-27T18:00:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-is-back-poster.png"
+  },
+  {
+    "day": 5,
+    "title": "Post 5: Devon Levi Slamming the Door",
+    "date": "Wednesday, Oct 28, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add7913e4be8a4d868c2d44",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-10-28T17:00:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-shootout-hero-poster.png"
+  },
+  {
+    "day": 6,
+    "title": "Post 6: Fourteen Years of Quiet Loyalty",
+    "date": "Thursday, Oct 29, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add7915e4be8a4d868c2d87",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-10-29T18:30:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-one-shot-poster.png"
+  },
+  {
+    "day": 7,
+    "title": "Post 7: The Micro-Habits of Winning Hockey",
+    "date": "Friday, Oct 30, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add79170b5343d070b37700",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-10-30T17:15:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-is-back-poster.png"
+  },
+  {
+    "day": 8,
+    "title": "Post 8: The Back-and-Forth Thriller Blueprint",
+    "date": "Saturday, Oct 31, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add791a0b5343d070b3772a",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-10-31T16:30:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-shootout-hero-poster.png"
+  },
+  {
+    "day": 9,
+    "title": "Post 9: Rogers Place Energy as a Competitive Advantage",
+    "date": "Sunday, Nov 01, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add791c3d5b27036bb4988d",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-11-01T19:45:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-one-shot-poster.png"
+  },
+  {
+    "day": 10,
+    "title": "Post 10: Champion Mindset in Athletic Development",
+    "date": "Monday, Nov 02, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add791e3d5b27036bb498de",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-11-02T18:45:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-is-back-poster.png"
+  },
+  {
+    "day": 11,
+    "title": "Post 11: Tactical Breakdown of Nuge's Shootout Glide",
+    "date": "Tuesday, Nov 03, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add79200b5343d070b37808",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-11-03T19:15:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-one-shot-poster.png"
+  },
+  {
+    "day": 12,
+    "title": "Post 12: Mastering the Nervous System Under Pressure",
+    "date": "Wednesday, Nov 04, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add7923bd33ce99c3535dfd",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-11-04T18:00:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-shootout-hero-poster.png"
+  },
+  {
+    "day": 13,
+    "title": "Post 13: Sustaining Excellence Across an 82-Game Campaign",
+    "date": "Thursday, Nov 05, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add79253d5b27036bb49b0c",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-11-05T19:30:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-is-back-poster.png"
+  },
+  {
+    "day": 14,
+    "title": "Post 14: Better People, Better Players - The Lornette Daye Philosophy",
+    "date": "Friday, Nov 06, 2026",
+    "status": "SUCCESS",
+    "bufferPostId": "6add7927e4be8a4d868c3457",
+    "postStatus": "scheduled",
+    "shareMode": "customScheduled",
+    "dueAt": "2026-11-06T18:15:00.000Z",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/nuge-one-shot-poster.png"
+  }
+]
