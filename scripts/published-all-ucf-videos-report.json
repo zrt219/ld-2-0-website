@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "ONE PLAY. ONE TOUCHDOWN: KEYONE JENKINS TO GRAYSON BROUSSEAU IN 2OT",
+    "asset": "ucf_byu_touchdown_2ot.mp4",
+    "result": {
+      "status": "success",
+      "postId": "6add51498b3d437ddce58a39",
+      "details": {
+        "id": "6add51498b3d437ddce58a39",
+        "status": "sending",
+        "dueAt": "2026-10-25T00:46:01.917Z"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "title": "THE MAGICAL 2-POINT CONVERSION: CALCULATED AGGRESSION UNDER PRESSURE",
+    "asset": "ucf_byu_magical_2pt_conversion.mp4",
+    "result": {
+      "status": "success",
+      "postId": "6add5159bd33ce99c34b9de2",
+      "details": {
+        "id": "6add5159bd33ce99c34b9de2",
+        "status": "sending",
+        "dueAt": "2026-10-25T00:46:17.290Z"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "title": "THE 4TH-AND-GOAL STAND: DEFENSE SEALS THE FIELD STORMING",
+    "asset": "ucf_byu_goal_line_stand_win.mp4",
+    "result": {
+      "status": "success",
+      "postId": "6add51680b5343d070abfd5e",
+      "details": {
+        "id": "6add51680b5343d070abfd5e",
+        "status": "sending",
+        "dueAt": "2026-10-25T00:46:32.579Z"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "title": "POISE AMID CHAOS: CAPITALIZING ON OPPONENT MISTAKES",
+    "asset": "ucf_byu_capitalize_penalty.mp4",
+    "result": {
+      "status": "success",
+      "postId": "6add5177e4be8a4d8684b78c",
+      "details": {
+        "id": "6add5177e4be8a4d8684b78c",
+        "status": "sending",
+        "dueAt": "2026-10-25T00:46:47.639Z"
+      }
+    }
+  }
+]
