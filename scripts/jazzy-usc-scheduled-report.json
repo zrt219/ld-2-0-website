@@ -1,0 +1,182 @@
+[
+  {
+    "day": 1,
+    "date": "2026-10-24",
+    "dueAt": "2026-10-25T02:45:00.000Z",
+    "postId": "6add59b70b5343d070adb7fa",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_01.png",
+    "title": "JUJU SET THE STANDARD: CAN JAZZY RAISE THE BAR?"
+  },
+  {
+    "day": 2,
+    "date": "2026-10-25",
+    "dueAt": "2026-10-26T00:00:00.000Z",
+    "postId": "6add59b80b5343d070adb840",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_02.png",
+    "title": "THE STANDARD IS SET: NOW THE CHASE CONTINUES"
+  },
+  {
+    "day": 3,
+    "date": "2026-10-26",
+    "dueAt": "2026-10-27T00:00:00.000Z",
+    "postId": "6add59b96887a2efc1e283c4",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_03.png",
+    "title": "DIFFERENT PATHS, SAME PURPOSE: JUJU, JAZZY, AND USC"
+  },
+  {
+    "day": 4,
+    "date": "2026-10-27",
+    "dueAt": "2026-10-28T00:00:00.000Z",
+    "postId": "6add59b93d5b27036baebb64",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_04.png",
+    "title": "574 POINTS: A REMARKABLE FRESHMAN FOUNDATION"
+  },
+  {
+    "day": 5,
+    "date": "2026-10-28",
+    "dueAt": "2026-10-29T00:00:00.000Z",
+    "postId": "6add59ba0b5343d070adb88f",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_05.png",
+    "title": "EXPECTATION AS PRIVILEGE: CARRYING THE TROJAN CREST"
+  },
+  {
+    "day": 6,
+    "date": "2026-10-29",
+    "dueAt": "2026-10-30T00:00:00.000Z",
+    "postId": "6add59bb8b3d437ddce73445",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_06.png",
+    "title": "THE ART OF THE BACKCOURT TANDEM: COEXISTENCE OVER EGO"
+  },
+  {
+    "day": 7,
+    "date": "2026-10-30",
+    "dueAt": "2026-10-31T00:00:00.000Z",
+    "postId": "6add59bbbd33ce99c34d6b4c",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_07.png",
+    "title": "DEFENSIVE IDENTITY IN THE BIG TEN: EARNING RESPECT ON BOTH ENDS"
+  },
+  {
+    "day": 8,
+    "date": "2026-10-31",
+    "dueAt": "2026-11-01T00:00:00.000Z",
+    "postId": "6add59bc0b5343d070adb8fb",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_08.png",
+    "title": "PREPARATION IN THE DARK: THE UNTELEVISED WORK"
+  },
+  {
+    "day": 9,
+    "date": "2026-11-01",
+    "dueAt": "2026-11-02T01:00:00.000Z",
+    "postId": "6add59bc3d5b27036baebc25",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_09.png",
+    "title": "COURAGE IN TRANSITION: STEPPING ONTO THE BIGGEST STAGE"
+  },
+  {
+    "day": 10,
+    "date": "2026-11-02",
+    "dueAt": "2026-11-03T01:00:00.000Z",
+    "postId": "6add59bd3d5b27036baebc57",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_10.png",
+    "title": "CONSISTENCY AS A COMPETITIVE WEAPON: 32 OUT OF 32 NIGHTS"
+  },
+  {
+    "day": 11,
+    "date": "2026-11-03",
+    "dueAt": "2026-11-04T01:00:00.000Z",
+    "postId": "6add59be8b3d437ddce734be",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_11.png",
+    "title": "THE PSYCHOLOGY OF THE SHOT-MAKER: UNFLINCHING EMOTIONAL POISE"
+  },
+  {
+    "day": 12,
+    "date": "2026-11-04",
+    "dueAt": "2026-11-05T01:00:00.000Z",
+    "postId": "6add59be0b5343d070adb965",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_12.png",
+    "title": "COMMUNICATION WITHOUT WORDS: EYE CONTACT AND COURT VISION"
+  },
+  {
+    "day": 13,
+    "date": "2026-11-05",
+    "dueAt": "2026-11-06T01:00:00.000Z",
+    "postId": "6add59bf3d5b27036baebc81",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_13.png",
+    "title": "MENTORSHIP AND RECEPTION: HOW VETERANS EMPOWER ROOKIES"
+  },
+  {
+    "day": 14,
+    "date": "2026-11-06",
+    "dueAt": "2026-11-07T01:00:00.000Z",
+    "postId": "6add59c03d5b27036baebcb3",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_14.png",
+    "title": "ROAD TRIP RESILIENCE: WINNING IN HOSTILE ENVIRONMENTS"
+  },
+  {
+    "day": 15,
+    "date": "2026-11-07",
+    "dueAt": "2026-11-08T01:00:00.000Z",
+    "postId": "6add59c08b3d437ddce7355f",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_15.png",
+    "title": "NIL, VISIBILITY, AND GROUNDED ROOTS: PROTECTING YOUR INNER PEACE"
+  },
+  {
+    "day": 16,
+    "date": "2026-11-08",
+    "dueAt": "2026-11-09T01:00:00.000Z",
+    "postId": "6add59c13d5b27036baebd01",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_16.png",
+    "title": "THE VALUE OF ROLE CLARITY: EVERY PIECE OF THE PUZZLE"
+  },
+  {
+    "day": 17,
+    "date": "2026-11-09",
+    "dueAt": "2026-11-10T01:00:00.000Z",
+    "postId": "6add59c16887a2efc1e2851a",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_17.png",
+    "title": "RECOVERY AS A DISCIPLINE: THE INVISIBLE HABIT OF LONGEVITY"
+  },
+  {
+    "day": 18,
+    "date": "2026-11-10",
+    "dueAt": "2026-11-11T01:00:00.000Z",
+    "postId": "6add59c28b3d437ddce73587",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_18.png",
+    "title": "CHAMPIONSHIP STANDARDS: ACCEPTING HONEST FILM-ROOM TRUTHS"
+  },
+  {
+    "day": 19,
+    "date": "2026-11-11",
+    "dueAt": "2026-11-12T01:00:00.000Z",
+    "postId": "6add59c3e4be8a4d868670ea",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_19.png",
+    "title": "INSPIRING THE NEXT GENERATION: YOUNG GIRLS IN THE STANDS"
+  },
+  {
+    "day": 20,
+    "date": "2026-11-12",
+    "dueAt": "2026-11-13T01:00:00.000Z",
+    "postId": "6add59c30b5343d070adba1e",
+    "status": "scheduled",
+    "image": "https://lornettedaye.com/campaigns/jazzy-usc/jazzy_usc_20.png",
+    "title": "THE LEGACY AHEAD: WRITING HISTORY AT USC"
+  }
+]
