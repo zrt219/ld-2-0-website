@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "date": "2026-10-24",
+    "dueAt": "2026-10-25T02:15:00.000Z",
+    "postId": "6add4e953d5b27036bacad92",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/rnh-shootout-winner.mp4",
+    "title": "THE SHOOTOUT WINNER: RYAN NUGENT-HOPKINS CALLS GAME"
+  },
+  {
+    "id": 2,
+    "date": "2026-10-25",
+    "dueAt": "2026-10-25T17:00:00.000Z",
+    "postId": "6add4e96bd33ce99c34b0ffb",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/rnh-shootout-winner.mp4",
+    "title": "THE COMEBACK: RETURNING FROM INJURY STRAIGHT INTO THE FIRE"
+  },
+  {
+    "id": 3,
+    "date": "2026-10-26",
+    "dueAt": "2026-10-26T18:15:00.000Z",
+    "postId": "6add4e973d5b27036bacadd2",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/rnh-shootout-winner.mp4",
+    "title": "PRESSURE MOMENT: THE PSYCHOLOGY OF THE DECIDING ATTEMPT"
+  },
+  {
+    "id": 4,
+    "date": "2026-10-28",
+    "dueAt": "2026-10-28T17:00:00.000Z",
+    "postId": "6add4e986887a2efc1e05976",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/rnh-shootout-winner.mp4",
+    "title": "THE COMPLETE PERFORMANCE: McDAVID, DRAISAITL, NUGE, AND LEVI"
+  },
+  {
+    "id": 5,
+    "date": "2026-10-30",
+    "dueAt": "2026-10-30T23:45:00.000Z",
+    "postId": "6add4e98bd33ce99c34b104c",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/oilers/rnh-shootout-winner.mp4",
+    "title": "OIL COUNTRY REMEMBERS: WHERE DOES THIS RANK AMONG ICONIC FINISHES?"
+  }
+]
