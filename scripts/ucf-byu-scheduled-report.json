@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "date": "2026-10-24",
+    "dueAt": "2026-10-25T00:45:00.000Z",
+    "postId": "6add4b3d3d5b27036babe64c",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/ucf-byu/ucf_byu_upset_plate_01.png",
+    "isVideo": false,
+    "title": "HISTORIC UPSET: UCF SHOCKS NO. 2 BYU 39-31 IN DOUBLE OVERTIME"
+  },
+  {
+    "id": 2,
+    "date": "2026-10-24",
+    "dueAt": "2026-10-25T02:00:00.000Z",
+    "postId": "6add4b3ee4be8a4d86835060",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/ucf-byu/ucf_byu_touchdown_2ot.mp4",
+    "isVideo": true,
+    "title": "ONE PLAY. ONE TOUCHDOWN: KEYONE JENKINS TO GRAYSON BROUSSEAU IN 2OT"
+  },
+  {
+    "id": 3,
+    "date": "2026-10-24",
+    "dueAt": "2026-10-25T03:30:00.000Z",
+    "postId": "6add4b3f3d5b27036babe789",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/ucf-byu/ucf_byu_magical_2pt_conversion.mp4",
+    "isVideo": true,
+    "title": "THE MAGICAL 2-POINT CONVERSION: CALCULATED AGGRESSION UNDER PRESSURE"
+  },
+  {
+    "id": 4,
+    "date": "2026-10-25",
+    "dueAt": "2026-10-25T14:30:00.000Z",
+    "postId": "6add4b408b3d437ddce44488",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/ucf-byu/ucf_byu_goal_line_stand_win.mp4",
+    "isVideo": true,
+    "title": "THE 4TH-AND-GOAL STAND: DEFENSE SEALS THE FIELD STORMING"
+  },
+  {
+    "id": 5,
+    "date": "2026-10-25",
+    "dueAt": "2026-10-25T18:00:00.000Z",
+    "postId": "6add4b41bd33ce99c34a6807",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/ucf-byu/ucf_byu_capitalize_penalty.mp4",
+    "isVideo": true,
+    "title": "POISE AMID CHAOS: CAPITALIZING ON OPPONENT MISTAKES"
+  },
+  {
+    "id": 6,
+    "date": "2026-10-25",
+    "dueAt": "2026-10-25T21:30:00.000Z",
+    "postId": "6add4b426887a2efc1df7479",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/ucf-byu/ucf_byu_upset_plate_02.png",
+    "isVideo": false,
+    "title": "CULTURE OVER RANKING: WHY PREPARATION CONQUERS PERCEPTION"
+  },
+  {
+    "id": 7,
+    "date": "2026-10-25",
+    "dueAt": "2026-10-26T00:30:00.000Z",
+    "postId": "6add4b430b5343d070aac633",
+    "status": "scheduled",
+    "assetUrl": "https://lornettedaye.com/campaigns/ucf-byu/ucf_byu_upset_plate_03.png",
+    "isVideo": false,
+    "title": "THE AFTERMATH: CARRYING THE STANDARD FORWARD"
+  }
+]
