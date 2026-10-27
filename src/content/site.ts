@@ -420,9 +420,9 @@ export const servicePages: Record<string, ServicePage> = {
     description:
       "Practical leadership development for people who need to communicate, execute, and lead with composure under pressure.",
     heroImage: {
-      src: "/generated/leadership-soft-cream-gold-hero.png",
-      alt: "Soft cream and gold abstract pathway suggesting resilient leadership and purposeful movement.",
-      crop: "object-[50%_48%]",
+      src: "/generated/leadership-executive-strategy-session.jpg",
+      alt: "Executive leadership strategy session with diverse senior leaders in thoughtful discussion around a boardroom table in morning light",
+      crop: "object-[center_35%]",
     },
     pillars: [
       "Strategic Thinking",
