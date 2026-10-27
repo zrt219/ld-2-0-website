@@ -536,8 +536,8 @@ export const servicePages: Record<string, ServicePage> = {
     description:
       "Youth-focused mentorship and development experiences that help young people build discipline, confidence, and self-belief.",
     heroImage: {
-      src: "/generated/mentorship-podium-soft-background.png",
-      alt: "Gold podium artwork with a simplified cream and gold background for mentorship and youth development.",
+      src: "/generated/mentorship-youth-development-session.jpg",
+      alt: "Experienced Latina mentor in discussion with a young mentee over a goal roadmap journal in a sunlit university library",
       crop: "object-center",
     },
     pillars: [
