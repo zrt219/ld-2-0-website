@@ -81,13 +81,13 @@ export const galleryEnvironments: GalleryEnvironment[] = [
     objectPosition: "center center",
   },
   {
-    id: "tunnel-execution",
-    title: "The Tunnel of Execution",
-    subtitle: "Stepping into the Competitive Arena",
+    id: "setback-resilience",
+    title: "The Quiet Sideline",
+    subtitle: "Patience & Resolve Through Adversity",
     pillar: "Resilience After Setback & Reset",
     pillarNumber: "04",
     quote:
-      "Between preparation and the podium lies the tunnel. Breathe, step forward with intention, and trust your training.",
+      "Your setback is not your finish line. In the time of recovery, you build the resilience that will carry you far beyond the field, court, or ice.",
     application:
       "The 5-Second Reset routine to release previous mistakes and focus 100% on the immediate next action.",
     imageSrc: "/foundations/athlete-setback-crutches-field.jpg",
