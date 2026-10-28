@@ -51,15 +51,15 @@ export const galleryEnvironments: GalleryEnvironment[] = [
     objectPosition: "center 40%",
   },
   {
-    id: "stadium-sunset",
-    title: "Championship Stadium Sunset",
-    subtitle: "Poise Under Crunch-Time Pressure",
+    id: "fairway-focus",
+    title: "The Championship Fairway",
+    subtitle: "Poise Under Tournament Pressure",
     pillar: "Pressure, Emotional Regulation & Recovery",
     pillarNumber: "05",
     quote:
-      "The stadium lights will test your composure. When the noise rises, your breath and somatic routines keep you centered.",
+      "Composure is not the absence of pressure. It is the developed skill to see through it.",
     application:
-      "Physiological reset protocols to regulate nervous tension during critical competition moments.",
+      "Pre-shot routines and breathing protocols to quiet internal noise and execute with clarity under tournament pressure.",
     imageSrc: "/foundations/golfer-fairway-course-focus.jpg",
     imageAlt:
       "Golfer holding club assessing the fairway and green through trees with poise and focus",
