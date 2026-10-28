@@ -67,12 +67,12 @@ export const galleryEnvironments: GalleryEnvironment[] = [
   },
   {
     id: "golden-dawn",
-    title: "Golden Dawn Field",
+    title: "The Academic Lecture Hall",
     subtitle: "Foundational Identity & Purpose",
     pillar: "Identity Beyond Sport",
     pillarNumber: "01",
     quote:
-      "'Athlete' is only one part of the story. We are students, parents, professionals, and builders with complex needs and endless potential.",
+      "Athlete is only one part of your story. When you develop the thinker, the scholar, and the leader within you, your foundation cannot be shaken by a bad game.",
     application:
       "Separating personal self-worth from athletic scoreboards to cultivate unshakeable confidence.",
     imageSrc: "/foundations/student-lecture-exam-focus.jpg",
