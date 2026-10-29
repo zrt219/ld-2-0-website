@@ -1,161 +1,218 @@
 # -*- coding: utf-8 -*-
-"""
-Schedule 3-Week Yaxel Lendeborg Campaign: 'Behind the Athlete, Beyond the Game'
-Authoritative Voice: Lornette Daye (Olympian coach & Canadian national champion)
-Channel: Lornette Daye LinkedIn (6a39d30c5ab6d2f1065f5301)
-Cadence: 10 Ads paced across 21 calendar days (Oct 24 - Nov 13, 2026)
-
-Strict Invariants:
-- Zero asterisks (* or **)
-- Zero em dashes (—, &mdash;, \u2014)
-- Exact attribution to Lornette Daye
-- Production custom domain URLs (https://lornettedaye.com/campaigns/yaxel-lendeborg/...)
-- Persistent execution tracking in scripts/yaxel-scheduled-report.json
-"""
-
-import sys
 import os
+import sys
 import json
-import ssl
-import time
 import urllib.request
 import urllib.error
+import ssl
+import time
 
 sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
 sys.stderr.reconfigure(encoding='utf-8', line_buffering=True)
 
-TOKEN = os.environ.get('BUFFER_ACCESS_TOKEN', 'uR7DeyYk4O9VcFHqPQOnWseUl7BONqA8RZ4CK_03Ci0')
-CHANNEL_ID = '6a39d30c5ab6d2f1065f5301'
+def get_token():
+    t = os.environ.get('BUFFER_ACCESS_TOKEN')
+    if t:
+        return t
+    for env_name in ['.env.local', '.env']:
+        p = os.path.join(os.path.dirname(__file__), '..', env_name)
+        if os.path.exists(p):
+            with open(p, 'r', encoding='utf-8') as f:
+                for line in f:
+                    if line.startswith('BUFFER_ACCESS_TOKEN='):
+                        val = line.strip().split('=', 1)[1].strip()
+                        if val:
+                            return val
+    return 'uR7DeyYk4O9VcFHqPQOnWseUl7BONqA8RZ4CK_03Ci0'
 
-CREATE_POST_MUTATION = """
-mutation CreatePost($input: CreatePostInput!) {
-  createPost(input: $input) {
-    __typename
-    ... on PostActionSuccess {
-      post {
-        id
-        status
-        dueAt
-      }
-    }
-    ... on LimitReachedError { message }
-    ... on InvalidInputError { message }
-    ... on UnexpectedError { message }
-    ... on UnauthorizedError { message }
-  }
-}
-"""
+TOKEN = get_token()
+CHANNEL_ID = '6a39d30c5ab6d2f1065f5301'  # Lornette Daye LinkedIn Channel ID
 
-def schedule_post(item):
-    payload = {
-        "query": CREATE_POST_MUTATION,
-        "variables": {
-            "input": {
-                "channelId": CHANNEL_ID,
-                "text": item["text"],
-                "schedulingType": "automatic",
-                "mode": item.get("mode", "customScheduled"),
-                "dueAt": item.get("dueAt"),
-                "assets": [{"image": {"url": item["asset_url"]}}]
-            }
-        }
-    }
+def verify_prod_assets(queue):
+    print("Pre-flight Probe: Checking Yaxel Lendeborg campaign assets on production domain...")
+    ctx = ssl._create_unverified_context()
+    failed = []
     
-    data = json.dumps(payload).encode("utf-8")
-    req = urllib.request.Request(
-        "https://api.buffer.com",
-        data=data,
-        headers={
-            "Authorization": f"Bearer {TOKEN}",
-            "Content-Type": "application/json",
-            "User-Agent": "Mozilla/5.0"
-        }
-    )
-    ctx = ssl.create_default_context()
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
-    
-    try:
-        with urllib.request.urlopen(req, context=ctx, timeout=25) as resp:
-            res_data = json.loads(resp.read().decode("utf-8"))
-            create_post = res_data.get("data", {}).get("createPost", {})
-            typename = create_post.get("__typename")
-            if typename == "PostActionSuccess" and "post" in create_post:
-                p = create_post["post"]
-                return True, p.get("id"), p.get("status")
-            else:
-                msg = create_post.get("message") or json.dumps(create_post)
-                return False, typename, msg
-    except urllib.error.HTTPError as e:
-        retry_after = e.headers.get("Retry-After")
-        wait = int(retry_after) if retry_after and retry_after.isdigit() else 3600
-        return False, "429", wait
-    except Exception as e:
-        return False, "NetworkError", str(e)
+    for item in queue:
+        url = item['cdnUrl']
+        req = urllib.request.Request(url, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
+        try:
+            with urllib.request.urlopen(req, context=ctx, timeout=15) as resp:
+                if resp.status != 200:
+                    failed.append((url, resp.status))
+                else:
+                    print(f"  [200 OK] {item['imageFilename']}")
+        except Exception as e:
+            failed.append((url, str(e)))
+            
+    if failed:
+        print(f"\n[ALERT] Pre-flight probe failed for {len(failed)} assets: {failed}")
+        return False
+    print("\nPre-flight Probe PASSED: All 10 Yaxel Lendeborg assets are returning HTTP 200 OK!\n")
+    return True
 
-def main():
-    print("================================================================")
-    print("🏀 SCHEDULING 3-WEEK YAXEL LENDEBORG CAMPAIGN")
-    print("Channel: Lornette Daye LinkedIn (6a39d30c5ab6d2f1065f5301)")
-    print("Cadence: 10 Ads across 21 Calendar Days (Oct 24 - Nov 13, 2026)")
-    print("Zero Asterisks | Zero Em Dashes | 10 High-Res Production Assets")
-    print("================================================================\n")
-    
-    queue_file = "scripts/master-yaxel-queue.json"
-    if not os.path.exists(queue_file):
-        print(f"Error: {queue_file} not found. Run scripts/build_yaxel_campaign.py first.")
-        sys.exit(1)
-        
-    with open(queue_file, "r", encoding="utf-8") as f:
+def schedule_posts():
+    queue_file = os.path.join(os.path.dirname(__file__), 'master-yaxel-queue.json')
+    with open(queue_file, 'r', encoding='utf-8') as f:
         queue = json.load(f)
         
-    report_file = "scripts/yaxel-scheduled-report.json"
-    if os.path.exists(report_file):
-        with open(report_file, "r", encoding="utf-8") as f:
-            scheduled_ids = json.load(f)
-    else:
-        scheduled_ids = {}
-        
-    print(f"Total posts in queue: {len(queue)}")
-    print(f"Already scheduled in report: {len(scheduled_ids)}")
+    print(f"Loaded Yaxel master queue with {len(queue)} posts.")
     
-    if "--build-only" in sys.argv:
-        print("Flag --build-only passed. Exiting without calling Buffer.")
-        return
+    if not verify_prod_assets(queue):
+        print("HALTING: Assets not yet live on production. Please deploy to Vercel first.")
+        return False
 
-    for idx, item in enumerate(queue):
-        item_id = item["id"]
-        if item_id in scheduled_ids:
+    report_path = os.path.join(os.path.dirname(__file__), 'yaxel-scheduled-report.json')
+    results = {}
+    if os.path.exists(report_path):
+        try:
+            with open(report_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                if isinstance(data, list):
+                    for item in data:
+                        if item.get('status') in ['scheduled', 'success'] and item.get('postId'):
+                            results[item['postIndex']] = item
+                elif isinstance(data, dict):
+                    for k, item in data.items():
+                        if isinstance(item, dict) and item.get('postId'):
+                            results[int(k) if k.isdigit() else item.get('postIndex', k)] = item
+        except Exception as e:
+            print(f"Note: Could not parse existing report: {e}")
+
+    graphql_url = "https://api.buffer.com"
+    headers = {
+        "Authorization": f"Bearer {TOKEN}",
+        "Content-Type": "application/json"
+    }
+
+    ctx = ssl._create_unverified_context()
+    mutation = """
+    mutation CreatePost($input: CreatePostInput!) {
+      createPost(input: $input) {
+        ... on PostActionSuccess {
+          post {
+            id
+            status
+            dueAt
+          }
+        }
+        ... on LimitReachedError {
+          message
+        }
+        ... on InvalidInputError {
+          message
+        }
+        ... on UnexpectedError {
+          message
+        }
+        ... on UnauthorizedError {
+          message
+        }
+      }
+    }
+    """
+
+    for i, p in enumerate(queue, 1):
+        p_idx = p["postIndex"]
+        if p_idx in results and results[p_idx].get("postId"):
+            print(f"[{i}/{len(queue)}] Post #{p_idx} already scheduled (Buffer ID: {results[p_idx]['postId']}). Skipping.")
             continue
-            
-        print(f"[{idx+1}/{len(queue)}] Scheduling AD {item['ad_num']}: {item_id} | {item['slot']}...", end="", flush=True)
-        ok, res_id, res_status = schedule_post(item)
-        
-        if ok:
-            print(f" ✅ SUCCESS: Post ID {res_id} ({res_status})")
-            scheduled_ids[item_id] = {
-                "postId": res_id,
-                "status": res_status,
-                "dueAt": item.get("dueAt"),
-                "slot": item.get("slot"),
-                "mode": item.get("mode"),
-                "asset_url": item["asset_url"]
-            }
-            with open(report_file, "w", encoding="utf-8") as f:
-                json.dump(scheduled_ids, f, indent=2)
-            time.sleep(1.0)
-        elif res_id == "429":
-            print(f"\n⚠️ BUFFER API LIMIT REACHED (429).")
-            print(f"Retry-After: {res_status} seconds.")
-            break
-        else:
-            print(f" ⚠️ {res_id}: {res_status}")
-            break
 
-    print("\n================================================================")
-    print(f"📊 REPORT: {len(scheduled_ids)} of {len(queue)} posts scheduled.")
-    print(f"Persistent Report: {report_file}")
-    print("================================================================")
+        retries = 0
+        while retries < 5:
+            print(f"\n[{i}/{len(queue)}] Scheduling Yaxel Post #{p_idx} ({p['scheduledDate']} - {p['slotType']})...")
+            print(f"  Asset: {p['cdnUrl']}")
+            print(f"  Headline: {p['headline']}")
+
+            payload = {
+                "query": mutation,
+                "variables": {
+                    "input": {
+                        "channelId": CHANNEL_ID,
+                        "text": p["caption"],
+                        "schedulingType": "automatic",
+                        "mode": "customScheduled",
+                        "dueAt": p["scheduledAt"],
+                        "saveToDraft": False,
+                        "needsApproval": False,
+                        "assets": [
+                            {
+                                "image": {
+                                    "url": p["cdnUrl"]
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+
+            req = urllib.request.Request(graphql_url, data=json.dumps(payload).encode("utf-8"), headers=headers)
+            try:
+                with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
+                    res_data = json.loads(resp.read().decode("utf-8"))
+                    errors = res_data.get("errors")
+                    if errors:
+                        print(f"  >>> GRAPHQL ERROR: {errors}")
+                        p["status"] = "failed"
+                        p["error"] = errors[0].get("message")
+                        results[p_idx] = p
+                        break
+                    else:
+                        create_res = res_data.get("data", {}).get("createPost", {})
+                        if "post" in create_res and create_res["post"].get("id"):
+                            post_id = create_res["post"]["id"]
+                            st = create_res["post"].get("status")
+                            due = create_res["post"].get("dueAt")
+                            p["status"] = st
+                            p["postId"] = post_id
+                            p["dueAt"] = due
+                            print(f"  >>> SUCCESS: Post ID: {post_id} (Status: {st})")
+                            results[p_idx] = p
+                            break
+                        else:
+                            err_msg = create_res.get("message", "Unknown error")
+                            print(f"  >>> ERROR: {err_msg}")
+                            p["status"] = "failed"
+                            p["error"] = err_msg
+                            results[p_idx] = p
+                            if "limit" in err_msg.lower():
+                                print("Daily buffer queue limit reached. Saving progress.")
+                                with open(report_path, "w", encoding="utf-8") as rf:
+                                    json.dump(list(results.values()), rf, indent=2, ensure_ascii=False)
+                                return False
+                            break
+            except urllib.error.HTTPError as he:
+                if he.code == 429:
+                    retries += 1
+                    retry_after = he.headers.get('Retry-After')
+                    wait_sec = int(retry_after) if retry_after and retry_after.isdigit() else 60
+                    print(f"  [RATE LIMIT 429] Waiting {wait_sec + 5}s (Attempt {retries}/5)...")
+                    time.sleep(wait_sec + 5)
+                    continue
+                err_body = he.read().decode("utf-8", errors="replace")
+                print(f"  >>> HTTP ERROR {he.code}: {err_body}")
+                p["status"] = "failed"
+                p["error"] = f"HTTP {he.code}: {err_body}"
+                results[p_idx] = p
+                break
+            except Exception as e:
+                print(f"  >>> NETWORK ERROR: {e}")
+                p["status"] = "failed"
+                p["error"] = str(e)
+                results[p_idx] = p
+                break
+
+        time.sleep(2)
+
+    with open(report_path, "w", encoding="utf-8") as rf:
+        json.dump(list(results.values()), rf, indent=2, ensure_ascii=False)
+
+    print("\n" + "=" * 60)
+    scheduled_count = sum(1 for item in results.values() if item.get("postId"))
+    print(f"Execution complete: {scheduled_count}/{len(queue)} posts scheduled.")
+    print(f"Report written to: {report_path}")
+    print("=" * 60)
+    return scheduled_count == len(queue)
 
 if __name__ == "__main__":
-    main()
+    schedule_posts()
