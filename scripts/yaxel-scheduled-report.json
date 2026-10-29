@@ -1,162 +1,162 @@
-{
-  "YAXEL_001": {
-    "postId": "6adc1959e4be8a4d8638f453",
+[
+  {
+    "postIndex": 1,
+    "scheduledAt": "2026-11-04T00:30:00.000Z",
+    "scheduledDate": "2026-11-03",
+    "slotType": "Evening Family Reflection (7:30 PM EST)",
+    "imageFilename": "01-more-than-the-game.png",
+    "localPath": "/campaigns/yaxel/01-more-than-the-game.png",
+    "cdnUrl": "https://lornettedaye.com/campaigns/yaxel/01-more-than-the-game.png",
+    "eyebrow": "IDENTITY BEYOND SPORT & ATHLETIC PURPOSE",
+    "headline": "More Than the Game: The World Sees the Basketball Player. Behind Every Jersey Is a Son, a Family, and a Story.",
+    "caption": "IDENTITY BEYOND SPORT & ATHLETIC PURPOSE\n\nMore Than the Game: The World Sees the Basketball Player. Behind Every Jersey Is a Son, a Family, and a Story.\n\nWhen an athlete steps onto an NBA hardwood under bright arena lights, the world sees statistics, physical presence, and game execution.\n\nFans cheer the rebounds, the defensive stops, and the tenacity in the paint. But every elite performer carries an entire world inside their chest. Behind the uniform is a young man with real responsibilities, a devoted family, and an uphill climb that started long before anyone knew his name.\n\nOlympic-level mentor Lornette Daye has coached national champions and Olympians for over forty years. Her foundational rule for long-term greatness begins with Foundation One: Identity Beyond Sport. When an athlete knows who they are off the court, their game becomes grounded in unwavering clarity rather than external validation.\n\nYaxel Lendeborg embodies this standard. Competing with fierce intensity while keeping his heart anchored to the people who raised him is what true leadership looks like.\n\nPlay with purpose. Live in the moment. Celebrate the journey.\n\nATHLETE FOUNDATIONS & FAMILY SYSTEMS:\nExplore Lornette's Foundations: https://lornettedaye.com/foundations\n\nVENTURE & ENTERPRISE:\nBuild business and NIL infrastructure: https://umattr.ca/business\n\nDIGITAL IDENTITY:\nArchitect your executive web presence: https://umattr.ca/website\n\nCAREER MOBILITY:\nStep into post-athletic career pathways: https://careercircle.app\n\n#YaxelLendeborg #Warriors #IdentityBeyondSport #MoreThanAnAthlete #FamilyFirst #LornettesFoundations #CareerCircle #BetterPeopleBetterPlayers",
+    "hashtags": "#YaxelLendeborg #Warriors #IdentityBeyondSport #MoreThanAnAthlete #FamilyFirst #LornettesFoundations #CareerCircle #BetterPeopleBetterPlayers",
     "status": "scheduled",
-    "dueAt": "2026-10-24T14:30:00.000Z",
-    "slot": "Day 1 Morning (08:30 AM MDT)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-01.png"
+    "postId": "6ae2eec4f66393dd5691a1a4",
+    "dueAt": "2026-11-04T00:30:00.000Z"
   },
-  "YAXEL_002": {
-    "postId": "6adc195a8b3d437ddc99899b",
+  {
+    "postIndex": 2,
+    "scheduledAt": "2026-11-10T00:30:00.000Z",
+    "scheduledDate": "2026-11-09",
+    "slotType": "Evening Family Reflection (7:30 PM EST)",
+    "imageFilename": "02-yaxel-what-a-journey.png",
+    "localPath": "/campaigns/yaxel/02-yaxel-what-a-journey.png",
+    "cdnUrl": "https://lornettedaye.com/campaigns/yaxel/02-yaxel-what-a-journey.png",
+    "eyebrow": "THE POWER OF GRIT & PERSEVERANCE",
+    "headline": "Yaxel, What a Journey: From Michigan and Junior College to the Golden State Warriors.",
+    "caption": "THE POWER OF GRIT & PERSEVERANCE\n\nYaxel, What a Journey: From Michigan and Junior College to the Golden State Warriors.\n\nThe path to professional basketball is rarely a straight line. For Yaxel Lendeborg, it was built day by day, gym by gym, through relentless dedication and unshakeable humility.\n\nFrom his early roots in Michigan, through the demanding junior college trenches, to dominating the collegiate boards, and now putting on jersey number thirty-two for Golden State, every step was earned. Nothing was handed to him.\n\nLornette Daye teaches Foundation Three: Discipline Systems. Talent opens doors, but daily discipline and silent sacrifice keep you inside the room. Reaching this stage is proof of what happens when preparation meets quiet conviction.\n\nTake time to honor how far you have come. Your hard work deserves to be celebrated, and this new chapter is only the beginning of your legacy.\n\nEnjoy every moment of this hard-earned milestone.\n\nATHLETE FOUNDATIONS & FAMILY SYSTEMS:\nExplore Lornette's Foundations: https://lornettedaye.com/foundations\n\nVENTURE & ENTERPRISE:\nBuild business and NIL infrastructure: https://umattr.ca/business\n\nDIGITAL IDENTITY:\nArchitect your executive web presence: https://umattr.ca/website\n\nCAREER MOBILITY:\nStep into post-athletic career pathways: https://careercircle.app\n\n#YaxelLendeborg #GoldenStateWarriors #NBAJourney #JuniorCollegeToNBA #DisciplineSystems #LornettesFoundations #CareerCircle",
+    "hashtags": "#YaxelLendeborg #GoldenStateWarriors #NBAJourney #JuniorCollegeToNBA #DisciplineSystems #LornettesFoundations #CareerCircle",
     "status": "scheduled",
-    "dueAt": "2026-10-26T14:30:00.000Z",
-    "slot": "Day 3 Morning (08:30 AM MDT)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-02.png"
+    "postId": "6ae2eec78d517922b2357a76",
+    "dueAt": "2026-11-10T00:30:00.000Z"
   },
-  "YAXEL_003": {
-    "postId": "6adc195c8b3d437ddc9989d3",
+  {
+    "postIndex": 3,
+    "scheduledAt": "2026-11-16T00:30:00.000Z",
+    "scheduledDate": "2026-11-15",
+    "slotType": "Evening Family Reflection (7:30 PM EST)",
+    "imageFilename": "03-some-battles-are-personal.png",
+    "localPath": "/campaigns/yaxel/03-some-battles-are-personal.png",
+    "cdnUrl": "https://lornettedaye.com/campaigns/yaxel/03-some-battles-are-personal.png",
+    "eyebrow": "UNSEEN COURAGE & FAMILY DEVOTION",
+    "headline": "Some Battles Are Personal: Showing Up to Compete While Carrying the Weight of Those You Love.",
+    "caption": "UNSEEN COURAGE & FAMILY DEVOTION\n\nSome Battles Are Personal: Showing Up to Compete While Carrying the Weight of Those You Love.\n\nThe hardest battles an athlete fights never appear on the box score.\n\nShowing up to compete at the highest level of professional sport while carrying personal worries for a family member facing health challenges demands an extraordinary level of emotional courage. It requires compartmentalizing pressure while holding deep compassion in your heart.\n\nIn Lornette's Foundations, Foundation Seven centers on Family and Community Support. The strength of an athlete does not come from cold isolation. It comes from the love, gratitude, and purpose rooted in family bonds.\n\nYaxel, your poise in navigating both professional demands and personal family devotion commands profound respect. When you play for something bigger than yourself, you tap into a reserve of strength that pressure cannot shake.\n\nTrue strength is playing with heart while honoring the people who matter most.\n\nATHLETE FOUNDATIONS & FAMILY SYSTEMS:\nExplore Lornette's Foundations: https://lornettedaye.com/foundations\n\nVENTURE & ENTERPRISE:\nBuild business and NIL infrastructure: https://umattr.ca/business\n\nDIGITAL IDENTITY:\nArchitect your executive web presence: https://umattr.ca/website\n\nCAREER MOBILITY:\nStep into post-athletic career pathways: https://careercircle.app\n\n#UnseenCourage #FamilyDevotion #EmotionalRegulation #LornettesFoundations #AthleteSupport #CareerCircle #BetterPeopleBetterPlayers",
+    "hashtags": "#UnseenCourage #FamilyDevotion #EmotionalRegulation #LornettesFoundations #AthleteSupport #CareerCircle #BetterPeopleBetterPlayers",
     "status": "scheduled",
-    "dueAt": "2026-10-28T14:30:00.000Z",
-    "slot": "Day 5 Morning (08:30 AM MDT)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-03.png"
+    "postId": "6ae2eeca9c8338621351c302",
+    "dueAt": "2026-11-16T00:30:00.000Z"
   },
-  "YAXEL_004": {
-    "postId": "6adc195e8b3d437ddc998a11",
+  {
+    "postIndex": 4,
+    "scheduledAt": "2026-11-22T00:30:00.000Z",
+    "scheduledDate": "2026-11-21",
+    "slotType": "Evening Family Reflection (7:30 PM EST)",
+    "imageFilename": "04-a-mothers-love.png",
+    "localPath": "/campaigns/yaxel/04-a-mothers-love.png",
+    "cdnUrl": "https://lornettedaye.com/campaigns/yaxel/04-a-mothers-love.png",
+    "eyebrow": "FOUNDATION OF UNCONDITIONAL SUPPORT",
+    "headline": "A Mother's Love: Long Before the Arena Lights, There Was Someone Who Believed in You First.",
+    "caption": "FOUNDATION OF UNCONDITIONAL SUPPORT\n\nA Mother's Love: Long Before the Arena Lights, There Was Someone Who Believed in You First.\n\nLong before the NBA Draft, the packed arenas, and the national broadcasts, there was a mother who saw the greatness in her son before the world ever noticed.\n\nShe was there through the late-night practices, the quiet doubts, the sacrifices, and the endless miles traveled to keep a dream alive. That unconditional love is the unseen engine behind every great athletic achievement.\n\nLornette Daye often reflects with elite athletes on the sacred value of family anchors. When sports try to reduce you to your latest performance, a mother's voice reminds you of your true worth. Everything Yaxel pours onto the court is an echo of the love and guidance poured into him.\n\nTo every athlete playing with a loved one in their heart: let that love be your peace, your fuel, and your anchor.\n\nThat love is an unbreakable part of your story.\n\nATHLETE FOUNDATIONS & FAMILY SYSTEMS:\nExplore Lornette's Foundations: https://lornettedaye.com/foundations\n\nVENTURE & ENTERPRISE:\nBuild business and NIL infrastructure: https://umattr.ca/business\n\nDIGITAL IDENTITY:\nArchitect your executive web presence: https://umattr.ca/website\n\nCAREER MOBILITY:\nStep into post-athletic career pathways: https://careercircle.app\n\n#MothersLove #FamilyAnchor #SacrificeAndLove #LornettesFoundations #FamilySupport #CareerCircle #BetterPeopleBetterPlayers",
+    "hashtags": "#MothersLove #FamilyAnchor #SacrificeAndLove #LornettesFoundations #FamilySupport #CareerCircle #BetterPeopleBetterPlayers",
     "status": "scheduled",
-    "dueAt": "2026-10-30T14:30:00.000Z",
-    "slot": "Day 7 Morning (08:30 AM MDT)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-04.png"
+    "postId": "6ae2eecd35657f219b30d85c",
+    "dueAt": "2026-11-22T00:30:00.000Z"
   },
-  "YAXEL_005": {
-    "postId": "6adc195fe4be8a4d8638f5ab",
+  {
+    "postIndex": 5,
+    "scheduledAt": "2026-11-28T00:30:00.000Z",
+    "scheduledDate": "2026-11-27",
+    "slotType": "Evening Family Reflection (7:30 PM EST)",
+    "imageFilename": "05-stay-focused-on-your-dream.png",
+    "localPath": "/campaigns/yaxel/05-stay-focused-on-your-dream.png",
+    "cdnUrl": "https://lornettedaye.com/campaigns/yaxel/05-stay-focused-on-your-dream.png",
+    "eyebrow": "EXECUTION & EMOTIONAL EQUANIMITY",
+    "headline": "Stay Focused on Your Dream: Dedication, Preparation, and Belief When Life Becomes Complex.",
+    "caption": "EXECUTION & EMOTIONAL EQUANIMITY\n\nStay Focused on Your Dream: Dedication, Preparation, and Belief When Life Becomes Complex.\n\nWhen life outside the court becomes complicated and heavy, keeping your professional focus sharp is one of the greatest tests of character.\n\nIt is easy to stay locked in when everything is smooth. But true champions develop the ability to honor their emotions without losing control of their daily execution. Preparation, dedication, and self-belief remain your compass through stormy seasons.\n\nLornette Daye coaches athletes through Foundation Two: Champion Mindset. Focus is not about ignoring life's realities. Focus is about bringing your total presence to the task right in front of you, one possession, one drill, and one moment at a time.\n\nTake each opportunity as it comes. Protect your peace, trust your preparation, and know that you were built to handle this moment.\n\nOne step at a time. One breath at a time.\n\nATHLETE FOUNDATIONS & FAMILY SYSTEMS:\nExplore Lornette's Foundations: https://lornettedaye.com/foundations\n\nVENTURE & ENTERPRISE:\nBuild business and NIL infrastructure: https://umattr.ca/business\n\nDIGITAL IDENTITY:\nArchitect your executive web presence: https://umattr.ca/website\n\nCAREER MOBILITY:\nStep into post-athletic career pathways: https://careercircle.app\n\n#StayFocused #ChampionMindset #EmotionalPoise #MentalToughness #LornettesFoundations #CareerCircle",
+    "hashtags": "#StayFocused #ChampionMindset #EmotionalPoise #MentalToughness #LornettesFoundations #CareerCircle",
     "status": "scheduled",
-    "dueAt": "2026-11-01T15:30:00.000Z",
-    "slot": "Day 9 Morning (08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-05.png"
+    "postId": "6ae2eed09c8338621351c3ac",
+    "dueAt": "2026-11-28T00:30:00.000Z"
   },
-  "YAXEL_006": {
-    "postId": "6adc19610b5343d070606e05",
+  {
+    "postIndex": 6,
+    "scheduledAt": "2026-12-04T00:30:00.000Z",
+    "scheduledDate": "2026-12-03",
+    "slotType": "Evening Family Reflection (7:30 PM EST)",
+    "imageFilename": "06-you-are-human-first.png",
+    "localPath": "/campaigns/yaxel/06-you-are-human-first.png",
+    "cdnUrl": "https://lornettedaye.com/campaigns/yaxel/06-you-are-human-first.png",
+    "eyebrow": "WHOLE ATHLETE WELLBEING",
+    "headline": "You Are Human First: Being Strong Does Not Mean You Cannot Feel Emotion.",
+    "caption": "WHOLE ATHLETE WELLBEING\n\nYou Are Human First: Being Strong Does Not Mean You Cannot Feel Emotion.\n\nSports culture often tells young men and elite athletes that vulnerability is weakness. We praise them for playing through physical pain and expect them to remain emotionless robots off the court.\n\nThe reality is far more profound: an athlete can be fierce, physically dominant, and completely locked into the game, while still feeling worried, emotional, or overwhelmed about family circumstances.\n\nLornette Daye has championed the Whole Athlete framework for decades. Acknowledging your feelings does not diminish your competitive edge. It actually protects your mental longevity and deepens your resilience.\n\nBeing human first is what gives your athletic journey genuine meaning. Give yourself permission to feel, to lean on your support network, and to breathe.\n\nYou do not have to carry everything alone.\n\nATHLETE FOUNDATIONS & FAMILY SYSTEMS:\nExplore Lornette's Foundations: https://lornettedaye.com/foundations\n\nVENTURE & ENTERPRISE:\nBuild business and NIL infrastructure: https://umattr.ca/business\n\nDIGITAL IDENTITY:\nArchitect your executive web presence: https://umattr.ca/website\n\nCAREER MOBILITY:\nStep into post-athletic career pathways: https://careercircle.app\n\n#HumanFirst #WholeAthlete #MentalHealthInSports #VulnerabilityIsStrength #LornettesFoundations #CareerCircle",
+    "hashtags": "#HumanFirst #WholeAthlete #MentalHealthInSports #VulnerabilityIsStrength #LornettesFoundations #CareerCircle",
     "status": "scheduled",
-    "dueAt": "2026-11-03T15:30:00.000Z",
-    "slot": "Day 11 Morning (08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-06.png"
+    "postId": "6ae2eed28d517922b2357d2d",
+    "dueAt": "2026-12-04T00:30:00.000Z"
   },
-  "YAXEL_007": {
-    "postId": "6adc19638b3d437ddc998a94",
+  {
+    "postIndex": 7,
+    "scheduledAt": "2026-12-10T00:30:00.000Z",
+    "scheduledDate": "2026-12-09",
+    "slotType": "Evening Family Reflection (7:30 PM EST)",
+    "imageFilename": "07-enjoy-this-moment.png",
+    "localPath": "/campaigns/yaxel/07-enjoy-this-moment.png",
+    "cdnUrl": "https://lornettedaye.com/campaigns/yaxel/07-enjoy-this-moment.png",
+    "eyebrow": "GRATITUDE & PRESENT MOMENT AWARENESS",
+    "headline": "Enjoy This Moment: You Have Worked Too Hard to Reach This Stage Not to Appreciate It.",
+    "caption": "GRATITUDE & PRESENT MOMENT AWARENESS\n\nEnjoy This Moment: You Have Worked Too Hard to Reach This Stage Not to Appreciate It.\n\nWhen you are constantly grinding for the next contract, the next defensive stop, and the next win, it is easy to forget to look up and realize where you are standing.\n\nYou have sacrificed years of sleep, pushed through grueling conditioning sessions, and weathered setbacks that would have caused others to quit. Reaching the pinnacle of professional sport is a rare privilege that only a tiny fraction of athletes ever achieve.\n\nLornette Daye reminds every competitor she coaches: do not let the urgency of tomorrow steal the beauty of today. Celebrate the small victories. Savor the feeling of running out of the tunnel. Appreciate the camaraderie in the locker room.\n\nYou have earned your seat at this table. Let yourself feel the joy of the game you fell in love with as a boy.\n\nLive in this moment fully.\n\nATHLETE FOUNDATIONS & FAMILY SYSTEMS:\nExplore Lornette's Foundations: https://lornettedaye.com/foundations\n\nVENTURE & ENTERPRISE:\nBuild business and NIL infrastructure: https://umattr.ca/business\n\nDIGITAL IDENTITY:\nArchitect your executive web presence: https://umattr.ca/website\n\nCAREER MOBILITY:\nStep into post-athletic career pathways: https://careercircle.app\n\n#EnjoyTheMoment #GratitudeInSports #Presence #AthleticAchievement #LornettesFoundations #CareerCircle",
+    "hashtags": "#EnjoyTheMoment #GratitudeInSports #Presence #AthleticAchievement #LornettesFoundations #CareerCircle",
     "status": "scheduled",
-    "dueAt": "2026-11-05T15:30:00.000Z",
-    "slot": "Day 13 Morning (08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-07.png"
+    "postId": "6ae2eed5b8abb6631d11d38e",
+    "dueAt": "2026-12-10T00:30:00.000Z"
   },
-  "YAXEL_008": {
-    "postId": "6adc19640b5343d070606e7d",
+  {
+    "postIndex": 8,
+    "scheduledAt": "2026-12-16T00:30:00.000Z",
+    "scheduledDate": "2026-12-15",
+    "slotType": "Evening Family Reflection (7:30 PM EST)",
+    "imageFilename": "08-let-your-love-of-the-game-show.png",
+    "localPath": "/campaigns/yaxel/08-let-your-love-of-the-game-show.png",
+    "cdnUrl": "https://lornettedaye.com/campaigns/yaxel/08-let-your-love-of-the-game-show.png",
+    "eyebrow": "PASSION, HEART & INTENSITY",
+    "headline": "Let Your Love of the Game Show: Play With Heart, Trust Your Work, and Remember Why You Started.",
+    "caption": "PASSION, HEART & INTENSITY\n\nLet Your Love of the Game Show: Play With Heart, Trust Your Work, and Remember Why You Started.\n\nUnder the weight of professional expectations, media scrutiny, and contract pressures, sport can easily feel like a heavy job.\n\nThe secret to playing your best when the stakes are highest is returning to your original joy. Remember the cracked asphalt courts, the sound of the ball bouncing in an empty schoolyard, and the pure excitement of dreaming about this life.\n\nLornette Daye coaches Foundation Two and Foundation Five: when you connect to your original passion, fear disappears. Trust the thousands of hours you spent putting up shots when no cameras were around. Play with an open heart and let your natural joy illuminate the floor.\n\nWhen you play with authentic love for the game, everyone watching can feel it.\n\nTrust your preparation. Play free.\n\nATHLETE FOUNDATIONS & FAMILY SYSTEMS:\nExplore Lornette's Foundations: https://lornettedaye.com/foundations\n\nVENTURE & ENTERPRISE:\nBuild business and NIL infrastructure: https://umattr.ca/business\n\nDIGITAL IDENTITY:\nArchitect your executive web presence: https://umattr.ca/website\n\nCAREER MOBILITY:\nStep into post-athletic career pathways: https://careercircle.app\n\n#LoveOfTheGame #PurePassion #PlayFree #TrustTheProcess #LornettesFoundations #CareerCircle #BetterPeopleBetterPlayers",
+    "hashtags": "#LoveOfTheGame #PurePassion #PlayFree #TrustTheProcess #LornettesFoundations #CareerCircle #BetterPeopleBetterPlayers",
     "status": "scheduled",
-    "dueAt": "2026-11-07T15:30:00.000Z",
-    "slot": "Day 15 Morning (08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-08.png"
+    "postId": "6ae2eed89c8338621351c51e",
+    "dueAt": "2026-12-16T00:30:00.000Z"
   },
-  "YAXEL_009": {
-    "postId": "6adc19660b5343d070606ea9",
+  {
+    "postIndex": 9,
+    "scheduledAt": "2026-12-22T00:30:00.000Z",
+    "scheduledDate": "2026-12-21",
+    "slotType": "Evening Family Reflection (7:30 PM EST)",
+    "imageFilename": "09-every-athlete-has-a-story.png",
+    "localPath": "/campaigns/yaxel/09-every-athlete-has-a-story.png",
+    "cdnUrl": "https://lornettedaye.com/campaigns/yaxel/09-every-athlete-has-a-story.png",
+    "eyebrow": "MULTIDIMENSIONAL EXCELLENCE",
+    "headline": "Every Athlete Has a Story: Beyond Every Statistic Is a Legacy in the Making.",
+    "caption": "MULTIDIMENSIONAL EXCELLENCE\n\nEvery Athlete Has a Story: Beyond Every Statistic Is a Legacy in the Making.\n\nModern sports analytics can measure an athlete's jump height, lateral quickness, and shooting efficiency down to decimal points.\n\nWhat analytics can never quantify is heart, loyalty to family, and the quiet dignity of a young leader determined to uplift his community. Beyond the box scores is a person building a life, creating generational security, and establishing an enduring legacy.\n\nLornette Daye founded Lornette's Foundations to equip athletes for the entirety of their journey: Foundation Nine (Personal Brand and Story) and Foundation Ten (Legacy and Community Impact). Your sport is your platform, but your character is your true legacy.\n\nYaxel Lendeborg's journey is inspiring thousands of young athletes who started with long odds and big dreams. Keep writing your story with poise and integrity.\n\nYour story is touching lives far beyond the hardwood.\n\nATHLETE FOUNDATIONS & FAMILY SYSTEMS:\nExplore Lornette's Foundations: https://lornettedaye.com/foundations\n\nVENTURE & ENTERPRISE:\nBuild business and NIL infrastructure: https://umattr.ca/business\n\nDIGITAL IDENTITY:\nArchitect your executive web presence: https://umattr.ca/website\n\nCAREER MOBILITY:\nStep into post-athletic career pathways: https://careercircle.app\n\n#EveryAthleteHasAStory #AthleteLegacy #CommunityImpact #WholeAthlete #LornettesFoundations #CareerCircle",
+    "hashtags": "#EveryAthleteHasAStory #AthleteLegacy #CommunityImpact #WholeAthlete #LornettesFoundations #CareerCircle",
     "status": "scheduled",
-    "dueAt": "2026-11-10T15:30:00.000Z",
-    "slot": "Day 18 Morning (08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-09.png"
+    "postId": "6ae2eedc35657f219b30db96",
+    "dueAt": "2026-12-22T00:30:00.000Z"
   },
-  "YAXEL_010": {
-    "postId": "6adc1968bd33ce99c300ba7a",
+  {
+    "postIndex": 10,
+    "scheduledAt": "2026-12-28T00:30:00.000Z",
+    "scheduledDate": "2026-12-27",
+    "slotType": "Evening Family Reflection (7:30 PM EST)",
+    "imageFilename": "10-a-personal-message-from-lornette-daye.png",
+    "localPath": "/campaigns/yaxel/10-a-personal-message-from-lornette-daye.png",
+    "cdnUrl": "https://lornettedaye.com/campaigns/yaxel/10-a-personal-message-from-lornette-daye.png",
+    "eyebrow": "A PERSONAL MESSAGE FROM LORNETTE DAYE",
+    "headline": "To Yaxel Lendeborg: Admiration for Your Play, Your Strength for Your Mother, and Your Family Heart.",
+    "caption": "A PERSONAL MESSAGE FROM LORNETTE DAYE\n\nTo Yaxel Lendeborg: Admiration for Your Play, Your Strength for Your Mother, and Your Family Heart.\n\nA personal note from Olympic-level coach Lornette Daye:\n\nYaxel,\n\nI admire how exceptionally well you are playing while your family is navigating a deeply difficult season. As a former elite athlete and coach of over forty years, I understand that the battles outside sport can be far more demanding than anything you face between the lines.\n\nYour ability to compete with excellence, maintain your humility, and stand as a rock for your mother reflects the highest standard of character. When you play with love as your primary motive, you inspire everyone who crosses your path.\n\nKeep believing in your abilities. Stay focused on what you can control. Above all, take time to enjoy the moments you have worked so hard to create.\n\nWishing you, your mother, and your entire family strength, peace, and many beautiful moments together.\n\nSincerely,\nLornette Daye\nOlympic-Level Coach and Canadian National Sprint Champion\n\nATHLETE FOUNDATIONS & FAMILY SYSTEMS:\nExplore Lornette's Foundations: https://lornettedaye.com/foundations\n\nVENTURE & ENTERPRISE:\nBuild business and NIL infrastructure: https://umattr.ca/business\n\nDIGITAL IDENTITY:\nArchitect your executive web presence: https://umattr.ca/website\n\nCAREER MOBILITY:\nStep into post-athletic career pathways: https://careercircle.app\n\n#LornetteDaye #YaxelLendeborg #GoldenStateWarriors #FamilyStrength #BetterPeopleBetterPlayers #LornettesFoundations #CareerCircle",
+    "hashtags": "#LornetteDaye #YaxelLendeborg #GoldenStateWarriors #FamilyStrength #BetterPeopleBetterPlayers #LornettesFoundations #CareerCircle",
     "status": "scheduled",
-    "dueAt": "2026-11-13T15:30:00.000Z",
-    "slot": "Day 21 Morning (08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-10.png"
-  },
-  "YAXEL_REPEAT_001": {
-    "postId": "6adc20ef8b3d437ddc9ba03f",
-    "status": "scheduled",
-    "dueAt": "2026-11-15T15:30:00.000Z",
-    "slot": "Encore Day 1 (Sun Nov 15, 08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-01.png"
-  },
-  "YAXEL_REPEAT_002": {
-    "postId": "6adc20f08b3d437ddc9ba0c2",
-    "status": "scheduled",
-    "dueAt": "2026-11-16T15:30:00.000Z",
-    "slot": "Encore Day 2 (Mon Nov 16, 08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-02.png"
-  },
-  "YAXEL_REPEAT_003": {
-    "postId": "6adc20f2e4be8a4d863af96d",
-    "status": "scheduled",
-    "dueAt": "2026-11-18T15:30:00.000Z",
-    "slot": "Encore Day 4 (Wed Nov 18, 08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-03.png"
-  },
-  "YAXEL_REPEAT_004": {
-    "postId": "6adc20f30b5343d070626eb0",
-    "status": "scheduled",
-    "dueAt": "2026-11-19T15:30:00.000Z",
-    "slot": "Encore Day 5 (Thu Nov 19, 08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-04.png"
-  },
-  "YAXEL_REPEAT_005": {
-    "postId": "6adc20f53d5b27036b64a3f7",
-    "status": "scheduled",
-    "dueAt": "2026-11-21T15:30:00.000Z",
-    "slot": "Encore Day 7 (Sat Nov 21, 08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-05.png"
-  },
-  "YAXEL_REPEAT_006": {
-    "postId": "6adc20f6e4be8a4d863afa07",
-    "status": "scheduled",
-    "dueAt": "2026-11-22T15:30:00.000Z",
-    "slot": "Encore Day 8 (Sun Nov 22, 08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-06.png"
-  },
-  "YAXEL_REPEAT_007": {
-    "postId": "6adc20f7e4be8a4d863afa40",
-    "status": "scheduled",
-    "dueAt": "2026-11-24T15:30:00.000Z",
-    "slot": "Encore Day 10 (Tue Nov 24, 08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-07.png"
-  },
-  "YAXEL_REPEAT_008": {
-    "postId": "6adc20f9bd33ce99c302b224",
-    "status": "scheduled",
-    "dueAt": "2026-11-25T15:30:00.000Z",
-    "slot": "Encore Day 11 (Wed Nov 25, 08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-08.png"
-  },
-  "YAXEL_REPEAT_009": {
-    "postId": "6adc20fa6887a2efc1980e3f",
-    "status": "scheduled",
-    "dueAt": "2026-11-27T15:30:00.000Z",
-    "slot": "Encore Day 13 (Fri Nov 27, 08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-09.png"
-  },
-  "YAXEL_REPEAT_010": {
-    "postId": "6adc20fc8b3d437ddc9ba283",
-    "status": "scheduled",
-    "dueAt": "2026-11-28T15:30:00.000Z",
-    "slot": "Encore Day 14 (Sat Nov 28, 08:30 AM MST)",
-    "mode": "customScheduled",
-    "asset_url": "https://lornettedaye.com/campaigns/yaxel-lendeborg/yaxel-10.png"
+    "postId": "6ae2eee035657f219b30dcdf",
+    "dueAt": "2026-12-28T00:30:00.000Z"
   }
-}
+]
