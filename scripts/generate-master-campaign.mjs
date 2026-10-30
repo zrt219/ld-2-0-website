@@ -29,7 +29,7 @@ export function getCaptionsForFolder(folder, index, dayNumber) {
   switch (folder) {
     case 'lewishamilton':
       return {
-        headline: `MONZA SPOTLIGHT [Day ${dayNumber}]: LEWIS HAMILTON IN SCARLET RED 🇮🇹🏎️`,
+        headline: `MONZA SPOTLIGHT: LEWIS HAMILTON IN SCARLET RED 🇮🇹🏎️`,
         text: `At 350 km/h through the Curva Grande, there is zero margin for hesitation.
 
 ${angle}
@@ -46,7 +46,7 @@ Can Lewis deliver the dream podium at Monza? Drop your predictions below! 🏎�
 
     case 'como':
       return {
-        headline: `SERIE A LEADERSHIP [Day ${dayNumber}]: THE COMO 1907 BLUEPRINT 🇮🇹⚽`,
+        headline: `SERIE A LEADERSHIP: THE COMO 1907 BLUEPRINT 🇮🇹⚽`,
         text: `From the shores of Lake Como to the pinnacle of Serie A football:
 
 ${angle}
@@ -63,7 +63,7 @@ How high can this ambitious Italian project climb this season? Share your though
 
     case 'carlos':
       return {
-        headline: `US OPEN CONTENDER [Day ${dayNumber}]: CARLOS ALCARAZ'S FEARLESS ATTACK ⚡🇪🇸`,
+        headline: `US OPEN CONTENDER: CARLOS ALCARAZ'S FEARLESS ATTACK ⚡🇪🇸`,
         text: `Sliding defense, drop-shot disguise, and 100-mph forehands on the run.
 
 ${angle}
@@ -81,7 +81,7 @@ Are you backing Alcaraz to lift the trophy in New York? Let's hear your take! �
     case 'coco':
     case 'coco2':
       return {
-        headline: `US OPEN HOME CROWD [Day ${dayNumber}]: COCO GAUFF'S CLUTCH POISE 🇺🇸👑`,
+        headline: `US OPEN HOME CROWD: COCO GAUFF'S CLUTCH POISE 🇺🇸👑`,
         text: `Defending a Grand Slam championship in front of 24,000 screaming New Yorkers is the ultimate test of athletic maturity.
 
 ${angle}
@@ -98,7 +98,7 @@ Can Coco go back-to-back in Queens? Cast your vote in the comments! 🏆🇺🇸
 
     case 'leylah':
       return {
-        headline: `CANADIAN PRIDE [Day ${dayNumber}]: LEYLAH FERNANDEZ BACK IN NEW YORK 🇨🇦🎾`,
+        headline: `CANADIAN PRIDE: LEYLAH FERNANDEZ BACK IN NEW YORK 🇨🇦🎾`,
         text: `As a Canadian National Champion, I know the pride and grit that Leylah Fernandez carries every time she steps onto the hard courts.
 
 ${angle}
@@ -116,7 +116,7 @@ Let's rally behind Leylah in New York! Drop your Canadian flags below! 🇨🇦�
     case 'osaka':
     case 'osaka_court':
       return {
-        headline: `ICONIC SPOTLIGHT [Day ${dayNumber}]: NAOMI OSAKA — GRACE, POWER & IDENTITY 👑🇯🇵`,
+        headline: `ICONIC SPOTLIGHT: NAOMI OSAKA: GRACE, POWER & IDENTITY 👑🇯🇵`,
         text: `Athlete. Mother. Creator. Champion.
 
 ${angle}
@@ -133,7 +133,7 @@ Never apologize for your magnitude. Take up space and own your court.
 
     case 'ellis':
       return {
-        headline: `NEXT-GEN POWER [Day ${dayNumber}]: ARTHUR FILS BREAKS THROUGH 🇫🇷🎾`,
+        headline: `NEXT-GEN POWER: ARTHUR FILS BREAKS THROUGH 🇫🇷🎾`,
         text: `Explosive first-step quickness and raw baseline power.
 
 ${angle}
@@ -150,7 +150,7 @@ Watch out for Fils on the Arthur Ashe night session! Are you backing the young s
 
     case 'turkey':
       return {
-        headline: `SPORTS GOVERNANCE [Day ${dayNumber}]: TÜRKIYE'S ATHLETE INVESTMENT REVOLUTION 🇹🇷👏`,
+        headline: `SPORTS GOVERNANCE: TÜRKIYE'S ATHLETE INVESTMENT REVOLUTION 🇹🇷👏`,
         text: `Direct monthly stipends. Universal travel, lodging, and nutrition. Equal funding across Olympic, Paralympic, and Deaflympic disciplines.
 
 ${angle}
@@ -167,7 +167,7 @@ Great nations invest before the medal.
 
     case 'vargas':
       return {
-        headline: `CHAMPION RESOLVE [Day ${dayNumber}]: MELISSA VARGAS — 112 KM/H POWER 🏐🇹🇷`,
+        headline: `CHAMPION RESOLVE: MELISSA VARGAS: 112 KM/H POWER 🏐🇹🇷`,
         text: `From overcoming exile at 18 to European Champion and 33-point VNL Finals record-holder:
 
 ${angle}
@@ -184,7 +184,7 @@ Demand the ball. Finish Strong.
 
     default:
       return {
-        headline: `HIGH PERFORMANCE [Day ${dayNumber}]: THE PURSUIT OF MASTERY 🗽🎾`,
+        headline: `HIGH PERFORMANCE: THE PURSUIT OF MASTERY 🗽🎾`,
         text: `Arthur Ashe Stadium crowns true legends under the Friday night lights.
 
 ${angle}
@@ -290,6 +290,20 @@ async function buildMasterManifest() {
     }
   }
 
+  // Pre-Flight Invariant Validation (Rule 7 & Rule 9)
+  const METADATA_TAG_REGEX = /[\(\[]\s*(?:DAY\b|SLOT\b|POST\b|WAVE\b)[^\]\)]*[\)\]]/i;
+  for (const item of masterManifest) {
+    if (METADATA_TAG_REGEX.test(item.headline) || METADATA_TAG_REGEX.test(item.text)) {
+      throw new Error(`[Rule 9 Invariant Violation] Staged item #${item.id} contains forbidden metadata tag.`);
+    }
+    if (item.headline.includes('*') || item.text.includes('*')) {
+      throw new Error(`[Rule 7 Invariant Violation] Staged item #${item.id} contains forbidden asterisk (*).`);
+    }
+    if (item.headline.includes('—') || item.text.includes('—')) {
+      throw new Error(`[Invariant Violation] Staged item #${item.id} contains forbidden em dash (—).`);
+    }
+  }
+
   const manifestPath = path.join(process.cwd(), 'scripts', 'campaign-manifest.json');
   const queuePath = path.join(process.cwd(), 'scripts', 'master-campaign-queue.json');
 
@@ -299,4 +313,6 @@ async function buildMasterManifest() {
   console.log(`✅ Anti-Duplicate Master Campaign Generated: ${masterManifest.length} unique posts staged.`);
 }
 
-buildMasterManifest().catch(console.error);
+if (process.argv[1]?.endsWith('generate-master-campaign.mjs') || process.argv[1]?.endsWith('generate-master-campaign')) {
+  buildMasterManifest().catch(console.error);
+}

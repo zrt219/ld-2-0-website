@@ -42,8 +42,35 @@ export function getDueAt(dayOffset, hour) {
   return targetDate.toISOString();
 }
 
+export const METADATA_TAG_REGEX = /[\(\[]\s*(?:DAY\b|SLOT\b|POST\b|WAVE\b)[^\]\)]*[\)\]]/i;
+
+export function assertCampaignPostClean(post) {
+  if (post.headline) {
+    const headMatch = post.headline.match(METADATA_TAG_REGEX);
+    if (headMatch) {
+      throw new Error(`[Rule 9 Invariant Violation] Post #${post.id || 'unknown'} headline contains forbidden metadata tag: "${headMatch[0]}". Halting execution.`);
+    }
+    if (post.headline.includes('*')) {
+      throw new Error(`[Rule 7 Invariant Violation] Post #${post.id || 'unknown'} headline contains forbidden asterisk (*).`);
+    }
+  }
+
+  const text = post.text || '';
+  if (!text.trim()) {
+    throw new Error(`[Buffer Publish Invariant] Post #${post.id || 'unknown'} text must be a non-empty string.`);
+  }
+  const textMatch = text.match(METADATA_TAG_REGEX);
+  if (textMatch) {
+    throw new Error(`[Rule 9 Invariant Violation] Post #${post.id || 'unknown'} text contains forbidden metadata tag: "${textMatch[0]}". Halting execution.`);
+  }
+  if (text.includes('*')) {
+    throw new Error(`[Rule 7 Invariant Violation] Post #${post.id || 'unknown'} text contains forbidden asterisk (*).`);
+  }
+}
+
 // Create post mutation
 export async function createPostInQueue(post, mode = 'customScheduled', saveToDraft = false) {
+  assertCampaignPostClean(post);
   const imgNum = String(post.imageIndex).padStart(2, '0');
   const imageUrl = `${BASE_IMAGE_URL}/vargas-${imgNum}.png`;
 

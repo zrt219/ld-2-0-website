@@ -62,6 +62,23 @@ function sendGraphql(payload) {
   });
 }
 
+export const METADATA_TAG_REGEX = /[\(\[]\s*(?:DAY\b|SLOT\b|POST\b|WAVE\b)[^\]\)]*[\)\]]/i;
+
+export function assertQueueClean(queue, queueName = 'Queue') {
+  for (const item of queue) {
+    if (!item.text || typeof item.text !== 'string') {
+      throw new Error(`[Queue Invariant Violation] Item ${item.id || 'unknown'} in ${queueName} has missing or invalid text.`);
+    }
+    if (item.text.includes('*')) {
+      throw new Error(`[Rule 7 Invariant Violation] Item ${item.id || 'unknown'} in ${queueName} contains forbidden asterisk (*).`);
+    }
+    const match = item.text.match(METADATA_TAG_REGEX);
+    if (match) {
+      throw new Error(`[Rule 9 Invariant Violation] Item ${item.id || 'unknown'} in ${queueName} contains forbidden bracketed tag "${match[0]}". Halting scheduler.`);
+    }
+  }
+}
+
 // 1. Dawn Staley Queue Processing
 async function runDawnStaleyQueue() {
   console.log("\n--- Processing Dawn Staley Campaign Queue ---");
@@ -71,6 +88,7 @@ async function runDawnStaleyQueue() {
   if (!fs.existsSync(queuePath)) return;
 
   const queue = JSON.parse(fs.readFileSync(queuePath, 'utf8'));
+  assertQueueClean(queue, 'Dawn Staley');
   const report = fs.existsSync(reportPath) ? JSON.parse(fs.readFileSync(reportPath, 'utf8')) : {};
 
   for (const item of queue) {
@@ -125,6 +143,7 @@ async function runCocoRacismQueue() {
   if (!fs.existsSync(queuePath)) return;
 
   const queue = JSON.parse(fs.readFileSync(queuePath, 'utf8'));
+  assertQueueClean(queue, 'Coco Gauff');
   const report = fs.existsSync(reportPath) ? JSON.parse(fs.readFileSync(reportPath, 'utf8')) : {};
 
   for (const item of queue) {
@@ -185,6 +204,7 @@ async function runYaxelQueue() {
   if (!fs.existsSync(queuePath)) return;
 
   const queue = JSON.parse(fs.readFileSync(queuePath, 'utf8'));
+  assertQueueClean(queue, 'Yaxel Lendeborg');
   const report = fs.existsSync(reportPath) ? JSON.parse(fs.readFileSync(reportPath, 'utf8')) : {};
 
   for (const item of queue) {
@@ -240,6 +260,7 @@ async function runCflNflQueue() {
   if (!fs.existsSync(queuePath)) return;
 
   const queue = JSON.parse(fs.readFileSync(queuePath, 'utf8'));
+  assertQueueClean(queue, 'CFL-NFL');
   const report = fs.existsSync(reportPath) ? JSON.parse(fs.readFileSync(reportPath, 'utf8')) : {};
 
   for (const item of queue) {
@@ -322,4 +343,6 @@ async function runMaster() {
   console.log("\n>>> ALL CAMPAIGNS FULLY SCHEDULED & SYNCHRONIZED <<<");
 }
 
-runMaster().catch(console.error);
+if (process.argv[1]?.endsWith('schedule-master.mjs') || process.argv[1]?.endsWith('schedule-master')) {
+  runMaster().catch(console.error);
+}

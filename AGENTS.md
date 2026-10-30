@@ -52,6 +52,23 @@ This version has breaking changes — APIs, conventions, and file structure may 
    - When the user specifies a campaign timeline (e.g. "2–3 weeks", "3 weeks", "over the next month"), the schedule **must strictly span that full calendar window**.
    - For a 3-week request, posts must be distributed evenly across **at least 21 distinct calendar days** (1–2 posts per day).
    - **Never compress multi-week campaigns into rapid bursts** (e.g. 10 days or 3 posts/day) unless explicitly and unambiguously instructed by the user.
+9. **Strict Zero-Bracketed-Day-Tags and Zero-Metadata-Artifacts Invariant**:
+   - Lornette Daye's social content represents an elite, Olympic-level coaching and executive brand. Internal production scheduling metadata, day counters, slot labels, or batch numbers are developer scaffolding and must **never** appear in reader-facing public post copy.
+   - **Absolute Ban on Bracketed Day Tags & Internal Slot Metadata**:
+     - Never include bracketed day identifiers, slot tags, or scheduling metadata anywhere in post copy, titles, headlines, or review galleries.
+     - Prohibited patterns include (but are not limited to): `(DAY X)`, `(DAY X - SLOT)`, `(DAY 8 - MORNING)`, `(DAY 7 - EVENING)`, `(DAY 12 - MIDDAY)`, `[Day X]`, `[DAY X]`, `[Day 1]`, `[DAY 14 - MIDDAY]`, `[SLOT 1]`, `(SLOT: MORNING)`, `[POST X]`, `[WAVE X]`, or any variation enclosing day, slot, post, or wave counters in parentheses `(...)` or square brackets `[...]`.
+   - **Editorial Headline Standard**:
+     - Headlines, hooks, and title lines must consist exclusively of clean, dignified editorial copy (e.g. `DAWN STALEY AND A'JA WILSON: THE GOLD STANDARD OF MODERN WNBA DOMINANCE` or `HIGH PERFORMANCE: THE PURSUIT OF MASTERY`).
+     - Day numbers, schedule slots, and calendar timing belong exclusively to backend data structure fields (`day`, `slot`, `dueAt`, `scheduledAt`), never inside `text`, `headline`, or `caption` strings.
+   - **Mandatory Pre-Flight Guard**:
+     - All campaign generation scripts, queuing pipelines, manifest builders, and Buffer publishing engines (`buffer-post.mjs`, `schedule-master.mjs`, `campaign-sync.mjs`, Python campaign generators, etc.) must execute an automated regex assertion:
+       ```javascript
+       const METADATA_TAG_REGEX = /[\(\[]\s*(?:DAY\b|SLOT\b|POST\b|WAVE\b)[^\]\)]*[\)\]]/i;
+       if (METADATA_TAG_REGEX.test(caption)) {
+         throw new Error(`INVARIANT VIOLATION (Rule 9): Forbidden bracketed metadata tag "${caption.match(METADATA_TAG_REGEX)[0]}" detected in post text. Halting execution.`);
+       }
+       ```
+     - Execution must unconditionally halt before staging records to local queues or dispatching network requests to Buffer GraphQL mutations (`createPost`, `editPost`).
 <!-- END:buffer-publishing-rules -->
 
 <!-- BEGIN:lornette-daye-book-catalog -->

@@ -15,6 +15,7 @@ Strict Invariants:
 
 import sys
 import os
+import re
 import json
 import ssl
 import time
@@ -71,7 +72,7 @@ def generate_post(post_idx, day_num, slot_name):
     player, theme, org = PLAYERS[(day_num - 1) % len(PLAYERS)]
     
     if slot_name == "Morning":
-        title = f"DAWN STALEY AND {player.upper()}: {theme.upper()} (DAY {day_num} - MORNING)"
+        title = f"DAWN STALEY AND {player.upper()}: {theme.upper()}"
         hook = f"When Dawn Staley recruits a player, she does not promise starting minutes. She promises that if you submit to the daily standard, you will be prepared for the professional stage."
         body = f"""Look at how {player} transitioned to the WNBA with {org}. Most college phenoms struggle during their rookie season because they rely entirely on athletic superiority.
 
@@ -81,7 +82,7 @@ In four decades coaching Olympic athletes and national champions, I tell young c
         takeaway = f"Elite player development is not about inflating egos. It is about building repeatable physical and mental habits that survive when the competition levels up."
 
     elif slot_name == "Midday":
-        title = f"THE BLUEPRINT: HOW DAWN STALEY INSTILLS PRO POISE IN {player.upper()} (DAY {day_num} - MIDDAY)"
+        title = f"THE BLUEPRINT: HOW DAWN STALEY INSTILLS PRO POISE IN {player.upper()}"
         hook = f"Skill gets an athlete drafted in the first round. Mental composure determines whether they survive their rookie contract."
         body = f"""Watch {player} execute in late-game pressure situations for {org}. There is no frantic panic, no rushed decisions against full-court pressure, and no emotional unraveling after a bad whistle.
 
@@ -92,7 +93,7 @@ Through Lornette’s Foundations, we call this Emotional Regulation and Recovery
 
     else:
         # Evening Slot
-        title = f"CULTURE OVER CELEBRITY: DAWN STALEY, {player.upper()}, AND ENDURING EXCELLENCE (DAY {day_num} - EVENING)"
+        title = f"CULTURE OVER CELEBRITY: DAWN STALEY, {player.upper()}, AND ENDURING EXCELLENCE"
         hook = f"In an era dominated by individual transfer portals and viral highlights, Dawn Staley built a permanent dynasty grounded in radical selflessness."
         body = f"""When {player} reflects on their time under Dawn Staley, the conversation never centers on scoring averages. It centers on love, discipline, and sisterhood.
 
@@ -120,6 +121,7 @@ Olympic-level Coach and Canadian National Champion
     # Enforce zero asterisks assertion
     assert "*" not in post_text, "Assertion failed: post contains asterisks!"
     assert "—" not in post_text, "Assertion failed: post contains em dashes!"
+    assert not re.search(r'[\(\[]\s*(?:DAY\b|SLOT\b|POST\b|WAVE\b)[^\]\)]*[\)\]]', post_text, re.IGNORECASE), "Assertion failed: post contains bracketed metadata tags!"
 
     return post_text
 

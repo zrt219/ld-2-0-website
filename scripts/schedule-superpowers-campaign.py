@@ -15,6 +15,7 @@ Strict Invariants:
 
 import sys
 import os
+import re
 import json
 import ssl
 import urllib.request
@@ -63,7 +64,7 @@ Get 'Survival Skills for Women' ($14.99 CAD): https://lornettedaye.com/books"""
 
     elif cycle == 0:
         # A'ja Wilson - Raise the Standard
-        title = f"A'JA WILSON: RAISING THE STANDARD WHEN YOU ARE ALREADY AT THE TOP (DAY {day_num} - {slot_name.upper()})"
+        title = "A'JA WILSON: RAISING THE STANDARD WHEN YOU ARE ALREADY AT THE TOP"
         hook = "The most dangerous place for an elite performer is not a losing streak. It is being celebrated so loudly that you stop critiquing your own tape."
         body = f"""When A'ja Wilson steps onto the floor, you are watching a player who refuses to be satisfied with yesterday's trophies. After winning back-to-back WNBA championships and Olympic gold, her focus did not drift. It sharpened.
 
@@ -80,7 +81,7 @@ Order 'Finish Strong: Chasing the Olympic Dream' ($14.99 CAD): https://buy.strip
 
     elif cycle == 1:
         # Jeremiah Smith - More Than Talent
-        title = f"JEREMIAH SMITH: WHY RAW TALENT IS ONLY THE DOWN PAYMENT (DAY {day_num} - {slot_name.upper()})"
+        title = "JEREMIAH SMITH: WHY RAW TALENT IS ONLY THE DOWN PAYMENT"
         hook = "College football is filled with five-star recruits who possessed world-class speed but never mastered the quiet discipline between their ears."
         body = f"""Jeremiah Smith arrived at Ohio State with immense national expectations. As a true freshman wide receiver wearing number 4, every route he runs is dissected by millions on national television.
 
@@ -97,7 +98,7 @@ Order 'Survival Skills for Athletes' ($14.99 CAD): https://lornettedaye.com/book
 
     elif cycle == 2:
         # Jeremiah Smith - Built for the Big Moment
-        title = f"JEREMIAH SMITH: FOCUS AND COMPOSURE IN THE FOURTH QUARTER (DAY {day_num} - {slot_name.upper()})"
+        title = "JEREMIAH SMITH: FOCUS AND COMPOSURE IN THE FOURTH QUARTER"
         hook = "When 100,000 fans are screaming and the game is on the line, your pulse rate determines your execution."
         body = f"""Pressure is not something that exists outside of you. Pressure is a physiological reaction that occurs when you let your mind jump ahead to the scoreboard.
 
@@ -114,7 +115,7 @@ Get 'Survival Skills for Students' ($14.99 CAD): https://lornettedaye.com/books"
 
     elif cycle == 3:
         # Mike Grier - From the Ice to the Front Office
-        title = f"MIKE GRIER: SOVEREIGNTY FROM THE ICE TO THE FRONT OFFICE (DAY {day_num} - {slot_name.upper()})"
+        title = "MIKE GRIER: SOVEREIGNTY FROM THE ICE TO THE FRONT OFFICE"
         hook = "Playing 1,060 games in the National Hockey League takes physical toughness. Stepping into the General Manager chair takes visionary intellectual sovereignty."
         body = f"""When Mike Grier was named the first Black General Manager in NHL history by the San Jose Sharks in 2022, it was not merely a symbolic milestone. It was the culmination of decades of disciplined study of player personnel, salary cap dynamics, and organizational culture.
 
@@ -131,7 +132,7 @@ Get 'Survival Skills for Men' ($14.99 CAD): https://buy.stripe.com/9B6bJ1542gA26
 
     elif cycle == 4:
         # A'ja Wilson - Leadership & Culture
-        title = f"A'JA WILSON: CARRYING THE WEIGHT OF A CULTURAL MOVEMENT (DAY {day_num} - {slot_name.upper()})"
+        title = "A'JA WILSON: CARRYING THE WEIGHT OF A CULTURAL MOVEMENT"
         hook = "Leadership is easy when everyone is winning and the cameras are supportive. Leadership is tested when the spotlight becomes relentless."
         body = f"""Women's basketball is experiencing an unprecedented surge in global viewership, commercial endorsement, and cultural debate. Sitting right at the center of that explosion is A'ja Wilson.
 
@@ -148,7 +149,7 @@ Explore our official book catalog ($14.99 CAD): https://lornettedaye.com/books""
 
     else:
         # Cross-Sport Synthesis: The Championship Trinity
-        title = f"THE ANATOMY OF EXCELLENCE: A'JA, JEREMIAH, AND MIKE GRIER (DAY {day_num} - {slot_name.upper()})"
+        title = "THE ANATOMY OF EXCELLENCE: A'JA, JEREMIAH, AND MIKE GRIER"
         hook = "Look across three completely different arenas: the WNBA, college football, and an NHL front office. The principles of enduring excellence never change."
         body = f"""Whether it is A'ja Wilson controlling the paint, Jeremiah Smith winning 50-50 balls downfield, or Mike Grier drafting the future of a hockey franchise, the fundamental law remains identical.
 
@@ -177,6 +178,10 @@ Olympic-level Coach & Canadian National Champion
 {cta}
 
 {hashtags}"""
+
+    assert "*" not in post_text, "Assertion failed: post contains asterisks!"
+    assert "—" not in post_text, "Assertion failed: post contains em dashes!"
+    assert not re.search(r'[\(\[]\s*(?:DAY\b|SLOT\b|POST\b|WAVE\b)[^\]\)]*[\)\]]', post_text, re.IGNORECASE), "Assertion failed: post contains bracketed metadata tags!"
 
     return post_text, asset
 

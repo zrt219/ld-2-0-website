@@ -25,12 +25,23 @@ queue.forEach((post, idx) => {
   if (post.status !== 'scheduled') {
     if (seenTexts.has(post.text)) {
       const theme = angleThemes[idx % angleThemes.length];
-      const slotNum = (idx % 10) + 1;
-      const dayNum = post.dayNumber || Math.floor(idx / 10) + 1;
-      post.text = `${post.text}\n\n[Campaign Series • Day ${dayNum} Spotlight #${slotNum}]: ${theme}`;
+      post.text = `${post.text}\n\nKEY DIMENSION: ${theme}`;
       madeUnique++;
     }
     seenTexts.add(post.text);
+  }
+});
+
+const METADATA_TAG_REGEX = /[\(\[]\s*(?:DAY\b|SLOT\b|POST\b|WAVE\b)[^\]\)]*[\)\]]/i;
+queue.forEach((post) => {
+  if (post.headline && METADATA_TAG_REGEX.test(post.headline)) {
+    throw new Error(`[Rule 9 Invariant Violation] Post #${post.id} headline contains forbidden metadata tag: ${post.headline}`);
+  }
+  if (post.text && METADATA_TAG_REGEX.test(post.text)) {
+    throw new Error(`[Rule 9 Invariant Violation] Post #${post.id} text contains forbidden metadata tag`);
+  }
+  if ((post.text && post.text.includes('*')) || (post.headline && post.headline.includes('*'))) {
+    throw new Error(`[Rule 7 Invariant Violation] Post #${post.id} contains forbidden asterisk`);
   }
 });
 

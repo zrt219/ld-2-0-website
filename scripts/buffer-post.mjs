@@ -4,7 +4,7 @@
  * Buffer GraphQL API Endpoint: https://api.buffer.com
  */
 
-const BUFFER_ACCESS_TOKEN = process.env.BUFFER_ACCESS_TOKEN || 'mLbjEsRdn5FKtGOskFoGzK-gW2CGTl8dfAK8klDVEPC';
+const BUFFER_ACCESS_TOKEN = process.env.BUFFER_ACCESS_TOKEN || 'uR7DeyYk4O9VcFHqPQOnWseUl7BONqA8RZ4CK_03Ci0';
 const BUFFER_API_URL = 'https://api.buffer.com';
 
 export async function bufferGraphQL(query, variables = {}) {
@@ -65,6 +65,21 @@ export async function getChannels() {
   };
 }
 
+export const METADATA_TAG_REGEX = /[\(\[]\s*(?:DAY\b|SLOT\b|POST\b|WAVE\b)[^\]\)]*[\)\]]/i;
+
+export function assertPostTextClean(text, context = 'Post') {
+  if (typeof text !== 'string' || !text.trim()) {
+    throw new Error(`[Buffer Publish Invariant] ${context} text must be a non-empty string.`);
+  }
+  if (text.includes('*')) {
+    throw new Error(`[Rule 7 Invariant Violation] ${context} text contains forbidden asterisk (*). Social posts must be plain-text only.`);
+  }
+  const tagMatch = text.match(METADATA_TAG_REGEX);
+  if (tagMatch) {
+    throw new Error(`[Rule 9 Invariant Violation] ${context} text contains forbidden bracketed metadata tag "${tagMatch[0]}". Halting execution.`);
+  }
+}
+
 /**
  * Create / Schedule / Publish a Post to LinkedIn via Buffer GraphQL API
  * 
@@ -82,6 +97,8 @@ export async function createLinkedInPost({
   dueAt,
   saveToDraft = false,
 }) {
+  assertPostTextClean(text, 'Post');
+
   const input = {
     channelId,
     text,

@@ -14,6 +14,7 @@ Strict Invariants:
 
 import sys
 import os
+import re
 import json
 import ssl
 import urllib.request
@@ -145,7 +146,7 @@ In four decades of developing elite performers, I have observed one undeniable l
             "CESC FABREGAS AND THE POWER OF CLARITY",
             "TURNING REPUTATION INTO PRESSURE FOR THE OPPONENT"
         ]
-        title = f"{m_titles[(day_num - 1) % len(m_titles)]} (DAY {day_num})"
+        title = m_titles[(day_num - 1) % len(m_titles)]
         hook = f"On morning {day_num} following Como's 4-1 victory, the key lesson for every coach and competitor is how sustainable systems outperform sporadic brilliance."
         body = f"""Como 1907 did not achieve a 4-1 result through emotional frenzy. Watching their structural spacing, their transition defense, and their ball retention, you see the fingerprints of meticulous daily coaching.
 
@@ -166,7 +167,7 @@ When Manchester United pressed, Como did not hoof the ball into no-man's land. T
             "AVOIDING THE TRAP OF COMPLACENCY",
             "THE COACH AS AN EMOTIONAL THERMOSTAT"
         ]
-        title = f"{mid_titles[(day_num - 1) % len(mid_titles)]} (DAY {day_num})"
+        title = mid_titles[(day_num - 1) % len(mid_titles)]
         hook = "A headline win creates headlines, but what happens the next day determines whether you build an enduring legacy or remain a one-night wonder."
         body = f"""When Tasos Douvikas scored Como's second goal and Jacobo Ramon sealed the fourth, it proved that Como's attack does not rely on a single superstar. Their offensive threat is distributed, dynamic, and unselfish.
 
@@ -187,7 +188,7 @@ Como's squad showed complete trust in their tactical instructions. When you trus
             "COMMUNICATION WITHOUT PANIC DURING CRISIS MOMENTS",
             "BUILDING ORGANIZATIONS THAT OUTLAST INDIVIDUAL HEROES"
         ]
-        title = f"{aft_titles[(day_num - 1) % len(aft_titles)]} (DAY {day_num})"
+        title = aft_titles[(day_num - 1) % len(aft_titles)]
         hook = "Whether you are managing an elite football club by Lake Como or directing a multinational enterprise, the laws of institutional execution remain identical."
         body = f"""Como 1907 was playing in the lower tiers of Italian football not long ago. Their journey to dismantling Manchester United in the Champions League is a study in patient infrastructure building, smart leadership, and uncompromising culture.
 
@@ -212,6 +213,10 @@ Olympic-level Coach & Canadian National Champion
 {cta}
 
 {hashtags}"""
+
+    assert "*" not in post_text, "Assertion failed: post contains asterisks!"
+    assert "—" not in post_text, "Assertion failed: post contains em dashes!"
+    assert not re.search(r'[\(\[]\s*(?:DAY\b|SLOT\b|POST\b|WAVE\b)[^\]\)]*[\)\]]', post_text, re.IGNORECASE), "Assertion failed: post contains bracketed metadata tags!"
 
     return post_text
 
